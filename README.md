@@ -16,7 +16,7 @@ Just click on [![Use this template](https://img.shields.io/badge/-Use%20this%20t
 - Unit test coverage
 
 ## Screenshots
-<p align="center">
+<p align="left">
 <img src="/preview/light_theme.png" width="32%"/>
 <img src="/preview/dark_theme.png" width="32%"/>
 </p>
