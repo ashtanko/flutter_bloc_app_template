@@ -1,10 +1,10 @@
-# flutter-bloc-template 🤖
+# flutter-bloc-app-template 🤖
 The project of the empty template with Flutter has built the basic framework to realize the functions of internationalization, theme peeling etc.
 
 [![style: lint][lint-style-badge]][lint-style-link]
 
 ## How to use 🐾
-Just click on [![Use this template](https://img.shields.io/badge/-Use%20this%20template-brightgreen)](https://github.com/shtanko/flutter_bloc_template/generate) button to create a new repo starting from this template.
+Just click on [![Use this template](https://img.shields.io/badge/-Use%20this%20template-brightgreen)](https://github.com/shtanko/flutter_bloc_app_template/generate) button to create a new repo starting from this template.
 
 ## Features 🦄
 - Theme support
