@@ -1,0 +1,38 @@
+{
+  "appTitle": "flutter_bloc_app_template",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "itemsTitle": "Sample Items",
+  "@itemsTitle": {
+    "description": "The title of the sample items"
+  },
+  "messagesTitle": "Messages",
+  "@messagesTitle": {
+    "description": "The title of the messages screen"
+  },
+  "itemTitle": "Sample Item {id}",
+  "@itemTitle": {
+    "description": "The title of the item"
+  },
+  "settingsTitle": "Settings",
+  "@settingsTitle": {
+    "description": "The title of the settings"
+  },
+  "systemThemeTitle": "System Theme",
+  "@systemThemeTitle": {
+    "description": "The title of the system theme"
+  },
+  "lightThemeTitle": "Light Theme",
+  "@lightThemeTitle": {
+    "description": "The title of the light theme"
+  },
+  "darkThemeTitle": "Dark Theme",
+  "@darkThemeTitle": {
+    "description": "The title of the dark theme"
+  },
+  "itemDetailsTitle": "Item Details",
+  "@itemDetailsTitle": {
+    "description": "The title of the Item Details screen"
+  }
+}

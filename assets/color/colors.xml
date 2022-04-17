@@ -1,0 +1,17 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<resources>
+    <color name="primary_light">#1E1E1E</color>
+    <color name="accent_light">#1E5185</color>
+    <color name="background_light">#ffffff</color>
+    <color name="divider_light">#c62828</color>
+
+    <color name="primary_dark">#102027</color>
+    <color name="accent_dark">#6a4f4b</color>
+    <color name="background_dark">#1b1b1b</color>
+    <color name="canvas_dark">#242424</color>
+    <color name="card_dark">#272727</color>
+    <color name="divider_dark">#545454</color>
+
+    <color name="attachment_border_color">#B3B2B3</color>
+    <color name="attachment_text_color">#5D5C5D</color>
+</resources>
