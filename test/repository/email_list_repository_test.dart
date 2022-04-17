@@ -1,3 +1,4 @@
+import 'package:flutter_bloc_app_template/index.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
@@ -6,7 +7,7 @@ import '../mocks.dart';
 
 void main() {
   group('Messages Repository Tests', () {
-    late MockEmailListRepository repository;
+    late EmailListRepository repository;
 
     setUp(() {
       repository = MockEmailListRepository();
@@ -14,8 +15,7 @@ void main() {
 
     group('loadData', () {
       test('returns list of email_list', () {
-        when(repository.loadData())
-            .thenAnswer((_) => Future.value(mockEmails));
+        when(repository.loadData()).thenAnswer((_) => Future.value(mockEmails));
         expect(
           repository.loadData(),
           completion(equals(mockEmails)),

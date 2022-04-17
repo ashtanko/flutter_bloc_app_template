@@ -1,5 +1,5 @@
 import 'package:bloc_test/bloc_test.dart';
-import 'package:flutter_bloc_app_template/bloc/email_list/email_list_bloc.dart';
+import 'package:flutter_bloc_app_template/index.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
@@ -42,7 +42,7 @@ void main() {
   });
 
   group('EmailListBloc', () {
-    late MockEmailListRepository repository;
+    late EmailListRepository repository;
     late EmailListBloc bloc;
 
     setUp(() {
