@@ -35,6 +35,18 @@ jobs:
       - name: Download pub dependencies
         run: flutter pub get
 
+      - name: Pub Global
+        run: dart pub global activate flutter_gen
+
+      - name: Build runner
+        run: flutter packages pub run build_runner build --delete-conflicting-outputs
+
+      - name: Generate intl
+        run: flutter pub run intl_utils:generate
+
+      - name: Run fluttergen
+        run: fluttergen -c pubspec.yaml
+
       - name: Run analyzer
         run: flutter analyze
 
