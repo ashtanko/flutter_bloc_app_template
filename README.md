@@ -2,6 +2,7 @@
 The project of the empty template with Flutter has built the basic framework to realize the functions of internationalization, theme peeling etc.
 
 [![style: lint][lint-style-badge]][lint-style-link]
+[![codecov][codecov-badge]][codecov-link]
 
 ## How to use 🐾
 Just click on [![Use this template](https://img.shields.io/badge/-Use%20this%20template-brightgreen)](https://github.com/shtanko/flutter_bloc_app_template/generate) button to create a new repo starting from this template.
@@ -60,3 +61,5 @@ Please note that the generated template is offering to start with a MIT license 
 
 [lint-style-badge]: https://img.shields.io/badge/style-lint-4BC0F5.svg
 [lint-style-link]: https://pub.dev/packages/lint
+[codecov-badge]: https://codecov.io/gh/ashtanko/flutter_bloc_app_template/branch/main/graph/badge.svg?token=T68Rqwj7Ll
+[codecov-link]: https://codecov.io/gh/ashtanko/flutter_bloc_app_template
