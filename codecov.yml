@@ -1,0 +1,4 @@
+ignore:
+  - '**/lib/generated/'
+  - '**/*.g.dart'
+  - '**/*.gen.dart'
