@@ -62,6 +62,7 @@ jobs:
         uses: VeryGoodOpenSource/very_good_coverage@v1.2.0
         with:
           path: coverage/lcov.info
+          min_coverage: 75
           exclude: '**/*.g.dart **/*.gen.dart **/lib/di/ lib/generated/ **/lib/generated/'
 
       - name: Upload coverage to codecov
