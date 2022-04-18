@@ -6,6 +6,7 @@ import 'package:flutter_bloc_app_template/index.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
+import 'package:network_image_mock/network_image_mock.dart';
 
 import '../../helpers/data.dart';
 
@@ -87,7 +88,21 @@ void main() {
     });
 
     testWidgets('renders 1 item', (tester) async {
-      when(() => emailListBloc.state).thenReturn(EmailListLoaded(mockEmails));
+      when(() => emailListBloc.state).thenReturn(
+        EmailListLoaded(
+          [
+            Email(
+              sender: 'Ralph Edwards',
+              subject: 'The results to our user testing',
+              messagePreview: 'What is the progress on that task?',
+              isFavorite: false,
+              date: DateTime.parse('2022-04-10 20:18:04Z'),
+              image: '',
+              attachments: [Attachment(AttachmentType.doc, 'doc')],
+            ),
+          ],
+        ),
+      );
       await tester.pumpEmailListList(emailListBloc);
       await tester.pumpAndSettle();
 
@@ -157,6 +172,16 @@ void main() {
 
       expect(find.byType(EmailListItem), findsNWidgets(3));
       expect(find.byType(AttachmentIcon), findsNWidgets(4));
+    });
+
+    testWidgets('renders items with attachment', (tester) async {
+      await mockNetworkImagesFor(() async {
+        when(() => emailListBloc.state).thenReturn(EmailListLoaded(mockEmails));
+        await tester.pumpEmailListList(emailListBloc);
+        await tester.pumpAndSettle();
+      });
+
+      expect(find.byType(EmailListItem), findsNWidgets(6));
     });
 
     testWidgets('renders error text', (tester) async {
