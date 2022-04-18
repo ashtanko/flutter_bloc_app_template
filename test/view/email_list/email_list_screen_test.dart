@@ -115,6 +115,51 @@ void main() {
       expect(find.byType(AttachmentIcon), findsNWidgets(1));
     });
 
+    testWidgets('renders items with different attachment type', (tester) async {
+      final _mockEmails = [
+        Email(
+          sender: 'Ralph Edwards',
+          subject: 'The results to our user testing',
+          messagePreview: 'What is the progress on that task?',
+          isFavorite: false,
+          date: DateTime.parse('2022-04-10 20:18:04Z'),
+          image:
+              'https://external-preview.redd.it/STUmd55tKPrA-gq3y2wqicFTkWL-7oUij0SazqkGylE.jpg?auto=webp&s=6b1cd0e4976a852c9a805cf54a7bb7a19d169063',
+          attachments: [Attachment(AttachmentType.doc, 'doc')],
+        ),
+        Email(
+          sender: 'Ralph Edwards',
+          subject: 'The results to our user testing',
+          messagePreview: 'What is the progress on that task?',
+          isFavorite: false,
+          date: DateTime.parse('2022-04-10 20:18:04Z'),
+          image: '',
+          attachments: [
+            Attachment(AttachmentType.pdf, 'pdf'),
+          ],
+        ),
+        Email(
+          sender: 'Ralph Edwards',
+          subject: 'The results to our user testing',
+          messagePreview: 'What is the progress on that task?',
+          isFavorite: false,
+          date: DateTime.parse('2022-04-10 20:18:04Z'),
+          image: '',
+          attachments: [
+            Attachment(AttachmentType.doc, 'doc'),
+            Attachment(AttachmentType.pdf, 'pdf'),
+          ],
+        )
+      ];
+
+      when(() => emailListBloc.state).thenReturn(EmailListLoaded(_mockEmails));
+      await tester.pumpEmailListList(emailListBloc);
+      await tester.pumpAndSettle();
+
+      expect(find.byType(EmailListItem), findsNWidgets(1));
+      expect(find.byType(AttachmentIcon), findsNWidgets(1));
+    });
+
     testWidgets('renders error text', (tester) async {
       when(() => emailListBloc.state).thenReturn(EmailListLoadFailure());
       await tester.pumpEmailListList(emailListBloc);

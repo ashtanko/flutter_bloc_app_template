@@ -8,6 +8,7 @@ This template is focused on delivering a project with **static analysis** and **
 [![CI][ci-badge]][ci-link]
 [![CodeFactor][codefactor-badge]][codefactor-link]
 [![License][license-badge]][license-link]
+[![style: effective dart][style-badge]][style-link]
 
 ## How to use 🐾
 Just click on [![Use this template](https://img.shields.io/badge/-Use%20this%20template-brightgreen)](https://github.com/ashtanko/flutter_bloc_app_template/generate) button to create a new repo starting from this template.
@@ -74,3 +75,5 @@ Please note that the generated template is offering to start with a MIT license 
 [codefactor-link]: https://www.codefactor.io/repository/github/ashtanko/flutter_bloc_app_template
 [license-badge]: https://img.shields.io/github/license/dart-code-checker/dart-code-metrics
 [license-link]: https://github.com/dart-code-checker/dart-code-metrics/blob/master/LICENSE
+[style-badge]: https://img.shields.io/badge/style-effective_dart-40c4ff.svg
+[style-link]: https://pub.dev/packages/effective_dart

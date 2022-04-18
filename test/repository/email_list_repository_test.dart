@@ -21,6 +21,14 @@ void main() {
           completion(equals(mockEmails)),
         );
       });
+
+      test('returns empty list', () {
+        when(repository.loadData()).thenAnswer((_) => Future.value([]));
+        expect(
+          repository.loadData(),
+          completion(equals([])),
+        );
+      });
     });
   });
 }
