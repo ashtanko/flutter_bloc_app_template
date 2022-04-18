@@ -34,6 +34,12 @@ void main() {
       });
     });
 
+    group('EmailListEmpty', () {
+      test('supports value comparison', () {
+        expect(EmailListEmpty(), EmailListEmpty());
+      });
+    });
+
     group('EmailListLoadFailure', () {
       test('supports value comparison', () {
         expect(EmailListLoadFailure(), EmailListLoadFailure());
@@ -72,6 +78,24 @@ void main() {
         expect: () => [
           EmailListLoading(),
           EmailListLoaded(mockEmails),
+        ],
+      );
+
+      blocTest<EmailListBloc, EmailListState>(
+        'fetches data correctly but list is empty',
+        build: () {
+          when(repository.loadData()).thenAnswer(
+            (_) => Future.value([]),
+          );
+          return bloc;
+        },
+        act: (bloc) async => bloc.add(
+          EmailListFetched(),
+        ),
+        verify: (_) => verify(repository.loadData()).called(1),
+        expect: () => [
+          EmailListLoading(),
+          EmailListEmpty(),
         ],
       );
 

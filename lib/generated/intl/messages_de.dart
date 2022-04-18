@@ -27,6 +27,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "appTitle":
             MessageLookupByLibrary.simpleMessage("flutter_bloc_app_template"),
         "darkThemeTitle": MessageLookupByLibrary.simpleMessage("Dunkles Thema"),
+        "emptyList": MessageLookupByLibrary.simpleMessage("Leere Liste"),
+        "error": MessageLookupByLibrary.simpleMessage("Fehler"),
         "itemDetailsTitle":
             MessageLookupByLibrary.simpleMessage("Artikel Details"),
         "itemTitle": m0,

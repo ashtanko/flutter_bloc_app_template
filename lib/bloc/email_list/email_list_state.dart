@@ -23,6 +23,11 @@ class EmailListLoaded extends EmailListState {
   List<Object> get props => [messages];
 }
 
+class EmailListEmpty extends EmailListState {
+  @override
+  List<Object> get props => [];
+}
+
 class EmailListLoadFailure extends EmailListState {
   @override
   List<Object> get props => [];

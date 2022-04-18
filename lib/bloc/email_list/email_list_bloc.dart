@@ -21,7 +21,12 @@ class EmailListBloc extends Bloc<EmailListEvent, EmailListState> {
     emit(EmailListLoading());
     try {
       final items = await messagesRepository.loadData();
-      emit(EmailListLoaded(items));
+
+      if (items.isEmpty) {
+        emit(EmailListEmpty());
+      } else {
+        emit(EmailListLoaded(items));
+      }
     } catch (_) {
       emit(EmailListLoadFailure());
     }

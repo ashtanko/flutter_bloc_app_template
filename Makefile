@@ -16,5 +16,4 @@ localize:
 
 check:
 	dart analyze .
-	#dart format --output=none --set-exit-if-changed .
 	flutter pub run dart_code_metrics:metrics analyze lib

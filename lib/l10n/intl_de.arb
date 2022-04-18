@@ -34,5 +34,9 @@
   "itemDetailsTitle": "Artikel Details",
   "@itemDetailsTitle": {
     "description": "Der Titel des Bildschirms Artikeldetails"
-  }
+  },
+  "error": "Fehler",
+  "@error": {},
+  "emptyList": "Leere Liste",
+  "@emptyList": {}
 }
