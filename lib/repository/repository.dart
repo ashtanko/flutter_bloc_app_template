@@ -1,1 +1,1 @@
-export 'messages_repository.dart';
+export 'email_list_repository.dart';

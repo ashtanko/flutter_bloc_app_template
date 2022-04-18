@@ -1,4 +1,1 @@
-ignore:
-  - '**/lib/generated/'
-  - '**/*.g.dart'
-  - '**/*.gen.dart'
+ignore: [ '**/lib/generated/','lib/generated/', '**/*.g.dart','**/*.gen.dart','**/lib/di/' ]

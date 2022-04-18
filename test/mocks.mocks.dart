@@ -5,7 +5,7 @@
 import 'dart:async' as _i3;
 
 import 'package:flutter_bloc_app_template/models/email.dart' as _i4;
-import 'package:flutter_bloc_app_template/repository/messages_repository.dart'
+import 'package:flutter_bloc_app_template/repository/email_list_repository.dart'
     as _i2;
 import 'package:mockito/mockito.dart' as _i1;
 
