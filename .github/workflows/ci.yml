@@ -58,5 +58,11 @@ jobs:
       - name: Run tests
         run: flutter test --coverage
 
+      - name: Check Code Coverage
+        uses: VeryGoodOpenSource/very_good_coverage@v1.2.0
+        with:
+          path: coverage/lcov.info
+          exclude: '**/*.g.dart **/*.gen.dart **/lib/di/ lib/generated/ **/lib/generated/'
+
       - name: Upload coverage to codecov
         uses: codecov/codecov-action@v2
