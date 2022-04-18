@@ -12,6 +12,11 @@ import '../../helpers/data.dart';
 class MockEmailListBloc extends MockBloc<EmailListEvent, EmailListState>
     implements EmailListBloc {}
 
+class EmailListUnknownState extends EmailListState {
+  @override
+  List<Object?> get props => [];
+}
+
 extension on WidgetTester {
   Future<void> pumpEmailListList(EmailListBloc emailListBloc) {
     return pumpWidget(
@@ -38,7 +43,7 @@ void main() {
     emailListBloc = MockEmailListBloc();
   });
 
-  group('EmailList', () {
+  group('Email List Screen Tests', () {
     testWidgets(
         'renders CircularProgressIndicator '
         'when email list state is initial', (tester) async {
@@ -71,12 +76,43 @@ void main() {
       expect(find.text('Empty list'), findsOneWidget);
     });
 
+    testWidgets(
+        'renders Empty list text '
+        'when email list state is unknown', (tester) async {
+      when(() => emailListBloc.state).thenReturn(EmailListUnknownState());
+      await tester.pumpEmailListList(emailListBloc);
+      await tester.pumpAndSettle();
+
+      expect(find.byType(EmptyWidget), findsNWidgets(1));
+    });
+
     testWidgets('renders 1 item', (tester) async {
       when(() => emailListBloc.state).thenReturn(EmailListLoaded(mockEmails));
       await tester.pumpEmailListList(emailListBloc);
       await tester.pumpAndSettle();
 
       expect(find.byType(EmailListItem), findsNWidgets(1));
+    });
+
+    testWidgets('renders item with attachment', (tester) async {
+      final _mockEmails = [
+        Email(
+          sender: 'Ralph Edwards',
+          subject: 'The results to our user testing',
+          messagePreview: 'What is the progress on that task?',
+          isFavorite: false,
+          date: DateTime.parse('2022-04-10 20:18:04Z'),
+          image: '',
+          attachments: [Attachment(AttachmentType.doc, 'doc')],
+        )
+      ];
+
+      when(() => emailListBloc.state).thenReturn(EmailListLoaded(_mockEmails));
+      await tester.pumpEmailListList(emailListBloc);
+      await tester.pumpAndSettle();
+
+      expect(find.byType(EmailListItem), findsNWidgets(1));
+      expect(find.byType(AttachmentIcon), findsNWidgets(1));
     });
 
     testWidgets('renders error text', (tester) async {
