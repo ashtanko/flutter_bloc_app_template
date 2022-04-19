@@ -65,5 +65,18 @@ void main() {
 
       expect(find.text('Light Theme'), findsOneWidget);
     });
+
+    testWidgets('dropdown button test', (tester) async {
+      when(() => themeCubit.state).thenReturn(ThemeState.light);
+      when(() => themeCubit.themeMode).thenReturn(ThemeMode.light);
+
+      await tester.pumpSettings(themeCubit);
+      await tester.pump();
+
+      var dropdownButton = find.byType(DropdownButton<ThemeMode>);
+      await tester.tap(dropdownButton);
+
+      expect(dropdownButton, findsOneWidget);
+    });
   });
 }

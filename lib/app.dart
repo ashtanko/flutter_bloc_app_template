@@ -53,23 +53,8 @@ class _App extends StatelessWidget {
           theme: context.watch<ThemeCubit>().lightTheme,
           darkTheme: context.watch<ThemeCubit>().darkTheme,
           themeMode: context.watch<ThemeCubit>().themeMode,
-
-          // Define a function to handle named routes in order to support
-          // Flutter web url navigation and deep linking.
-          onGenerateRoute: (RouteSettings routeSettings) {
-            return MaterialPageRoute<void>(
-              settings: routeSettings,
-              builder: (BuildContext context) {
-                switch (routeSettings.name) {
-                  case Settings.routeName:
-                    return const Settings();
-                  case EmailListScreen.routeName:
-                  default:
-                    return const EmailListScreen();
-                }
-              },
-            );
-          },
+          onGenerateRoute: Routes.generateRoute,
+          onUnknownRoute: Routes.errorRoute,
         );
       }),
     );
