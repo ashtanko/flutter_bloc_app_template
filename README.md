@@ -49,6 +49,20 @@ Activate flutter_gen using dart pub global activate flutter_gen command if you h
 
 after add export PATH="$PATH":"$HOME/.pub-cache/bin" to bash_profile
 
+``` bash
+# clean project, install dependencies & generate sources
+make
+
+# generate localizations, dependencies, image assets, colors, fonts
+make gen
+
+# generate localizations
+make localize
+
+# analyze the project
+check
+```
+
 ## Reminders 🧠
 Change name in pubspec.yaml file
 
