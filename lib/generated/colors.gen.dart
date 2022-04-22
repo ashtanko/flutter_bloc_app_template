@@ -17,6 +17,9 @@ class ColorName {
   /// Color: #1E5185
   static const Color accentLight = Color(0xFF1E5185);
 
+  /// Color: #c49000
+  static const Color accentYellow = Color(0xFFC49000);
+
   /// Color: #B3B2B3
   static const Color attachmentBorderColor = Color(0xFFB3B2B3);
 
@@ -28,6 +31,9 @@ class ColorName {
 
   /// Color: #ffffff
   static const Color backgroundLight = Color(0xFFFFFFFF);
+
+  /// Color: #fffde7
+  static const Color backgroundYellow = Color(0xFFFFFDE7);
 
   /// Color: #242424
   static const Color canvasDark = Color(0xFF242424);
@@ -46,4 +52,7 @@ class ColorName {
 
   /// Color: #1E1E1E
   static const Color primaryLight = Color(0xFF1E1E1E);
+
+  /// Color: #fbc02d
+  static const Color primaryYellow = Color(0xFFFBC02D);
 }

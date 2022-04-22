@@ -22,11 +22,20 @@ Just click on [![Use this template](https://img.shields.io/badge/-Use%20this%20t
 - Codecov Setup with GitHub Actions
 - Unit test coverage
 
-## Screenshots
+## Android Screenshots
 <p align="left">
-<img src="/preview/light_theme.png" width="32%"/>
-<img src="/preview/dark_theme.png" width="32%"/>
+<img src="/preview/android/light_theme.png" width="32%"/>
+<img src="/preview/android/dark_theme.png" width="32%"/>
+<img src="/preview/android/yellow_theme.png" width="32%"/>
 </p>
+
+## iOS Screenshots
+<p align="left">
+<img src="/preview/ios/light_theme.png" width="32%"/>
+<img src="/preview/ios/dark_theme.png" width="32%"/>
+<img src="/preview/ios/yellow_theme.png" width="32%"/>
+</p>
+
 
 ## Static Analysis 🔍
 

@@ -59,13 +59,41 @@ void main() {
       expect(cubit.darkTheme, Style.dark);
     });
 
-    test('returns ThemeMode correctly', () async {
-      cubit.theme = ThemeState.system;
-      expect(cubit.themeMode, ThemeMode.system);
-      cubit.theme = ThemeState.light;
-      expect(cubit.themeMode, ThemeMode.light);
-      cubit.theme = ThemeState.dark;
-      expect(cubit.themeMode, ThemeMode.dark);
+    void verifyThemeChange(
+        {required ThemeState themeState,
+        required ThemeMode themeMode,
+        required ThemeState expectedThemeState}) {
+      cubit.updateTheme(themeState);
+      expect(cubit.themeMode, themeMode);
+      expect(cubit.state, expectedThemeState);
+    }
+
+    test('update to system theme correctly', () async {
+      verifyThemeChange(
+          themeState: ThemeState.system,
+          themeMode: ThemeMode.system,
+          expectedThemeState: ThemeState.system);
+    });
+
+    test('update to dark theme correctly', () async {
+      verifyThemeChange(
+          themeState: ThemeState.dark,
+          themeMode: ThemeMode.dark,
+          expectedThemeState: ThemeState.dark);
+    });
+
+    test('update to light theme correctly', () async {
+      verifyThemeChange(
+          themeState: ThemeState.light,
+          themeMode: ThemeMode.light,
+          expectedThemeState: ThemeState.light);
+    });
+
+    test('update to yellow theme correctly', () async {
+      verifyThemeChange(
+          themeState: ThemeState.yellow,
+          themeMode: ThemeMode.light,
+          expectedThemeState: ThemeState.yellow);
     });
   });
 }

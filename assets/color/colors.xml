@@ -1,5 +1,9 @@
 <!--?xml version="1.0" encoding="UTF-8"?-->
 <resources>
+    <color name="primary_yellow">#fbc02d</color>
+    <color name="accent_yellow">#c49000</color>
+    <color name="background_yellow">#fffde7</color>
+
     <color name="primary_light">#1E1E1E</color>
     <color name="accent_light">#1E5185</color>
     <color name="background_light">#ffffff</color>

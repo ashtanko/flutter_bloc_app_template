@@ -100,12 +100,22 @@ class S {
     );
   }
 
+  /// `Theme`
+  String get themeTitle {
+    return Intl.message(
+      'Theme',
+      name: 'themeTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `System Theme`
   String get systemThemeTitle {
     return Intl.message(
       'System Theme',
       name: 'systemThemeTitle',
-      desc: 'The title of the system theme',
+      desc: '',
       args: [],
     );
   }
@@ -115,7 +125,7 @@ class S {
     return Intl.message(
       'Light Theme',
       name: 'lightThemeTitle',
-      desc: 'The title of the light theme',
+      desc: '',
       args: [],
     );
   }
@@ -125,7 +135,17 @@ class S {
     return Intl.message(
       'Dark Theme',
       name: 'darkThemeTitle',
-      desc: 'The title of the dark theme',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yellow Theme`
+  String get yellowThemeTitle {
+    return Intl.message(
+      'Yellow Theme',
+      name: 'yellowThemeTitle',
+      desc: '',
       args: [],
     );
   }

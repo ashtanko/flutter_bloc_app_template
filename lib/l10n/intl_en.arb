@@ -19,18 +19,16 @@
   "@settingsTitle": {
     "description": "The title of the settings"
   },
+  "themeTitle": "Theme",
+  "@themeTitle": {},
   "systemThemeTitle": "System Theme",
-  "@systemThemeTitle": {
-    "description": "The title of the system theme"
-  },
+  "@systemThemeTitle": {},
   "lightThemeTitle": "Light Theme",
-  "@lightThemeTitle": {
-    "description": "The title of the light theme"
-  },
+  "@lightThemeTitle": {},
   "darkThemeTitle": "Dark Theme",
-  "@darkThemeTitle": {
-    "description": "The title of the dark theme"
-  },
+  "@darkThemeTitle": {},
+  "yellowThemeTitle": "Yellow Theme",
+  "@yellowThemeTitle": {},
   "itemDetailsTitle": "Item Details",
   "@itemDetailsTitle": {
     "description": "The title of the Item Details screen"

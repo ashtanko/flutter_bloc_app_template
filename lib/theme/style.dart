@@ -13,6 +13,36 @@ class Style {
     },
   );
 
+  /// Yellow style
+  static ThemeData get yellow {
+    final base = ThemeData.light();
+
+    final textTheme = _buildTextTheme(base);
+
+    return base.copyWith(
+      brightness: Brightness.light,
+      appBarTheme: const AppBarTheme(
+        systemOverlayStyle:
+            SystemUiOverlayStyle(statusBarBrightness: Brightness.dark),
+      ),
+      colorScheme: const ColorScheme.light().copyWith(
+        primary: ColorName.accentYellow,
+        secondary: ColorName.accentYellow,
+        onSecondary: Colors.white,
+      ),
+      primaryColor: ColorName.primaryYellow,
+      scaffoldBackgroundColor: ColorName.backgroundYellow,
+      dividerColor: ColorName.dividerLight,
+      pageTransitionsTheme: _pageTransitionsTheme,
+      textTheme: GoogleFonts.robotoTextTheme(textTheme),
+      popupMenuTheme: PopupMenuThemeData(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(6),
+        ),
+      ),
+    );
+  }
+
   /// Light style
   static ThemeData get light {
     final base = ThemeData.light();

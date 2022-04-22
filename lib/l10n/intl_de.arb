@@ -19,18 +19,16 @@
   "@settingsTitle": {
     "description": "Der Titel der Einstellungen"
   },
+  "themeTitle": "Thema",
+  "@themeTitle": {},
   "systemThemeTitle": "System-Thema",
-  "@systemThemeTitle": {
-    "description": "Der Titel des Systemthemas"
-  },
+  "@systemThemeTitle": {},
   "lightThemeTitle": "Licht-Thema",
-  "@lightThemeTitle": {
-    "description": "Der Titel des leichten Themas"
-  },
+  "@lightThemeTitle": {},
   "darkThemeTitle": "Dunkles Thema",
-  "@darkThemeTitle": {
-    "description": "Der Titel des dunklen Themas"
-  },
+  "@darkThemeTitle": {},
+  "yellowThemeTitle": "Gelbes Thema",
+  "@yellowThemeTitle": {},
   "itemDetailsTitle": "Artikel Details",
   "@itemDetailsTitle": {
     "description": "Der Titel des Bildschirms Artikeldetails"
