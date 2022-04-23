@@ -18,4 +18,5 @@
 
     <color name="attachment_border_color">#B3B2B3</color>
     <color name="attachment_text_color">#5D5C5D</color>
+    <color name="bottom_sheet_top_icon_color">#e0e0e0</color>
 </resources>

@@ -30,7 +30,7 @@ class EmailListView extends StatelessWidget {
             shrinkWrap: true,
             primary: false,
             itemBuilder: (context, index) => EmailListItem(
-              message: messages[index],
+              email: messages[index],
               onTap: () {
                 print('click');
               },

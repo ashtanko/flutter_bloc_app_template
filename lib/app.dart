@@ -4,7 +4,6 @@ import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/index.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-/// The Widget that configures your application.
 class MyApp extends StatelessWidget {
   const MyApp({
     Key? key,

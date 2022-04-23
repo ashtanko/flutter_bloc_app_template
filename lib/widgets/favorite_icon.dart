@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_app_template/generated/assets.gen.dart';
 import 'package:flutter_bloc_app_template/index.dart';
 
 class FavoriteIcon extends StatelessWidget {
@@ -12,7 +11,7 @@ class FavoriteIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return message.isFavorite
-        ? Assets.images.iconStarActive.svg()
-        : Assets.images.iconStar.svg();
+        ? AppIcons.attachmentFavoriteActive
+        : AppIcons.attachmentFavorite;
   }
 }

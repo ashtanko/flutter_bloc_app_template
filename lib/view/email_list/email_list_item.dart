@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_app_template/generated/assets.gen.dart';
 import 'package:flutter_bloc_app_template/index.dart';
 
 class EmailListItem extends StatelessWidget {
-  const EmailListItem({Key? key, required this.message, this.onTap})
+  const EmailListItem({Key? key, required this.email, this.onTap})
       : super(key: key);
 
-  final Email message;
+  final Email email;
   final VoidCallback? onTap;
 
   @override
@@ -17,23 +16,23 @@ class EmailListItem extends StatelessWidget {
         onTap: onTap,
         child: Padding(
           padding: const EdgeInsets.symmetric(
-            vertical: 12,
-            horizontal: 12,
+            vertical: Paddings.normal,
+            horizontal: Paddings.normal,
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: Separator.spaceChildren(
-              space: 8,
+              space: Space.mediumSmall,
               children: [
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      height: 40,
-                      width: 40,
+                      height: IconSizes.avatar,
+                      width: IconSizes.avatar,
                       child: Center(
                         child: ItemAvatar(
-                          message: message,
+                          email: email,
                         ),
                       ),
                     ),
@@ -46,16 +45,16 @@ class EmailListItem extends StatelessWidget {
                           children: [
                             Row(
                               children: [
-                                Assets.images.chevronsRight.svg(),
+                                AppIcons.attachmentChevronsRight,
                                 Separator.divider(indent: 5),
                                 Text(
-                                  message.sender,
+                                  email.sender,
                                   style: Theme.of(context)
                                       .textTheme
                                       .subtitle1
                                       ?.copyWith(
                                         fontWeight: FontWeight.bold,
-                                        fontSize: 14,
+                                        fontSize: FontSizes.subtitle2,
                                       ),
                                   overflow: TextOverflow.ellipsis,
                                   maxLines: 1,
@@ -63,31 +62,31 @@ class EmailListItem extends StatelessWidget {
                               ],
                             ),
                             Text(
-                              message.subject,
+                              email.subject,
                               style: Theme.of(context)
                                   .textTheme
                                   .subtitle1
                                   ?.copyWith(
                                     fontWeight: FontWeight.w600,
-                                    fontSize: 14,
+                                    fontSize: FontSizes.subtitle2,
                                   ),
                               overflow: TextOverflow.ellipsis,
                               maxLines: 1,
                             ),
                             Text(
-                              message.messagePreview,
+                              email.messagePreview,
                               style: Theme.of(context)
                                   .textTheme
                                   .bodyText2
                                   ?.copyWith(
-                                    fontSize: 14,
+                                    fontSize: FontSizes.subtitle2,
                                   ),
                               overflow: TextOverflow.ellipsis,
                               maxLines: 1,
                             ),
                             Separator.spacer(Space.small),
                             Attachments(
-                              message: message,
+                              email: email,
                             ),
                           ],
                         ),
@@ -96,10 +95,10 @@ class EmailListItem extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        Text(message.getFormattedDate()),
+                        Text(email.getFormattedDate()),
                         Separator.spacer(Space.large),
                         FavoriteIcon(
-                          message: message,
+                          message: email,
                         ),
                       ],
                     ),

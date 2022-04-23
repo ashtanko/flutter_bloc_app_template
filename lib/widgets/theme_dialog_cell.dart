@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/index.dart';
 
-const _iconSize = 22.0;
-
 class ThemeDialogCell<T> extends StatelessWidget {
   const ThemeDialogCell({
     Key? key,
@@ -27,8 +25,8 @@ class ThemeDialogCell<T> extends StatelessWidget {
         child: Row(
           children: [
             Icon(
-              _isChecked ? Icons.check : null,
-              size: _iconSize,
+              _isChecked ? AppIcons.iconCheck : null,
+              size: IconSizes.themeDialogIconSize,
               color: _isChecked ? Colors.green : null,
             ),
             Separator.spacer(Space.large),

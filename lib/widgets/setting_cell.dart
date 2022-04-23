@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc_app_template/index.dart';
 
 class SettingCell extends StatelessWidget {
   const SettingCell({
@@ -20,7 +21,7 @@ class SettingCell extends StatelessWidget {
   }) {
     return SettingCell(
       key: key,
-      leading: Icon(icon, size: 20),
+      leading: Icon(icon, size: IconSizes.settingsItem),
       title: title,
       onTap: onTap,
       contentPadding: contentPadding,
@@ -51,7 +52,7 @@ class SettingCell extends StatelessWidget {
           ),
         ],
       ),
-      trailing: const Icon(Icons.chevron_right),
+      trailing: const Icon(AppIcons.chevronRight),
       contentPadding: contentPadding,
       onTap: onTap,
       dense: dense,

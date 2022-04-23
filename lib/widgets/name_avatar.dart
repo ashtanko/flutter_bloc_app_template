@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc_app_template/index.dart';
 
 class NameAvatar extends StatelessWidget {
   const NameAvatar({
@@ -11,8 +12,8 @@ class NameAvatar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 40,
-      width: 40,
+      height: IconSizes.avatar,
+      width: IconSizes.avatar,
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.secondary.withOpacity(0.65),
         shape: BoxShape.circle,
@@ -25,7 +26,7 @@ class NameAvatar extends StatelessWidget {
         child: Text(
           name,
           style: Theme.of(context).textTheme.headline6?.copyWith(
-                fontSize: 18,
+                fontSize: FontSizes.label,
                 color: Theme.of(context).textTheme.subtitle1?.color,
               ),
           overflow: TextOverflow.clip,

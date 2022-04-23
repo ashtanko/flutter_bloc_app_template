@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/index.dart';
 
-const dialogCornerRadius = 25.0;
-
-const kDialogContentPadding = EdgeInsets.symmetric(horizontal: 20);
+const kDialogContentPadding =
+    EdgeInsets.symmetric(horizontal: Paddings.kDialogContentPadding);
 
 Future<T?> showBottomSheetDialog<T>({
   required BuildContext context,
@@ -22,8 +21,8 @@ Future<T?> showBottomSheetDialog<T>({
     ),
     shape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.only(
-        topLeft: Radius.circular(dialogCornerRadius),
-        topRight: Radius.circular(dialogCornerRadius),
+        topLeft: Radius.circular(RadiusSize.kDialogCornerRadius),
+        topRight: Radius.circular(RadiusSize.kDialogCornerRadius),
       ),
     ),
   );
@@ -63,14 +62,7 @@ class _RoundDialog extends StatelessWidget {
           children: Separator.spaceChildren(
             space: Space.superLarge,
             children: [
-              SizedBox(
-                width: 42,
-                height: 15,
-                child: Card(
-                  shadowColor: Colors.transparent,
-                  color: Colors.grey[400], //Center
-                ), //Card
-              ),
+              BottomSheetDialogIcon(),
               Flexible(
                 child: SingleChildScrollView(
                   padding: padding,

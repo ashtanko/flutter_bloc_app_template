@@ -35,6 +35,9 @@ class ColorName {
   /// Color: #fffde7
   static const Color backgroundYellow = Color(0xFFFFFDE7);
 
+  /// Color: #e0e0e0
+  static const Color bottomSheetTopIconColor = Color(0xFFE0E0E0);
+
   /// Color: #242424
   static const Color canvasDark = Color(0xFF242424);
 

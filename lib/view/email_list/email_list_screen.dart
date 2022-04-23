@@ -16,7 +16,7 @@ class EmailListScreen extends StatelessWidget {
         title: Text(S.of(context).messagesTitle),
         actions: [
           IconButton(
-            icon: const Icon(Icons.settings),
+            icon: const Icon(AppIcons.toolbarSettings),
             onPressed: () {
               Navigator.restorablePushNamed(context, Settings.routeName);
             },

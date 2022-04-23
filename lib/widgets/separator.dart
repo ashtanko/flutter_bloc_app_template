@@ -1,16 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc_app_template/index.dart';
 import 'package:gap/gap.dart';
-
-class Space {
-  static const superLarge = 24.0;
-  static const large = 16.0;
-
-  static const medium = 12.0;
-  static const mediumSmall = 8.0;
-
-  static const small = 6.0;
-  static const superSmall = 4.0;
-}
 
 class Separator {
   static Widget spacer([double space = Space.medium]) {

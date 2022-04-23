@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc_app_template/constants/index.dart';
 import 'package:flutter_bloc_app_template/generated/colors.gen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -23,7 +24,7 @@ class Style {
       brightness: Brightness.light,
       appBarTheme: const AppBarTheme(
         systemOverlayStyle:
-            SystemUiOverlayStyle(statusBarBrightness: Brightness.dark),
+            SystemUiOverlayStyle(statusBarBrightness: Brightness.light),
       ),
       colorScheme: const ColorScheme.light().copyWith(
         primary: ColorName.accentYellow,
@@ -35,11 +36,7 @@ class Style {
       dividerColor: ColorName.dividerLight,
       pageTransitionsTheme: _pageTransitionsTheme,
       textTheme: GoogleFonts.robotoTextTheme(textTheme),
-      popupMenuTheme: PopupMenuThemeData(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(6),
-        ),
-      ),
+      popupMenuTheme: _buildPopupMenuThemeData(),
     );
   }
 
@@ -65,11 +62,7 @@ class Style {
       dividerColor: ColorName.dividerLight,
       pageTransitionsTheme: _pageTransitionsTheme,
       textTheme: GoogleFonts.robotoTextTheme(textTheme),
-      popupMenuTheme: PopupMenuThemeData(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(6),
-        ),
-      ),
+      popupMenuTheme: _buildPopupMenuThemeData(),
     );
   }
 
@@ -92,10 +85,14 @@ class Style {
       dialogBackgroundColor: ColorName.cardDark,
       pageTransitionsTheme: _pageTransitionsTheme,
       textTheme: GoogleFonts.robotoTextTheme(textTheme),
-      popupMenuTheme: PopupMenuThemeData(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(6),
-        ),
+      popupMenuTheme: _buildPopupMenuThemeData(),
+    );
+  }
+
+  static PopupMenuThemeData _buildPopupMenuThemeData() {
+    return PopupMenuThemeData(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(RadiusSize.popupMenuBorderRadius),
       ),
     );
   }
@@ -104,12 +101,12 @@ class Style {
     final textTheme = base.textTheme;
 
     return textTheme.copyWith(
-      headline1: textTheme.headline1?.copyWith(fontSize: 90.0),
-      headline2: textTheme.headline2?.copyWith(fontSize: 60.0),
-      headline3: textTheme.headline3?.copyWith(fontSize: 48.0),
-      headline4: textTheme.headline4?.copyWith(fontSize: 34.0),
-      headline5: textTheme.headline5?.copyWith(fontSize: 24.0),
-      headline6: textTheme.headline6?.copyWith(fontSize: 20.0),
+      headline1: textTheme.headline1?.copyWith(fontSize: FontSizes.headline1),
+      headline2: textTheme.headline2?.copyWith(fontSize: FontSizes.headline2),
+      headline3: textTheme.headline3?.copyWith(fontSize: FontSizes.headline3),
+      headline4: textTheme.headline4?.copyWith(fontSize: FontSizes.headline4),
+      headline5: textTheme.headline5?.copyWith(fontSize: FontSizes.headline5),
+      headline6: textTheme.headline6?.copyWith(fontSize: FontSizes.headline6),
     );
   }
 }

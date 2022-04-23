@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_app_template/generated/assets.gen.dart';
 import 'package:flutter_bloc_app_template/index.dart';
 
 class AttachmentIcon extends StatelessWidget {
@@ -12,7 +11,7 @@ class AttachmentIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return attachment.type == AttachmentType.doc
-        ? Assets.images.fileDoc.svg()
-        : Assets.images.filePdf.svg();
+        ? AppIcons.attachmentDoc
+        : AppIcons.attachmentPdf;
   }
 }

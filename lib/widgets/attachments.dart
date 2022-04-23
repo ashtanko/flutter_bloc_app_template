@@ -3,22 +3,22 @@ import 'package:flutter_bloc_app_template/generated/colors.gen.dart';
 import 'package:flutter_bloc_app_template/index.dart';
 
 class Attachments extends StatelessWidget {
-  const Attachments({Key? key, required this.message, this.onTap})
+  const Attachments({Key? key, required this.email, this.onTap})
       : super(key: key);
 
-  final Email message;
+  final Email email;
   final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
-    final attachments = message.attachments;
+    final attachments = email.attachments;
 
     if (attachments.isEmpty) {
       return EmptyWidget();
     }
 
     return Container(
-      height: 24,
+      height: ContainerSizes.kAttachmentHeight,
       child: ListView.separated(
         physics: const NeverScrollableScrollPhysics(),
         scrollDirection: Axis.horizontal,
@@ -39,7 +39,8 @@ class Attachments extends StatelessWidget {
                   color: ColorName.attachmentBorderColor,
                   width: 1,
                 ),
-                borderRadius: BorderRadius.circular(30),
+                borderRadius:
+                    BorderRadius.circular(RadiusSize.kAttachmentBorderRadius),
               ),
               child: Padding(
                 padding: const EdgeInsets.only(
@@ -55,7 +56,7 @@ class Attachments extends StatelessWidget {
                     Text(
                       attachment.name,
                       style: const TextStyle(
-                        fontSize: 14,
+                        fontSize: FontSizes.subtitle2,
                       ),
                     ),
                   ],

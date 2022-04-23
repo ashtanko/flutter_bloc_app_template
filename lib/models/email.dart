@@ -40,6 +40,8 @@ class Email extends Equatable {
         attachments,
       ];
 
+  /// Formats email date in format MMM dd, ex. Apr 23
+  /// If it's today, returns date in format jm, ex. 5:08 PM
   String getFormattedDate() {
     final now = DateTime.now();
     if (now.difference(date).inDays > 0) {
@@ -51,6 +53,10 @@ class Email extends Equatable {
     }
   }
 
+  /// Splits the [sender] full name by first character,
+  /// uppercase its, and combines them into a new string.
+  /// If [sender] name is omitted, returns 'N/A'.
+  /// If [sender] has only name, returns the first uppercase character.
   String getFormattedName() {
     if (sender.isEmpty) {
       return 'N/A';
