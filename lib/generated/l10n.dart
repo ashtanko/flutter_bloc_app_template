@@ -179,6 +179,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Home`
+  String get tabHome {
+    return Intl.message(
+      'Home',
+      name: 'tabHome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Settings`
+  String get tabSettings {
+    return Intl.message(
+      'Settings',
+      name: 'tabSettings',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

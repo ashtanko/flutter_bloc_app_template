@@ -26,13 +26,17 @@ void main() {
       final date = DateTime.now();
 
       var month = '${date.month}';
+      var day = '${date.day}';
       if (date.month < 10) {
         month = '0${date.month}';
-      } else {
-        month = '${date.month}';
       }
 
-      final format = '${date.year}-$month-${date.day} 22:18:04Z';
+      if (date.day < 10) {
+        day = '0${date.day}';
+      }
+
+      final format = '${date.year}-$month-$day 22:18:04Z';
+
       final message = Email(
         sender: 'Ralph Edwards',
         subject: 'The results to our user testing',

@@ -38,6 +38,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
         "systemThemeTitle":
             MessageLookupByLibrary.simpleMessage("System Theme"),
+        "tabHome": MessageLookupByLibrary.simpleMessage("Home"),
+        "tabSettings": MessageLookupByLibrary.simpleMessage("Settings"),
         "themeTitle": MessageLookupByLibrary.simpleMessage("Theme"),
         "yellowThemeTitle": MessageLookupByLibrary.simpleMessage("Yellow Theme")
       };

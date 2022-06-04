@@ -36,5 +36,9 @@
   "error": "Fehler",
   "@error": {},
   "emptyList": "Leere Liste",
-  "@emptyList": {}
+  "@emptyList": {},
+  "tabHome": "Home",
+  "@tabHome": {},
+  "tabSettings": "Settings",
+  "@tabSettings": {}
 }

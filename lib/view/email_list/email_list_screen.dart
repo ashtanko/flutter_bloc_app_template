@@ -14,14 +14,6 @@ class EmailListScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(S.of(context).messagesTitle),
-        actions: [
-          IconButton(
-            icon: const Icon(AppIcons.toolbarSettings),
-            onPressed: () {
-              Navigator.restorablePushNamed(context, Settings.routeName);
-            },
-          ),
-        ],
       ),
       body: Scaffold(
         body: Container(

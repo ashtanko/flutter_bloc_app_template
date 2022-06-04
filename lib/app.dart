@@ -36,7 +36,7 @@ class _App extends StatelessWidget {
     return RepositoryProvider(
       create: (context) => null,
       child: Builder(builder: (context) {
-        return MaterialApp(
+        return MaterialApp.router(
           restorationScopeId: 'app',
           localizationsDelegates: const [
             S.delegate,
@@ -52,8 +52,8 @@ class _App extends StatelessWidget {
           theme: context.watch<ThemeCubit>().lightTheme,
           darkTheme: context.watch<ThemeCubit>().darkTheme,
           themeMode: context.watch<ThemeCubit>().themeMode,
-          onGenerateRoute: Routes.generateRoute,
-          onUnknownRoute: Routes.errorRoute,
+          routeInformationParser: appRouter.routeInformationParser,
+          routerDelegate: appRouter.routerDelegate,
         );
       }),
     );
