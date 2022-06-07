@@ -62,14 +62,14 @@ jobs:
         run: sudo apt-get install -y lcov
 
       - name: Remove generated files from code coverage report
-        run: lcov --remove coverage/lcov.info 'lib/*/*.gen.dart' 'lib/generated/*.dart' 'lib/generated/*/*.dart' 'lib/di/*.dart' '**/lib/constants/' -o coverage/lcov.info
+        run: lcov --remove coverage/lcov.info 'lib/*/*.gen.dart' 'lib/generated/*.dart' 'lib/generated/*/*.dart' 'lib/di/*.dart' '**/lib/constants/' 'lib/constants/*.dart' -o coverage/lcov.info
 
       - name: Check Code Coverage
         uses: VeryGoodOpenSource/very_good_coverage@v1.2.0
         with:
           path: coverage/lcov.info
           min_coverage: 75
-          exclude: '**/*.g.dart **/*.gen.dart **/lib/di/ lib/generated/ **/lib/generated/ lib/di/*.dart **/lib/constants/'
+          exclude: '**/*.g.dart **/*.gen.dart **/lib/di/ lib/generated/ **/lib/generated/ lib/di/*.dart **/lib/constants/ lib/constants/*.dart/'
 
       - name: Upload coverage to codecov
         uses: codecov/codecov-action@v2
