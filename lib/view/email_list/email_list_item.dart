@@ -87,6 +87,9 @@ class EmailListItem extends StatelessWidget {
                             Separator.spacer(Space.small),
                             Attachments(
                               email: email,
+                              onTap: () {
+                                // TODO handle tap
+                              },
                             ),
                           ],
                         ),
@@ -99,6 +102,9 @@ class EmailListItem extends StatelessWidget {
                         Separator.spacer(Space.large),
                         FavoriteIcon(
                           message: email,
+                          onTap: () {
+                            // TODO handle tap
+                          },
                         ),
                       ],
                     ),

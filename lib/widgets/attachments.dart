@@ -33,6 +33,7 @@ class Attachments extends StatelessWidget {
 
           return InkWell(
             onTap: onTap,
+            borderRadius: BorderRadius.circular(25),
             child: Container(
               decoration: BoxDecoration(
                 border: Border.all(

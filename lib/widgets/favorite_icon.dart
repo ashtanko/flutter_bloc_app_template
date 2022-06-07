@@ -11,7 +11,7 @@ class FavoriteIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return message.isFavorite
-        ? AppIcons.attachmentFavoriteActive
-        : AppIcons.attachmentFavorite;
+        ? IconButton(onPressed: onTap, icon: AppIcons.attachmentFavoriteActive)
+        : IconButton(onPressed: onTap, icon: AppIcons.attachmentFavorite);
   }
 }
