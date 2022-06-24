@@ -26,9 +26,22 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "appTitle":
             MessageLookupByLibrary.simpleMessage("flutter_bloc_app_template"),
+        "borderRadiusButtonTitle":
+            MessageLookupByLibrary.simpleMessage("BorderRadius"),
+        "borderSideButtonTitle":
+            MessageLookupByLibrary.simpleMessage("BorderSide"),
         "darkThemeTitle": MessageLookupByLibrary.simpleMessage("Dark Theme"),
+        "disabledButtonTitle": MessageLookupByLibrary.simpleMessage("Disabled"),
+        "disabledRoundedButtonTitle":
+            MessageLookupByLibrary.simpleMessage("Disabled Rounded"),
+        "disabledWithIconButtonTitle":
+            MessageLookupByLibrary.simpleMessage("Disabled With Icon"),
         "emptyList": MessageLookupByLibrary.simpleMessage("Empty list"),
+        "enabledButtonTitle": MessageLookupByLibrary.simpleMessage("Enabled"),
         "error": MessageLookupByLibrary.simpleMessage("Error"),
+        "iconAndPaddingButtonTitle":
+            MessageLookupByLibrary.simpleMessage("With Icon Padding"),
+        "iconButtonTitle": MessageLookupByLibrary.simpleMessage("With Icon"),
         "itemDetailsTitle":
             MessageLookupByLibrary.simpleMessage("Item Details"),
         "itemTitle": m0,
@@ -41,6 +54,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "tabHome": MessageLookupByLibrary.simpleMessage("Home"),
         "tabSettings": MessageLookupByLibrary.simpleMessage("Settings"),
         "themeTitle": MessageLookupByLibrary.simpleMessage("Theme"),
+        "transparentButtonTitle":
+            MessageLookupByLibrary.simpleMessage("Transparent"),
+        "widgetList": MessageLookupByLibrary.simpleMessage("Widget List"),
         "yellowThemeTitle": MessageLookupByLibrary.simpleMessage("Yellow Theme")
       };
 }

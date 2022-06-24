@@ -1,0 +1,32 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/index.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+extension on WidgetTester {
+  Future<void> pumpScreen() {
+    return pumpWidget(
+      const MaterialApp(
+        localizationsDelegates: [
+          AppLocalizationDelegate(),
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate
+        ],
+        locale: Locale('en'),
+        home: WidgetListScreen(),
+      ),
+    );
+  }
+}
+
+void main() {
+  group('Widget List View Tests', () {
+    testWidgets('render buttons', (tester) async {
+      await tester.pumpScreen();
+      await tester.pump();
+      expect(find.byType(CustomButton), findsNWidgets(14));
+      expect(find.byType(Icon), findsNWidgets(9));
+    });
+  });
+}

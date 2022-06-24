@@ -60,6 +60,19 @@ final appRouter = GoRouter(
           child: Settings(),
         ),
       ),
+      routes: [
+        GoRoute(
+          path: WidgetListScreen.routeName,
+          pageBuilder: (context, state) => MaterialPage<void>(
+            key: state.pageKey,
+            child: const RootLayout(
+              key: _scaffoldKey,
+              currentIndex: 1,
+              child: WidgetListScreen(),
+            ),
+          ),
+        ),
+      ],
     ),
     for (final route in destinations.skip(2))
       GoRoute(

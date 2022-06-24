@@ -199,6 +199,106 @@ class S {
       args: [],
     );
   }
+
+  /// `Widget List`
+  String get widgetList {
+    return Intl.message(
+      'Widget List',
+      name: 'widgetList',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Disabled`
+  String get disabledButtonTitle {
+    return Intl.message(
+      'Disabled',
+      name: 'disabledButtonTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Disabled Rounded`
+  String get disabledRoundedButtonTitle {
+    return Intl.message(
+      'Disabled Rounded',
+      name: 'disabledRoundedButtonTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Disabled With Icon`
+  String get disabledWithIconButtonTitle {
+    return Intl.message(
+      'Disabled With Icon',
+      name: 'disabledWithIconButtonTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enabled`
+  String get enabledButtonTitle {
+    return Intl.message(
+      'Enabled',
+      name: 'enabledButtonTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `BorderRadius`
+  String get borderRadiusButtonTitle {
+    return Intl.message(
+      'BorderRadius',
+      name: 'borderRadiusButtonTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `BorderSide`
+  String get borderSideButtonTitle {
+    return Intl.message(
+      'BorderSide',
+      name: 'borderSideButtonTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `With Icon`
+  String get iconButtonTitle {
+    return Intl.message(
+      'With Icon',
+      name: 'iconButtonTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `With Icon Padding`
+  String get iconAndPaddingButtonTitle {
+    return Intl.message(
+      'With Icon Padding',
+      name: 'iconAndPaddingButtonTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Transparent`
+  String get transparentButtonTitle {
+    return Intl.message(
+      'Transparent',
+      name: 'transparentButtonTitle',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
