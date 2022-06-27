@@ -46,7 +46,7 @@ void main() {
 
     await tester.pumpSettings(themeCubit);
     await tester.pump();
-    await tester.tap(find.byType(SettingCell));
+    await tester.tap(find.byIcon(Icons.palette));
     await tester.pump();
 
     expect(
@@ -75,7 +75,7 @@ void main() {
 
     await tester.pumpSettings(themeCubit);
     await tester.pump();
-    await tester.tap(find.byType(SettingCell));
+    await tester.tap(find.byIcon(Icons.palette));
     await tester.pumpAndSettle();
     await tester.tap(
       find.widgetWithText(ThemeDialogCell<ThemeState>, widgetTitle),
@@ -115,8 +115,8 @@ void main() {
 
       expect(find.text('Theme'), findsOneWidget);
       expect(find.byIcon(Icons.palette), findsOneWidget);
-      expect(find.byIcon(Icons.chevron_right), findsOneWidget);
-      expect(find.byType(SettingCell), findsOneWidget);
+      expect(find.byIcon(Icons.chevron_right), findsNWidgets(2));
+      expect(find.byType(SettingCell), findsNWidgets(2));
     });
 
     testWidgets('render bottom sheet dialog items', (tester) async {
@@ -125,7 +125,7 @@ void main() {
 
       await tester.pumpSettings(themeCubit);
       await tester.pump();
-      await tester.tap(find.byType(SettingCell));
+      await tester.tap(find.byIcon(Icons.palette));
       await tester.pumpAndSettle();
 
       expect(find.byType(ThemeDialogCell<ThemeState>), findsNWidgets(4));
