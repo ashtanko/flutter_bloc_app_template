@@ -150,6 +150,16 @@ class S {
     );
   }
 
+  /// `Experimental Theme`
+  String get experimentalThemeTitle {
+    return Intl.message(
+      'Experimental Theme',
+      name: 'experimentalThemeTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Item Details`
   String get itemDetailsTitle {
     return Intl.message(

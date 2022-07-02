@@ -29,6 +29,8 @@
   "@darkThemeTitle": {},
   "yellowThemeTitle": "Gelbes Thema",
   "@yellowThemeTitle": {},
+  "experimentalThemeTitle": "Experimental Theme",
+  "@experimentalThemeTitle": {},
   "itemDetailsTitle": "Artikel Details",
   "@itemDetailsTitle": {
     "description": "Der Titel des Bildschirms Artikeldetails"

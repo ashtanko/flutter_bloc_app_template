@@ -49,7 +49,7 @@ class _App extends StatelessWidget {
             Locale('de', ''), // Ukraine, no country code
           ],
           onGenerateTitle: (BuildContext context) => S.of(context).appTitle,
-          theme: context.watch<ThemeCubit>().lightTheme,
+          theme: context.watch<ThemeCubit>().getDefaultTheme(),
           darkTheme: context.watch<ThemeCubit>().darkTheme,
           themeMode: context.watch<ThemeCubit>().themeMode,
           routeInformationParser: appRouter.routeInformationParser,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/index.dart';
+import 'package:go_router/go_router.dart';
 
 class EmailListView extends StatelessWidget {
   @override
@@ -32,7 +33,7 @@ class EmailListView extends StatelessWidget {
             itemBuilder: (context, index) => EmailListItem(
               email: messages[index],
               onTap: () {
-                print('click');
+                context.go('/details');
               },
             ),
             itemCount: messages.length,

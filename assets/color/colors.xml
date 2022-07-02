@@ -1,5 +1,9 @@
 <!--?xml version="1.0" encoding="UTF-8"?-->
 <resources>
+    <color name="primary_experimental">#005b9f</color>
+    <color name="accent_experimental">#0288d1</color>
+    <color name="background_experimental">#b2ebf2</color>
+
     <color name="primary_yellow">#fbc02d</color>
     <color name="accent_yellow">#c49000</color>
     <color name="background_yellow">#fffde7</color>

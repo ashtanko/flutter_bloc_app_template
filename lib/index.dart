@@ -4,7 +4,7 @@ export 'constants/index.dart';
 export 'di/di.dart';
 export 'models/models.dart';
 export 'repository/repository.dart';
-export 'routes/routes.dart';
+export 'routes/router.dart';
 export 'theme/theme.dart';
 export 'view/view.dart';
 export 'widgets/widgets.dart';

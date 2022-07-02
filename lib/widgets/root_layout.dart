@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_app_template/routes/routes.dart' as router;
+import 'package:flutter_bloc_app_template/routes/router.dart' as router;
 import 'package:go_router/go_router.dart';
 
 class RootLayout extends StatelessWidget {

@@ -14,6 +14,77 @@ class Style {
     },
   );
 
+  static ElevatedButtonThemeData get _customElevatedButtonTheme {
+    return ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16.0),
+        ),
+        textStyle: const TextStyle(fontSize: 20),
+        shadowColor: Colors.red,
+        elevation: 20,
+      ),
+    );
+  }
+
+  static OutlinedButtonThemeData get _customOutlinedButtonTheme {
+    return OutlinedButtonThemeData(
+      style: OutlinedButton.styleFrom(
+        side: const BorderSide(
+          color: Color(0xff00a468),
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16.0),
+        ),
+        elevation: 25,
+        textStyle: const TextStyle(fontSize: 20),
+      ),
+    );
+  }
+
+  static TextButtonThemeData get _customTextButtonTheme {
+    return TextButtonThemeData(
+      style: TextButton.styleFrom(
+        textStyle: const TextStyle(
+          fontWeight: FontWeight.w400,
+          fontSize: 13.0,
+          decoration: TextDecoration.underline,
+        ),
+      ),
+    );
+  }
+
+  /// Yellow style
+  static ThemeData get experimental {
+    final base = ThemeData.light();
+
+    final textTheme = _buildTextTheme(base);
+
+    return base.copyWith(
+      brightness: Brightness.light,
+      appBarTheme: AppBarTheme(
+        systemOverlayStyle:
+            const SystemUiOverlayStyle(statusBarBrightness: Brightness.light),
+        titleTextStyle: textTheme.titleSmall,
+        actionsIconTheme: const IconThemeData(size: 56.0, color: Colors.red),
+      ),
+      colorScheme: const ColorScheme.light().copyWith(
+        primary: ColorName.accentExperimental,
+        secondary: ColorName.accentExperimental,
+        onSecondary: Colors.white,
+      ),
+      primaryColor: ColorName.primaryExperimental,
+      scaffoldBackgroundColor: ColorName.backgroundExperimental,
+      dividerColor: ColorName.dividerLight,
+      pageTransitionsTheme: _pageTransitionsTheme,
+      textTheme: GoogleFonts.robotoTextTheme(textTheme),
+      popupMenuTheme: _buildPopupMenuThemeData(),
+      elevatedButtonTheme: _customElevatedButtonTheme,
+      outlinedButtonTheme: _customOutlinedButtonTheme,
+      textButtonTheme: _customTextButtonTheme,
+    );
+  }
+
   /// Yellow style
   static ThemeData get yellow {
     final base = ThemeData.light();

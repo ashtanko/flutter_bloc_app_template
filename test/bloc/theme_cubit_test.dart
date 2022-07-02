@@ -50,7 +50,7 @@ void main() {
     );
 
     test('has default light theme', () async {
-      expect(cubit.lightTheme, Style.light);
+      expect(cubit.getDefaultTheme(), Style.light);
     });
 
     test('has default dark theme', () async {

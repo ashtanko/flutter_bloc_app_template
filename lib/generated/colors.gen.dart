@@ -14,6 +14,9 @@ class ColorName {
   /// Color: #6a4f4b
   static const Color accentDark = Color(0xFF6A4F4B);
 
+  /// Color: #0288d1
+  static const Color accentExperimental = Color(0xFF0288D1);
+
   /// Color: #1E5185
   static const Color accentLight = Color(0xFF1E5185);
 
@@ -28,6 +31,9 @@ class ColorName {
 
   /// Color: #1b1b1b
   static const Color backgroundDark = Color(0xFF1B1B1B);
+
+  /// Color: #b2ebf2
+  static const Color backgroundExperimental = Color(0xFFB2EBF2);
 
   /// Color: #ffffff
   static const Color backgroundLight = Color(0xFFFFFFFF);
@@ -52,6 +58,9 @@ class ColorName {
 
   /// Color: #102027
   static const Color primaryDark = Color(0xFF102027);
+
+  /// Color: #005b9f
+  static const Color primaryExperimental = Color(0xFF005B9F);
 
   /// Color: #1E1E1E
   static const Color primaryLight = Color(0xFF1E1E1E);

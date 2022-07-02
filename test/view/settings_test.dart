@@ -128,7 +128,7 @@ void main() {
       await tester.tap(find.byIcon(Icons.palette));
       await tester.pumpAndSettle();
 
-      expect(find.byType(ThemeDialogCell<ThemeState>), findsNWidgets(4));
+      expect(find.byType(ThemeDialogCell<ThemeState>), findsNWidgets(5));
     });
 
     testWidgets('render bottom sheet dialog item for system theme',
@@ -208,6 +208,16 @@ void main() {
         prevThemeState: ThemeState.light,
         themeMode: ThemeMode.dark,
         newThemeState: ThemeState.yellow,
+      );
+    });
+
+    testWidgets('change to experimental theme theme', (tester) async {
+      verifyThemeChange(
+        tester: tester,
+        widgetTitle: 'Experimental Theme',
+        prevThemeState: ThemeState.light,
+        themeMode: ThemeMode.light,
+        newThemeState: ThemeState.experimental,
       );
     });
   });

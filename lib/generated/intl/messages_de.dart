@@ -39,6 +39,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "emptyList": MessageLookupByLibrary.simpleMessage("Leere Liste"),
         "enabledButtonTitle": MessageLookupByLibrary.simpleMessage("Enabled"),
         "error": MessageLookupByLibrary.simpleMessage("Fehler"),
+        "experimentalThemeTitle":
+            MessageLookupByLibrary.simpleMessage("Experimental Theme"),
         "iconAndPaddingButtonTitle":
             MessageLookupByLibrary.simpleMessage("With Icon Padding"),
         "iconButtonTitle": MessageLookupByLibrary.simpleMessage("With Icon"),

@@ -49,6 +49,12 @@ class Settings extends StatelessWidget {
                     value: ThemeState.system,
                     onChanged: (value) => updateTheme(context, value),
                   ),
+                  ThemeDialogCell<ThemeState>(
+                    title: S.of(context).experimentalThemeTitle,
+                    groupValue: state,
+                    value: ThemeState.experimental,
+                    onChanged: (value) => updateTheme(context, value),
+                  ),
                 ],
               ),
             ),
