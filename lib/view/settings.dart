@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/index.dart';
-import 'package:go_router/go_router.dart';
 
 class Settings extends StatelessWidget {
   const Settings({Key? key}) : super(key: key);
@@ -59,11 +58,6 @@ class Settings extends StatelessWidget {
               ),
             ),
             listener: (context, state) => Navigator.of(context).pop(),
-          ),
-          SettingCell.icon(
-            icon: Icons.details,
-            title: 'Details',
-            onTap: () => GoRouter.of(context).go('/settings/details'),
           ),
         ],
       ),

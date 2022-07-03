@@ -28,6 +28,11 @@ const List<NavDestination> destinations = [
     route: EmailListScreen.routeName,
   ),
   NavDestination(
+    label: 'Widgets',
+    icon: Icon(Icons.widgets),
+    route: WidgetListScreen.routeName,
+  ),
+  NavDestination(
     label: 'Settings',
     icon: Icon(AppIcons.toolbarSettings),
     route: Settings.routeName,
@@ -48,7 +53,17 @@ final appRouter = GoRouter(
         ),
       ),
     ),
-
+    GoRoute(
+      path: WidgetListScreen.routeName,
+      pageBuilder: (context, state) => MaterialPage<void>(
+        key: state.pageKey,
+        child: const RootLayout(
+          key: _scaffoldKey,
+          currentIndex: 1,
+          child: WidgetListScreen(),
+        ),
+      ),
+    ),
     // PlaylistHomeScreen
     GoRoute(
       path: Settings.routeName,
@@ -56,25 +71,12 @@ final appRouter = GoRouter(
         key: _pageKey,
         child: RootLayout(
           key: _scaffoldKey,
-          currentIndex: 1,
+          currentIndex: 2,
           child: Settings(),
         ),
       ),
-      routes: [
-        GoRoute(
-          path: WidgetListScreen.routeName,
-          pageBuilder: (context, state) => MaterialPage<void>(
-            key: state.pageKey,
-            child: const RootLayout(
-              key: _scaffoldKey,
-              currentIndex: 1,
-              child: WidgetListScreen(),
-            ),
-          ),
-        ),
-      ],
     ),
-    for (final route in destinations.skip(2))
+    for (final route in destinations.skip(3))
       GoRoute(
         path: route.route,
         pageBuilder: (context, state) => MaterialPage<void>(

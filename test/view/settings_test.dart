@@ -115,8 +115,8 @@ void main() {
 
       expect(find.text('Theme'), findsOneWidget);
       expect(find.byIcon(Icons.palette), findsOneWidget);
-      expect(find.byIcon(Icons.chevron_right), findsNWidgets(2));
-      expect(find.byType(SettingCell), findsNWidgets(2));
+      expect(find.byIcon(Icons.chevron_right), findsNWidgets(1));
+      expect(find.byType(SettingCell), findsNWidgets(1));
     });
 
     testWidgets('render bottom sheet dialog items', (tester) async {

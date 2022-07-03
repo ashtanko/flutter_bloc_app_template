@@ -33,12 +33,41 @@ class $AssetsImagesGen {
   AssetGenImage get flutterLogo =>
       const AssetGenImage('assets/images/flutter_logo.png');
 
+  /// File path: assets/images/giveway_outline.svg
+  SvgGenImage get givewayOutline =>
+      const SvgGenImage('assets/images/giveway_outline.svg');
+
+  /// File path: assets/images/google_pay.svg
+  SvgGenImage get googlePay =>
+      const SvgGenImage('assets/images/google_pay.svg');
+
+  /// File path: assets/images/help_outline.svg
+  SvgGenImage get helpOutline =>
+      const SvgGenImage('assets/images/help_outline.svg');
+
+  /// File path: assets/images/hide.svg
+  SvgGenImage get hide => const SvgGenImage('assets/images/hide.svg');
+
   /// File path: assets/images/icon_star.svg
   SvgGenImage get iconStar => const SvgGenImage('assets/images/icon_star.svg');
 
   /// File path: assets/images/icon_star_active.svg
   SvgGenImage get iconStarActive =>
       const SvgGenImage('assets/images/icon_star_active.svg');
+
+  /// File path: assets/images/phone.svg
+  SvgGenImage get phone => const SvgGenImage('assets/images/phone.svg');
+
+  /// File path: assets/images/trip_outline.svg
+  SvgGenImage get tripOutline =>
+      const SvgGenImage('assets/images/trip_outline.svg');
+
+  /// File path: assets/images/twemoji_sun_behind_cloud.svg
+  SvgGenImage get twemojiSunBehindCloud =>
+      const SvgGenImage('assets/images/twemoji_sun_behind_cloud.svg');
+
+  /// File path: assets/images/visa.svg
+  SvgGenImage get visa => const SvgGenImage('assets/images/visa.svg');
 }
 
 class Assets {
