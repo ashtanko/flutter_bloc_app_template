@@ -26,16 +26,17 @@ Just click on [![Use this template](https://img.shields.io/badge/-Use%20this%20t
 
 ## Android Screenshots
 <p align="left">
+<img src="/preview/android/widgets.jpg" width="32%"/>
 <img src="/preview/android/light_theme.png" width="32%"/>
 <img src="/preview/android/dark_theme.png" width="32%"/>
 <img src="/preview/android/yellow_theme.png" width="32%"/>
 <img src="/preview/android/settings.png" width="32%"/>
 <img src="/preview/android/theme_bottom_sheet.png" width="32%"/>
-<img src="/preview/android/widgets.jpg" width="32%"/>
 </p>
 
 ## iOS Screenshots
 <p align="left">
+<img src="/preview/ios/widgets.png" width="32%"/>
 <img src="/preview/ios/light_theme.png" width="32%"/>
 <img src="/preview/ios/dark_theme.png" width="32%"/>
 <img src="/preview/ios/yellow_theme.png" width="32%"/>
