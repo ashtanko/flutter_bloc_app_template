@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/generated/assets.gen.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
@@ -221,6 +222,8 @@ class WidgetListScreen extends StatelessWidget {
   }
 
   Widget buildDeveloperWidget(DeveloperItem item) {
+    final avatarSize = 50.0;
+
     return Container(
       decoration: const BoxDecoration(
         color: Colors.white,
@@ -233,11 +236,7 @@ class WidgetListScreen extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            CircleAvatar(
-              radius: 30.0,
-              backgroundImage: NetworkImage(item.imageUrl),
-              backgroundColor: Colors.transparent,
-            ),
+            buildCircleAvatar(item.imageUrl, avatarSize, avatarSize),
             const SizedBox(
               width: 10,
             ),
@@ -270,6 +269,7 @@ class WidgetListScreen extends StatelessWidget {
     String subtitle,
     TextStyle subtitleStyle,
   ) {
+
     return Expanded(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -297,6 +297,7 @@ class WidgetListScreen extends StatelessWidget {
   }
 
   Widget buildSimpleWidget(SimpleItem item) {
+
     return Container(
       decoration: const BoxDecoration(
         color: Colors.white,
@@ -315,8 +316,8 @@ class WidgetListScreen extends StatelessWidget {
                 topLeft: Radius.circular(10.0),
                 bottomLeft: Radius.circular(10.0),
               ),
-              child: Image(
-                image: NetworkImage(item.imageUrl),
+              child: CachedNetworkImage(
+                imageUrl: item.imageUrl,
               ),
             ),
           ),
@@ -349,6 +350,7 @@ class WidgetListScreen extends StatelessWidget {
   }
 
   Widget buildChartsWidget(ChartComponentsItem item) {
+
     return Container(
       decoration: const BoxDecoration(
         // color: Colors.white,
@@ -395,6 +397,7 @@ class WidgetListScreen extends StatelessWidget {
   }
 
   Widget buildWeatherWidget(WeatherItem item) {
+
     return Container(
       decoration: const BoxDecoration(
         // color: Colors.white,
@@ -464,6 +467,7 @@ class WidgetListScreen extends StatelessWidget {
   }
 
   Widget buildAddWidget(AddItem item) {
+
     return Container(
       decoration: const BoxDecoration(
         // color: Colors.white,
@@ -504,6 +508,8 @@ class WidgetListScreen extends StatelessWidget {
   }
 
   Widget buildPaymentProfileWidget(PaymentProfileItem item) {
+    final avatarSize = 60.0;
+
     return Container(
       decoration: const BoxDecoration(
         color: Colors.white,
@@ -516,11 +522,7 @@ class WidgetListScreen extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            CircleAvatar(
-              radius: 40.0,
-              backgroundImage: NetworkImage(item.imageUrl),
-              backgroundColor: Colors.transparent,
-            ),
+            buildCircleAvatar(item.imageUrl, avatarSize, avatarSize),
             const SizedBox(
               width: 10,
             ),
@@ -570,6 +572,22 @@ class WidgetListScreen extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  Widget buildCircleAvatar(String imageUrl, double width, double height) {
+    return CachedNetworkImage(
+      imageUrl: imageUrl,
+      imageBuilder: (context, imageProvider) => Container(
+        width: width,
+        height: height,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          image: DecorationImage(image: imageProvider, fit: BoxFit.cover),
+        ),
+      ),
+      placeholder: (context, url) => const CircularProgressIndicator(),
+      errorWidget: (context, url, error) => const Icon(Icons.error),
     );
   }
 
