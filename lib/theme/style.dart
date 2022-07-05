@@ -14,15 +14,24 @@ class Style {
     },
   );
 
+  static TextStyle get elevatedButtonTextStyleDark {
+    return const TextStyle(
+      fontSize: 14,
+      color: Colors.black,
+    );
+  }
+
   static ElevatedButtonThemeData get _customElevatedButtonTheme {
     return ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
+        primary: const Color(0xFF57FFAD),
+        //onPrimary: Colors.green,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16.0),
         ),
-        textStyle: const TextStyle(fontSize: 20),
-        shadowColor: Colors.red,
-        elevation: 20,
+        textStyle: elevatedButtonTextStyleDark,
+        shadowColor: Colors.transparent,
+        elevation: 0,
       ),
     );
   }
@@ -31,13 +40,13 @@ class Style {
     return OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
         side: const BorderSide(
-          color: Color(0xff00a468),
+          color: Colors.transparent,
         ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16.0),
         ),
-        elevation: 25,
-        textStyle: const TextStyle(fontSize: 20),
+        elevation: 0,
+        textStyle: const TextStyle(fontSize: 16),
       ),
     );
   }
@@ -50,6 +59,44 @@ class Style {
           fontSize: 13.0,
           decoration: TextDecoration.underline,
         ),
+      ),
+    );
+  }
+
+  static InputDecorationTheme get _inputDecorationTheme {
+    return InputDecorationTheme(
+      prefixIconColor: const Color(0xff999999),
+      suffixIconColor: const Color(0xff00a468),
+      fillColor: const Color(0xffF8F8F8),
+      filled: true,
+      isDense: true,
+      contentPadding: const EdgeInsets.all(16),
+      hoverColor: Colors.blue.shade100,
+      enabledBorder: const OutlineInputBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(16),
+        ),
+        borderSide: BorderSide(
+          width: 0,
+          style: BorderStyle.none,
+          color: Colors.transparent,
+        ),
+      ),
+      focusedBorder: const OutlineInputBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(16),
+        ),
+        borderSide: BorderSide(
+          width: 0,
+          style: BorderStyle.none,
+          color: Colors.transparent,
+        ),
+      ),
+      hintStyle: TextStyle(
+        fontFamily: GoogleFonts.roboto().fontFamily,
+        fontWeight: FontWeight.w300,
+        fontSize: 14.0,
+        color: const Color(0xff999999),
       ),
     );
   }
@@ -82,6 +129,7 @@ class Style {
       elevatedButtonTheme: _customElevatedButtonTheme,
       outlinedButtonTheme: _customOutlinedButtonTheme,
       textButtonTheme: _customTextButtonTheme,
+      inputDecorationTheme: _inputDecorationTheme,
     );
   }
 

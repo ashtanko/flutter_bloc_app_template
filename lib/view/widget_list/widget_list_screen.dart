@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/generated/assets.gen.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/theme/style.dart';
 
 abstract class WidgetItem {}
 
@@ -96,6 +97,24 @@ class ColorItem extends WidgetItem {
   final Widget icon;
 }
 
+class InputDecorationItem extends WidgetItem {
+  InputDecorationItem(this.hint);
+
+  final String hint;
+}
+
+class OutlineButtonItem extends WidgetItem {
+  OutlineButtonItem(this.label);
+
+  final String label;
+}
+
+class ElevatedButtonItem extends WidgetItem {
+  ElevatedButtonItem(this.label);
+
+  final String label;
+}
+
 List<WidgetItem> items = [
   DeveloperItem(
     'Yolanda',
@@ -173,6 +192,9 @@ List<WidgetItem> items = [
     'Lorem ipsum dolor sit amet,\nconsectetur permi...',
     Assets.images.tripOutline.svg(),
   ),
+  InputDecorationItem('Enter Email'),
+  OutlineButtonItem('Test'),
+  ElevatedButtonItem('Test'),
 ];
 
 class WidgetListScreen extends StatelessWidget {
@@ -208,6 +230,12 @@ class WidgetListScreen extends StatelessWidget {
               return buildUnlimitedWidget(item);
             } else if (item is ColorItem) {
               return buildColorWidget(item);
+            } else if (item is InputDecorationItem) {
+              return buildInputDecorationWidget(item);
+            } else if (item is OutlineButtonItem) {
+              return buildOutlineButtonWidget(item);
+            } else if (item is ElevatedButtonItem) {
+              return buildElevatedButtonWidget(item);
             }
 
             return Container();
@@ -269,7 +297,6 @@ class WidgetListScreen extends StatelessWidget {
     String subtitle,
     TextStyle subtitleStyle,
   ) {
-
     return Expanded(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -297,7 +324,6 @@ class WidgetListScreen extends StatelessWidget {
   }
 
   Widget buildSimpleWidget(SimpleItem item) {
-
     return Container(
       decoration: const BoxDecoration(
         color: Colors.white,
@@ -350,7 +376,6 @@ class WidgetListScreen extends StatelessWidget {
   }
 
   Widget buildChartsWidget(ChartComponentsItem item) {
-
     return Container(
       decoration: const BoxDecoration(
         // color: Colors.white,
@@ -397,7 +422,6 @@ class WidgetListScreen extends StatelessWidget {
   }
 
   Widget buildWeatherWidget(WeatherItem item) {
-
     return Container(
       decoration: const BoxDecoration(
         // color: Colors.white,
@@ -467,7 +491,6 @@ class WidgetListScreen extends StatelessWidget {
   }
 
   Widget buildAddWidget(AddItem item) {
-
     return Container(
       decoration: const BoxDecoration(
         // color: Colors.white,
@@ -662,6 +685,35 @@ class WidgetListScreen extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  Widget buildInputDecorationWidget(InputDecorationItem item) {
+    return SizedBox(
+      height: 54,
+      child: TextFormField(
+        decoration: InputDecoration(hintText: item.hint),
+      ),
+    );
+  }
+
+  Widget buildOutlineButtonWidget(OutlineButtonItem item) {
+    return OutlinedButton(
+      onPressed: () {
+        print('TODO');
+      },
+      child: Text(
+        item.label,
+      ),
+    );
+  }
+
+  Widget buildElevatedButtonWidget(ElevatedButtonItem item) {
+    return ElevatedButton(
+      onPressed: () {
+        print('TODO');
+      },
+      child: Text(item.label, style: Style.elevatedButtonTextStyleDark),
     );
   }
 }
