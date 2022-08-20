@@ -1,4 +1,4 @@
-ignore: [ '**/lib/generated/', 'lib/generated/', '**/*.g.dart', '**/*.gen.dart', '**/lib/di/', '**/lib/constants/', 'lib/constants/*.dart' ]
+ignore: [ '**/lib/generated/', 'lib/generated/', '**/*.g.dart', '**/*.gen.dart', '**/lib/di/', '**/lib/constants/', 'lib/constants/*.dart', 'lib/routers/router.dart' ]
 coverage:
   status:
     project:

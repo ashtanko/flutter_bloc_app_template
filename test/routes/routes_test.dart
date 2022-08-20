@@ -71,7 +71,7 @@ void main() {
         isConnected: false,
       );
 
-      await navigator.navigateTo(Routes.app, true);
+      await navigator.navigateTo(Routes.app, null, true);
       await tester.pump();
 
       verify(mockObserver.didPush(any, any));
