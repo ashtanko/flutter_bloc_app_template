@@ -1,1 +1,7 @@
 ignore: [ '**/lib/generated/', 'lib/generated/', '**/*.g.dart', '**/*.gen.dart', '**/lib/di/', '**/lib/constants/', 'lib/constants/*.dart' ]
+coverage:
+  status:
+    project:
+      default:
+        target: 75%
+        threshold: 1%

@@ -2,22 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_app_template/index.dart';
+import 'package:flutter_bloc_app_template/models/nav_destination.dart';
 import 'package:flutter_bloc_app_template/view/main.dart';
 import 'package:flutter_bloc_app_template/view/splash_view.dart';
-
-class NavDestination {
-  const NavDestination({
-    required this.screen,
-    required this.label,
-    required this.icon,
-    this.child,
-  });
-
-  final Widget screen;
-  final String label;
-  final Icon icon;
-  final Widget? child;
-}
 
 const List<NavDestination> destinations = [
   NavDestination(
@@ -63,34 +50,13 @@ class NavigationService {
     String routeName, [
     Object? arguments,
     bool replace = false,
-    final VoidCallback? onPressed,
   ]) async {
     if (_appRoutes[routeName] != null) {
       return replace
           ? appNavigatorKey.currentState
               ?.pushReplacementNamed(routeName, arguments: arguments)
-              .then(
-                (value) => onPressed?.call(),
-              )
           : appNavigatorKey.currentState
-              ?.pushNamed(routeName, arguments: arguments)
-              .then(
-                (value) => {onPressed?.call()},
-              );
-    }
-  }
-
-  Future<dynamic> navigateToWithCallback(
-    String routeName,
-    final VoidCallback? onPressed,
-    Object? arguments,
-  ) async {
-    if (_appRoutes[routeName] != null) {
-      return appNavigatorKey.currentState
-          ?.pushNamed(routeName, arguments: arguments)
-          .then(
-            (value) => onPressed,
-          );
+              ?.pushNamed(routeName, arguments: arguments);
     }
   }
 
@@ -116,25 +82,5 @@ class NavigationService {
   ]) async {
     return appNavigatorKey.currentState
         ?.pushNamedAndRemoveUntil(routeName, (route) => false);
-  }
-
-  String? currentRouteName() {
-    String? currentPath;
-    appNavigatorKey.currentState?.popUntil((route) {
-      currentPath = route.settings.name;
-
-      return true;
-    });
-
-    return currentPath;
-  }
-
-  Future<dynamic> pushAndRemoveUntil({
-    required String route,
-    required String from,
-    Object? arguments,
-  }) async {
-    return appNavigatorKey.currentState
-        ?.pushNamedAndRemoveUntil(route, ModalRoute.withName(from));
   }
 }

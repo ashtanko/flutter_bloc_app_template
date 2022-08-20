@@ -31,7 +31,9 @@ class EmailListView extends StatelessWidget {
             primary: false,
             itemBuilder: (context, index) => EmailListItem(
               email: messages[index],
-              onTap: () {},
+              onTap: () {
+                // TODO handle tap
+              },
             ),
             itemCount: messages.length,
           );

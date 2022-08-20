@@ -3,12 +3,17 @@ import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/index.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mockito/mockito.dart';
+
+import '../mocks.dart';
 
 extension PumpApp on WidgetTester {
   Future<void> pumpRealRouterApp(
+    NavigationService navigationService,
+    NavigatorObserver navigatorObserver,
     Widget Function(Widget child) builder, {
     bool isConnected = true,
-  }) {
+  }) async {
     return pumpWidget(
       builder(
         MaterialApp(
@@ -20,7 +25,8 @@ extension PumpApp on WidgetTester {
           onGenerateTitle: (BuildContext context) => S.of(context).appTitle,
           locale: const Locale('en'),
           navigatorKey: appNavigatorKey,
-          onGenerateRoute: NavigationService().onGenerateRoute,
+          navigatorObservers: [navigatorObserver],
+          onGenerateRoute: navigationService.onGenerateRoute,
         ),
       ),
     );
@@ -28,15 +34,61 @@ extension PumpApp on WidgetTester {
 }
 
 void main() {
+  final navigator = NavigationService();
+  final mockObserver = MockNavigatorObserver();
+
   group('Routes Tests', () {
-    // TODO
-    testWidgets('renders HomePage via Go Router', (tester) async {
+    testWidgets('renders HomePage via Router', (tester) async {
       await tester.pumpRealRouterApp(
+        navigator,
+        mockObserver,
         (child) => child,
         isConnected: false,
       );
       expect(find.byType(EmailListScreen), findsNothing);
       expect(find.byType(BackButton), findsNothing);
+    });
+
+    testWidgets('navigation test', (tester) async {
+      await tester.pumpRealRouterApp(
+        navigator,
+        mockObserver,
+        (child) => child,
+        isConnected: false,
+      );
+
+      await navigator.navigateTo(Routes.app);
+      await tester.pump();
+
+      verify(mockObserver.didPush(any, any));
+    });
+
+    testWidgets('replace test', (tester) async {
+      await tester.pumpRealRouterApp(
+        navigator,
+        mockObserver,
+        (child) => child,
+        isConnected: false,
+      );
+
+      await navigator.navigateTo(Routes.app, true);
+      await tester.pump();
+
+      verify(mockObserver.didPush(any, any));
+    });
+
+    testWidgets('push and remove all test', (tester) async {
+      await tester.pumpRealRouterApp(
+        navigator,
+        mockObserver,
+        (child) => child,
+        isConnected: false,
+      );
+
+      await navigator.pushAndRemoveAll(Routes.app, true);
+      await tester.pump();
+
+      verify(mockObserver.didPush(any, any));
     });
   });
 }
