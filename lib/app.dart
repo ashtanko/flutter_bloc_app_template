@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_bloc_app_template/bloc/init/init_bloc.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/index.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -11,51 +12,71 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
+    return MultiRepositoryProvider(
       providers: [
-        BlocProvider(
-          create: (context) => getIt.get<ThemeCubit>(),
+        RepositoryProvider<EmailListRepository>(
+          create: (context) => EmailListRepository(),
         ),
-        BlocProvider(
-          create: (context) => getIt.get<EmailListBloc>()
-            ..add(
-              EmailListFetched(),
-            ),
+        RepositoryProvider<NavigationService>(
+          create: (context) => NavigationService(),
         ),
       ],
-      child: const _App(),
-    );
-  }
-}
+      child: MultiBlocProvider(
+        providers: [
+          BlocProvider(
+            create: (context) => ThemeCubit(),
+          ),
+          BlocProvider(
+            create: (context) => EmailListBloc(
+              messagesRepository:
+                  RepositoryProvider.of<EmailListRepository>(context),
+            )..add(
+                EmailListFetched(),
+              ),
+          ),
+          BlocProvider<InitBloc>(
+            create: (_) => InitBloc()
+              ..add(
+                StartAppEvent(),
+              ),
+          ),
+        ],
+        child: Builder(
+          builder: (context) {
+            final navigator = NavigationService.of(context);
 
-class _App extends StatelessWidget {
-  const _App({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return RepositoryProvider(
-      create: (context) => null,
-      child: Builder(builder: (context) {
-        return MaterialApp.router(
-          restorationScopeId: 'app',
-          localizationsDelegates: const [
-            S.delegate,
-            GlobalMaterialLocalizations.delegate,
-            GlobalWidgetsLocalizations.delegate,
-            GlobalCupertinoLocalizations.delegate,
-          ],
-          supportedLocales: const [
-            Locale('en', ''), // English, no country code
-            Locale('de', ''), // Ukraine, no country code
-          ],
-          onGenerateTitle: (BuildContext context) => S.of(context).appTitle,
-          theme: context.watch<ThemeCubit>().getDefaultTheme(),
-          darkTheme: context.watch<ThemeCubit>().darkTheme,
-          themeMode: context.watch<ThemeCubit>().themeMode,
-          routeInformationParser: appRouter.routeInformationParser,
-          routerDelegate: appRouter.routerDelegate,
-        );
-      }),
+            return MaterialApp(
+              restorationScopeId: 'app',
+              localizationsDelegates: const [
+                S.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+              ],
+              supportedLocales: const [
+                Locale('en', ''), // English, no country code
+                Locale('de', ''), // Ukraine, no country code
+              ],
+              onGenerateTitle: (BuildContext context) => S.of(context).appTitle,
+              theme: context.watch<ThemeCubit>().getDefaultTheme(),
+              darkTheme: context.watch<ThemeCubit>().darkTheme,
+              themeMode: context.watch<ThemeCubit>().themeMode,
+              navigatorKey: appNavigatorKey,
+              onGenerateRoute: navigator.onGenerateRoute,
+              builder: (_, child) {
+                return BlocListener<InitBloc, InitState>(
+                  listener: (_, state) {
+                    if (state is OpenApp) {
+                      navigator.pushAndRemoveAll(Routes.app);
+                    }
+                  },
+                  child: child,
+                );
+              },
+            );
+          },
+        ),
+      ),
     );
   }
 }

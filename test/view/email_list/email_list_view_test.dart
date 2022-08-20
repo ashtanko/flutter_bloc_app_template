@@ -13,10 +13,7 @@ import '../../helpers/data.dart';
 class MockEmailListBloc extends MockBloc<EmailListEvent, EmailListState>
     implements EmailListBloc {}
 
-class EmailListUnknownState extends EmailListState {
-  @override
-  List<Object?> get props => [];
-}
+class EmailListUnknownState extends EmailListState {}
 
 extension on WidgetTester {
   Future<void> pumpEmailListList(EmailListBloc emailListBloc) {

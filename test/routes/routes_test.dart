@@ -6,13 +6,12 @@ import 'package:flutter_test/flutter_test.dart';
 
 extension PumpApp on WidgetTester {
   Future<void> pumpRealRouterApp(
-    String location,
     Widget Function(Widget child) builder, {
     bool isConnected = true,
   }) {
     return pumpWidget(
       builder(
-        MaterialApp.router(
+        MaterialApp(
           localizationsDelegates: [
             const AppLocalizationDelegate(),
             GlobalMaterialLocalizations.delegate,
@@ -20,8 +19,8 @@ extension PumpApp on WidgetTester {
           ],
           onGenerateTitle: (BuildContext context) => S.of(context).appTitle,
           locale: const Locale('en'),
-          routeInformationParser: appRouter.routeInformationParser,
-          routerDelegate: appRouter.routerDelegate,
+          navigatorKey: appNavigatorKey,
+          onGenerateRoute: NavigationService().onGenerateRoute,
         ),
       ),
     );
@@ -33,7 +32,6 @@ void main() {
     // TODO
     testWidgets('renders HomePage via Go Router', (tester) async {
       await tester.pumpRealRouterApp(
-        EmailListScreen.routeName,
         (child) => child,
         isConnected: false,
       );
