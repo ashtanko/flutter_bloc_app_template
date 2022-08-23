@@ -107,7 +107,7 @@ void main() {
     });
 
     testWidgets('renders item with attachment', (tester) async {
-      final _mockEmails = [
+      final mockEmails = [
         Email(
           sender: 'Ralph Edwards',
           subject: 'The results to our user testing',
@@ -119,7 +119,7 @@ void main() {
         )
       ];
 
-      when(() => emailListBloc.state).thenReturn(EmailListLoaded(_mockEmails));
+      when(() => emailListBloc.state).thenReturn(EmailListLoaded(mockEmails));
       await tester.pumpEmailListList(emailListBloc);
       await tester.pumpAndSettle();
 
@@ -128,7 +128,7 @@ void main() {
     });
 
     testWidgets('renders items with different attachment type', (tester) async {
-      final _mockEmails = [
+      final mockEmails = [
         Email(
           sender: 'Ralph Edwards',
           subject: 'The results to our user testing',
@@ -163,7 +163,7 @@ void main() {
         )
       ];
 
-      when(() => emailListBloc.state).thenReturn(EmailListLoaded(_mockEmails));
+      when(() => emailListBloc.state).thenReturn(EmailListLoaded(mockEmails));
       await tester.pumpEmailListList(emailListBloc);
       await tester.pumpAndSettle();
 
