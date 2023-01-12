@@ -1,4 +1,4 @@
-.PHONY: gen rebuild check get localize
+.PHONY: gen rebuild check get localize runDev runDevQa runDevStaging lines release apk
 
 # clean project, install dependencies & generate sources
 rebuild:
@@ -21,3 +21,25 @@ localize:
 check:
 	dart analyze .
 	flutter pub run dart_code_metrics:metrics analyze lib
+
+# flavors
+runDev:
+	flutter run --flavor dev -t lib/main.dart
+
+runDevQa:
+	flutter run --flavor dev -t lib/main_qa.dart
+
+runDevStaging:
+	flutter run --flavor dev -t lib/main_staging.dart
+
+release:
+	flutter run --release -t lib/main_release.dart
+
+prodRelease:
+	flutter run --flavor prod --release -t lib/main_release.dart
+
+apk:
+	flutter build apk --release -t lib/main_release.dart
+
+lines:
+	find . -name '*.dart' | xargs wc -l

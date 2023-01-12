@@ -24,7 +24,7 @@ class Style {
   static ElevatedButtonThemeData get _customElevatedButtonTheme {
     return ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        primary: const Color(0xFF57FFAD),
+        backgroundColor: const Color(0xFF57FFAD),
         //onPrimary: Colors.green,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16.0),

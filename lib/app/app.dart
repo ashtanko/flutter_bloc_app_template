@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_app_template/bloc/init/init_bloc.dart';
@@ -46,6 +47,7 @@ class MyApp extends StatelessWidget {
             final navigator = NavigationService.of(context);
 
             return MaterialApp(
+              debugShowCheckedModeBanner: kDebugMode,
               restorationScopeId: 'app',
               localizationsDelegates: const [
                 S.delegate,

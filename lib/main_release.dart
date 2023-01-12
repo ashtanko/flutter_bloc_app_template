@@ -5,7 +5,7 @@ import 'package:flutter_bloc_app_template/config/environment.dart';
 
 void main(List<String> args) {
   Environment.init(
-    buildType: BuildType.debug,
+    buildType: BuildType.release,
     config: AppConfig(
       url: '',
     ),
