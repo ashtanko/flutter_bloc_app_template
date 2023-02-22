@@ -12,6 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.2
+  bloc: ^8.1.1
   hydrated_bloc: ^8.1.0
   logger: ^1.1.0
   equatable: ^2.0.5
@@ -30,6 +31,7 @@ dependencies:
   cached_network_image: ^3.2.3
   path_provider: ^2.0.13
   file: ^6.1.4
+  injectable: ^2.1.0
 
   flutter_localizations:
     sdk: flutter

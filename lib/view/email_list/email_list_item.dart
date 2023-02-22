@@ -51,7 +51,7 @@ class EmailListItem extends StatelessWidget {
                                   email.sender,
                                   style: Theme.of(context)
                                       .textTheme
-                                      .subtitle1
+                                      .titleMedium
                                       ?.copyWith(
                                         fontWeight: FontWeight.bold,
                                         fontSize: FontSizes.subtitle2,
@@ -65,7 +65,7 @@ class EmailListItem extends StatelessWidget {
                               email.subject,
                               style: Theme.of(context)
                                   .textTheme
-                                  .subtitle1
+                                  .titleMedium
                                   ?.copyWith(
                                     fontWeight: FontWeight.w600,
                                     fontSize: FontSizes.subtitle2,
@@ -77,7 +77,7 @@ class EmailListItem extends StatelessWidget {
                               email.messagePreview,
                               style: Theme.of(context)
                                   .textTheme
-                                  .bodyText2
+                                  .bodyMedium
                                   ?.copyWith(
                                     fontSize: FontSizes.subtitle2,
                                   ),

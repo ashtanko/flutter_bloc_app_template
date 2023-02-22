@@ -8,7 +8,7 @@ export 'mocks.mocks.dart';
 @GenerateMocks([
   EmailListRepository,
 ], customMocks: [
-  MockSpec<NavigatorObserver>(returnNullOnMissingStub: true)
+  MockSpec<NavigatorObserver>(onMissingStub: OnMissingStub.returnDefault)
 ])
 // ignore: unused_element
 class _Mocks {}
