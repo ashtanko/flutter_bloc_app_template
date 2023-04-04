@@ -59,17 +59,20 @@ class _RoundDialog extends StatelessWidget {
         padding: const EdgeInsets.only(top: 15),
         child: Column(
           mainAxisSize: MainAxisSize.min,
-          children: [
-            BottomSheetDialogIcon(),
-            Flexible(
-              child: SingleChildScrollView(
-                padding: padding,
-                child: ListBody(
-                  children: children,
+          children: Separator.spaceChildren(
+            space: Space.superLarge,
+            children: [
+              BottomSheetDialogIcon(),
+              Flexible(
+                child: SingleChildScrollView(
+                  padding: padding,
+                  child: ListBody(
+                    children: children,
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

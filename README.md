@@ -38,7 +38,7 @@ The template has 4 build variants:
 For example dev configuration for Android Studio looks like:
 
 <p align="left">
-<img src="/preview/config/dev.jpg" width="32%"/>
+<img src="/preview/config/dev.png" width="32%"/>
 </p>
 
 ## Android Screenshots
