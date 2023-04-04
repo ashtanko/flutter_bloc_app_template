@@ -24,6 +24,23 @@ Just click on [![Use this template](https://img.shields.io/badge/-Use%20this%20t
 - Codecov Setup with GitHub Actions
 - Unit test coverage
 
+## Configuration
+The template has 2 flavors:
+- dev
+- prod
+
+The template has 4 build variants:
+- dev
+- qa
+- staging
+- release
+
+For example dev configuration for Android Studio looks like:
+
+<p align="left">
+<img src="/preview/config/dev.jpg" width="32%"/>
+</p>
+
 ## Android Screenshots
 <p align="left">
 <img src="/preview/android/widgets.jpg" width="32%"/>
