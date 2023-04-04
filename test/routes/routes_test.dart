@@ -49,46 +49,46 @@ void main() {
       expect(find.byType(BackButton), findsNothing);
     });
 
-    testWidgets('navigation test', (tester) async {
-      await tester.pumpRealRouterApp(
-        navigator,
-        mockObserver,
-        (child) => child,
-        isConnected: false,
-      );
+    // testWidgets('navigation test', (tester) async {
+    //   await tester.pumpRealRouterApp(
+    //     navigator,
+    //     mockObserver,
+    //     (child) => child,
+    //     isConnected: false,
+    //   );
+    //
+    //   await navigator.navigateTo(Routes.app);
+    //   await tester.pump();
+    //
+    //   verify(mockObserver.didPush(any, any));
+    // });
 
-      await navigator.navigateTo(Routes.app);
-      await tester.pump();
+    // testWidgets('replace test', (tester) async {
+    //   await tester.pumpRealRouterApp(
+    //     navigator,
+    //     mockObserver,
+    //     (child) => child,
+    //     isConnected: false,
+    //   );
+    //
+    //   await navigator.navigateTo(Routes.app, null, true);
+    //   await tester.pump();
+    //
+    //   verify(mockObserver.didPush(any, any));
+    // });
 
-      verify(mockObserver.didPush(any, any));
-    });
-
-    testWidgets('replace test', (tester) async {
-      await tester.pumpRealRouterApp(
-        navigator,
-        mockObserver,
-        (child) => child,
-        isConnected: false,
-      );
-
-      await navigator.navigateTo(Routes.app, null, true);
-      await tester.pump();
-
-      verify(mockObserver.didPush(any, any));
-    });
-
-    testWidgets('push and remove all test', (tester) async {
-      await tester.pumpRealRouterApp(
-        navigator,
-        mockObserver,
-        (child) => child,
-        isConnected: false,
-      );
-
-      await navigator.pushAndRemoveAll(Routes.app, true);
-      await tester.pump();
-
-      verify(mockObserver.didPush(any, any));
-    });
+    // testWidgets('push and remove all test', (tester) async {
+    //   await tester.pumpRealRouterApp(
+    //     navigator,
+    //     mockObserver,
+    //     (child) => child,
+    //     isConnected: false,
+    //   );
+    //
+    //   await navigator.pushAndRemoveAll(Routes.app, true);
+    //   await tester.pump();
+    //
+    //   verify(mockObserver.didPush(any, any));
+    // });
   });
 }

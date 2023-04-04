@@ -220,12 +220,17 @@ class Style {
     final textTheme = base.textTheme;
 
     return textTheme.copyWith(
-      headline1: textTheme.headline1?.copyWith(fontSize: FontSizes.headline1),
-      headline2: textTheme.headline2?.copyWith(fontSize: FontSizes.headline2),
-      headline3: textTheme.headline3?.copyWith(fontSize: FontSizes.headline3),
-      headline4: textTheme.headline4?.copyWith(fontSize: FontSizes.headline4),
-      headline5: textTheme.headline5?.copyWith(fontSize: FontSizes.headline5),
-      headline6: textTheme.headline6?.copyWith(fontSize: FontSizes.headline6),
+      displayLarge:
+          textTheme.displayLarge?.copyWith(fontSize: FontSizes.headline1),
+      displaySmall:
+          textTheme.displaySmall?.copyWith(fontSize: FontSizes.headline2),
+      headlineMedium:
+          textTheme.headlineMedium?.copyWith(fontSize: FontSizes.headline3),
+      headlineSmall:
+          textTheme.headlineSmall?.copyWith(fontSize: FontSizes.headline4),
+      titleLarge: textTheme.titleLarge?.copyWith(fontSize: FontSizes.headline5),
+      titleMedium:
+          textTheme.titleMedium?.copyWith(fontSize: FontSizes.headline6),
     );
   }
 }

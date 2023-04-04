@@ -32,7 +32,7 @@ class ThemeDialogCell<T> extends StatelessWidget {
             Separator.spacer(Space.large),
             Text(
               title,
-              style: Theme.of(context).textTheme.subtitle1,
+              style: Theme.of(context).textTheme.titleMedium,
             ),
           ],
         ),

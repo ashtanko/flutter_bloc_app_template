@@ -25,9 +25,9 @@ class NameAvatar extends StatelessWidget {
       child: Center(
         child: Text(
           name,
-          style: Theme.of(context).textTheme.headline6?.copyWith(
+          style: Theme.of(context).textTheme.titleLarge?.copyWith(
                 fontSize: FontSizes.label,
-                color: Theme.of(context).textTheme.subtitle1?.color,
+                color: Theme.of(context).textTheme.titleMedium?.color,
               ),
           overflow: TextOverflow.clip,
           maxLines: 1,

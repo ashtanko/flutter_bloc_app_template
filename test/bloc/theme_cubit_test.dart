@@ -20,6 +20,7 @@ void main() {
     late Storage storage;
 
     setUp(() async {
+      WidgetsFlutterBinding.ensureInitialized();
       storage = MockStorage();
       await HydratedBlocOverrides.runZoned(() async {
         cubit = ThemeCubit();

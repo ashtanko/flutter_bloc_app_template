@@ -69,7 +69,7 @@ class CustomButton extends StatelessWidget {
               Flexible(
                 child: Text(
                   title!,
-                  style: textStyle ?? theme.textTheme.button,
+                  style: textStyle ?? theme.textTheme.labelLarge,
                   overflow: TextOverflow.ellipsis,
                   maxLines: 1,
                   softWrap: false,
