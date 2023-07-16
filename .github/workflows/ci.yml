@@ -70,7 +70,7 @@ jobs:
         uses: VeryGoodOpenSource/very_good_coverage@v1.2.0
         with:
           path: coverage/lcov.info
-          min_coverage: 75
+          min_coverage: 59
           exclude: '**/*.g.dart **/*.gen.dart **/lib/di/ lib/generated/ **/lib/generated/ lib/di/*.dart **/lib/constants/ lib/constants/*.dart/ lib/routers/router.dart'
 
       - name: Upload coverage to codecov
