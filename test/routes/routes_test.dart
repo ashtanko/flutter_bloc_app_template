@@ -48,6 +48,16 @@ void main() {
       expect(find.byType(BackButton), findsNothing);
     });
 
+    // test('navigateTo pushes named route', () async {
+    //   final navigatorKey = GlobalKey<NavigatorState>();
+    //   final navigationService = NavigationService();
+    //   navigationService.appNavigatorKey = navigatorKey;
+    //
+    //   await navigationService.navigateTo(Routes.app);
+    //
+    //   expect(navigatorKey.currentState?.canPop(), isTrue);
+    // });
+
     // testWidgets('navigation test', (tester) async {
     //   await tester.pumpRealRouterApp(
     //     navigator,

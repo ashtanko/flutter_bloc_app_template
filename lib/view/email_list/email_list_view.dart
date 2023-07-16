@@ -9,11 +9,15 @@ class EmailListView extends StatelessWidget {
     return BlocBuilder<EmailListBloc, EmailListState>(
       builder: (context, state) {
         if (state is EmailListInitial) {
-          return const Center(child: CircularProgressIndicator());
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
         }
 
         if (state is EmailListLoading) {
-          return const Center(child: CircularProgressIndicator());
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
         }
 
         if (state is EmailListEmpty) {

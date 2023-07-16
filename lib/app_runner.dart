@@ -1,11 +1,10 @@
 import 'dart:async';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc_app_template/app/app.dart';
-import 'package:hydrated_bloc/hydrated_bloc.dart';
-import 'package:path_provider/path_provider.dart';
+import 'package:flutter_bloc_app_template/di/di_container.dart';
+import 'package:flutter_bloc_app_template/di/di_initializer.dart';
 
 Future<void> run([
   List<DeviceOrientation> orientations = const [
@@ -16,18 +15,11 @@ Future<void> run([
 
   await SystemChrome.setPreferredOrientations(orientations);
 
-  final storage = await HydratedStorage.build(
-    storageDirectory: kIsWeb
-        ? HydratedStorage.webStorageDirectory
-        : await getTemporaryDirectory(),
-  );
+  await initDI(diContainer, 'dev');
 
-  _runApp(storage);
+  _runApp();
 }
 
-void _runApp(HydratedStorage storage) {
-  HydratedBlocOverrides.runZoned(
-    () => runApp(const MyApp()),
-    storage: storage,
-  );
+void _runApp() {
+  runApp(const MyApp());
 }

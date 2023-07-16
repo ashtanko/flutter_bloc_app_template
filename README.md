@@ -1,5 +1,6 @@
 # flutter-bloc-app-template 🤖
-The project of the empty template with Flutter has built the basic framework to realize the functions of internationalization, theme peeling etc.
+This is a basic Flutter project template that uses the BLoC pattern architecture for state management. 
+It is a good starting point for creating a new Flutter app that uses BLoC for state management.
 
 This template is focused on delivering a project with **static analysis** and **continuous integration** already in place.
 

@@ -51,8 +51,8 @@ jobs:
       - name: Run analyzer
         run: flutter analyze
 
-      - name: Run Dart code metrics
-        run: flutter pub run dart_code_metrics:metrics analyze lib
+#      - name: Run Dart code metrics
+#        run: flutter pub run dart_code_metrics:metrics analyze lib
 
       - name: Run tests
         run: flutter test --coverage

@@ -1,52 +1,39 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc_app_template/bloc/theme/app_theme.dart';
 import 'package:flutter_bloc_app_template/bloc/theme/theme_cubit.dart';
+import 'package:flutter_bloc_app_template/data/theme_storage.dart';
+import 'package:flutter_bloc_app_template/repository/theme_repository.dart';
 import 'package:flutter_bloc_app_template/theme/style.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hydrated_bloc/hydrated_bloc.dart';
-
-import '../helpers/hydrated.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
-  test('storage getter returns correct storage instance', () {
-    final storage = MockStorage();
-    HydratedBlocOverrides.runZoned(() {
-      expect(HydratedBlocOverrides.current!.storage, equals(storage));
-    }, storage: storage);
-  });
-
   group('ThemeCubit', () {
     late ThemeCubit cubit;
-    late Storage storage;
+    late ThemeStorage themeStorage;
+    late ThemeRepository themeRepository;
 
     setUp(() async {
       WidgetsFlutterBinding.ensureInitialized();
-      storage = MockStorage();
-      await HydratedBlocOverrides.runZoned(() async {
-        cubit = ThemeCubit();
-      }, storage: storage);
+      SharedPreferences.setMockInitialValues({});
+      final sharedPreferences = await SharedPreferences.getInstance();
+      themeStorage = SharedPreferencesThemeStorage(sharedPreferences);
+      themeRepository = ThemeRepositoryImpl(themeStorage);
+      cubit = ThemeCubit(themeRepository);
     });
 
     test('has initial value', () async {
-      expect(cubit.state, ThemeState.system);
-      expect(cubit.theme, ThemeState.system);
+      expect(cubit.state, AppTheme.system);
+      expect(cubit.theme, AppTheme.system);
     });
 
-    group('toJson/fromJson', () {
-      test('work properly', () {
-        expect(
-          cubit.fromJson(cubit.toJson(cubit.state)),
-          cubit.state,
-        );
-      });
-    });
-
-    blocTest<ThemeCubit, ThemeState>(
+    blocTest<ThemeCubit, AppTheme>(
       'can change its state',
       build: () => cubit,
-      act: (cubit) => cubit.theme = ThemeState.dark,
+      act: (cubit) => cubit.updateTheme(AppTheme.dark),
       expect: () => [
-        ThemeState.dark,
+        AppTheme.dark,
       ],
     );
 
@@ -56,14 +43,14 @@ void main() {
 
     test('has default dark theme', () async {
       expect(cubit.darkTheme, Style.dark);
-      cubit.theme = ThemeState.dark;
+      cubit.updateTheme(AppTheme.dark);
       expect(cubit.darkTheme, Style.dark);
     });
 
     void verifyThemeChange(
-        {required ThemeState themeState,
+        {required AppTheme themeState,
         required ThemeMode themeMode,
-        required ThemeState expectedThemeState}) {
+        required AppTheme expectedThemeState}) {
       cubit.updateTheme(themeState);
       expect(cubit.themeMode, themeMode);
       expect(cubit.state, expectedThemeState);
@@ -71,30 +58,30 @@ void main() {
 
     test('update to system theme correctly', () async {
       verifyThemeChange(
-          themeState: ThemeState.system,
+          themeState: AppTheme.system,
           themeMode: ThemeMode.system,
-          expectedThemeState: ThemeState.system);
+          expectedThemeState: AppTheme.system);
     });
 
     test('update to dark theme correctly', () async {
       verifyThemeChange(
-          themeState: ThemeState.dark,
+          themeState: AppTheme.dark,
           themeMode: ThemeMode.dark,
-          expectedThemeState: ThemeState.dark);
+          expectedThemeState: AppTheme.dark);
     });
 
     test('update to light theme correctly', () async {
       verifyThemeChange(
-          themeState: ThemeState.light,
+          themeState: AppTheme.light,
           themeMode: ThemeMode.light,
-          expectedThemeState: ThemeState.light);
+          expectedThemeState: AppTheme.light);
     });
 
     test('update to yellow theme correctly', () async {
       verifyThemeChange(
-          themeState: ThemeState.yellow,
+          themeState: AppTheme.yellow,
           themeMode: ThemeMode.light,
-          expectedThemeState: ThemeState.yellow);
+          expectedThemeState: AppTheme.yellow);
     });
   });
 }

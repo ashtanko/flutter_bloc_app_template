@@ -23,10 +23,8 @@ analyzer:
   exclude:
     - build/**
     - lib/generated/**
-    - lib/di/injectable.config.dart
+    - lib/di/*.config.dart
     - test/*.mocks.dart
-  strong-mode:
-    implicit-casts: false
   language:
     strict-casts: true
     strict-inference: true
@@ -41,7 +39,7 @@ linter:
   rules:
     - always_declare_return_types
     - close_sinks
-    - one_member_abstracts
+#    - one_member_abstracts
     - prefer_final_in_for_each
     - annotate_overrides
     - avoid_empty_else

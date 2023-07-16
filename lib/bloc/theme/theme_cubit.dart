@@ -1,50 +1,46 @@
+import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc_app_template/bloc/theme/app_theme.dart';
 import 'package:flutter_bloc_app_template/index.dart';
-import 'package:hydrated_bloc/hydrated_bloc.dart';
-import 'package:injectable/injectable.dart';
+import 'package:flutter_bloc_app_template/repository/theme_repository.dart';
 
-enum ThemeState { light, dark, yellow, system, experimental }
-
-final Map<ThemeState, ThemeData> _themeData = {
-  ThemeState.light: Style.light,
-  ThemeState.dark: Style.dark,
-  ThemeState.yellow: Style.yellow,
-  ThemeState.experimental: Style.experimental,
+final Map<AppTheme, ThemeData> _themeData = {
+  AppTheme.light: Style.light,
+  AppTheme.dark: Style.dark,
+  AppTheme.yellow: Style.yellow,
+  AppTheme.experimental: Style.experimental,
 };
 
 /// Saves and loads information regarding the theme setting.
-@injectable
-class ThemeCubit extends HydratedCubit<ThemeState> {
-  ThemeCubit() : super(defaultTheme);
+class ThemeCubit extends Cubit<AppTheme> {
+  ThemeCubit(this.themeRepository) : super(defaultTheme);
 
-  static const defaultTheme = ThemeState.system;
+  final ThemeRepository themeRepository;
 
-  @override
-  ThemeState fromJson(Map<String, dynamic> json) {
-    return ThemeState.values[json['value'] as int];
+  static const defaultTheme = AppTheme.system;
+
+  Future<void> loadTheme() async {
+    final savedTheme = await themeRepository.getTheme();
+    emit(savedTheme);
   }
 
-  @override
-  Map<String, int> toJson(ThemeState state) {
-    return {
-      'value': state.index,
-    };
+  AppTheme get theme => state;
+
+  set setTheme(AppTheme theme) {
+    themeRepository.saveTheme(theme);
+    emit(theme);
   }
 
-  ThemeState get theme => state;
-
-  set theme(ThemeState themeState) => emit(themeState);
-
-  void updateTheme(ThemeState value) => theme = value;
+  void updateTheme(AppTheme value) => setTheme = value;
 
   /// Returns appropriate theme mode
   ThemeMode get themeMode {
     switch (state) {
-      case ThemeState.experimental:
-      case ThemeState.light:
-      case ThemeState.yellow:
+      case AppTheme.experimental:
+      case AppTheme.light:
+      case AppTheme.yellow:
         return ThemeMode.light;
-      case ThemeState.dark:
+      case AppTheme.dark:
         return ThemeMode.dark;
       default:
         return ThemeMode.system;
@@ -54,19 +50,19 @@ class ThemeCubit extends HydratedCubit<ThemeState> {
   /// Default theme
   ThemeData getDefaultTheme() {
     switch (state) {
-      case ThemeState.light:
-        return _themeData[ThemeState.light] ?? Style.light;
-      case ThemeState.dark:
-        return _themeData[ThemeState.dark] ?? Style.dark;
-      case ThemeState.yellow:
-        return _themeData[ThemeState.yellow] ?? Style.light;
-      case ThemeState.system:
-        return _themeData[ThemeState.system] ?? Style.light;
-      case ThemeState.experimental:
-        return _themeData[ThemeState.experimental] ?? Style.light;
+      case AppTheme.light:
+        return _themeData[AppTheme.light] ?? Style.light;
+      case AppTheme.dark:
+        return _themeData[AppTheme.dark] ?? Style.dark;
+      case AppTheme.yellow:
+        return _themeData[AppTheme.yellow] ?? Style.light;
+      case AppTheme.system:
+        return _themeData[AppTheme.system] ?? Style.light;
+      case AppTheme.experimental:
+        return _themeData[AppTheme.experimental] ?? Style.light;
     }
   }
 
   /// Default dark theme
-  ThemeData get darkTheme => _themeData[ThemeState.dark] ?? Style.dark;
+  ThemeData get darkTheme => _themeData[AppTheme.dark] ?? Style.dark;
 }

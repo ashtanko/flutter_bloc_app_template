@@ -1,4 +1,3 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/generated/assets.gen.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
@@ -337,13 +336,10 @@ class WidgetListScreen extends StatelessWidget {
         children: [
           Container(
             height: 100,
-            child: ClipRRect(
-              borderRadius: const BorderRadius.only(
+            child: const ClipRRect(
+              borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(10.0),
                 bottomLeft: Radius.circular(10.0),
-              ),
-              child: CachedNetworkImage(
-                imageUrl: item.imageUrl,
               ),
             ),
           ),
@@ -599,19 +595,20 @@ class WidgetListScreen extends StatelessWidget {
   }
 
   Widget buildCircleAvatar(String imageUrl, double width, double height) {
-    return CachedNetworkImage(
-      imageUrl: imageUrl,
-      imageBuilder: (context, imageProvider) => Container(
-        width: width,
-        height: height,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          image: DecorationImage(image: imageProvider, fit: BoxFit.cover),
-        ),
-      ),
-      placeholder: (context, url) => const CircularProgressIndicator(),
-      errorWidget: (context, url, error) => const Icon(Icons.error),
-    );
+    return Container();
+    // return CachedNetworkImage(
+    //   imageUrl: imageUrl,
+    //   imageBuilder: (context, imageProvider) => Container(
+    //     width: width,
+    //     height: height,
+    //     decoration: BoxDecoration(
+    //       shape: BoxShape.circle,
+    //       image: DecorationImage(image: imageProvider, fit: BoxFit.cover),
+    //     ),
+    //   ),
+    //   placeholder: (context, url) => const CircularProgressIndicator(),
+    //   errorWidget: (context, url, error) => const Icon(Icons.error),
+    // );
   }
 
   Widget buildUnlimitedWidget(UnlimitedItem item) {

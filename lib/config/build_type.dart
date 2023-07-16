@@ -1,6 +1,6 @@
 enum BuildType {
   debug,
-  release,
-  qa,
   staging,
+  qa,
+  release,
 }

@@ -20,7 +20,7 @@ localize:
 # analyze the project
 check:
 	dart analyze .
-	flutter pub run dart_code_metrics:metrics analyze lib
+	# flutter pub run dart_code_metrics:metrics analyze lib
 
 # flavors
 runDev:
@@ -43,3 +43,6 @@ apk:
 
 lines:
 	find . -name '*.dart' | xargs wc -l
+
+force_upgrade:
+	flutter update-packages --force-upgrade

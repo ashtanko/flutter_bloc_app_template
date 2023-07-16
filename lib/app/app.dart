@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_app_template/bloc/init/init_bloc.dart';
+import 'package:flutter_bloc_app_template/di/di_container.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/index.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
       child: MultiBlocProvider(
         providers: [
           BlocProvider(
-            create: (context) => ThemeCubit(),
+            create: (context) => ThemeCubit(diContainer.get())..loadTheme(),
           ),
           BlocProvider(
             create: (context) => EmailListBloc(

@@ -1,13 +1,14 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_bloc_app_template/bloc/theme/app_theme.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/index.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
-class MockThemeCubit extends MockCubit<ThemeState> implements ThemeCubit {}
+class MockThemeCubit extends MockCubit<AppTheme> implements ThemeCubit {}
 
 extension on WidgetTester {
   Future<void> pumpSettings(ThemeCubit themeCubit) {
@@ -38,7 +39,7 @@ void main() {
   void assertThemeDialogCell(
     WidgetTester tester,
     String title,
-    ThemeState themeState,
+    AppTheme themeState,
     ThemeMode themeMode,
   ) async {
     when(() => themeCubit.state).thenReturn(themeState);
@@ -52,23 +53,23 @@ void main() {
     expect(
       find.byWidgetPredicate(
         (widget) =>
-            widget is ThemeDialogCell<ThemeState> &&
+            widget is ThemeDialogCell<AppTheme> &&
             widget.title == title &&
             widget.value == themeState,
       ),
       findsOneWidget,
     );
 
-    expect(find.widgetWithIcon(ThemeDialogCell<ThemeState>, Icons.check),
+    expect(find.widgetWithIcon(ThemeDialogCell<AppTheme>, Icons.check),
         findsOneWidget);
   }
 
   void verifyThemeChange({
     required WidgetTester tester,
     required String widgetTitle,
-    required ThemeState prevThemeState,
+    required AppTheme prevThemeState,
     required ThemeMode themeMode,
-    required ThemeState newThemeState,
+    required AppTheme newThemeState,
   }) async {
     when(() => themeCubit.state).thenReturn(prevThemeState);
     when(() => themeCubit.themeMode).thenReturn(themeMode);
@@ -78,7 +79,7 @@ void main() {
     await tester.tap(find.byIcon(Icons.palette));
     await tester.pumpAndSettle();
     await tester.tap(
-      find.widgetWithText(ThemeDialogCell<ThemeState>, widgetTitle),
+      find.widgetWithText(ThemeDialogCell<AppTheme>, widgetTitle),
       warnIfMissed: true,
     );
 
@@ -87,7 +88,7 @@ void main() {
 
   group('Settings Screen Tests', () {
     testWidgets('renders settings title', (tester) async {
-      when(() => themeCubit.state).thenReturn(ThemeState.dark);
+      when(() => themeCubit.state).thenReturn(AppTheme.dark);
       when(() => themeCubit.themeMode).thenReturn(ThemeMode.dark);
 
       await tester.pumpSettings(themeCubit);
@@ -97,7 +98,7 @@ void main() {
     });
 
     testWidgets('render setting list', (tester) async {
-      when(() => themeCubit.state).thenReturn(ThemeState.dark);
+      when(() => themeCubit.state).thenReturn(AppTheme.dark);
       when(() => themeCubit.themeMode).thenReturn(ThemeMode.dark);
 
       await tester.pumpSettings(themeCubit);
@@ -107,7 +108,7 @@ void main() {
     });
 
     testWidgets('render setting list items', (tester) async {
-      when(() => themeCubit.state).thenReturn(ThemeState.dark);
+      when(() => themeCubit.state).thenReturn(AppTheme.dark);
       when(() => themeCubit.themeMode).thenReturn(ThemeMode.dark);
 
       await tester.pumpSettings(themeCubit);
@@ -120,7 +121,7 @@ void main() {
     });
 
     testWidgets('render bottom sheet dialog items', (tester) async {
-      when(() => themeCubit.state).thenReturn(ThemeState.dark);
+      when(() => themeCubit.state).thenReturn(AppTheme.dark);
       when(() => themeCubit.themeMode).thenReturn(ThemeMode.dark);
 
       await tester.pumpSettings(themeCubit);
@@ -128,7 +129,7 @@ void main() {
       await tester.tap(find.byIcon(Icons.palette));
       await tester.pumpAndSettle();
 
-      expect(find.byType(ThemeDialogCell<ThemeState>), findsNWidgets(5));
+      expect(find.byType(ThemeDialogCell<AppTheme>), findsNWidgets(5));
     });
 
     testWidgets('render bottom sheet dialog item for system theme',
@@ -136,7 +137,7 @@ void main() {
       assertThemeDialogCell(
         tester,
         'System Theme',
-        ThemeState.system,
+        AppTheme.system,
         ThemeMode.system,
       );
     });
@@ -146,7 +147,7 @@ void main() {
       assertThemeDialogCell(
         tester,
         'Light Theme',
-        ThemeState.light,
+        AppTheme.light,
         ThemeMode.light,
       );
     });
@@ -156,7 +157,7 @@ void main() {
       assertThemeDialogCell(
         tester,
         'Dark Theme',
-        ThemeState.dark,
+        AppTheme.dark,
         ThemeMode.dark,
       );
     });
@@ -166,7 +167,7 @@ void main() {
       assertThemeDialogCell(
         tester,
         'Yellow Theme',
-        ThemeState.yellow,
+        AppTheme.yellow,
         ThemeMode.light,
       );
     });
@@ -175,9 +176,9 @@ void main() {
       verifyThemeChange(
         tester: tester,
         widgetTitle: 'System Theme',
-        prevThemeState: ThemeState.dark,
+        prevThemeState: AppTheme.dark,
         themeMode: ThemeMode.dark,
-        newThemeState: ThemeState.system,
+        newThemeState: AppTheme.system,
       );
     });
 
@@ -185,9 +186,9 @@ void main() {
       verifyThemeChange(
         tester: tester,
         widgetTitle: 'Light Theme',
-        prevThemeState: ThemeState.dark,
+        prevThemeState: AppTheme.dark,
         themeMode: ThemeMode.dark,
-        newThemeState: ThemeState.light,
+        newThemeState: AppTheme.light,
       );
     });
 
@@ -195,9 +196,9 @@ void main() {
       verifyThemeChange(
         tester: tester,
         widgetTitle: 'Dark Theme',
-        prevThemeState: ThemeState.light,
+        prevThemeState: AppTheme.light,
         themeMode: ThemeMode.dark,
-        newThemeState: ThemeState.dark,
+        newThemeState: AppTheme.dark,
       );
     });
 
@@ -205,9 +206,9 @@ void main() {
       verifyThemeChange(
         tester: tester,
         widgetTitle: 'Yellow Theme',
-        prevThemeState: ThemeState.light,
+        prevThemeState: AppTheme.light,
         themeMode: ThemeMode.dark,
-        newThemeState: ThemeState.yellow,
+        newThemeState: AppTheme.yellow,
       );
     });
 
@@ -215,9 +216,9 @@ void main() {
       verifyThemeChange(
         tester: tester,
         widgetTitle: 'Experimental Theme',
-        prevThemeState: ThemeState.light,
+        prevThemeState: AppTheme.light,
         themeMode: ThemeMode.light,
-        newThemeState: ThemeState.experimental,
+        newThemeState: AppTheme.experimental,
       );
     });
   });
