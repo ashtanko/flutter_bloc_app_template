@@ -1,4 +1,4 @@
-.PHONY: gen rebuild check get localize runDev runDevQa runDevStaging lines release apk
+.PHONY: gen genAll rebuild check get localize runDev runDevQa runDevStaging lines release apk
 
 # clean project, install dependencies & generate sources
 rebuild:
@@ -9,6 +9,10 @@ rebuild:
 
 # generate localizations, dependencies, image assets, colors, fonts
 gen:
+	flutter packages pub run build_runner build --delete-conflicting-outputs
+
+# generate localizations, dependencies, image assets, colors, fonts
+genAll:
 	flutter packages pub run build_runner build --delete-conflicting-outputs
 	flutter pub run intl_utils:generate
 	fluttergen -c pubspec.yaml

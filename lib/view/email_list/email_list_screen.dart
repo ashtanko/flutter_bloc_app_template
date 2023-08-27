@@ -15,13 +15,13 @@ class EmailListScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(S.of(context).messagesTitle),
       ),
-      body: Scaffold(
-        body: Container(
-          height: double.infinity,
-          child: SingleChildScrollView(
-            physics: const AlwaysScrollableScrollPhysics(),
-            child: EmailListView(),
-          ),
+      body: RefreshIndicator(
+        onRefresh: () async {
+          await Future<void>.delayed(const Duration(seconds: 1));
+        },
+        child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          child: EmailListView(),
         ),
       ),
     );

@@ -4,8 +4,10 @@ import 'package:flutter_bloc_app_template/bloc/theme/app_theme.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/index.dart';
 
-class Settings extends StatelessWidget {
-  const Settings({Key? key}) : super(key: key);
+import 'settings.dart';
+
+class SettingsScreen extends StatelessWidget {
+  const SettingsScreen({Key? key}) : super(key: key);
 
   static const routeName = '/settings';
 

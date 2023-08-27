@@ -44,7 +44,7 @@ class EmailListView extends StatelessWidget {
         }
 
         if (state is EmailListLoadFailure) {
-          return ErrorScreen();
+          return Text(S.of(context).error); // TODO
         }
 
         return EmptyWidget();

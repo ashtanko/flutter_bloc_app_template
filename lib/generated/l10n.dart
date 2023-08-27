@@ -210,11 +210,11 @@ class S {
     );
   }
 
-  /// `Widget List`
-  String get widgetList {
+  /// `News`
+  String get newsScreen {
     return Intl.message(
-      'Widget List',
-      name: 'widgetList',
+      'News',
+      name: 'newsScreen',
       desc: '',
       args: [],
     );

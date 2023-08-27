@@ -6,18 +6,21 @@ import 'package:flutter_bloc_app_template/index.dart';
 const List<NavDestination> destinations = [
   NavDestination(
     label: 'Home',
-    icon: Icon(Icons.home),
+    icon: Icon(Icons.home_filled),
+    selectedIcon: Icon(Icons.home_filled),
     screen: EmailListScreen(),
   ),
   NavDestination(
-    label: 'Widgets',
-    icon: Icon(Icons.widgets),
-    screen: WidgetListScreen(),
+    label: 'News',
+    icon: Icon(Icons.library_books_outlined),
+    selectedIcon: Icon(Icons.library_books),
+    screen: NewsScreen(),
   ),
   NavDestination(
     label: 'Settings',
-    icon: Icon(AppIcons.toolbarSettings),
-    screen: Settings(),
+    icon: Icon(Icons.settings),
+    selectedIcon: Icon(Icons.settings_applications),
+    screen: SettingsScreen(),
   ),
 ];
 

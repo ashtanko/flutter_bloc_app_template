@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_app_template/bloc/theme/app_theme.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/index.dart';
+import 'package:flutter_bloc_app_template/view/settings/settings.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
@@ -22,7 +23,7 @@ extension on WidgetTester {
         locale: const Locale('en'),
         home: BlocProvider.value(
           value: themeCubit,
-          child: const Settings(),
+          child: const SettingsScreen(),
         ),
       ),
     );

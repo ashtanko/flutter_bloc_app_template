@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/index.dart';
 
+import 'attachments.dart';
+import 'favorite_icon.dart';
+
 class EmailListItem extends StatelessWidget {
   const EmailListItem({Key? key, required this.email, this.onTap})
       : super(key: key);

@@ -50,6 +50,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "itemsTitle": MessageLookupByLibrary.simpleMessage("Musterartikel"),
         "lightThemeTitle": MessageLookupByLibrary.simpleMessage("Licht-Thema"),
         "messagesTitle": MessageLookupByLibrary.simpleMessage("Nachrichten"),
+        "newsScreen": MessageLookupByLibrary.simpleMessage("News"),
         "settingsTitle": MessageLookupByLibrary.simpleMessage("Einstellungen"),
         "systemThemeTitle":
             MessageLookupByLibrary.simpleMessage("System-Thema"),
@@ -58,7 +59,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "themeTitle": MessageLookupByLibrary.simpleMessage("Thema"),
         "transparentButtonTitle":
             MessageLookupByLibrary.simpleMessage("Transparent"),
-        "widgetList": MessageLookupByLibrary.simpleMessage("Widget List"),
         "yellowThemeTitle": MessageLookupByLibrary.simpleMessage("Gelbes Thema")
       };
 }

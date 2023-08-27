@@ -22,6 +22,7 @@ class _MainPageState extends State<MainPage> {
     final destinations = router.destinations
         .map((e) => NavigationDestination(
               icon: e.icon,
+              selectedIcon: e.selectedIcon,
               label: e.label,
             ))
         .toList();
