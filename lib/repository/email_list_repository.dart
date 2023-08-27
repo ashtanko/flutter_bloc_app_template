@@ -1,7 +1,7 @@
 import 'package:flutter_bloc_app_template/data/storage.dart';
 import 'package:flutter_bloc_app_template/models/email.dart';
 
-const _delay = Duration(milliseconds: 1000);
+const _delay = Duration(milliseconds: 3000);
 
 class EmailListRepository {
   Future<List<Email>> loadData() {

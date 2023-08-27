@@ -30,6 +30,7 @@ class EmailListView extends StatelessWidget {
           var messages = state.messages;
 
           return ListView.builder(
+            physics: const BouncingScrollPhysics(),
             padding: EdgeInsets.zero,
             shrinkWrap: true,
             primary: false,

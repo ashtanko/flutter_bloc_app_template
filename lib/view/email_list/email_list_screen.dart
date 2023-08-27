@@ -19,8 +19,8 @@ class EmailListScreen extends StatelessWidget {
         onRefresh: () async {
           await Future<void>.delayed(const Duration(seconds: 1));
         },
-        child: SingleChildScrollView(
-          physics: const BouncingScrollPhysics(),
+        child: SizedBox(
+          height: MediaQuery.of(context).size.height,
           child: EmailListView(),
         ),
       ),
