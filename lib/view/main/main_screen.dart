@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/routes/router.dart' as router;
 
-class MainPage extends StatefulWidget {
-  const MainPage({Key? key}) : super(key: key);
+class MainScreen extends StatefulWidget {
+  const MainScreen({Key? key}) : super(key: key);
 
   @override
-  State<MainPage> createState() => _MainPageState();
+  State<MainScreen> createState() => MainScreenState();
 }
 
-class _MainPageState extends State<MainPage> {
+class MainScreenState extends State<MainScreen> {
   int currentIndex = 0;
 
   @override

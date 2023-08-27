@@ -4,15 +4,17 @@ import 'package:flutter_bloc_app_template/index.dart';
 class ItemAvatar extends StatelessWidget {
   const ItemAvatar({
     Key? key,
-    required this.email,
+    required this.imageUrl,
+    required this.shortenUserName,
   }) : super(key: key);
 
-  final Email email;
+  final String imageUrl;
+  final String shortenUserName;
 
   @override
   Widget build(BuildContext context) {
-    return email.image.isNotEmpty
-        ? CircleAvatar(backgroundImage: NetworkImage(email.image))
-        : NameAvatar(name: email.getFormattedName());
+    return imageUrl.isNotEmpty
+        ? CircleAvatar(backgroundImage: NetworkImage(imageUrl))
+        : NameAvatar(name: shortenUserName);
   }
 }

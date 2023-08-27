@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/index.dart';
+import 'package:flutter_bloc_app_template/utils/date_time_utils.dart';
+import 'package:flutter_bloc_app_template/utils/string_utils.dart';
 
 import 'attachments.dart';
 import 'favorite_icon.dart';
@@ -35,7 +37,8 @@ class EmailListItem extends StatelessWidget {
                       width: IconSizes.avatar,
                       child: Center(
                         child: ItemAvatar(
-                          email: email,
+                          imageUrl: email.image,
+                          shortenUserName: email.sender.getFormattedName(),
                         ),
                       ),
                     ),
@@ -101,7 +104,7 @@ class EmailListItem extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        Text(email.getFormattedDate()),
+                        Text(email.date.toFormattedString()),
                         Separator.spacer(Space.large),
                         FavoriteIcon(
                           message: email,

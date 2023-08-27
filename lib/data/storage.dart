@@ -1,4 +1,4 @@
-import 'package:flutter_bloc_app_template/models/email.dart';
+import '../models/models.dart';
 
 final emailList = [
   Email(

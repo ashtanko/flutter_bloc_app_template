@@ -32,7 +32,7 @@ final GlobalKey<NavigatorState> appNavigatorKey = GlobalKey<NavigatorState>();
 
 class NavigationService {
   final _appRoutes = {
-    Routes.app: (_) => const MainPage(),
+    Routes.app: (_) => const MainScreen(),
   };
 
   // iOS: full screen routes pop up from the bottom and disappear vertically too

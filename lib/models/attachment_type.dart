@@ -1,0 +1,4 @@
+enum AttachmentType {
+  pdf,
+  doc,
+}

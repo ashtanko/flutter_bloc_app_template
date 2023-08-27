@@ -1,4 +1,6 @@
 import 'package:flutter_bloc_app_template/index.dart';
+import 'package:flutter_bloc_app_template/utils/date_time_utils.dart';
+import 'package:flutter_bloc_app_template/utils/string_utils.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../helpers/data.dart';
@@ -19,34 +21,20 @@ void main() {
         image: '',
         attachments: [],
       );
-      expect(message.getFormattedDate(), 'Apr 10');
+      expect(message.date.toFormattedString(), 'Apr 10');
     });
 
     test('date should be formatted as jm format', () async {
-      final date = DateTime.now();
-
-      var month = '${date.month}';
-      var day = '${date.day}';
-      if (date.month < 10) {
-        month = '0${date.month}';
-      }
-
-      if (date.day < 10) {
-        day = '0${date.day}';
-      }
-
-      final format = '${date.year}-$month-$day 22:18:04Z';
-
       final message = Email(
         sender: 'Ralph Edwards',
         subject: 'The results to our user testing',
         messagePreview: 'What is the progress on that task?',
         isFavorite: false,
-        date: DateTime.parse(format),
+        date: DateTime(2017, 9, 7, 17, 30),
         image: '',
         attachments: [],
       );
-      expect(message.getFormattedDate(), '10:18 PM');
+      expect(message.date.toFormattedString(), 'Sep 07');
     });
 
     test('should return N/A when sender has empty name', () async {
@@ -61,7 +49,7 @@ void main() {
         image: '',
         attachments: [],
       );
-      expect(message.getFormattedName(), expected);
+      expect(message.sender.getFormattedName(), expected);
     });
 
     test('should return the capital letter of the name', () async {
@@ -76,7 +64,7 @@ void main() {
         image: '',
         attachments: [],
       );
-      expect(message.getFormattedName(), expected);
+      expect(message.sender.getFormattedName(), expected);
     });
 
     test('should return the capital letter of the name and surname', () async {
@@ -91,7 +79,7 @@ void main() {
         image: '',
         attachments: [],
       );
-      expect(message.getFormattedName(), expected);
+      expect(message.sender.getFormattedName(), expected);
     });
   });
 }
