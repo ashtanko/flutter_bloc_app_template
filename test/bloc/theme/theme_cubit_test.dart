@@ -23,6 +23,59 @@ void main() {
       cubit = ThemeCubit(themeRepository);
     });
 
+    tearDown(() {
+      cubit.close();
+    });
+
+    test('Initial state is defaultTheme', () {
+      expect(cubit.state, ThemeCubit.defaultTheme);
+    });
+
+    test('loadTheme emits saved theme', () async {
+      await cubit.loadTheme();
+
+      expect(cubit.state, AppTheme.light);
+    });
+
+    test('themeMode returns appropriate ThemeMode', () {
+      cubit.updateTheme(AppTheme.light);
+      expect(cubit.themeMode, ThemeMode.light);
+      cubit.updateTheme(AppTheme.dark);
+      expect(cubit.themeMode, ThemeMode.dark);
+      cubit.updateTheme(AppTheme.system);
+      expect(cubit.themeMode, ThemeMode.system);
+      cubit.updateTheme(AppTheme.experimental);
+      expect(cubit.themeMode, ThemeMode.light);
+    });
+
+    test('getDefaultTheme returns correct ThemeData', () {
+      cubit.updateTheme(AppTheme.light);
+      expect(cubit.getDefaultTheme(), themeData[AppTheme.light]);
+
+      cubit.updateTheme(AppTheme.dark);
+      expect(cubit.getDefaultTheme(), themeData[AppTheme.dark]);
+
+      cubit.updateTheme(AppTheme.yellow);
+      expect(cubit.getDefaultTheme(), themeData[AppTheme.yellow]);
+
+      cubit.updateTheme(AppTheme.system);
+      expect(cubit.getDefaultTheme(), themeData[AppTheme.system]);
+
+      cubit.updateTheme(AppTheme.experimental);
+      expect(cubit.getDefaultTheme(), themeData[AppTheme.experimental]);
+    });
+
+    test('darkTheme returns correct ThemeData', () {
+      expect(cubit.darkTheme, themeData[AppTheme.dark]);
+    });
+
+    test('setTheme saves the theme and emits', () {
+      final newTheme = AppTheme.yellow;
+
+      cubit.setTheme = newTheme;
+      expect(cubit.state, newTheme);
+    });
+
     test('has initial value', () async {
       expect(cubit.state, AppTheme.system);
       expect(cubit.theme, AppTheme.system);

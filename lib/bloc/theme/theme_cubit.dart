@@ -4,7 +4,8 @@ import 'package:flutter_bloc_app_template/bloc/theme/app_theme.dart';
 import 'package:flutter_bloc_app_template/index.dart';
 import 'package:flutter_bloc_app_template/repository/theme_repository.dart';
 
-final Map<AppTheme, ThemeData> _themeData = {
+final Map<AppTheme, ThemeData> themeData = {
+  AppTheme.system: Style.light,
   AppTheme.light: Style.light,
   AppTheme.dark: Style.dark,
   AppTheme.yellow: Style.yellow,
@@ -51,18 +52,18 @@ class ThemeCubit extends Cubit<AppTheme> {
   ThemeData getDefaultTheme() {
     switch (state) {
       case AppTheme.light:
-        return _themeData[AppTheme.light] ?? Style.light;
+        return themeData[AppTheme.light] ?? Style.light;
       case AppTheme.dark:
-        return _themeData[AppTheme.dark] ?? Style.dark;
+        return themeData[AppTheme.dark] ?? Style.dark;
       case AppTheme.yellow:
-        return _themeData[AppTheme.yellow] ?? Style.light;
+        return themeData[AppTheme.yellow] ?? Style.light;
       case AppTheme.system:
-        return _themeData[AppTheme.system] ?? Style.light;
+        return themeData[AppTheme.system] ?? Style.light;
       case AppTheme.experimental:
-        return _themeData[AppTheme.experimental] ?? Style.light;
+        return themeData[AppTheme.experimental] ?? Style.light;
     }
   }
 
   /// Default dark theme
-  ThemeData get darkTheme => _themeData[AppTheme.dark] ?? Style.dark;
+  ThemeData get darkTheme => themeData[AppTheme.dark] ?? Style.dark;
 }
