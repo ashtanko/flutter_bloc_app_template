@@ -1,0 +1,7 @@
+#include? "Pods/Target Support Files/Pods-Runner/Pods-Runner.debug-qa.xcconfig"
+#include "Generated.xcconfig"
+
+FLUTTER_TARGET=lib/main_qa.dart
+ASSET_PREFIX=qa
+BUNDLE_NAME=Template (Test)
+BUNDLE_DISPLAY_NAME=Template (Test)

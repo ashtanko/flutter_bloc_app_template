@@ -93,9 +93,7 @@ class EmailListItem extends StatelessWidget {
                             Separator.spacer(Space.small),
                             Attachments(
                               email: email,
-                              onTap: () {
-                                // TODO handle tap
-                              },
+                              onTap: () {},
                             ),
                           ],
                         ),

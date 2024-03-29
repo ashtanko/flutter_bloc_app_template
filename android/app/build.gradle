@@ -86,6 +86,12 @@ android {
             versionNameSuffix "-dev"
         }
 
+        qa {
+            dimension "buildType"
+            applicationIdSuffix ".qa"
+            versionNameSuffix "-qa"
+        }
+
         prod {
             dimension "buildType"
             signingConfig signingConfigs.release
