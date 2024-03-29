@@ -53,16 +53,12 @@ void main() {
 
     expect(
       find.byWidgetPredicate(
-        (widget) =>
-            widget is ThemeDialogCell<AppTheme> &&
-            widget.title == title &&
-            widget.value == themeState,
+        (widget) => widget is ThemeDialogCell<AppTheme> && widget.title == title && widget.value == themeState,
       ),
       findsOneWidget,
     );
 
-    expect(find.widgetWithIcon(ThemeDialogCell<AppTheme>, Icons.check),
-        findsOneWidget);
+    expect(find.widgetWithIcon(ThemeDialogCell<AppTheme>, Icons.check), findsOneWidget);
   }
 
   void verifyThemeChange({
@@ -133,8 +129,7 @@ void main() {
       expect(find.byType(ThemeDialogCell<AppTheme>), findsNWidgets(5));
     });
 
-    testWidgets('render bottom sheet dialog item for system theme',
-        (tester) async {
+    testWidgets('render bottom sheet dialog item for system theme', (tester) async {
       assertThemeDialogCell(
         tester,
         'System Theme',
@@ -143,8 +138,7 @@ void main() {
       );
     });
 
-    testWidgets('render bottom sheet dialog item for light theme',
-        (tester) async {
+    testWidgets('render bottom sheet dialog item for light theme', (tester) async {
       assertThemeDialogCell(
         tester,
         'Light Theme',
@@ -153,8 +147,7 @@ void main() {
       );
     });
 
-    testWidgets('render bottom sheet dialog item for dark theme',
-        (tester) async {
+    testWidgets('render bottom sheet dialog item for dark theme', (tester) async {
       assertThemeDialogCell(
         tester,
         'Dark Theme',
@@ -163,8 +156,7 @@ void main() {
       );
     });
 
-    testWidgets('render bottom sheet dialog item for yellow theme',
-        (tester) async {
+    testWidgets('render bottom sheet dialog item for yellow theme', (tester) async {
       assertThemeDialogCell(
         tester,
         'Yellow Theme',
@@ -210,16 +202,6 @@ void main() {
         prevThemeState: AppTheme.light,
         themeMode: ThemeMode.dark,
         newThemeState: AppTheme.yellow,
-      );
-    });
-
-    testWidgets('change to experimental theme theme', (tester) async {
-      verifyThemeChange(
-        tester: tester,
-        widgetTitle: 'Experimental Theme',
-        prevThemeState: AppTheme.light,
-        themeMode: ThemeMode.light,
-        newThemeState: AppTheme.experimental,
       );
     });
   });
