@@ -12,6 +12,8 @@ This template is focused on delivering a project with **static analysis** and **
 [![style: effective dart][style-badge]][style-link]
 [![GitHub forks][forks-badge]][forks-link]
 [![GitHub stars][stars-badge]][stars-link]
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/1c12bf943fea43098f0853a05e2366be)](https://app.codacy.com/gh/ashtanko/flutter_bloc_app_template/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/1c12bf943fea43098f0853a05e2366be)](https://app.codacy.com/gh/ashtanko/flutter_bloc_app_template/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage)
 
 ## How to use 🐾
 Just click on [![Use this template](https://img.shields.io/badge/-Use%20this%20template-brightgreen)](https://github.com/ashtanko/flutter_bloc_app_template/generate) button to create a new repo starting from this template.
