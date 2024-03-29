@@ -42,10 +42,10 @@ class _RoundDialog extends StatelessWidget {
   }
 
   const _RoundDialog._({
-    Key? key,
+    super.key,
     required this.children,
     this.padding,
-  }) : super(key: key);
+  });
 
   final List<Widget> children;
   final EdgeInsets? padding;

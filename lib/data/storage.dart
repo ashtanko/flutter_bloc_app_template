@@ -52,7 +52,8 @@ final emailList = [
     messagePreview: "Yeah! You're right.",
     isFavorite: true,
     date: DateTime.parse('2022-02-01 14:18:04Z'),
-    image: 'https://www.gdnonline.com/gdnimages/20161122/201611221138141.JPG',
+    image:
+        'https://hips.hearstapps.com/esq.h-cdn.co/assets/17/19/480x480/square-1494263234-blade-runner.png?resize=640:*',
     attachments: [],
   ),
   Email(

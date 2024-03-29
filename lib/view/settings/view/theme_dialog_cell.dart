@@ -3,12 +3,12 @@ import 'package:flutter_bloc_app_template/index.dart';
 
 class ThemeDialogCell<T> extends StatelessWidget {
   const ThemeDialogCell({
-    Key? key,
+    super.key,
     required this.title,
     required this.groupValue,
     required this.value,
     required this.onChanged,
-  }) : super(key: key);
+  });
 
   final String title;
   final T groupValue, value;

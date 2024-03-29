@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/index.dart';
 
 class FavoriteIcon extends StatelessWidget {
-  const FavoriteIcon({Key? key, required this.message, this.onTap})
-      : super(key: key);
+  const FavoriteIcon({super.key, required this.message, this.onTap});
 
   final Email message;
   final VoidCallback? onTap;

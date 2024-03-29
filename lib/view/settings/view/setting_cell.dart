@@ -3,13 +3,13 @@ import 'package:flutter_bloc_app_template/index.dart';
 
 class SettingCell extends StatelessWidget {
   const SettingCell({
-    Key? key,
+    super.key,
     required this.leading,
     required this.title,
     this.onTap,
     this.contentPadding,
     this.dense = false,
-  }) : super(key: key);
+  });
 
   factory SettingCell.icon({
     Key? key,

@@ -7,7 +7,7 @@ import 'package:flutter_bloc_app_template/index.dart';
 import 'settings.dart';
 
 class SettingsScreen extends StatelessWidget {
-  const SettingsScreen({Key? key}) : super(key: key);
+  const SettingsScreen({super.key});
 
   static const routeName = '/settings';
 

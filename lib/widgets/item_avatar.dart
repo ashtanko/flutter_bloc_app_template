@@ -3,10 +3,10 @@ import 'package:flutter_bloc_app_template/index.dart';
 
 class ItemAvatar extends StatelessWidget {
   const ItemAvatar({
-    Key? key,
+    super.key,
     required this.imageUrl,
     required this.shortenUserName,
-  }) : super(key: key);
+  });
 
   final String imageUrl;
   final String shortenUserName;

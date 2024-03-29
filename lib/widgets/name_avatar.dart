@@ -3,9 +3,9 @@ import 'package:flutter_bloc_app_template/index.dart';
 
 class NameAvatar extends StatelessWidget {
   const NameAvatar({
-    Key? key,
+    super.key,
     required this.name,
-  }) : super(key: key);
+  });
 
   final String name;
 

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
 
 class NewsScreen extends StatelessWidget {
-  const NewsScreen({Key? key}) : super(key: key);
+  const NewsScreen({super.key});
 
   static const routeName = '/news';
 

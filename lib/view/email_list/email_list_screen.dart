@@ -4,8 +4,8 @@ import 'package:flutter_bloc_app_template/index.dart';
 
 class EmailListScreen extends StatelessWidget {
   const EmailListScreen({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   static const routeName = '/';
 

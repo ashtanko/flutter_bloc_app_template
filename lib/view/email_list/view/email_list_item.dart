@@ -7,8 +7,7 @@ import 'attachments.dart';
 import 'favorite_icon.dart';
 
 class EmailListItem extends StatelessWidget {
-  const EmailListItem({Key? key, required this.email, this.onTap})
-      : super(key: key);
+  const EmailListItem({super.key, required this.email, this.onTap});
 
   final Email email;
   final VoidCallback? onTap;

@@ -4,23 +4,22 @@
 // InjectableConfigGenerator
 // **************************************************************************
 
-// ignore_for_file: unnecessary_lambdas
-// ignore_for_file: lines_longer_than_80_chars
+// ignore_for_file: type=lint
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/material.dart' as _i3;
 import 'package:flutter_bloc_app_template/data/theme_storage.dart' as _i4;
 import 'package:flutter_bloc_app_template/di/di_app_module.dart' as _i6;
-import 'package:flutter_bloc_app_template/di/di_data_module.dart' as _i8;
-import 'package:flutter_bloc_app_template/di/di_repository_module.dart' as _i7;
+import 'package:flutter_bloc_app_template/di/di_data_module.dart' as _i7;
+import 'package:flutter_bloc_app_template/di/di_repository_module.dart' as _i8;
 import 'package:flutter_bloc_app_template/repository/theme_repository.dart'
     as _i5;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
 extension GetItInjectableX on _i1.GetIt {
-  // initializes the registration of main-scope dependencies inside of GetIt
+// initializes the registration of main-scope dependencies inside of GetIt
   _i1.GetIt init({
     String? environment,
     _i2.EnvironmentFilter? environmentFilter,
@@ -43,6 +42,6 @@ extension GetItInjectableX on _i1.GetIt {
 
 class _$DIAppModule extends _i6.DIAppModule {}
 
-class _$RepositoryModule extends _i7.RepositoryModule {}
+class _$DIDataModule extends _i7.DIDataModule {}
 
-class _$DIDataModule extends _i8.DIDataModule {}
+class _$RepositoryModule extends _i8.RepositoryModule {}

@@ -5,8 +5,7 @@ import 'package:flutter_bloc_app_template/index.dart';
 import 'attachment_icon.dart';
 
 class Attachments extends StatelessWidget {
-  const Attachments({Key? key, required this.email, this.onTap})
-      : super(key: key);
+  const Attachments({super.key, required this.email, this.onTap});
 
   final Email email;
   final VoidCallback? onTap;
