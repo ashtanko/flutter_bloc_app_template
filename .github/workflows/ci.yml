@@ -76,5 +76,8 @@ jobs:
       - name: Upload coverage to codecov
         uses: codecov/codecov-action@v3
 
-      - name: Upload coverage reports
-        run: bash <(curl -Ls https://coverage.codacy.com/get.sh)
+      - name: Run codacy-coverage-reporter
+        uses: codacy/codacy-coverage-reporter-action@v1
+        with:
+            project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+            coverage-reports: ./coverage/lcov.info
