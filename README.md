@@ -26,14 +26,14 @@ Just click on [![Use this template](https://img.shields.io/badge/-Use%20this%20t
 - Unit test coverage
 
 ## Configuration
-The template has 2 flavors:
+The template has 3 flavors:
 - dev
 - prod
-
-The template has 4 build variants:
-- dev
 - qa
-- staging
+
+The template has 3 build variants:
+- debug
+- profile
 - release
 
 For example dev configuration for Android Studio looks like:
