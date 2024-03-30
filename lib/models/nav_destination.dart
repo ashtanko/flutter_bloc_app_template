@@ -11,7 +11,7 @@ class NavDestination {
 
   final Widget screen;
   final String label;
-  final Icon icon;
+  final Widget icon;
   final Widget? selectedIcon;
   final Widget? child;
 }

@@ -21,6 +21,12 @@ class $GoogleFontsGen {
   List<String> get values => [robotoMedium];
 }
 
+class $AssetsIconsGen {
+  const $AssetsIconsGen();
+
+  $AssetsIconsNavigationGen get navigation => const $AssetsIconsNavigationGen();
+}
+
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
@@ -93,9 +99,25 @@ class $AssetsImagesGen {
       ];
 }
 
+class $AssetsIconsNavigationGen {
+  const $AssetsIconsNavigationGen();
+
+  /// File path: assets/icons/navigation/icon_contacts.svg
+  SvgGenImage get iconContacts =>
+      const SvgGenImage('assets/icons/navigation/icon_contacts.svg');
+
+  /// File path: assets/icons/navigation/icon_contacts_outline.svg
+  SvgGenImage get iconContactsOutline =>
+      const SvgGenImage('assets/icons/navigation/icon_contacts_outline.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [iconContacts, iconContactsOutline];
+}
+
 class Assets {
   Assets._();
 
+  static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $GoogleFontsGen googleFonts = $GoogleFontsGen();
 }

@@ -66,6 +66,7 @@ flutter:
   assets:
     # Add assets from the images directory to the application.
     - assets/images/
+    - assets/icons/navigation/
     - google_fonts/
   fonts:
     - family: Roboto
