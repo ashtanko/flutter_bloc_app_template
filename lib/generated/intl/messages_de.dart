@@ -30,6 +30,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("BorderRadius"),
         "borderSideButtonTitle":
             MessageLookupByLibrary.simpleMessage("BorderSide"),
+        "darkGoldThemeTitle":
+            MessageLookupByLibrary.simpleMessage("Dunkles Gold-Thema"),
+        "darkMintThemeTitle":
+            MessageLookupByLibrary.simpleMessage("Dunkles Minz-Thema"),
         "darkThemeTitle": MessageLookupByLibrary.simpleMessage("Dunkles Thema"),
         "disabledButtonTitle": MessageLookupByLibrary.simpleMessage("Disabled"),
         "disabledRoundedButtonTitle":
@@ -39,8 +43,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "emptyList": MessageLookupByLibrary.simpleMessage("Leere Liste"),
         "enabledButtonTitle": MessageLookupByLibrary.simpleMessage("Enabled"),
         "error": MessageLookupByLibrary.simpleMessage("Fehler"),
-        "experimentalThemeTitle":
-            MessageLookupByLibrary.simpleMessage("Experimental Theme"),
         "iconAndPaddingButtonTitle":
             MessageLookupByLibrary.simpleMessage("With Icon Padding"),
         "iconButtonTitle": MessageLookupByLibrary.simpleMessage("With Icon"),
@@ -48,6 +50,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Artikel Details"),
         "itemTitle": m0,
         "itemsTitle": MessageLookupByLibrary.simpleMessage("Musterartikel"),
+        "lightGoldThemeTitle":
+            MessageLookupByLibrary.simpleMessage("Helles Gold-Thema"),
+        "lightMintThemeTitle":
+            MessageLookupByLibrary.simpleMessage("Helles Minz-Thema"),
         "lightThemeTitle": MessageLookupByLibrary.simpleMessage("Licht-Thema"),
         "messagesTitle": MessageLookupByLibrary.simpleMessage("Nachrichten"),
         "newsScreen": MessageLookupByLibrary.simpleMessage("News"),
@@ -58,7 +64,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "tabSettings": MessageLookupByLibrary.simpleMessage("Settings"),
         "themeTitle": MessageLookupByLibrary.simpleMessage("Thema"),
         "transparentButtonTitle":
-            MessageLookupByLibrary.simpleMessage("Transparent"),
-        "yellowThemeTitle": MessageLookupByLibrary.simpleMessage("Gelbes Thema")
+            MessageLookupByLibrary.simpleMessage("Transparent")
       };
 }

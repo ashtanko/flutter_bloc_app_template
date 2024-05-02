@@ -30,6 +30,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("BorderRadius"),
         "borderSideButtonTitle":
             MessageLookupByLibrary.simpleMessage("BorderSide"),
+        "darkGoldThemeTitle": MessageLookupByLibrary.simpleMessage("Dark Gold"),
+        "darkMintThemeTitle": MessageLookupByLibrary.simpleMessage("Dark Mint"),
         "darkThemeTitle": MessageLookupByLibrary.simpleMessage("Dark Theme"),
         "disabledButtonTitle": MessageLookupByLibrary.simpleMessage("Disabled"),
         "disabledRoundedButtonTitle":
@@ -48,6 +50,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Item Details"),
         "itemTitle": m0,
         "itemsTitle": MessageLookupByLibrary.simpleMessage("Sample Items"),
+        "lightGoldThemeTitle":
+            MessageLookupByLibrary.simpleMessage("Light Gold"),
+        "lightMintThemeTitle":
+            MessageLookupByLibrary.simpleMessage("Light Mint"),
         "lightThemeTitle": MessageLookupByLibrary.simpleMessage("Light Theme"),
         "messagesTitle": MessageLookupByLibrary.simpleMessage("Messages"),
         "newsScreen": MessageLookupByLibrary.simpleMessage("News"),
@@ -58,7 +64,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "tabSettings": MessageLookupByLibrary.simpleMessage("Settings"),
         "themeTitle": MessageLookupByLibrary.simpleMessage("Theme"),
         "transparentButtonTitle":
-            MessageLookupByLibrary.simpleMessage("Transparent"),
-        "yellowThemeTitle": MessageLookupByLibrary.simpleMessage("Yellow Theme")
+            MessageLookupByLibrary.simpleMessage("Transparent")
       };
 }

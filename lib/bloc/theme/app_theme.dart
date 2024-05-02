@@ -1,7 +1,10 @@
 enum AppTheme {
   light,
   dark,
-  yellow,
+  lightGold,
+  darkGold,
+  lightMint,
+  darkMint,
   system,
   experimental,
 }

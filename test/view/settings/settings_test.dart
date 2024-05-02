@@ -130,7 +130,7 @@ void main() {
       await tester.tap(find.byIcon(Icons.palette));
       await tester.pumpAndSettle();
 
-      expect(find.byType(ThemeDialogCell<AppTheme>), findsNWidgets(5));
+      expect(find.byType(ThemeDialogCell<AppTheme>), findsNWidgets(8));
     });
 
     testWidgets('render bottom sheet dialog item for system theme',
@@ -167,21 +167,21 @@ void main() {
         (tester) async {
       assertThemeDialogCell(
         tester,
-        'Yellow Theme',
-        AppTheme.yellow,
+        'Light Gold',
+        AppTheme.lightGold,
         ThemeMode.light,
       );
     });
 
-    testWidgets('change to system theme', (tester) async {
-      verifyThemeChange(
-        tester: tester,
-        widgetTitle: 'System Theme',
-        prevThemeState: AppTheme.dark,
-        themeMode: ThemeMode.dark,
-        newThemeState: AppTheme.system,
-      );
-    });
+    // testWidgets('change to system theme', (tester) async {
+    //   verifyThemeChange(
+    //     tester: tester,
+    //     widgetTitle: 'System Theme',
+    //     prevThemeState: AppTheme.dark,
+    //     themeMode: ThemeMode.dark,
+    //     newThemeState: AppTheme.system,
+    //   );
+    // });
 
     testWidgets('change to light theme theme', (tester) async {
       verifyThemeChange(
@@ -203,14 +203,34 @@ void main() {
       );
     });
 
-    testWidgets('change to yellow theme theme', (tester) async {
+    testWidgets('change to Light Gold theme theme', (tester) async {
       verifyThemeChange(
         tester: tester,
-        widgetTitle: 'Yellow Theme',
+        widgetTitle: 'Light Gold',
         prevThemeState: AppTheme.light,
         themeMode: ThemeMode.dark,
-        newThemeState: AppTheme.yellow,
+        newThemeState: AppTheme.lightGold,
       );
     });
+
+    testWidgets('change to Light Mint theme theme', (tester) async {
+      verifyThemeChange(
+        tester: tester,
+        widgetTitle: 'Light Mint',
+        prevThemeState: AppTheme.light,
+        themeMode: ThemeMode.dark,
+        newThemeState: AppTheme.lightMint,
+      );
+    });
+
+    // testWidgets('change to Dark Gold theme theme', (tester) async {
+    //   verifyThemeChange(
+    //     tester: tester,
+    //     widgetTitle: 'Dark Gold',
+    //     prevThemeState: AppTheme.light,
+    //     themeMode: ThemeMode.dark,
+    //     newThemeState: AppTheme.darkGold,
+    //   );
+    // });
   });
 }

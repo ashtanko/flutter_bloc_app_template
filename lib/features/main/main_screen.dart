@@ -36,6 +36,9 @@ class MainScreenState extends State<MainScreen> {
             ],
           ),
           bottomNavigationBar: NavigationBar(
+            //backgroundColor: Color(0xFFF2F4F7),
+            //surfaceTintColor: Colors.white,
+            //indicatorColor: Color(0xFFD0E9FF),
             destinations: destinations,
             selectedIndex: currentIndex,
             onDestinationSelected: onSelected,

@@ -40,9 +40,27 @@ class SettingsScreen extends StatelessWidget {
                     onChanged: (value) => updateTheme(context, value),
                   ),
                   ThemeDialogCell<AppTheme>(
-                    title: S.of(context).yellowThemeTitle,
+                    title: S.of(context).lightGoldThemeTitle,
                     groupValue: state,
-                    value: AppTheme.yellow,
+                    value: AppTheme.lightGold,
+                    onChanged: (value) => updateTheme(context, value),
+                  ),
+                  ThemeDialogCell<AppTheme>(
+                    title: S.of(context).lightMintThemeTitle,
+                    groupValue: state,
+                    value: AppTheme.lightMint,
+                    onChanged: (value) => updateTheme(context, value),
+                  ),
+                  ThemeDialogCell<AppTheme>(
+                    title: S.of(context).darkGoldThemeTitle,
+                    groupValue: state,
+                    value: AppTheme.darkGold,
+                    onChanged: (value) => updateTheme(context, value),
+                  ),
+                  ThemeDialogCell<AppTheme>(
+                    title: S.of(context).darkMintThemeTitle,
+                    groupValue: state,
+                    value: AppTheme.darkMint,
                     onChanged: (value) => updateTheme(context, value),
                   ),
                   ThemeDialogCell<AppTheme>(

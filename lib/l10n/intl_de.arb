@@ -27,10 +27,19 @@
   "@lightThemeTitle": {},
   "darkThemeTitle": "Dunkles Thema",
   "@darkThemeTitle": {},
-  "yellowThemeTitle": "Gelbes Thema",
-  "@yellowThemeTitle": {},
-  "experimentalThemeTitle": "Experimental Theme",
-  "@experimentalThemeTitle": {},
+
+  "lightGoldThemeTitle": "Helles Gold-Thema",
+  "@lightGoldThemeTitle": {},
+
+  "darkGoldThemeTitle": "Dunkles Gold-Thema",
+  "@darkGoldThemeTitle": {},
+
+  "lightMintThemeTitle": "Helles Minz-Thema",
+  "@lightMintThemeTitle": {},
+
+  "darkMintThemeTitle": "Dunkles Minz-Thema",
+  "@darkMintThemeTitle": {},
+
   "itemDetailsTitle": "Artikel Details",
   "@itemDetailsTitle": {
     "description": "Der Titel des Bildschirms Artikeldetails"

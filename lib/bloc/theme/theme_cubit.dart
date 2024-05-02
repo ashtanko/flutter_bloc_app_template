@@ -7,8 +7,11 @@ import 'package:flutter_bloc_app_template/repository/theme_repository.dart';
 final Map<AppTheme, ThemeData> themeData = {
   AppTheme.system: Style.light,
   AppTheme.light: Style.light,
+  AppTheme.lightGold: Style.lightGoldTheme,
+  AppTheme.lightMint: Style.lightMintTheme,
   AppTheme.dark: Style.dark,
-  AppTheme.yellow: Style.yellow,
+  AppTheme.darkGold: Style.darkGoldTheme,
+  AppTheme.darkMint: Style.darkMintTheme,
   AppTheme.experimental: Style.experimental,
 };
 
@@ -39,9 +42,12 @@ class ThemeCubit extends Cubit<AppTheme> {
     switch (state) {
       case AppTheme.experimental:
       case AppTheme.light:
-      case AppTheme.yellow:
+      case AppTheme.lightGold:
+      case AppTheme.lightMint:
         return ThemeMode.light;
       case AppTheme.dark:
+      case AppTheme.darkGold:
+      case AppTheme.darkMint:
         return ThemeMode.dark;
       default:
         return ThemeMode.system;
@@ -53,10 +59,16 @@ class ThemeCubit extends Cubit<AppTheme> {
     switch (state) {
       case AppTheme.light:
         return themeData[AppTheme.light] ?? Style.light;
+      case AppTheme.lightGold:
+        return themeData[AppTheme.lightGold] ?? Style.light;
+      case AppTheme.lightMint:
+        return themeData[AppTheme.lightMint] ?? Style.light;
       case AppTheme.dark:
         return themeData[AppTheme.dark] ?? Style.dark;
-      case AppTheme.yellow:
-        return themeData[AppTheme.yellow] ?? Style.light;
+      case AppTheme.darkGold:
+        return themeData[AppTheme.darkGold] ?? Style.dark;
+      case AppTheme.darkMint:
+        return themeData[AppTheme.darkMint] ?? Style.dark;
       case AppTheme.system:
         return themeData[AppTheme.system] ?? Style.light;
       case AppTheme.experimental:

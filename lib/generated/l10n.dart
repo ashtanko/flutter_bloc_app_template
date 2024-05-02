@@ -140,11 +140,41 @@ class S {
     );
   }
 
-  /// `Yellow Theme`
-  String get yellowThemeTitle {
+  /// `Light Gold`
+  String get lightGoldThemeTitle {
     return Intl.message(
-      'Yellow Theme',
-      name: 'yellowThemeTitle',
+      'Light Gold',
+      name: 'lightGoldThemeTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dark Gold`
+  String get darkGoldThemeTitle {
+    return Intl.message(
+      'Dark Gold',
+      name: 'darkGoldThemeTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Light Mint`
+  String get lightMintThemeTitle {
+    return Intl.message(
+      'Light Mint',
+      name: 'lightMintThemeTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dark Mint`
+  String get darkMintThemeTitle {
+    return Intl.message(
+      'Dark Mint',
+      name: 'darkMintThemeTitle',
       desc: '',
       args: [],
     );

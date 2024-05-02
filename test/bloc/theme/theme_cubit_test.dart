@@ -55,8 +55,17 @@ void main() {
       cubit.updateTheme(AppTheme.dark);
       expect(cubit.getDefaultTheme(), themeData[AppTheme.dark]);
 
-      cubit.updateTheme(AppTheme.yellow);
-      expect(cubit.getDefaultTheme(), themeData[AppTheme.yellow]);
+      cubit.updateTheme(AppTheme.lightGold);
+      expect(cubit.getDefaultTheme(), themeData[AppTheme.lightGold]);
+
+      cubit.updateTheme(AppTheme.lightMint);
+      expect(cubit.getDefaultTheme(), themeData[AppTheme.lightMint]);
+
+      cubit.updateTheme(AppTheme.darkGold);
+      expect(cubit.getDefaultTheme(), themeData[AppTheme.darkGold]);
+
+      cubit.updateTheme(AppTheme.darkMint);
+      expect(cubit.getDefaultTheme(), themeData[AppTheme.darkMint]);
 
       cubit.updateTheme(AppTheme.system);
       expect(cubit.getDefaultTheme(), themeData[AppTheme.system]);
@@ -70,7 +79,7 @@ void main() {
     });
 
     test('setTheme saves the theme and emits', () {
-      final newTheme = AppTheme.yellow;
+      final newTheme = AppTheme.lightGold;
 
       cubit.setTheme = newTheme;
       expect(cubit.state, newTheme);
@@ -130,11 +139,32 @@ void main() {
           expectedThemeState: AppTheme.light);
     });
 
-    test('update to yellow theme correctly', () async {
+    test('update to lightGold theme correctly', () async {
       verifyThemeChange(
-          themeState: AppTheme.yellow,
+          themeState: AppTheme.lightGold,
           themeMode: ThemeMode.light,
-          expectedThemeState: AppTheme.yellow);
+          expectedThemeState: AppTheme.lightGold);
+    });
+
+    test('update to lightMint theme correctly', () async {
+      verifyThemeChange(
+          themeState: AppTheme.lightMint,
+          themeMode: ThemeMode.light,
+          expectedThemeState: AppTheme.lightMint);
+    });
+
+    test('update to darkGold theme correctly', () async {
+      verifyThemeChange(
+          themeState: AppTheme.darkGold,
+          themeMode: ThemeMode.dark,
+          expectedThemeState: AppTheme.darkGold);
+    });
+
+    test('update to darkMint theme correctly', () async {
+      verifyThemeChange(
+          themeState: AppTheme.darkMint,
+          themeMode: ThemeMode.dark,
+          expectedThemeState: AppTheme.darkMint);
     });
   });
 }

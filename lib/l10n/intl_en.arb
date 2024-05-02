@@ -27,8 +27,19 @@
   "@lightThemeTitle": {},
   "darkThemeTitle": "Dark Theme",
   "@darkThemeTitle": {},
-  "yellowThemeTitle": "Yellow Theme",
-  "@yellowThemeTitle": {},
+
+  "lightGoldThemeTitle": "Light Gold",
+  "@lightGoldThemeTitle": {},
+
+  "darkGoldThemeTitle": "Dark Gold",
+  "@darkGoldThemeTitle": {},
+
+  "lightMintThemeTitle": "Light Mint",
+  "@lightMintThemeTitle": {},
+
+  "darkMintThemeTitle": "Dark Mint",
+  "@darkMintThemeTitle": {},
+
   "experimentalThemeTitle": "Experimental Theme",
   "@experimentalThemeTitle": {},
   "itemDetailsTitle": "Item Details",

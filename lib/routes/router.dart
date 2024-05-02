@@ -9,13 +9,13 @@ final List<NavDestination> destinations = [
     label: 'Contacts',
     icon: Assets.icons.navigation.iconContactsOutline.svg(),
     selectedIcon: Assets.icons.navigation.iconContacts.svg(),
-    screen: const EmailListScreen(),
+    screen: const ContactsScreen(),
   ),
   const NavDestination(
-    label: 'News',
+    label: 'Emails',
     icon: Icon(Icons.library_books_outlined),
     selectedIcon: Icon(Icons.library_books),
-    screen: NewsScreen(),
+    screen: EmailListScreen(),
   ),
   const NavDestination(
     label: 'Settings',

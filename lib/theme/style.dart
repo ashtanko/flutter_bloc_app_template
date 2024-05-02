@@ -103,60 +103,197 @@ class Style {
 
   /// Yellow style
   static ThemeData get experimental {
-    final base = ThemeData.light();
-
-    final textTheme = _buildTextTheme(base);
-
-    return base.copyWith(
-      brightness: Brightness.light,
-      appBarTheme: AppBarTheme(
-        systemOverlayStyle:
-            const SystemUiOverlayStyle(statusBarBrightness: Brightness.light),
-        titleTextStyle: textTheme.titleSmall,
-        actionsIconTheme: const IconThemeData(size: 56.0, color: Colors.red),
-      ),
-      colorScheme: const ColorScheme.light().copyWith(
-        primary: ColorName.accentExperimental,
-        secondary: ColorName.accentExperimental,
-        onSecondary: Colors.white,
-      ),
-      primaryColor: ColorName.primaryExperimental,
-      scaffoldBackgroundColor: ColorName.backgroundExperimental,
-      dividerColor: ColorName.dividerLight,
-      pageTransitionsTheme: _pageTransitionsTheme,
-      textTheme: GoogleFonts.robotoTextTheme(textTheme),
-      popupMenuTheme: _buildPopupMenuThemeData(),
-      elevatedButtonTheme: _customElevatedButtonTheme,
-      outlinedButtonTheme: _customOutlinedButtonTheme,
-      textButtonTheme: _customTextButtonTheme,
-      inputDecorationTheme: _inputDecorationTheme,
+    const darkColorScheme = ColorScheme(
+      brightness: Brightness.dark,
+      primary: Color(0xFF66DBB2),
+      onPrimary: Color(0xFF003829),
+      primaryContainer: Color(0xFF00513C),
+      onPrimaryContainer: Color(0xFF83F8CD),
+      secondary: Color(0xFF51DBCD),
+      onSecondary: Color(0xFF003733),
+      secondaryContainer: Color(0xFF00504A),
+      onSecondaryContainer: Color(0xFF72F7E9),
+      tertiary: Color(0xFFA7CCE0),
+      onTertiary: Color(0xFF0A3445),
+      tertiaryContainer: Color(0xFF264B5C),
+      onTertiaryContainer: Color(0xFFC2E8FD),
+      error: Color(0xFFFFB4AB),
+      errorContainer: Color(0xFF93000A),
+      onError: Color(0xFF690005),
+      onErrorContainer: Color(0xFFFFDAD6),
+      background: Color(0xFF191C1A),
+      onBackground: Color(0xFFE1E3E0),
+      surface: Color(0xFF191C1A),
+      onSurface: Color(0xFFE1E3E0),
+      surfaceVariant: Color(0xFF404944),
+      onSurfaceVariant: Color(0xFFBFC9C2),
+      outline: Color(0xFF89938D),
+      onInverseSurface: Color(0xFF191C1A),
+      inverseSurface: Color(0xFFE1E3E0),
+      inversePrimary: Color(0xFF006C51),
+      shadow: Color(0xFF000000),
+      surfaceTint: Color(0xFF66DBB2),
+      outlineVariant: Color(0xFF404944),
+      scrim: Color(0xFF000000),
     );
+
+    return ThemeData(useMaterial3: true, colorScheme: darkColorScheme);
   }
 
-  /// Yellow style
-  static ThemeData get yellow {
-    final base = ThemeData.light();
-
-    final textTheme = _buildTextTheme(base);
-
-    return base.copyWith(
+  static ThemeData get lightGoldTheme {
+    const lightColorScheme = ColorScheme(
       brightness: Brightness.light,
-      appBarTheme: const AppBarTheme(
-        systemOverlayStyle:
-            SystemUiOverlayStyle(statusBarBrightness: Brightness.light),
-      ),
-      colorScheme: const ColorScheme.light().copyWith(
-        primary: ColorName.accentYellow,
-        secondary: ColorName.accentYellow,
-        onSecondary: Colors.white,
-      ),
-      primaryColor: ColorName.primaryYellow,
-      scaffoldBackgroundColor: ColorName.backgroundYellow,
-      dividerColor: ColorName.dividerLight,
-      pageTransitionsTheme: _pageTransitionsTheme,
-      textTheme: GoogleFonts.robotoTextTheme(textTheme),
-      popupMenuTheme: _buildPopupMenuThemeData(),
+      primary: Color(0xFF8F4E00),
+      onPrimary: Color(0xFFFFFFFF),
+      primaryContainer: Color(0xFFFFDCC1),
+      onPrimaryContainer: Color(0xFF2E1500),
+      secondary: Color(0xFF745943),
+      onSecondary: Color(0xFFFFFFFF),
+      secondaryContainer: Color(0xFFFFDCC1),
+      onSecondaryContainer: Color(0xFF2A1707),
+      tertiary: Color(0xFF5B6237),
+      onTertiary: Color(0xFFFFFFFF),
+      tertiaryContainer: Color(0xFFDFE7B1),
+      onTertiaryContainer: Color(0xFF181E00),
+      error: Color(0xFFBA1A1A),
+      errorContainer: Color(0xFFFFDAD6),
+      onError: Color(0xFFFFFFFF),
+      onErrorContainer: Color(0xFF410002),
+      background: Color(0xFFFFFBFF),
+      onBackground: Color(0xFF201B17),
+      surface: Color(0xFFFFFBFF),
+      onSurface: Color(0xFF201B17),
+      surfaceVariant: Color(0xFFF3DFD1),
+      onSurfaceVariant: Color(0xFF51443B),
+      outline: Color(0xFF837469),
+      onInverseSurface: Color(0xFFFAEFE8),
+      inverseSurface: Color(0xFF352F2B),
+      inversePrimary: Color(0xFFFFB779),
+      shadow: Color(0xFF000000),
+      surfaceTint: Color(0xFF8F4E00),
+      outlineVariant: Color(0xFFD6C3B6),
+      scrim: Color(0xFF000000),
     );
+
+    return ThemeData(useMaterial3: true, colorScheme: lightColorScheme);
+  }
+
+  static ThemeData get darkGoldTheme {
+    const lightColorScheme = ColorScheme(
+      brightness: Brightness.light,
+      primary: Color(0xFF8F4E00),
+      onPrimary: Color(0xFFFFFFFF),
+      primaryContainer: Color(0xFFFFDCC1),
+      onPrimaryContainer: Color(0xFF2E1500),
+      secondary: Color(0xFF745943),
+      onSecondary: Color(0xFFFFFFFF),
+      secondaryContainer: Color(0xFFFFDCC1),
+      onSecondaryContainer: Color(0xFF2A1707),
+      tertiary: Color(0xFF5B6237),
+      onTertiary: Color(0xFFFFFFFF),
+      tertiaryContainer: Color(0xFFDFE7B1),
+      onTertiaryContainer: Color(0xFF181E00),
+      error: Color(0xFFBA1A1A),
+      errorContainer: Color(0xFFFFDAD6),
+      onError: Color(0xFFFFFFFF),
+      onErrorContainer: Color(0xFF410002),
+      background: Color(0xFFFFFBFF),
+      onBackground: Color(0xFF201B17),
+      surface: Color(0xFFFFFBFF),
+      onSurface: Color(0xFF201B17),
+      surfaceVariant: Color(0xFFF3DFD1),
+      onSurfaceVariant: Color(0xFF51443B),
+      outline: Color(0xFF837469),
+      onInverseSurface: Color(0xFFFAEFE8),
+      inverseSurface: Color(0xFF352F2B),
+      inversePrimary: Color(0xFFFFB779),
+      shadow: Color(0xFF000000),
+      surfaceTint: Color(0xFF8F4E00),
+      outlineVariant: Color(0xFFD6C3B6),
+      scrim: Color(0xFF000000),
+    );
+
+    return ThemeData(useMaterial3: true, colorScheme: lightColorScheme);
+  }
+
+  static ThemeData get lightMintTheme {
+    const lightColorScheme = ColorScheme(
+      brightness: Brightness.light,
+      primary: Color(0xFF006B55),
+      onPrimary: Color(0xFFFFFFFF),
+      primaryContainer: Color(0xFF7FF8D3),
+      onPrimaryContainer: Color(0xFF002018),
+      secondary: Color(0xFF4B635A),
+      onSecondary: Color(0xFFFFFFFF),
+      secondaryContainer: Color(0xFFCEE9DD),
+      onSecondaryContainer: Color(0xFF072019),
+      tertiary: Color(0xFF406376),
+      onTertiary: Color(0xFFFFFFFF),
+      tertiaryContainer: Color(0xFFC4E7FF),
+      onTertiaryContainer: Color(0xFF001E2C),
+      error: Color(0xFFBA1A1A),
+      errorContainer: Color(0xFFFFDAD6),
+      onError: Color(0xFFFFFFFF),
+      onErrorContainer: Color(0xFF410002),
+      background: Color(0xFFFBFDFA),
+      onBackground: Color(0xFF191C1B),
+      surface: Color(0xFFFBFDFA),
+      onSurface: Color(0xFF191C1B),
+      surfaceVariant: Color(0xFFDBE5DF),
+      onSurfaceVariant: Color(0xFF3F4945),
+      outline: Color(0xFF6F7975),
+      onInverseSurface: Color(0xFFEFF1EE),
+      inverseSurface: Color(0xFF2E312F),
+      inversePrimary: Color(0xFF60DBB8),
+      shadow: Color(0xFF000000),
+      surfaceTint: Color(0xFF006B55),
+      outlineVariant: Color(0xFFBFC9C3),
+      scrim: Color(0xFF000000),
+    );
+
+    return ThemeData(useMaterial3: true, colorScheme: lightColorScheme);
+  }
+
+  static ThemeData get darkMintTheme {
+    const darkColorScheme = ColorScheme(
+      brightness: Brightness.dark,
+      primary: Color(0xFF60DBB8),
+      onPrimary: Color(0xFF00382B),
+      primaryContainer: Color(0xFF005140),
+      onPrimaryContainer: Color(0xFF7FF8D3),
+      secondary: Color(0xFFB2CCC1),
+      onSecondary: Color(0xFF1E352D),
+      secondaryContainer: Color(0xFF344C43),
+      onSecondaryContainer: Color(0xFFCEE9DD),
+      tertiary: Color(0xFFA8CBE2),
+      onTertiary: Color(0xFF0D3446),
+      tertiaryContainer: Color(0xFF284B5D),
+      onTertiaryContainer: Color(0xFFC4E7FF),
+      error: Color(0xFFFFB4AB),
+      errorContainer: Color(0xFF93000A),
+      onError: Color(0xFF690005),
+      onErrorContainer: Color(0xFFFFDAD6),
+      background: Color(0xFF191C1B),
+      onBackground: Color(0xFFE1E3E0),
+      surface: Color(0xFF191C1B),
+      onSurface: Color(0xFFE1E3E0),
+      surfaceVariant: Color(0xFF3F4945),
+      onSurfaceVariant: Color(0xFFBFC9C3),
+      outline: Color(0xFF89938E),
+      onInverseSurface: Color(0xFF191C1B),
+      inverseSurface: Color(0xFFE1E3E0),
+      inversePrimary: Color(0xFF006B55),
+      shadow: Color(0xFF000000),
+      surfaceTint: Color(0xFF60DBB8),
+      outlineVariant: Color(0xFF3F4945),
+      scrim: Color(0xFF000000),
+    );
+
+    darkColorScheme.copyWith(
+      
+    );
+
+    return ThemeData(useMaterial3: true, colorScheme: darkColorScheme);
   }
 
   /// Light style
