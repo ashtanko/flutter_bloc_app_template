@@ -13,73 +13,70 @@ class MyApp extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
-    return MultiRepositoryProvider(
-      providers: [
-        RepositoryProvider<EmailListRepository>(
-          create: (context) => EmailListRepository(),
-        ),
-        RepositoryProvider<NavigationService>(
-          create: (context) => NavigationService(),
-        ),
-      ],
-      child: MultiBlocProvider(
+  Widget build(BuildContext context) => MultiRepositoryProvider(
         providers: [
-          BlocProvider(
-            create: (context) => ThemeCubit(diContainer.get())..loadTheme(),
+          RepositoryProvider<EmailListRepository>(
+            create: (context) => EmailListRepository(),
           ),
-          BlocProvider(
-            create: (context) => EmailListBloc(
-              messagesRepository:
-                  RepositoryProvider.of<EmailListRepository>(context),
-            )..add(
-                EmailListFetched(),
-              ),
-          ),
-          BlocProvider<InitBloc>(
-            create: (_) => InitBloc()
-              ..add(
-                StartAppEvent(),
-              ),
+          RepositoryProvider<NavigationService>(
+            create: (context) => NavigationService(),
           ),
         ],
-        child: Builder(
-          builder: (context) {
-            final navigator = NavigationService.of(context);
+        child: MultiBlocProvider(
+          providers: [
+            BlocProvider(
+              create: (context) => ThemeCubit(diContainer.get())..loadTheme(),
+            ),
+            BlocProvider(
+              create: (context) => EmailListBloc(
+                messagesRepository:
+                    RepositoryProvider.of<EmailListRepository>(context),
+              )..add(
+                  EmailListFetched(),
+                ),
+            ),
+            BlocProvider<InitBloc>(
+              create: (_) => InitBloc()
+                ..add(
+                  StartAppEvent(),
+                ),
+            ),
+          ],
+          child: Builder(
+            builder: (context) {
+              final navigator = NavigationService.of(context);
 
-            return MaterialApp(
-              debugShowCheckedModeBanner: kDebugMode,
-              restorationScopeId: 'app',
-              localizationsDelegates: const [
-                S.delegate,
-                GlobalMaterialLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate,
-                GlobalCupertinoLocalizations.delegate,
-              ],
-              supportedLocales: const [
-                Locale('en', ''), // English, no country code
-                Locale('de', ''), // Ukraine, no country code
-              ],
-              onGenerateTitle: (BuildContext context) => S.of(context).appTitle,
-              theme: context.watch<ThemeCubit>().getDefaultTheme(),
-              darkTheme: context.watch<ThemeCubit>().darkTheme,
-              themeMode: context.watch<ThemeCubit>().themeMode,
-              navigatorKey: appNavigatorKey,
-              onGenerateRoute: navigator.onGenerateRoute,
-              builder: (_, child) {
-                return BlocListener<InitBloc, InitState>(
+              return MaterialApp(
+                debugShowCheckedModeBanner: kDebugMode,
+                restorationScopeId: 'app',
+                localizationsDelegates: const [
+                  S.delegate,
+                  GlobalMaterialLocalizations.delegate,
+                  GlobalWidgetsLocalizations.delegate,
+                  GlobalCupertinoLocalizations.delegate,
+                ],
+                supportedLocales: const [
+                  Locale('en', ''), // English, no country code
+                  Locale('de', ''), // Ukraine, no country code
+                ],
+                onGenerateTitle: (BuildContext context) =>
+                    S.of(context).appTitle,
+                theme: context.watch<ThemeCubit>().getDefaultTheme(),
+                darkTheme: context.watch<ThemeCubit>().darkTheme,
+                themeMode: context.watch<ThemeCubit>().themeMode,
+                navigatorKey: appNavigatorKey,
+                onGenerateRoute: navigator.onGenerateRoute,
+                builder: (_, child) => BlocListener<InitBloc, InitState>(
                   listener: (_, state) {
                     if (state is OpenApp) {
                       navigator.pushAndRemoveAll(Routes.app);
                     }
                   },
                   child: child,
-                );
-              },
-            );
-          },
+                ),
+              );
+            },
+          ),
         ),
-      ),
-    );
-  }
+      );
 }

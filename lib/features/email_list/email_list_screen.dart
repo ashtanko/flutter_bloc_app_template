@@ -10,20 +10,18 @@ class EmailListScreen extends StatelessWidget {
   static const routeName = '/';
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(S.of(context).messagesTitle),
-      ),
-      body: RefreshIndicator(
-        onRefresh: () async {
-          await Future<void>.delayed(const Duration(seconds: 1));
-        },
-        child: SizedBox(
-          height: MediaQuery.of(context).size.height,
-          child: EmailListView(),
+  Widget build(BuildContext context) => Scaffold(
+        appBar: AppBar(
+          title: Text(S.of(context).messagesTitle),
         ),
-      ),
-    );
-  }
+        body: RefreshIndicator(
+          onRefresh: () async {
+            await Future<void>.delayed(const Duration(seconds: 1));
+          },
+          child: SizedBox(
+            height: MediaQuery.of(context).size.height,
+            child: EmailListView(),
+          ),
+        ),
+      );
 }

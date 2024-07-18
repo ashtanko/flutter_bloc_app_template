@@ -17,26 +17,24 @@ class ThemeDialogCell<T> extends StatelessWidget {
   bool get _isChecked => groupValue == value;
 
   @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () => onChanged(value),
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-        child: Row(
-          children: [
-            Icon(
-              _isChecked ? AppIcons.iconCheck : null,
-              size: IconSizes.themeDialogIconSize,
-              color: _isChecked ? Colors.green : null,
-            ),
-            Separator.spacer(Space.large),
-            Text(
-              title,
-              style: Theme.of(context).textTheme.titleMedium,
-            ),
-          ],
+  Widget build(BuildContext context) => InkWell(
+        onTap: () => onChanged(value),
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+          child: Row(
+            children: [
+              Icon(
+                _isChecked ? AppIcons.iconCheck : null,
+                size: IconSizes.themeDialogIconSize,
+                color: _isChecked ? Colors.green : null,
+              ),
+              Separator.spacer(Space.large),
+              Text(
+                title,
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+            ],
+          ),
         ),
-      ),
-    );
-  }
+      );
 }

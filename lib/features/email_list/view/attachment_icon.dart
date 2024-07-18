@@ -8,9 +8,7 @@ class AttachmentIcon extends StatelessWidget {
   final VoidCallback? onTap;
 
   @override
-  Widget build(BuildContext context) {
-    return attachment.type == AttachmentType.doc
-        ? AppIcons.attachmentDoc
-        : AppIcons.attachmentPdf;
-  }
+  Widget build(BuildContext context) => attachment.type == AttachmentType.doc
+      ? AppIcons.attachmentDoc
+      : AppIcons.attachmentPdf;
 }

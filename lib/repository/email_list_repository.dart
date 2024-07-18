@@ -5,9 +5,7 @@ const _delay = Duration(milliseconds: 3000);
 
 class EmailListRepository {
   Future<List<Email>> loadData() {
-    emailList.sort((a, b) {
-      return b.date.compareTo(a.date);
-    });
+    emailList.sort((a, b) => b.date.compareTo(a.date));
 
     return Future.delayed(_delay, () => emailList);
   }

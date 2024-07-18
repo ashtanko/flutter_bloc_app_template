@@ -12,13 +12,11 @@ class RoundedNetworkImage extends StatelessWidget {
   final BoxFit fit;
 
   @override
-  Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(borderRadius),
-      child: Image.network(
-        imageUrl,
-        fit: BoxFit.cover,
-      ),
-    );
-  }
+  Widget build(BuildContext context) => ClipRRect(
+        borderRadius: BorderRadius.circular(borderRadius),
+        child: Image.network(
+          imageUrl,
+          fit: BoxFit.cover,
+        ),
+      );
 }

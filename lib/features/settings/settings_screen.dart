@@ -12,78 +12,76 @@ class SettingsScreen extends StatelessWidget {
   static const routeName = '/settings';
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(S.of(context).settingsTitle),
-      ),
-      body: ListView(
-        children: <Widget>[
-          BlocConsumer<ThemeCubit, AppTheme>(
-            builder: (context, state) => SettingCell.icon(
-              icon: AppIcons.settingsTheme,
-              title: S.of(context).themeTitle,
-              onTap: () async => showBottomSheetDialog(
-                context: context,
-                padding: EdgeInsets.zero,
-                children: [
-                  ThemeDialogCell<AppTheme>(
-                    title: S.of(context).darkThemeTitle,
-                    groupValue: state,
-                    value: AppTheme.dark,
-                    onChanged: (value) => updateTheme(context, value),
-                  ),
-                  ThemeDialogCell<AppTheme>(
-                    title: S.of(context).lightThemeTitle,
-                    groupValue: state,
-                    value: AppTheme.light,
-                    onChanged: (value) => updateTheme(context, value),
-                  ),
-                  ThemeDialogCell<AppTheme>(
-                    title: S.of(context).lightGoldThemeTitle,
-                    groupValue: state,
-                    value: AppTheme.lightGold,
-                    onChanged: (value) => updateTheme(context, value),
-                  ),
-                  ThemeDialogCell<AppTheme>(
-                    title: S.of(context).lightMintThemeTitle,
-                    groupValue: state,
-                    value: AppTheme.lightMint,
-                    onChanged: (value) => updateTheme(context, value),
-                  ),
-                  ThemeDialogCell<AppTheme>(
-                    title: S.of(context).darkGoldThemeTitle,
-                    groupValue: state,
-                    value: AppTheme.darkGold,
-                    onChanged: (value) => updateTheme(context, value),
-                  ),
-                  ThemeDialogCell<AppTheme>(
-                    title: S.of(context).darkMintThemeTitle,
-                    groupValue: state,
-                    value: AppTheme.darkMint,
-                    onChanged: (value) => updateTheme(context, value),
-                  ),
-                  ThemeDialogCell<AppTheme>(
-                    title: S.of(context).systemThemeTitle,
-                    groupValue: state,
-                    value: AppTheme.system,
-                    onChanged: (value) => updateTheme(context, value),
-                  ),
-                  ThemeDialogCell<AppTheme>(
-                    title: S.of(context).experimentalThemeTitle,
-                    groupValue: state,
-                    value: AppTheme.experimental,
-                    onChanged: (value) => updateTheme(context, value),
-                  ),
-                ],
+  Widget build(BuildContext context) => Scaffold(
+        appBar: AppBar(
+          title: Text(S.of(context).settingsTitle),
+        ),
+        body: ListView(
+          children: <Widget>[
+            BlocConsumer<ThemeCubit, AppTheme>(
+              builder: (context, state) => SettingCell.icon(
+                icon: AppIcons.settingsTheme,
+                title: S.of(context).themeTitle,
+                onTap: () async => showBottomSheetDialog(
+                  context: context,
+                  padding: EdgeInsets.zero,
+                  children: [
+                    ThemeDialogCell<AppTheme>(
+                      title: S.of(context).darkThemeTitle,
+                      groupValue: state,
+                      value: AppTheme.dark,
+                      onChanged: (value) => updateTheme(context, value),
+                    ),
+                    ThemeDialogCell<AppTheme>(
+                      title: S.of(context).lightThemeTitle,
+                      groupValue: state,
+                      value: AppTheme.light,
+                      onChanged: (value) => updateTheme(context, value),
+                    ),
+                    ThemeDialogCell<AppTheme>(
+                      title: S.of(context).lightGoldThemeTitle,
+                      groupValue: state,
+                      value: AppTheme.lightGold,
+                      onChanged: (value) => updateTheme(context, value),
+                    ),
+                    ThemeDialogCell<AppTheme>(
+                      title: S.of(context).lightMintThemeTitle,
+                      groupValue: state,
+                      value: AppTheme.lightMint,
+                      onChanged: (value) => updateTheme(context, value),
+                    ),
+                    ThemeDialogCell<AppTheme>(
+                      title: S.of(context).darkGoldThemeTitle,
+                      groupValue: state,
+                      value: AppTheme.darkGold,
+                      onChanged: (value) => updateTheme(context, value),
+                    ),
+                    ThemeDialogCell<AppTheme>(
+                      title: S.of(context).darkMintThemeTitle,
+                      groupValue: state,
+                      value: AppTheme.darkMint,
+                      onChanged: (value) => updateTheme(context, value),
+                    ),
+                    ThemeDialogCell<AppTheme>(
+                      title: S.of(context).systemThemeTitle,
+                      groupValue: state,
+                      value: AppTheme.system,
+                      onChanged: (value) => updateTheme(context, value),
+                    ),
+                    ThemeDialogCell<AppTheme>(
+                      title: S.of(context).experimentalThemeTitle,
+                      groupValue: state,
+                      value: AppTheme.experimental,
+                      onChanged: (value) => updateTheme(context, value),
+                    ),
+                  ],
+                ),
               ),
+              listener: (context, state) => Navigator.of(context).pop(),
             ),
-            listener: (context, state) => Navigator.of(context).pop(),
-          ),
-        ],
-      ),
-    );
-  }
+          ],
+        ),
+      );
 
   void updateTheme(BuildContext context, AppTheme value) =>
       context.read<ThemeCubit>().updateTheme(value);

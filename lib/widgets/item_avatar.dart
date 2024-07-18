@@ -12,9 +12,7 @@ class ItemAvatar extends StatelessWidget {
   final String shortenUserName;
 
   @override
-  Widget build(BuildContext context) {
-    return imageUrl.isNotEmpty
-        ? CircleAvatar(backgroundImage: NetworkImage(imageUrl))
-        : NameAvatar(name: shortenUserName);
-  }
+  Widget build(BuildContext context) => imageUrl.isNotEmpty
+      ? CircleAvatar(backgroundImage: NetworkImage(imageUrl))
+      : NameAvatar(name: shortenUserName);
 }

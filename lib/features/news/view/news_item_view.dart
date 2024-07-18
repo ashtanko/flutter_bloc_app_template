@@ -21,8 +21,6 @@ class NewsItemView extends StatelessWidget {
   final GestureTapCallback? onMenuTap;
 
   @override
-  Widget build(BuildContext context) {
-
-    return InkWell(onTap: () {}, child: const Placeholder());
-  }
+  Widget build(BuildContext context) =>
+      InkWell(onTap: () {}, child: const Placeholder());
 }
