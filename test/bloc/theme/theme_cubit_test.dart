@@ -106,7 +106,7 @@ void main() {
     );
 
     test('has default light theme', () async {
-      expect(cubit.getDefaultTheme(theme), theme.light());
+      expect(cubit.getDefaultTheme(theme), theme.yellowLight());
     });
 
     void verifyThemeChange(

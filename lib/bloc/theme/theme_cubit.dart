@@ -6,14 +6,14 @@ import 'package:flutter_bloc_app_template/repository/theme_repository.dart';
 
 Map<AppTheme, ThemeData> getThemeData(MaterialTheme theme) {
   final themeData = <AppTheme, ThemeData>{
-    AppTheme.system: theme.light(),
-    AppTheme.light: theme.light(),
-    AppTheme.lightGold: theme.lightHighContrast(),
-    AppTheme.lightMint: theme.lightMediumContrast(),
-    AppTheme.dark: theme.dark(),
-    AppTheme.darkGold: theme.darkHighContrast(),
-    AppTheme.darkMint: theme.darkMediumContrast(),
-    AppTheme.experimental: theme.darkMediumContrast(),
+    AppTheme.system: theme.yellowLight(),
+    AppTheme.light: theme.yellowLight(),
+    AppTheme.lightGold: theme.yellowLightHighContrast(),
+    AppTheme.lightMint: theme.yellowLightMediumContrast(),
+    AppTheme.dark: theme.yellowDark(),
+    AppTheme.darkGold: theme.yellowDarkHighContrast(),
+    AppTheme.darkMint: theme.yellowDarkMediumContrast(),
+    AppTheme.experimental: theme.yellowDarkMediumContrast(),
   };
 
   return themeData;
@@ -63,21 +63,21 @@ class ThemeCubit extends Cubit<AppTheme> {
     final themeData = getThemeData(theme);
     switch (state) {
       case AppTheme.light:
-        return themeData[AppTheme.light] ?? theme.light();
+        return themeData[AppTheme.light] ?? theme.yellowLight();
       case AppTheme.lightGold:
-        return themeData[AppTheme.lightGold] ?? theme.light();
+        return themeData[AppTheme.lightGold] ?? theme.yellowLight();
       case AppTheme.lightMint:
-        return themeData[AppTheme.lightMint] ?? theme.light();
+        return themeData[AppTheme.lightMint] ?? theme.yellowLight();
       case AppTheme.dark:
-        return themeData[AppTheme.dark] ?? theme.dark();
+        return themeData[AppTheme.dark] ?? theme.yellowDark();
       case AppTheme.darkGold:
-        return themeData[AppTheme.darkGold] ?? theme.dark();
+        return themeData[AppTheme.darkGold] ?? theme.yellowDark();
       case AppTheme.darkMint:
-        return themeData[AppTheme.darkMint] ?? theme.dark();
+        return themeData[AppTheme.darkMint] ?? theme.yellowDark();
       case AppTheme.system:
-        return themeData[AppTheme.system] ?? theme.light();
+        return themeData[AppTheme.system] ?? theme.yellowLight();
       case AppTheme.experimental:
-        return themeData[AppTheme.experimental] ?? theme.light();
+        return themeData[AppTheme.experimental] ?? theme.yellowLight();
     }
   }
 
