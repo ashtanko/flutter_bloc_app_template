@@ -1,16 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_bloc_app_template/generated/assets.gen.dart';
 import 'package:flutter_bloc_app_template/index.dart';
 
 final List<NavDestination> destinations = [
-  NavDestination(
-    label: 'Contacts',
-    icon: Assets.icons.navigation.iconContactsOutline.svg(),
-    selectedIcon: Assets.icons.navigation.iconContacts.svg(),
-    screen: const ContactsScreen(),
-  ),
   const NavDestination(
     label: 'Emails',
     icon: Icon(Icons.library_books_outlined),
@@ -19,12 +12,6 @@ final List<NavDestination> destinations = [
   ),
   const NavDestination(
     label: 'Settings',
-    icon: Icon(Icons.settings),
-    selectedIcon: Icon(Icons.settings_applications),
-    screen: SettingsScreen(),
-  ),
-  const NavDestination(
-    label: 'Profile',
     icon: Icon(Icons.settings),
     selectedIcon: Icon(Icons.settings_applications),
     screen: SettingsScreen(),
