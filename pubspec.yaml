@@ -34,6 +34,9 @@ dependencies:
   get_it: ^8.0.3
   injectable: ^2.5.0
   nullx: ^0.1.17
+  retrofit: ^4.4.2
+  retrofit_generator: ^9.1.9
+  dartz: ^0.10.1
 
   flutter_localizations:
     sdk: flutter
@@ -82,7 +85,6 @@ flutter_gen:
   # Optional
   integrations:
     flutter_svg: true
-    flare_flutter: true
 
   colors:
     inputs:
