@@ -14,7 +14,6 @@ class NameAvatar extends StatelessWidget {
         height: IconSizes.avatar,
         width: IconSizes.avatar,
         decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.secondary.withOpacity(0.65),
           shape: BoxShape.circle,
           border: Border.all(
             color: Theme.of(context).colorScheme.secondary,

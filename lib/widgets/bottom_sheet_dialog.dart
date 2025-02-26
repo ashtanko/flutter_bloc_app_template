@@ -11,7 +11,6 @@ Future<T?> showBottomSheetDialog<T>({
 }) {
   return showModalBottomSheet(
     context: context,
-    backgroundColor: Theme.of(context).dialogBackgroundColor,
     isDismissible: true,
     barrierColor: Colors.black54,
     enableDrag: true,

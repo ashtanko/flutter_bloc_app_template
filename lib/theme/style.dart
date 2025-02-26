@@ -21,6 +21,7 @@ class Style {
     );
   }
 
+  // ignore: unused_element
   static ElevatedButtonThemeData get _customElevatedButtonTheme {
     return ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
@@ -36,6 +37,7 @@ class Style {
     );
   }
 
+  // ignore: unused_element
   static OutlinedButtonThemeData get _customOutlinedButtonTheme {
     return OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
@@ -51,6 +53,7 @@ class Style {
     );
   }
 
+  // ignore: unused_element
   static TextButtonThemeData get _customTextButtonTheme {
     return TextButtonThemeData(
       style: TextButton.styleFrom(
@@ -63,6 +66,7 @@ class Style {
     );
   }
 
+  // ignore: unused_element
   static InputDecorationTheme get _inputDecorationTheme {
     return InputDecorationTheme(
       prefixIconColor: const Color(0xff999999),
@@ -121,11 +125,9 @@ class Style {
       errorContainer: Color(0xFF93000A),
       onError: Color(0xFF690005),
       onErrorContainer: Color(0xFFFFDAD6),
-      background: Color(0xFF191C1A),
-      onBackground: Color(0xFFE1E3E0),
       surface: Color(0xFF191C1A),
       onSurface: Color(0xFFE1E3E0),
-      surfaceVariant: Color(0xFF404944),
+      surfaceContainerHighest: Color(0xFF404944),
       onSurfaceVariant: Color(0xFFBFC9C2),
       outline: Color(0xFF89938D),
       onInverseSurface: Color(0xFF191C1A),
@@ -159,11 +161,9 @@ class Style {
       errorContainer: Color(0xFFFFDAD6),
       onError: Color(0xFFFFFFFF),
       onErrorContainer: Color(0xFF410002),
-      background: Color(0xFFFFFBFF),
-      onBackground: Color(0xFF201B17),
       surface: Color(0xFFFFFBFF),
       onSurface: Color(0xFF201B17),
-      surfaceVariant: Color(0xFFF3DFD1),
+      surfaceContainerHighest: Color(0xFFF3DFD1),
       onSurfaceVariant: Color(0xFF51443B),
       outline: Color(0xFF837469),
       onInverseSurface: Color(0xFFFAEFE8),
@@ -197,11 +197,9 @@ class Style {
       errorContainer: Color(0xFFFFDAD6),
       onError: Color(0xFFFFFFFF),
       onErrorContainer: Color(0xFF410002),
-      background: Color(0xFFFFFBFF),
-      onBackground: Color(0xFF201B17),
       surface: Color(0xFFFFFBFF),
       onSurface: Color(0xFF201B17),
-      surfaceVariant: Color(0xFFF3DFD1),
+      surfaceContainerHighest: Color(0xFFF3DFD1),
       onSurfaceVariant: Color(0xFF51443B),
       outline: Color(0xFF837469),
       onInverseSurface: Color(0xFFFAEFE8),
@@ -235,11 +233,9 @@ class Style {
       errorContainer: Color(0xFFFFDAD6),
       onError: Color(0xFFFFFFFF),
       onErrorContainer: Color(0xFF410002),
-      background: Color(0xFFFBFDFA),
-      onBackground: Color(0xFF191C1B),
       surface: Color(0xFFFBFDFA),
       onSurface: Color(0xFF191C1B),
-      surfaceVariant: Color(0xFFDBE5DF),
+      surfaceContainerHighest: Color(0xFFDBE5DF),
       onSurfaceVariant: Color(0xFF3F4945),
       outline: Color(0xFF6F7975),
       onInverseSurface: Color(0xFFEFF1EE),
@@ -273,11 +269,9 @@ class Style {
       errorContainer: Color(0xFF93000A),
       onError: Color(0xFF690005),
       onErrorContainer: Color(0xFFFFDAD6),
-      background: Color(0xFF191C1B),
-      onBackground: Color(0xFFE1E3E0),
       surface: Color(0xFF191C1B),
       onSurface: Color(0xFFE1E3E0),
-      surfaceVariant: Color(0xFF3F4945),
+      surfaceContainerHighest: Color(0xFF3F4945),
       onSurfaceVariant: Color(0xFFBFC9C3),
       outline: Color(0xFF89938E),
       onInverseSurface: Color(0xFF191C1B),
@@ -288,11 +282,6 @@ class Style {
       outlineVariant: Color(0xFF3F4945),
       scrim: Color(0xFF000000),
     );
-
-    darkColorScheme.copyWith(
-      
-    );
-
     return ThemeData(useMaterial3: true, colorScheme: darkColorScheme);
   }
 
@@ -305,8 +294,9 @@ class Style {
     return base.copyWith(
       brightness: Brightness.light,
       appBarTheme: const AppBarTheme(
-        systemOverlayStyle:
-            SystemUiOverlayStyle(statusBarBrightness: Brightness.dark),
+        systemOverlayStyle: SystemUiOverlayStyle(
+          statusBarBrightness: Brightness.dark,
+        ),
       ),
       colorScheme: const ColorScheme.light().copyWith(
         primary: ColorName.accentLight,
@@ -338,7 +328,9 @@ class Style {
       scaffoldBackgroundColor: ColorName.backgroundDark,
       cardColor: ColorName.cardDark,
       dividerColor: ColorName.dividerDark,
-      dialogBackgroundColor: ColorName.cardDark,
+      dialogTheme: const DialogTheme(
+        backgroundColor: ColorName.cardDark,
+      ),
       pageTransitionsTheme: _pageTransitionsTheme,
       textTheme: GoogleFonts.robotoTextTheme(textTheme),
       popupMenuTheme: _buildPopupMenuThemeData(),
@@ -357,8 +349,9 @@ class Style {
     final textTheme = base.textTheme;
 
     return textTheme.copyWith(
-      displayLarge:
-          textTheme.displayLarge?.copyWith(fontSize: FontSizes.headline1),
+      displayLarge: textTheme.displayLarge?.copyWith(
+        fontSize: FontSizes.headline1,
+      ),
       displaySmall:
           textTheme.displaySmall?.copyWith(fontSize: FontSizes.headline2),
       headlineMedium:
