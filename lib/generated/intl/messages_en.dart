@@ -24,46 +24,48 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "appTitle":
-            MessageLookupByLibrary.simpleMessage("flutter_bloc_app_template"),
-        "borderRadiusButtonTitle":
-            MessageLookupByLibrary.simpleMessage("BorderRadius"),
-        "borderSideButtonTitle":
-            MessageLookupByLibrary.simpleMessage("BorderSide"),
-        "darkGoldThemeTitle": MessageLookupByLibrary.simpleMessage("Dark Gold"),
-        "darkMintThemeTitle": MessageLookupByLibrary.simpleMessage("Dark Mint"),
-        "darkThemeTitle": MessageLookupByLibrary.simpleMessage("Dark Theme"),
-        "disabledButtonTitle": MessageLookupByLibrary.simpleMessage("Disabled"),
-        "disabledRoundedButtonTitle":
-            MessageLookupByLibrary.simpleMessage("Disabled Rounded"),
-        "disabledWithIconButtonTitle":
-            MessageLookupByLibrary.simpleMessage("Disabled With Icon"),
-        "emptyList": MessageLookupByLibrary.simpleMessage("Empty list"),
-        "enabledButtonTitle": MessageLookupByLibrary.simpleMessage("Enabled"),
-        "error": MessageLookupByLibrary.simpleMessage("Error"),
-        "experimentalThemeTitle":
-            MessageLookupByLibrary.simpleMessage("Experimental Theme"),
-        "iconAndPaddingButtonTitle":
-            MessageLookupByLibrary.simpleMessage("With Icon Padding"),
-        "iconButtonTitle": MessageLookupByLibrary.simpleMessage("With Icon"),
-        "itemDetailsTitle":
-            MessageLookupByLibrary.simpleMessage("Item Details"),
-        "itemTitle": m0,
-        "itemsTitle": MessageLookupByLibrary.simpleMessage("Sample Items"),
-        "lightGoldThemeTitle":
-            MessageLookupByLibrary.simpleMessage("Light Gold"),
-        "lightMintThemeTitle":
-            MessageLookupByLibrary.simpleMessage("Light Mint"),
-        "lightThemeTitle": MessageLookupByLibrary.simpleMessage("Light Theme"),
-        "messagesTitle": MessageLookupByLibrary.simpleMessage("Messages"),
-        "newsScreen": MessageLookupByLibrary.simpleMessage("News"),
-        "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
-        "systemThemeTitle":
-            MessageLookupByLibrary.simpleMessage("System Theme"),
-        "tabHome": MessageLookupByLibrary.simpleMessage("Home"),
-        "tabSettings": MessageLookupByLibrary.simpleMessage("Settings"),
-        "themeTitle": MessageLookupByLibrary.simpleMessage("Theme"),
-        "transparentButtonTitle":
-            MessageLookupByLibrary.simpleMessage("Transparent")
-      };
+    "appTitle": MessageLookupByLibrary.simpleMessage(
+      "flutter_bloc_app_template",
+    ),
+    "borderRadiusButtonTitle": MessageLookupByLibrary.simpleMessage(
+      "BorderRadius",
+    ),
+    "borderSideButtonTitle": MessageLookupByLibrary.simpleMessage("BorderSide"),
+    "darkGoldThemeTitle": MessageLookupByLibrary.simpleMessage("Dark Gold"),
+    "darkMintThemeTitle": MessageLookupByLibrary.simpleMessage("Dark Mint"),
+    "darkThemeTitle": MessageLookupByLibrary.simpleMessage("Dark Theme"),
+    "disabledButtonTitle": MessageLookupByLibrary.simpleMessage("Disabled"),
+    "disabledRoundedButtonTitle": MessageLookupByLibrary.simpleMessage(
+      "Disabled Rounded",
+    ),
+    "disabledWithIconButtonTitle": MessageLookupByLibrary.simpleMessage(
+      "Disabled With Icon",
+    ),
+    "emptyList": MessageLookupByLibrary.simpleMessage("Empty list"),
+    "enabledButtonTitle": MessageLookupByLibrary.simpleMessage("Enabled"),
+    "error": MessageLookupByLibrary.simpleMessage("Error"),
+    "experimentalThemeTitle": MessageLookupByLibrary.simpleMessage(
+      "Experimental Theme",
+    ),
+    "iconAndPaddingButtonTitle": MessageLookupByLibrary.simpleMessage(
+      "With Icon Padding",
+    ),
+    "iconButtonTitle": MessageLookupByLibrary.simpleMessage("With Icon"),
+    "itemDetailsTitle": MessageLookupByLibrary.simpleMessage("Item Details"),
+    "itemTitle": m0,
+    "itemsTitle": MessageLookupByLibrary.simpleMessage("Sample Items"),
+    "lightGoldThemeTitle": MessageLookupByLibrary.simpleMessage("Light Gold"),
+    "lightMintThemeTitle": MessageLookupByLibrary.simpleMessage("Light Mint"),
+    "lightThemeTitle": MessageLookupByLibrary.simpleMessage("Light Theme"),
+    "messagesTitle": MessageLookupByLibrary.simpleMessage("Messages"),
+    "newsScreen": MessageLookupByLibrary.simpleMessage("News"),
+    "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
+    "systemThemeTitle": MessageLookupByLibrary.simpleMessage("System Theme"),
+    "tabHome": MessageLookupByLibrary.simpleMessage("Home"),
+    "tabSettings": MessageLookupByLibrary.simpleMessage("Settings"),
+    "themeTitle": MessageLookupByLibrary.simpleMessage("Theme"),
+    "transparentButtonTitle": MessageLookupByLibrary.simpleMessage(
+      "Transparent",
+    ),
+  };
 }
