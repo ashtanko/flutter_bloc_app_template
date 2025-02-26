@@ -5,6 +5,7 @@ import 'package:flutter_bloc_app_template/bloc/init/init_bloc.dart';
 import 'package:flutter_bloc_app_template/di/di_container.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/index.dart';
+import 'package:flutter_bloc_app_template/theme/util.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 class MyApp extends StatelessWidget {
@@ -45,6 +46,12 @@ class MyApp extends StatelessWidget {
           child: Builder(
             builder: (context) {
               final navigator = NavigationService.of(context);
+              // Retrieves the default theme for the platform
+              //TextTheme textTheme = Theme.of(context).textTheme;
+
+              // Use with Google Fonts package to use downloadable fonts
+              var textTheme = createTextTheme(context, 'Rubik', 'Rubik');
+              var theme = MaterialTheme(textTheme);
 
               return MaterialApp(
                 debugShowCheckedModeBanner: kDebugMode,
@@ -61,8 +68,8 @@ class MyApp extends StatelessWidget {
                 ],
                 onGenerateTitle: (BuildContext context) =>
                     S.of(context).appTitle,
-                theme: context.watch<ThemeCubit>().getDefaultTheme(),
-                darkTheme: context.watch<ThemeCubit>().darkTheme,
+                theme: context.watch<ThemeCubit>().getDefaultTheme(theme),
+                darkTheme: theme.dark(),
                 themeMode: context.watch<ThemeCubit>().themeMode,
                 navigatorKey: appNavigatorKey,
                 onGenerateRoute: navigator.onGenerateRoute,

@@ -4,16 +4,20 @@ import 'package:flutter_bloc_app_template/bloc/theme/app_theme.dart';
 import 'package:flutter_bloc_app_template/index.dart';
 import 'package:flutter_bloc_app_template/repository/theme_repository.dart';
 
-final Map<AppTheme, ThemeData> themeData = {
-  AppTheme.system: Style.light,
-  AppTheme.light: Style.light,
-  AppTheme.lightGold: Style.lightGoldTheme,
-  AppTheme.lightMint: Style.lightMintTheme,
-  AppTheme.dark: Style.dark,
-  AppTheme.darkGold: Style.darkGoldTheme,
-  AppTheme.darkMint: Style.darkMintTheme,
-  AppTheme.experimental: Style.experimental,
-};
+Map<AppTheme, ThemeData> getThemeData(MaterialTheme theme) {
+  final themeData = <AppTheme, ThemeData>{
+    AppTheme.system: theme.light(),
+    AppTheme.light: theme.light(),
+    AppTheme.lightGold: theme.lightHighContrast(),
+    AppTheme.lightMint: theme.lightMediumContrast(),
+    AppTheme.dark: theme.dark(),
+    AppTheme.darkGold: theme.darkHighContrast(),
+    AppTheme.darkMint: theme.darkMediumContrast(),
+    AppTheme.experimental: theme.darkMediumContrast(),
+  };
+
+  return themeData;
+}
 
 /// Saves and loads information regarding the theme setting.
 class ThemeCubit extends Cubit<AppTheme> {
@@ -55,27 +59,28 @@ class ThemeCubit extends Cubit<AppTheme> {
   }
 
   /// Default theme
-  ThemeData getDefaultTheme() {
+  ThemeData getDefaultTheme(MaterialTheme theme) {
+    final themeData = getThemeData(theme);
     switch (state) {
       case AppTheme.light:
-        return themeData[AppTheme.light] ?? Style.light;
+        return themeData[AppTheme.light] ?? theme.light();
       case AppTheme.lightGold:
-        return themeData[AppTheme.lightGold] ?? Style.light;
+        return themeData[AppTheme.lightGold] ?? theme.light();
       case AppTheme.lightMint:
-        return themeData[AppTheme.lightMint] ?? Style.light;
+        return themeData[AppTheme.lightMint] ?? theme.light();
       case AppTheme.dark:
-        return themeData[AppTheme.dark] ?? Style.dark;
+        return themeData[AppTheme.dark] ?? theme.dark();
       case AppTheme.darkGold:
-        return themeData[AppTheme.darkGold] ?? Style.dark;
+        return themeData[AppTheme.darkGold] ?? theme.dark();
       case AppTheme.darkMint:
-        return themeData[AppTheme.darkMint] ?? Style.dark;
+        return themeData[AppTheme.darkMint] ?? theme.dark();
       case AppTheme.system:
-        return themeData[AppTheme.system] ?? Style.light;
+        return themeData[AppTheme.system] ?? theme.light();
       case AppTheme.experimental:
-        return themeData[AppTheme.experimental] ?? Style.light;
+        return themeData[AppTheme.experimental] ?? theme.light();
     }
   }
 
   /// Default dark theme
-  ThemeData get darkTheme => themeData[AppTheme.dark] ?? Style.dark;
+  //ThemeData get darkTheme => themeData[AppTheme.dark] ?? Style.dark;
 }

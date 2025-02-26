@@ -5,14 +5,20 @@ import 'package:flutter_bloc_app_template/bloc/theme/theme_cubit.dart';
 import 'package:flutter_bloc_app_template/data/theme_storage.dart';
 import 'package:flutter_bloc_app_template/repository/theme_repository.dart';
 import 'package:flutter_bloc_app_template/theme/style.dart';
+import 'package:flutter_bloc_app_template/theme/util.dart' show createTextTheme;
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mockito/mockito.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+class MockBuildContext extends Mock implements BuildContext {}
 
 void main() {
   group('ThemeCubit', () {
     late ThemeCubit cubit;
     late ThemeStorage themeStorage;
     late ThemeRepository themeRepository;
+    late MaterialTheme theme;
+    MockBuildContext mockContext;
 
     setUp(() async {
       WidgetsFlutterBinding.ensureInitialized();
@@ -21,6 +27,9 @@ void main() {
       themeStorage = SharedPreferencesThemeStorage(sharedPreferences);
       themeRepository = ThemeRepositoryImpl(themeStorage);
       cubit = ThemeCubit(themeRepository);
+      mockContext = MockBuildContext();
+      var textTheme = createTextTheme(mockContext, 'Rubik', 'Rubik');
+      theme = MaterialTheme(textTheme);
     });
 
     tearDown(() {
@@ -50,32 +59,29 @@ void main() {
 
     test('getDefaultTheme returns correct ThemeData', () {
       cubit.updateTheme(AppTheme.light);
-      expect(cubit.getDefaultTheme(), themeData[AppTheme.light]);
+      final themeData = getThemeData(theme);
+      expect(cubit.getDefaultTheme(theme), themeData[AppTheme.light]);
 
       cubit.updateTheme(AppTheme.dark);
-      expect(cubit.getDefaultTheme(), themeData[AppTheme.dark]);
+      expect(cubit.getDefaultTheme(theme), themeData[AppTheme.dark]);
 
       cubit.updateTheme(AppTheme.lightGold);
-      expect(cubit.getDefaultTheme(), themeData[AppTheme.lightGold]);
+      expect(cubit.getDefaultTheme(theme), themeData[AppTheme.lightGold]);
 
       cubit.updateTheme(AppTheme.lightMint);
-      expect(cubit.getDefaultTheme(), themeData[AppTheme.lightMint]);
+      expect(cubit.getDefaultTheme(theme), themeData[AppTheme.lightMint]);
 
       cubit.updateTheme(AppTheme.darkGold);
-      expect(cubit.getDefaultTheme(), themeData[AppTheme.darkGold]);
+      expect(cubit.getDefaultTheme(theme), themeData[AppTheme.darkGold]);
 
       cubit.updateTheme(AppTheme.darkMint);
-      expect(cubit.getDefaultTheme(), themeData[AppTheme.darkMint]);
+      expect(cubit.getDefaultTheme(theme), themeData[AppTheme.darkMint]);
 
       cubit.updateTheme(AppTheme.system);
-      expect(cubit.getDefaultTheme(), themeData[AppTheme.system]);
+      expect(cubit.getDefaultTheme(theme), themeData[AppTheme.system]);
 
       cubit.updateTheme(AppTheme.experimental);
-      expect(cubit.getDefaultTheme(), themeData[AppTheme.experimental]);
-    });
-
-    test('darkTheme returns correct ThemeData', () {
-      expect(cubit.darkTheme, themeData[AppTheme.dark]);
+      expect(cubit.getDefaultTheme(theme), themeData[AppTheme.experimental]);
     });
 
     test('setTheme saves the theme and emits', () {
@@ -100,13 +106,7 @@ void main() {
     );
 
     test('has default light theme', () async {
-      expect(cubit.getDefaultTheme(), Style.light);
-    });
-
-    test('has default dark theme', () async {
-      expect(cubit.darkTheme, Style.dark);
-      cubit.updateTheme(AppTheme.dark);
-      expect(cubit.darkTheme, Style.dark);
+      expect(cubit.getDefaultTheme(theme), theme.light());
     });
 
     void verifyThemeChange(
