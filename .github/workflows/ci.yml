@@ -64,7 +64,7 @@ jobs:
         run: lcov --remove coverage/lcov.info 'lib/*/*.gen.dart' 'lib/generated/*.dart' 'lib/generated/*/*.dart' 'lib/di/*.dart' '**/lib/constants/' 'lib/constants/*.dart' -o coverage/lcov.info --ignore-errors unused
 
       - name: Remove router from code coverage report
-        run: lcov --remove coverage/lcov.info 'lib/routers/router.dart' -o coverage/lcov.info
+        run: lcov --remove coverage/lcov.info 'lib/routers/router.dart' -o coverage/lcov.info --ignore-errors unused
 
       - name: Check Code Coverage
         uses: VeryGoodOpenSource/very_good_coverage@v1.2.0
