@@ -8,10 +8,10 @@ Map<AppTheme, ThemeData> getThemeData(MaterialTheme theme) {
   final themeData = <AppTheme, ThemeData>{
     AppTheme.system: theme.yellowLight(),
     AppTheme.light: theme.yellowLight(),
-    AppTheme.lightGold: theme.yellowLightHighContrast(),
+    AppTheme.lightGold: theme.orangeLight(),
     AppTheme.lightMint: theme.yellowLightMediumContrast(),
     AppTheme.dark: theme.yellowDark(),
-    AppTheme.darkGold: theme.yellowDarkHighContrast(),
+    AppTheme.darkGold: theme.orangeDark(),
     AppTheme.darkMint: theme.yellowDarkMediumContrast(),
     AppTheme.experimental: theme.yellowDarkMediumContrast(),
   };
@@ -80,7 +80,4 @@ class ThemeCubit extends Cubit<AppTheme> {
         return themeData[AppTheme.experimental] ?? theme.yellowLight();
     }
   }
-
-  /// Default dark theme
-  //ThemeData get darkTheme => themeData[AppTheme.dark] ?? Style.dark;
 }
