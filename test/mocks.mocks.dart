@@ -5,10 +5,13 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'dart:async' as _i3;
 
-import 'package:flutter/src/widgets/navigator.dart' as _i5;
+import 'package:flutter/src/widgets/navigator.dart' as _i7;
 import 'package:flutter_bloc_app_template/models/email.dart' as _i4;
+import 'package:flutter_bloc_app_template/models/launch.dart' as _i6;
 import 'package:flutter_bloc_app_template/repository/email_list_repository.dart'
     as _i2;
+import 'package:flutter_bloc_app_template/repository/launches_repository.dart'
+    as _i5;
 import 'package:mockito/mockito.dart' as _i1;
 
 // ignore_for_file: type=lint
@@ -43,19 +46,39 @@ class MockEmailListRepository extends _i1.Mock
           as _i3.Future<List<_i4.Email>>);
 }
 
+/// A class which mocks [LaunchesRepository].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockLaunchesRepository extends _i1.Mock
+    implements _i5.LaunchesRepository {
+  MockLaunchesRepository() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i3.Future<List<_i6.LaunchResource>> getLaunches() =>
+      (super.noSuchMethod(
+            Invocation.method(#getLaunches, []),
+            returnValue: _i3.Future<List<_i6.LaunchResource>>.value(
+              <_i6.LaunchResource>[],
+            ),
+          )
+          as _i3.Future<List<_i6.LaunchResource>>);
+}
+
 /// A class which mocks [NavigatorObserver].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockNavigatorObserver extends _i1.Mock implements _i5.NavigatorObserver {
+class MockNavigatorObserver extends _i1.Mock implements _i7.NavigatorObserver {
   @override
-  void didPush(_i5.Route<dynamic>? route, _i5.Route<dynamic>? previousRoute) =>
+  void didPush(_i7.Route<dynamic>? route, _i7.Route<dynamic>? previousRoute) =>
       super.noSuchMethod(
         Invocation.method(#didPush, [route, previousRoute]),
         returnValueForMissingStub: null,
       );
 
   @override
-  void didPop(_i5.Route<dynamic>? route, _i5.Route<dynamic>? previousRoute) =>
+  void didPop(_i7.Route<dynamic>? route, _i7.Route<dynamic>? previousRoute) =>
       super.noSuchMethod(
         Invocation.method(#didPop, [route, previousRoute]),
         returnValueForMissingStub: null,
@@ -63,8 +86,8 @@ class MockNavigatorObserver extends _i1.Mock implements _i5.NavigatorObserver {
 
   @override
   void didRemove(
-    _i5.Route<dynamic>? route,
-    _i5.Route<dynamic>? previousRoute,
+    _i7.Route<dynamic>? route,
+    _i7.Route<dynamic>? previousRoute,
   ) => super.noSuchMethod(
     Invocation.method(#didRemove, [route, previousRoute]),
     returnValueForMissingStub: null,
@@ -72,8 +95,8 @@ class MockNavigatorObserver extends _i1.Mock implements _i5.NavigatorObserver {
 
   @override
   void didReplace({
-    _i5.Route<dynamic>? newRoute,
-    _i5.Route<dynamic>? oldRoute,
+    _i7.Route<dynamic>? newRoute,
+    _i7.Route<dynamic>? oldRoute,
   }) => super.noSuchMethod(
     Invocation.method(#didReplace, [], {
       #newRoute: newRoute,
@@ -84,8 +107,8 @@ class MockNavigatorObserver extends _i1.Mock implements _i5.NavigatorObserver {
 
   @override
   void didChangeTop(
-    _i5.Route<dynamic>? topRoute,
-    _i5.Route<dynamic>? previousTopRoute,
+    _i7.Route<dynamic>? topRoute,
+    _i7.Route<dynamic>? previousTopRoute,
   ) => super.noSuchMethod(
     Invocation.method(#didChangeTop, [topRoute, previousTopRoute]),
     returnValueForMissingStub: null,
@@ -93,8 +116,8 @@ class MockNavigatorObserver extends _i1.Mock implements _i5.NavigatorObserver {
 
   @override
   void didStartUserGesture(
-    _i5.Route<dynamic>? route,
-    _i5.Route<dynamic>? previousRoute,
+    _i7.Route<dynamic>? route,
+    _i7.Route<dynamic>? previousRoute,
   ) => super.noSuchMethod(
     Invocation.method(#didStartUserGesture, [route, previousRoute]),
     returnValueForMissingStub: null,

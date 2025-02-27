@@ -1,5 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="dev.shtanko.flutter_bloc_app_template">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
    <application
         android:label="flutter_bloc_app_template"
         android:name="${applicationName}"

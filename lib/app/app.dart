@@ -3,8 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_app_template/bloc/init/init_bloc.dart';
 import 'package:flutter_bloc_app_template/di/di_container.dart';
+import 'package:flutter_bloc_app_template/features/launches/bloc/launches_bloc.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/index.dart';
+import 'package:flutter_bloc_app_template/repository/launches_repository.dart';
+import 'package:flutter_bloc_app_template/repository/theme_repository.dart';
 import 'package:flutter_bloc_app_template/theme/util.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
@@ -22,11 +25,15 @@ class MyApp extends StatelessWidget {
           RepositoryProvider<NavigationService>(
             create: (context) => NavigationService(),
           ),
+          RepositoryProvider<LaunchesRepository>(
+            create: (context) => diContainer.get<LaunchesRepository>(),
+          ),
         ],
         child: MultiBlocProvider(
           providers: [
             BlocProvider(
-              create: (context) => ThemeCubit(diContainer.get())..loadTheme(),
+              create: (context) =>
+                  ThemeCubit(diContainer.get<ThemeRepository>())..loadTheme(),
             ),
             BlocProvider(
               create: (context) => EmailListBloc(
@@ -34,6 +41,13 @@ class MyApp extends StatelessWidget {
                     RepositoryProvider.of<EmailListRepository>(context),
               )..add(
                   EmailListFetched(),
+                ),
+            ),
+            BlocProvider(
+              create: (context) => LaunchesBloc(
+                repository: RepositoryProvider.of<LaunchesRepository>(context),
+              )..add(
+                  LaunchesFetched(),
                 ),
             ),
             BlocProvider<InitBloc>(

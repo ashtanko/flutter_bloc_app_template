@@ -6,6 +6,12 @@ import 'package:injectable/injectable.dart';
 @module
 abstract class NetworkModule {
   @factoryMethod
+  Dio provideDio() {
+    final dio = Dio();
+    return dio;
+  }
+
+  @factoryMethod
   LaunchService provideLaunchService(Dio dio) {
     return LaunchService(dio);
   }
