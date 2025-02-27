@@ -7,7 +7,11 @@ void main() {
       final json = {
         '_id': '123',
         'mission_name': 'Test Mission',
-        'rocket': {'id': 'rocket123', 'type': 'Falcon 9', 'name': 'Falcon'},
+        'rocket': {
+          'rocket_id': 'rocket123',
+          'type': 'Falcon 9',
+          'name': 'Falcon'
+        },
         'launch_success': true,
         'links': {
           'mission_patch': 'patch_url',
