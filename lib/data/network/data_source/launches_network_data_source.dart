@@ -9,7 +9,7 @@ abstract class LaunchesDataSource {
     int? offset,
     int? launchYear,
     int? launchSuccess,
-    int? order,
+    String? order,
   });
 }
 
@@ -25,7 +25,7 @@ class LaunchesNetworkDataSource implements LaunchesDataSource {
       int? offset,
       int? launchYear,
       int? launchSuccess,
-      int? order}) async {
+      String? order}) async {
     try {
       final list = await _service.fetchLaunches(
         hasId: hasId,

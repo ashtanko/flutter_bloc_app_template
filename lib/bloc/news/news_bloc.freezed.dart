@@ -31,6 +31,11 @@ mixin _$NewsEvent {
 }
 
 /// @nodoc
+class $NewsEventCopyWith<$Res> {
+  $NewsEventCopyWith(NewsEvent _, $Res Function(NewsEvent) __);
+}
+
+/// @nodoc
 
 class _Load implements NewsEvent {
   const _Load();
@@ -85,6 +90,11 @@ mixin _$NewsState {
   String toString() {
     return 'NewsState()';
   }
+}
+
+/// @nodoc
+class $NewsStateCopyWith<$Res> {
+  $NewsStateCopyWith(NewsState _, $Res Function(NewsState) __);
 }
 
 /// @nodoc

@@ -54,6 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "itemDetailsTitle": MessageLookupByLibrary.simpleMessage("Item Details"),
     "itemTitle": m0,
     "itemsTitle": MessageLookupByLibrary.simpleMessage("Sample Items"),
+    "launchesTitle": MessageLookupByLibrary.simpleMessage("Launches"),
     "lightGoldThemeTitle": MessageLookupByLibrary.simpleMessage("Light Gold"),
     "lightMintThemeTitle": MessageLookupByLibrary.simpleMessage("Light Mint"),
     "lightThemeTitle": MessageLookupByLibrary.simpleMessage("Light Theme"),

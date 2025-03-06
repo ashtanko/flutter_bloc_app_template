@@ -10,6 +10,7 @@ _NetworkLaunchModel _$NetworkLaunchModelFromJson(Map<String, dynamic> json) =>
     _NetworkLaunchModel(
       id: json['_id'] as String,
       missionName: json['mission_name'] as String?,
+      launchDate: const TimestampSerializer().fromJson(json['launch_date_utc']),
       rocket: json['rocket'] == null
           ? null
           : NetworkRocketModel.fromJson(json['rocket'] as Map<String, dynamic>),
@@ -24,6 +25,8 @@ Map<String, dynamic> _$NetworkLaunchModelToJson(_NetworkLaunchModel instance) =>
     <String, dynamic>{
       '_id': instance.id,
       'mission_name': instance.missionName,
+      'launch_date_utc':
+          const TimestampSerializer().toJson(instance.launchDate),
       'rocket': instance.rocket,
       'launch_success': instance.success,
       'links': instance.links,
@@ -32,15 +35,15 @@ Map<String, dynamic> _$NetworkLaunchModelToJson(_NetworkLaunchModel instance) =>
 _NetworkRocketModel _$NetworkRocketModelFromJson(Map<String, dynamic> json) =>
     _NetworkRocketModel(
       id: json['rocket_id'] as String,
-      type: json['type'] as String?,
-      name: json['name'] as String?,
+      type: json['rocket_type'] as String?,
+      name: json['rocket_name'] as String?,
     );
 
 Map<String, dynamic> _$NetworkRocketModelToJson(_NetworkRocketModel instance) =>
     <String, dynamic>{
       'rocket_id': instance.id,
-      'type': instance.type,
-      'name': instance.name,
+      'rocket_type': instance.type,
+      'rocket_name': instance.name,
     };
 
 _NetworkLaunchLinksModel _$NetworkLaunchLinksModelFromJson(

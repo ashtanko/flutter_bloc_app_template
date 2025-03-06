@@ -1,0 +1,28 @@
+targets:
+  $default:
+    builders:
+      freezed:
+        options:
+          map:
+            maybe_map: true
+#targets:
+#  $default:
+#    builders:
+#      freezed:
+#        enabled: true
+#        options:
+#          # Tells Freezed not to format .freezed.dart files.
+#          # This can significantly speed up code-generation.
+#          format: true
+#          # Disable the generation of copyWith/== for the entire project
+#          copy_with: true
+#          equal: true
+#          # `when` and `map` can be enabled/disabled entirely by setting them to `true`/`false`
+#          map:
+#            map: true
+#            map_or_null: true
+#            maybe_map: true
+#          when:
+#            when: true
+#            when_or_null: true
+#            maybe_when: true

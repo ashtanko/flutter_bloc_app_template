@@ -1,56 +1,30 @@
 import 'package:bloc/bloc.dart';
-import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc_app_template/models/launch.dart';
+import 'package:flutter_bloc_app_template/models/launches_filter.dart';
 import 'package:flutter_bloc_app_template/repository/launches_repository.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+
+part 'launches_bloc.freezed.dart';
+part 'launches_event.dart';
+part 'launches_state.dart';
 
 class LaunchesBloc extends Bloc<LaunchesEvent, LaunchesState> {
-  LaunchesBloc({required this.repository}) : super(LaunchesInitial()) {
-    on<LaunchesFetched>(_onStarted);
-  }
-
-  final LaunchesRepository repository;
-
-  void _onStarted(LaunchesFetched event, Emitter<LaunchesState> emit) async {
-    emit(LaunchesLoading());
-    try {
-      final items = await repository.getLaunches();
-
-      if (items.isEmpty) {
-        emit(LaunchesEmpty());
-      } else {
-        emit(LaunchesLoaded(items));
+  LaunchesBloc(this._repository) : super(const LaunchesState.loading()) {
+    on<LaunchesLoadEvent>((event, emit) async {
+      try {
+        final launches = await _repository.getLaunches(
+          order: event.filter?.order?.value,
+        );
+        if (launches.isEmpty) {
+          emit(const LaunchesState.empty());
+        } else {
+          emit(LaunchesState.success(launches: launches));
+        }
+      } catch (e) {
+        emit(const LaunchesState.error());
       }
-    } catch (_) {
-      emit(LaunchesLoadFailure());
-    }
+    });
   }
+
+  final LaunchesRepository _repository;
 }
-
-abstract class LaunchesState extends Equatable {
-  @override
-  List<Object> get props => [];
-}
-
-class LaunchesInitial extends LaunchesState {}
-
-class LaunchesLoading extends LaunchesState {}
-
-class LaunchesLoaded extends LaunchesState {
-  LaunchesLoaded(this.launches);
-
-  final List<LaunchResource> launches;
-
-  @override
-  List<Object> get props => [launches];
-}
-
-class LaunchesEmpty extends LaunchesState {}
-
-class LaunchesLoadFailure extends LaunchesState {}
-
-class LaunchesEvent extends Equatable {
-  @override
-  List<Object> get props => [];
-}
-
-class LaunchesFetched extends LaunchesEvent {}

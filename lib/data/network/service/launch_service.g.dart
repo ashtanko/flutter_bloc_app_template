@@ -26,7 +26,7 @@ class _LaunchService implements LaunchService {
     int? offset,
     int? launchYear,
     int? launchSuccess,
-    int? order,
+    String? order,
   }) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{

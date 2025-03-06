@@ -27,6 +27,7 @@ import 'package:flutter_bloc_app_template/repository/theme_repository.dart'
     as _i626;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
+import 'package:talker/talker.dart' as _i993;
 
 extension GetItInjectableX on _i174.GetIt {
 // initializes the registration of main-scope dependencies inside of GetIt
@@ -44,6 +45,7 @@ extension GetItInjectableX on _i174.GetIt {
     final dIDataModule = _$DIDataModule();
     final repositoryModule = _$RepositoryModule();
     gh.factory<_i361.Dio>(() => networkModule.provideDio());
+    gh.factory<_i993.Talker>(() => dIAppModule.provideLogger());
     gh.lazySingleton<_i409.GlobalKey<_i409.NavigatorState>>(
         () => dIAppModule.key);
     gh.lazySingleton<_i750.ThemeStorage>(() => dIDataModule.themeStorage);

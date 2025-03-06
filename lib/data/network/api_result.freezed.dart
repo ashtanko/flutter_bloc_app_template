@@ -31,6 +31,11 @@ mixin _$ApiResult<T> {
 }
 
 /// @nodoc
+class $ApiResultCopyWith<T, $Res> {
+  $ApiResultCopyWith(ApiResult<T> _, $Res Function(ApiResult<T>) __);
+}
+
+/// @nodoc
 
 class Success<T> implements ApiResult<T> {
   const Success(this.data);
@@ -63,7 +68,8 @@ class Success<T> implements ApiResult<T> {
 }
 
 /// @nodoc
-abstract mixin class $SuccessCopyWith<T, $Res> {
+abstract mixin class $SuccessCopyWith<T, $Res>
+    implements $ApiResultCopyWith<T, $Res> {
   factory $SuccessCopyWith(Success<T> value, $Res Function(Success<T>) _then) =
       _$SuccessCopyWithImpl;
   @useResult
@@ -124,7 +130,8 @@ class Error<T> implements ApiResult<T> {
 }
 
 /// @nodoc
-abstract mixin class $ErrorCopyWith<T, $Res> {
+abstract mixin class $ErrorCopyWith<T, $Res>
+    implements $ApiResultCopyWith<T, $Res> {
   factory $ErrorCopyWith(Error<T> value, $Res Function(Error<T>) _then) =
       _$ErrorCopyWithImpl;
   @useResult

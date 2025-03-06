@@ -7,10 +7,11 @@ void main() {
       final json = {
         '_id': '123',
         'mission_name': 'Test Mission',
+        'launch_date_utc': '2009-07-13T03:35:00.000Z',
         'rocket': {
           'rocket_id': 'rocket123',
-          'type': 'Falcon 9',
-          'name': 'Falcon'
+          'rocket_type': 'Falcon 9',
+          'rocket_name': 'Falcon'
         },
         'launch_success': true,
         'links': {
@@ -26,6 +27,7 @@ void main() {
 
       expect(model.id, '123');
       expect(model.missionName, 'Test Mission');
+      expect(model.launchDate, DateTime.parse('2009-07-13 03:35:00.000Z'));
       expect(model.rocket?.id, 'rocket123');
       expect(model.rocket?.type, 'Falcon 9');
       expect(model.rocket?.name, 'Falcon');

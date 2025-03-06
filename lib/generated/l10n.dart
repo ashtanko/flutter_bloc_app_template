@@ -85,6 +85,16 @@ class S {
     );
   }
 
+  /// `Launches`
+  String get launchesTitle {
+    return Intl.message(
+      'Launches',
+      name: 'launchesTitle',
+      desc: 'The title of the launches screen',
+      args: [],
+    );
+  }
+
   /// `Sample Item {id}`
   String itemTitle(Object id) {
     return Intl.message(

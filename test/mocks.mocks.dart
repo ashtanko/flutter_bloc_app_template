@@ -56,9 +56,23 @@ class MockLaunchesRepository extends _i1.Mock
   }
 
   @override
-  _i3.Future<List<_i6.LaunchResource>> getLaunches() =>
+  _i3.Future<List<_i6.LaunchResource>> getLaunches({
+    bool? hasId = true,
+    int? limit,
+    int? offset,
+    int? launchYear,
+    int? launchSuccess,
+    String? order,
+  }) =>
       (super.noSuchMethod(
-            Invocation.method(#getLaunches, []),
+            Invocation.method(#getLaunches, [], {
+              #hasId: hasId,
+              #limit: limit,
+              #offset: offset,
+              #launchYear: launchYear,
+              #launchSuccess: launchSuccess,
+              #order: order,
+            }),
             returnValue: _i3.Future<List<_i6.LaunchResource>>.value(
               <_i6.LaunchResource>[],
             ),

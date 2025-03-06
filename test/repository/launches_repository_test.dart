@@ -37,8 +37,28 @@ void main() {
 final mockLaunches = [
   const LaunchResource(
     id: '1',
+    missionName: 'Mission 1',
+    launchDays: Since(
+      '2021-10-01T00:00:00Z',
+    ),
+    launchTime: '00:00',
+    rocket: RocketResource(
+      rocketName: 'Rocket 1',
+      rocketType: 'Type 1',
+    ),
+    launchSuccess: true,
   ),
   const LaunchResource(
     id: '2',
+    missionName: 'Mission 1',
+    launchDays: Since(
+      '2021-10-01T00:00:00Z',
+    ),
+    launchTime: '00:00',
+    rocket: RocketResource(
+      rocketName: 'Rocket 1',
+      rocketType: 'Type 1',
+    ),
+    launchSuccess: true,
   ),
 ];

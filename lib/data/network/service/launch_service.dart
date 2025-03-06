@@ -17,6 +17,6 @@ abstract class LaunchService {
     @Query('offset') int? offset,
     @Query('launch_year') int? launchYear,
     @Query('launch_success') int? launchSuccess,
-    @Query('order') int? order,
+    @Query('order') String? order,
   });
 }

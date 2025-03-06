@@ -1,5 +1,7 @@
+import 'package:bloc/bloc.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc_app_template/config/build_type.dart';
+import 'package:talker_bloc_logger/talker_bloc_logger_observer.dart';
 
 /// A class for managing environment configurations based on different
 /// build types.
@@ -62,5 +64,6 @@ class Environment<T> implements Listenable {
     required T config,
   }) {
     _instance ??= Environment<T>._(buildType, config);
+    Bloc.observer = TalkerBlocObserver();
   }
 }

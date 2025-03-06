@@ -1,3 +1,4 @@
+import 'package:flutter_bloc_app_template/data/network/model/launch/timestamp_serializer.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'network_launch_model.freezed.dart';
@@ -8,6 +9,9 @@ abstract class NetworkLaunchModel with _$NetworkLaunchModel {
   const factory NetworkLaunchModel({
     @JsonKey(name: '_id') required String id,
     @JsonKey(name: 'mission_name') String? missionName,
+    @TimestampSerializer()
+    @JsonKey(name: 'launch_date_utc')
+    DateTime? launchDate,
     @JsonKey(name: 'rocket') NetworkRocketModel? rocket,
     @JsonKey(name: 'launch_success') @Default(false) bool success,
     @JsonKey(name: 'links') NetworkLaunchLinksModel? links,
@@ -23,8 +27,8 @@ abstract class NetworkLaunchModel with _$NetworkLaunchModel {
 abstract class NetworkRocketModel with _$NetworkRocketModel {
   const factory NetworkRocketModel({
     @JsonKey(name: 'rocket_id') required String id,
-    @JsonKey(name: 'type') String? type,
-    @JsonKey(name: 'name') String? name,
+    @JsonKey(name: 'rocket_type') String? type,
+    @JsonKey(name: 'rocket_name') String? name,
   }) = _NetworkRocketModel;
 
   const NetworkRocketModel._();

@@ -45,9 +45,9 @@ class MyApp extends StatelessWidget {
             ),
             BlocProvider(
               create: (context) => LaunchesBloc(
-                repository: RepositoryProvider.of<LaunchesRepository>(context),
+                RepositoryProvider.of<LaunchesRepository>(context),
               )..add(
-                  LaunchesFetched(),
+                  const LaunchesEvent.load(),
                 ),
             ),
             BlocProvider<InitBloc>(

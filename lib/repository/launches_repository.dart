@@ -3,7 +3,14 @@ import 'package:flutter_bloc_app_template/data/network/data_source/launches_netw
 import 'package:flutter_bloc_app_template/models/launch.dart';
 
 abstract class LaunchesRepository {
-  Future<List<LaunchResource>> getLaunches();
+  Future<List<LaunchResource>> getLaunches({
+    bool? hasId = true,
+    int? limit,
+    int? offset,
+    int? launchYear,
+    int? launchSuccess,
+    String? order,
+  });
 }
 
 class LaunchesRepositoryImpl implements LaunchesRepository {
@@ -12,8 +19,22 @@ class LaunchesRepositoryImpl implements LaunchesRepository {
   final LaunchesDataSource _launchesDataSource;
 
   @override
-  Future<List<LaunchResource>> getLaunches() async {
-    final list = await _launchesDataSource.getLaunches();
+  Future<List<LaunchResource>> getLaunches({
+    bool? hasId = true,
+    int? limit,
+    int? offset,
+    int? launchYear,
+    int? launchSuccess,
+    String? order,
+  }) async {
+    final list = await _launchesDataSource.getLaunches(
+      hasId: hasId,
+      limit: limit,
+      offset: offset,
+      launchYear: launchYear,
+      launchSuccess: launchSuccess,
+      order: order,
+    );
 
     return list.when(
       success: (data) => data.map((e) => e.toResource()).toList(),
