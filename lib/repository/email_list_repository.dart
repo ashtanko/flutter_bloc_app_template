@@ -3,7 +3,12 @@ import 'package:flutter_bloc_app_template/models/email.dart';
 
 const _delay = Duration(milliseconds: 3000);
 
-class EmailListRepository {
+abstract class EmailListRepository {
+  Future<List<Email>> loadData();
+}
+
+class EmailListRepositoryImpl implements EmailListRepository {
+  @override
   Future<List<Email>> loadData() {
     emailList.sort((a, b) => b.date.compareTo(a.date));
 

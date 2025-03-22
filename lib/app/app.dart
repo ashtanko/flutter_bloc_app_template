@@ -19,14 +19,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) => MultiRepositoryProvider(
         providers: [
-          RepositoryProvider<EmailListRepository>(
-            create: (context) => EmailListRepository(),
-          ),
           RepositoryProvider<NavigationService>(
             create: (context) => NavigationService(),
-          ),
-          RepositoryProvider<LaunchesRepository>(
-            create: (context) => diContainer.get<LaunchesRepository>(),
           ),
         ],
         child: MultiBlocProvider(
@@ -37,15 +31,14 @@ class MyApp extends StatelessWidget {
             ),
             BlocProvider(
               create: (context) => EmailListBloc(
-                messagesRepository:
-                    RepositoryProvider.of<EmailListRepository>(context),
+                messagesRepository: diContainer.get<EmailListRepository>(),
               )..add(
                   EmailListFetched(),
                 ),
             ),
             BlocProvider(
               create: (context) => LaunchesBloc(
-                RepositoryProvider.of<LaunchesRepository>(context),
+                diContainer.get<LaunchesRepository>(),
               )..add(
                   const LaunchesEvent.load(),
                 ),
