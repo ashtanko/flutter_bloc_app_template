@@ -31,7 +31,7 @@ void main() {
       });
 
       test('returns correct lists', () async {
-        final list = EmailListRepository().loadData();
+        final list = repository.loadData();
         await list.then((values) {
           expect(values, hasLength(6));
           expect(
