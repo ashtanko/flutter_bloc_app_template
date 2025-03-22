@@ -46,22 +46,24 @@ For example dev configuration for Android Studio looks like:
 
 ## Android Screenshots
 <p align="left">
-<img src="/preview/android/widgets.jpg" width="32%"/>
-<img src="/preview/android/light_theme.png" width="32%"/>
-<img src="/preview/android/dark_theme.png" width="32%"/>
-<img src="/preview/android/yellow_theme.png" width="32%"/>
-<img src="/preview/android/settings.png" width="32%"/>
-<img src="/preview/android/theme_bottom_sheet.png" width="32%"/>
+<img src="/preview/android/launches_android_dark_theme.png" width="32%"/>
+<img src="/preview/android/launches_android_light_theme.png" width="32%"/>
+</p>
+
+<p align="left">
+<img src="/preview/android/messages_android_dark_theme.png" width="32%"/>
+<img src="/preview/android/messages_android_ligth_theme.png" width="32%"/>
 </p>
 
 ## iOS Screenshots
 <p align="left">
-<img src="/preview/ios/widgets.png" width="32%"/>
-<img src="/preview/ios/light_theme.png" width="32%"/>
-<img src="/preview/ios/dark_theme.png" width="32%"/>
-<img src="/preview/ios/yellow_theme.png" width="32%"/>
-<img src="/preview/ios/settings.png" width="32%"/>
-<img src="/preview/ios/theme_bottom_sheet.png" width="32%"/>
+<img src="/preview/ios/launches_ios_dark_theme.png" width="32%"/>
+<img src="/preview/ios/launches_ios_light_theme.png" width="32%"/>
+</p>
+
+<p align="left">
+<img src="/preview/ios/messages_ios_dark_theme.png" width="32%"/>
+<img src="/preview/ios/messages_ios_ligth_theme.png" width="32%"/>
 </p>
 
 
