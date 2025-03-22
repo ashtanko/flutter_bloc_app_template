@@ -48,6 +48,9 @@ For example dev configuration for Android Studio looks like:
 <p align="left">
 <img src="/preview/android/launches_android_dark_theme.png" width="32%"/>
 <img src="/preview/android/launches_android_light_theme.png" width="32%"/>
+</p>
+
+<p align="left">
 <img src="/preview/android/messages_android_dark_theme.png" width="32%"/>
 <img src="/preview/android/messages_android_ligth_theme.png" width="32%"/>
 </p>
@@ -56,6 +59,9 @@ For example dev configuration for Android Studio looks like:
 <p align="left">
 <img src="/preview/ios/launches_ios_dark_theme.png" width="32%"/>
 <img src="/preview/ios/launches_ios_light_theme.png" width="32%"/>
+</p>
+
+<p align="left">
 <img src="/preview/ios/messages_ios_dark_theme.png" width="32%"/>
 <img src="/preview/ios/messages_ios_ligth_theme.png" width="32%"/>
 </p>
