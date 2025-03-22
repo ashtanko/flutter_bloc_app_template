@@ -31,6 +31,7 @@ void main() {
       });
 
       test('returns correct lists', () async {
+        when(repository.loadData()).thenAnswer((_) => Future.value(mockEmails));
         final list = repository.loadData();
         await list.then((values) {
           expect(values, hasLength(6));
