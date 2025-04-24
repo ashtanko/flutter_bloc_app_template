@@ -4,17 +4,17 @@
   "@appTitle": {
     "description": "Der Titel der Anwendung"
   },
-  "itemsTitle": "Musterartikel",
+  "itemsTitle": "Beispielartikel",
   "@itemsTitle": {
     "description": "Der Titel der Musterstücke"
   },
-  "messagesTitle": "Nachrichten",
-  "@messagesTitle": {
-    "description": "Der Titel des Nachrichtenbildschirms"
+  "emailsTitle": "E-Mails",
+  "@emailsTitle": {
+    "description": "Der Titel des E-Mail-Bildschirms"
   },
-  "launchesTitle": "Launches",
+  "launchesTitle": "Starts",
   "@launchesTitle": {
-    "description": "The title of the launches screen"
+    "description": "Der Titel des Starts-Bildschirms"
   },
   "itemTitle": "Beispielartikel {id}",
   "@itemTitle": {
@@ -24,28 +24,53 @@
   "@settingsTitle": {
     "description": "Der Titel der Einstellungen"
   },
-  "themeTitle": "Thema",
+  "missionTitle": "Mission: {mission}",
+  "@missionTitle": {
+    "description": "Der Missionsstart-Labeltext",
+    "placeholders": {
+      "mission": {}
+    }
+  },
+  "launchedAt": "Gestartet am: {launchedAt}",
+  "@launchedAt": {
+    "description": "Labeltext für den Startzeitpunkt",
+    "placeholders": {
+      "launchedAt": {}
+    }
+  },
+  "rocket": "Rakete: {rocketName} ({rocketType})",
+  "@rocket": {
+    "description": "Labeltext für Raketeninformationen",
+    "placeholders": {
+      "rocketName": {},
+      "rocketType": {}
+    }
+  },
+  "daysSinceTodayTitle": "Vor {days} Tagen",
+  "@daysSinceTodayTitle": {
+    "description": "Zeigt, wie viele Tage seit heute vergangen sind"
+  },
+  "daysFromTodayTitle": "In {days} Tagen",
+  "@daysFromTodayTitle": {
+    "description": "Zeigt, wie viele Tage ab heute"
+  },
+  "themeTitle": "Design",
   "@themeTitle": {},
-  "systemThemeTitle": "System-Thema",
+  "systemThemeTitle": "Systemdesign",
   "@systemThemeTitle": {},
-  "lightThemeTitle": "Licht-Thema",
+  "lightThemeTitle": "Helles Design",
   "@lightThemeTitle": {},
-  "darkThemeTitle": "Dunkles Thema",
+  "darkThemeTitle": "Dunkles Design",
   "@darkThemeTitle": {},
-
-  "lightGoldThemeTitle": "Helles Gold-Thema",
+  "lightGoldThemeTitle": "Helles Gold-Design",
   "@lightGoldThemeTitle": {},
-
-  "darkGoldThemeTitle": "Dunkles Gold-Thema",
+  "darkGoldThemeTitle": "Dunkles Gold-Design",
   "@darkGoldThemeTitle": {},
-
-  "lightMintThemeTitle": "Helles Minz-Thema",
+  "lightMintThemeTitle": "Helles Mint-Design",
   "@lightMintThemeTitle": {},
-
-  "darkMintThemeTitle": "Dunkles Minz-Thema",
+  "darkMintThemeTitle": "Dunkles Mint-Design",
   "@darkMintThemeTitle": {},
-
-  "itemDetailsTitle": "Artikel Details",
+  "itemDetailsTitle": "Artikeldetails",
   "@itemDetailsTitle": {
     "description": "Der Titel des Bildschirms Artikeldetails"
   },
@@ -53,27 +78,27 @@
   "@error": {},
   "emptyList": "Leere Liste",
   "@emptyList": {},
-  "tabHome": "Home",
+  "tabHome": "Startseite",
   "@tabHome": {},
-  "tabSettings": "Settings",
+  "tabSettings": "Einstellungen",
   "@tabSettings": {},
-  "newsScreen": "News",
+  "newsScreen": "Nachrichten",
   "@newsScreen": {},
-  "disabledButtonTitle": "Disabled",
+  "disabledButtonTitle": "Deaktiviert",
   "@disabledButtonTitle": {},
-  "disabledRoundedButtonTitle": "Disabled Rounded",
+  "disabledRoundedButtonTitle": "Deaktiviert (abgerundet)",
   "@disabledRoundedButtonTitle": {},
-  "disabledWithIconButtonTitle": "Disabled With Icon",
+  "disabledWithIconButtonTitle": "Deaktiviert mit Icon",
   "@disabledWithIconButtonTitle": {},
-  "enabledButtonTitle": "Enabled",
+  "enabledButtonTitle": "Aktiviert",
   "@enabledButtonTitle": {},
-  "borderRadiusButtonTitle": "BorderRadius",
+  "borderRadiusButtonTitle": "Abgerundete Ecken",
   "@borderRadiusButtonTitle": {},
-  "borderSideButtonTitle": "BorderSide",
+  "borderSideButtonTitle": "Rahmenlinie",
   "@borderSideButtonTitle": {},
-  "iconButtonTitle": "With Icon",
+  "iconButtonTitle": "Mit Icon",
   "@iconButtonTitle": {},
-  "iconAndPaddingButtonTitle": "With Icon Padding",
+  "iconAndPaddingButtonTitle": "Mit Icon & Abstand",
   "@iconAndPaddingButtonTitle": {},
   "transparentButtonTitle": "Transparent",
   "@transparentButtonTitle": {}

@@ -28,7 +28,7 @@ void main() {
       themeRepository = ThemeRepositoryImpl(themeStorage);
       cubit = ThemeCubit(themeRepository);
       mockContext = MockBuildContext();
-      var textTheme = createTextTheme(mockContext, 'Rubik', 'Rubik');
+      var textTheme = createTextTheme(context: mockContext);
       theme = MaterialTheme(textTheme);
     });
 

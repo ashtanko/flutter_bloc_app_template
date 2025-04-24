@@ -6,7 +6,7 @@ import 'package:intl/intl.dart';
 extension LaunchResourceExtension on NetworkLaunchModel {
   LaunchResource toResource() {
     return LaunchResource(
-      id: id,
+      id: id ?? '',
       missionName: missionName,
       launchDays: launchDate?.formatDateWithDays(),
       launchTime: launchDate.toFormattedTime(),
@@ -57,6 +57,26 @@ class LaunchResource extends Equatable {
   final RocketResource? rocket;
   final bool? launchSuccess;
   final LinksResource? links;
+
+  LaunchResource copyWith({
+    String? id,
+    String? missionName,
+    LaunchDays? launchDays,
+    String? launchTime,
+    RocketResource? rocket,
+    bool? launchSuccess,
+    LinksResource? links,
+  }) {
+    return LaunchResource(
+      id: id ?? this.id,
+      missionName: missionName ?? this.missionName,
+      launchDays: launchDays ?? this.launchDays,
+      launchTime: launchTime ?? this.launchTime,
+      rocket: rocket ?? this.rocket,
+      launchSuccess: launchSuccess ?? this.launchSuccess,
+      links: links ?? this.links,
+    );
+  }
 
   @override
   List<Object?> get props => [

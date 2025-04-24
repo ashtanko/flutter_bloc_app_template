@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_app_template/features/launches/bloc/launches_bloc.dart';
-import 'package:flutter_bloc_app_template/features/launches/widget/launch_item.dart';
+import 'package:flutter_bloc_app_template/features/launches/widget/launch_item.dart'
+    show LaunchItem;
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/models/launch.dart'
+    show LaunchResource;
 import 'package:flutter_bloc_app_template/widgets/empty_widget.dart';
 
 class LaunchesScreen extends StatelessWidget {
@@ -32,25 +35,15 @@ class LaunchesList extends StatelessWidget {
   Widget build(BuildContext context) =>
       BlocBuilder<LaunchesBloc, LaunchesState>(
         builder: (context, state) {
-          print('State: $state');
           switch (state) {
             case LaunchesLoadingState _:
               return const Center(
                 child: CircularProgressIndicator(),
               );
             case LaunchesSuccessState _:
-              return ListView.builder(
-                physics: const BouncingScrollPhysics(),
-                padding: EdgeInsets.zero,
-                shrinkWrap: true,
-                primary: false,
-                itemBuilder: (context, index) => LaunchItem(
-                  launch: state.launches[index],
-                ),
-                itemCount: state.launches.length,
-              );
+              return LaunchesListContent(launches: state.launches);
             case LaunchesErrorState _:
-              return Text(S.of(context).error); // TODO
+              return Text(S.of(context).error);
             case LaunchesEmptyState _:
               return Center(
                 child: Text(S.of(context).emptyList),
@@ -59,5 +52,23 @@ class LaunchesList extends StatelessWidget {
 
           return EmptyWidget();
         },
+      );
+}
+
+class LaunchesListContent extends StatelessWidget {
+  const LaunchesListContent({super.key, required this.launches});
+
+  final List<LaunchResource> launches;
+
+  @override
+  Widget build(BuildContext context) => ListView.builder(
+        physics: const BouncingScrollPhysics(),
+        padding: EdgeInsets.zero,
+        shrinkWrap: true,
+        primary: false,
+        itemBuilder: (context, index) => LaunchItem(
+          launch: launches[index],
+        ),
+        itemCount: launches.length,
       );
 }

@@ -37,16 +37,19 @@ runDevStaging:
 	flutter run --flavor dev -t lib/main_staging.dart
 
 release:
-	flutter run --release -t lib/main_release.dart
+	flutter run --release -t lib/main_prod.dart
 
 prodRelease:
-	flutter run --flavor prod --release -t lib/main_release.dart
+	flutter run --flavor prod --release -t lib/main_prod.dart
 
 apk:
-	flutter build apk --release -t lib/main_release.dart
+	flutter build apk --release -t lib/main_prod.dart
 
 lines:
 	find . -name '*.dart' | xargs wc -l
 
 force_upgrade:
 	flutter update-packages --force-upgrade
+
+integration_test:
+    flutter test integration_test/app_test.dart --flavor dev

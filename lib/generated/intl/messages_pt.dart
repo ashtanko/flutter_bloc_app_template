@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a de locale. All the
+// This is a library that provides messages for a pt locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -18,20 +18,20 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'de';
+  String get localeName => 'pt';
 
-  static String m0(days) => "In ${days} Tagen";
+  static String m0(days) => "Em ${days} dias";
 
-  static String m1(days) => "Vor ${days} Tagen";
+  static String m1(days) => "Há ${days} dias";
 
-  static String m2(id) => "Beispielartikel ${id}";
+  static String m2(id) => "Artigo de Exemplo ${id}";
 
-  static String m3(launchedAt) => "Gestartet am: ${launchedAt}";
+  static String m3(launchedAt) => "Lançado em: ${launchedAt}";
 
-  static String m4(mission) => "Mission: ${mission}";
+  static String m4(mission) => "Missão: ${mission}";
 
   static String m5(rocketName, rocketType) =>
-      "Rakete: ${rocketName} (${rocketType})";
+      "Foguete: ${rocketName} (${rocketType})";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -39,57 +39,59 @@ class MessageLookup extends MessageLookupByLibrary {
       "flutter_bloc_app_template",
     ),
     "borderRadiusButtonTitle": MessageLookupByLibrary.simpleMessage(
-      "Abgerundete Ecken",
+      "Raio da Borda",
     ),
     "borderSideButtonTitle": MessageLookupByLibrary.simpleMessage(
-      "Rahmenlinie",
+      "Lado da Borda",
     ),
     "darkGoldThemeTitle": MessageLookupByLibrary.simpleMessage(
-      "Dunkles Gold-Design",
+      "Tema Dourado Escuro",
     ),
     "darkMintThemeTitle": MessageLookupByLibrary.simpleMessage(
-      "Dunkles Mint-Design",
+      "Tema Menta Escuro",
     ),
-    "darkThemeTitle": MessageLookupByLibrary.simpleMessage("Dunkles Design"),
+    "darkThemeTitle": MessageLookupByLibrary.simpleMessage("Tema Escuro"),
     "daysFromTodayTitle": m0,
     "daysSinceTodayTitle": m1,
-    "disabledButtonTitle": MessageLookupByLibrary.simpleMessage("Deaktiviert"),
+    "disabledButtonTitle": MessageLookupByLibrary.simpleMessage("Desativado"),
     "disabledRoundedButtonTitle": MessageLookupByLibrary.simpleMessage(
-      "Deaktiviert (abgerundet)",
+      "Desativado com Bordas Arredondadas",
     ),
     "disabledWithIconButtonTitle": MessageLookupByLibrary.simpleMessage(
-      "Deaktiviert mit Icon",
+      "Desativado com Ícone",
     ),
-    "emailsTitle": MessageLookupByLibrary.simpleMessage("E-Mails"),
-    "emptyList": MessageLookupByLibrary.simpleMessage("Leere Liste"),
-    "enabledButtonTitle": MessageLookupByLibrary.simpleMessage("Aktiviert"),
-    "error": MessageLookupByLibrary.simpleMessage("Fehler"),
+    "emailsTitle": MessageLookupByLibrary.simpleMessage("E-mails"),
+    "emptyList": MessageLookupByLibrary.simpleMessage("Lista Vazia"),
+    "enabledButtonTitle": MessageLookupByLibrary.simpleMessage("Ativado"),
+    "error": MessageLookupByLibrary.simpleMessage("Erro"),
     "iconAndPaddingButtonTitle": MessageLookupByLibrary.simpleMessage(
-      "Mit Icon & Abstand",
+      "Com Ícone e Espaçamento",
     ),
-    "iconButtonTitle": MessageLookupByLibrary.simpleMessage("Mit Icon"),
-    "itemDetailsTitle": MessageLookupByLibrary.simpleMessage("Artikeldetails"),
+    "iconButtonTitle": MessageLookupByLibrary.simpleMessage("Com Ícone"),
+    "itemDetailsTitle": MessageLookupByLibrary.simpleMessage(
+      "Detalhes do Artigo",
+    ),
     "itemTitle": m2,
-    "itemsTitle": MessageLookupByLibrary.simpleMessage("Beispielartikel"),
+    "itemsTitle": MessageLookupByLibrary.simpleMessage("Artigos de Exemplo"),
     "launchedAt": m3,
-    "launchesTitle": MessageLookupByLibrary.simpleMessage("Starts"),
+    "launchesTitle": MessageLookupByLibrary.simpleMessage("Lançamentos"),
     "lightGoldThemeTitle": MessageLookupByLibrary.simpleMessage(
-      "Helles Gold-Design",
+      "Tema Dourado Claro",
     ),
     "lightMintThemeTitle": MessageLookupByLibrary.simpleMessage(
-      "Helles Mint-Design",
+      "Tema Menta Claro",
     ),
-    "lightThemeTitle": MessageLookupByLibrary.simpleMessage("Helles Design"),
+    "lightThemeTitle": MessageLookupByLibrary.simpleMessage("Tema Claro"),
     "missionTitle": m4,
-    "newsScreen": MessageLookupByLibrary.simpleMessage("Nachrichten"),
+    "newsScreen": MessageLookupByLibrary.simpleMessage("Notícias"),
     "rocket": m5,
-    "settingsTitle": MessageLookupByLibrary.simpleMessage("Einstellungen"),
-    "systemThemeTitle": MessageLookupByLibrary.simpleMessage("Systemdesign"),
-    "tabHome": MessageLookupByLibrary.simpleMessage("Startseite"),
-    "tabSettings": MessageLookupByLibrary.simpleMessage("Einstellungen"),
-    "themeTitle": MessageLookupByLibrary.simpleMessage("Design"),
+    "settingsTitle": MessageLookupByLibrary.simpleMessage("Configurações"),
+    "systemThemeTitle": MessageLookupByLibrary.simpleMessage("Tema do Sistema"),
+    "tabHome": MessageLookupByLibrary.simpleMessage("Início"),
+    "tabSettings": MessageLookupByLibrary.simpleMessage("Configurações"),
+    "themeTitle": MessageLookupByLibrary.simpleMessage("Tema"),
     "transparentButtonTitle": MessageLookupByLibrary.simpleMessage(
-      "Transparent",
+      "Transparente",
     ),
   };
 }

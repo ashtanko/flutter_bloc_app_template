@@ -8,9 +8,9 @@
   "@itemsTitle": {
     "description": "The title of the sample items"
   },
-  "messagesTitle": "Messages",
-  "@messagesTitle": {
-    "description": "The title of the messages screen"
+  "emailsTitle": "Emails",
+  "@emailsTitle": {
+    "description": "The title of the emails screen"
   },
   "launchesTitle": "Launches",
   "@launchesTitle": {
@@ -24,6 +24,36 @@
   "@settingsTitle": {
     "description": "The title of the settings"
   },
+  "missionTitle": "Mission: {mission}",
+  "@missionTitle": {
+    "description": "The mission launch item label",
+    "placeholders": {
+      "mission": {}
+    }
+  },
+  "launchedAt": "Launched at: {launchedAt}",
+  "@launchedAt": {
+    "description": "Launched at item label",
+    "placeholders": {
+      "launchedAt": {}
+    }
+  },
+  "rocket": "Rocket: {rocketName} ({rocketType})",
+  "@rocket": {
+    "description": "Rocket item label",
+    "placeholders": {
+      "rocketName": {},
+      "rocketType": {}
+    }
+  },
+  "daysSinceTodayTitle": "{days} days ago",
+  "@daysSinceTodayTitle": {
+    "description": "Shows how many days ago from today"
+  },
+  "daysFromTodayTitle": "In {days} days",
+  "@daysFromTodayTitle": {
+    "description": "Shows how many days from today"
+  },
   "themeTitle": "Theme",
   "@themeTitle": {},
   "systemThemeTitle": "System Theme",
@@ -32,19 +62,14 @@
   "@lightThemeTitle": {},
   "darkThemeTitle": "Dark Theme",
   "@darkThemeTitle": {},
-
   "lightGoldThemeTitle": "Light Gold",
   "@lightGoldThemeTitle": {},
-
   "darkGoldThemeTitle": "Dark Gold",
   "@darkGoldThemeTitle": {},
-
   "lightMintThemeTitle": "Light Mint",
   "@lightMintThemeTitle": {},
-
   "darkMintThemeTitle": "Dark Mint",
   "@darkMintThemeTitle": {},
-
   "experimentalThemeTitle": "Experimental Theme",
   "@experimentalThemeTitle": {},
   "itemDetailsTitle": "Item Details",

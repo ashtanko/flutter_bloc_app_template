@@ -7,7 +7,7 @@ part 'network_launch_model.g.dart';
 @freezed
 abstract class NetworkLaunchModel with _$NetworkLaunchModel {
   const factory NetworkLaunchModel({
-    @JsonKey(name: '_id') required String id,
+    @JsonKey(name: '_id') String? id,
     @JsonKey(name: 'mission_name') String? missionName,
     @TimestampSerializer()
     @JsonKey(name: 'launch_date_utc')

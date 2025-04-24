@@ -16,7 +16,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$NetworkLaunchModel {
   @JsonKey(name: '_id')
-  String get id;
+  String? get id;
   @JsonKey(name: 'mission_name')
   String? get missionName;
   @TimestampSerializer()
@@ -73,7 +73,7 @@ abstract mixin class $NetworkLaunchModelCopyWith<$Res> {
       _$NetworkLaunchModelCopyWithImpl;
   @useResult
   $Res call(
-      {@JsonKey(name: '_id') String id,
+      {@JsonKey(name: '_id') String? id,
       @JsonKey(name: 'mission_name') String? missionName,
       @TimestampSerializer()
       @JsonKey(name: 'launch_date_utc')
@@ -99,7 +99,7 @@ class _$NetworkLaunchModelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? missionName = freezed,
     Object? launchDate = freezed,
     Object? rocket = freezed,
@@ -107,10 +107,10 @@ class _$NetworkLaunchModelCopyWithImpl<$Res>
     Object? links = freezed,
   }) {
     return _then(_self.copyWith(
-      id: null == id
+      id: freezed == id
           ? _self.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       missionName: freezed == missionName
           ? _self.missionName
           : missionName // ignore: cast_nullable_to_non_nullable
@@ -167,7 +167,7 @@ class _$NetworkLaunchModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _NetworkLaunchModel extends NetworkLaunchModel {
   const _NetworkLaunchModel(
-      {@JsonKey(name: '_id') required this.id,
+      {@JsonKey(name: '_id') this.id,
       @JsonKey(name: 'mission_name') this.missionName,
       @TimestampSerializer() @JsonKey(name: 'launch_date_utc') this.launchDate,
       @JsonKey(name: 'rocket') this.rocket,
@@ -179,7 +179,7 @@ class _NetworkLaunchModel extends NetworkLaunchModel {
 
   @override
   @JsonKey(name: '_id')
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'mission_name')
   final String? missionName;
@@ -247,7 +247,7 @@ abstract mixin class _$NetworkLaunchModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: '_id') String id,
+      {@JsonKey(name: '_id') String? id,
       @JsonKey(name: 'mission_name') String? missionName,
       @TimestampSerializer()
       @JsonKey(name: 'launch_date_utc')
@@ -275,7 +275,7 @@ class __$NetworkLaunchModelCopyWithImpl<$Res>
   @override
   @pragma('vm:prefer-inline')
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? missionName = freezed,
     Object? launchDate = freezed,
     Object? rocket = freezed,
@@ -283,10 +283,10 @@ class __$NetworkLaunchModelCopyWithImpl<$Res>
     Object? links = freezed,
   }) {
     return _then(_NetworkLaunchModel(
-      id: null == id
+      id: freezed == id
           ? _self.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       missionName: freezed == missionName
           ? _self.missionName
           : missionName // ignore: cast_nullable_to_non_nullable

@@ -20,7 +20,18 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
-  static String m0(id) => "Sample Item ${id}";
+  static String m0(days) => "In ${days} days";
+
+  static String m1(days) => "${days} days ago";
+
+  static String m2(id) => "Sample Item ${id}";
+
+  static String m3(launchedAt) => "Launched at: ${launchedAt}";
+
+  static String m4(mission) => "Mission: ${mission}";
+
+  static String m5(rocketName, rocketType) =>
+      "Rocket: ${rocketName} (${rocketType})";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -34,6 +45,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "darkGoldThemeTitle": MessageLookupByLibrary.simpleMessage("Dark Gold"),
     "darkMintThemeTitle": MessageLookupByLibrary.simpleMessage("Dark Mint"),
     "darkThemeTitle": MessageLookupByLibrary.simpleMessage("Dark Theme"),
+    "daysFromTodayTitle": m0,
+    "daysSinceTodayTitle": m1,
     "disabledButtonTitle": MessageLookupByLibrary.simpleMessage("Disabled"),
     "disabledRoundedButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Disabled Rounded",
@@ -41,6 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "disabledWithIconButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Disabled With Icon",
     ),
+    "emailsTitle": MessageLookupByLibrary.simpleMessage("Emails"),
     "emptyList": MessageLookupByLibrary.simpleMessage("Empty list"),
     "enabledButtonTitle": MessageLookupByLibrary.simpleMessage("Enabled"),
     "error": MessageLookupByLibrary.simpleMessage("Error"),
@@ -52,14 +66,16 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "iconButtonTitle": MessageLookupByLibrary.simpleMessage("With Icon"),
     "itemDetailsTitle": MessageLookupByLibrary.simpleMessage("Item Details"),
-    "itemTitle": m0,
+    "itemTitle": m2,
     "itemsTitle": MessageLookupByLibrary.simpleMessage("Sample Items"),
+    "launchedAt": m3,
     "launchesTitle": MessageLookupByLibrary.simpleMessage("Launches"),
     "lightGoldThemeTitle": MessageLookupByLibrary.simpleMessage("Light Gold"),
     "lightMintThemeTitle": MessageLookupByLibrary.simpleMessage("Light Mint"),
     "lightThemeTitle": MessageLookupByLibrary.simpleMessage("Light Theme"),
-    "messagesTitle": MessageLookupByLibrary.simpleMessage("Messages"),
+    "missionTitle": m4,
     "newsScreen": MessageLookupByLibrary.simpleMessage("News"),
+    "rocket": m5,
     "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
     "systemThemeTitle": MessageLookupByLibrary.simpleMessage("System Theme"),
     "tabHome": MessageLookupByLibrary.simpleMessage("Home"),

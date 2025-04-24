@@ -1,31 +1,21 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_app_template/bloc/theme/app_theme.dart';
 import 'package:flutter_bloc_app_template/features/settings/settings.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/index.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
+
+import '../../bloc/utils.dart';
 
 class MockThemeCubit extends MockCubit<AppTheme> implements ThemeCubit {}
 
 extension on WidgetTester {
-  Future<void> pumpSettings(ThemeCubit themeCubit) {
-    return pumpWidget(
-      MaterialApp(
-        localizationsDelegates: [
-          const AppLocalizationDelegate(),
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate
-        ],
-        locale: const Locale('en'),
-        home: BlocProvider.value(
-          value: themeCubit,
-          child: const SettingsScreen(),
-        ),
-      ),
+  Future<void> pumpSettings(ThemeCubit themeCubit) async {
+    await pumpLocalizedWidgetWithBloc<ThemeCubit>(
+      bloc: themeCubit,
+      child: const SettingsScreen(),
+      locale: const Locale('en'),
     );
   }
 }
@@ -87,15 +77,35 @@ void main() {
     verify(() => themeCubit.updateTheme(newThemeState)).called(1);
   }
 
+  Future<void> expectWithLocale(
+    WidgetTester tester, {
+    required String expectedText,
+    String locale = 'en',
+  }) async {
+    when(() => themeCubit.state).thenReturn(AppTheme.dark);
+    when(() => themeCubit.themeMode).thenReturn(ThemeMode.dark);
+
+    await tester.pumpLocalizedWidgetWithBloc<ThemeCubit>(
+      bloc: themeCubit,
+      child: const SettingsScreen(),
+      locale: Locale(locale),
+    );
+
+    await tester.pump();
+    expect(find.text(expectedText), findsOneWidget);
+  }
+
   group('Settings Screen Tests', () {
-    testWidgets('renders settings title', (tester) async {
-      when(() => themeCubit.state).thenReturn(AppTheme.dark);
-      when(() => themeCubit.themeMode).thenReturn(ThemeMode.dark);
-
-      await tester.pumpSettings(themeCubit);
-      await tester.pump();
-
-      expect(find.text('Settings'), findsOneWidget);
+    <String, String>{
+      'en': 'Settings',
+      'pt': 'Configurações',
+      'de': 'Einstellungen',
+    }.forEach((locale, expectedTitle) async {
+      testWidgets('renders "$expectedTitle" for locale "$locale"',
+          (tester) async {
+        await expectWithLocale(tester,
+            locale: locale, expectedText: expectedTitle);
+      });
     });
 
     testWidgets('render setting list', (tester) async {
@@ -173,16 +183,6 @@ void main() {
       );
     });
 
-    // testWidgets('change to system theme', (tester) async {
-    //   verifyThemeChange(
-    //     tester: tester,
-    //     widgetTitle: 'System Theme',
-    //     prevThemeState: AppTheme.dark,
-    //     themeMode: ThemeMode.dark,
-    //     newThemeState: AppTheme.system,
-    //   );
-    // });
-
     testWidgets('change to light theme theme', (tester) async {
       verifyThemeChange(
         tester: tester,
@@ -222,15 +222,5 @@ void main() {
         newThemeState: AppTheme.lightMint,
       );
     });
-
-    // testWidgets('change to Dark Gold theme theme', (tester) async {
-    //   verifyThemeChange(
-    //     tester: tester,
-    //     widgetTitle: 'Dark Gold',
-    //     prevThemeState: AppTheme.light,
-    //     themeMode: ThemeMode.dark,
-    //     newThemeState: AppTheme.darkGold,
-    //   );
-    // });
   });
 }

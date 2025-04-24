@@ -12,7 +12,7 @@ class EmailListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          title: Text(S.of(context).messagesTitle),
+          title: Text(S.of(context).emailsTitle),
         ),
         body: RefreshIndicator(
           onRefresh: () async {

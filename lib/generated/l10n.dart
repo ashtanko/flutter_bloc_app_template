@@ -75,12 +75,12 @@ class S {
     );
   }
 
-  /// `Messages`
-  String get messagesTitle {
+  /// `Emails`
+  String get emailsTitle {
     return Intl.message(
-      'Messages',
-      name: 'messagesTitle',
-      desc: 'The title of the messages screen',
+      'Emails',
+      name: 'emailsTitle',
+      desc: 'The title of the emails screen',
       args: [],
     );
   }
@@ -112,6 +112,56 @@ class S {
       name: 'settingsTitle',
       desc: 'The title of the settings',
       args: [],
+    );
+  }
+
+  /// `Mission: {mission}`
+  String missionTitle(Object mission) {
+    return Intl.message(
+      'Mission: $mission',
+      name: 'missionTitle',
+      desc: 'The mission launch item label',
+      args: [mission],
+    );
+  }
+
+  /// `Launched at: {launchedAt}`
+  String launchedAt(Object launchedAt) {
+    return Intl.message(
+      'Launched at: $launchedAt',
+      name: 'launchedAt',
+      desc: 'Launched at item label',
+      args: [launchedAt],
+    );
+  }
+
+  /// `Rocket: {rocketName} ({rocketType})`
+  String rocket(Object rocketName, Object rocketType) {
+    return Intl.message(
+      'Rocket: $rocketName ($rocketType)',
+      name: 'rocket',
+      desc: 'Rocket item label',
+      args: [rocketName, rocketType],
+    );
+  }
+
+  /// `{days} days ago`
+  String daysSinceTodayTitle(Object days) {
+    return Intl.message(
+      '$days days ago',
+      name: 'daysSinceTodayTitle',
+      desc: 'Shows how many days ago from today',
+      args: [days],
+    );
+  }
+
+  /// `In {days} days`
+  String daysFromTodayTitle(Object days) {
+    return Intl.message(
+      'In $days days',
+      name: 'daysFromTodayTitle',
+      desc: 'Shows how many days from today',
+      args: [days],
     );
   }
 
@@ -333,6 +383,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
     return const <Locale>[
       Locale.fromSubtags(languageCode: 'en'),
       Locale.fromSubtags(languageCode: 'de'),
+      Locale.fromSubtags(languageCode: 'pt'),
     ];
   }
 

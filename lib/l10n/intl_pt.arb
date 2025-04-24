@@ -1,0 +1,105 @@
+{
+  "@@locale": "pt",
+  "appTitle": "flutter_bloc_app_template",
+  "@appTitle": {
+    "description": "O título do aplicativo"
+  },
+  "itemsTitle": "Artigos de Exemplo",
+  "@itemsTitle": {
+    "description": "O título dos artigos de exemplo"
+  },
+  "emailsTitle": "E-mails",
+  "@emailsTitle": {
+    "description": "O título da tela de e-mails"
+  },
+  "launchesTitle": "Lançamentos",
+  "@launchesTitle": {
+    "description": "O título da tela de lançamentos"
+  },
+  "itemTitle": "Artigo de Exemplo {id}",
+  "@itemTitle": {
+    "description": "O título do artigo"
+  },
+  "settingsTitle": "Configurações",
+  "@settingsTitle": {
+    "description": "O título das configurações"
+  },
+  "missionTitle": "Missão: {mission}",
+  "@missionTitle": {
+    "description": "O rótulo do item de lançamento da missão",
+    "placeholders": {
+      "mission": {}
+    }
+  },
+  "launchedAt": "Lançado em: {launchedAt}",
+  "@launchedAt": {
+    "description": "Rótulo do item 'Lançado em'",
+    "placeholders": {
+      "launchedAt": {}
+    }
+  },
+  "rocket": "Foguete: {rocketName} ({rocketType})",
+  "@rocket": {
+    "description": "Rótulo do item de foguete",
+    "placeholders": {
+      "rocketName": {},
+      "rocketType": {}
+    }
+  },
+  "daysSinceTodayTitle": "Há {days} dias",
+  "@daysSinceTodayTitle": {
+    "description": "Mostra quantos dias se passaram desde hoje"
+  },
+  "daysFromTodayTitle": "Em {days} dias",
+  "@daysFromTodayTitle": {
+    "description": "Mostra quantos dias a partir de hoje"
+  },
+  "themeTitle": "Tema",
+  "@themeTitle": {},
+  "systemThemeTitle": "Tema do Sistema",
+  "@systemThemeTitle": {},
+  "lightThemeTitle": "Tema Claro",
+  "@lightThemeTitle": {},
+  "darkThemeTitle": "Tema Escuro",
+  "@darkThemeTitle": {},
+  "lightGoldThemeTitle": "Tema Dourado Claro",
+  "@lightGoldThemeTitle": {},
+  "darkGoldThemeTitle": "Tema Dourado Escuro",
+  "@darkGoldThemeTitle": {},
+  "lightMintThemeTitle": "Tema Menta Claro",
+  "@lightMintThemeTitle": {},
+  "darkMintThemeTitle": "Tema Menta Escuro",
+  "@darkMintThemeTitle": {},
+  "itemDetailsTitle": "Detalhes do Artigo",
+  "@itemDetailsTitle": {
+    "description": "O título da tela de detalhes do artigo"
+  },
+  "error": "Erro",
+  "@error": {},
+  "emptyList": "Lista Vazia",
+  "@emptyList": {},
+  "tabHome": "Início",
+  "@tabHome": {},
+  "tabSettings": "Configurações",
+  "@tabSettings": {},
+  "newsScreen": "Notícias",
+  "@newsScreen": {},
+  "disabledButtonTitle": "Desativado",
+  "@disabledButtonTitle": {},
+  "disabledRoundedButtonTitle": "Desativado com Bordas Arredondadas",
+  "@disabledRoundedButtonTitle": {},
+  "disabledWithIconButtonTitle": "Desativado com Ícone",
+  "@disabledWithIconButtonTitle": {},
+  "enabledButtonTitle": "Ativado",
+  "@enabledButtonTitle": {},
+  "borderRadiusButtonTitle": "Raio da Borda",
+  "@borderRadiusButtonTitle": {},
+  "borderSideButtonTitle": "Lado da Borda",
+  "@borderSideButtonTitle": {},
+  "iconButtonTitle": "Com Ícone",
+  "@iconButtonTitle": {},
+  "iconAndPaddingButtonTitle": "Com Ícone e Espaçamento",
+  "@iconAndPaddingButtonTitle": {},
+  "transparentButtonTitle": "Transparente",
+  "@transparentButtonTitle": {}
+}
