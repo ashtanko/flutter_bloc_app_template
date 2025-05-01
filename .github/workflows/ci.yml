@@ -127,9 +127,9 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
-      - uses: futureware-tech/simulator-action@v2
+      - uses: futureware-tech/simulator-action@v4
         with:
-          model: iPhone 14 Pro Max
+          model: 'iPhone 8'
 
       # Pre-building the app serves two purposes:
       # 1. Verifies that the app builds successfully before running integration tests.
