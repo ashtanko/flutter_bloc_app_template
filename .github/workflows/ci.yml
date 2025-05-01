@@ -60,26 +60,13 @@ jobs:
       - name: Create Android emulator
         uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 33
+          api-level: 30
           target: google_apis
           arch: x86_64
           profile: Nexus 6
           emulator-options: "-no-window -gpu swiftshader_indirect"
           disable-animations: true
-          script: echo "Emulator started"
-
-      - name: Wait for emulator to fully boot
-        run: |
-          adb wait-for-device
-          boot_completed=""
-          until [[ "$boot_completed" == "1" ]]; do
-          boot_completed=$(adb shell getprop sys.boot_completed | tr -d '\r')
-          echo "Waiting for emulator to boot..."
-          sleep 5
-          done
-
-      - name: Run integration test with flavor
-        run: flutter test integration_test/app_test.dart --flavor dev
+          script: flutter test integration_test/app_test.dart --flavor dev
 
       - name: Install lcov
         run: sudo apt-get install -y lcov
