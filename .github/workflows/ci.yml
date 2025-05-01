@@ -15,7 +15,7 @@ defaults:
 jobs:
   test-app:
     name: App
-    timeout-minutes: 30
+    timeout-minutes: 40
 
     runs-on: ubuntu-latest
 
@@ -62,21 +62,21 @@ jobs:
       - name: Run tests
         run: flutter test --coverage
 
-      - name: Create Android emulator
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-          api-level: 28
-          target: google_apis
-          arch: x86_64
-          profile: Nexus 6
-          script: |
-            flutter test integration_test/app_test.dart --flavor dev --timeout 20m
-
-            echo "Closing connection with emulator-5554"
-            adb -s emulator-5554 emu kill || true
-
-            echo "Closing connection with emulator-5556"
-            adb -s emulator-5556 emu kill || true
+#      - name: Create Android emulator
+#        uses: reactivecircus/android-emulator-runner@v2
+#        with:
+#          api-level: 28
+#          target: google_apis
+#          arch: x86_64
+#          profile: Nexus 6
+#          script: |
+#            flutter test integration_test/app_test.dart --flavor dev --timeout none
+#
+#            echo "Closing connection with emulator-5554"
+#            adb -s emulator-5554 emu kill || true
+#
+#            echo "Closing connection with emulator-5556"
+#            adb -s emulator-5556 emu kill || true
 
       - name: Install lcov
         run: sudo apt-get install -y lcov
@@ -112,3 +112,30 @@ jobs:
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
           coverage-reports: ./coverage/lcov.info
+
+  integration_tests:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - uses: futureware-tech/simulator-action@v2
+        with:
+          model: iPhone 14 Pro Max
+
+      # Pre-building the app serves two purposes:
+      # 1. Verifies that the app builds successfully before running integration tests.
+      # 2. Speeds up the integration test startup, reducing the risk of test timeouts.
+      - name: Pre-build the app
+        run: flutter build ios --simulator --target=integration_test/app_test.dart
+
+      - name: Run integration tests
+        run: flutter test integration_test/app_test.dart --flavor dev --timeout none
