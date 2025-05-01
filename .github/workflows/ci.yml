@@ -64,14 +64,11 @@ jobs:
       - name: Create Android emulator
         uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 30
+          api-level: 28
           target: google_apis
           arch: x86_64
           profile: Nexus 6
           script: |
-            chmod +x ./scripts/run_avd.sh
-            ./scripts/run_avd.sh
-
             flutter test integration_test/app_test.dart --flavor dev
 
             echo "Closing connection with emulator-5554"
