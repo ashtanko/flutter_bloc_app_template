@@ -57,6 +57,22 @@ jobs:
       - name: Run tests
         run: flutter test --coverage
 
+      - name: Create Android emulator
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 33
+          target: google_apis
+          arch: x86_64
+          profile: Nexus 6
+          script: flutter test integration_test/app_test.dart --flavor dev
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: integration-test-results
+          path: build/
+
       - name: Install lcov
         run: sudo apt-get install -y lcov
 
