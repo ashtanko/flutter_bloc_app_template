@@ -15,6 +15,7 @@ defaults:
 jobs:
   test-app:
     name: App
+    timeout-minutes: 30
 
     runs-on: ubuntu-latest
 
@@ -69,7 +70,7 @@ jobs:
           arch: x86_64
           profile: Nexus 6
           script: |
-            flutter test integration_test/app_test.dart --flavor dev
+            flutter test integration_test/app_test.dart --flavor dev --timeout 20m
 
             echo "Closing connection with emulator-5554"
             adb -s emulator-5554 emu kill || true
