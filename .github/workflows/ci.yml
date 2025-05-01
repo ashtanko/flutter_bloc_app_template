@@ -36,23 +36,23 @@ jobs:
       - name: Download pub dependencies
         run: flutter pub get
 
-#      - name: Pub Global
-#        run: dart pub global activate flutter_gen
+      #      - name: Pub Global
+      #        run: dart pub global activate flutter_gen
 
-#      - name: Build runner
-#        run: flutter packages pub run build_runner build --delete-conflicting-outputs
+      #      - name: Build runner
+      #        run: flutter packages pub run build_runner build --delete-conflicting-outputs
 
-#      - name: Generate intl
-#        run: flutter pub run intl_utils:generate
+      #      - name: Generate intl
+      #        run: flutter pub run intl_utils:generate
 
-#      - name: Run fluttergen
-#        run: fluttergen -c pubspec.yaml
+      #      - name: Run fluttergen
+      #        run: fluttergen -c pubspec.yaml
 
       - name: Run analyzer
         run: flutter analyze
 
-#      - name: Run Dart code metrics
-#        run: flutter pub run dart_code_metrics:metrics analyze lib
+      #      - name: Run Dart code metrics
+      #        run: flutter pub run dart_code_metrics:metrics analyze lib
 
       - name: Run tests
         run: flutter test --coverage
@@ -64,7 +64,25 @@ jobs:
           target: google_apis
           arch: x86_64
           profile: Nexus 6
-          script: flutter test integration_test/app_test.dart --flavor dev
+          emulator-options: "-no-window -gpu swiftshader_indirect"
+          disable-animations: true
+          script: echo "Emulator started"
+
+      - name: Wait for emulator to fully boot
+        run: |
+          adb wait-for-device
+          boot_completed=""
+          until [[ "$boot_completed" == "1" ]]; do
+          boot_completed=$(adb shell getprop sys.boot_completed | tr -d '\r')
+          echo "Waiting for emulator to boot..."
+          sleep 5
+          done
+
+      - name: Run integration test with flavor
+        run: flutter test integration_test/app_test.dart --flavor dev
+
+      - name: Install lcov
+        run: sudo apt-get install -y lcov
 
       - name: Upload test results
         if: always()
@@ -95,5 +113,5 @@ jobs:
       - name: Run codacy-coverage-reporter
         uses: codacy/codacy-coverage-reporter-action@v1
         with:
-            project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
-            coverage-reports: ./coverage/lcov.info
+          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          coverage-reports: ./coverage/lcov.info
