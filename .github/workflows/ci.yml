@@ -8,11 +8,15 @@ on:
   pull_request:
     branches: [ main ]
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
   test-app:
     name: App
 
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
@@ -64,9 +68,17 @@ jobs:
           target: google_apis
           arch: x86_64
           profile: Nexus 6
-          emulator-options: "-no-window -gpu swiftshader_indirect"
-          disable-animations: true
-          script: flutter test integration_test/app_test.dart --flavor dev
+          script: |
+            chmod +x ./scripts/run_avd.sh
+            ./scripts/run_avd.sh
+
+            flutter test integration_test/app_test.dart --flavor dev
+
+            echo "Closing connection with emulator-5554"
+            adb -s emulator-5554 emu kill || true
+
+            echo "Closing connection with emulator-5556"
+            adb -s emulator-5556 emu kill || true
 
       - name: Install lcov
         run: sudo apt-get install -y lcov
