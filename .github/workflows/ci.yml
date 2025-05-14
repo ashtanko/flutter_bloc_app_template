@@ -130,6 +130,7 @@ jobs:
       - uses: futureware-tech/simulator-action@v4
         with:
           model: 'iPhone 16 Pro'
+          wait_for_boot: true
 
       # Pre-building the app serves two purposes:
       # 1. Verifies that the app builds successfully before running integration tests.
