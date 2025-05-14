@@ -138,4 +138,4 @@ jobs:
         run: flutter build ios --simulator --target=integration_test/app_test.dart --flavor dev
 
       - name: Run integration tests
-        run: flutter test integration_test/app_test.dart --flavor dev --timeout none
+        run: flutter test integration_test/app_test.dart --flavor dev --timeout 1h
