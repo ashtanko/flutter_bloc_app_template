@@ -20,7 +20,7 @@ dependencies:
   json_annotation: ^4.9.0
   shared_preferences: ^2.5.2
   dio: ^5.8.0+1
-  intl: ^0.19.0
+  intl: ^0.20.2
   google_fonts: ^6.2.1
   #analyzer: ^2.7.0
   freezed_annotation: ^3.0.0
