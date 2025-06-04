@@ -67,7 +67,7 @@ jobs:
         run: lcov --remove coverage/lcov.info 'lib/routers/router.dart' -o coverage/lcov.info --ignore-errors unused
 
       - name: Check Code Coverage
-        uses: VeryGoodOpenSource/very_good_coverage@v1.2.0
+        uses: VeryGoodOpenSource/very_good_coverage@v1.2.1
         with:
           path: coverage/lcov.info
           min_coverage: 59
