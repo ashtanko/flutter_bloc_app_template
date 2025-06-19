@@ -9,11 +9,11 @@ Map<AppTheme, ThemeData> getThemeData(MaterialTheme theme) {
     AppTheme.system: theme.yellowLight(),
     AppTheme.light: theme.yellowLight(),
     AppTheme.lightGold: theme.orangeLight(),
-    AppTheme.lightMint: theme.yellowLightMediumContrast(),
+    AppTheme.lightMint: theme.brownLight(),
     AppTheme.dark: theme.yellowDark(),
     AppTheme.darkGold: theme.orangeDark(),
-    AppTheme.darkMint: theme.yellowDarkMediumContrast(),
-    AppTheme.experimental: theme.yellowDarkMediumContrast(),
+    AppTheme.darkMint: theme.brownDark(),
+    AppTheme.experimental: theme.yellowDark(),
   };
 
   return themeData;
