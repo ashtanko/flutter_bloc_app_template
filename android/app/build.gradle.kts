@@ -31,6 +31,17 @@ android {
         versionName = flutter.versionName
     }
 
+//    buildTypes {
+//        release {
+//            signingConfig = signingConfigs.debug
+//            applicationVariants.all { variant ->
+//                variant.outputs.all {
+//                    outputFileName = "${variant.buildType.name}-${variant.versionName}.apk"
+//                }
+//            }
+//        }
+//    }
+
     flavorDimensions += "version"
     productFlavors {
         create("dev") {
