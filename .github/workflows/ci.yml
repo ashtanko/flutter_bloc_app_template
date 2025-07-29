@@ -2,11 +2,11 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
     paths-ignore:
       - '**/README.md'
   pull_request:
-    branches: [main]
+    branches: [ main ]
 
 defaults:
   run:
@@ -96,7 +96,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        api-level: [31]
+        api-level: [ 31 ]
 
     steps:
       - name: Checkout
@@ -123,31 +123,3 @@ jobs:
           script: |
             flutter pub get
             flutter test integration_test --flavor dev --timeout 1h
-
-#  integration_tests:
-#    runs-on: macos-latest
-#    steps:
-#      - name: Checkout code
-#        uses: actions/checkout@v3
-#
-#      - name: Set up Flutter
-#        uses: subosito/flutter-action@v2
-#        with:
-#          channel: stable
-#
-#      - name: Install dependencies
-#        run: flutter pub get
-#
-#      - uses: futureware-tech/simulator-action@v4
-#        with:
-#          model: 'iPhone 16 Pro'
-#          wait_for_boot: true
-#
-#      # Pre-building the app serves two purposes:
-#      # 1. Verifies that the app builds successfully before running integration tests.
-#      # 2. Speeds up the integration test startup, reducing the risk of test timeouts.
-#      - name: Pre-build the app
-#        run: flutter build ios --simulator --target=integration_test/app_test.dart --flavor dev
-#
-#      - name: Run integration tests
-#        run: flutter test integration_test/app_test.dart --flavor dev --timeout 1h
