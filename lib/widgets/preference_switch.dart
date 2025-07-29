@@ -24,7 +24,7 @@ class PreferenceSwitch extends StatelessWidget {
 
   static void _defaultOnClick() {}
 
-  static Future<void> _defaultOnSwitchClick(isChecked) async {}
+  static Future<void> _defaultOnSwitchClick(bool isChecked) async {}
 
   @override
   Widget build(BuildContext context) {

@@ -61,4 +61,4 @@ force_upgrade:
 
 # Run integration test
 integration_test:
-	flutter test integration_test/app_test.dart --flavor dev
+	flutter test integration_test --flavor dev
