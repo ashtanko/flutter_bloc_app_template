@@ -2,11 +2,11 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
     paths-ignore:
       - '**/README.md'
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 defaults:
   run:
@@ -15,9 +15,8 @@ defaults:
 jobs:
   test-app:
     name: App
-    timeout-minutes: 40
-
     runs-on: ubuntu-latest
+    timeout-minutes: 40
 
     steps:
       - name: Checkout
@@ -34,49 +33,18 @@ jobs:
       - name: Cache pub dependencies
         uses: actions/cache@v4
         with:
-          path: ${{ env.FLUTTER_HOME }}/.pub-cache
+          path: ${{ env.HOME }}/.pub-cache
           key: ${{ runner.os }}-pub-${{ hashFiles('**/pubspec.lock') }}
           restore-keys: ${{ runner.os }}-pub-
 
       - name: Download pub dependencies
         run: flutter pub get
 
-      #      - name: Pub Global
-      #        run: dart pub global activate flutter_gen
-
-      #      - name: Build runner
-      #        run: flutter packages pub run build_runner build --delete-conflicting-outputs
-
-      #      - name: Generate intl
-      #        run: flutter pub run intl_utils:generate
-
-      #      - name: Run fluttergen
-      #        run: fluttergen -c pubspec.yaml
-
       - name: Run analyzer
         run: flutter analyze
 
-      #      - name: Run Dart code metrics
-      #        run: flutter pub run dart_code_metrics:metrics analyze lib
-
       - name: Run tests
         run: flutter test --coverage
-
-#      - name: Create Android emulator
-#        uses: reactivecircus/android-emulator-runner@v2
-#        with:
-#          api-level: 28
-#          target: google_apis
-#          arch: x86_64
-#          profile: Nexus 6
-#          script: |
-#            flutter test integration_test/app_test.dart --flavor dev --timeout none
-#
-#            echo "Closing connection with emulator-5554"
-#            adb -s emulator-5554 emu kill || true
-#
-#            echo "Closing connection with emulator-5556"
-#            adb -s emulator-5556 emu kill || true
 
       - name: Install lcov
         run: sudo apt-get install -y lcov
@@ -85,58 +53,101 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: integration-test-results
+          name: unit-test-results
           path: build/
 
-      - name: Install lcov
-        run: sudo apt-get install -y lcov
-
-      - name: Remove generated files from code coverage report
-        run: lcov --remove coverage/lcov.info 'lib/*/*.gen.dart' 'lib/generated/*.dart' 'lib/generated/*/*.dart' 'lib/di/*.dart' '**/lib/constants/' 'lib/constants/*.dart' -o coverage/lcov.info --ignore-errors unused
-
-      - name: Remove router from code coverage report
-        run: lcov --remove coverage/lcov.info 'lib/routers/router.dart' -o coverage/lcov.info --ignore-errors unused
+      - name: Clean coverage report
+        run: |
+          lcov --remove coverage/lcov.info \
+            'lib/**.gen.dart' \
+            'lib/generated/**' \
+            'lib/di/**' \
+            'lib/constants/**' \
+            'lib/routers/router.dart' \
+            -o coverage/lcov.info \
+            --ignore-errors unused
 
       - name: Check Code Coverage
         uses: VeryGoodOpenSource/very_good_coverage@v3.0.0
         with:
           path: coverage/lcov.info
           min_coverage: 59
-          exclude: '**/*.g.dart **/*.gen.dart **/lib/di/ lib/generated/ **/lib/generated/ lib/di/*.dart **/lib/constants/ lib/constants/*.dart/ lib/routers/router.dart'
+          exclude: |
+            **/*.g.dart
+            **/*.gen.dart
+            lib/di/**
+            lib/generated/**
+            lib/constants/**
+            lib/routers/router.dart
 
-      - name: Upload coverage to codecov
+      - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v5
 
-      - name: Run codacy-coverage-reporter
+      - name: Codacy Coverage Reporter
         uses: codacy/codacy-coverage-reporter-action@v1
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
           coverage-reports: ./coverage/lcov.info
 
-  integration_tests:
-    runs-on: macos-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+  integration-tests:
+    name: Flutter Integration Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: true
+      matrix:
+        api-level: [22, 26, 31]
 
-      - name: Set up Flutter
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          channel: stable
+          flutter-version: stable
 
-      - name: Install dependencies
-        run: flutter pub get
+      - name: Enable KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
 
-      - uses: futureware-tech/simulator-action@v4
+      - name: Setup Android emulator and run integration tests
+        uses: reactivecircus/android-emulator-runner@v2
         with:
-          model: 'iPhone 16 Pro'
-          wait_for_boot: true
+          api-level: ${{ matrix.api-level }}
+          arch: x86_64
+          target: google_apis
+          profile: Nexus 6
+          script: |
+            flutter pub get
+            flutter test integration_test --flavor dev --timeout 1h
 
-      # Pre-building the app serves two purposes:
-      # 1. Verifies that the app builds successfully before running integration tests.
-      # 2. Speeds up the integration test startup, reducing the risk of test timeouts.
-      - name: Pre-build the app
-        run: flutter build ios --simulator --target=integration_test/app_test.dart --flavor dev
-
-      - name: Run integration tests
-        run: flutter test integration_test/app_test.dart --flavor dev --timeout 1h
+#  integration_tests:
+#    runs-on: macos-latest
+#    steps:
+#      - name: Checkout code
+#        uses: actions/checkout@v3
+#
+#      - name: Set up Flutter
+#        uses: subosito/flutter-action@v2
+#        with:
+#          channel: stable
+#
+#      - name: Install dependencies
+#        run: flutter pub get
+#
+#      - uses: futureware-tech/simulator-action@v4
+#        with:
+#          model: 'iPhone 16 Pro'
+#          wait_for_boot: true
+#
+#      # Pre-building the app serves two purposes:
+#      # 1. Verifies that the app builds successfully before running integration tests.
+#      # 2. Speeds up the integration test startup, reducing the risk of test timeouts.
+#      - name: Pre-build the app
+#        run: flutter build ios --simulator --target=integration_test/app_test.dart --flavor dev
+#
+#      - name: Run integration tests
+#        run: flutter test integration_test/app_test.dart --flavor dev --timeout 1h
