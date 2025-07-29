@@ -7,6 +7,7 @@ extension LaunchResourceExtension on NetworkLaunchModel {
   LaunchResource toResource() {
     return LaunchResource(
       id: id ?? '',
+      flightNumber: flightNumber ?? 1,
       missionName: missionName,
       launchDays: launchDate?.formatDateWithDays(),
       launchTime: launchDate.toFormattedTime(),
@@ -39,9 +40,16 @@ extension LinksResourceExtension on NetworkLaunchLinksModel {
 }
 
 @immutable
+class LaunchFullResource extends Equatable {
+  @override
+  List<Object?> get props => [];
+}
+
+@immutable
 class LaunchResource extends Equatable {
   const LaunchResource({
     required this.id,
+    required this.flightNumber,
     this.missionName,
     this.launchDays,
     this.launchTime,
@@ -51,6 +59,7 @@ class LaunchResource extends Equatable {
   });
 
   final String id;
+  final int flightNumber;
   final String? missionName;
   final LaunchDays? launchDays;
   final String? launchTime;
@@ -60,6 +69,7 @@ class LaunchResource extends Equatable {
 
   LaunchResource copyWith({
     String? id,
+    int? flightNumber,
     String? missionName,
     LaunchDays? launchDays,
     String? launchTime,
@@ -69,6 +79,7 @@ class LaunchResource extends Equatable {
   }) {
     return LaunchResource(
       id: id ?? this.id,
+      flightNumber: flightNumber ?? this.flightNumber,
       missionName: missionName ?? this.missionName,
       launchDays: launchDays ?? this.launchDays,
       launchTime: launchTime ?? this.launchTime,
@@ -81,6 +92,7 @@ class LaunchResource extends Equatable {
   @override
   List<Object?> get props => [
         id,
+        flightNumber,
         missionName,
         launchDays,
         launchTime,

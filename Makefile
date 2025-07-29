@@ -52,4 +52,4 @@ force_upgrade:
 	flutter update-packages --force-upgrade
 
 integration_test:
-    flutter test integration_test/app_test.dart --flavor dev
+	flutter test integration_test/app_test.dart --flavor dev

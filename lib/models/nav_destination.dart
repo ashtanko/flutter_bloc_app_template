@@ -5,6 +5,7 @@ class NavDestination {
     required this.screen,
     required this.label,
     required this.icon,
+    required this.key,
     this.selectedIcon,
     this.child,
   });
@@ -14,4 +15,5 @@ class NavDestination {
   final Widget icon;
   final Widget? selectedIcon;
   final Widget? child;
+  final Key key;
 }

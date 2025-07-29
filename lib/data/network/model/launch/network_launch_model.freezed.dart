@@ -17,6 +17,8 @@ T _$identity<T>(T value) => value;
 mixin _$NetworkLaunchModel {
   @JsonKey(name: '_id')
   String? get id;
+  @JsonKey(name: 'flight_number')
+  int? get flightNumber;
   @JsonKey(name: 'mission_name')
   String? get missionName;
   @TimestampSerializer()
@@ -46,6 +48,8 @@ mixin _$NetworkLaunchModel {
         (other.runtimeType == runtimeType &&
             other is NetworkLaunchModel &&
             (identical(other.id, id) || other.id == id) &&
+            (identical(other.flightNumber, flightNumber) ||
+                other.flightNumber == flightNumber) &&
             (identical(other.missionName, missionName) ||
                 other.missionName == missionName) &&
             (identical(other.launchDate, launchDate) ||
@@ -57,12 +61,12 @@ mixin _$NetworkLaunchModel {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, id, missionName, launchDate, rocket, success, links);
+  int get hashCode => Object.hash(runtimeType, id, flightNumber, missionName,
+      launchDate, rocket, success, links);
 
   @override
   String toString() {
-    return 'NetworkLaunchModel(id: $id, missionName: $missionName, launchDate: $launchDate, rocket: $rocket, success: $success, links: $links)';
+    return 'NetworkLaunchModel(id: $id, flightNumber: $flightNumber, missionName: $missionName, launchDate: $launchDate, rocket: $rocket, success: $success, links: $links)';
   }
 }
 
@@ -74,6 +78,7 @@ abstract mixin class $NetworkLaunchModelCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: '_id') String? id,
+      @JsonKey(name: 'flight_number') int? flightNumber,
       @JsonKey(name: 'mission_name') String? missionName,
       @TimestampSerializer()
       @JsonKey(name: 'launch_date_utc')
@@ -100,6 +105,7 @@ class _$NetworkLaunchModelCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
+    Object? flightNumber = freezed,
     Object? missionName = freezed,
     Object? launchDate = freezed,
     Object? rocket = freezed,
@@ -111,6 +117,10 @@ class _$NetworkLaunchModelCopyWithImpl<$Res>
           ? _self.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
+      flightNumber: freezed == flightNumber
+          ? _self.flightNumber
+          : flightNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
       missionName: freezed == missionName
           ? _self.missionName
           : missionName // ignore: cast_nullable_to_non_nullable
@@ -168,6 +178,7 @@ class _$NetworkLaunchModelCopyWithImpl<$Res>
 class _NetworkLaunchModel extends NetworkLaunchModel {
   const _NetworkLaunchModel(
       {@JsonKey(name: '_id') this.id,
+      @JsonKey(name: 'flight_number') this.flightNumber,
       @JsonKey(name: 'mission_name') this.missionName,
       @TimestampSerializer() @JsonKey(name: 'launch_date_utc') this.launchDate,
       @JsonKey(name: 'rocket') this.rocket,
@@ -180,6 +191,9 @@ class _NetworkLaunchModel extends NetworkLaunchModel {
   @override
   @JsonKey(name: '_id')
   final String? id;
+  @override
+  @JsonKey(name: 'flight_number')
+  final int? flightNumber;
   @override
   @JsonKey(name: 'mission_name')
   final String? missionName;
@@ -218,6 +232,8 @@ class _NetworkLaunchModel extends NetworkLaunchModel {
         (other.runtimeType == runtimeType &&
             other is _NetworkLaunchModel &&
             (identical(other.id, id) || other.id == id) &&
+            (identical(other.flightNumber, flightNumber) ||
+                other.flightNumber == flightNumber) &&
             (identical(other.missionName, missionName) ||
                 other.missionName == missionName) &&
             (identical(other.launchDate, launchDate) ||
@@ -229,12 +245,12 @@ class _NetworkLaunchModel extends NetworkLaunchModel {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, id, missionName, launchDate, rocket, success, links);
+  int get hashCode => Object.hash(runtimeType, id, flightNumber, missionName,
+      launchDate, rocket, success, links);
 
   @override
   String toString() {
-    return 'NetworkLaunchModel(id: $id, missionName: $missionName, launchDate: $launchDate, rocket: $rocket, success: $success, links: $links)';
+    return 'NetworkLaunchModel(id: $id, flightNumber: $flightNumber, missionName: $missionName, launchDate: $launchDate, rocket: $rocket, success: $success, links: $links)';
   }
 }
 
@@ -248,6 +264,7 @@ abstract mixin class _$NetworkLaunchModelCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: '_id') String? id,
+      @JsonKey(name: 'flight_number') int? flightNumber,
       @JsonKey(name: 'mission_name') String? missionName,
       @TimestampSerializer()
       @JsonKey(name: 'launch_date_utc')
@@ -276,6 +293,7 @@ class __$NetworkLaunchModelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   $Res call({
     Object? id = freezed,
+    Object? flightNumber = freezed,
     Object? missionName = freezed,
     Object? launchDate = freezed,
     Object? rocket = freezed,
@@ -287,6 +305,10 @@ class __$NetworkLaunchModelCopyWithImpl<$Res>
           ? _self.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
+      flightNumber: freezed == flightNumber
+          ? _self.flightNumber
+          : flightNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
       missionName: freezed == missionName
           ? _self.missionName
           : missionName // ignore: cast_nullable_to_non_nullable

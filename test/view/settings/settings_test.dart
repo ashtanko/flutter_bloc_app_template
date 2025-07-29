@@ -8,7 +8,8 @@ import 'package:mocktail/mocktail.dart';
 
 import '../../bloc/utils.dart';
 
-class MockThemeCubit extends MockCubit<AppTheme> implements ThemeCubit {}
+class MockThemeCubit extends MockCubit<AppThemeSettings>
+    implements ThemeCubit {}
 
 extension on WidgetTester {
   Future<void> pumpSettings(ThemeCubit themeCubit) async {
@@ -30,7 +31,7 @@ void main() {
   void assertThemeDialogCell(
     WidgetTester tester,
     String title,
-    AppTheme themeState,
+    AppThemeSettings themeState,
     ThemeMode themeMode,
   ) async {
     when(() => themeCubit.state).thenReturn(themeState);
@@ -44,23 +45,23 @@ void main() {
     expect(
       find.byWidgetPredicate(
         (widget) =>
-            widget is ThemeDialogCell<AppTheme> &&
+            widget is ThemeDialogCell<AppThemeSettings> &&
             widget.title == title &&
             widget.value == themeState,
       ),
       findsOneWidget,
     );
 
-    expect(find.widgetWithIcon(ThemeDialogCell<AppTheme>, Icons.check),
+    expect(find.widgetWithIcon(ThemeDialogCell<AppThemeSettings>, Icons.check),
         findsOneWidget);
   }
 
   void verifyThemeChange({
     required WidgetTester tester,
     required String widgetTitle,
-    required AppTheme prevThemeState,
+    required AppThemeSettings prevThemeState,
     required ThemeMode themeMode,
-    required AppTheme newThemeState,
+    required AppThemeSettings newThemeState,
   }) async {
     when(() => themeCubit.state).thenReturn(prevThemeState);
     when(() => themeCubit.themeMode).thenReturn(themeMode);
@@ -70,7 +71,7 @@ void main() {
     await tester.tap(find.byIcon(Icons.palette));
     await tester.pumpAndSettle();
     await tester.tap(
-      find.widgetWithText(ThemeDialogCell<AppTheme>, widgetTitle),
+      find.widgetWithText(ThemeDialogCell<AppThemeSettings>, widgetTitle),
       warnIfMissed: true,
     );
 
@@ -82,7 +83,10 @@ void main() {
     required String expectedText,
     String locale = 'en',
   }) async {
-    when(() => themeCubit.state).thenReturn(AppTheme.dark);
+    when(() => themeCubit.state).thenReturn(AppThemeSettings(
+      darkTheme: DarkThemePreference(),
+      appTheme: AppTheme.dark,
+    ));
     when(() => themeCubit.themeMode).thenReturn(ThemeMode.dark);
 
     await tester.pumpLocalizedWidgetWithBloc<ThemeCubit>(
@@ -109,7 +113,10 @@ void main() {
     });
 
     testWidgets('render setting list', (tester) async {
-      when(() => themeCubit.state).thenReturn(AppTheme.dark);
+      when(() => themeCubit.state).thenReturn(AppThemeSettings(
+        darkTheme: DarkThemePreference(),
+        appTheme: AppTheme.dark,
+      ));
       when(() => themeCubit.themeMode).thenReturn(ThemeMode.dark);
 
       await tester.pumpSettings(themeCubit);
@@ -119,7 +126,10 @@ void main() {
     });
 
     testWidgets('render setting list items', (tester) async {
-      when(() => themeCubit.state).thenReturn(AppTheme.dark);
+      when(() => themeCubit.state).thenReturn(AppThemeSettings(
+        darkTheme: DarkThemePreference(),
+        appTheme: AppTheme.dark,
+      ));
       when(() => themeCubit.themeMode).thenReturn(ThemeMode.dark);
 
       await tester.pumpSettings(themeCubit);
@@ -132,7 +142,10 @@ void main() {
     });
 
     testWidgets('render bottom sheet dialog items', (tester) async {
-      when(() => themeCubit.state).thenReturn(AppTheme.dark);
+      when(() => themeCubit.state).thenReturn(AppThemeSettings(
+        darkTheme: DarkThemePreference(),
+        appTheme: AppTheme.dark,
+      ));
       when(() => themeCubit.themeMode).thenReturn(ThemeMode.dark);
 
       await tester.pumpSettings(themeCubit);
@@ -140,7 +153,7 @@ void main() {
       await tester.tap(find.byIcon(Icons.palette));
       await tester.pumpAndSettle();
 
-      expect(find.byType(ThemeDialogCell<AppTheme>), findsNWidgets(8));
+      expect(find.byType(ThemeDialogCell<AppThemeSettings>), findsNWidgets(8));
     });
 
     testWidgets('render bottom sheet dialog item for system theme',
@@ -148,7 +161,10 @@ void main() {
       assertThemeDialogCell(
         tester,
         'System Theme',
-        AppTheme.system,
+        AppThemeSettings(
+          darkTheme: DarkThemePreference(),
+          appTheme: AppTheme.system,
+        ),
         ThemeMode.system,
       );
     });
@@ -158,7 +174,10 @@ void main() {
       assertThemeDialogCell(
         tester,
         'Light Theme',
-        AppTheme.light,
+        AppThemeSettings(
+          darkTheme: DarkThemePreference(),
+          appTheme: AppTheme.light,
+        ),
         ThemeMode.light,
       );
     });
@@ -168,7 +187,10 @@ void main() {
       assertThemeDialogCell(
         tester,
         'Dark Theme',
-        AppTheme.dark,
+        AppThemeSettings(
+          darkTheme: DarkThemePreference(),
+          appTheme: AppTheme.dark,
+        ),
         ThemeMode.dark,
       );
     });
@@ -178,7 +200,10 @@ void main() {
       assertThemeDialogCell(
         tester,
         'Light Gold',
-        AppTheme.lightGold,
+        AppThemeSettings(
+          darkTheme: DarkThemePreference(),
+          appTheme: AppTheme.lightGold,
+        ),
         ThemeMode.light,
       );
     });
@@ -187,9 +212,15 @@ void main() {
       verifyThemeChange(
         tester: tester,
         widgetTitle: 'Light Theme',
-        prevThemeState: AppTheme.dark,
+        prevThemeState: AppThemeSettings(
+          darkTheme: DarkThemePreference(),
+          appTheme: AppTheme.dark,
+        ),
         themeMode: ThemeMode.dark,
-        newThemeState: AppTheme.light,
+        newThemeState: AppThemeSettings(
+          darkTheme: DarkThemePreference(),
+          appTheme: AppTheme.light,
+        ),
       );
     });
 
@@ -197,9 +228,15 @@ void main() {
       verifyThemeChange(
         tester: tester,
         widgetTitle: 'Dark Theme',
-        prevThemeState: AppTheme.light,
+        prevThemeState: AppThemeSettings(
+          darkTheme: DarkThemePreference(),
+          appTheme: AppTheme.light,
+        ),
         themeMode: ThemeMode.dark,
-        newThemeState: AppTheme.dark,
+        newThemeState: AppThemeSettings(
+          darkTheme: DarkThemePreference(),
+          appTheme: AppTheme.dark,
+        ),
       );
     });
 
@@ -207,9 +244,15 @@ void main() {
       verifyThemeChange(
         tester: tester,
         widgetTitle: 'Light Gold',
-        prevThemeState: AppTheme.light,
+        prevThemeState: AppThemeSettings(
+          darkTheme: DarkThemePreference(),
+          appTheme: AppTheme.light,
+        ),
         themeMode: ThemeMode.dark,
-        newThemeState: AppTheme.lightGold,
+        newThemeState: AppThemeSettings(
+          darkTheme: DarkThemePreference(),
+          appTheme: AppTheme.lightGold,
+        ),
       );
     });
 
@@ -217,9 +260,15 @@ void main() {
       verifyThemeChange(
         tester: tester,
         widgetTitle: 'Light Mint',
-        prevThemeState: AppTheme.light,
+        prevThemeState: AppThemeSettings(
+          darkTheme: DarkThemePreference(),
+          appTheme: AppTheme.light,
+        ),
         themeMode: ThemeMode.dark,
-        newThemeState: AppTheme.lightMint,
+        newThemeState: AppThemeSettings(
+          darkTheme: DarkThemePreference(),
+          appTheme: AppTheme.lightMint,
+        ),
       );
     });
   });

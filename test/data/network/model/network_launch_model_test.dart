@@ -6,6 +6,7 @@ void main() {
     test('fromJson should return a valid model', () {
       final json = {
         '_id': '123',
+        'flight_number': 1,
         'mission_name': 'Test Mission',
         'launch_date_utc': '2009-07-13T03:35:00.000Z',
         'rocket': {
@@ -26,6 +27,7 @@ void main() {
       final model = NetworkLaunchModel.fromJson(json);
 
       expect(model.id, '123');
+      expect(model.flightNumber, 1);
       expect(model.missionName, 'Test Mission');
       expect(model.launchDate, DateTime.parse('2009-07-13 03:35:00.000Z'));
       expect(model.rocket?.id, 'rocket123');
@@ -42,6 +44,7 @@ void main() {
     test('toJson should return a valid json', () {
       final model = const NetworkLaunchModel(
         id: '123',
+        flightNumber: 1,
         missionName: 'Test Mission',
         rocket: NetworkRocketModel(
           id: 'rocket123',
@@ -61,6 +64,7 @@ void main() {
       final json = model.toJson();
       final rocketJson = json['rocket'] as NetworkRocketModel;
       final linksJson = json['links'] as NetworkLaunchLinksModel;
+      expect(json['flight_number'], 1);
       expect(json['_id'], '123');
       expect(json['mission_name'], 'Test Mission');
       expect(rocketJson.id, 'rocket123');

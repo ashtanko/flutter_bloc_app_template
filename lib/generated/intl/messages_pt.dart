@@ -35,9 +35,20 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "aboutSettingsItem": MessageLookupByLibrary.simpleMessage("About"),
+    "aboutSettingsItemDescription": MessageLookupByLibrary.simpleMessage(
+      "Version, links, feedback",
+    ),
     "appTitle": MessageLookupByLibrary.simpleMessage(
       "flutter_bloc_app_template",
     ),
+    "appearanceSettingsItem": MessageLookupByLibrary.simpleMessage(
+      "Appearance",
+    ),
+    "appearanceSettingsItemDescription": MessageLookupByLibrary.simpleMessage(
+      "Dark theme dynamic color, languages",
+    ),
+    "appearanceTitle": MessageLookupByLibrary.simpleMessage("Aparência"),
     "borderRadiusButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Raio da Borda",
     ),
@@ -50,6 +61,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "darkMintThemeTitle": MessageLookupByLibrary.simpleMessage(
       "Tema Menta Escuro",
     ),
+    "darkThemeFollowSystemSettingsItemTitle":
+        MessageLookupByLibrary.simpleMessage("Padrão do sistema"),
+    "darkThemeOffSettingsItemTitle": MessageLookupByLibrary.simpleMessage(
+      "Claro",
+    ),
+    "darkThemeOnSettingsItemTitle": MessageLookupByLibrary.simpleMessage(
+      "Escuro",
+    ),
+    "darkThemeSettingsItemTitle": MessageLookupByLibrary.simpleMessage(
+      "Modo de tema",
+    ),
     "darkThemeTitle": MessageLookupByLibrary.simpleMessage("Tema Escuro"),
     "daysFromTodayTitle": m0,
     "daysSinceTodayTitle": m1,
@@ -59,6 +81,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "disabledWithIconButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Desativado com Ícone",
+    ),
+    "dynamicColorSettingsItemDescription": MessageLookupByLibrary.simpleMessage(
+      "Adaptar as cores do app ao papel de parede",
+    ),
+    "dynamicColorSettingsItemTitle": MessageLookupByLibrary.simpleMessage(
+      "Usar cores dinâmicas",
     ),
     "emailsTitle": MessageLookupByLibrary.simpleMessage("E-mails"),
     "emptyList": MessageLookupByLibrary.simpleMessage("Lista Vazia"),
@@ -93,5 +121,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "transparentButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Transparente",
     ),
+    "tryAgainButton": MessageLookupByLibrary.simpleMessage("Tentar novamente"),
   };
 }

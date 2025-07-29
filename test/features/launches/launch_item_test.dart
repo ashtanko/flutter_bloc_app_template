@@ -14,6 +14,7 @@ void main() {
     launchDays: Since('5'),
     links: LinksResource(missionPatchSmall: null),
     id: '',
+    flightNumber: 1,
   );
 
   testWidgets('renders LaunchItem with success icon and texts', (tester) async {

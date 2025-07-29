@@ -18,153 +18,165 @@ void main() {
     late ThemeStorage themeStorage;
     late ThemeRepository themeRepository;
     late MaterialTheme theme;
-    MockBuildContext mockContext;
+    late MockBuildContext mockContext;
 
     setUp(() async {
       WidgetsFlutterBinding.ensureInitialized();
       SharedPreferences.setMockInitialValues({});
-      final sharedPreferences = await SharedPreferences.getInstance();
-      themeStorage = SharedPreferencesThemeStorage(sharedPreferences);
+      final prefs = await SharedPreferences.getInstance();
+      themeStorage = SharedPreferencesThemeStorage(prefs);
       themeRepository = ThemeRepositoryImpl(themeStorage);
       cubit = ThemeCubit(themeRepository);
       mockContext = MockBuildContext();
-      var textTheme = createTextTheme(context: mockContext);
+      final textTheme = createTextTheme(context: mockContext);
       theme = MaterialTheme(textTheme);
     });
 
-    tearDown(() {
-      cubit.close();
-    });
+    tearDown(() => cubit.close());
 
-    test('Initial state is defaultTheme', () {
+    void verifyThemeChange({
+      required AppTheme themeState,
+      required ThemeMode themeMode,
+      required AppTheme expectedThemeState,
+    }) {
+      cubit.updateTheme(
+        AppThemeSettings(
+          darkTheme: DarkThemePreference(),
+          appTheme: themeState,
+        ),
+      );
+      expect(cubit.state.appTheme, expectedThemeState);
+    }
+
+    test('initial state is defaultTheme', () {
       expect(cubit.state, ThemeCubit.defaultTheme);
     });
 
     test('loadTheme emits saved theme', () async {
       await cubit.loadTheme();
-
-      expect(cubit.state, AppTheme.light);
+      expect(cubit.state.appTheme, AppTheme.light);
     });
 
-    test('themeMode returns appropriate ThemeMode', () {
-      cubit.updateTheme(AppTheme.light);
-      expect(cubit.themeMode, ThemeMode.light);
-      cubit.updateTheme(AppTheme.dark);
-      expect(cubit.themeMode, ThemeMode.dark);
-      cubit.updateTheme(AppTheme.system);
-      expect(cubit.themeMode, ThemeMode.system);
-      cubit.updateTheme(AppTheme.experimental);
-      expect(cubit.themeMode, ThemeMode.light);
+    group('themeMode returns correct ThemeMode for DarkThemePreference', () {
+      final defaultDark = DarkThemePreference();
+
+      test('off', () {
+        cubit.updateTheme(
+          AppThemeSettings(
+            darkTheme:
+                defaultDark.copyWith(darkThemeValue: DarkThemePreference.off),
+            appTheme: AppTheme.light,
+          ),
+        );
+        expect(cubit.themeMode, ThemeMode.light);
+      });
+
+      test('on', () {
+        cubit.updateTheme(
+          AppThemeSettings(
+            darkTheme:
+                defaultDark.copyWith(darkThemeValue: DarkThemePreference.on),
+            appTheme: AppTheme.light,
+          ),
+        );
+        expect(cubit.themeMode, ThemeMode.dark);
+      });
+
+      test('followSystem', () {
+        cubit.updateTheme(
+          AppThemeSettings(
+            darkTheme: defaultDark.copyWith(
+                darkThemeValue: DarkThemePreference.followSystem),
+            appTheme: AppTheme.light,
+          ),
+        );
+        expect(cubit.themeMode, ThemeMode.system);
+      });
     });
 
-    test('getDefaultTheme returns correct ThemeData', () {
-      cubit.updateTheme(AppTheme.light);
-      final themeData = getThemeData(theme);
-      expect(cubit.getDefaultTheme(theme), themeData[AppTheme.light]);
+    group('getDefaultTheme returns correct ThemeData', () {
+      final defaultDark = DarkThemePreference();
 
-      cubit.updateTheme(AppTheme.dark);
-      expect(cubit.getDefaultTheme(theme), themeData[AppTheme.dark]);
+      void testTheme(AppTheme appTheme) {
+        test(appTheme.name, () {
+          cubit.updateTheme(
+            AppThemeSettings(
+              darkTheme:
+                  defaultDark.copyWith(darkThemeValue: DarkThemePreference.off),
+              appTheme: appTheme,
+            ),
+          );
+          final themeData = getThemeData(theme);
+          expect(cubit.getDefaultTheme(theme), themeData[appTheme]);
+        });
+      }
 
-      cubit.updateTheme(AppTheme.lightGold);
-      expect(cubit.getDefaultTheme(theme), themeData[AppTheme.lightGold]);
-
-      cubit.updateTheme(AppTheme.lightMint);
-      expect(cubit.getDefaultTheme(theme), themeData[AppTheme.lightMint]);
-
-      cubit.updateTheme(AppTheme.darkGold);
-      expect(cubit.getDefaultTheme(theme), themeData[AppTheme.darkGold]);
-
-      cubit.updateTheme(AppTheme.darkMint);
-      expect(cubit.getDefaultTheme(theme), themeData[AppTheme.darkMint]);
-
-      cubit.updateTheme(AppTheme.system);
-      expect(cubit.getDefaultTheme(theme), themeData[AppTheme.system]);
-
-      cubit.updateTheme(AppTheme.experimental);
-      expect(cubit.getDefaultTheme(theme), themeData[AppTheme.experimental]);
+      for (final theme in AppTheme.values) {
+        testTheme(theme);
+      }
     });
 
-    test('setTheme saves the theme and emits', () {
+    test('setTheme saves and emits state', () {
       final newTheme = AppTheme.lightGold;
+      final settings = AppThemeSettings(
+        darkTheme: DarkThemePreference(),
+        appTheme: newTheme,
+      );
 
-      cubit.setTheme = newTheme;
-      expect(cubit.state, newTheme);
+      cubit.setTheme = settings;
+      expect(cubit.state.appTheme, newTheme);
     });
 
-    test('has initial value', () async {
-      expect(cubit.state, AppTheme.system);
-      expect(cubit.theme, AppTheme.system);
+    test('initial theme values are system', () {
+      expect(cubit.state.appTheme, AppTheme.system);
+      expect(cubit.theme.appTheme, AppTheme.system);
     });
 
-    blocTest<ThemeCubit, AppTheme>(
+    blocTest<ThemeCubit, AppThemeSettings>(
       'can change its state',
       build: () => cubit,
-      act: (cubit) => cubit.updateTheme(AppTheme.dark),
+      act: (cubit) => cubit.updateTheme(
+        AppThemeSettings(
+          darkTheme: DarkThemePreference().copyWith(
+            darkThemeValue: DarkThemePreference.off,
+          ),
+          appTheme: AppTheme.dark,
+        ),
+      ),
       expect: () => [
-        AppTheme.dark,
+        AppThemeSettings(
+          darkTheme: DarkThemePreference().copyWith(
+            darkThemeValue: DarkThemePreference.off,
+          ),
+          appTheme: AppTheme.dark,
+        ),
       ],
     );
 
-    test('has default light theme', () async {
+    test('returns yellow light theme by default', () {
       expect(cubit.getDefaultTheme(theme), theme.yellowLight());
     });
 
-    void verifyThemeChange(
-        {required AppTheme themeState,
-        required ThemeMode themeMode,
-        required AppTheme expectedThemeState}) {
-      cubit.updateTheme(themeState);
-      expect(cubit.themeMode, themeMode);
-      expect(cubit.state, expectedThemeState);
-    }
+    group('verifyThemeChange works for', () {
+      final cases = <AppTheme, ThemeMode>{
+        AppTheme.system: ThemeMode.system,
+        AppTheme.dark: ThemeMode.dark,
+        AppTheme.light: ThemeMode.light,
+        AppTheme.lightGold: ThemeMode.light,
+        AppTheme.lightMint: ThemeMode.light,
+        AppTheme.darkGold: ThemeMode.dark,
+        AppTheme.darkMint: ThemeMode.dark,
+      };
 
-    test('update to system theme correctly', () async {
-      verifyThemeChange(
-          themeState: AppTheme.system,
-          themeMode: ThemeMode.system,
-          expectedThemeState: AppTheme.system);
-    });
-
-    test('update to dark theme correctly', () async {
-      verifyThemeChange(
-          themeState: AppTheme.dark,
-          themeMode: ThemeMode.dark,
-          expectedThemeState: AppTheme.dark);
-    });
-
-    test('update to light theme correctly', () async {
-      verifyThemeChange(
-          themeState: AppTheme.light,
-          themeMode: ThemeMode.light,
-          expectedThemeState: AppTheme.light);
-    });
-
-    test('update to lightGold theme correctly', () async {
-      verifyThemeChange(
-          themeState: AppTheme.lightGold,
-          themeMode: ThemeMode.light,
-          expectedThemeState: AppTheme.lightGold);
-    });
-
-    test('update to lightMint theme correctly', () async {
-      verifyThemeChange(
-          themeState: AppTheme.lightMint,
-          themeMode: ThemeMode.light,
-          expectedThemeState: AppTheme.lightMint);
-    });
-
-    test('update to darkGold theme correctly', () async {
-      verifyThemeChange(
-          themeState: AppTheme.darkGold,
-          themeMode: ThemeMode.dark,
-          expectedThemeState: AppTheme.darkGold);
-    });
-
-    test('update to darkMint theme correctly', () async {
-      verifyThemeChange(
-          themeState: AppTheme.darkMint,
-          themeMode: ThemeMode.dark,
-          expectedThemeState: AppTheme.darkMint);
+      for (final entry in cases.entries) {
+        test(entry.key.name, () {
+          verifyThemeChange(
+            themeState: entry.key,
+            themeMode: entry.value,
+            expectedThemeState: entry.key,
+          );
+        });
+      }
     });
   });
 }

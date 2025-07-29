@@ -24,6 +24,54 @@
   "@settingsTitle": {
     "description": "The title of the settings"
   },
+  "appearanceTitle": "Appearance",
+  "@appearanceTitle": {
+    "description": "Title for appearance screen"
+  },
+  "dynamicColorSettingsItemTitle": "Use dynamic colors",
+  "@dynamicColorSettingsItemTitle": {
+    "description": "Title for enabling dynamic colors from wallpaper"
+  },
+  "dynamicColorSettingsItemDescription": "Adapt app colors to your wallpaper",
+  "@dynamicColorSettingsItemDescription": {
+    "description": "Description for dynamic color setting"
+  },
+  "darkThemeSettingsItemTitle": "Theme mode",
+  "@darkThemeSettingsItemTitle": {
+    "description": "Title for selecting light/dark/system theme"
+  },
+  "darkThemeOnSettingsItemTitle": "Dark",
+  "@darkThemeOnSettingsItemTitle": {
+    "description": "Dark theme option"
+  },
+  "darkThemeOffSettingsItemTitle": "Light",
+  "@darkThemeOffSettingsItemTitle": {
+    "description": "Light theme option"
+  },
+  "darkThemeFollowSystemSettingsItemTitle": "System default",
+  "@darkThemeFollowSystemSettingsItemTitle": {
+    "description": "Option to follow system theme"
+  },
+  "tryAgainButton": "Try Again",
+  "@tryAgainButton": {
+    "description": "Label for the retry button on error screens"
+  },
+  "appearanceSettingsItem": "Appearance",
+  "@appearanceSettingsItem": {
+    "description": "Title for appearance settings item"
+  },
+  "appearanceSettingsItemDescription": "Dark theme dynamic color, languages",
+  "@appearanceSettingsItemDescription": {
+    "description": "Description for appearance settings item"
+  },
+  "aboutSettingsItem": "About",
+  "@aboutSettingsItem": {
+    "description": "Title for about settings item"
+  },
+  "aboutSettingsItemDescription": "Version, links, feedback",
+  "@aboutSettingsItemDescription": {
+    "description": "Description for about settings item"
+  },
   "missionTitle": "Mission: {mission}",
   "@missionTitle": {
     "description": "The mission launch item label",

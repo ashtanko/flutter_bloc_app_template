@@ -115,6 +115,126 @@ class S {
     );
   }
 
+  /// `Appearance`
+  String get appearanceTitle {
+    return Intl.message(
+      'Appearance',
+      name: 'appearanceTitle',
+      desc: 'Title for appearance screen',
+      args: [],
+    );
+  }
+
+  /// `Use dynamic colors`
+  String get dynamicColorSettingsItemTitle {
+    return Intl.message(
+      'Use dynamic colors',
+      name: 'dynamicColorSettingsItemTitle',
+      desc: 'Title for enabling dynamic colors from wallpaper',
+      args: [],
+    );
+  }
+
+  /// `Adapt app colors to your wallpaper`
+  String get dynamicColorSettingsItemDescription {
+    return Intl.message(
+      'Adapt app colors to your wallpaper',
+      name: 'dynamicColorSettingsItemDescription',
+      desc: 'Description for dynamic color setting',
+      args: [],
+    );
+  }
+
+  /// `Theme mode`
+  String get darkThemeSettingsItemTitle {
+    return Intl.message(
+      'Theme mode',
+      name: 'darkThemeSettingsItemTitle',
+      desc: 'Title for selecting light/dark/system theme',
+      args: [],
+    );
+  }
+
+  /// `Dark`
+  String get darkThemeOnSettingsItemTitle {
+    return Intl.message(
+      'Dark',
+      name: 'darkThemeOnSettingsItemTitle',
+      desc: 'Dark theme option',
+      args: [],
+    );
+  }
+
+  /// `Light`
+  String get darkThemeOffSettingsItemTitle {
+    return Intl.message(
+      'Light',
+      name: 'darkThemeOffSettingsItemTitle',
+      desc: 'Light theme option',
+      args: [],
+    );
+  }
+
+  /// `System default`
+  String get darkThemeFollowSystemSettingsItemTitle {
+    return Intl.message(
+      'System default',
+      name: 'darkThemeFollowSystemSettingsItemTitle',
+      desc: 'Option to follow system theme',
+      args: [],
+    );
+  }
+
+  /// `Try Again`
+  String get tryAgainButton {
+    return Intl.message(
+      'Try Again',
+      name: 'tryAgainButton',
+      desc: 'Label for the retry button on error screens',
+      args: [],
+    );
+  }
+
+  /// `Appearance`
+  String get appearanceSettingsItem {
+    return Intl.message(
+      'Appearance',
+      name: 'appearanceSettingsItem',
+      desc: 'Title for appearance settings item',
+      args: [],
+    );
+  }
+
+  /// `Dark theme dynamic color, languages`
+  String get appearanceSettingsItemDescription {
+    return Intl.message(
+      'Dark theme dynamic color, languages',
+      name: 'appearanceSettingsItemDescription',
+      desc: 'Description for appearance settings item',
+      args: [],
+    );
+  }
+
+  /// `About`
+  String get aboutSettingsItem {
+    return Intl.message(
+      'About',
+      name: 'aboutSettingsItem',
+      desc: 'Title for about settings item',
+      args: [],
+    );
+  }
+
+  /// `Version, links, feedback`
+  String get aboutSettingsItemDescription {
+    return Intl.message(
+      'Version, links, feedback',
+      name: 'aboutSettingsItemDescription',
+      desc: 'Description for about settings item',
+      args: [],
+    );
+  }
+
   /// `Mission: {mission}`
   String missionTitle(Object mission) {
     return Intl.message(

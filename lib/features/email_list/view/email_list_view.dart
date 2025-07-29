@@ -22,7 +22,7 @@ class EmailListView extends StatelessWidget {
 
           if (state is EmailListEmpty) {
             return Center(
-              child: Text(S.of(context).emptyList),
+              child: Text(context.emptyList),
             );
           }
 
