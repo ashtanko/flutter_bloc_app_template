@@ -11,6 +11,7 @@ part 'launches_state.dart';
 class LaunchesBloc extends Bloc<LaunchesEvent, LaunchesState> {
   LaunchesBloc(this._repository) : super(const LaunchesState.loading()) {
     on<LaunchesLoadEvent>((event, emit) async {
+      emit(const LaunchesState.loading());
       try {
         final launches = await _repository.getLaunches(
           order: event.filter?.order?.value,

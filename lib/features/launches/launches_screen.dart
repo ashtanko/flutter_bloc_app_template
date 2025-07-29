@@ -4,9 +4,9 @@ import 'package:flutter_bloc_app_template/features/launches/bloc/launches_bloc.d
 import 'package:flutter_bloc_app_template/features/launches/widget/launch_item.dart'
     show LaunchItem;
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/index.dart';
 import 'package:flutter_bloc_app_template/models/launch.dart'
     show LaunchResource;
-import 'package:flutter_bloc_app_template/widgets/empty_widget.dart';
 
 class LaunchesScreen extends StatelessWidget {
   const LaunchesScreen({super.key});
@@ -14,7 +14,7 @@ class LaunchesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          title: Text(S.of(context).launchesTitle),
+          title: Text(context.launchesTitle),
         ),
         body: RefreshIndicator(
           onRefresh: () async {
@@ -37,16 +37,18 @@ class LaunchesList extends StatelessWidget {
         builder: (context, state) {
           switch (state) {
             case LaunchesLoadingState _:
-              return const Center(
-                child: CircularProgressIndicator(),
-              );
+              return const LoadingContent();
             case LaunchesSuccessState _:
               return LaunchesListContent(launches: state.launches);
             case LaunchesErrorState _:
-              return Text(S.of(context).error);
+              return ErrorContent(
+                onTryAgainClick: () {
+                  context.read<LaunchesBloc>().add(const LaunchesEvent.load());
+                },
+              );
             case LaunchesEmptyState _:
-              return Center(
-                child: Text(S.of(context).emptyList),
+              return EmptyContent(
+                content: S.of(context).emptyList,
               );
           }
 
@@ -68,6 +70,9 @@ class LaunchesListContent extends StatelessWidget {
         primary: false,
         itemBuilder: (context, index) => LaunchItem(
           launch: launches[index],
+          onClick: (launch) {
+            NavigationService.of(context).navigateTo(Routes.launch, launch);
+          },
         ),
         itemCount: launches.length,
       );

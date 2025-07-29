@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/index.dart';
 import 'package:flutter_bloc_app_template/models/launch.dart';
 
 class LaunchItem extends StatelessWidget {
@@ -58,7 +59,7 @@ class LaunchItem extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 8.0),
                     child: Text(
-                      S.of(context).launchedAt(launch.launchTime ?? '00:00'),
+                      context.launchedAt(launch.launchTime ?? '00:00'),
                       style: Theme.of(context).textTheme.labelLarge,
                       overflow: TextOverflow.ellipsis,
                     ),

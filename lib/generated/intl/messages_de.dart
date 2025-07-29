@@ -35,9 +35,20 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "aboutSettingsItem": MessageLookupByLibrary.simpleMessage("About"),
+    "aboutSettingsItemDescription": MessageLookupByLibrary.simpleMessage(
+      "Version, links, feedback",
+    ),
     "appTitle": MessageLookupByLibrary.simpleMessage(
       "flutter_bloc_app_template",
     ),
+    "appearanceSettingsItem": MessageLookupByLibrary.simpleMessage(
+      "Appearance",
+    ),
+    "appearanceSettingsItemDescription": MessageLookupByLibrary.simpleMessage(
+      "Dark theme dynamic color, languages",
+    ),
+    "appearanceTitle": MessageLookupByLibrary.simpleMessage("Darstellung"),
     "borderRadiusButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Abgerundete Ecken",
     ),
@@ -50,6 +61,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "darkMintThemeTitle": MessageLookupByLibrary.simpleMessage(
       "Dunkles Mint-Design",
     ),
+    "darkThemeFollowSystemSettingsItemTitle":
+        MessageLookupByLibrary.simpleMessage("Systemstandard"),
+    "darkThemeOffSettingsItemTitle": MessageLookupByLibrary.simpleMessage(
+      "Hell",
+    ),
+    "darkThemeOnSettingsItemTitle": MessageLookupByLibrary.simpleMessage(
+      "Dunkel",
+    ),
+    "darkThemeSettingsItemTitle": MessageLookupByLibrary.simpleMessage(
+      "Designmodus",
+    ),
     "darkThemeTitle": MessageLookupByLibrary.simpleMessage("Dunkles Design"),
     "daysFromTodayTitle": m0,
     "daysSinceTodayTitle": m1,
@@ -59,6 +81,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "disabledWithIconButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Deaktiviert mit Icon",
+    ),
+    "dynamicColorSettingsItemDescription": MessageLookupByLibrary.simpleMessage(
+      "App-Farben an das Hintergrundbild anpassen",
+    ),
+    "dynamicColorSettingsItemTitle": MessageLookupByLibrary.simpleMessage(
+      "Dynamische Farben verwenden",
     ),
     "emailsTitle": MessageLookupByLibrary.simpleMessage("E-Mails"),
     "emptyList": MessageLookupByLibrary.simpleMessage("Leere Liste"),
@@ -91,5 +119,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "transparentButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Transparent",
     ),
+    "tryAgainButton": MessageLookupByLibrary.simpleMessage("Erneut versuchen"),
   };
 }

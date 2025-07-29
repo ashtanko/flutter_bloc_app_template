@@ -14,6 +14,10 @@ void main() {
     app.main([]);
     await tester.pumpAndSettle();
 
+    // expect(find.text('Launches'), findsOneWidget);
+    expect(find.text('Emails'), findsOneWidget);
+    expect(find.text('Settings'), findsOneWidget);
+
     expect(find.textContaining('Mission'), findsAtLeast(1));
 
     await tester.fling(find.byType(ListView), const Offset(0, -300), 1000);

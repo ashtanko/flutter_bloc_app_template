@@ -11,6 +11,8 @@ abstract class LaunchesRepository {
     int? launchSuccess,
     String? order,
   });
+
+  Future<LaunchFullResource> getLaunch(int flightNumber);
 }
 
 class LaunchesRepositoryImpl implements LaunchesRepository {
@@ -43,5 +45,11 @@ class LaunchesRepositoryImpl implements LaunchesRepository {
         throw Exception('Loading');
       },
     );
+  }
+
+  @override
+  Future<LaunchFullResource> getLaunch(int flightNumber) {
+    // TODO: implement getLaunch
+    throw UnimplementedError();
   }
 }

@@ -35,15 +35,37 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "aboutSettingsItem": MessageLookupByLibrary.simpleMessage("About"),
+    "aboutSettingsItemDescription": MessageLookupByLibrary.simpleMessage(
+      "Version, links, feedback",
+    ),
     "appTitle": MessageLookupByLibrary.simpleMessage(
       "flutter_bloc_app_template",
     ),
+    "appearanceSettingsItem": MessageLookupByLibrary.simpleMessage(
+      "Appearance",
+    ),
+    "appearanceSettingsItemDescription": MessageLookupByLibrary.simpleMessage(
+      "Dark theme dynamic color, languages",
+    ),
+    "appearanceTitle": MessageLookupByLibrary.simpleMessage("Appearance"),
     "borderRadiusButtonTitle": MessageLookupByLibrary.simpleMessage(
       "BorderRadius",
     ),
     "borderSideButtonTitle": MessageLookupByLibrary.simpleMessage("BorderSide"),
     "darkGoldThemeTitle": MessageLookupByLibrary.simpleMessage("Dark Gold"),
     "darkMintThemeTitle": MessageLookupByLibrary.simpleMessage("Dark Mint"),
+    "darkThemeFollowSystemSettingsItemTitle":
+        MessageLookupByLibrary.simpleMessage("System default"),
+    "darkThemeOffSettingsItemTitle": MessageLookupByLibrary.simpleMessage(
+      "Light",
+    ),
+    "darkThemeOnSettingsItemTitle": MessageLookupByLibrary.simpleMessage(
+      "Dark",
+    ),
+    "darkThemeSettingsItemTitle": MessageLookupByLibrary.simpleMessage(
+      "Theme mode",
+    ),
     "darkThemeTitle": MessageLookupByLibrary.simpleMessage("Dark Theme"),
     "daysFromTodayTitle": m0,
     "daysSinceTodayTitle": m1,
@@ -53,6 +75,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "disabledWithIconButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Disabled With Icon",
+    ),
+    "dynamicColorSettingsItemDescription": MessageLookupByLibrary.simpleMessage(
+      "Adapt app colors to your wallpaper",
+    ),
+    "dynamicColorSettingsItemTitle": MessageLookupByLibrary.simpleMessage(
+      "Use dynamic colors",
     ),
     "emailsTitle": MessageLookupByLibrary.simpleMessage("Emails"),
     "emptyList": MessageLookupByLibrary.simpleMessage("Empty list"),
@@ -84,5 +112,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "transparentButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Transparent",
     ),
+    "tryAgainButton": MessageLookupByLibrary.simpleMessage("Try Again"),
   };
 }

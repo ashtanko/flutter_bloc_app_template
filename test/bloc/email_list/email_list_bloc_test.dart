@@ -7,43 +7,31 @@ import '../../helpers/data.dart';
 import '../../mocks.dart';
 
 void main() {
-  group('Email List Event Tests', () {
-    group('EmailListFetched', () {
-      test('supports value comparison', () {
-        expect(EmailListFetched(), EmailListFetched());
-      });
+  group('EmailListEvent', () {
+    test('EmailListFetched supports value comparison', () {
+      expect(EmailListFetched(), EmailListFetched());
     });
   });
 
-  group('Email List State Tests', () {
-    group('EmailListInitial', () {
-      test('supports value comparison', () {
-        expect(EmailListInitial(), EmailListInitial());
-      });
+  group('EmailListState', () {
+    test('EmailListInitial supports value comparison', () {
+      expect(EmailListInitial(), EmailListInitial());
     });
 
-    group('EmailListLoading', () {
-      test('supports value comparison', () {
-        expect(EmailListLoading(), EmailListLoading());
-      });
+    test('EmailListLoading supports value comparison', () {
+      expect(EmailListLoading(), EmailListLoading());
     });
 
-    group('EmailListLoaded', () {
-      test('supports value comparison', () {
-        expect(EmailListLoaded(mockEmails), EmailListLoaded(mockEmails));
-      });
+    test('EmailListLoaded supports value comparison', () {
+      expect(EmailListLoaded(mockEmails), EmailListLoaded(mockEmails));
     });
 
-    group('EmailListEmpty', () {
-      test('supports value comparison', () {
-        expect(EmailListEmpty(), EmailListEmpty());
-      });
+    test('EmailListEmpty supports value comparison', () {
+      expect(EmailListEmpty(), EmailListEmpty());
     });
 
-    group('EmailListLoadFailure', () {
-      test('supports value comparison', () {
-        expect(EmailListLoadFailure(), EmailListLoadFailure());
-      });
+    test('EmailListLoadFailure supports value comparison', () {
+      expect(EmailListLoadFailure(), EmailListLoadFailure());
     });
   });
 
@@ -58,62 +46,56 @@ void main() {
 
     tearDown(() => bloc.close());
 
-    test('state returns correct state initially', () {
+    test('should have EmailListInitial as the initial state', () {
       expect(bloc.state, EmailListInitial());
     });
 
-    group('fetchData', () {
+    group('EmailListFetched event', () {
       blocTest<EmailListBloc, EmailListState>(
-        'fetches data correctly',
+        'should emit [Loading, Loaded] when data is fetched successfully',
         build: () {
           when(repository.loadData()).thenAnswer(
-            (_) => Future.value(mockEmails),
+            (_) async => mockEmails,
           );
           return bloc;
         },
-        act: (bloc) async => bloc.add(
-          EmailListFetched(),
-        ),
-        verify: (_) => verify(repository.loadData()).called(1),
+        act: (bloc) => bloc.add(EmailListFetched()),
         expect: () => [
           EmailListLoading(),
           EmailListLoaded(mockEmails),
         ],
+        verify: (_) => verify(repository.loadData()).called(1),
       );
 
       blocTest<EmailListBloc, EmailListState>(
-        'fetches data correctly but list is empty',
+        'should emit [Loading, Empty] when fetched list is empty',
         build: () {
           when(repository.loadData()).thenAnswer(
-            (_) => Future.value([]),
+            (_) async => [],
           );
           return bloc;
         },
-        act: (bloc) async => bloc.add(
-          EmailListFetched(),
-        ),
-        verify: (_) => verify(repository.loadData()).called(1),
+        act: (bloc) => bloc.add(EmailListFetched()),
         expect: () => [
           EmailListLoading(),
           EmailListEmpty(),
         ],
+        verify: (_) => verify(repository.loadData()).called(1),
       );
 
       blocTest<EmailListBloc, EmailListState>(
-        'can throw an exception',
+        'should emit [Loading, LoadFailure] when fetching throws an exception',
         build: () {
           when(repository.loadData())
               .thenThrow(Exception('something went wrong'));
           return bloc;
         },
-        act: (bloc) async => bloc.add(
-          EmailListFetched(),
-        ),
-        verify: (_) => verify(repository.loadData()).called(1),
+        act: (bloc) => bloc.add(EmailListFetched()),
         expect: () => [
           EmailListLoading(),
           EmailListLoadFailure(),
         ],
+        verify: (_) => verify(repository.loadData()).called(1),
       );
     });
   });

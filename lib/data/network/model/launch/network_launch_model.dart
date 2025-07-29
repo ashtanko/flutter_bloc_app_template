@@ -8,6 +8,7 @@ part 'network_launch_model.g.dart';
 abstract class NetworkLaunchModel with _$NetworkLaunchModel {
   const factory NetworkLaunchModel({
     @JsonKey(name: '_id') String? id,
+    @JsonKey(name: 'flight_number') int? flightNumber,
     @JsonKey(name: 'mission_name') String? missionName,
     @TimestampSerializer()
     @JsonKey(name: 'launch_date_utc')

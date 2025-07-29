@@ -1,10 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_bloc_app_template/features/appearance/appearance_screen.dart';
+import 'package:flutter_bloc_app_template/features/appearance/dark_theme_screen.dart';
+import 'package:flutter_bloc_app_template/features/launch/launch_screen.dart';
 import 'package:flutter_bloc_app_template/index.dart';
 
 class Routes {
   static const app = 'home';
+  static const appearance = 'appearance';
+  static const darkTheme = 'darkTheme';
+  static const launch = 'launch';
 }
 
 final GlobalKey<NavigatorState> appNavigatorKey = GlobalKey<NavigatorState>();
@@ -12,6 +18,15 @@ final GlobalKey<NavigatorState> appNavigatorKey = GlobalKey<NavigatorState>();
 class NavigationService {
   final _appRoutes = {
     Routes.app: (_) => const MainScreen(),
+    Routes.appearance: (_) => const AppearanceScreen(),
+    Routes.darkTheme: (_) => const DarkThemeScreen(),
+    Routes.launch: (_) => const LaunchScreen(),
+  };
+
+  final Set<String> _animatedRoutes = {
+    Routes.appearance,
+    Routes.darkTheme,
+    Routes.launch,
   };
 
   // iOS: full screen routes pop up from the bottom and disappear vertically too
@@ -34,25 +49,59 @@ class NavigationService {
       return replace
           ? appNavigatorKey.currentState
               ?.pushReplacementNamed(routeName, arguments: arguments)
-          : appNavigatorKey.currentState
-              ?.pushNamed(routeName, arguments: arguments);
+          : appNavigatorKey.currentState?.pushNamed(
+              routeName,
+              arguments: arguments,
+            );
     }
   }
 
   Route<dynamic> onGenerateRoute(RouteSettings settings) {
-    return _appRoutes[settings.name!] != null
-        ? _cupertinoRoutes.contains(settings.name)
-            ? CupertinoPageRoute(
-                settings: settings,
-                builder: (_) => _appRoutes[settings.name]!(settings.arguments),
-                fullscreenDialog: _fullScreenRoutes.contains(settings.name),
-              )
-            : MaterialPageRoute(
-                settings: settings,
-                builder: (_) => _appRoutes[settings.name]!(settings.arguments),
-                fullscreenDialog: _fullScreenRoutes.contains(settings.name),
-              )
-        : MaterialPageRoute(builder: (_) => const SplashView());
+    final builder = _appRoutes[settings.name];
+    if (builder == null) {
+      return MaterialPageRoute(builder: (_) => const SplashView());
+    }
+
+    final isFullScreen = _fullScreenRoutes.contains(settings.name);
+    final isCupertino = _cupertinoRoutes.contains(settings.name);
+    final isAnimated = _animatedRoutes.contains(settings.name);
+
+    if (isAnimated) {
+      return PageRouteBuilder(
+        settings: settings,
+        pageBuilder: (context, animation, secondaryAnimation) =>
+            builder(settings.arguments),
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          const begin = Offset(1.0, 0.0); // Slide from right
+          const end = Offset.zero;
+          const curve = Curves.easeInOut;
+
+          final tween =
+              Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+          final offsetAnimation = animation.drive(tween);
+
+          return SlideTransition(
+            position: offsetAnimation,
+            child: child,
+          );
+        },
+        transitionDuration: const Duration(milliseconds: 400),
+      );
+    }
+
+    if (isCupertino) {
+      return CupertinoPageRoute(
+        settings: settings,
+        builder: (_) => builder(settings.arguments),
+        fullscreenDialog: isFullScreen,
+      );
+    }
+
+    return MaterialPageRoute(
+      settings: settings,
+      builder: (_) => builder(settings.arguments),
+      fullscreenDialog: isFullScreen,
+    );
   }
 
   Future<dynamic> pushAndRemoveAll(

@@ -24,6 +24,54 @@
   "@settingsTitle": {
     "description": "O título das configurações"
   },
+  "appearanceTitle": "Aparência",
+  "@appearanceTitle": {
+    "description": "Título da tela de aparência"
+  },
+  "dynamicColorSettingsItemTitle": "Usar cores dinâmicas",
+  "@dynamicColorSettingsItemTitle": {
+    "description": "Título para ativar cores dinâmicas do papel de parede"
+  },
+  "dynamicColorSettingsItemDescription": "Adaptar as cores do app ao papel de parede",
+  "@dynamicColorSettingsItemDescription": {
+    "description": "Descrição da configuração de cores dinâmicas"
+  },
+  "darkThemeSettingsItemTitle": "Modo de tema",
+  "@darkThemeSettingsItemTitle": {
+    "description": "Título para selecionar tema claro/escuro/sistema"
+  },
+  "darkThemeOnSettingsItemTitle": "Escuro",
+  "@darkThemeOnSettingsItemTitle": {
+    "description": "Opção de tema escuro"
+  },
+  "darkThemeOffSettingsItemTitle": "Claro",
+  "@darkThemeOffSettingsItemTitle": {
+    "description": "Opção de tema claro"
+  },
+  "darkThemeFollowSystemSettingsItemTitle": "Padrão do sistema",
+  "@darkThemeFollowSystemSettingsItemTitle": {
+    "description": "Opção para seguir o tema do sistema"
+  },
+  "tryAgainButton": "Tentar novamente",
+  "@tryAgainButton": {
+    "description": "Rótulo do botão de tentativa novamente em telas de erro"
+  },
+  "appearanceSettingsItem": "Appearance",
+  "@appearanceSettingsItem": {
+    "description": "Title for appearance settings item"
+  },
+  "appearanceSettingsItemDescription": "Dark theme dynamic color, languages",
+  "@appearanceSettingsItemDescription": {
+    "description": "Description for appearance settings item"
+  },
+  "aboutSettingsItem": "About",
+  "@aboutSettingsItem": {
+    "description": "Title for about settings item"
+  },
+  "aboutSettingsItemDescription": "Version, links, feedback",
+  "@aboutSettingsItemDescription": {
+    "description": "Description for about settings item"
+  },
   "missionTitle": "Missão: {mission}",
   "@missionTitle": {
     "description": "O rótulo do item de lançamento da missão",

@@ -9,6 +9,7 @@ part of 'network_launch_model.dart';
 _NetworkLaunchModel _$NetworkLaunchModelFromJson(Map<String, dynamic> json) =>
     _NetworkLaunchModel(
       id: json['_id'] as String?,
+      flightNumber: (json['flight_number'] as num?)?.toInt(),
       missionName: json['mission_name'] as String?,
       launchDate: const TimestampSerializer().fromJson(json['launch_date_utc']),
       rocket: json['rocket'] == null
@@ -24,6 +25,7 @@ _NetworkLaunchModel _$NetworkLaunchModelFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$NetworkLaunchModelToJson(_NetworkLaunchModel instance) =>
     <String, dynamic>{
       '_id': instance.id,
+      'flight_number': instance.flightNumber,
       'mission_name': instance.missionName,
       'launch_date_utc':
           const TimestampSerializer().toJson(instance.launchDate),

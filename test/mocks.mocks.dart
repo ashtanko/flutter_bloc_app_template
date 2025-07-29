@@ -3,15 +3,15 @@
 // Do not manually edit this file.
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'dart:async' as _i3;
+import 'dart:async' as _i4;
 
 import 'package:flutter/src/widgets/navigator.dart' as _i7;
-import 'package:flutter_bloc_app_template/models/email.dart' as _i4;
-import 'package:flutter_bloc_app_template/models/launch.dart' as _i6;
+import 'package:flutter_bloc_app_template/models/email.dart' as _i5;
+import 'package:flutter_bloc_app_template/models/launch.dart' as _i2;
 import 'package:flutter_bloc_app_template/repository/email_list_repository.dart'
-    as _i2;
+    as _i3;
 import 'package:flutter_bloc_app_template/repository/launches_repository.dart'
-    as _i5;
+    as _i6;
 import 'package:mockito/mockito.dart' as _i1;
 
 // ignore_for_file: type=lint
@@ -28,35 +28,41 @@ import 'package:mockito/mockito.dart' as _i1;
 // ignore_for_file: camel_case_types
 // ignore_for_file: subtype_of_sealed_class
 
+class _FakeLaunchFullResource_0 extends _i1.SmartFake
+    implements _i2.LaunchFullResource {
+  _FakeLaunchFullResource_0(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
+}
+
 /// A class which mocks [EmailListRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockEmailListRepository extends _i1.Mock
-    implements _i2.EmailListRepository {
+    implements _i3.EmailListRepository {
   MockEmailListRepository() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i3.Future<List<_i4.Email>> loadData() =>
+  _i4.Future<List<_i5.Email>> loadData() =>
       (super.noSuchMethod(
             Invocation.method(#loadData, []),
-            returnValue: _i3.Future<List<_i4.Email>>.value(<_i4.Email>[]),
+            returnValue: _i4.Future<List<_i5.Email>>.value(<_i5.Email>[]),
           )
-          as _i3.Future<List<_i4.Email>>);
+          as _i4.Future<List<_i5.Email>>);
 }
 
 /// A class which mocks [LaunchesRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockLaunchesRepository extends _i1.Mock
-    implements _i5.LaunchesRepository {
+    implements _i6.LaunchesRepository {
   MockLaunchesRepository() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i3.Future<List<_i6.LaunchResource>> getLaunches({
+  _i4.Future<List<_i2.LaunchResource>> getLaunches({
     bool? hasId = true,
     int? limit,
     int? offset,
@@ -73,11 +79,24 @@ class MockLaunchesRepository extends _i1.Mock
               #launchSuccess: launchSuccess,
               #order: order,
             }),
-            returnValue: _i3.Future<List<_i6.LaunchResource>>.value(
-              <_i6.LaunchResource>[],
+            returnValue: _i4.Future<List<_i2.LaunchResource>>.value(
+              <_i2.LaunchResource>[],
             ),
           )
-          as _i3.Future<List<_i6.LaunchResource>>);
+          as _i4.Future<List<_i2.LaunchResource>>);
+
+  @override
+  _i4.Future<_i2.LaunchFullResource> getLaunch(int? flightNumber) =>
+      (super.noSuchMethod(
+            Invocation.method(#getLaunch, [flightNumber]),
+            returnValue: _i4.Future<_i2.LaunchFullResource>.value(
+              _FakeLaunchFullResource_0(
+                this,
+                Invocation.method(#getLaunch, [flightNumber]),
+              ),
+            ),
+          )
+          as _i4.Future<_i2.LaunchFullResource>);
 }
 
 /// A class which mocks [NavigatorObserver].

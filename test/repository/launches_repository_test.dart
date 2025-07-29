@@ -37,6 +37,7 @@ void main() {
 final mockLaunches = [
   const LaunchResource(
     id: '1',
+    flightNumber: 1,
     missionName: 'Mission 1',
     launchDays: Since(
       '2021-10-01T00:00:00Z',
@@ -50,6 +51,7 @@ final mockLaunches = [
   ),
   const LaunchResource(
     id: '2',
+    flightNumber: 2,
     missionName: 'Mission 1',
     launchDays: Since(
       '2021-10-01T00:00:00Z',

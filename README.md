@@ -44,6 +44,8 @@ For example dev configuration for Android Studio looks like:
 <img src="/preview/config/dev.png" width="32%"/>
 </p>
 
+- dev: --flavor dev -t lib/main_dev.dart
+
 ## Android Screenshots
 <p align="left">
 <img src="/preview/android/launches_android_dark_theme.png" width="32%"/>

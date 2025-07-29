@@ -20,39 +20,40 @@ Map<AppTheme, ThemeData> getThemeData(MaterialTheme theme) {
 }
 
 /// Saves and loads information regarding the theme setting.
-class ThemeCubit extends Cubit<AppTheme> {
+class ThemeCubit extends Cubit<AppThemeSettings> {
   ThemeCubit(this.themeRepository) : super(defaultTheme);
 
   final ThemeRepository themeRepository;
 
-  static const defaultTheme = AppTheme.system;
+  static var defaultTheme = AppThemeSettings(
+    darkTheme: DarkThemePreference(
+      darkThemeValue: DarkThemePreference.followSystem,
+    ),
+    appTheme: AppTheme.system,
+  );
 
   Future<void> loadTheme() async {
     final savedTheme = await themeRepository.getTheme();
     emit(savedTheme);
   }
 
-  AppTheme get theme => state;
+  AppThemeSettings get theme => state;
 
-  set setTheme(AppTheme theme) {
-    themeRepository.saveTheme(theme);
+  set setTheme(AppThemeSettings theme) {
+    themeRepository.saveTheme(theme.appTheme);
     emit(theme);
   }
 
-  void updateTheme(AppTheme value) => setTheme = value;
+  void updateTheme(AppThemeSettings value) => setTheme = value;
 
   /// Returns appropriate theme mode
   ThemeMode get themeMode {
-    switch (state) {
-      case AppTheme.experimental:
-      case AppTheme.light:
-      case AppTheme.lightGold:
-      case AppTheme.lightMint:
-        return ThemeMode.light;
-      case AppTheme.dark:
-      case AppTheme.darkGold:
-      case AppTheme.darkMint:
+    switch (state.darkTheme.darkThemeValue) {
+      case DarkThemePreference.on:
         return ThemeMode.dark;
+      case DarkThemePreference.off:
+        return ThemeMode.light;
+      case DarkThemePreference.followSystem:
       default:
         return ThemeMode.system;
     }
@@ -61,7 +62,7 @@ class ThemeCubit extends Cubit<AppTheme> {
   /// Default theme
   ThemeData getDefaultTheme(MaterialTheme theme) {
     final themeData = getThemeData(theme);
-    switch (state) {
+    switch (state.appTheme) {
       case AppTheme.light:
         return themeData[AppTheme.light] ?? theme.yellowLight();
       case AppTheme.lightGold:
