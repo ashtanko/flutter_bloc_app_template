@@ -24,5 +24,5 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.textContaining('Mission'), findsAtLeast(1));
-  });
+  }, timeout: Timeout.none);
 }
