@@ -26,6 +26,7 @@ Just click on [![Use this template](https://img.shields.io/badge/-Use%20this%20t
 - CI Setup with GitHub Actions
 - Codecov Setup with GitHub Actions
 - Unit test coverage
+- Integration tests
 
 ## Configuration
 The template has 3 flavors:
