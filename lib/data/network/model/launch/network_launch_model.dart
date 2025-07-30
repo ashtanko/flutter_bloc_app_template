@@ -1,4 +1,4 @@
-import 'package:flutter_bloc_app_template/data/network/model/launch/timestamp_serializer.dart';
+import 'package:flutter_bloc_app_template/data/network/converter/timestamp_serializer.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'network_launch_model.freezed.dart';

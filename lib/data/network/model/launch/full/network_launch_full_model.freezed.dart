@@ -1,6 +1,5 @@
-// dart format width=80
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -15,27 +14,52 @@ T _$identity<T>(T value) => value;
 
 /// @nodoc
 mixin _$NetworkLaunchFullModel {
-  int get flightNumber;
+  @JsonKey(name: '_id')
+  String? get id;
+  @JsonKey(name: 'flight_number')
+  int? get flightNumber;
+  @JsonKey(name: 'mission_name')
   String? get missionName;
+  @JsonKey(name: 'mission_id')
   List<dynamic>? get missionId;
+  @JsonKey(name: 'upcoming')
   bool? get upcoming;
+  @JsonKey(name: 'launch_year')
   String? get launchYear;
+  @JsonKey(name: 'launch_date_unix')
   int? get launchDateUnix;
-  String? get launchDateUtc;
+  @TimestampSerializer()
+  @JsonKey(name: 'launch_date_utc')
+  DateTime? get launchDate;
+  @JsonKey(name: 'launch_date_local')
   String? get launchDateLocal;
+  @JsonKey(name: 'is_tentative')
   bool? get isTentative;
+  @JsonKey(name: 'tentative_max_precision')
   String? get tentativeMaxPrecision;
+  @JsonKey(name: 'tbd')
   bool? get tbd;
+  @JsonKey(name: 'launch_window')
   int? get launchWindow;
+  @JsonKey(name: 'rocket')
   NetworkRocketModel? get rocket;
+  @JsonKey(name: 'ships')
   List<dynamic>? get ships;
+  @JsonKey(name: 'telemetry')
   NetworkTelemetry? get telemetry;
+  @JsonKey(name: 'launch_site')
   NetworkLaunchSite? get launchSite;
-  bool? get launchSuccess;
+  @JsonKey(name: 'launch_success')
+  bool? get success;
+  @JsonKey(name: 'launch_failure_details')
   NetworkLaunchFailureDetails? get launchFailureDetails;
+  @JsonKey(name: 'links')
   NetworkLaunchLinksModel? get links;
   String? get details;
-  String? get staticFireDateUtc;
+  @TimestampSerializer()
+  @JsonKey(name: 'static_fire_date_utc')
+  DateTime? get staticFireDateUtc;
+  @JsonKey(name: 'static_fire_date_unix')
   int? get staticFireDateUnix;
   NetworkTimeline? get timeline;
 
@@ -55,6 +79,7 @@ mixin _$NetworkLaunchFullModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is NetworkLaunchFullModel &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.flightNumber, flightNumber) ||
                 other.flightNumber == flightNumber) &&
             (identical(other.missionName, missionName) ||
@@ -66,8 +91,8 @@ mixin _$NetworkLaunchFullModel {
                 other.launchYear == launchYear) &&
             (identical(other.launchDateUnix, launchDateUnix) ||
                 other.launchDateUnix == launchDateUnix) &&
-            (identical(other.launchDateUtc, launchDateUtc) ||
-                other.launchDateUtc == launchDateUtc) &&
+            (identical(other.launchDate, launchDate) ||
+                other.launchDate == launchDate) &&
             (identical(other.launchDateLocal, launchDateLocal) ||
                 other.launchDateLocal == launchDateLocal) &&
             (identical(other.isTentative, isTentative) ||
@@ -83,8 +108,7 @@ mixin _$NetworkLaunchFullModel {
                 other.telemetry == telemetry) &&
             (identical(other.launchSite, launchSite) ||
                 other.launchSite == launchSite) &&
-            (identical(other.launchSuccess, launchSuccess) ||
-                other.launchSuccess == launchSuccess) &&
+            (identical(other.success, success) || other.success == success) &&
             (identical(other.launchFailureDetails, launchFailureDetails) ||
                 other.launchFailureDetails == launchFailureDetails) &&
             (identical(other.links, links) || other.links == links) &&
@@ -101,13 +125,14 @@ mixin _$NetworkLaunchFullModel {
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
+        id,
         flightNumber,
         missionName,
         const DeepCollectionEquality().hash(missionId),
         upcoming,
         launchYear,
         launchDateUnix,
-        launchDateUtc,
+        launchDate,
         launchDateLocal,
         isTentative,
         tentativeMaxPrecision,
@@ -117,7 +142,7 @@ mixin _$NetworkLaunchFullModel {
         const DeepCollectionEquality().hash(ships),
         telemetry,
         launchSite,
-        launchSuccess,
+        success,
         launchFailureDetails,
         links,
         details,
@@ -128,7 +153,7 @@ mixin _$NetworkLaunchFullModel {
 
   @override
   String toString() {
-    return 'NetworkLaunchFullModel(flightNumber: $flightNumber, missionName: $missionName, missionId: $missionId, upcoming: $upcoming, launchYear: $launchYear, launchDateUnix: $launchDateUnix, launchDateUtc: $launchDateUtc, launchDateLocal: $launchDateLocal, isTentative: $isTentative, tentativeMaxPrecision: $tentativeMaxPrecision, tbd: $tbd, launchWindow: $launchWindow, rocket: $rocket, ships: $ships, telemetry: $telemetry, launchSite: $launchSite, launchSuccess: $launchSuccess, launchFailureDetails: $launchFailureDetails, links: $links, details: $details, staticFireDateUtc: $staticFireDateUtc, staticFireDateUnix: $staticFireDateUnix, timeline: $timeline)';
+    return 'NetworkLaunchFullModel(id: $id, flightNumber: $flightNumber, missionName: $missionName, missionId: $missionId, upcoming: $upcoming, launchYear: $launchYear, launchDateUnix: $launchDateUnix, launchDate: $launchDate, launchDateLocal: $launchDateLocal, isTentative: $isTentative, tentativeMaxPrecision: $tentativeMaxPrecision, tbd: $tbd, launchWindow: $launchWindow, rocket: $rocket, ships: $ships, telemetry: $telemetry, launchSite: $launchSite, success: $success, launchFailureDetails: $launchFailureDetails, links: $links, details: $details, staticFireDateUtc: $staticFireDateUtc, staticFireDateUnix: $staticFireDateUnix, timeline: $timeline)';
   }
 }
 
@@ -139,28 +164,34 @@ abstract mixin class $NetworkLaunchFullModelCopyWith<$Res> {
       _$NetworkLaunchFullModelCopyWithImpl;
   @useResult
   $Res call(
-      {int flightNumber,
-      String? missionName,
-      List<dynamic>? missionId,
-      bool? upcoming,
-      String? launchYear,
-      int? launchDateUnix,
-      String? launchDateUtc,
-      String? launchDateLocal,
-      bool? isTentative,
-      String? tentativeMaxPrecision,
-      bool? tbd,
-      int? launchWindow,
-      NetworkRocketModel? rocket,
-      List<dynamic>? ships,
-      NetworkTelemetry? telemetry,
-      NetworkLaunchSite? launchSite,
-      bool? launchSuccess,
+      {@JsonKey(name: '_id') String? id,
+      @JsonKey(name: 'flight_number') int? flightNumber,
+      @JsonKey(name: 'mission_name') String? missionName,
+      @JsonKey(name: 'mission_id') List<dynamic>? missionId,
+      @JsonKey(name: 'upcoming') bool? upcoming,
+      @JsonKey(name: 'launch_year') String? launchYear,
+      @JsonKey(name: 'launch_date_unix') int? launchDateUnix,
+      @TimestampSerializer()
+      @JsonKey(name: 'launch_date_utc')
+      DateTime? launchDate,
+      @JsonKey(name: 'launch_date_local') String? launchDateLocal,
+      @JsonKey(name: 'is_tentative') bool? isTentative,
+      @JsonKey(name: 'tentative_max_precision') String? tentativeMaxPrecision,
+      @JsonKey(name: 'tbd') bool? tbd,
+      @JsonKey(name: 'launch_window') int? launchWindow,
+      @JsonKey(name: 'rocket') NetworkRocketModel? rocket,
+      @JsonKey(name: 'ships') List<dynamic>? ships,
+      @JsonKey(name: 'telemetry') NetworkTelemetry? telemetry,
+      @JsonKey(name: 'launch_site') NetworkLaunchSite? launchSite,
+      @JsonKey(name: 'launch_success') bool? success,
+      @JsonKey(name: 'launch_failure_details')
       NetworkLaunchFailureDetails? launchFailureDetails,
-      NetworkLaunchLinksModel? links,
+      @JsonKey(name: 'links') NetworkLaunchLinksModel? links,
       String? details,
-      String? staticFireDateUtc,
-      int? staticFireDateUnix,
+      @TimestampSerializer()
+      @JsonKey(name: 'static_fire_date_utc')
+      DateTime? staticFireDateUtc,
+      @JsonKey(name: 'static_fire_date_unix') int? staticFireDateUnix,
       NetworkTimeline? timeline});
 
   $NetworkRocketModelCopyWith<$Res>? get rocket;
@@ -184,13 +215,14 @@ class _$NetworkLaunchFullModelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? flightNumber = null,
+    Object? id = freezed,
+    Object? flightNumber = freezed,
     Object? missionName = freezed,
     Object? missionId = freezed,
     Object? upcoming = freezed,
     Object? launchYear = freezed,
     Object? launchDateUnix = freezed,
-    Object? launchDateUtc = freezed,
+    Object? launchDate = freezed,
     Object? launchDateLocal = freezed,
     Object? isTentative = freezed,
     Object? tentativeMaxPrecision = freezed,
@@ -200,7 +232,7 @@ class _$NetworkLaunchFullModelCopyWithImpl<$Res>
     Object? ships = freezed,
     Object? telemetry = freezed,
     Object? launchSite = freezed,
-    Object? launchSuccess = freezed,
+    Object? success = freezed,
     Object? launchFailureDetails = freezed,
     Object? links = freezed,
     Object? details = freezed,
@@ -209,10 +241,14 @@ class _$NetworkLaunchFullModelCopyWithImpl<$Res>
     Object? timeline = freezed,
   }) {
     return _then(_self.copyWith(
-      flightNumber: null == flightNumber
+      id: freezed == id
+          ? _self.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      flightNumber: freezed == flightNumber
           ? _self.flightNumber
           : flightNumber // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       missionName: freezed == missionName
           ? _self.missionName
           : missionName // ignore: cast_nullable_to_non_nullable
@@ -233,10 +269,10 @@ class _$NetworkLaunchFullModelCopyWithImpl<$Res>
           ? _self.launchDateUnix
           : launchDateUnix // ignore: cast_nullable_to_non_nullable
               as int?,
-      launchDateUtc: freezed == launchDateUtc
-          ? _self.launchDateUtc
-          : launchDateUtc // ignore: cast_nullable_to_non_nullable
-              as String?,
+      launchDate: freezed == launchDate
+          ? _self.launchDate
+          : launchDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       launchDateLocal: freezed == launchDateLocal
           ? _self.launchDateLocal
           : launchDateLocal // ignore: cast_nullable_to_non_nullable
@@ -273,9 +309,9 @@ class _$NetworkLaunchFullModelCopyWithImpl<$Res>
           ? _self.launchSite
           : launchSite // ignore: cast_nullable_to_non_nullable
               as NetworkLaunchSite?,
-      launchSuccess: freezed == launchSuccess
-          ? _self.launchSuccess
-          : launchSuccess // ignore: cast_nullable_to_non_nullable
+      success: freezed == success
+          ? _self.success
+          : success // ignore: cast_nullable_to_non_nullable
               as bool?,
       launchFailureDetails: freezed == launchFailureDetails
           ? _self.launchFailureDetails
@@ -292,7 +328,7 @@ class _$NetworkLaunchFullModelCopyWithImpl<$Res>
       staticFireDateUtc: freezed == staticFireDateUtc
           ? _self.staticFireDateUtc
           : staticFireDateUtc // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       staticFireDateUnix: freezed == staticFireDateUnix
           ? _self.staticFireDateUnix
           : staticFireDateUnix // ignore: cast_nullable_to_non_nullable
@@ -390,32 +426,357 @@ class _$NetworkLaunchFullModelCopyWithImpl<$Res>
   }
 }
 
+/// Adds pattern-matching-related methods to [NetworkLaunchFullModel].
+extension NetworkLaunchFullModelPatterns on NetworkLaunchFullModel {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_NetworkLaunchFullModel value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkLaunchFullModel() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_NetworkLaunchFullModel value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkLaunchFullModel():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_NetworkLaunchFullModel value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkLaunchFullModel() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            @JsonKey(name: '_id') String? id,
+            @JsonKey(name: 'flight_number') int? flightNumber,
+            @JsonKey(name: 'mission_name') String? missionName,
+            @JsonKey(name: 'mission_id') List<dynamic>? missionId,
+            @JsonKey(name: 'upcoming') bool? upcoming,
+            @JsonKey(name: 'launch_year') String? launchYear,
+            @JsonKey(name: 'launch_date_unix') int? launchDateUnix,
+            @TimestampSerializer()
+            @JsonKey(name: 'launch_date_utc')
+            DateTime? launchDate,
+            @JsonKey(name: 'launch_date_local') String? launchDateLocal,
+            @JsonKey(name: 'is_tentative') bool? isTentative,
+            @JsonKey(name: 'tentative_max_precision')
+            String? tentativeMaxPrecision,
+            @JsonKey(name: 'tbd') bool? tbd,
+            @JsonKey(name: 'launch_window') int? launchWindow,
+            @JsonKey(name: 'rocket') NetworkRocketModel? rocket,
+            @JsonKey(name: 'ships') List<dynamic>? ships,
+            @JsonKey(name: 'telemetry') NetworkTelemetry? telemetry,
+            @JsonKey(name: 'launch_site') NetworkLaunchSite? launchSite,
+            @JsonKey(name: 'launch_success') bool? success,
+            @JsonKey(name: 'launch_failure_details')
+            NetworkLaunchFailureDetails? launchFailureDetails,
+            @JsonKey(name: 'links') NetworkLaunchLinksModel? links,
+            String? details,
+            @TimestampSerializer()
+            @JsonKey(name: 'static_fire_date_utc')
+            DateTime? staticFireDateUtc,
+            @JsonKey(name: 'static_fire_date_unix') int? staticFireDateUnix,
+            NetworkTimeline? timeline)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkLaunchFullModel() when $default != null:
+        return $default(
+            _that.id,
+            _that.flightNumber,
+            _that.missionName,
+            _that.missionId,
+            _that.upcoming,
+            _that.launchYear,
+            _that.launchDateUnix,
+            _that.launchDate,
+            _that.launchDateLocal,
+            _that.isTentative,
+            _that.tentativeMaxPrecision,
+            _that.tbd,
+            _that.launchWindow,
+            _that.rocket,
+            _that.ships,
+            _that.telemetry,
+            _that.launchSite,
+            _that.success,
+            _that.launchFailureDetails,
+            _that.links,
+            _that.details,
+            _that.staticFireDateUtc,
+            _that.staticFireDateUnix,
+            _that.timeline);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            @JsonKey(name: '_id') String? id,
+            @JsonKey(name: 'flight_number') int? flightNumber,
+            @JsonKey(name: 'mission_name') String? missionName,
+            @JsonKey(name: 'mission_id') List<dynamic>? missionId,
+            @JsonKey(name: 'upcoming') bool? upcoming,
+            @JsonKey(name: 'launch_year') String? launchYear,
+            @JsonKey(name: 'launch_date_unix') int? launchDateUnix,
+            @TimestampSerializer()
+            @JsonKey(name: 'launch_date_utc')
+            DateTime? launchDate,
+            @JsonKey(name: 'launch_date_local') String? launchDateLocal,
+            @JsonKey(name: 'is_tentative') bool? isTentative,
+            @JsonKey(name: 'tentative_max_precision')
+            String? tentativeMaxPrecision,
+            @JsonKey(name: 'tbd') bool? tbd,
+            @JsonKey(name: 'launch_window') int? launchWindow,
+            @JsonKey(name: 'rocket') NetworkRocketModel? rocket,
+            @JsonKey(name: 'ships') List<dynamic>? ships,
+            @JsonKey(name: 'telemetry') NetworkTelemetry? telemetry,
+            @JsonKey(name: 'launch_site') NetworkLaunchSite? launchSite,
+            @JsonKey(name: 'launch_success') bool? success,
+            @JsonKey(name: 'launch_failure_details')
+            NetworkLaunchFailureDetails? launchFailureDetails,
+            @JsonKey(name: 'links') NetworkLaunchLinksModel? links,
+            String? details,
+            @TimestampSerializer()
+            @JsonKey(name: 'static_fire_date_utc')
+            DateTime? staticFireDateUtc,
+            @JsonKey(name: 'static_fire_date_unix') int? staticFireDateUnix,
+            NetworkTimeline? timeline)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkLaunchFullModel():
+        return $default(
+            _that.id,
+            _that.flightNumber,
+            _that.missionName,
+            _that.missionId,
+            _that.upcoming,
+            _that.launchYear,
+            _that.launchDateUnix,
+            _that.launchDate,
+            _that.launchDateLocal,
+            _that.isTentative,
+            _that.tentativeMaxPrecision,
+            _that.tbd,
+            _that.launchWindow,
+            _that.rocket,
+            _that.ships,
+            _that.telemetry,
+            _that.launchSite,
+            _that.success,
+            _that.launchFailureDetails,
+            _that.links,
+            _that.details,
+            _that.staticFireDateUtc,
+            _that.staticFireDateUnix,
+            _that.timeline);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            @JsonKey(name: '_id') String? id,
+            @JsonKey(name: 'flight_number') int? flightNumber,
+            @JsonKey(name: 'mission_name') String? missionName,
+            @JsonKey(name: 'mission_id') List<dynamic>? missionId,
+            @JsonKey(name: 'upcoming') bool? upcoming,
+            @JsonKey(name: 'launch_year') String? launchYear,
+            @JsonKey(name: 'launch_date_unix') int? launchDateUnix,
+            @TimestampSerializer()
+            @JsonKey(name: 'launch_date_utc')
+            DateTime? launchDate,
+            @JsonKey(name: 'launch_date_local') String? launchDateLocal,
+            @JsonKey(name: 'is_tentative') bool? isTentative,
+            @JsonKey(name: 'tentative_max_precision')
+            String? tentativeMaxPrecision,
+            @JsonKey(name: 'tbd') bool? tbd,
+            @JsonKey(name: 'launch_window') int? launchWindow,
+            @JsonKey(name: 'rocket') NetworkRocketModel? rocket,
+            @JsonKey(name: 'ships') List<dynamic>? ships,
+            @JsonKey(name: 'telemetry') NetworkTelemetry? telemetry,
+            @JsonKey(name: 'launch_site') NetworkLaunchSite? launchSite,
+            @JsonKey(name: 'launch_success') bool? success,
+            @JsonKey(name: 'launch_failure_details')
+            NetworkLaunchFailureDetails? launchFailureDetails,
+            @JsonKey(name: 'links') NetworkLaunchLinksModel? links,
+            String? details,
+            @TimestampSerializer()
+            @JsonKey(name: 'static_fire_date_utc')
+            DateTime? staticFireDateUtc,
+            @JsonKey(name: 'static_fire_date_unix') int? staticFireDateUnix,
+            NetworkTimeline? timeline)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkLaunchFullModel() when $default != null:
+        return $default(
+            _that.id,
+            _that.flightNumber,
+            _that.missionName,
+            _that.missionId,
+            _that.upcoming,
+            _that.launchYear,
+            _that.launchDateUnix,
+            _that.launchDate,
+            _that.launchDateLocal,
+            _that.isTentative,
+            _that.tentativeMaxPrecision,
+            _that.tbd,
+            _that.launchWindow,
+            _that.rocket,
+            _that.ships,
+            _that.telemetry,
+            _that.launchSite,
+            _that.success,
+            _that.launchFailureDetails,
+            _that.links,
+            _that.details,
+            _that.staticFireDateUtc,
+            _that.staticFireDateUnix,
+            _that.timeline);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
 class _NetworkLaunchFullModel implements NetworkLaunchFullModel {
   const _NetworkLaunchFullModel(
-      {required this.flightNumber,
-      this.missionName,
-      final List<dynamic>? missionId,
-      this.upcoming,
-      this.launchYear,
-      this.launchDateUnix,
-      this.launchDateUtc,
-      this.launchDateLocal,
-      this.isTentative,
-      this.tentativeMaxPrecision,
-      this.tbd,
-      this.launchWindow,
-      this.rocket,
-      final List<dynamic>? ships,
-      this.telemetry,
-      this.launchSite,
-      this.launchSuccess,
-      this.launchFailureDetails,
-      this.links,
+      {@JsonKey(name: '_id') this.id,
+      @JsonKey(name: 'flight_number') this.flightNumber,
+      @JsonKey(name: 'mission_name') this.missionName,
+      @JsonKey(name: 'mission_id') final List<dynamic>? missionId,
+      @JsonKey(name: 'upcoming') this.upcoming,
+      @JsonKey(name: 'launch_year') this.launchYear,
+      @JsonKey(name: 'launch_date_unix') this.launchDateUnix,
+      @TimestampSerializer() @JsonKey(name: 'launch_date_utc') this.launchDate,
+      @JsonKey(name: 'launch_date_local') this.launchDateLocal,
+      @JsonKey(name: 'is_tentative') this.isTentative,
+      @JsonKey(name: 'tentative_max_precision') this.tentativeMaxPrecision,
+      @JsonKey(name: 'tbd') this.tbd,
+      @JsonKey(name: 'launch_window') this.launchWindow,
+      @JsonKey(name: 'rocket') this.rocket,
+      @JsonKey(name: 'ships') final List<dynamic>? ships,
+      @JsonKey(name: 'telemetry') this.telemetry,
+      @JsonKey(name: 'launch_site') this.launchSite,
+      @JsonKey(name: 'launch_success') this.success,
+      @JsonKey(name: 'launch_failure_details') this.launchFailureDetails,
+      @JsonKey(name: 'links') this.links,
       this.details,
+      @TimestampSerializer()
+      @JsonKey(name: 'static_fire_date_utc')
       this.staticFireDateUtc,
-      this.staticFireDateUnix,
+      @JsonKey(name: 'static_fire_date_unix') this.staticFireDateUnix,
       this.timeline})
       : _missionId = missionId,
         _ships = ships;
@@ -423,11 +784,17 @@ class _NetworkLaunchFullModel implements NetworkLaunchFullModel {
       _$NetworkLaunchFullModelFromJson(json);
 
   @override
-  final int flightNumber;
+  @JsonKey(name: '_id')
+  final String? id;
   @override
+  @JsonKey(name: 'flight_number')
+  final int? flightNumber;
+  @override
+  @JsonKey(name: 'mission_name')
   final String? missionName;
   final List<dynamic>? _missionId;
   @override
+  @JsonKey(name: 'mission_id')
   List<dynamic>? get missionId {
     final value = _missionId;
     if (value == null) return null;
@@ -437,27 +804,39 @@ class _NetworkLaunchFullModel implements NetworkLaunchFullModel {
   }
 
   @override
+  @JsonKey(name: 'upcoming')
   final bool? upcoming;
   @override
+  @JsonKey(name: 'launch_year')
   final String? launchYear;
   @override
+  @JsonKey(name: 'launch_date_unix')
   final int? launchDateUnix;
   @override
-  final String? launchDateUtc;
+  @TimestampSerializer()
+  @JsonKey(name: 'launch_date_utc')
+  final DateTime? launchDate;
   @override
+  @JsonKey(name: 'launch_date_local')
   final String? launchDateLocal;
   @override
+  @JsonKey(name: 'is_tentative')
   final bool? isTentative;
   @override
+  @JsonKey(name: 'tentative_max_precision')
   final String? tentativeMaxPrecision;
   @override
+  @JsonKey(name: 'tbd')
   final bool? tbd;
   @override
+  @JsonKey(name: 'launch_window')
   final int? launchWindow;
   @override
+  @JsonKey(name: 'rocket')
   final NetworkRocketModel? rocket;
   final List<dynamic>? _ships;
   @override
+  @JsonKey(name: 'ships')
   List<dynamic>? get ships {
     final value = _ships;
     if (value == null) return null;
@@ -467,20 +846,28 @@ class _NetworkLaunchFullModel implements NetworkLaunchFullModel {
   }
 
   @override
+  @JsonKey(name: 'telemetry')
   final NetworkTelemetry? telemetry;
   @override
+  @JsonKey(name: 'launch_site')
   final NetworkLaunchSite? launchSite;
   @override
-  final bool? launchSuccess;
+  @JsonKey(name: 'launch_success')
+  final bool? success;
   @override
+  @JsonKey(name: 'launch_failure_details')
   final NetworkLaunchFailureDetails? launchFailureDetails;
   @override
+  @JsonKey(name: 'links')
   final NetworkLaunchLinksModel? links;
   @override
   final String? details;
   @override
-  final String? staticFireDateUtc;
+  @TimestampSerializer()
+  @JsonKey(name: 'static_fire_date_utc')
+  final DateTime? staticFireDateUtc;
   @override
+  @JsonKey(name: 'static_fire_date_unix')
   final int? staticFireDateUnix;
   @override
   final NetworkTimeline? timeline;
@@ -506,6 +893,7 @@ class _NetworkLaunchFullModel implements NetworkLaunchFullModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _NetworkLaunchFullModel &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.flightNumber, flightNumber) ||
                 other.flightNumber == flightNumber) &&
             (identical(other.missionName, missionName) ||
@@ -518,8 +906,8 @@ class _NetworkLaunchFullModel implements NetworkLaunchFullModel {
                 other.launchYear == launchYear) &&
             (identical(other.launchDateUnix, launchDateUnix) ||
                 other.launchDateUnix == launchDateUnix) &&
-            (identical(other.launchDateUtc, launchDateUtc) ||
-                other.launchDateUtc == launchDateUtc) &&
+            (identical(other.launchDate, launchDate) ||
+                other.launchDate == launchDate) &&
             (identical(other.launchDateLocal, launchDateLocal) ||
                 other.launchDateLocal == launchDateLocal) &&
             (identical(other.isTentative, isTentative) ||
@@ -535,8 +923,7 @@ class _NetworkLaunchFullModel implements NetworkLaunchFullModel {
                 other.telemetry == telemetry) &&
             (identical(other.launchSite, launchSite) ||
                 other.launchSite == launchSite) &&
-            (identical(other.launchSuccess, launchSuccess) ||
-                other.launchSuccess == launchSuccess) &&
+            (identical(other.success, success) || other.success == success) &&
             (identical(other.launchFailureDetails, launchFailureDetails) ||
                 other.launchFailureDetails == launchFailureDetails) &&
             (identical(other.links, links) || other.links == links) &&
@@ -553,13 +940,14 @@ class _NetworkLaunchFullModel implements NetworkLaunchFullModel {
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
+        id,
         flightNumber,
         missionName,
         const DeepCollectionEquality().hash(_missionId),
         upcoming,
         launchYear,
         launchDateUnix,
-        launchDateUtc,
+        launchDate,
         launchDateLocal,
         isTentative,
         tentativeMaxPrecision,
@@ -569,7 +957,7 @@ class _NetworkLaunchFullModel implements NetworkLaunchFullModel {
         const DeepCollectionEquality().hash(_ships),
         telemetry,
         launchSite,
-        launchSuccess,
+        success,
         launchFailureDetails,
         links,
         details,
@@ -580,7 +968,7 @@ class _NetworkLaunchFullModel implements NetworkLaunchFullModel {
 
   @override
   String toString() {
-    return 'NetworkLaunchFullModel(flightNumber: $flightNumber, missionName: $missionName, missionId: $missionId, upcoming: $upcoming, launchYear: $launchYear, launchDateUnix: $launchDateUnix, launchDateUtc: $launchDateUtc, launchDateLocal: $launchDateLocal, isTentative: $isTentative, tentativeMaxPrecision: $tentativeMaxPrecision, tbd: $tbd, launchWindow: $launchWindow, rocket: $rocket, ships: $ships, telemetry: $telemetry, launchSite: $launchSite, launchSuccess: $launchSuccess, launchFailureDetails: $launchFailureDetails, links: $links, details: $details, staticFireDateUtc: $staticFireDateUtc, staticFireDateUnix: $staticFireDateUnix, timeline: $timeline)';
+    return 'NetworkLaunchFullModel(id: $id, flightNumber: $flightNumber, missionName: $missionName, missionId: $missionId, upcoming: $upcoming, launchYear: $launchYear, launchDateUnix: $launchDateUnix, launchDate: $launchDate, launchDateLocal: $launchDateLocal, isTentative: $isTentative, tentativeMaxPrecision: $tentativeMaxPrecision, tbd: $tbd, launchWindow: $launchWindow, rocket: $rocket, ships: $ships, telemetry: $telemetry, launchSite: $launchSite, success: $success, launchFailureDetails: $launchFailureDetails, links: $links, details: $details, staticFireDateUtc: $staticFireDateUtc, staticFireDateUnix: $staticFireDateUnix, timeline: $timeline)';
   }
 }
 
@@ -593,28 +981,34 @@ abstract mixin class _$NetworkLaunchFullModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int flightNumber,
-      String? missionName,
-      List<dynamic>? missionId,
-      bool? upcoming,
-      String? launchYear,
-      int? launchDateUnix,
-      String? launchDateUtc,
-      String? launchDateLocal,
-      bool? isTentative,
-      String? tentativeMaxPrecision,
-      bool? tbd,
-      int? launchWindow,
-      NetworkRocketModel? rocket,
-      List<dynamic>? ships,
-      NetworkTelemetry? telemetry,
-      NetworkLaunchSite? launchSite,
-      bool? launchSuccess,
+      {@JsonKey(name: '_id') String? id,
+      @JsonKey(name: 'flight_number') int? flightNumber,
+      @JsonKey(name: 'mission_name') String? missionName,
+      @JsonKey(name: 'mission_id') List<dynamic>? missionId,
+      @JsonKey(name: 'upcoming') bool? upcoming,
+      @JsonKey(name: 'launch_year') String? launchYear,
+      @JsonKey(name: 'launch_date_unix') int? launchDateUnix,
+      @TimestampSerializer()
+      @JsonKey(name: 'launch_date_utc')
+      DateTime? launchDate,
+      @JsonKey(name: 'launch_date_local') String? launchDateLocal,
+      @JsonKey(name: 'is_tentative') bool? isTentative,
+      @JsonKey(name: 'tentative_max_precision') String? tentativeMaxPrecision,
+      @JsonKey(name: 'tbd') bool? tbd,
+      @JsonKey(name: 'launch_window') int? launchWindow,
+      @JsonKey(name: 'rocket') NetworkRocketModel? rocket,
+      @JsonKey(name: 'ships') List<dynamic>? ships,
+      @JsonKey(name: 'telemetry') NetworkTelemetry? telemetry,
+      @JsonKey(name: 'launch_site') NetworkLaunchSite? launchSite,
+      @JsonKey(name: 'launch_success') bool? success,
+      @JsonKey(name: 'launch_failure_details')
       NetworkLaunchFailureDetails? launchFailureDetails,
-      NetworkLaunchLinksModel? links,
+      @JsonKey(name: 'links') NetworkLaunchLinksModel? links,
       String? details,
-      String? staticFireDateUtc,
-      int? staticFireDateUnix,
+      @TimestampSerializer()
+      @JsonKey(name: 'static_fire_date_utc')
+      DateTime? staticFireDateUtc,
+      @JsonKey(name: 'static_fire_date_unix') int? staticFireDateUnix,
       NetworkTimeline? timeline});
 
   @override
@@ -644,13 +1038,14 @@ class __$NetworkLaunchFullModelCopyWithImpl<$Res>
   @override
   @pragma('vm:prefer-inline')
   $Res call({
-    Object? flightNumber = null,
+    Object? id = freezed,
+    Object? flightNumber = freezed,
     Object? missionName = freezed,
     Object? missionId = freezed,
     Object? upcoming = freezed,
     Object? launchYear = freezed,
     Object? launchDateUnix = freezed,
-    Object? launchDateUtc = freezed,
+    Object? launchDate = freezed,
     Object? launchDateLocal = freezed,
     Object? isTentative = freezed,
     Object? tentativeMaxPrecision = freezed,
@@ -660,7 +1055,7 @@ class __$NetworkLaunchFullModelCopyWithImpl<$Res>
     Object? ships = freezed,
     Object? telemetry = freezed,
     Object? launchSite = freezed,
-    Object? launchSuccess = freezed,
+    Object? success = freezed,
     Object? launchFailureDetails = freezed,
     Object? links = freezed,
     Object? details = freezed,
@@ -669,10 +1064,14 @@ class __$NetworkLaunchFullModelCopyWithImpl<$Res>
     Object? timeline = freezed,
   }) {
     return _then(_NetworkLaunchFullModel(
-      flightNumber: null == flightNumber
+      id: freezed == id
+          ? _self.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      flightNumber: freezed == flightNumber
           ? _self.flightNumber
           : flightNumber // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       missionName: freezed == missionName
           ? _self.missionName
           : missionName // ignore: cast_nullable_to_non_nullable
@@ -693,10 +1092,10 @@ class __$NetworkLaunchFullModelCopyWithImpl<$Res>
           ? _self.launchDateUnix
           : launchDateUnix // ignore: cast_nullable_to_non_nullable
               as int?,
-      launchDateUtc: freezed == launchDateUtc
-          ? _self.launchDateUtc
-          : launchDateUtc // ignore: cast_nullable_to_non_nullable
-              as String?,
+      launchDate: freezed == launchDate
+          ? _self.launchDate
+          : launchDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       launchDateLocal: freezed == launchDateLocal
           ? _self.launchDateLocal
           : launchDateLocal // ignore: cast_nullable_to_non_nullable
@@ -733,9 +1132,9 @@ class __$NetworkLaunchFullModelCopyWithImpl<$Res>
           ? _self.launchSite
           : launchSite // ignore: cast_nullable_to_non_nullable
               as NetworkLaunchSite?,
-      launchSuccess: freezed == launchSuccess
-          ? _self.launchSuccess
-          : launchSuccess // ignore: cast_nullable_to_non_nullable
+      success: freezed == success
+          ? _self.success
+          : success // ignore: cast_nullable_to_non_nullable
               as bool?,
       launchFailureDetails: freezed == launchFailureDetails
           ? _self.launchFailureDetails
@@ -752,7 +1151,7 @@ class __$NetworkLaunchFullModelCopyWithImpl<$Res>
       staticFireDateUtc: freezed == staticFireDateUtc
           ? _self.staticFireDateUtc
           : staticFireDateUtc // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       staticFireDateUnix: freezed == staticFireDateUnix
           ? _self.staticFireDateUnix
           : staticFireDateUnix // ignore: cast_nullable_to_non_nullable
@@ -917,6 +1316,163 @@ class _$NetworkFirstStageCopyWithImpl<$Res>
   }
 }
 
+/// Adds pattern-matching-related methods to [NetworkFirstStage].
+extension NetworkFirstStagePatterns on NetworkFirstStage {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_NetworkFirstStage value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkFirstStage() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_NetworkFirstStage value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkFirstStage():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_NetworkFirstStage value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkFirstStage() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(List<NetworkCore>? cores)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkFirstStage() when $default != null:
+        return $default(_that.cores);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(List<NetworkCore>? cores) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkFirstStage():
+        return $default(_that.cores);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(List<NetworkCore>? cores)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkFirstStage() when $default != null:
+        return $default(_that.cores);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
 class _NetworkFirstStage implements NetworkFirstStage {
@@ -1006,15 +1562,25 @@ class __$NetworkFirstStageCopyWithImpl<$Res>
 
 /// @nodoc
 mixin _$NetworkCore {
+  @JsonKey(name: 'core_serial')
   String? get coreSerial;
+  @JsonKey(name: 'flight')
   int? get flight;
+  @JsonKey(name: 'block')
   String? get block;
+  @JsonKey(name: 'gridfins')
   bool? get gridfins;
+  @JsonKey(name: 'legs')
   bool? get legs;
+  @JsonKey(name: 'reused')
   bool? get reused;
+  @JsonKey(name: 'land_success')
   bool? get landSuccess;
+  @JsonKey(name: 'landing_intent')
   bool? get landingIntent;
+  @JsonKey(name: 'landing_type')
   String? get landingType;
+  @JsonKey(name: 'landing_vehicle')
   String? get landingVehicle;
 
   /// Create a copy of NetworkCore
@@ -1078,16 +1644,16 @@ abstract mixin class $NetworkCoreCopyWith<$Res> {
       _$NetworkCoreCopyWithImpl;
   @useResult
   $Res call(
-      {String? coreSerial,
-      int? flight,
-      String? block,
-      bool? gridfins,
-      bool? legs,
-      bool? reused,
-      bool? landSuccess,
-      bool? landingIntent,
-      String? landingType,
-      String? landingVehicle});
+      {@JsonKey(name: 'core_serial') String? coreSerial,
+      @JsonKey(name: 'flight') int? flight,
+      @JsonKey(name: 'block') String? block,
+      @JsonKey(name: 'gridfins') bool? gridfins,
+      @JsonKey(name: 'legs') bool? legs,
+      @JsonKey(name: 'reused') bool? reused,
+      @JsonKey(name: 'land_success') bool? landSuccess,
+      @JsonKey(name: 'landing_intent') bool? landingIntent,
+      @JsonKey(name: 'landing_type') String? landingType,
+      @JsonKey(name: 'landing_vehicle') String? landingVehicle});
 }
 
 /// @nodoc
@@ -1158,42 +1724,272 @@ class _$NetworkCoreCopyWithImpl<$Res> implements $NetworkCoreCopyWith<$Res> {
   }
 }
 
+/// Adds pattern-matching-related methods to [NetworkCore].
+extension NetworkCorePatterns on NetworkCore {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_NetworkCore value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkCore() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_NetworkCore value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkCore():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_NetworkCore value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkCore() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            @JsonKey(name: 'core_serial') String? coreSerial,
+            @JsonKey(name: 'flight') int? flight,
+            @JsonKey(name: 'block') String? block,
+            @JsonKey(name: 'gridfins') bool? gridfins,
+            @JsonKey(name: 'legs') bool? legs,
+            @JsonKey(name: 'reused') bool? reused,
+            @JsonKey(name: 'land_success') bool? landSuccess,
+            @JsonKey(name: 'landing_intent') bool? landingIntent,
+            @JsonKey(name: 'landing_type') String? landingType,
+            @JsonKey(name: 'landing_vehicle') String? landingVehicle)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkCore() when $default != null:
+        return $default(
+            _that.coreSerial,
+            _that.flight,
+            _that.block,
+            _that.gridfins,
+            _that.legs,
+            _that.reused,
+            _that.landSuccess,
+            _that.landingIntent,
+            _that.landingType,
+            _that.landingVehicle);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            @JsonKey(name: 'core_serial') String? coreSerial,
+            @JsonKey(name: 'flight') int? flight,
+            @JsonKey(name: 'block') String? block,
+            @JsonKey(name: 'gridfins') bool? gridfins,
+            @JsonKey(name: 'legs') bool? legs,
+            @JsonKey(name: 'reused') bool? reused,
+            @JsonKey(name: 'land_success') bool? landSuccess,
+            @JsonKey(name: 'landing_intent') bool? landingIntent,
+            @JsonKey(name: 'landing_type') String? landingType,
+            @JsonKey(name: 'landing_vehicle') String? landingVehicle)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkCore():
+        return $default(
+            _that.coreSerial,
+            _that.flight,
+            _that.block,
+            _that.gridfins,
+            _that.legs,
+            _that.reused,
+            _that.landSuccess,
+            _that.landingIntent,
+            _that.landingType,
+            _that.landingVehicle);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            @JsonKey(name: 'core_serial') String? coreSerial,
+            @JsonKey(name: 'flight') int? flight,
+            @JsonKey(name: 'block') String? block,
+            @JsonKey(name: 'gridfins') bool? gridfins,
+            @JsonKey(name: 'legs') bool? legs,
+            @JsonKey(name: 'reused') bool? reused,
+            @JsonKey(name: 'land_success') bool? landSuccess,
+            @JsonKey(name: 'landing_intent') bool? landingIntent,
+            @JsonKey(name: 'landing_type') String? landingType,
+            @JsonKey(name: 'landing_vehicle') String? landingVehicle)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkCore() when $default != null:
+        return $default(
+            _that.coreSerial,
+            _that.flight,
+            _that.block,
+            _that.gridfins,
+            _that.legs,
+            _that.reused,
+            _that.landSuccess,
+            _that.landingIntent,
+            _that.landingType,
+            _that.landingVehicle);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
 class _NetworkCore implements NetworkCore {
   const _NetworkCore(
-      {this.coreSerial,
-      this.flight,
-      this.block,
-      this.gridfins,
-      this.legs,
-      this.reused,
-      this.landSuccess,
-      this.landingIntent,
-      this.landingType,
-      this.landingVehicle});
+      {@JsonKey(name: 'core_serial') this.coreSerial,
+      @JsonKey(name: 'flight') this.flight,
+      @JsonKey(name: 'block') this.block,
+      @JsonKey(name: 'gridfins') this.gridfins,
+      @JsonKey(name: 'legs') this.legs,
+      @JsonKey(name: 'reused') this.reused,
+      @JsonKey(name: 'land_success') this.landSuccess,
+      @JsonKey(name: 'landing_intent') this.landingIntent,
+      @JsonKey(name: 'landing_type') this.landingType,
+      @JsonKey(name: 'landing_vehicle') this.landingVehicle});
   factory _NetworkCore.fromJson(Map<String, dynamic> json) =>
       _$NetworkCoreFromJson(json);
 
   @override
+  @JsonKey(name: 'core_serial')
   final String? coreSerial;
   @override
+  @JsonKey(name: 'flight')
   final int? flight;
   @override
+  @JsonKey(name: 'block')
   final String? block;
   @override
+  @JsonKey(name: 'gridfins')
   final bool? gridfins;
   @override
+  @JsonKey(name: 'legs')
   final bool? legs;
   @override
+  @JsonKey(name: 'reused')
   final bool? reused;
   @override
+  @JsonKey(name: 'land_success')
   final bool? landSuccess;
   @override
+  @JsonKey(name: 'landing_intent')
   final bool? landingIntent;
   @override
+  @JsonKey(name: 'landing_type')
   final String? landingType;
   @override
+  @JsonKey(name: 'landing_vehicle')
   final String? landingVehicle;
 
   /// Create a copy of NetworkCore
@@ -1264,16 +2060,16 @@ abstract mixin class _$NetworkCoreCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String? coreSerial,
-      int? flight,
-      String? block,
-      bool? gridfins,
-      bool? legs,
-      bool? reused,
-      bool? landSuccess,
-      bool? landingIntent,
-      String? landingType,
-      String? landingVehicle});
+      {@JsonKey(name: 'core_serial') String? coreSerial,
+      @JsonKey(name: 'flight') int? flight,
+      @JsonKey(name: 'block') String? block,
+      @JsonKey(name: 'gridfins') bool? gridfins,
+      @JsonKey(name: 'legs') bool? legs,
+      @JsonKey(name: 'reused') bool? reused,
+      @JsonKey(name: 'land_success') bool? landSuccess,
+      @JsonKey(name: 'landing_intent') bool? landingIntent,
+      @JsonKey(name: 'landing_type') String? landingType,
+      @JsonKey(name: 'landing_vehicle') String? landingVehicle});
 }
 
 /// @nodoc
@@ -1418,6 +2214,163 @@ class _$NetworkSecondStageCopyWithImpl<$Res>
   }
 }
 
+/// Adds pattern-matching-related methods to [NetworkSecondStage].
+extension NetworkSecondStagePatterns on NetworkSecondStage {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_NetworkSecondStage value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkSecondStage() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_NetworkSecondStage value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkSecondStage():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_NetworkSecondStage value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkSecondStage() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(int? block, List<NetworkPayload>? payloads)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkSecondStage() when $default != null:
+        return $default(_that.block, _that.payloads);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(int? block, List<NetworkPayload>? payloads) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkSecondStage():
+        return $default(_that.block, _that.payloads);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(int? block, List<NetworkPayload>? payloads)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkSecondStage() when $default != null:
+        return $default(_that.block, _that.payloads);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
 class _NetworkSecondStage implements NetworkSecondStage {
@@ -1515,16 +2468,27 @@ class __$NetworkSecondStageCopyWithImpl<$Res>
 
 /// @nodoc
 mixin _$NetworkPayload {
+  @JsonKey(name: 'payload_id')
   String? get payloadId;
+  @JsonKey(name: 'norad_id')
   List<dynamic>? get noradId;
+  @JsonKey(name: 'reused')
   bool? get reused;
+  @JsonKey(name: 'customers')
   List<String>? get customers;
+  @JsonKey(name: 'nationality')
   String? get nationality;
+  @JsonKey(name: 'manufacturer')
   String? get manufacturer;
+  @JsonKey(name: 'payload_type')
   String? get payloadType;
+  @JsonKey(name: 'payload_mass_kg')
   int? get payloadMassKg;
+  @JsonKey(name: 'payload_mass_lbs')
   int? get payloadMassLbs;
+  @JsonKey(name: 'orbit')
   String? get orbit;
+  @JsonKey(name: 'orbit_params')
   NetworkOrbitParams? get orbitParams;
 
   /// Create a copy of NetworkPayload
@@ -1592,17 +2556,17 @@ abstract mixin class $NetworkPayloadCopyWith<$Res> {
       _$NetworkPayloadCopyWithImpl;
   @useResult
   $Res call(
-      {String? payloadId,
-      List<dynamic>? noradId,
-      bool? reused,
-      List<String>? customers,
-      String? nationality,
-      String? manufacturer,
-      String? payloadType,
-      int? payloadMassKg,
-      int? payloadMassLbs,
-      String? orbit,
-      NetworkOrbitParams? orbitParams});
+      {@JsonKey(name: 'payload_id') String? payloadId,
+      @JsonKey(name: 'norad_id') List<dynamic>? noradId,
+      @JsonKey(name: 'reused') bool? reused,
+      @JsonKey(name: 'customers') List<String>? customers,
+      @JsonKey(name: 'nationality') String? nationality,
+      @JsonKey(name: 'manufacturer') String? manufacturer,
+      @JsonKey(name: 'payload_type') String? payloadType,
+      @JsonKey(name: 'payload_mass_kg') int? payloadMassKg,
+      @JsonKey(name: 'payload_mass_lbs') int? payloadMassLbs,
+      @JsonKey(name: 'orbit') String? orbit,
+      @JsonKey(name: 'orbit_params') NetworkOrbitParams? orbitParams});
 
   $NetworkOrbitParamsCopyWith<$Res>? get orbitParams;
 }
@@ -1695,30 +2659,258 @@ class _$NetworkPayloadCopyWithImpl<$Res>
   }
 }
 
+/// Adds pattern-matching-related methods to [NetworkPayload].
+extension NetworkPayloadPatterns on NetworkPayload {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_NetworkPayload value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkPayload() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_NetworkPayload value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkPayload():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_NetworkPayload value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkPayload() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            @JsonKey(name: 'payload_id') String? payloadId,
+            @JsonKey(name: 'norad_id') List<dynamic>? noradId,
+            @JsonKey(name: 'reused') bool? reused,
+            @JsonKey(name: 'customers') List<String>? customers,
+            @JsonKey(name: 'nationality') String? nationality,
+            @JsonKey(name: 'manufacturer') String? manufacturer,
+            @JsonKey(name: 'payload_type') String? payloadType,
+            @JsonKey(name: 'payload_mass_kg') int? payloadMassKg,
+            @JsonKey(name: 'payload_mass_lbs') int? payloadMassLbs,
+            @JsonKey(name: 'orbit') String? orbit,
+            @JsonKey(name: 'orbit_params') NetworkOrbitParams? orbitParams)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkPayload() when $default != null:
+        return $default(
+            _that.payloadId,
+            _that.noradId,
+            _that.reused,
+            _that.customers,
+            _that.nationality,
+            _that.manufacturer,
+            _that.payloadType,
+            _that.payloadMassKg,
+            _that.payloadMassLbs,
+            _that.orbit,
+            _that.orbitParams);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            @JsonKey(name: 'payload_id') String? payloadId,
+            @JsonKey(name: 'norad_id') List<dynamic>? noradId,
+            @JsonKey(name: 'reused') bool? reused,
+            @JsonKey(name: 'customers') List<String>? customers,
+            @JsonKey(name: 'nationality') String? nationality,
+            @JsonKey(name: 'manufacturer') String? manufacturer,
+            @JsonKey(name: 'payload_type') String? payloadType,
+            @JsonKey(name: 'payload_mass_kg') int? payloadMassKg,
+            @JsonKey(name: 'payload_mass_lbs') int? payloadMassLbs,
+            @JsonKey(name: 'orbit') String? orbit,
+            @JsonKey(name: 'orbit_params') NetworkOrbitParams? orbitParams)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkPayload():
+        return $default(
+            _that.payloadId,
+            _that.noradId,
+            _that.reused,
+            _that.customers,
+            _that.nationality,
+            _that.manufacturer,
+            _that.payloadType,
+            _that.payloadMassKg,
+            _that.payloadMassLbs,
+            _that.orbit,
+            _that.orbitParams);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            @JsonKey(name: 'payload_id') String? payloadId,
+            @JsonKey(name: 'norad_id') List<dynamic>? noradId,
+            @JsonKey(name: 'reused') bool? reused,
+            @JsonKey(name: 'customers') List<String>? customers,
+            @JsonKey(name: 'nationality') String? nationality,
+            @JsonKey(name: 'manufacturer') String? manufacturer,
+            @JsonKey(name: 'payload_type') String? payloadType,
+            @JsonKey(name: 'payload_mass_kg') int? payloadMassKg,
+            @JsonKey(name: 'payload_mass_lbs') int? payloadMassLbs,
+            @JsonKey(name: 'orbit') String? orbit,
+            @JsonKey(name: 'orbit_params') NetworkOrbitParams? orbitParams)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkPayload() when $default != null:
+        return $default(
+            _that.payloadId,
+            _that.noradId,
+            _that.reused,
+            _that.customers,
+            _that.nationality,
+            _that.manufacturer,
+            _that.payloadType,
+            _that.payloadMassKg,
+            _that.payloadMassLbs,
+            _that.orbit,
+            _that.orbitParams);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
 class _NetworkPayload implements NetworkPayload {
   const _NetworkPayload(
-      {this.payloadId,
-      final List<dynamic>? noradId,
-      this.reused,
-      final List<String>? customers,
-      this.nationality,
-      this.manufacturer,
-      this.payloadType,
-      this.payloadMassKg,
-      this.payloadMassLbs,
-      this.orbit,
-      this.orbitParams})
+      {@JsonKey(name: 'payload_id') this.payloadId,
+      @JsonKey(name: 'norad_id') final List<dynamic>? noradId,
+      @JsonKey(name: 'reused') this.reused,
+      @JsonKey(name: 'customers') final List<String>? customers,
+      @JsonKey(name: 'nationality') this.nationality,
+      @JsonKey(name: 'manufacturer') this.manufacturer,
+      @JsonKey(name: 'payload_type') this.payloadType,
+      @JsonKey(name: 'payload_mass_kg') this.payloadMassKg,
+      @JsonKey(name: 'payload_mass_lbs') this.payloadMassLbs,
+      @JsonKey(name: 'orbit') this.orbit,
+      @JsonKey(name: 'orbit_params') this.orbitParams})
       : _noradId = noradId,
         _customers = customers;
   factory _NetworkPayload.fromJson(Map<String, dynamic> json) =>
       _$NetworkPayloadFromJson(json);
 
   @override
+  @JsonKey(name: 'payload_id')
   final String? payloadId;
   final List<dynamic>? _noradId;
   @override
+  @JsonKey(name: 'norad_id')
   List<dynamic>? get noradId {
     final value = _noradId;
     if (value == null) return null;
@@ -1728,9 +2920,11 @@ class _NetworkPayload implements NetworkPayload {
   }
 
   @override
+  @JsonKey(name: 'reused')
   final bool? reused;
   final List<String>? _customers;
   @override
+  @JsonKey(name: 'customers')
   List<String>? get customers {
     final value = _customers;
     if (value == null) return null;
@@ -1740,18 +2934,25 @@ class _NetworkPayload implements NetworkPayload {
   }
 
   @override
+  @JsonKey(name: 'nationality')
   final String? nationality;
   @override
+  @JsonKey(name: 'manufacturer')
   final String? manufacturer;
   @override
+  @JsonKey(name: 'payload_type')
   final String? payloadType;
   @override
+  @JsonKey(name: 'payload_mass_kg')
   final int? payloadMassKg;
   @override
+  @JsonKey(name: 'payload_mass_lbs')
   final int? payloadMassLbs;
   @override
+  @JsonKey(name: 'orbit')
   final String? orbit;
   @override
+  @JsonKey(name: 'orbit_params')
   final NetworkOrbitParams? orbitParams;
 
   /// Create a copy of NetworkPayload
@@ -1826,17 +3027,17 @@ abstract mixin class _$NetworkPayloadCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String? payloadId,
-      List<dynamic>? noradId,
-      bool? reused,
-      List<String>? customers,
-      String? nationality,
-      String? manufacturer,
-      String? payloadType,
-      int? payloadMassKg,
-      int? payloadMassLbs,
-      String? orbit,
-      NetworkOrbitParams? orbitParams});
+      {@JsonKey(name: 'payload_id') String? payloadId,
+      @JsonKey(name: 'norad_id') List<dynamic>? noradId,
+      @JsonKey(name: 'reused') bool? reused,
+      @JsonKey(name: 'customers') List<String>? customers,
+      @JsonKey(name: 'nationality') String? nationality,
+      @JsonKey(name: 'manufacturer') String? manufacturer,
+      @JsonKey(name: 'payload_type') String? payloadType,
+      @JsonKey(name: 'payload_mass_kg') int? payloadMassKg,
+      @JsonKey(name: 'payload_mass_lbs') int? payloadMassLbs,
+      @JsonKey(name: 'orbit') String? orbit,
+      @JsonKey(name: 'orbit_params') NetworkOrbitParams? orbitParams});
 
   @override
   $NetworkOrbitParamsCopyWith<$Res>? get orbitParams;
@@ -1932,13 +3133,21 @@ class __$NetworkPayloadCopyWithImpl<$Res>
 
 /// @nodoc
 mixin _$NetworkOrbitParams {
+  @JsonKey(name: 'reference_system')
   String? get referenceSystem;
+  @JsonKey(name: 'regime')
   String? get regime;
+  @JsonKey(name: 'longitude')
   int? get longitude;
+  @JsonKey(name: 'semi_major_axis_km')
   double? get semiMajorAxisKm;
+  @JsonKey(name: 'eccentricity')
   double? get eccentricity;
+  @JsonKey(name: 'periapsis_km')
   int? get periapsisKm;
+  @JsonKey(name: 'apoapsis_km')
   int? get apoapsisKm;
+  @JsonKey(name: 'inclination_deg')
   int? get inclinationDeg;
 
   /// Create a copy of NetworkOrbitParams
@@ -2000,14 +3209,14 @@ abstract mixin class $NetworkOrbitParamsCopyWith<$Res> {
       _$NetworkOrbitParamsCopyWithImpl;
   @useResult
   $Res call(
-      {String? referenceSystem,
-      String? regime,
-      int? longitude,
-      double? semiMajorAxisKm,
-      double? eccentricity,
-      int? periapsisKm,
-      int? apoapsisKm,
-      int? inclinationDeg});
+      {@JsonKey(name: 'reference_system') String? referenceSystem,
+      @JsonKey(name: 'regime') String? regime,
+      @JsonKey(name: 'longitude') int? longitude,
+      @JsonKey(name: 'semi_major_axis_km') double? semiMajorAxisKm,
+      @JsonKey(name: 'eccentricity') double? eccentricity,
+      @JsonKey(name: 'periapsis_km') int? periapsisKm,
+      @JsonKey(name: 'apoapsis_km') int? apoapsisKm,
+      @JsonKey(name: 'inclination_deg') int? inclinationDeg});
 }
 
 /// @nodoc
@@ -2069,36 +3278,252 @@ class _$NetworkOrbitParamsCopyWithImpl<$Res>
   }
 }
 
+/// Adds pattern-matching-related methods to [NetworkOrbitParams].
+extension NetworkOrbitParamsPatterns on NetworkOrbitParams {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_NetworkOrbitParams value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkOrbitParams() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_NetworkOrbitParams value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkOrbitParams():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_NetworkOrbitParams value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkOrbitParams() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            @JsonKey(name: 'reference_system') String? referenceSystem,
+            @JsonKey(name: 'regime') String? regime,
+            @JsonKey(name: 'longitude') int? longitude,
+            @JsonKey(name: 'semi_major_axis_km') double? semiMajorAxisKm,
+            @JsonKey(name: 'eccentricity') double? eccentricity,
+            @JsonKey(name: 'periapsis_km') int? periapsisKm,
+            @JsonKey(name: 'apoapsis_km') int? apoapsisKm,
+            @JsonKey(name: 'inclination_deg') int? inclinationDeg)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkOrbitParams() when $default != null:
+        return $default(
+            _that.referenceSystem,
+            _that.regime,
+            _that.longitude,
+            _that.semiMajorAxisKm,
+            _that.eccentricity,
+            _that.periapsisKm,
+            _that.apoapsisKm,
+            _that.inclinationDeg);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            @JsonKey(name: 'reference_system') String? referenceSystem,
+            @JsonKey(name: 'regime') String? regime,
+            @JsonKey(name: 'longitude') int? longitude,
+            @JsonKey(name: 'semi_major_axis_km') double? semiMajorAxisKm,
+            @JsonKey(name: 'eccentricity') double? eccentricity,
+            @JsonKey(name: 'periapsis_km') int? periapsisKm,
+            @JsonKey(name: 'apoapsis_km') int? apoapsisKm,
+            @JsonKey(name: 'inclination_deg') int? inclinationDeg)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkOrbitParams():
+        return $default(
+            _that.referenceSystem,
+            _that.regime,
+            _that.longitude,
+            _that.semiMajorAxisKm,
+            _that.eccentricity,
+            _that.periapsisKm,
+            _that.apoapsisKm,
+            _that.inclinationDeg);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            @JsonKey(name: 'reference_system') String? referenceSystem,
+            @JsonKey(name: 'regime') String? regime,
+            @JsonKey(name: 'longitude') int? longitude,
+            @JsonKey(name: 'semi_major_axis_km') double? semiMajorAxisKm,
+            @JsonKey(name: 'eccentricity') double? eccentricity,
+            @JsonKey(name: 'periapsis_km') int? periapsisKm,
+            @JsonKey(name: 'apoapsis_km') int? apoapsisKm,
+            @JsonKey(name: 'inclination_deg') int? inclinationDeg)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkOrbitParams() when $default != null:
+        return $default(
+            _that.referenceSystem,
+            _that.regime,
+            _that.longitude,
+            _that.semiMajorAxisKm,
+            _that.eccentricity,
+            _that.periapsisKm,
+            _that.apoapsisKm,
+            _that.inclinationDeg);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
 class _NetworkOrbitParams implements NetworkOrbitParams {
   const _NetworkOrbitParams(
-      {this.referenceSystem,
-      this.regime,
-      this.longitude,
-      this.semiMajorAxisKm,
-      this.eccentricity,
-      this.periapsisKm,
-      this.apoapsisKm,
-      this.inclinationDeg});
+      {@JsonKey(name: 'reference_system') this.referenceSystem,
+      @JsonKey(name: 'regime') this.regime,
+      @JsonKey(name: 'longitude') this.longitude,
+      @JsonKey(name: 'semi_major_axis_km') this.semiMajorAxisKm,
+      @JsonKey(name: 'eccentricity') this.eccentricity,
+      @JsonKey(name: 'periapsis_km') this.periapsisKm,
+      @JsonKey(name: 'apoapsis_km') this.apoapsisKm,
+      @JsonKey(name: 'inclination_deg') this.inclinationDeg});
   factory _NetworkOrbitParams.fromJson(Map<String, dynamic> json) =>
       _$NetworkOrbitParamsFromJson(json);
 
   @override
+  @JsonKey(name: 'reference_system')
   final String? referenceSystem;
   @override
+  @JsonKey(name: 'regime')
   final String? regime;
   @override
+  @JsonKey(name: 'longitude')
   final int? longitude;
   @override
+  @JsonKey(name: 'semi_major_axis_km')
   final double? semiMajorAxisKm;
   @override
+  @JsonKey(name: 'eccentricity')
   final double? eccentricity;
   @override
+  @JsonKey(name: 'periapsis_km')
   final int? periapsisKm;
   @override
+  @JsonKey(name: 'apoapsis_km')
   final int? apoapsisKm;
   @override
+  @JsonKey(name: 'inclination_deg')
   final int? inclinationDeg;
 
   /// Create a copy of NetworkOrbitParams
@@ -2166,14 +3591,14 @@ abstract mixin class _$NetworkOrbitParamsCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String? referenceSystem,
-      String? regime,
-      int? longitude,
-      double? semiMajorAxisKm,
-      double? eccentricity,
-      int? periapsisKm,
-      int? apoapsisKm,
-      int? inclinationDeg});
+      {@JsonKey(name: 'reference_system') String? referenceSystem,
+      @JsonKey(name: 'regime') String? regime,
+      @JsonKey(name: 'longitude') int? longitude,
+      @JsonKey(name: 'semi_major_axis_km') double? semiMajorAxisKm,
+      @JsonKey(name: 'eccentricity') double? eccentricity,
+      @JsonKey(name: 'periapsis_km') int? periapsisKm,
+      @JsonKey(name: 'apoapsis_km') int? apoapsisKm,
+      @JsonKey(name: 'inclination_deg') int? inclinationDeg});
 }
 
 /// @nodoc
@@ -2237,9 +3662,13 @@ class __$NetworkOrbitParamsCopyWithImpl<$Res>
 
 /// @nodoc
 mixin _$NetworkFairings {
+  @JsonKey(name: 'reused')
   bool? get reused;
+  @JsonKey(name: 'recovery_attempt')
   bool? get recoveryAttempt;
+  @JsonKey(name: 'recovered')
   bool? get recovered;
+  @JsonKey(name: 'ship')
   String? get ship;
 
   /// Create a copy of NetworkFairings
@@ -2284,7 +3713,10 @@ abstract mixin class $NetworkFairingsCopyWith<$Res> {
       _$NetworkFairingsCopyWithImpl;
   @useResult
   $Res call(
-      {bool? reused, bool? recoveryAttempt, bool? recovered, String? ship});
+      {@JsonKey(name: 'reused') bool? reused,
+      @JsonKey(name: 'recovery_attempt') bool? recoveryAttempt,
+      @JsonKey(name: 'recovered') bool? recovered,
+      @JsonKey(name: 'ship') String? ship});
 }
 
 /// @nodoc
@@ -2326,21 +3758,203 @@ class _$NetworkFairingsCopyWithImpl<$Res>
   }
 }
 
+/// Adds pattern-matching-related methods to [NetworkFairings].
+extension NetworkFairingsPatterns on NetworkFairings {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_NetworkFairings value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkFairings() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_NetworkFairings value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkFairings():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_NetworkFairings value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkFairings() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            @JsonKey(name: 'reused') bool? reused,
+            @JsonKey(name: 'recovery_attempt') bool? recoveryAttempt,
+            @JsonKey(name: 'recovered') bool? recovered,
+            @JsonKey(name: 'ship') String? ship)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkFairings() when $default != null:
+        return $default(
+            _that.reused, _that.recoveryAttempt, _that.recovered, _that.ship);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            @JsonKey(name: 'reused') bool? reused,
+            @JsonKey(name: 'recovery_attempt') bool? recoveryAttempt,
+            @JsonKey(name: 'recovered') bool? recovered,
+            @JsonKey(name: 'ship') String? ship)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkFairings():
+        return $default(
+            _that.reused, _that.recoveryAttempt, _that.recovered, _that.ship);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            @JsonKey(name: 'reused') bool? reused,
+            @JsonKey(name: 'recovery_attempt') bool? recoveryAttempt,
+            @JsonKey(name: 'recovered') bool? recovered,
+            @JsonKey(name: 'ship') String? ship)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkFairings() when $default != null:
+        return $default(
+            _that.reused, _that.recoveryAttempt, _that.recovered, _that.ship);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
 class _NetworkFairings implements NetworkFairings {
   const _NetworkFairings(
-      {this.reused, this.recoveryAttempt, this.recovered, this.ship});
+      {@JsonKey(name: 'reused') this.reused,
+      @JsonKey(name: 'recovery_attempt') this.recoveryAttempt,
+      @JsonKey(name: 'recovered') this.recovered,
+      @JsonKey(name: 'ship') this.ship});
   factory _NetworkFairings.fromJson(Map<String, dynamic> json) =>
       _$NetworkFairingsFromJson(json);
 
   @override
+  @JsonKey(name: 'reused')
   final bool? reused;
   @override
+  @JsonKey(name: 'recovery_attempt')
   final bool? recoveryAttempt;
   @override
+  @JsonKey(name: 'recovered')
   final bool? recovered;
   @override
+  @JsonKey(name: 'ship')
   final String? ship;
 
   /// Create a copy of NetworkFairings
@@ -2391,7 +4005,10 @@ abstract mixin class _$NetworkFairingsCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {bool? reused, bool? recoveryAttempt, bool? recovered, String? ship});
+      {@JsonKey(name: 'reused') bool? reused,
+      @JsonKey(name: 'recovery_attempt') bool? recoveryAttempt,
+      @JsonKey(name: 'recovered') bool? recovered,
+      @JsonKey(name: 'ship') String? ship});
 }
 
 /// @nodoc
@@ -2435,6 +4052,7 @@ class __$NetworkFairingsCopyWithImpl<$Res>
 
 /// @nodoc
 mixin _$NetworkTelemetry {
+  @JsonKey(name: 'flight_club')
   String? get flightClub;
 
   /// Create a copy of NetworkTelemetry
@@ -2473,7 +4091,7 @@ abstract mixin class $NetworkTelemetryCopyWith<$Res> {
           NetworkTelemetry value, $Res Function(NetworkTelemetry) _then) =
       _$NetworkTelemetryCopyWithImpl;
   @useResult
-  $Res call({String? flightClub});
+  $Res call({@JsonKey(name: 'flight_club') String? flightClub});
 }
 
 /// @nodoc
@@ -2500,14 +4118,174 @@ class _$NetworkTelemetryCopyWithImpl<$Res>
   }
 }
 
+/// Adds pattern-matching-related methods to [NetworkTelemetry].
+extension NetworkTelemetryPatterns on NetworkTelemetry {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_NetworkTelemetry value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkTelemetry() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_NetworkTelemetry value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkTelemetry():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_NetworkTelemetry value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkTelemetry() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(@JsonKey(name: 'flight_club') String? flightClub)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkTelemetry() when $default != null:
+        return $default(_that.flightClub);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(@JsonKey(name: 'flight_club') String? flightClub) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkTelemetry():
+        return $default(_that.flightClub);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(@JsonKey(name: 'flight_club') String? flightClub)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkTelemetry() when $default != null:
+        return $default(_that.flightClub);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
 class _NetworkTelemetry implements NetworkTelemetry {
-  const _NetworkTelemetry({this.flightClub});
+  const _NetworkTelemetry({@JsonKey(name: 'flight_club') this.flightClub});
   factory _NetworkTelemetry.fromJson(Map<String, dynamic> json) =>
       _$NetworkTelemetryFromJson(json);
 
   @override
+  @JsonKey(name: 'flight_club')
   final String? flightClub;
 
   /// Create a copy of NetworkTelemetry
@@ -2552,7 +4330,7 @@ abstract mixin class _$NetworkTelemetryCopyWith<$Res>
       __$NetworkTelemetryCopyWithImpl;
   @override
   @useResult
-  $Res call({String? flightClub});
+  $Res call({@JsonKey(name: 'flight_club') String? flightClub});
 }
 
 /// @nodoc
@@ -2581,8 +4359,11 @@ class __$NetworkTelemetryCopyWithImpl<$Res>
 
 /// @nodoc
 mixin _$NetworkLaunchSite {
+  @JsonKey(name: 'site_id')
   String? get siteId;
+  @JsonKey(name: 'site_name')
   String? get siteName;
+  @JsonKey(name: 'site_name_long')
   String? get siteNameLong;
 
   /// Create a copy of NetworkLaunchSite
@@ -2624,7 +4405,10 @@ abstract mixin class $NetworkLaunchSiteCopyWith<$Res> {
           NetworkLaunchSite value, $Res Function(NetworkLaunchSite) _then) =
       _$NetworkLaunchSiteCopyWithImpl;
   @useResult
-  $Res call({String? siteId, String? siteName, String? siteNameLong});
+  $Res call(
+      {@JsonKey(name: 'site_id') String? siteId,
+      @JsonKey(name: 'site_name') String? siteName,
+      @JsonKey(name: 'site_name_long') String? siteNameLong});
 }
 
 /// @nodoc
@@ -2661,18 +4445,193 @@ class _$NetworkLaunchSiteCopyWithImpl<$Res>
   }
 }
 
+/// Adds pattern-matching-related methods to [NetworkLaunchSite].
+extension NetworkLaunchSitePatterns on NetworkLaunchSite {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_NetworkLaunchSite value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkLaunchSite() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_NetworkLaunchSite value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkLaunchSite():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_NetworkLaunchSite value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkLaunchSite() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            @JsonKey(name: 'site_id') String? siteId,
+            @JsonKey(name: 'site_name') String? siteName,
+            @JsonKey(name: 'site_name_long') String? siteNameLong)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkLaunchSite() when $default != null:
+        return $default(_that.siteId, _that.siteName, _that.siteNameLong);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            @JsonKey(name: 'site_id') String? siteId,
+            @JsonKey(name: 'site_name') String? siteName,
+            @JsonKey(name: 'site_name_long') String? siteNameLong)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkLaunchSite():
+        return $default(_that.siteId, _that.siteName, _that.siteNameLong);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            @JsonKey(name: 'site_id') String? siteId,
+            @JsonKey(name: 'site_name') String? siteName,
+            @JsonKey(name: 'site_name_long') String? siteNameLong)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkLaunchSite() when $default != null:
+        return $default(_that.siteId, _that.siteName, _that.siteNameLong);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
 class _NetworkLaunchSite implements NetworkLaunchSite {
-  const _NetworkLaunchSite({this.siteId, this.siteName, this.siteNameLong});
+  const _NetworkLaunchSite(
+      {@JsonKey(name: 'site_id') this.siteId,
+      @JsonKey(name: 'site_name') this.siteName,
+      @JsonKey(name: 'site_name_long') this.siteNameLong});
   factory _NetworkLaunchSite.fromJson(Map<String, dynamic> json) =>
       _$NetworkLaunchSiteFromJson(json);
 
   @override
+  @JsonKey(name: 'site_id')
   final String? siteId;
   @override
+  @JsonKey(name: 'site_name')
   final String? siteName;
   @override
+  @JsonKey(name: 'site_name_long')
   final String? siteNameLong;
 
   /// Create a copy of NetworkLaunchSite
@@ -2720,7 +4679,10 @@ abstract mixin class _$NetworkLaunchSiteCopyWith<$Res>
       __$NetworkLaunchSiteCopyWithImpl;
   @override
   @useResult
-  $Res call({String? siteId, String? siteName, String? siteNameLong});
+  $Res call(
+      {@JsonKey(name: 'site_id') String? siteId,
+      @JsonKey(name: 'site_name') String? siteName,
+      @JsonKey(name: 'site_name_long') String? siteNameLong});
 }
 
 /// @nodoc
@@ -2759,8 +4721,11 @@ class __$NetworkLaunchSiteCopyWithImpl<$Res>
 
 /// @nodoc
 mixin _$NetworkLaunchFailureDetails {
+  @JsonKey(name: 'time')
   int? get time;
-  String? get altitude;
+  @JsonKey(name: 'altitude')
+  int? get altitude;
+  @JsonKey(name: 'reason')
   String? get reason;
 
   /// Create a copy of NetworkLaunchFailureDetails
@@ -2803,7 +4768,10 @@ abstract mixin class $NetworkLaunchFailureDetailsCopyWith<$Res> {
           $Res Function(NetworkLaunchFailureDetails) _then) =
       _$NetworkLaunchFailureDetailsCopyWithImpl;
   @useResult
-  $Res call({int? time, String? altitude, String? reason});
+  $Res call(
+      {@JsonKey(name: 'time') int? time,
+      @JsonKey(name: 'altitude') int? altitude,
+      @JsonKey(name: 'reason') String? reason});
 }
 
 /// @nodoc
@@ -2831,7 +4799,7 @@ class _$NetworkLaunchFailureDetailsCopyWithImpl<$Res>
       altitude: freezed == altitude
           ? _self.altitude
           : altitude // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as int?,
       reason: freezed == reason
           ? _self.reason
           : reason // ignore: cast_nullable_to_non_nullable
@@ -2840,18 +4808,193 @@ class _$NetworkLaunchFailureDetailsCopyWithImpl<$Res>
   }
 }
 
+/// Adds pattern-matching-related methods to [NetworkLaunchFailureDetails].
+extension NetworkLaunchFailureDetailsPatterns on NetworkLaunchFailureDetails {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_NetworkLaunchFailureDetails value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkLaunchFailureDetails() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_NetworkLaunchFailureDetails value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkLaunchFailureDetails():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_NetworkLaunchFailureDetails value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkLaunchFailureDetails() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            @JsonKey(name: 'time') int? time,
+            @JsonKey(name: 'altitude') int? altitude,
+            @JsonKey(name: 'reason') String? reason)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkLaunchFailureDetails() when $default != null:
+        return $default(_that.time, _that.altitude, _that.reason);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            @JsonKey(name: 'time') int? time,
+            @JsonKey(name: 'altitude') int? altitude,
+            @JsonKey(name: 'reason') String? reason)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkLaunchFailureDetails():
+        return $default(_that.time, _that.altitude, _that.reason);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            @JsonKey(name: 'time') int? time,
+            @JsonKey(name: 'altitude') int? altitude,
+            @JsonKey(name: 'reason') String? reason)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkLaunchFailureDetails() when $default != null:
+        return $default(_that.time, _that.altitude, _that.reason);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
 class _NetworkLaunchFailureDetails implements NetworkLaunchFailureDetails {
-  const _NetworkLaunchFailureDetails({this.time, this.altitude, this.reason});
+  const _NetworkLaunchFailureDetails(
+      {@JsonKey(name: 'time') this.time,
+      @JsonKey(name: 'altitude') this.altitude,
+      @JsonKey(name: 'reason') this.reason});
   factory _NetworkLaunchFailureDetails.fromJson(Map<String, dynamic> json) =>
       _$NetworkLaunchFailureDetailsFromJson(json);
 
   @override
+  @JsonKey(name: 'time')
   final int? time;
   @override
-  final String? altitude;
+  @JsonKey(name: 'altitude')
+  final int? altitude;
   @override
+  @JsonKey(name: 'reason')
   final String? reason;
 
   /// Create a copy of NetworkLaunchFailureDetails
@@ -2900,7 +5043,10 @@ abstract mixin class _$NetworkLaunchFailureDetailsCopyWith<$Res>
       __$NetworkLaunchFailureDetailsCopyWithImpl;
   @override
   @useResult
-  $Res call({int? time, String? altitude, String? reason});
+  $Res call(
+      {@JsonKey(name: 'time') int? time,
+      @JsonKey(name: 'altitude') int? altitude,
+      @JsonKey(name: 'reason') String? reason});
 }
 
 /// @nodoc
@@ -2928,7 +5074,7 @@ class __$NetworkLaunchFailureDetailsCopyWithImpl<$Res>
       altitude: freezed == altitude
           ? _self.altitude
           : altitude // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as int?,
       reason: freezed == reason
           ? _self.reason
           : reason // ignore: cast_nullable_to_non_nullable
@@ -2939,6 +5085,7 @@ class __$NetworkLaunchFailureDetailsCopyWithImpl<$Res>
 
 /// @nodoc
 mixin _$NetworkTimeline {
+  @JsonKey(name: 'webcast_liftoff')
   int? get webcastLiftoff;
 
   /// Create a copy of NetworkTimeline
@@ -2977,7 +5124,7 @@ abstract mixin class $NetworkTimelineCopyWith<$Res> {
           NetworkTimeline value, $Res Function(NetworkTimeline) _then) =
       _$NetworkTimelineCopyWithImpl;
   @useResult
-  $Res call({int? webcastLiftoff});
+  $Res call({@JsonKey(name: 'webcast_liftoff') int? webcastLiftoff});
 }
 
 /// @nodoc
@@ -3004,14 +5151,176 @@ class _$NetworkTimelineCopyWithImpl<$Res>
   }
 }
 
+/// Adds pattern-matching-related methods to [NetworkTimeline].
+extension NetworkTimelinePatterns on NetworkTimeline {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_NetworkTimeline value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkTimeline() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_NetworkTimeline value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkTimeline():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_NetworkTimeline value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkTimeline() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(@JsonKey(name: 'webcast_liftoff') int? webcastLiftoff)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkTimeline() when $default != null:
+        return $default(_that.webcastLiftoff);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(@JsonKey(name: 'webcast_liftoff') int? webcastLiftoff)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkTimeline():
+        return $default(_that.webcastLiftoff);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(@JsonKey(name: 'webcast_liftoff') int? webcastLiftoff)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _NetworkTimeline() when $default != null:
+        return $default(_that.webcastLiftoff);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
 class _NetworkTimeline implements NetworkTimeline {
-  const _NetworkTimeline({this.webcastLiftoff});
+  const _NetworkTimeline(
+      {@JsonKey(name: 'webcast_liftoff') this.webcastLiftoff});
   factory _NetworkTimeline.fromJson(Map<String, dynamic> json) =>
       _$NetworkTimelineFromJson(json);
 
   @override
+  @JsonKey(name: 'webcast_liftoff')
   final int? webcastLiftoff;
 
   /// Create a copy of NetworkTimeline
@@ -3056,7 +5365,7 @@ abstract mixin class _$NetworkTimelineCopyWith<$Res>
       __$NetworkTimelineCopyWithImpl;
   @override
   @useResult
-  $Res call({int? webcastLiftoff});
+  $Res call({@JsonKey(name: 'webcast_liftoff') int? webcastLiftoff});
 }
 
 /// @nodoc

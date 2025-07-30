@@ -35,7 +35,7 @@ dependencies:
   injectable: ^2.5.0
   nullx: ^0.1.17
   retrofit: ^4.4.2
-  retrofit_generator: ^9.1.9
+  retrofit_generator: ^10.0.1
   dartz: ^0.10.1
   talker: ^4.6.14
   talker_logger: ^4.6.14

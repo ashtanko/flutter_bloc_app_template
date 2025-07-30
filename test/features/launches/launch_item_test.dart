@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/features/launches/widget/launch_item.dart';
-import 'package:flutter_bloc_app_template/models/launch.dart';
+import 'package:flutter_bloc_app_template/index.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../bloc/utils.dart';

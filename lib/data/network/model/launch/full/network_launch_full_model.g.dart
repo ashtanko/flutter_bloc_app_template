@@ -9,18 +9,19 @@ part of 'network_launch_full_model.dart';
 _NetworkLaunchFullModel _$NetworkLaunchFullModelFromJson(
         Map<String, dynamic> json) =>
     _NetworkLaunchFullModel(
-      flightNumber: (json['flightNumber'] as num).toInt(),
-      missionName: json['missionName'] as String?,
-      missionId: json['missionId'] as List<dynamic>?,
+      id: json['_id'] as String?,
+      flightNumber: (json['flight_number'] as num?)?.toInt(),
+      missionName: json['mission_name'] as String?,
+      missionId: json['mission_id'] as List<dynamic>?,
       upcoming: json['upcoming'] as bool?,
-      launchYear: json['launchYear'] as String?,
-      launchDateUnix: (json['launchDateUnix'] as num?)?.toInt(),
-      launchDateUtc: json['launchDateUtc'] as String?,
-      launchDateLocal: json['launchDateLocal'] as String?,
-      isTentative: json['isTentative'] as bool?,
-      tentativeMaxPrecision: json['tentativeMaxPrecision'] as String?,
+      launchYear: json['launch_year'] as String?,
+      launchDateUnix: (json['launch_date_unix'] as num?)?.toInt(),
+      launchDate: const TimestampSerializer().fromJson(json['launch_date_utc']),
+      launchDateLocal: json['launch_date_local'] as String?,
+      isTentative: json['is_tentative'] as bool?,
+      tentativeMaxPrecision: json['tentative_max_precision'] as String?,
       tbd: json['tbd'] as bool?,
-      launchWindow: (json['launchWindow'] as num?)?.toInt(),
+      launchWindow: (json['launch_window'] as num?)?.toInt(),
       rocket: json['rocket'] == null
           ? null
           : NetworkRocketModel.fromJson(json['rocket'] as Map<String, dynamic>),
@@ -29,22 +30,23 @@ _NetworkLaunchFullModel _$NetworkLaunchFullModelFromJson(
           ? null
           : NetworkTelemetry.fromJson(
               json['telemetry'] as Map<String, dynamic>),
-      launchSite: json['launchSite'] == null
+      launchSite: json['launch_site'] == null
           ? null
           : NetworkLaunchSite.fromJson(
-              json['launchSite'] as Map<String, dynamic>),
-      launchSuccess: json['launchSuccess'] as bool?,
-      launchFailureDetails: json['launchFailureDetails'] == null
+              json['launch_site'] as Map<String, dynamic>),
+      success: json['launch_success'] as bool?,
+      launchFailureDetails: json['launch_failure_details'] == null
           ? null
           : NetworkLaunchFailureDetails.fromJson(
-              json['launchFailureDetails'] as Map<String, dynamic>),
+              json['launch_failure_details'] as Map<String, dynamic>),
       links: json['links'] == null
           ? null
           : NetworkLaunchLinksModel.fromJson(
               json['links'] as Map<String, dynamic>),
       details: json['details'] as String?,
-      staticFireDateUtc: json['staticFireDateUtc'] as String?,
-      staticFireDateUnix: (json['staticFireDateUnix'] as num?)?.toInt(),
+      staticFireDateUtc:
+          const TimestampSerializer().fromJson(json['static_fire_date_utc']),
+      staticFireDateUnix: (json['static_fire_date_unix'] as num?)?.toInt(),
       timeline: json['timeline'] == null
           ? null
           : NetworkTimeline.fromJson(json['timeline'] as Map<String, dynamic>),
@@ -53,28 +55,31 @@ _NetworkLaunchFullModel _$NetworkLaunchFullModelFromJson(
 Map<String, dynamic> _$NetworkLaunchFullModelToJson(
         _NetworkLaunchFullModel instance) =>
     <String, dynamic>{
-      'flightNumber': instance.flightNumber,
-      'missionName': instance.missionName,
-      'missionId': instance.missionId,
+      '_id': instance.id,
+      'flight_number': instance.flightNumber,
+      'mission_name': instance.missionName,
+      'mission_id': instance.missionId,
       'upcoming': instance.upcoming,
-      'launchYear': instance.launchYear,
-      'launchDateUnix': instance.launchDateUnix,
-      'launchDateUtc': instance.launchDateUtc,
-      'launchDateLocal': instance.launchDateLocal,
-      'isTentative': instance.isTentative,
-      'tentativeMaxPrecision': instance.tentativeMaxPrecision,
+      'launch_year': instance.launchYear,
+      'launch_date_unix': instance.launchDateUnix,
+      'launch_date_utc':
+          const TimestampSerializer().toJson(instance.launchDate),
+      'launch_date_local': instance.launchDateLocal,
+      'is_tentative': instance.isTentative,
+      'tentative_max_precision': instance.tentativeMaxPrecision,
       'tbd': instance.tbd,
-      'launchWindow': instance.launchWindow,
+      'launch_window': instance.launchWindow,
       'rocket': instance.rocket,
       'ships': instance.ships,
       'telemetry': instance.telemetry,
-      'launchSite': instance.launchSite,
-      'launchSuccess': instance.launchSuccess,
-      'launchFailureDetails': instance.launchFailureDetails,
+      'launch_site': instance.launchSite,
+      'launch_success': instance.success,
+      'launch_failure_details': instance.launchFailureDetails,
       'links': instance.links,
       'details': instance.details,
-      'staticFireDateUtc': instance.staticFireDateUtc,
-      'staticFireDateUnix': instance.staticFireDateUnix,
+      'static_fire_date_utc':
+          const TimestampSerializer().toJson(instance.staticFireDateUtc),
+      'static_fire_date_unix': instance.staticFireDateUnix,
       'timeline': instance.timeline,
     };
 
@@ -91,30 +96,30 @@ Map<String, dynamic> _$NetworkFirstStageToJson(_NetworkFirstStage instance) =>
     };
 
 _NetworkCore _$NetworkCoreFromJson(Map<String, dynamic> json) => _NetworkCore(
-      coreSerial: json['coreSerial'] as String?,
+      coreSerial: json['core_serial'] as String?,
       flight: (json['flight'] as num?)?.toInt(),
       block: json['block'] as String?,
       gridfins: json['gridfins'] as bool?,
       legs: json['legs'] as bool?,
       reused: json['reused'] as bool?,
-      landSuccess: json['landSuccess'] as bool?,
-      landingIntent: json['landingIntent'] as bool?,
-      landingType: json['landingType'] as String?,
-      landingVehicle: json['landingVehicle'] as String?,
+      landSuccess: json['land_success'] as bool?,
+      landingIntent: json['landing_intent'] as bool?,
+      landingType: json['landing_type'] as String?,
+      landingVehicle: json['landing_vehicle'] as String?,
     );
 
 Map<String, dynamic> _$NetworkCoreToJson(_NetworkCore instance) =>
     <String, dynamic>{
-      'coreSerial': instance.coreSerial,
+      'core_serial': instance.coreSerial,
       'flight': instance.flight,
       'block': instance.block,
       'gridfins': instance.gridfins,
       'legs': instance.legs,
       'reused': instance.reused,
-      'landSuccess': instance.landSuccess,
-      'landingIntent': instance.landingIntent,
-      'landingType': instance.landingType,
-      'landingVehicle': instance.landingVehicle,
+      'land_success': instance.landSuccess,
+      'landing_intent': instance.landingIntent,
+      'landing_type': instance.landingType,
+      'landing_vehicle': instance.landingVehicle,
     };
 
 _NetworkSecondStage _$NetworkSecondStageFromJson(Map<String, dynamic> json) =>
@@ -133,67 +138,67 @@ Map<String, dynamic> _$NetworkSecondStageToJson(_NetworkSecondStage instance) =>
 
 _NetworkPayload _$NetworkPayloadFromJson(Map<String, dynamic> json) =>
     _NetworkPayload(
-      payloadId: json['payloadId'] as String?,
-      noradId: json['noradId'] as List<dynamic>?,
+      payloadId: json['payload_id'] as String?,
+      noradId: json['norad_id'] as List<dynamic>?,
       reused: json['reused'] as bool?,
       customers: (json['customers'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
       nationality: json['nationality'] as String?,
       manufacturer: json['manufacturer'] as String?,
-      payloadType: json['payloadType'] as String?,
-      payloadMassKg: (json['payloadMassKg'] as num?)?.toInt(),
-      payloadMassLbs: (json['payloadMassLbs'] as num?)?.toInt(),
+      payloadType: json['payload_type'] as String?,
+      payloadMassKg: (json['payload_mass_kg'] as num?)?.toInt(),
+      payloadMassLbs: (json['payload_mass_lbs'] as num?)?.toInt(),
       orbit: json['orbit'] as String?,
-      orbitParams: json['orbitParams'] == null
+      orbitParams: json['orbit_params'] == null
           ? null
           : NetworkOrbitParams.fromJson(
-              json['orbitParams'] as Map<String, dynamic>),
+              json['orbit_params'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$NetworkPayloadToJson(_NetworkPayload instance) =>
     <String, dynamic>{
-      'payloadId': instance.payloadId,
-      'noradId': instance.noradId,
+      'payload_id': instance.payloadId,
+      'norad_id': instance.noradId,
       'reused': instance.reused,
       'customers': instance.customers,
       'nationality': instance.nationality,
       'manufacturer': instance.manufacturer,
-      'payloadType': instance.payloadType,
-      'payloadMassKg': instance.payloadMassKg,
-      'payloadMassLbs': instance.payloadMassLbs,
+      'payload_type': instance.payloadType,
+      'payload_mass_kg': instance.payloadMassKg,
+      'payload_mass_lbs': instance.payloadMassLbs,
       'orbit': instance.orbit,
-      'orbitParams': instance.orbitParams,
+      'orbit_params': instance.orbitParams,
     };
 
 _NetworkOrbitParams _$NetworkOrbitParamsFromJson(Map<String, dynamic> json) =>
     _NetworkOrbitParams(
-      referenceSystem: json['referenceSystem'] as String?,
+      referenceSystem: json['reference_system'] as String?,
       regime: json['regime'] as String?,
       longitude: (json['longitude'] as num?)?.toInt(),
-      semiMajorAxisKm: (json['semiMajorAxisKm'] as num?)?.toDouble(),
+      semiMajorAxisKm: (json['semi_major_axis_km'] as num?)?.toDouble(),
       eccentricity: (json['eccentricity'] as num?)?.toDouble(),
-      periapsisKm: (json['periapsisKm'] as num?)?.toInt(),
-      apoapsisKm: (json['apoapsisKm'] as num?)?.toInt(),
-      inclinationDeg: (json['inclinationDeg'] as num?)?.toInt(),
+      periapsisKm: (json['periapsis_km'] as num?)?.toInt(),
+      apoapsisKm: (json['apoapsis_km'] as num?)?.toInt(),
+      inclinationDeg: (json['inclination_deg'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$NetworkOrbitParamsToJson(_NetworkOrbitParams instance) =>
     <String, dynamic>{
-      'referenceSystem': instance.referenceSystem,
+      'reference_system': instance.referenceSystem,
       'regime': instance.regime,
       'longitude': instance.longitude,
-      'semiMajorAxisKm': instance.semiMajorAxisKm,
+      'semi_major_axis_km': instance.semiMajorAxisKm,
       'eccentricity': instance.eccentricity,
-      'periapsisKm': instance.periapsisKm,
-      'apoapsisKm': instance.apoapsisKm,
-      'inclinationDeg': instance.inclinationDeg,
+      'periapsis_km': instance.periapsisKm,
+      'apoapsis_km': instance.apoapsisKm,
+      'inclination_deg': instance.inclinationDeg,
     };
 
 _NetworkFairings _$NetworkFairingsFromJson(Map<String, dynamic> json) =>
     _NetworkFairings(
       reused: json['reused'] as bool?,
-      recoveryAttempt: json['recoveryAttempt'] as bool?,
+      recoveryAttempt: json['recovery_attempt'] as bool?,
       recovered: json['recovered'] as bool?,
       ship: json['ship'] as String?,
     );
@@ -201,40 +206,40 @@ _NetworkFairings _$NetworkFairingsFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$NetworkFairingsToJson(_NetworkFairings instance) =>
     <String, dynamic>{
       'reused': instance.reused,
-      'recoveryAttempt': instance.recoveryAttempt,
+      'recovery_attempt': instance.recoveryAttempt,
       'recovered': instance.recovered,
       'ship': instance.ship,
     };
 
 _NetworkTelemetry _$NetworkTelemetryFromJson(Map<String, dynamic> json) =>
     _NetworkTelemetry(
-      flightClub: json['flightClub'] as String?,
+      flightClub: json['flight_club'] as String?,
     );
 
 Map<String, dynamic> _$NetworkTelemetryToJson(_NetworkTelemetry instance) =>
     <String, dynamic>{
-      'flightClub': instance.flightClub,
+      'flight_club': instance.flightClub,
     };
 
 _NetworkLaunchSite _$NetworkLaunchSiteFromJson(Map<String, dynamic> json) =>
     _NetworkLaunchSite(
-      siteId: json['siteId'] as String?,
-      siteName: json['siteName'] as String?,
-      siteNameLong: json['siteNameLong'] as String?,
+      siteId: json['site_id'] as String?,
+      siteName: json['site_name'] as String?,
+      siteNameLong: json['site_name_long'] as String?,
     );
 
 Map<String, dynamic> _$NetworkLaunchSiteToJson(_NetworkLaunchSite instance) =>
     <String, dynamic>{
-      'siteId': instance.siteId,
-      'siteName': instance.siteName,
-      'siteNameLong': instance.siteNameLong,
+      'site_id': instance.siteId,
+      'site_name': instance.siteName,
+      'site_name_long': instance.siteNameLong,
     };
 
 _NetworkLaunchFailureDetails _$NetworkLaunchFailureDetailsFromJson(
         Map<String, dynamic> json) =>
     _NetworkLaunchFailureDetails(
       time: (json['time'] as num?)?.toInt(),
-      altitude: json['altitude'] as String?,
+      altitude: (json['altitude'] as num?)?.toInt(),
       reason: json['reason'] as String?,
     );
 
@@ -248,10 +253,10 @@ Map<String, dynamic> _$NetworkLaunchFailureDetailsToJson(
 
 _NetworkTimeline _$NetworkTimelineFromJson(Map<String, dynamic> json) =>
     _NetworkTimeline(
-      webcastLiftoff: (json['webcastLiftoff'] as num?)?.toInt(),
+      webcastLiftoff: (json['webcast_liftoff'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$NetworkTimelineToJson(_NetworkTimeline instance) =>
     <String, dynamic>{
-      'webcastLiftoff': instance.webcastLiftoff,
+      'webcast_liftoff': instance.webcastLiftoff,
     };

@@ -1,7 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:flutter_bloc_app_template/models/launch.dart';
+import 'package:flutter_bloc_app_template/index.dart';
 import 'package:flutter_bloc_app_template/models/launches_filter.dart';
-import 'package:flutter_bloc_app_template/repository/launches_repository.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'launches_bloc.freezed.dart';

@@ -1,5 +1,6 @@
+import 'package:flutter_bloc_app_template/data/network/model/launch/full/network_launch_full_model.dart';
 import 'package:flutter_bloc_app_template/data/network/model/launch/network_launch_model.dart';
-import 'package:flutter_bloc_app_template/models/launch.dart';
+import 'package:flutter_bloc_app_template/index.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
@@ -31,6 +32,39 @@ void main() {
       };
 
       final networkLaunchModel = NetworkLaunchModel.fromJson(json);
+
+      final launchResource = networkLaunchModel.toResource();
+
+      expect(launchResource.id, '123');
+      expect(launchResource.missionName, 'Test Mission');
+      expect(launchResource.launchDays, isA<Since>());
+      expect(launchResource.launchTime, '03:35 AM, Jul 2009');
+      expect(launchResource.launchSuccess, true);
+    });
+  });
+
+  group('LaunchFullResourceExtension', () {
+    test('should convert NetworkLaunchFullModel to LaunchFullResource', () {
+      final json = {
+        '_id': '123',
+        'mission_name': 'Test Mission',
+        'launch_date_utc': '2009-07-13T03:35:00.000Z',
+        'rocket': {
+          'rocket_id': 'rocket123',
+          'rocket_type': 'Falcon 9',
+          'rocket_name': 'Falcon'
+        },
+        'launch_success': true,
+        'links': {
+          'mission_patch': 'patch_url',
+          'mission_patch_small': 'patch_small_url',
+          'article_link': 'article_url',
+          'wikipedia': 'wiki_url',
+          'youtube_id': 'youtube123'
+        }
+      };
+
+      final networkLaunchModel = NetworkLaunchFullModel.fromJson(json);
 
       final launchResource = networkLaunchModel.toResource();
 

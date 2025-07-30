@@ -46,9 +46,9 @@ extension GetItInjectableX on _i174.GetIt {
     final repositoryModule = _$RepositoryModule();
     gh.factory<_i361.Dio>(() => networkModule.provideDio());
     gh.factory<_i993.Talker>(() => dIAppModule.provideLogger());
+    gh.lazySingleton<_i750.ThemeStorage>(() => dIDataModule.themeStorage);
     gh.lazySingleton<_i409.GlobalKey<_i409.NavigatorState>>(
         () => dIAppModule.key);
-    gh.lazySingleton<_i750.ThemeStorage>(() => dIDataModule.themeStorage);
     gh.factory<_i859.LaunchService>(
         () => networkModule.provideLaunchService(gh<_i361.Dio>()));
     gh.factory<_i626.ThemeRepository>(() =>

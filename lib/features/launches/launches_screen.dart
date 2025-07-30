@@ -5,8 +5,6 @@ import 'package:flutter_bloc_app_template/features/launches/widget/launch_item.d
     show LaunchItem;
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/index.dart';
-import 'package:flutter_bloc_app_template/models/launch.dart'
-    show LaunchResource;
 
 class LaunchesScreen extends StatelessWidget {
   const LaunchesScreen({super.key});
@@ -69,6 +67,8 @@ class LaunchesListContent extends StatelessWidget {
         shrinkWrap: true,
         primary: false,
         itemBuilder: (context, index) => LaunchItem(
+          key: Key(
+              '${launches[index].missionName}${launches[index].flightNumber}'),
           launch: launches[index],
           onClick: (launch) {
             NavigationService.of(context).navigateTo(Routes.launch, launch);

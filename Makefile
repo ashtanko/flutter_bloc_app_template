@@ -24,7 +24,7 @@ localize:
 
 # Analyze the project
 check:
-	dart analyze .
+	dart analyze . && flutter analyze
 	# flutter pub run dart_code_metrics:metrics analyze lib
 
 # Run with flavors
@@ -62,3 +62,6 @@ force_upgrade:
 # Run integration test
 integration_test:
 	flutter test integration_test --flavor dev
+
+# upgrade_deps:
+#     flutter pub upgrade --major-versions

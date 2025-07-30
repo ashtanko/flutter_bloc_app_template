@@ -6,8 +6,6 @@ import 'package:flutter_bloc_app_template/bloc/init/init_bloc.dart';
 import 'package:flutter_bloc_app_template/di/di_container.dart';
 import 'package:flutter_bloc_app_template/features/launches/bloc/launches_bloc.dart';
 import 'package:flutter_bloc_app_template/index.dart';
-import 'package:flutter_bloc_app_template/repository/launches_repository.dart';
-import 'package:flutter_bloc_app_template/repository/theme_repository.dart';
 import 'package:flutter_bloc_app_template/theme/util.dart';
 
 class MyApp extends StatelessWidget {

@@ -2,7 +2,6 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/bloc/theme/app_theme.dart';
 import 'package:flutter_bloc_app_template/index.dart';
-import 'package:flutter_bloc_app_template/repository/theme_repository.dart';
 
 Map<AppTheme, ThemeData> getThemeData(MaterialTheme theme) {
   final themeData = <AppTheme, ThemeData>{
