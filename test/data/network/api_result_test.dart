@@ -1,28 +1,60 @@
-import 'dart:ffi';
-
 import 'package:flutter_bloc_app_template/data/network/api_result.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   group('ApiResult', () {
-    test('success should contain correct data', () {
-      final result = const ApiResult.success('Test Data');
+    test('should return success result with correct data', () {
+      const result = ApiResult.success(42);
 
-      expect(result, isA<Success<String>>());
-      expect((result as Success<String>).data, 'Test Data');
+      final output = ApiResultWhen(result).when(
+        success: (data) => 'Success with $data',
+        error: (message) => 'Error: $message',
+        loading: () => 'Loading...',
+      );
+
+      expect(output, 'Success with 42');
     });
 
-    test('error should contain correct message', () {
-      final result = const ApiResult<String>.error('Test Error');
+    test('should return error result with correct message', () {
+      const result = ApiResult<String>.error('Something went wrong');
 
-      expect(result, isA<Error<String>>());
-      expect((result as Error<String>).message, 'Test Error');
+      final output = ApiResultWhen(result).when(
+        success: (data) => 'Success with $data',
+        error: (message) => 'Error: $message',
+        loading: () => 'Loading...',
+      );
+
+      expect(output, 'Error: Something went wrong');
     });
 
-    test('loading should be of type Loading', () {
-      final result = const ApiResult<Void>.loading();
+    test('should return loading result', () {
+      const result = ApiResult<String>.loading();
 
-      expect(result, isA<Loading<Void>>());
+      final output = ApiResultWhen(result).when(
+        success: (data) => 'Success with $data',
+        error: (message) => 'Error: $message',
+        loading: () => 'Loading...',
+      );
+
+      expect(output, 'Loading...');
+    });
+
+    test('should throw assertion error for unknown type', () {
+      final invalid = const _InvalidApiResult<int>();
+
+      expect(
+        () => ApiResultWhen(invalid).when(
+          success: (data) => 'Success with $data',
+          error: (message) => 'Error: $message',
+          loading: () => 'Loading...',
+        ),
+        throwsA(isA<AssertionError>()),
+      );
     });
   });
+}
+
+/// A fake invalid implementation to test the fallback case in `when`
+class _InvalidApiResult<T> implements ApiResult<T> {
+  const _InvalidApiResult();
 }
