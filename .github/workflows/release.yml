@@ -17,7 +17,7 @@ jobs:
     steps:
       #1 Checkout Repository
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
         #2 Setup Java
       - name: Set Up Java
@@ -58,7 +58,7 @@ jobs:
 
         #9 Upload Artifacts
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: Releases
           path: |
