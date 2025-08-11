@@ -21,5 +21,5 @@ Future<void> run([
 }
 
 void _runApp() {
-  runApp(const MyApp());
+  runApp(const App());
 }
