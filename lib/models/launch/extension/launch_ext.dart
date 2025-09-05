@@ -35,6 +35,7 @@ extension LinksResourceExtension on NetworkLaunchLinksModel {
       articleLink: articleLink,
       wikipedia: wikipedia,
       youtubeId: youtubeId,
+      flickrImages: flickrImages,
     );
   }
 }

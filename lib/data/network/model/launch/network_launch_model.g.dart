@@ -56,6 +56,9 @@ _NetworkLaunchLinksModel _$NetworkLaunchLinksModelFromJson(
       articleLink: json['article_link'] as String?,
       wikipedia: json['wikipedia'] as String?,
       youtubeId: json['youtube_id'] as String?,
+      flickrImages: (json['flickr_images'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
     );
 
 Map<String, dynamic> _$NetworkLaunchLinksModelToJson(
@@ -66,4 +69,5 @@ Map<String, dynamic> _$NetworkLaunchLinksModelToJson(
       'article_link': instance.articleLink,
       'wikipedia': instance.wikipedia,
       'youtube_id': instance.youtubeId,
+      'flickr_images': instance.flickrImages,
     };

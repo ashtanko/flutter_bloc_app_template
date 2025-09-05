@@ -46,6 +46,7 @@ abstract class NetworkLaunchLinksModel with _$NetworkLaunchLinksModel {
     @JsonKey(name: 'article_link') String? articleLink,
     @JsonKey(name: 'wikipedia') String? wikipedia,
     @JsonKey(name: 'youtube_id') String? youtubeId,
+    @JsonKey(name: 'flickr_images') List<String>? flickrImages,
   }) = _NetworkLaunchLinksModel;
 
   const NetworkLaunchLinksModel._();

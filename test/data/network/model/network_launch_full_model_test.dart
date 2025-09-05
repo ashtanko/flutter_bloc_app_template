@@ -48,7 +48,18 @@ void main() {
           "wikipedia": "https://en.wikipedia.org/wiki/DemoSat",
           "video_link": "https://www.youtube.com/watch?v=0a_00nJ_Y88",
           "youtube_id": "0a_00nJ_Y88",
-          "flickr_images": []
+          "flickr_images": [
+            "https://farm9.staticflickr.com/8619/16511407538_9a25c5d8c6_o.jpg",
+            "https://farm9.staticflickr.com/8665/16697946612_1284e952b0_o.jpg",
+            "https://farm9.staticflickr.com/8570/16698990475_16524a93de_o.jpg",
+            "https://farm9.staticflickr.com/8681/16512864259_e849e496b1_o.jpg",
+            "https://farm9.staticflickr.com/8637/16079045013_1f0fab9b54_o.jpg",
+            "https://farm9.staticflickr.com/8601/16512864369_2bb896c344_o.jpg",
+            "https://farm9.staticflickr.com/8646/16697693861_a038331e0a_o.jpg",
+            "https://farm9.staticflickr.com/8680/16511407248_093635a243_o.jpg",
+            "https://farm9.staticflickr.com/8654/16511594820_451f194d53_o.jpg",
+            "https://farm9.staticflickr.com/8603/16673054016_472fb42a20_o.jpg"
+          ]
         },
         "details": "Engine failure at 33 seconds and loss of vehicle",
         "static_fire_date_utc": "2006-03-17T00:00:00.000Z",
@@ -88,6 +99,12 @@ void main() {
           '2006-03-17T00:00:00.000Z');
       expect(model.staticFireDateUnix, 1142553600);
       expect(model.timeline?.webcastLiftoff, 54);
+      expect(
+        model.links?.flickrImages,
+        contains(
+            'https://farm9.staticflickr.com/8619/16511407538_9a25c5d8c6_o.jpg'),
+      );
+      expect(model.links?.flickrImages?.length, 10);
     });
 
     test('toJson should serialize correctly', () {
@@ -124,6 +141,9 @@ void main() {
           articleLink: 'article',
           wikipedia: 'wiki',
           youtubeId: 'yt',
+          flickrImages: [
+            'https://farm9.staticflickr.com/8619/16511407538_9a25c5d8c6_o.jpg',
+          ],
         ),
         details: 'Test flight',
         staticFireDateUtc: DateTime.utc(2007, 03, 10),
@@ -135,6 +155,11 @@ void main() {
       expect(json['mission_name'], 'Demo');
       expect(json['launch_success'], true);
       expect((json['rocket'] as NetworkRocketModel).name, 'Falcon 1');
+      expect(
+        (json['links'] as NetworkLaunchLinksModel).flickrImages,
+        contains(
+            'https://farm9.staticflickr.com/8619/16511407538_9a25c5d8c6_o.jpg'),
+      );
     });
   });
 }

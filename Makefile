@@ -10,11 +10,11 @@ rebuild:
 
 # Generate code with build_runner
 gen:
-	flutter pub run build_runner build --delete-conflicting-outputs
+	dart run build_runner build --delete-conflicting-outputs
 
 # Generate code and localizations
 genAll:
-	flutter pub run build_runner build --delete-conflicting-outputs
+	dart run build_runner build --delete-conflicting-outputs
 	flutter pub run intl_utils:generate
 	fluttergen -c pubspec.yaml
 

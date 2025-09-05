@@ -921,6 +921,8 @@ mixin _$NetworkLaunchLinksModel {
   String? get wikipedia;
   @JsonKey(name: 'youtube_id')
   String? get youtubeId;
+  @JsonKey(name: 'flickr_images')
+  List<String>? get flickrImages;
 
   /// Create a copy of NetworkLaunchLinksModel
   /// with the given fields replaced by the non-null parameter values.
@@ -947,17 +949,25 @@ mixin _$NetworkLaunchLinksModel {
             (identical(other.wikipedia, wikipedia) ||
                 other.wikipedia == wikipedia) &&
             (identical(other.youtubeId, youtubeId) ||
-                other.youtubeId == youtubeId));
+                other.youtubeId == youtubeId) &&
+            const DeepCollectionEquality()
+                .equals(other.flickrImages, flickrImages));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, missionPatch, missionPatchSmall,
-      articleLink, wikipedia, youtubeId);
+  int get hashCode => Object.hash(
+      runtimeType,
+      missionPatch,
+      missionPatchSmall,
+      articleLink,
+      wikipedia,
+      youtubeId,
+      const DeepCollectionEquality().hash(flickrImages));
 
   @override
   String toString() {
-    return 'NetworkLaunchLinksModel(missionPatch: $missionPatch, missionPatchSmall: $missionPatchSmall, articleLink: $articleLink, wikipedia: $wikipedia, youtubeId: $youtubeId)';
+    return 'NetworkLaunchLinksModel(missionPatch: $missionPatch, missionPatchSmall: $missionPatchSmall, articleLink: $articleLink, wikipedia: $wikipedia, youtubeId: $youtubeId, flickrImages: $flickrImages)';
   }
 }
 
@@ -972,7 +982,8 @@ abstract mixin class $NetworkLaunchLinksModelCopyWith<$Res> {
       @JsonKey(name: 'mission_patch_small') String? missionPatchSmall,
       @JsonKey(name: 'article_link') String? articleLink,
       @JsonKey(name: 'wikipedia') String? wikipedia,
-      @JsonKey(name: 'youtube_id') String? youtubeId});
+      @JsonKey(name: 'youtube_id') String? youtubeId,
+      @JsonKey(name: 'flickr_images') List<String>? flickrImages});
 }
 
 /// @nodoc
@@ -993,6 +1004,7 @@ class _$NetworkLaunchLinksModelCopyWithImpl<$Res>
     Object? articleLink = freezed,
     Object? wikipedia = freezed,
     Object? youtubeId = freezed,
+    Object? flickrImages = freezed,
   }) {
     return _then(_self.copyWith(
       missionPatch: freezed == missionPatch
@@ -1015,6 +1027,10 @@ class _$NetworkLaunchLinksModelCopyWithImpl<$Res>
           ? _self.youtubeId
           : youtubeId // ignore: cast_nullable_to_non_nullable
               as String?,
+      flickrImages: freezed == flickrImages
+          ? _self.flickrImages
+          : flickrImages // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ));
   }
 }
@@ -1117,15 +1133,21 @@ extension NetworkLaunchLinksModelPatterns on NetworkLaunchLinksModel {
             @JsonKey(name: 'mission_patch_small') String? missionPatchSmall,
             @JsonKey(name: 'article_link') String? articleLink,
             @JsonKey(name: 'wikipedia') String? wikipedia,
-            @JsonKey(name: 'youtube_id') String? youtubeId)?
+            @JsonKey(name: 'youtube_id') String? youtubeId,
+            @JsonKey(name: 'flickr_images') List<String>? flickrImages)?
         $default, {
     required TResult orElse(),
   }) {
     final _that = this;
     switch (_that) {
       case _NetworkLaunchLinksModel() when $default != null:
-        return $default(_that.missionPatch, _that.missionPatchSmall,
-            _that.articleLink, _that.wikipedia, _that.youtubeId);
+        return $default(
+            _that.missionPatch,
+            _that.missionPatchSmall,
+            _that.articleLink,
+            _that.wikipedia,
+            _that.youtubeId,
+            _that.flickrImages);
       case _:
         return orElse();
     }
@@ -1151,14 +1173,20 @@ extension NetworkLaunchLinksModelPatterns on NetworkLaunchLinksModel {
             @JsonKey(name: 'mission_patch_small') String? missionPatchSmall,
             @JsonKey(name: 'article_link') String? articleLink,
             @JsonKey(name: 'wikipedia') String? wikipedia,
-            @JsonKey(name: 'youtube_id') String? youtubeId)
+            @JsonKey(name: 'youtube_id') String? youtubeId,
+            @JsonKey(name: 'flickr_images') List<String>? flickrImages)
         $default,
   ) {
     final _that = this;
     switch (_that) {
       case _NetworkLaunchLinksModel():
-        return $default(_that.missionPatch, _that.missionPatchSmall,
-            _that.articleLink, _that.wikipedia, _that.youtubeId);
+        return $default(
+            _that.missionPatch,
+            _that.missionPatchSmall,
+            _that.articleLink,
+            _that.wikipedia,
+            _that.youtubeId,
+            _that.flickrImages);
       case _:
         throw StateError('Unexpected subclass');
     }
@@ -1183,14 +1211,20 @@ extension NetworkLaunchLinksModelPatterns on NetworkLaunchLinksModel {
             @JsonKey(name: 'mission_patch_small') String? missionPatchSmall,
             @JsonKey(name: 'article_link') String? articleLink,
             @JsonKey(name: 'wikipedia') String? wikipedia,
-            @JsonKey(name: 'youtube_id') String? youtubeId)?
+            @JsonKey(name: 'youtube_id') String? youtubeId,
+            @JsonKey(name: 'flickr_images') List<String>? flickrImages)?
         $default,
   ) {
     final _that = this;
     switch (_that) {
       case _NetworkLaunchLinksModel() when $default != null:
-        return $default(_that.missionPatch, _that.missionPatchSmall,
-            _that.articleLink, _that.wikipedia, _that.youtubeId);
+        return $default(
+            _that.missionPatch,
+            _that.missionPatchSmall,
+            _that.articleLink,
+            _that.wikipedia,
+            _that.youtubeId,
+            _that.flickrImages);
       case _:
         return null;
     }
@@ -1205,8 +1239,10 @@ class _NetworkLaunchLinksModel extends NetworkLaunchLinksModel {
       @JsonKey(name: 'mission_patch_small') this.missionPatchSmall,
       @JsonKey(name: 'article_link') this.articleLink,
       @JsonKey(name: 'wikipedia') this.wikipedia,
-      @JsonKey(name: 'youtube_id') this.youtubeId})
-      : super._();
+      @JsonKey(name: 'youtube_id') this.youtubeId,
+      @JsonKey(name: 'flickr_images') final List<String>? flickrImages})
+      : _flickrImages = flickrImages,
+        super._();
   factory _NetworkLaunchLinksModel.fromJson(Map<String, dynamic> json) =>
       _$NetworkLaunchLinksModelFromJson(json);
 
@@ -1225,6 +1261,16 @@ class _NetworkLaunchLinksModel extends NetworkLaunchLinksModel {
   @override
   @JsonKey(name: 'youtube_id')
   final String? youtubeId;
+  final List<String>? _flickrImages;
+  @override
+  @JsonKey(name: 'flickr_images')
+  List<String>? get flickrImages {
+    final value = _flickrImages;
+    if (value == null) return null;
+    if (_flickrImages is EqualUnmodifiableListView) return _flickrImages;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   /// Create a copy of NetworkLaunchLinksModel
   /// with the given fields replaced by the non-null parameter values.
@@ -1256,17 +1302,25 @@ class _NetworkLaunchLinksModel extends NetworkLaunchLinksModel {
             (identical(other.wikipedia, wikipedia) ||
                 other.wikipedia == wikipedia) &&
             (identical(other.youtubeId, youtubeId) ||
-                other.youtubeId == youtubeId));
+                other.youtubeId == youtubeId) &&
+            const DeepCollectionEquality()
+                .equals(other._flickrImages, _flickrImages));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, missionPatch, missionPatchSmall,
-      articleLink, wikipedia, youtubeId);
+  int get hashCode => Object.hash(
+      runtimeType,
+      missionPatch,
+      missionPatchSmall,
+      articleLink,
+      wikipedia,
+      youtubeId,
+      const DeepCollectionEquality().hash(_flickrImages));
 
   @override
   String toString() {
-    return 'NetworkLaunchLinksModel(missionPatch: $missionPatch, missionPatchSmall: $missionPatchSmall, articleLink: $articleLink, wikipedia: $wikipedia, youtubeId: $youtubeId)';
+    return 'NetworkLaunchLinksModel(missionPatch: $missionPatch, missionPatchSmall: $missionPatchSmall, articleLink: $articleLink, wikipedia: $wikipedia, youtubeId: $youtubeId, flickrImages: $flickrImages)';
   }
 }
 
@@ -1283,7 +1337,8 @@ abstract mixin class _$NetworkLaunchLinksModelCopyWith<$Res>
       @JsonKey(name: 'mission_patch_small') String? missionPatchSmall,
       @JsonKey(name: 'article_link') String? articleLink,
       @JsonKey(name: 'wikipedia') String? wikipedia,
-      @JsonKey(name: 'youtube_id') String? youtubeId});
+      @JsonKey(name: 'youtube_id') String? youtubeId,
+      @JsonKey(name: 'flickr_images') List<String>? flickrImages});
 }
 
 /// @nodoc
@@ -1304,6 +1359,7 @@ class __$NetworkLaunchLinksModelCopyWithImpl<$Res>
     Object? articleLink = freezed,
     Object? wikipedia = freezed,
     Object? youtubeId = freezed,
+    Object? flickrImages = freezed,
   }) {
     return _then(_NetworkLaunchLinksModel(
       missionPatch: freezed == missionPatch
@@ -1326,6 +1382,10 @@ class __$NetworkLaunchLinksModelCopyWithImpl<$Res>
           ? _self.youtubeId
           : youtubeId // ignore: cast_nullable_to_non_nullable
               as String?,
+      flickrImages: freezed == flickrImages
+          ? _self._flickrImages
+          : flickrImages // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ));
   }
 }

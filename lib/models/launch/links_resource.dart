@@ -9,6 +9,7 @@ class LinksResource extends Equatable {
     this.articleLink,
     this.wikipedia,
     this.youtubeId,
+    this.flickrImages,
   });
 
   final String? missionPatch;
@@ -16,6 +17,7 @@ class LinksResource extends Equatable {
   final String? articleLink;
   final String? wikipedia;
   final String? youtubeId;
+  final List<String>? flickrImages;
 
   @override
   List<Object?> get props => [
@@ -24,5 +26,6 @@ class LinksResource extends Equatable {
         articleLink,
         wikipedia,
         youtubeId,
+        flickrImages,
       ];
 }
