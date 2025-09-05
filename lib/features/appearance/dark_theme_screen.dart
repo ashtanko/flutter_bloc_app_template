@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_app_template/bloc/theme/app_theme.dart';
 import 'package:flutter_bloc_app_template/index.dart';
-import 'package:flutter_bloc_app_template/utils/pair.dart';
 
 class DarkThemeScreen extends StatelessWidget {
   const DarkThemeScreen({super.key});
@@ -16,42 +15,52 @@ class DarkThemeScreen extends StatelessWidget {
       body: ListView(children: <Widget>[
         BlocConsumer<ThemeCubit, AppThemeSettings>(
           builder: (context, state) {
-            return Column(
-              children: [
-                ...[
-                  Pair(
-                    DarkThemePreference.on,
-                    context.darkThemeOnSettingsItemTitle,
-                  ),
-                  Pair(
-                    DarkThemePreference.off,
-                    context.darkThemeOffSettingsItemTitle,
-                  ),
-                  Pair(
-                    DarkThemePreference.followSystem,
-                    context.darkThemeFollowSystemSettingsItemTitle,
-                  ),
-                ].map((elem) => RadioListTile<int>(
-                      title: Text(elem.second),
-                      value: elem.first,
-                      key: Key(elem.second),
-                      groupValue: state.darkTheme.darkThemeValue,
-                      onChanged: (value) {
-                        context.read<ThemeCubit>().updateTheme(
-                              state.copyWith(
-                                darkTheme: state.darkTheme.copyWith(
-                                  darkThemeValue: value,
-                                ),
-                              ),
-                            );
-                      },
-                      secondary: ThemeIcon(
-                        icon: themeIcon(elem.first),
-                        isSelected:
-                            elem.first == state.darkTheme.darkThemeValue,
+            return RadioGroup<int>(
+              groupValue: state.darkTheme.darkThemeValue,
+              onChanged: (int? value) {
+                context.read<ThemeCubit>().updateTheme(
+                      state.copyWith(
+                        darkTheme: state.darkTheme.copyWith(
+                          darkThemeValue: value,
+                        ),
                       ),
-                    ))
-              ],
+                    );
+              },
+              child: Column(
+                children: <Widget>[
+                  RadioListTile<int>(
+                    title: Text(context.darkThemeOnSettingsItemTitle),
+                    value: DarkThemePreference.on,
+                    key: Key(context.darkThemeOnSettingsItemTitle),
+                    secondary: ThemeIcon(
+                      icon: themeIcon(DarkThemePreference.on),
+                      isSelected: DarkThemePreference.on ==
+                          state.darkTheme.darkThemeValue,
+                    ),
+                  ),
+                  RadioListTile<int>(
+                    title: Text(context.darkThemeOffSettingsItemTitle),
+                    value: DarkThemePreference.off,
+                    key: Key(context.darkThemeOffSettingsItemTitle),
+                    secondary: ThemeIcon(
+                      icon: themeIcon(DarkThemePreference.off),
+                      isSelected: DarkThemePreference.off ==
+                          state.darkTheme.darkThemeValue,
+                    ),
+                  ),
+                  RadioListTile<int>(
+                    title: Text(context.darkThemeFollowSystemSettingsItemTitle),
+                    value: DarkThemePreference.followSystem,
+                    key: Key(context.darkThemeFollowSystemSettingsItemTitle),
+                    secondary: ThemeIcon(
+                      icon: themeIcon(DarkThemePreference.followSystem),
+                      isSelected: DarkThemePreference.followSystem ==
+                          state.darkTheme.darkThemeValue,
+                    ),
+                  ),
+                  //Radio<int>(value: DarkThemePreference.off),
+                ],
+              ),
             );
           },
           listener: (context, state) => {},
