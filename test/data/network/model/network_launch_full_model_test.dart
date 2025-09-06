@@ -176,8 +176,7 @@ void main() {
       final json = model.toJson();
       expect(json['mission_name'], 'Demo');
       expect(json['launch_success'], true);
-      final linksJson = json['links'] as Map<String, dynamic>;
-      expect(linksJson['flickr_images'], [
+      expect((json['links'] as NetworkLaunchLinksModel).flickrImages, [
         'https://farm9.staticflickr.com/8619/16511407538_9a25c5d8c6_o.jpg',
         'https://farm9.staticflickr.com/8665/16697946612_1284e952b0_o.jpg',
         'https://farm9.staticflickr.com/8570/16698990475_16524a93de_o.jpg',
@@ -189,8 +188,7 @@ void main() {
         'https://farm9.staticflickr.com/8654/16511594820_451f194d53_o.jpg',
         'https://farm9.staticflickr.com/8603/16673054016_472fb42a20_o.jpg'
       ]);
-      final rocketJson = json['rocket'] as Map<String, dynamic>;
-      expect(rocketJson['rocket_name'], 'Falcon 1');
+      expect((json['rocket'] as NetworkRocketModel).name, 'Falcon 1');
     });
   });
 }
