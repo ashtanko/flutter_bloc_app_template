@@ -52,7 +52,7 @@ void main() {
 
     expect(find.text('${S.current.siteIdLabel} ${minimalSite.siteId}'),
         findsOneWidget);
-    expect(find.text(minimalSite.siteName ?? ''), findsNothing);
-    expect(find.text(minimalSite.siteNameLong ?? ''), findsNothing);
+    // Ensure the raw siteId isn't rendered without its label.
+    expect(find.text(minimalSite.siteId!), findsNothing);
   });
 }
