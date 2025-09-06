@@ -69,6 +69,9 @@ _NetworkLaunchLinksModel _$NetworkLaunchLinksModelFromJson(
       redditLaunch: json['reddit_launch'] as String?,
       videoLink: json['video_link'] as String?,
       presskit: json['presskit'] as String?,
+      flickrImages: (json['flickr_images'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
     );
 
 Map<String, dynamic> _$NetworkLaunchLinksModelToJson(
@@ -82,4 +85,5 @@ Map<String, dynamic> _$NetworkLaunchLinksModelToJson(
       'reddit_launch': instance.redditLaunch,
       'video_link': instance.videoLink,
       'presskit': instance.presskit,
+      'flickr_images': instance.flickrImages,
     };

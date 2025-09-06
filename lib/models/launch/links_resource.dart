@@ -12,6 +12,7 @@ class LinksResource extends Equatable {
     this.redditLaunch,
     this.videoLink,
     this.presskit,
+    this.flickrImages,
   });
 
   final String? missionPatch;
@@ -22,6 +23,7 @@ class LinksResource extends Equatable {
   final String? redditLaunch;
   final String? videoLink;
   final String? presskit;
+  final List<String>? flickrImages;
 
   @override
   List<Object?> get props => [
@@ -33,5 +35,6 @@ class LinksResource extends Equatable {
         redditLaunch,
         videoLink,
         presskit,
+        flickrImages,
       ];
 }

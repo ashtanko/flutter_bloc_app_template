@@ -119,7 +119,7 @@ class _LaunchScreenContentState extends State<LaunchScreenContent>
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
-    final images = <String>[];
+    final images = widget.resource.links?.flickrImages ?? [];
 
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: const SystemUiOverlayStyle(

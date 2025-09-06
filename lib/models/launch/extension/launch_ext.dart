@@ -41,6 +41,7 @@ extension LinksResourceExtension on NetworkLaunchLinksModel {
       redditLaunch: redditLaunch,
       videoLink: videoLink,
       presskit: presskit,
+      flickrImages: flickrImages,
     );
   }
 }
