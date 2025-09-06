@@ -58,6 +58,24 @@ void main() {
       );
     });
 
+    test('supports deep equality on nested lists', () {
+      const firstStage2 = FirstStageResource(cores: [
+        CoreResource(coreSerial: 'B1013'),
+        CoreResource(coreSerial: 'B1014'),
+      ]);
+      const secondStage2 = SecondStageResource(block: 1, payloads: [
+        PayloadResource(payloadId: 'FalconSAT-2'),
+        PayloadResource(payloadId: 'FalconSAT-3'),
+      ]);
+      const resource3 = RocketResource(
+        rocketName: 'Falcon 9',
+        rocketType: 'FT',
+        firstStage: firstStage2,
+        secondStage: secondStage2,
+      );
+      expect(resource1, equals(resource3));
+    });
+
     test('handles null optional fields', () {
       const nullResource = RocketResource();
       expect(nullResource.props, equals([null, null, null, null]));
