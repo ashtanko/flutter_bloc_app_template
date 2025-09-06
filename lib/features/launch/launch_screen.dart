@@ -228,7 +228,8 @@ class _LaunchScreenContentState extends State<LaunchScreenContent>
                       top: 100,
                       right: 20,
                       child: Hero(
-                        tag: 'mission_patch',
+                      child: Hero(
+                        tag: 'mission_patch_${widget.resource.flightNumber}',
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(12),
