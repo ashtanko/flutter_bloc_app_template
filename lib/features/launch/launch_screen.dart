@@ -170,60 +170,60 @@ class _LaunchScreenContentState extends State<LaunchScreenContent>
                 background: Stack(
                   fit: StackFit.expand,
                   children: [
-                    // Image Carousel
-                    PageView.builder(
-                      controller: _pageController,
-                      onPageChanged: (index) {
-                        setState(() {
-                          _currentImageIndex = index;
-                        });
-                      },
-                      itemCount: images.length,
-                      itemBuilder: (context, index) {
-                        return Stack(
-                          fit: StackFit.expand,
-                          children: [
-                            Image.network(
-                              images[index],
-                              fit: BoxFit.cover,
-                              errorBuilder: (context, error, stackTrace) =>
-                                  Container(
+                    // Image Carousel or fallback
+                    if (images.isEmpty)
+                      Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: [
+                              colorScheme.primary,
+                              colorScheme.secondary,
+                            ],
+                          ),
+                        ),
+                        child: Icon(
+                          Icons.rocket_launch,
+                          size: 100,
+                          color: colorScheme.onPrimary,
+                        ),
+                      )
+                    else
+                      PageView.builder(
+                        controller: _pageController,
+                        onPageChanged: (index) {
+                          setState(() => _currentImageIndex = index);
+                        },
+                        itemCount: images.length,
+                        itemBuilder: (context, index) {
+                          return Stack(
+                            fit: StackFit.expand,
+                            children: [
+                              Image.network(
+                                images[index],
+                                fit: BoxFit.cover,
+                                errorBuilder: (context, error, stackTrace) =>
+                                    const SizedBox.shrink(),
+                              ),
+                              // Gradient Overlay
+                              Container(
                                 decoration: BoxDecoration(
                                   gradient: LinearGradient(
-                                    begin: Alignment.topLeft,
-                                    end: Alignment.bottomRight,
+                                    begin: Alignment.topCenter,
+                                    end: Alignment.bottomCenter,
                                     colors: [
-                                      colorScheme.primary,
-                                      colorScheme.secondary,
+                                      Colors.black.withOpacity(0.20),
+                                      Colors.black.withOpacity(0.70),
                                     ],
+                                    stops: [0.0, 0.9],
                                   ),
                                 ),
-                                child: Icon(
-                                  Icons.rocket_launch,
-                                  size: 100,
-                                  color: colorScheme.onPrimary,
-                                ),
                               ),
-                            ),
-                            // Gradient Overlay
-                            Container(
-                              decoration: BoxDecoration(
-                                gradient: LinearGradient(
-                                  begin: Alignment.topCenter,
-                                  end: Alignment.bottomCenter,
-                                  colors: [
-                                    Colors.black.withValues(alpha: 0.2),
-                                    Colors.black.withValues(alpha: 0.7),
-                                  ],
-                                  stops: [0.0, 0.9],
-                                ),
-                              ),
-                            ),
-                          ],
-                        );
-                      },
-                    ),
-                    // Mission Patch Overlay
+                            ],
+                          );
+                        },
+                      ),
                     Positioned(
                       top: 100,
                       right: 20,
