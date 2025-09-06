@@ -19,7 +19,7 @@ void main() {
 
     expect(firstItem, findsOneWidget);
     await tester.ensureVisible(firstItem);
-    await tester.tap(find.byType(LaunchItem).first);
+    await tester.tap(firstItem);
 
     await tester.pumpAndSettle();
     expect(find.text('FalconSat'), findsOneWidget);
