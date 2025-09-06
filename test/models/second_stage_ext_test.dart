@@ -67,12 +67,12 @@ void main() {
       ]);
     });
 
-    test('should handle null payloads correctly', () {
-      final emptyModel = const NetworkSecondStageModel(block: 2, payloads: []);
-      final resource = emptyModel.toResource();
+    test('should treat null payloads as empty list', () {
+      final nullModel = const NetworkSecondStageModel(block: 2);
+      final resource = nullModel.toResource();
 
       expect(resource.block, 2);
-      expect(resource.payloads, <dynamic>[]);
+      expect(resource.payloads, isEmpty);
     });
   });
 }
