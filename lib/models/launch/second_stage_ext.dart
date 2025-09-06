@@ -6,9 +6,7 @@ extension SecondStageExt on NetworkSecondStageModel {
   SecondStageResource toResource() {
     return SecondStageResource(
       block: block,
-      payloads:
-          payloads?.map((e) => e.toResource()).toList(growable: false),
+      payloads: payloads?.map((e) => e.toResource()).toList(growable: false),
     );
   }
-}
 }
