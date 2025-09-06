@@ -59,17 +59,23 @@ class PayloadCardWidget extends StatelessWidget {
                   children: [
                     InfoGridWidget(items: [
                       if (payload.payloadId != null)
-                        InfoItem(loc.id, payload.payloadId!),
+                        InfoItem(
+                            loc.id, payload.payloadId!, const Key('info_id')),
                       if (payload.payloadType != null)
-                        InfoItem(loc.type, payload.payloadType!),
+                        InfoItem(loc.type, payload.payloadType!,
+                            const Key('info_type')),
                       if (payload.payloadMassKg != null)
-                        InfoItem(loc.mass, '${payload.payloadMassKg} kg'),
+                        InfoItem(loc.mass, '${payload.payloadMassKg} kg',
+                            const Key('info_mass_kg')),
                       if (payload.orbit != null)
-                        InfoItem(loc.orbit, payload.orbit!),
+                        InfoItem(
+                            loc.orbit, payload.orbit!, const Key('info_orbit')),
                       if (payload.manufacturer != null)
-                        InfoItem(loc.manufacturer, payload.manufacturer!),
+                        InfoItem(loc.manufacturer, payload.manufacturer!,
+                            const Key('info_manufacturer')),
                       if (payload.nationality != null)
-                        InfoItem(loc.nationality, payload.nationality!),
+                        InfoItem(loc.nationality, payload.nationality!,
+                            const Key('info_nationality')),
                     ]),
                     const SizedBox(height: 16),
                     Text(

@@ -14,6 +14,7 @@ class InfoGridWidget extends StatelessWidget {
       children: items
           .map(
             (item) => SizedBox(
+              key: item.key,
               width: 150,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

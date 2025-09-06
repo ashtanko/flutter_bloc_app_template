@@ -7,7 +7,7 @@ import 'package:integration_test/integration_test.dart';
 import 'package:mocktail/mocktail.dart';
 
 import '../test/bloc/utils.dart';
-import '../test/features/launch/bloc/launch_screen_test.dart';
+import '../test/features/launch/launch_screen_test.dart';
 
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();

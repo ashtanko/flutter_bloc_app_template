@@ -60,12 +60,16 @@ class RocketCardWidget extends StatelessWidget {
                   children: [
                     InfoGridWidget(items: [
                       if (rocket.rocketName != null)
-                        InfoItem(loc.rocketName, rocket.rocketName!),
+                        InfoItem(loc.rocketName, rocket.rocketName!,
+                            const Key('rocketName')),
                       if (rocket.rocketType != null)
-                        InfoItem(loc.rocketType, rocket.rocketType!),
+                        InfoItem(loc.rocketType, rocket.rocketType!,
+                            const Key('rocketType')),
                       if (core?.block != null)
-                        InfoItem(loc.rocketBlock,
-                            '${loc.rocketBlock} ${core?.block!}'),
+                        InfoItem(
+                            loc.rocketBlock,
+                            '${loc.rocketBlock} ${core?.block!}',
+                            const Key('rocketBlock')),
                     ]),
                     const SizedBox(height: 20),
                     Container(
@@ -86,14 +90,18 @@ class RocketCardWidget extends StatelessWidget {
                           const SizedBox(height: 12),
                           InfoGridWidget(items: [
                             if (core?.coreSerial != null)
-                              InfoItem(loc.coreSerial, core!.coreSerial!),
-                            InfoItem(loc.flight, '#${core?.flight}'),
-                            InfoItem(loc.landing,
-                                core?.landingType ?? loc.notAvailable),
+                              InfoItem(loc.coreSerial, core!.coreSerial!,
+                                  const Key('coreSerial')),
+                            InfoItem(loc.flight, '#${core?.flight}',
+                                const Key('flight')),
                             InfoItem(
-                              loc.landingSuccess,
-                              (core?.landSuccess ?? false) ? '✅' : '❌',
-                            ),
+                                loc.landing,
+                                core?.landingType ?? loc.notAvailable,
+                                const Key('landingType')),
+                            InfoItem(
+                                loc.landingSuccess,
+                                (core?.landSuccess ?? false) ? '✅' : '❌',
+                                const Key('rocketName')),
                           ]),
                           const SizedBox(height: 12),
                           SingleChildScrollView(
