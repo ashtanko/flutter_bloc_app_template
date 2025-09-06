@@ -38,6 +38,10 @@ void main() {
 
   setUp(() {
     launchBloc = MockLaunchBloc();
+   when(() => launchBloc.stream)
+       .thenAnswer((_) => const Stream<LaunchState>.empty());
+   when(() => launchBloc.close()).thenAnswer((_) async {});
+   addTearDown(() => launchBloc.close());
   });
 
   group('Launch Screen Tests', () {
