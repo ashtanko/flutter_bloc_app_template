@@ -28,10 +28,9 @@ class S {
   static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
 
   static Future<S> load(Locale locale) {
-    final name =
-        (locale.countryCode?.isEmpty ?? false)
-            ? locale.languageCode
-            : locale.toString();
+    final name = (locale.countryCode?.isEmpty ?? false)
+        ? locale.languageCode
+        : locale.toString();
     final localeName = Intl.canonicalizedLocale(name);
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
@@ -494,6 +493,446 @@ class S {
       args: [],
     );
   }
+
+  /// `Mission Timeline`
+  String get missionTimeline {
+    return Intl.message(
+      'Mission Timeline',
+      name: 'missionTimeline',
+      desc: 'The title for the mission timeline card',
+      args: [],
+    );
+  }
+
+  /// `Static Fire Test`
+  String get staticFireTest {
+    return Intl.message(
+      'Static Fire Test',
+      name: 'staticFireTest',
+      desc: 'Label for the static fire test item in the timeline',
+      args: [],
+    );
+  }
+
+  /// `Launch`
+  String get launch {
+    return Intl.message(
+      'Launch',
+      name: 'launch',
+      desc: 'Label for the launch item in the timeline',
+      args: [],
+    );
+  }
+
+  /// `Mission Success`
+  String get missionSuccess {
+    return Intl.message(
+      'Mission Success',
+      name: 'missionSuccess',
+      desc: 'Label for the mission success item in the timeline',
+      args: [],
+    );
+  }
+
+  /// `Objectives Completed`
+  String get objectivesCompleted {
+    return Intl.message(
+      'Objectives Completed',
+      name: 'objectivesCompleted',
+      desc: 'Subtitle for mission success item',
+      args: [],
+    );
+  }
+
+  /// `Mission Successful`
+  String get missionSuccessful {
+    return Intl.message(
+      'Mission Successful',
+      name: 'missionSuccessful',
+      desc: 'Displayed when the mission has succeeded',
+      args: [],
+    );
+  }
+
+  /// `Mission Failed`
+  String get missionFailed {
+    return Intl.message(
+      'Mission Failed',
+      name: 'missionFailed',
+      desc: 'Displayed when the mission has failed',
+      args: [],
+    );
+  }
+
+  /// `All objectives completed`
+  String get allObjectivesCompleted {
+    return Intl.message(
+      'All objectives completed',
+      name: 'allObjectivesCompleted',
+      desc: 'Subtitle when mission succeeded',
+      args: [],
+    );
+  }
+
+  /// `Mission objectives not met`
+  String get objectivesNotMet {
+    return Intl.message(
+      'Mission objectives not met',
+      name: 'objectivesNotMet',
+      desc: 'Subtitle when mission failed',
+      args: [],
+    );
+  }
+
+  /// `Rocket`
+  String get rocketTitle {
+    return Intl.message(
+      'Rocket',
+      name: 'rocketTitle',
+      desc: 'Label for the rocket stat card',
+      args: [],
+    );
+  }
+
+  /// `Payload`
+  String get payload {
+    return Intl.message(
+      'Payload',
+      name: 'payload',
+      desc: 'Label for the payload stat card',
+      args: [],
+    );
+  }
+
+  /// `Orbit`
+  String get orbit {
+    return Intl.message(
+      'Orbit',
+      name: 'orbit',
+      desc: 'Label for the orbit stat card',
+      args: [],
+    );
+  }
+
+  /// `Rocket Details`
+  String get rocketDetails {
+    return Intl.message(
+      'Rocket Details',
+      name: 'rocketDetails',
+      desc: 'Title for the rocket card section',
+      args: [],
+    );
+  }
+
+  /// `Rocket Name`
+  String get rocketName {
+    return Intl.message(
+      'Rocket Name',
+      name: 'rocketName',
+      desc: 'Label for rocket name in rocket details',
+      args: [],
+    );
+  }
+
+  /// `Type`
+  String get rocketType {
+    return Intl.message(
+      'Type',
+      name: 'rocketType',
+      desc: 'Label for rocket type in rocket details',
+      args: [],
+    );
+  }
+
+  /// `Block`
+  String get rocketBlock {
+    return Intl.message(
+      'Block',
+      name: 'rocketBlock',
+      desc: 'Label for rocket block number',
+      args: [],
+    );
+  }
+
+  /// `🚀 First Stage`
+  String get firstStage {
+    return Intl.message(
+      '🚀 First Stage',
+      name: 'firstStage',
+      desc: 'Title for the first stage details',
+      args: [],
+    );
+  }
+
+  /// `Core Serial`
+  String get coreSerial {
+    return Intl.message(
+      'Core Serial',
+      name: 'coreSerial',
+      desc: 'Label for the core serial number',
+      args: [],
+    );
+  }
+
+  /// `Flight`
+  String get flight {
+    return Intl.message(
+      'Flight',
+      name: 'flight',
+      desc: 'Label for flight number',
+      args: [],
+    );
+  }
+
+  /// `Landing`
+  String get landing {
+    return Intl.message(
+      'Landing',
+      name: 'landing',
+      desc: 'Label for landing type',
+      args: [],
+    );
+  }
+
+  /// `Landing Success`
+  String get landingSuccess {
+    return Intl.message(
+      'Landing Success',
+      name: 'landingSuccess',
+      desc: 'Label for landing success indicator',
+      args: [],
+    );
+  }
+
+  /// `Grid Fins`
+  String get gridFins {
+    return Intl.message(
+      'Grid Fins',
+      name: 'gridFins',
+      desc: 'Label for grid fins feature',
+      args: [],
+    );
+  }
+
+  /// `Landing Legs`
+  String get landingLegs {
+    return Intl.message(
+      'Landing Legs',
+      name: 'landingLegs',
+      desc: 'Label for landing legs feature',
+      args: [],
+    );
+  }
+
+  /// `Reused`
+  String get reused {
+    return Intl.message(
+      'Reused',
+      name: 'reused',
+      desc: 'Label for reused feature',
+      args: [],
+    );
+  }
+
+  /// `N/A`
+  String get notAvailable {
+    return Intl.message(
+      'N/A',
+      name: 'notAvailable',
+      desc: 'Displayed when data is not available',
+      args: [],
+    );
+  }
+
+  /// `Recovery Ships`
+  String get recoveryShips {
+    return Intl.message(
+      'Recovery Ships',
+      name: 'recoveryShips',
+      desc: 'Title for the recovery ships section',
+      args: [],
+    );
+  }
+
+  /// `Payload`
+  String get payloadTitle {
+    return Intl.message(
+      'Payload',
+      name: 'payloadTitle',
+      desc: 'Title of the payload section',
+      args: [],
+    );
+  }
+
+  /// `ID`
+  String get id {
+    return Intl.message(
+      'ID',
+      name: 'id',
+      desc: 'Label for payload ID',
+      args: [],
+    );
+  }
+
+  /// `Type`
+  String get type {
+    return Intl.message(
+      'Type',
+      name: 'type',
+      desc: 'Label for payload type',
+      args: [],
+    );
+  }
+
+  /// `Mass`
+  String get mass {
+    return Intl.message(
+      'Mass',
+      name: 'mass',
+      desc: 'Label for payload mass',
+      args: [],
+    );
+  }
+
+  /// `Manufacturer`
+  String get manufacturer {
+    return Intl.message(
+      'Manufacturer',
+      name: 'manufacturer',
+      desc: 'Label for payload manufacturer',
+      args: [],
+    );
+  }
+
+  /// `Nationality`
+  String get nationality {
+    return Intl.message(
+      'Nationality',
+      name: 'nationality',
+      desc: 'Label for payload nationality',
+      args: [],
+    );
+  }
+
+  /// `Customers`
+  String get customers {
+    return Intl.message(
+      'Customers',
+      name: 'customers',
+      desc: 'Label for payload customers',
+      args: [],
+    );
+  }
+
+  /// `Mission Overview`
+  String get missionOverview {
+    return Intl.message(
+      'Mission Overview',
+      name: 'missionOverview',
+      desc: 'Title for the mission overview section',
+      args: [],
+    );
+  }
+
+  /// `No details available`
+  String get noDetails {
+    return Intl.message(
+      'No details available',
+      name: 'noDetails',
+      desc: 'Displayed when no mission details are provided',
+      args: [],
+    );
+  }
+
+  /// `Links & Resources`
+  String get linksResources {
+    return Intl.message(
+      'Links & Resources',
+      name: 'linksResources',
+      desc: 'Title for links and resources section',
+      args: [],
+    );
+  }
+
+  /// `Watch Video`
+  String get watchVideo {
+    return Intl.message(
+      'Watch Video',
+      name: 'watchVideo',
+      desc: 'Button label to watch video',
+      args: [],
+    );
+  }
+
+  /// `Wikipedia`
+  String get wikipedia {
+    return Intl.message(
+      'Wikipedia',
+      name: 'wikipedia',
+      desc: 'Button label for Wikipedia link',
+      args: [],
+    );
+  }
+
+  /// `Article`
+  String get article {
+    return Intl.message(
+      'Article',
+      name: 'article',
+      desc: 'Button label for article link',
+      args: [],
+    );
+  }
+
+  /// `Reddit`
+  String get reddit {
+    return Intl.message(
+      'Reddit',
+      name: 'reddit',
+      desc: 'Button label for Reddit discussion',
+      args: [],
+    );
+  }
+
+  /// `Press Kit`
+  String get pressKit {
+    return Intl.message(
+      'Press Kit',
+      name: 'pressKit',
+      desc: 'Button label for press kit link',
+      args: [],
+    );
+  }
+
+  /// `Launch Site`
+  String get launchSite {
+    return Intl.message(
+      'Launch Site',
+      name: 'launchSite',
+      desc: 'Title for the launch site section',
+      args: [],
+    );
+  }
+
+  /// `Site ID:`
+  String get siteIdLabel {
+    return Intl.message(
+      'Site ID:',
+      name: 'siteIdLabel',
+      desc: 'Label for site ID',
+      args: [],
+    );
+  }
+
+  /// `Flight #{number}`
+  String flightNumber(Object number) {
+    return Intl.message(
+      'Flight #$number',
+      name: 'flightNumber',
+      desc: 'Label for the flight number',
+      args: [number],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
@@ -504,6 +943,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
       Locale.fromSubtags(languageCode: 'en'),
       Locale.fromSubtags(languageCode: 'de'),
       Locale.fromSubtags(languageCode: 'pt'),
+      Locale.fromSubtags(languageCode: 'uk'),
     ];
   }
 

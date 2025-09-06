@@ -8,6 +8,7 @@ import 'package:intl/intl.dart' as intl;
 import 'app_localizations_de.dart';
 import 'app_localizations_en.dart';
 import 'app_localizations_pt.dart';
+import 'app_localizations_uk.dart';
 
 // ignore_for_file: type=lint
 
@@ -97,7 +98,8 @@ abstract class AppLocalizations {
   static const List<Locale> supportedLocales = <Locale>[
     Locale('de'),
     Locale('en'),
-    Locale('pt')
+    Locale('pt'),
+    Locale('uk')
   ];
 
   /// The title of the application
@@ -381,6 +383,270 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Transparent'**
   String get transparentButtonTitle;
+
+  /// The title for the mission timeline card
+  ///
+  /// In en, this message translates to:
+  /// **'Mission Timeline'**
+  String get missionTimeline;
+
+  /// Label for the static fire test item in the timeline
+  ///
+  /// In en, this message translates to:
+  /// **'Static Fire Test'**
+  String get staticFireTest;
+
+  /// Label for the launch item in the timeline
+  ///
+  /// In en, this message translates to:
+  /// **'Launch'**
+  String get launch;
+
+  /// Label for the mission success item in the timeline
+  ///
+  /// In en, this message translates to:
+  /// **'Mission Success'**
+  String get missionSuccess;
+
+  /// Subtitle for mission success item
+  ///
+  /// In en, this message translates to:
+  /// **'Objectives Completed'**
+  String get objectivesCompleted;
+
+  /// Displayed when the mission has succeeded
+  ///
+  /// In en, this message translates to:
+  /// **'Mission Successful'**
+  String get missionSuccessful;
+
+  /// Displayed when the mission has failed
+  ///
+  /// In en, this message translates to:
+  /// **'Mission Failed'**
+  String get missionFailed;
+
+  /// Subtitle when mission succeeded
+  ///
+  /// In en, this message translates to:
+  /// **'All objectives completed'**
+  String get allObjectivesCompleted;
+
+  /// Subtitle when mission failed
+  ///
+  /// In en, this message translates to:
+  /// **'Mission objectives not met'**
+  String get objectivesNotMet;
+
+  /// Label for the rocket stat card
+  ///
+  /// In en, this message translates to:
+  /// **'Rocket'**
+  String get rocketTitle;
+
+  /// Label for the payload stat card
+  ///
+  /// In en, this message translates to:
+  /// **'Payload'**
+  String get payload;
+
+  /// Label for the orbit stat card
+  ///
+  /// In en, this message translates to:
+  /// **'Orbit'**
+  String get orbit;
+
+  /// Title for the rocket card section
+  ///
+  /// In en, this message translates to:
+  /// **'Rocket Details'**
+  String get rocketDetails;
+
+  /// Label for rocket name in rocket details
+  ///
+  /// In en, this message translates to:
+  /// **'Rocket Name'**
+  String get rocketName;
+
+  /// Label for rocket type in rocket details
+  ///
+  /// In en, this message translates to:
+  /// **'Type'**
+  String get rocketType;
+
+  /// Label for rocket block number
+  ///
+  /// In en, this message translates to:
+  /// **'Block'**
+  String get rocketBlock;
+
+  /// Title for the first stage details
+  ///
+  /// In en, this message translates to:
+  /// **'🚀 First Stage'**
+  String get firstStage;
+
+  /// Label for the core serial number
+  ///
+  /// In en, this message translates to:
+  /// **'Core Serial'**
+  String get coreSerial;
+
+  /// Label for flight number
+  ///
+  /// In en, this message translates to:
+  /// **'Flight'**
+  String get flight;
+
+  /// Label for landing type
+  ///
+  /// In en, this message translates to:
+  /// **'Landing'**
+  String get landing;
+
+  /// Label for landing success indicator
+  ///
+  /// In en, this message translates to:
+  /// **'Landing Success'**
+  String get landingSuccess;
+
+  /// Label for grid fins feature
+  ///
+  /// In en, this message translates to:
+  /// **'Grid Fins'**
+  String get gridFins;
+
+  /// Label for landing legs feature
+  ///
+  /// In en, this message translates to:
+  /// **'Landing Legs'**
+  String get landingLegs;
+
+  /// Label for reused feature
+  ///
+  /// In en, this message translates to:
+  /// **'Reused'**
+  String get reused;
+
+  /// Displayed when data is not available
+  ///
+  /// In en, this message translates to:
+  /// **'N/A'**
+  String get notAvailable;
+
+  /// Title for the recovery ships section
+  ///
+  /// In en, this message translates to:
+  /// **'Recovery Ships'**
+  String get recoveryShips;
+
+  /// Title of the payload section
+  ///
+  /// In en, this message translates to:
+  /// **'Payload'**
+  String get payloadTitle;
+
+  /// Label for payload ID
+  ///
+  /// In en, this message translates to:
+  /// **'ID'**
+  String get id;
+
+  /// Label for payload type
+  ///
+  /// In en, this message translates to:
+  /// **'Type'**
+  String get type;
+
+  /// Label for payload mass
+  ///
+  /// In en, this message translates to:
+  /// **'Mass'**
+  String get mass;
+
+  /// Label for payload manufacturer
+  ///
+  /// In en, this message translates to:
+  /// **'Manufacturer'**
+  String get manufacturer;
+
+  /// Label for payload nationality
+  ///
+  /// In en, this message translates to:
+  /// **'Nationality'**
+  String get nationality;
+
+  /// Label for payload customers
+  ///
+  /// In en, this message translates to:
+  /// **'Customers'**
+  String get customers;
+
+  /// Title for the mission overview section
+  ///
+  /// In en, this message translates to:
+  /// **'Mission Overview'**
+  String get missionOverview;
+
+  /// Displayed when no mission details are provided
+  ///
+  /// In en, this message translates to:
+  /// **'No details available'**
+  String get noDetails;
+
+  /// Title for links and resources section
+  ///
+  /// In en, this message translates to:
+  /// **'Links & Resources'**
+  String get linksResources;
+
+  /// Button label to watch video
+  ///
+  /// In en, this message translates to:
+  /// **'Watch Video'**
+  String get watchVideo;
+
+  /// Button label for Wikipedia link
+  ///
+  /// In en, this message translates to:
+  /// **'Wikipedia'**
+  String get wikipedia;
+
+  /// Button label for article link
+  ///
+  /// In en, this message translates to:
+  /// **'Article'**
+  String get article;
+
+  /// Button label for Reddit discussion
+  ///
+  /// In en, this message translates to:
+  /// **'Reddit'**
+  String get reddit;
+
+  /// Button label for press kit link
+  ///
+  /// In en, this message translates to:
+  /// **'Press Kit'**
+  String get pressKit;
+
+  /// Title for the launch site section
+  ///
+  /// In en, this message translates to:
+  /// **'Launch Site'**
+  String get launchSite;
+
+  /// Label for site ID
+  ///
+  /// In en, this message translates to:
+  /// **'Site ID:'**
+  String get siteIdLabel;
+
+  /// Label for the flight number
+  ///
+  /// In en, this message translates to:
+  /// **'Flight #{number}'**
+  String flightNumber(Object number);
 }
 
 class _AppLocalizationsDelegate
@@ -394,7 +660,7 @@ class _AppLocalizationsDelegate
 
   @override
   bool isSupported(Locale locale) =>
-      <String>['de', 'en', 'pt'].contains(locale.languageCode);
+      <String>['de', 'en', 'pt', 'uk'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
@@ -409,6 +675,8 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
       return AppLocalizationsEn();
     case 'pt':
       return AppLocalizationsPt();
+    case 'uk':
+      return AppLocalizationsUk();
   }
 
   throw FlutterError(

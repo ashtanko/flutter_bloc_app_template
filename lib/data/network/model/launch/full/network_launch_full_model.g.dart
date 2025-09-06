@@ -25,7 +25,8 @@ _NetworkLaunchFullModel _$NetworkLaunchFullModelFromJson(
       rocket: json['rocket'] == null
           ? null
           : NetworkRocketModel.fromJson(json['rocket'] as Map<String, dynamic>),
-      ships: json['ships'] as List<dynamic>?,
+      ships:
+          (json['ships'] as List<dynamic>?)?.map((e) => e as String).toList(),
       telemetry: json['telemetry'] == null
           ? null
           : NetworkTelemetry.fromJson(
@@ -44,7 +45,7 @@ _NetworkLaunchFullModel _$NetworkLaunchFullModelFromJson(
           : NetworkLaunchLinksModel.fromJson(
               json['links'] as Map<String, dynamic>),
       details: json['details'] as String?,
-      staticFireDateUtc:
+      staticFireDate:
           const TimestampSerializer().fromJson(json['static_fire_date_utc']),
       staticFireDateUnix: (json['static_fire_date_unix'] as num?)?.toInt(),
       timeline: json['timeline'] == null
@@ -78,7 +79,7 @@ Map<String, dynamic> _$NetworkLaunchFullModelToJson(
       'links': instance.links,
       'details': instance.details,
       'static_fire_date_utc':
-          const TimestampSerializer().toJson(instance.staticFireDateUtc),
+          const TimestampSerializer().toJson(instance.staticFireDate),
       'static_fire_date_unix': instance.staticFireDateUnix,
       'timeline': instance.timeline,
     };

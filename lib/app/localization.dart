@@ -10,6 +10,7 @@ const appSupportedLocales = <Locale>[
   Locale('en', ''),
   Locale('de', ''),
   Locale('pt', ''),
+  Locale('uk', ''),
 ];
 
 const appLocalizationsDelegates = <LocalizationsDelegate<dynamic>>[

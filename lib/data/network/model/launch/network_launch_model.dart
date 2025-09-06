@@ -1,6 +1,9 @@
 import 'package:flutter_bloc_app_template/data/network/converter/timestamp_serializer.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import 'network_first_stage_model.dart';
+import 'network_second_stage_model.dart';
+
 part 'network_launch_model.freezed.dart';
 part 'network_launch_model.g.dart';
 
@@ -30,6 +33,8 @@ abstract class NetworkRocketModel with _$NetworkRocketModel {
     @JsonKey(name: 'rocket_id') required String id,
     @JsonKey(name: 'rocket_type') String? type,
     @JsonKey(name: 'rocket_name') String? name,
+    @JsonKey(name: 'first_stage') NetworkFirstStageModel? firstStage,
+    @JsonKey(name: 'second_stage') NetworkSecondStageModel? secondStage,
   }) = _NetworkRocketModel;
 
   const NetworkRocketModel._();
@@ -46,6 +51,9 @@ abstract class NetworkLaunchLinksModel with _$NetworkLaunchLinksModel {
     @JsonKey(name: 'article_link') String? articleLink,
     @JsonKey(name: 'wikipedia') String? wikipedia,
     @JsonKey(name: 'youtube_id') String? youtubeId,
+    @JsonKey(name: 'reddit_launch') String? redditLaunch,
+    @JsonKey(name: 'video_link') String? videoLink,
+    @JsonKey(name: 'presskit') String? presskit,
   }) = _NetworkLaunchLinksModel;
 
   const NetworkLaunchLinksModel._();

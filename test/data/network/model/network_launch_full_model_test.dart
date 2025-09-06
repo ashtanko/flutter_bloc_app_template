@@ -84,10 +84,17 @@ void main() {
       expect(model.launchFailureDetails?.reason, contains('engine failure'));
       expect(model.links?.wikipedia, contains('DemoSat'));
       expect(model.details, contains('loss of vehicle'));
-      expect(model.staticFireDateUtc?.toIso8601String(),
-          '2006-03-17T00:00:00.000Z');
+      expect(
+          model.staticFireDate?.toIso8601String(), '2006-03-17T00:00:00.000Z');
       expect(model.staticFireDateUnix, 1142553600);
       expect(model.timeline?.webcastLiftoff, 54);
+      expect(
+        model.launchSite,
+        const NetworkLaunchSite(
+            siteId: 'kwajalein_atoll',
+            siteName: 'Kwajalein Atoll',
+            siteNameLong: 'Kwajalein Atoll Omelek Island'),
+      );
     });
 
     test('toJson should serialize correctly', () {
@@ -126,7 +133,7 @@ void main() {
           youtubeId: 'yt',
         ),
         details: 'Test flight',
-        staticFireDateUtc: DateTime.utc(2007, 03, 10),
+        staticFireDate: DateTime.utc(2007, 03, 10),
         staticFireDateUnix: 1234560000,
         timeline: const NetworkTimeline(webcastLiftoff: 60),
       );

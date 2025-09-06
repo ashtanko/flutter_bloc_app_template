@@ -44,7 +44,7 @@ mixin _$NetworkLaunchFullModel {
   @JsonKey(name: 'rocket')
   NetworkRocketModel? get rocket;
   @JsonKey(name: 'ships')
-  List<dynamic>? get ships;
+  List<String>? get ships;
   @JsonKey(name: 'telemetry')
   NetworkTelemetry? get telemetry;
   @JsonKey(name: 'launch_site')
@@ -58,7 +58,7 @@ mixin _$NetworkLaunchFullModel {
   String? get details;
   @TimestampSerializer()
   @JsonKey(name: 'static_fire_date_utc')
-  DateTime? get staticFireDateUtc;
+  DateTime? get staticFireDate;
   @JsonKey(name: 'static_fire_date_unix')
   int? get staticFireDateUnix;
   NetworkTimeline? get timeline;
@@ -113,8 +113,8 @@ mixin _$NetworkLaunchFullModel {
                 other.launchFailureDetails == launchFailureDetails) &&
             (identical(other.links, links) || other.links == links) &&
             (identical(other.details, details) || other.details == details) &&
-            (identical(other.staticFireDateUtc, staticFireDateUtc) ||
-                other.staticFireDateUtc == staticFireDateUtc) &&
+            (identical(other.staticFireDate, staticFireDate) ||
+                other.staticFireDate == staticFireDate) &&
             (identical(other.staticFireDateUnix, staticFireDateUnix) ||
                 other.staticFireDateUnix == staticFireDateUnix) &&
             (identical(other.timeline, timeline) ||
@@ -146,14 +146,14 @@ mixin _$NetworkLaunchFullModel {
         launchFailureDetails,
         links,
         details,
-        staticFireDateUtc,
+        staticFireDate,
         staticFireDateUnix,
         timeline
       ]);
 
   @override
   String toString() {
-    return 'NetworkLaunchFullModel(id: $id, flightNumber: $flightNumber, missionName: $missionName, missionId: $missionId, upcoming: $upcoming, launchYear: $launchYear, launchDateUnix: $launchDateUnix, launchDate: $launchDate, launchDateLocal: $launchDateLocal, isTentative: $isTentative, tentativeMaxPrecision: $tentativeMaxPrecision, tbd: $tbd, launchWindow: $launchWindow, rocket: $rocket, ships: $ships, telemetry: $telemetry, launchSite: $launchSite, success: $success, launchFailureDetails: $launchFailureDetails, links: $links, details: $details, staticFireDateUtc: $staticFireDateUtc, staticFireDateUnix: $staticFireDateUnix, timeline: $timeline)';
+    return 'NetworkLaunchFullModel(id: $id, flightNumber: $flightNumber, missionName: $missionName, missionId: $missionId, upcoming: $upcoming, launchYear: $launchYear, launchDateUnix: $launchDateUnix, launchDate: $launchDate, launchDateLocal: $launchDateLocal, isTentative: $isTentative, tentativeMaxPrecision: $tentativeMaxPrecision, tbd: $tbd, launchWindow: $launchWindow, rocket: $rocket, ships: $ships, telemetry: $telemetry, launchSite: $launchSite, success: $success, launchFailureDetails: $launchFailureDetails, links: $links, details: $details, staticFireDate: $staticFireDate, staticFireDateUnix: $staticFireDateUnix, timeline: $timeline)';
   }
 }
 
@@ -180,7 +180,7 @@ abstract mixin class $NetworkLaunchFullModelCopyWith<$Res> {
       @JsonKey(name: 'tbd') bool? tbd,
       @JsonKey(name: 'launch_window') int? launchWindow,
       @JsonKey(name: 'rocket') NetworkRocketModel? rocket,
-      @JsonKey(name: 'ships') List<dynamic>? ships,
+      @JsonKey(name: 'ships') List<String>? ships,
       @JsonKey(name: 'telemetry') NetworkTelemetry? telemetry,
       @JsonKey(name: 'launch_site') NetworkLaunchSite? launchSite,
       @JsonKey(name: 'launch_success') bool? success,
@@ -190,7 +190,7 @@ abstract mixin class $NetworkLaunchFullModelCopyWith<$Res> {
       String? details,
       @TimestampSerializer()
       @JsonKey(name: 'static_fire_date_utc')
-      DateTime? staticFireDateUtc,
+      DateTime? staticFireDate,
       @JsonKey(name: 'static_fire_date_unix') int? staticFireDateUnix,
       NetworkTimeline? timeline});
 
@@ -236,7 +236,7 @@ class _$NetworkLaunchFullModelCopyWithImpl<$Res>
     Object? launchFailureDetails = freezed,
     Object? links = freezed,
     Object? details = freezed,
-    Object? staticFireDateUtc = freezed,
+    Object? staticFireDate = freezed,
     Object? staticFireDateUnix = freezed,
     Object? timeline = freezed,
   }) {
@@ -300,7 +300,7 @@ class _$NetworkLaunchFullModelCopyWithImpl<$Res>
       ships: freezed == ships
           ? _self.ships
           : ships // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>?,
+              as List<String>?,
       telemetry: freezed == telemetry
           ? _self.telemetry
           : telemetry // ignore: cast_nullable_to_non_nullable
@@ -325,9 +325,9 @@ class _$NetworkLaunchFullModelCopyWithImpl<$Res>
           ? _self.details
           : details // ignore: cast_nullable_to_non_nullable
               as String?,
-      staticFireDateUtc: freezed == staticFireDateUtc
-          ? _self.staticFireDateUtc
-          : staticFireDateUtc // ignore: cast_nullable_to_non_nullable
+      staticFireDate: freezed == staticFireDate
+          ? _self.staticFireDate
+          : staticFireDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
       staticFireDateUnix: freezed == staticFireDateUnix
           ? _self.staticFireDateUnix
@@ -537,7 +537,7 @@ extension NetworkLaunchFullModelPatterns on NetworkLaunchFullModel {
             @JsonKey(name: 'tbd') bool? tbd,
             @JsonKey(name: 'launch_window') int? launchWindow,
             @JsonKey(name: 'rocket') NetworkRocketModel? rocket,
-            @JsonKey(name: 'ships') List<dynamic>? ships,
+            @JsonKey(name: 'ships') List<String>? ships,
             @JsonKey(name: 'telemetry') NetworkTelemetry? telemetry,
             @JsonKey(name: 'launch_site') NetworkLaunchSite? launchSite,
             @JsonKey(name: 'launch_success') bool? success,
@@ -547,7 +547,7 @@ extension NetworkLaunchFullModelPatterns on NetworkLaunchFullModel {
             String? details,
             @TimestampSerializer()
             @JsonKey(name: 'static_fire_date_utc')
-            DateTime? staticFireDateUtc,
+            DateTime? staticFireDate,
             @JsonKey(name: 'static_fire_date_unix') int? staticFireDateUnix,
             NetworkTimeline? timeline)?
         $default, {
@@ -578,7 +578,7 @@ extension NetworkLaunchFullModelPatterns on NetworkLaunchFullModel {
             _that.launchFailureDetails,
             _that.links,
             _that.details,
-            _that.staticFireDateUtc,
+            _that.staticFireDate,
             _that.staticFireDateUnix,
             _that.timeline);
       case _:
@@ -619,7 +619,7 @@ extension NetworkLaunchFullModelPatterns on NetworkLaunchFullModel {
             @JsonKey(name: 'tbd') bool? tbd,
             @JsonKey(name: 'launch_window') int? launchWindow,
             @JsonKey(name: 'rocket') NetworkRocketModel? rocket,
-            @JsonKey(name: 'ships') List<dynamic>? ships,
+            @JsonKey(name: 'ships') List<String>? ships,
             @JsonKey(name: 'telemetry') NetworkTelemetry? telemetry,
             @JsonKey(name: 'launch_site') NetworkLaunchSite? launchSite,
             @JsonKey(name: 'launch_success') bool? success,
@@ -629,7 +629,7 @@ extension NetworkLaunchFullModelPatterns on NetworkLaunchFullModel {
             String? details,
             @TimestampSerializer()
             @JsonKey(name: 'static_fire_date_utc')
-            DateTime? staticFireDateUtc,
+            DateTime? staticFireDate,
             @JsonKey(name: 'static_fire_date_unix') int? staticFireDateUnix,
             NetworkTimeline? timeline)
         $default,
@@ -659,7 +659,7 @@ extension NetworkLaunchFullModelPatterns on NetworkLaunchFullModel {
             _that.launchFailureDetails,
             _that.links,
             _that.details,
-            _that.staticFireDateUtc,
+            _that.staticFireDate,
             _that.staticFireDateUnix,
             _that.timeline);
       case _:
@@ -699,7 +699,7 @@ extension NetworkLaunchFullModelPatterns on NetworkLaunchFullModel {
             @JsonKey(name: 'tbd') bool? tbd,
             @JsonKey(name: 'launch_window') int? launchWindow,
             @JsonKey(name: 'rocket') NetworkRocketModel? rocket,
-            @JsonKey(name: 'ships') List<dynamic>? ships,
+            @JsonKey(name: 'ships') List<String>? ships,
             @JsonKey(name: 'telemetry') NetworkTelemetry? telemetry,
             @JsonKey(name: 'launch_site') NetworkLaunchSite? launchSite,
             @JsonKey(name: 'launch_success') bool? success,
@@ -709,7 +709,7 @@ extension NetworkLaunchFullModelPatterns on NetworkLaunchFullModel {
             String? details,
             @TimestampSerializer()
             @JsonKey(name: 'static_fire_date_utc')
-            DateTime? staticFireDateUtc,
+            DateTime? staticFireDate,
             @JsonKey(name: 'static_fire_date_unix') int? staticFireDateUnix,
             NetworkTimeline? timeline)?
         $default,
@@ -739,7 +739,7 @@ extension NetworkLaunchFullModelPatterns on NetworkLaunchFullModel {
             _that.launchFailureDetails,
             _that.links,
             _that.details,
-            _that.staticFireDateUtc,
+            _that.staticFireDate,
             _that.staticFireDateUnix,
             _that.timeline);
       case _:
@@ -766,7 +766,7 @@ class _NetworkLaunchFullModel implements NetworkLaunchFullModel {
       @JsonKey(name: 'tbd') this.tbd,
       @JsonKey(name: 'launch_window') this.launchWindow,
       @JsonKey(name: 'rocket') this.rocket,
-      @JsonKey(name: 'ships') final List<dynamic>? ships,
+      @JsonKey(name: 'ships') final List<String>? ships,
       @JsonKey(name: 'telemetry') this.telemetry,
       @JsonKey(name: 'launch_site') this.launchSite,
       @JsonKey(name: 'launch_success') this.success,
@@ -775,7 +775,7 @@ class _NetworkLaunchFullModel implements NetworkLaunchFullModel {
       this.details,
       @TimestampSerializer()
       @JsonKey(name: 'static_fire_date_utc')
-      this.staticFireDateUtc,
+      this.staticFireDate,
       @JsonKey(name: 'static_fire_date_unix') this.staticFireDateUnix,
       this.timeline})
       : _missionId = missionId,
@@ -834,10 +834,10 @@ class _NetworkLaunchFullModel implements NetworkLaunchFullModel {
   @override
   @JsonKey(name: 'rocket')
   final NetworkRocketModel? rocket;
-  final List<dynamic>? _ships;
+  final List<String>? _ships;
   @override
   @JsonKey(name: 'ships')
-  List<dynamic>? get ships {
+  List<String>? get ships {
     final value = _ships;
     if (value == null) return null;
     if (_ships is EqualUnmodifiableListView) return _ships;
@@ -865,7 +865,7 @@ class _NetworkLaunchFullModel implements NetworkLaunchFullModel {
   @override
   @TimestampSerializer()
   @JsonKey(name: 'static_fire_date_utc')
-  final DateTime? staticFireDateUtc;
+  final DateTime? staticFireDate;
   @override
   @JsonKey(name: 'static_fire_date_unix')
   final int? staticFireDateUnix;
@@ -928,8 +928,8 @@ class _NetworkLaunchFullModel implements NetworkLaunchFullModel {
                 other.launchFailureDetails == launchFailureDetails) &&
             (identical(other.links, links) || other.links == links) &&
             (identical(other.details, details) || other.details == details) &&
-            (identical(other.staticFireDateUtc, staticFireDateUtc) ||
-                other.staticFireDateUtc == staticFireDateUtc) &&
+            (identical(other.staticFireDate, staticFireDate) ||
+                other.staticFireDate == staticFireDate) &&
             (identical(other.staticFireDateUnix, staticFireDateUnix) ||
                 other.staticFireDateUnix == staticFireDateUnix) &&
             (identical(other.timeline, timeline) ||
@@ -961,14 +961,14 @@ class _NetworkLaunchFullModel implements NetworkLaunchFullModel {
         launchFailureDetails,
         links,
         details,
-        staticFireDateUtc,
+        staticFireDate,
         staticFireDateUnix,
         timeline
       ]);
 
   @override
   String toString() {
-    return 'NetworkLaunchFullModel(id: $id, flightNumber: $flightNumber, missionName: $missionName, missionId: $missionId, upcoming: $upcoming, launchYear: $launchYear, launchDateUnix: $launchDateUnix, launchDate: $launchDate, launchDateLocal: $launchDateLocal, isTentative: $isTentative, tentativeMaxPrecision: $tentativeMaxPrecision, tbd: $tbd, launchWindow: $launchWindow, rocket: $rocket, ships: $ships, telemetry: $telemetry, launchSite: $launchSite, success: $success, launchFailureDetails: $launchFailureDetails, links: $links, details: $details, staticFireDateUtc: $staticFireDateUtc, staticFireDateUnix: $staticFireDateUnix, timeline: $timeline)';
+    return 'NetworkLaunchFullModel(id: $id, flightNumber: $flightNumber, missionName: $missionName, missionId: $missionId, upcoming: $upcoming, launchYear: $launchYear, launchDateUnix: $launchDateUnix, launchDate: $launchDate, launchDateLocal: $launchDateLocal, isTentative: $isTentative, tentativeMaxPrecision: $tentativeMaxPrecision, tbd: $tbd, launchWindow: $launchWindow, rocket: $rocket, ships: $ships, telemetry: $telemetry, launchSite: $launchSite, success: $success, launchFailureDetails: $launchFailureDetails, links: $links, details: $details, staticFireDate: $staticFireDate, staticFireDateUnix: $staticFireDateUnix, timeline: $timeline)';
   }
 }
 
@@ -997,7 +997,7 @@ abstract mixin class _$NetworkLaunchFullModelCopyWith<$Res>
       @JsonKey(name: 'tbd') bool? tbd,
       @JsonKey(name: 'launch_window') int? launchWindow,
       @JsonKey(name: 'rocket') NetworkRocketModel? rocket,
-      @JsonKey(name: 'ships') List<dynamic>? ships,
+      @JsonKey(name: 'ships') List<String>? ships,
       @JsonKey(name: 'telemetry') NetworkTelemetry? telemetry,
       @JsonKey(name: 'launch_site') NetworkLaunchSite? launchSite,
       @JsonKey(name: 'launch_success') bool? success,
@@ -1007,7 +1007,7 @@ abstract mixin class _$NetworkLaunchFullModelCopyWith<$Res>
       String? details,
       @TimestampSerializer()
       @JsonKey(name: 'static_fire_date_utc')
-      DateTime? staticFireDateUtc,
+      DateTime? staticFireDate,
       @JsonKey(name: 'static_fire_date_unix') int? staticFireDateUnix,
       NetworkTimeline? timeline});
 
@@ -1059,7 +1059,7 @@ class __$NetworkLaunchFullModelCopyWithImpl<$Res>
     Object? launchFailureDetails = freezed,
     Object? links = freezed,
     Object? details = freezed,
-    Object? staticFireDateUtc = freezed,
+    Object? staticFireDate = freezed,
     Object? staticFireDateUnix = freezed,
     Object? timeline = freezed,
   }) {
@@ -1123,7 +1123,7 @@ class __$NetworkLaunchFullModelCopyWithImpl<$Res>
       ships: freezed == ships
           ? _self._ships
           : ships // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>?,
+              as List<String>?,
       telemetry: freezed == telemetry
           ? _self.telemetry
           : telemetry // ignore: cast_nullable_to_non_nullable
@@ -1148,9 +1148,9 @@ class __$NetworkLaunchFullModelCopyWithImpl<$Res>
           ? _self.details
           : details // ignore: cast_nullable_to_non_nullable
               as String?,
-      staticFireDateUtc: freezed == staticFireDateUtc
-          ? _self.staticFireDateUtc
-          : staticFireDateUtc // ignore: cast_nullable_to_non_nullable
+      staticFireDate: freezed == staticFireDate
+          ? _self.staticFireDate
+          : staticFireDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
       staticFireDateUnix: freezed == staticFireDateUnix
           ? _self.staticFireDateUnix

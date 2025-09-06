@@ -14,7 +14,7 @@ void main() {
     app.main([]);
     await tester.pumpAndSettle();
 
-    // expect(find.text('Launches'), findsOneWidget);
+    expect(find.text('Launches'), findsAtLeast(1));
     expect(find.text('Emails'), findsOneWidget);
     expect(find.text('Settings'), findsOneWidget);
 

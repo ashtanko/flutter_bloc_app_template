@@ -1,6 +1,7 @@
 import 'package:flutter_bloc_app_template/data/network/model/launch/full/network_launch_full_model.dart';
 import 'package:flutter_bloc_app_template/data/network/model/launch/network_launch_model.dart';
 import 'package:flutter_bloc_app_template/index.dart';
+import 'package:flutter_bloc_app_template/models/launch/launch_site_resource.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
@@ -28,7 +29,7 @@ void main() {
           'article_link': 'article_url',
           'wikipedia': 'wiki_url',
           'youtube_id': 'youtube123'
-        }
+        },
       };
 
       final networkLaunchModel = NetworkLaunchModel.fromJson(json);
@@ -47,6 +48,7 @@ void main() {
     test('should convert NetworkLaunchFullModel to LaunchFullResource', () {
       final json = {
         '_id': '123',
+        'flight_number': 42,
         'mission_name': 'Test Mission',
         'launch_date_utc': '2009-07-13T03:35:00.000Z',
         'rocket': {
@@ -61,18 +63,93 @@ void main() {
           'article_link': 'article_url',
           'wikipedia': 'wiki_url',
           'youtube_id': 'youtube123'
+        },
+        'ships': ['ELSBETH3', 'GOQUEST', 'GOSEARCHER'],
+        'launch_site': {
+          'site_id': 'kwajalein_atoll',
+          'site_name': 'Kwajalein Atoll',
+          'site_name_long': 'Kwajalein Atoll Omelek Island'
         }
       };
 
       final networkLaunchModel = NetworkLaunchFullModel.fromJson(json);
-
       final launchResource = networkLaunchModel.toResource();
 
+      // basic fields
       expect(launchResource.id, '123');
+      expect(launchResource.flightNumber, 42);
       expect(launchResource.missionName, 'Test Mission');
-      expect(launchResource.launchDays, isA<Since>());
-      expect(launchResource.launchTime, '03:35 AM, Jul 2009');
       expect(launchResource.launchSuccess, true);
+
+      // rocket mapping
+      expect(
+        launchResource.rocket,
+        const RocketResource(
+          rocketName: 'Falcon',
+          rocketType: 'Falcon 9',
+        ),
+      );
+
+      // launch site mapping
+      expect(
+        launchResource.launchSite,
+        const LaunchSiteResource(
+          siteId: 'kwajalein_atoll',
+          siteName: 'Kwajalein Atoll',
+          siteNameLong: 'Kwajalein Atoll Omelek Island',
+        ),
+      );
+
+      // links mapping
+      expect(
+        launchResource.links,
+        const LinksResource(
+          missionPatch: 'patch_url',
+          missionPatchSmall: 'patch_small_url',
+          articleLink: 'article_url',
+          wikipedia: 'wiki_url',
+          youtubeId: 'youtube123',
+        ),
+      );
+
+      // date parsing
+      expect(
+        launchResource.launchDate,
+        'July 13, 2009 - 03:35 UTC',
+      );
+    });
+
+    test('should handle null optional fields', () {
+      final json = {
+        '_id': '456',
+        'flight_number': 99,
+        'mission_name': 'Null Test',
+        'launch_date_utc': '2015-01-01T00:00:00.000Z',
+      };
+
+      final networkLaunchModel = NetworkLaunchFullModel.fromJson(json);
+      final launchResource = networkLaunchModel.toResource();
+
+      expect(launchResource.id, '456');
+      expect(launchResource.flightNumber, 99);
+      expect(launchResource.rocket, null);
+      expect(launchResource.links, null);
+      expect(launchResource.launchSite, null);
+      expect(launchResource.launchSuccess, null);
+    });
+
+    test('should support equality', () {
+      final json = {
+        '_id': '789',
+        'flight_number': 10,
+        'mission_name': 'Equality Mission',
+        'launch_date_utc': '2020-07-13T03:35:00.000Z',
+      };
+
+      final model1 = NetworkLaunchFullModel.fromJson(json);
+      final model2 = NetworkLaunchFullModel.fromJson(json);
+
+      expect(model1.toResource(), equals(model2.toResource()));
     });
   });
 
@@ -130,14 +207,29 @@ void main() {
 
     test('should return formatted time correctly', () {
       final date = DateTime(2025, 12, 25, 14, 30);
-      final formattedTime = date.toFormattedTime();
+      final formattedTime = date.formatDate();
 
       expect(formattedTime, '02:30 PM, Dec 2025');
     });
 
+    test('should return formatted date correctly', () {
+      final date = DateTime(2025, 12, 25, 14, 30);
+      final formattedTime = date.formatDate(format: 'MMMM dd, yyyy');
+
+      expect(formattedTime, 'December 25, 2025');
+    });
+
+    test('should return formatted utc date correctly', () {
+      final date = DateTime(2025, 12, 25, 14, 30);
+      final formattedTime =
+          date.formatDate(format: 'MMMM dd, yyyy - HH:mm UTC');
+
+      expect(formattedTime, 'December 25, 2025 - 14:30 UTC');
+    });
+
     test('should return empty string when date is null in toFormattedTime', () {
       final DateTime? date = null;
-      final formattedTime = date.toFormattedTime();
+      final formattedTime = date.formatDate();
 
       expect(formattedTime, '');
     });

@@ -98,13 +98,10 @@ final mockFullLaunch = const LaunchFullResource(
   id: '1',
   flightNumber: 1,
   missionName: 'Mission 1',
-  launchDays: Since(
-    '2021-10-01T00:00:00Z',
-  ),
-  launchTime: '00:00',
   rocket: RocketResource(
     rocketName: 'Rocket 1',
     rocketType: 'Type 1',
   ),
   launchSuccess: true,
+  ships: [],
 );
