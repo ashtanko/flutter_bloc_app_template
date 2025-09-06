@@ -162,4 +162,138 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get transparentButtonTitle => 'Transparent';
+
+  @override
+  String get missionTimeline => 'Mission Timeline';
+
+  @override
+  String get staticFireTest => 'Static Fire Test';
+
+  @override
+  String get launch => 'Launch';
+
+  @override
+  String get missionSuccess => 'Mission Success';
+
+  @override
+  String get objectivesCompleted => 'Objectives Completed';
+
+  @override
+  String get missionSuccessful => 'Mission Successful';
+
+  @override
+  String get missionFailed => 'Mission Failed';
+
+  @override
+  String get allObjectivesCompleted => 'All objectives completed';
+
+  @override
+  String get objectivesNotMet => 'Mission objectives not met';
+
+  @override
+  String get rocketTitle => 'Rocket';
+
+  @override
+  String get payload => 'Payload';
+
+  @override
+  String get orbit => 'Orbit';
+
+  @override
+  String get rocketDetails => 'Rocket Details';
+
+  @override
+  String get rocketName => 'Rocket Name';
+
+  @override
+  String get rocketType => 'Type';
+
+  @override
+  String get rocketBlock => 'Block';
+
+  @override
+  String get firstStage => '🚀 First Stage';
+
+  @override
+  String get coreSerial => 'Core Serial';
+
+  @override
+  String get flight => 'Flight';
+
+  @override
+  String get landing => 'Landing';
+
+  @override
+  String get landingSuccess => 'Landing Success';
+
+  @override
+  String get gridFins => 'Grid Fins';
+
+  @override
+  String get landingLegs => 'Landing Legs';
+
+  @override
+  String get reused => 'Reused';
+
+  @override
+  String get notAvailable => 'N/A';
+
+  @override
+  String get recoveryShips => 'Recovery Ships';
+
+  @override
+  String get payloadTitle => 'Payload';
+
+  @override
+  String get id => 'ID';
+
+  @override
+  String get type => 'Type';
+
+  @override
+  String get mass => 'Mass';
+
+  @override
+  String get manufacturer => 'Manufacturer';
+
+  @override
+  String get nationality => 'Nationality';
+
+  @override
+  String get customers => 'Customers';
+
+  @override
+  String get missionOverview => 'Mission Overview';
+
+  @override
+  String get noDetails => 'No details available';
+
+  @override
+  String get linksResources => 'Links & Resources';
+
+  @override
+  String get watchVideo => 'Watch Video';
+
+  @override
+  String get wikipedia => 'Wikipedia';
+
+  @override
+  String get article => 'Article';
+
+  @override
+  String get reddit => 'Reddit';
+
+  @override
+  String get pressKit => 'Press Kit';
+
+  @override
+  String get launchSite => 'Launch Site';
+
+  @override
+  String get siteIdLabel => 'Site ID:';
+
+  @override
+  String flightNumber(Object number) {
+    return 'Flight #$number';
+  }
 }

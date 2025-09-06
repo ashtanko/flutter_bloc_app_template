@@ -558,6 +558,10 @@ mixin _$NetworkRocketModel {
   String? get type;
   @JsonKey(name: 'rocket_name')
   String? get name;
+  @JsonKey(name: 'first_stage')
+  NetworkFirstStageModel? get firstStage;
+  @JsonKey(name: 'second_stage')
+  NetworkSecondStageModel? get secondStage;
 
   /// Create a copy of NetworkRocketModel
   /// with the given fields replaced by the non-null parameter values.
@@ -577,16 +581,21 @@ mixin _$NetworkRocketModel {
             other is NetworkRocketModel &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.type, type) || other.type == type) &&
-            (identical(other.name, name) || other.name == name));
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.firstStage, firstStage) ||
+                other.firstStage == firstStage) &&
+            (identical(other.secondStage, secondStage) ||
+                other.secondStage == secondStage));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, type, name);
+  int get hashCode =>
+      Object.hash(runtimeType, id, type, name, firstStage, secondStage);
 
   @override
   String toString() {
-    return 'NetworkRocketModel(id: $id, type: $type, name: $name)';
+    return 'NetworkRocketModel(id: $id, type: $type, name: $name, firstStage: $firstStage, secondStage: $secondStage)';
   }
 }
 
@@ -599,7 +608,12 @@ abstract mixin class $NetworkRocketModelCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'rocket_id') String id,
       @JsonKey(name: 'rocket_type') String? type,
-      @JsonKey(name: 'rocket_name') String? name});
+      @JsonKey(name: 'rocket_name') String? name,
+      @JsonKey(name: 'first_stage') NetworkFirstStageModel? firstStage,
+      @JsonKey(name: 'second_stage') NetworkSecondStageModel? secondStage});
+
+  $NetworkFirstStageModelCopyWith<$Res>? get firstStage;
+  $NetworkSecondStageModelCopyWith<$Res>? get secondStage;
 }
 
 /// @nodoc
@@ -618,6 +632,8 @@ class _$NetworkRocketModelCopyWithImpl<$Res>
     Object? id = null,
     Object? type = freezed,
     Object? name = freezed,
+    Object? firstStage = freezed,
+    Object? secondStage = freezed,
   }) {
     return _then(_self.copyWith(
       id: null == id
@@ -632,7 +648,43 @@ class _$NetworkRocketModelCopyWithImpl<$Res>
           ? _self.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
+      firstStage: freezed == firstStage
+          ? _self.firstStage
+          : firstStage // ignore: cast_nullable_to_non_nullable
+              as NetworkFirstStageModel?,
+      secondStage: freezed == secondStage
+          ? _self.secondStage
+          : secondStage // ignore: cast_nullable_to_non_nullable
+              as NetworkSecondStageModel?,
     ));
+  }
+
+  /// Create a copy of NetworkRocketModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $NetworkFirstStageModelCopyWith<$Res>? get firstStage {
+    if (_self.firstStage == null) {
+      return null;
+    }
+
+    return $NetworkFirstStageModelCopyWith<$Res>(_self.firstStage!, (value) {
+      return _then(_self.copyWith(firstStage: value));
+    });
+  }
+
+  /// Create a copy of NetworkRocketModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $NetworkSecondStageModelCopyWith<$Res>? get secondStage {
+    if (_self.secondStage == null) {
+      return null;
+    }
+
+    return $NetworkSecondStageModelCopyWith<$Res>(_self.secondStage!, (value) {
+      return _then(_self.copyWith(secondStage: value));
+    });
   }
 }
 
@@ -732,14 +784,18 @@ extension NetworkRocketModelPatterns on NetworkRocketModel {
     TResult Function(
             @JsonKey(name: 'rocket_id') String id,
             @JsonKey(name: 'rocket_type') String? type,
-            @JsonKey(name: 'rocket_name') String? name)?
+            @JsonKey(name: 'rocket_name') String? name,
+            @JsonKey(name: 'first_stage') NetworkFirstStageModel? firstStage,
+            @JsonKey(name: 'second_stage')
+            NetworkSecondStageModel? secondStage)?
         $default, {
     required TResult orElse(),
   }) {
     final _that = this;
     switch (_that) {
       case _NetworkRocketModel() when $default != null:
-        return $default(_that.id, _that.type, _that.name);
+        return $default(_that.id, _that.type, _that.name, _that.firstStage,
+            _that.secondStage);
       case _:
         return orElse();
     }
@@ -763,13 +819,16 @@ extension NetworkRocketModelPatterns on NetworkRocketModel {
     TResult Function(
             @JsonKey(name: 'rocket_id') String id,
             @JsonKey(name: 'rocket_type') String? type,
-            @JsonKey(name: 'rocket_name') String? name)
+            @JsonKey(name: 'rocket_name') String? name,
+            @JsonKey(name: 'first_stage') NetworkFirstStageModel? firstStage,
+            @JsonKey(name: 'second_stage') NetworkSecondStageModel? secondStage)
         $default,
   ) {
     final _that = this;
     switch (_that) {
       case _NetworkRocketModel():
-        return $default(_that.id, _that.type, _that.name);
+        return $default(_that.id, _that.type, _that.name, _that.firstStage,
+            _that.secondStage);
       case _:
         throw StateError('Unexpected subclass');
     }
@@ -792,13 +851,17 @@ extension NetworkRocketModelPatterns on NetworkRocketModel {
     TResult? Function(
             @JsonKey(name: 'rocket_id') String id,
             @JsonKey(name: 'rocket_type') String? type,
-            @JsonKey(name: 'rocket_name') String? name)?
+            @JsonKey(name: 'rocket_name') String? name,
+            @JsonKey(name: 'first_stage') NetworkFirstStageModel? firstStage,
+            @JsonKey(name: 'second_stage')
+            NetworkSecondStageModel? secondStage)?
         $default,
   ) {
     final _that = this;
     switch (_that) {
       case _NetworkRocketModel() when $default != null:
-        return $default(_that.id, _that.type, _that.name);
+        return $default(_that.id, _that.type, _that.name, _that.firstStage,
+            _that.secondStage);
       case _:
         return null;
     }
@@ -811,7 +874,9 @@ class _NetworkRocketModel extends NetworkRocketModel {
   const _NetworkRocketModel(
       {@JsonKey(name: 'rocket_id') required this.id,
       @JsonKey(name: 'rocket_type') this.type,
-      @JsonKey(name: 'rocket_name') this.name})
+      @JsonKey(name: 'rocket_name') this.name,
+      @JsonKey(name: 'first_stage') this.firstStage,
+      @JsonKey(name: 'second_stage') this.secondStage})
       : super._();
   factory _NetworkRocketModel.fromJson(Map<String, dynamic> json) =>
       _$NetworkRocketModelFromJson(json);
@@ -825,6 +890,12 @@ class _NetworkRocketModel extends NetworkRocketModel {
   @override
   @JsonKey(name: 'rocket_name')
   final String? name;
+  @override
+  @JsonKey(name: 'first_stage')
+  final NetworkFirstStageModel? firstStage;
+  @override
+  @JsonKey(name: 'second_stage')
+  final NetworkSecondStageModel? secondStage;
 
   /// Create a copy of NetworkRocketModel
   /// with the given fields replaced by the non-null parameter values.
@@ -848,16 +919,21 @@ class _NetworkRocketModel extends NetworkRocketModel {
             other is _NetworkRocketModel &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.type, type) || other.type == type) &&
-            (identical(other.name, name) || other.name == name));
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.firstStage, firstStage) ||
+                other.firstStage == firstStage) &&
+            (identical(other.secondStage, secondStage) ||
+                other.secondStage == secondStage));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, type, name);
+  int get hashCode =>
+      Object.hash(runtimeType, id, type, name, firstStage, secondStage);
 
   @override
   String toString() {
-    return 'NetworkRocketModel(id: $id, type: $type, name: $name)';
+    return 'NetworkRocketModel(id: $id, type: $type, name: $name, firstStage: $firstStage, secondStage: $secondStage)';
   }
 }
 
@@ -872,7 +948,14 @@ abstract mixin class _$NetworkRocketModelCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'rocket_id') String id,
       @JsonKey(name: 'rocket_type') String? type,
-      @JsonKey(name: 'rocket_name') String? name});
+      @JsonKey(name: 'rocket_name') String? name,
+      @JsonKey(name: 'first_stage') NetworkFirstStageModel? firstStage,
+      @JsonKey(name: 'second_stage') NetworkSecondStageModel? secondStage});
+
+  @override
+  $NetworkFirstStageModelCopyWith<$Res>? get firstStage;
+  @override
+  $NetworkSecondStageModelCopyWith<$Res>? get secondStage;
 }
 
 /// @nodoc
@@ -891,6 +974,8 @@ class __$NetworkRocketModelCopyWithImpl<$Res>
     Object? id = null,
     Object? type = freezed,
     Object? name = freezed,
+    Object? firstStage = freezed,
+    Object? secondStage = freezed,
   }) {
     return _then(_NetworkRocketModel(
       id: null == id
@@ -905,7 +990,43 @@ class __$NetworkRocketModelCopyWithImpl<$Res>
           ? _self.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
+      firstStage: freezed == firstStage
+          ? _self.firstStage
+          : firstStage // ignore: cast_nullable_to_non_nullable
+              as NetworkFirstStageModel?,
+      secondStage: freezed == secondStage
+          ? _self.secondStage
+          : secondStage // ignore: cast_nullable_to_non_nullable
+              as NetworkSecondStageModel?,
     ));
+  }
+
+  /// Create a copy of NetworkRocketModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $NetworkFirstStageModelCopyWith<$Res>? get firstStage {
+    if (_self.firstStage == null) {
+      return null;
+    }
+
+    return $NetworkFirstStageModelCopyWith<$Res>(_self.firstStage!, (value) {
+      return _then(_self.copyWith(firstStage: value));
+    });
+  }
+
+  /// Create a copy of NetworkRocketModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $NetworkSecondStageModelCopyWith<$Res>? get secondStage {
+    if (_self.secondStage == null) {
+      return null;
+    }
+
+    return $NetworkSecondStageModelCopyWith<$Res>(_self.secondStage!, (value) {
+      return _then(_self.copyWith(secondStage: value));
+    });
   }
 }
 
@@ -921,6 +1042,14 @@ mixin _$NetworkLaunchLinksModel {
   String? get wikipedia;
   @JsonKey(name: 'youtube_id')
   String? get youtubeId;
+  @JsonKey(name: 'reddit_launch')
+  String? get redditLaunch;
+  @JsonKey(name: 'video_link')
+  String? get videoLink;
+  @JsonKey(name: 'presskit')
+  String? get presskit;
+  @JsonKey(name: 'flickr_images')
+  List<String>? get flickrImages;
 
   /// Create a copy of NetworkLaunchLinksModel
   /// with the given fields replaced by the non-null parameter values.
@@ -947,17 +1076,34 @@ mixin _$NetworkLaunchLinksModel {
             (identical(other.wikipedia, wikipedia) ||
                 other.wikipedia == wikipedia) &&
             (identical(other.youtubeId, youtubeId) ||
-                other.youtubeId == youtubeId));
+                other.youtubeId == youtubeId) &&
+            (identical(other.redditLaunch, redditLaunch) ||
+                other.redditLaunch == redditLaunch) &&
+            (identical(other.videoLink, videoLink) ||
+                other.videoLink == videoLink) &&
+            (identical(other.presskit, presskit) ||
+                other.presskit == presskit) &&
+            const DeepCollectionEquality()
+                .equals(other.flickrImages, flickrImages));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, missionPatch, missionPatchSmall,
-      articleLink, wikipedia, youtubeId);
+  int get hashCode => Object.hash(
+      runtimeType,
+      missionPatch,
+      missionPatchSmall,
+      articleLink,
+      wikipedia,
+      youtubeId,
+      redditLaunch,
+      videoLink,
+      presskit,
+      const DeepCollectionEquality().hash(flickrImages));
 
   @override
   String toString() {
-    return 'NetworkLaunchLinksModel(missionPatch: $missionPatch, missionPatchSmall: $missionPatchSmall, articleLink: $articleLink, wikipedia: $wikipedia, youtubeId: $youtubeId)';
+    return 'NetworkLaunchLinksModel(missionPatch: $missionPatch, missionPatchSmall: $missionPatchSmall, articleLink: $articleLink, wikipedia: $wikipedia, youtubeId: $youtubeId, redditLaunch: $redditLaunch, videoLink: $videoLink, presskit: $presskit, flickrImages: $flickrImages)';
   }
 }
 
@@ -972,7 +1118,11 @@ abstract mixin class $NetworkLaunchLinksModelCopyWith<$Res> {
       @JsonKey(name: 'mission_patch_small') String? missionPatchSmall,
       @JsonKey(name: 'article_link') String? articleLink,
       @JsonKey(name: 'wikipedia') String? wikipedia,
-      @JsonKey(name: 'youtube_id') String? youtubeId});
+      @JsonKey(name: 'youtube_id') String? youtubeId,
+      @JsonKey(name: 'reddit_launch') String? redditLaunch,
+      @JsonKey(name: 'video_link') String? videoLink,
+      @JsonKey(name: 'presskit') String? presskit,
+      @JsonKey(name: 'flickr_images') List<String>? flickrImages});
 }
 
 /// @nodoc
@@ -993,6 +1143,10 @@ class _$NetworkLaunchLinksModelCopyWithImpl<$Res>
     Object? articleLink = freezed,
     Object? wikipedia = freezed,
     Object? youtubeId = freezed,
+    Object? redditLaunch = freezed,
+    Object? videoLink = freezed,
+    Object? presskit = freezed,
+    Object? flickrImages = freezed,
   }) {
     return _then(_self.copyWith(
       missionPatch: freezed == missionPatch
@@ -1015,6 +1169,22 @@ class _$NetworkLaunchLinksModelCopyWithImpl<$Res>
           ? _self.youtubeId
           : youtubeId // ignore: cast_nullable_to_non_nullable
               as String?,
+      redditLaunch: freezed == redditLaunch
+          ? _self.redditLaunch
+          : redditLaunch // ignore: cast_nullable_to_non_nullable
+              as String?,
+      videoLink: freezed == videoLink
+          ? _self.videoLink
+          : videoLink // ignore: cast_nullable_to_non_nullable
+              as String?,
+      presskit: freezed == presskit
+          ? _self.presskit
+          : presskit // ignore: cast_nullable_to_non_nullable
+              as String?,
+      flickrImages: freezed == flickrImages
+          ? _self.flickrImages
+          : flickrImages // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ));
   }
 }
@@ -1117,15 +1287,27 @@ extension NetworkLaunchLinksModelPatterns on NetworkLaunchLinksModel {
             @JsonKey(name: 'mission_patch_small') String? missionPatchSmall,
             @JsonKey(name: 'article_link') String? articleLink,
             @JsonKey(name: 'wikipedia') String? wikipedia,
-            @JsonKey(name: 'youtube_id') String? youtubeId)?
+            @JsonKey(name: 'youtube_id') String? youtubeId,
+            @JsonKey(name: 'reddit_launch') String? redditLaunch,
+            @JsonKey(name: 'video_link') String? videoLink,
+            @JsonKey(name: 'presskit') String? presskit,
+            @JsonKey(name: 'flickr_images') List<String>? flickrImages)?
         $default, {
     required TResult orElse(),
   }) {
     final _that = this;
     switch (_that) {
       case _NetworkLaunchLinksModel() when $default != null:
-        return $default(_that.missionPatch, _that.missionPatchSmall,
-            _that.articleLink, _that.wikipedia, _that.youtubeId);
+        return $default(
+            _that.missionPatch,
+            _that.missionPatchSmall,
+            _that.articleLink,
+            _that.wikipedia,
+            _that.youtubeId,
+            _that.redditLaunch,
+            _that.videoLink,
+            _that.presskit,
+            _that.flickrImages);
       case _:
         return orElse();
     }
@@ -1151,14 +1333,26 @@ extension NetworkLaunchLinksModelPatterns on NetworkLaunchLinksModel {
             @JsonKey(name: 'mission_patch_small') String? missionPatchSmall,
             @JsonKey(name: 'article_link') String? articleLink,
             @JsonKey(name: 'wikipedia') String? wikipedia,
-            @JsonKey(name: 'youtube_id') String? youtubeId)
+            @JsonKey(name: 'youtube_id') String? youtubeId,
+            @JsonKey(name: 'reddit_launch') String? redditLaunch,
+            @JsonKey(name: 'video_link') String? videoLink,
+            @JsonKey(name: 'presskit') String? presskit,
+            @JsonKey(name: 'flickr_images') List<String>? flickrImages)
         $default,
   ) {
     final _that = this;
     switch (_that) {
       case _NetworkLaunchLinksModel():
-        return $default(_that.missionPatch, _that.missionPatchSmall,
-            _that.articleLink, _that.wikipedia, _that.youtubeId);
+        return $default(
+            _that.missionPatch,
+            _that.missionPatchSmall,
+            _that.articleLink,
+            _that.wikipedia,
+            _that.youtubeId,
+            _that.redditLaunch,
+            _that.videoLink,
+            _that.presskit,
+            _that.flickrImages);
       case _:
         throw StateError('Unexpected subclass');
     }
@@ -1183,14 +1377,26 @@ extension NetworkLaunchLinksModelPatterns on NetworkLaunchLinksModel {
             @JsonKey(name: 'mission_patch_small') String? missionPatchSmall,
             @JsonKey(name: 'article_link') String? articleLink,
             @JsonKey(name: 'wikipedia') String? wikipedia,
-            @JsonKey(name: 'youtube_id') String? youtubeId)?
+            @JsonKey(name: 'youtube_id') String? youtubeId,
+            @JsonKey(name: 'reddit_launch') String? redditLaunch,
+            @JsonKey(name: 'video_link') String? videoLink,
+            @JsonKey(name: 'presskit') String? presskit,
+            @JsonKey(name: 'flickr_images') List<String>? flickrImages)?
         $default,
   ) {
     final _that = this;
     switch (_that) {
       case _NetworkLaunchLinksModel() when $default != null:
-        return $default(_that.missionPatch, _that.missionPatchSmall,
-            _that.articleLink, _that.wikipedia, _that.youtubeId);
+        return $default(
+            _that.missionPatch,
+            _that.missionPatchSmall,
+            _that.articleLink,
+            _that.wikipedia,
+            _that.youtubeId,
+            _that.redditLaunch,
+            _that.videoLink,
+            _that.presskit,
+            _that.flickrImages);
       case _:
         return null;
     }
@@ -1205,8 +1411,13 @@ class _NetworkLaunchLinksModel extends NetworkLaunchLinksModel {
       @JsonKey(name: 'mission_patch_small') this.missionPatchSmall,
       @JsonKey(name: 'article_link') this.articleLink,
       @JsonKey(name: 'wikipedia') this.wikipedia,
-      @JsonKey(name: 'youtube_id') this.youtubeId})
-      : super._();
+      @JsonKey(name: 'youtube_id') this.youtubeId,
+      @JsonKey(name: 'reddit_launch') this.redditLaunch,
+      @JsonKey(name: 'video_link') this.videoLink,
+      @JsonKey(name: 'presskit') this.presskit,
+      @JsonKey(name: 'flickr_images') final List<String>? flickrImages})
+      : _flickrImages = flickrImages,
+        super._();
   factory _NetworkLaunchLinksModel.fromJson(Map<String, dynamic> json) =>
       _$NetworkLaunchLinksModelFromJson(json);
 
@@ -1225,6 +1436,25 @@ class _NetworkLaunchLinksModel extends NetworkLaunchLinksModel {
   @override
   @JsonKey(name: 'youtube_id')
   final String? youtubeId;
+  @override
+  @JsonKey(name: 'reddit_launch')
+  final String? redditLaunch;
+  @override
+  @JsonKey(name: 'video_link')
+  final String? videoLink;
+  @override
+  @JsonKey(name: 'presskit')
+  final String? presskit;
+  final List<String>? _flickrImages;
+  @override
+  @JsonKey(name: 'flickr_images')
+  List<String>? get flickrImages {
+    final value = _flickrImages;
+    if (value == null) return null;
+    if (_flickrImages is EqualUnmodifiableListView) return _flickrImages;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   /// Create a copy of NetworkLaunchLinksModel
   /// with the given fields replaced by the non-null parameter values.
@@ -1256,17 +1486,34 @@ class _NetworkLaunchLinksModel extends NetworkLaunchLinksModel {
             (identical(other.wikipedia, wikipedia) ||
                 other.wikipedia == wikipedia) &&
             (identical(other.youtubeId, youtubeId) ||
-                other.youtubeId == youtubeId));
+                other.youtubeId == youtubeId) &&
+            (identical(other.redditLaunch, redditLaunch) ||
+                other.redditLaunch == redditLaunch) &&
+            (identical(other.videoLink, videoLink) ||
+                other.videoLink == videoLink) &&
+            (identical(other.presskit, presskit) ||
+                other.presskit == presskit) &&
+            const DeepCollectionEquality()
+                .equals(other._flickrImages, _flickrImages));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, missionPatch, missionPatchSmall,
-      articleLink, wikipedia, youtubeId);
+  int get hashCode => Object.hash(
+      runtimeType,
+      missionPatch,
+      missionPatchSmall,
+      articleLink,
+      wikipedia,
+      youtubeId,
+      redditLaunch,
+      videoLink,
+      presskit,
+      const DeepCollectionEquality().hash(_flickrImages));
 
   @override
   String toString() {
-    return 'NetworkLaunchLinksModel(missionPatch: $missionPatch, missionPatchSmall: $missionPatchSmall, articleLink: $articleLink, wikipedia: $wikipedia, youtubeId: $youtubeId)';
+    return 'NetworkLaunchLinksModel(missionPatch: $missionPatch, missionPatchSmall: $missionPatchSmall, articleLink: $articleLink, wikipedia: $wikipedia, youtubeId: $youtubeId, redditLaunch: $redditLaunch, videoLink: $videoLink, presskit: $presskit, flickrImages: $flickrImages)';
   }
 }
 
@@ -1283,7 +1530,11 @@ abstract mixin class _$NetworkLaunchLinksModelCopyWith<$Res>
       @JsonKey(name: 'mission_patch_small') String? missionPatchSmall,
       @JsonKey(name: 'article_link') String? articleLink,
       @JsonKey(name: 'wikipedia') String? wikipedia,
-      @JsonKey(name: 'youtube_id') String? youtubeId});
+      @JsonKey(name: 'youtube_id') String? youtubeId,
+      @JsonKey(name: 'reddit_launch') String? redditLaunch,
+      @JsonKey(name: 'video_link') String? videoLink,
+      @JsonKey(name: 'presskit') String? presskit,
+      @JsonKey(name: 'flickr_images') List<String>? flickrImages});
 }
 
 /// @nodoc
@@ -1304,6 +1555,10 @@ class __$NetworkLaunchLinksModelCopyWithImpl<$Res>
     Object? articleLink = freezed,
     Object? wikipedia = freezed,
     Object? youtubeId = freezed,
+    Object? redditLaunch = freezed,
+    Object? videoLink = freezed,
+    Object? presskit = freezed,
+    Object? flickrImages = freezed,
   }) {
     return _then(_NetworkLaunchLinksModel(
       missionPatch: freezed == missionPatch
@@ -1326,6 +1581,22 @@ class __$NetworkLaunchLinksModelCopyWithImpl<$Res>
           ? _self.youtubeId
           : youtubeId // ignore: cast_nullable_to_non_nullable
               as String?,
+      redditLaunch: freezed == redditLaunch
+          ? _self.redditLaunch
+          : redditLaunch // ignore: cast_nullable_to_non_nullable
+              as String?,
+      videoLink: freezed == videoLink
+          ? _self.videoLink
+          : videoLink // ignore: cast_nullable_to_non_nullable
+              as String?,
+      presskit: freezed == presskit
+          ? _self.presskit
+          : presskit // ignore: cast_nullable_to_non_nullable
+              as String?,
+      flickrImages: freezed == flickrImages
+          ? _self._flickrImages
+          : flickrImages // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ));
   }
 }

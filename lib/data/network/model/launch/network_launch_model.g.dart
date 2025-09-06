@@ -39,6 +39,14 @@ _NetworkRocketModel _$NetworkRocketModelFromJson(Map<String, dynamic> json) =>
       id: json['rocket_id'] as String,
       type: json['rocket_type'] as String?,
       name: json['rocket_name'] as String?,
+      firstStage: json['first_stage'] == null
+          ? null
+          : NetworkFirstStageModel.fromJson(
+              json['first_stage'] as Map<String, dynamic>),
+      secondStage: json['second_stage'] == null
+          ? null
+          : NetworkSecondStageModel.fromJson(
+              json['second_stage'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$NetworkRocketModelToJson(_NetworkRocketModel instance) =>
@@ -46,6 +54,8 @@ Map<String, dynamic> _$NetworkRocketModelToJson(_NetworkRocketModel instance) =>
       'rocket_id': instance.id,
       'rocket_type': instance.type,
       'rocket_name': instance.name,
+      'first_stage': instance.firstStage,
+      'second_stage': instance.secondStage,
     };
 
 _NetworkLaunchLinksModel _$NetworkLaunchLinksModelFromJson(
@@ -56,6 +66,12 @@ _NetworkLaunchLinksModel _$NetworkLaunchLinksModelFromJson(
       articleLink: json['article_link'] as String?,
       wikipedia: json['wikipedia'] as String?,
       youtubeId: json['youtube_id'] as String?,
+      redditLaunch: json['reddit_launch'] as String?,
+      videoLink: json['video_link'] as String?,
+      presskit: json['presskit'] as String?,
+      flickrImages: (json['flickr_images'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
     );
 
 Map<String, dynamic> _$NetworkLaunchLinksModelToJson(
@@ -66,4 +82,8 @@ Map<String, dynamic> _$NetworkLaunchLinksModelToJson(
       'article_link': instance.articleLink,
       'wikipedia': instance.wikipedia,
       'youtube_id': instance.youtubeId,
+      'reddit_launch': instance.redditLaunch,
+      'video_link': instance.videoLink,
+      'presskit': instance.presskit,
+      'flickr_images': instance.flickrImages,
     };

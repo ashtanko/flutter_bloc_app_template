@@ -24,7 +24,7 @@ abstract class NetworkLaunchFullModel with _$NetworkLaunchFullModel {
     @JsonKey(name: 'tbd') bool? tbd,
     @JsonKey(name: 'launch_window') int? launchWindow,
     @JsonKey(name: 'rocket') NetworkRocketModel? rocket,
-    @JsonKey(name: 'ships') List<dynamic>? ships,
+    @JsonKey(name: 'ships') List<String>? ships,
     @JsonKey(name: 'telemetry') NetworkTelemetry? telemetry,
     @JsonKey(name: 'launch_site') NetworkLaunchSite? launchSite,
     @JsonKey(name: 'launch_success') bool? success,
@@ -34,7 +34,7 @@ abstract class NetworkLaunchFullModel with _$NetworkLaunchFullModel {
     String? details,
     @TimestampSerializer()
     @JsonKey(name: 'static_fire_date_utc')
-    DateTime? staticFireDateUtc,
+    DateTime? staticFireDate,
     @JsonKey(name: 'static_fire_date_unix') int? staticFireDateUnix,
     NetworkTimeline? timeline,
   }) = _NetworkLaunchFullModel;
