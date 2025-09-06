@@ -72,7 +72,7 @@ void main() {
       final resource = nullModel.toResource();
 
       expect(resource.block, 2);
-      expect(resource.payloads, isEmpty);
+      expect(resource.payloads, null);
     });
   });
 }
