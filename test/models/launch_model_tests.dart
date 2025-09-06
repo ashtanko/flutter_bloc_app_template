@@ -85,7 +85,18 @@ void main() {
       expect(launchResource.launchDays, isA<Since>());
       expect(launchResource.launchTime, '03:35 AM, Jul 2009');
       expect(launchResource.launchSuccess, true);
-      expect(launchResource.links?.flickrImages?.length, 10);
+      expect(launchResource.links?.flickrImages, [
+        'https://farm9.staticflickr.com/8619/16511407538_9a25c5d8c6_o.jpg',
+        'https://farm9.staticflickr.com/8665/16697946612_1284e952b0_o.jpg',
+        'https://farm9.staticflickr.com/8570/16698990475_16524a93de_o.jpg',
+        'https://farm9.staticflickr.com/8681/16512864259_e849e496b1_o.jpg',
+        'https://farm9.staticflickr.com/8637/16079045013_1f0fab9b54_o.jpg',
+        'https://farm9.staticflickr.com/8601/16512864369_2bb896c344_o.jpg',
+        'https://farm9.staticflickr.com/8646/16697693861_a038331e0a_o.jpg',
+        'https://farm9.staticflickr.com/8680/16511407248_093635a243_o.jpg',
+        'https://farm9.staticflickr.com/8654/16511594820_451f194d53_o.jpg',
+        'https://farm9.staticflickr.com/8603/16673054016_472fb42a20_o.jpg'
+      ]);
     });
   });
 
@@ -108,12 +119,36 @@ void main() {
       when(networkLinksModel.missionPatch).thenReturn('patch.png');
       when(networkLinksModel.missionPatchSmall).thenReturn('small_patch.png');
       when(networkLinksModel.articleLink).thenReturn('http://article.com');
+      when(networkLinksModel.flickrImages).thenReturn([
+        'https://farm9.staticflickr.com/8619/16511407538_9a25c5d8c6_o.jpg',
+        'https://farm9.staticflickr.com/8665/16697946612_1284e952b0_o.jpg',
+        'https://farm9.staticflickr.com/8570/16698990475_16524a93de_o.jpg',
+        'https://farm9.staticflickr.com/8681/16512864259_e849e496b1_o.jpg',
+        'https://farm9.staticflickr.com/8637/16079045013_1f0fab9b54_o.jpg',
+        'https://farm9.staticflickr.com/8601/16512864369_2bb896c344_o.jpg',
+        'https://farm9.staticflickr.com/8646/16697693861_a038331e0a_o.jpg',
+        'https://farm9.staticflickr.com/8680/16511407248_093635a243_o.jpg',
+        'https://farm9.staticflickr.com/8654/16511594820_451f194d53_o.jpg',
+        'https://farm9.staticflickr.com/8603/16673054016_472fb42a20_o.jpg'
+      ]);
 
       final linksResource = networkLinksModel.toResource();
 
       expect(linksResource.missionPatch, 'patch.png');
       expect(linksResource.missionPatchSmall, 'small_patch.png');
       expect(linksResource.articleLink, 'http://article.com');
+      expect(linksResource.flickrImages, [
+        'https://farm9.staticflickr.com/8619/16511407538_9a25c5d8c6_o.jpg',
+        'https://farm9.staticflickr.com/8665/16697946612_1284e952b0_o.jpg',
+        'https://farm9.staticflickr.com/8570/16698990475_16524a93de_o.jpg',
+        'https://farm9.staticflickr.com/8681/16512864259_e849e496b1_o.jpg',
+        'https://farm9.staticflickr.com/8637/16079045013_1f0fab9b54_o.jpg',
+        'https://farm9.staticflickr.com/8601/16512864369_2bb896c344_o.jpg',
+        'https://farm9.staticflickr.com/8646/16697693861_a038331e0a_o.jpg',
+        'https://farm9.staticflickr.com/8680/16511407248_093635a243_o.jpg',
+        'https://farm9.staticflickr.com/8654/16511594820_451f194d53_o.jpg',
+        'https://farm9.staticflickr.com/8603/16673054016_472fb42a20_o.jpg'
+      ]);
     });
   });
 
