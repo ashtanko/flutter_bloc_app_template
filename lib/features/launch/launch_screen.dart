@@ -213,8 +213,8 @@ class _LaunchScreenContentState extends State<LaunchScreenContent>
                                     begin: Alignment.topCenter,
                                     end: Alignment.bottomCenter,
                                     colors: [
-                                      Colors.black.withOpacity(0.20),
-                                      Colors.black.withOpacity(0.70),
+                                      Colors.black.withValues(alpha: 0.20),
+                                      Colors.black.withValues(alpha: 0.70),
                                     ],
                                     stops: [0.0, 0.9],
                                   ),
@@ -227,7 +227,6 @@ class _LaunchScreenContentState extends State<LaunchScreenContent>
                     Positioned(
                       top: 100,
                       right: 20,
-                      child: Hero(
                       child: Hero(
                         tag: 'mission_patch_${widget.resource.flightNumber}',
                         child: Container(
@@ -251,12 +250,16 @@ class _LaunchScreenContentState extends State<LaunchScreenContent>
                                   color: Colors.white.withValues(alpha: 0.1),
                                   borderRadius: BorderRadius.circular(12),
                                 ),
-                                child: (widget.resource.links?.missionPatchSmall?.isNotEmpty ?? false)
+                                child: (widget.resource.links?.missionPatchSmall
+                                            ?.isNotEmpty ??
+                                        false)
                                     ? Image.network(
-                                        widget.resource.links!.missionPatchSmall!,
+                                        widget
+                                            .resource.links!.missionPatchSmall!,
                                         height: 80,
-                                        errorBuilder: (context, error, stackTrace) =>
-                                            const Icon(
+                                        errorBuilder:
+                                            (context, error, stackTrace) =>
+                                                const Icon(
                                           Icons.rocket_launch,
                                           size: 60,
                                           color: Colors.white,
