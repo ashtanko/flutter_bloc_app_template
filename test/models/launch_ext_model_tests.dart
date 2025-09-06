@@ -62,7 +62,11 @@ void main() {
           'mission_patch_small': 'patch_small_url',
           'article_link': 'article_url',
           'wikipedia': 'wiki_url',
-          'youtube_id': 'youtube123'
+          'youtube_id': 'youtube123',
+          'reddit_launch': 'http://www.reddit.com/r/spacex/comments/2vjm9e',
+          'video_link': 'https://www.youtube.com/watch?v=OvHJSIKP0Hg',
+          'presskit':
+              'http://www.spacex.com/press/2015/02/11/dscovr-launch-update'
         },
         'ships': ['ELSBETH3', 'GOQUEST', 'GOSEARCHER'],
         'launch_site': {
@@ -109,6 +113,10 @@ void main() {
           articleLink: 'article_url',
           wikipedia: 'wiki_url',
           youtubeId: 'youtube123',
+          redditLaunch: 'http://www.reddit.com/r/spacex/comments/2vjm9e',
+          videoLink: 'https://www.youtube.com/watch?v=OvHJSIKP0Hg',
+          presskit:
+              'http://www.spacex.com/press/2015/02/11/dscovr-launch-update',
         ),
       );
 
