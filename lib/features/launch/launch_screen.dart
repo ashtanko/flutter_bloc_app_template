@@ -251,14 +251,22 @@ class _LaunchScreenContentState extends State<LaunchScreenContent>
                                   color: Colors.white.withValues(alpha: 0.1),
                                   borderRadius: BorderRadius.circular(12),
                                 ),
-                                child: Image.network(
-                                  widget.resource.links?.missionPatchSmall ??
-                                      '',
-                                  height: 80,
-                                  errorBuilder: (context, error, stackTrace) =>
-                                      const Icon(Icons.rocket_launch,
-                                          size: 60, color: Colors.white),
-                                ),
+                                child: (widget.resource.links?.missionPatchSmall?.isNotEmpty ?? false)
+                                    ? Image.network(
+                                        widget.resource.links!.missionPatchSmall!,
+                                        height: 80,
+                                        errorBuilder: (context, error, stackTrace) =>
+                                            const Icon(
+                                          Icons.rocket_launch,
+                                          size: 60,
+                                          color: Colors.white,
+                                        ),
+                                      )
+                                    : const Icon(
+                                        Icons.rocket_launch,
+                                        size: 60,
+                                        color: Colors.white,
+                                      ),
                               ),
                             ),
                           ),
