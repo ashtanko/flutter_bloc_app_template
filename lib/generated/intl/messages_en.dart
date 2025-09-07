@@ -153,6 +153,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "rocketName": MessageLookupByLibrary.simpleMessage("Rocket Name"),
     "rocketTitle": MessageLookupByLibrary.simpleMessage("Rocket"),
     "rocketType": MessageLookupByLibrary.simpleMessage("Type"),
+    "rocketsTab": MessageLookupByLibrary.simpleMessage("Rockets"),
     "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
     "siteIdLabel": MessageLookupByLibrary.simpleMessage("Site ID:"),
     "staticFireTest": MessageLookupByLibrary.simpleMessage("Static Fire Test"),

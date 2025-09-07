@@ -296,4 +296,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String flightNumber(Object number) {
     return 'Flug #$number';
   }
+
+  @override
+  String get rocketsTab => 'Raketen';
 }

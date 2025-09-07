@@ -933,6 +933,16 @@ class S {
       args: [number],
     );
   }
+
+  /// `Rockets`
+  String get rocketsTab {
+    return Intl.message(
+      'Rockets',
+      name: 'rocketsTab',
+      desc: 'The title of the Rockets tab',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -6,17 +6,17 @@ List<NavDestination> getDestinations(BuildContext context) {
   return [
     NavDestination(
       label: context.launchesTitle,
-      icon: const Icon(Icons.rocket_outlined),
-      selectedIcon: const Icon(Icons.rocket),
+      icon: const Icon(Icons.rocket_launch_outlined),
+      selectedIcon: const Icon(Icons.rocket_launch),
       screen: const LaunchesScreen(),
       key: const Key('launches'),
     ),
     NavDestination(
-      label: context.emailsTitle,
-      icon: const Icon(Icons.mail_outline),
-      selectedIcon: const Icon(Icons.mail),
-      screen: const EmailListScreen(),
-      key: const Key('emails'),
+      label: context.rocketsTab,
+      icon: const Icon(Icons.rocket_outlined),
+      selectedIcon: const Icon(Icons.rocket),
+      screen: Container(),
+      key: const Key('rockets'),
     ),
     NavDestination(
       label: context.settingsTitle,

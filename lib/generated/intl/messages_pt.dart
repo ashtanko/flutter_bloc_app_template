@@ -176,6 +176,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "rocketName": MessageLookupByLibrary.simpleMessage("Nome do Foguete"),
     "rocketTitle": MessageLookupByLibrary.simpleMessage("Foguete"),
     "rocketType": MessageLookupByLibrary.simpleMessage("Tipo"),
+    "rocketsTab": MessageLookupByLibrary.simpleMessage("Foguetes"),
     "settingsTitle": MessageLookupByLibrary.simpleMessage("Configurações"),
     "siteIdLabel": MessageLookupByLibrary.simpleMessage("ID do Local:"),
     "staticFireTest": MessageLookupByLibrary.simpleMessage(

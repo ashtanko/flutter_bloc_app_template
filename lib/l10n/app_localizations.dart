@@ -647,6 +647,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Flight #{number}'**
   String flightNumber(Object number);
+
+  /// The title of the Rockets tab
+  ///
+  /// In en, this message translates to:
+  /// **'Rockets'**
+  String get rocketsTab;
 }
 
 class _AppLocalizationsDelegate

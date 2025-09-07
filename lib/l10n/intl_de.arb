@@ -193,5 +193,9 @@
   "pressKit": "Pressemappe",
   "launchSite": "Startplatz",
   "siteIdLabel": "Standort-ID:",
-  "flightNumber": "Flug #{number}"
+  "flightNumber": "Flug #{number}",
+  "rocketsTab": "Raketen",
+  "@rocketsTab": {
+    "description": "Titel des Raketen-Tabs"
+  }
 }

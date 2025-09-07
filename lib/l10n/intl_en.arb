@@ -330,5 +330,9 @@
     "placeholders": {
       "number": {}
     }
+  },
+  "rocketsTab": "Rockets",
+  "@rocketsTab": {
+    "description": "The title of the Rockets tab"
   }
 }

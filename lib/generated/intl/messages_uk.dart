@@ -159,6 +159,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "rocketName": MessageLookupByLibrary.simpleMessage("Назва ракети"),
     "rocketTitle": MessageLookupByLibrary.simpleMessage("Ракета"),
     "rocketType": MessageLookupByLibrary.simpleMessage("Тип"),
+    "rocketsTab": MessageLookupByLibrary.simpleMessage("Ракети"),
     "settingsTitle": MessageLookupByLibrary.simpleMessage("Налаштування"),
     "siteIdLabel": MessageLookupByLibrary.simpleMessage("ID сайту:"),
     "staticFireTest": MessageLookupByLibrary.simpleMessage(

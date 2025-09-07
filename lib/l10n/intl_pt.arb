@@ -193,5 +193,9 @@
   "pressKit": "Kit de Imprensa",
   "launchSite": "Local de Lançamento",
   "siteIdLabel": "ID do Local:",
-  "flightNumber": "Voo #{number}"
+  "flightNumber": "Voo #{number}",
+  "rocketsTab": "Foguetes",
+  "@rocketsTab": {
+    "description": "Título da aba Foguetes"
+  }
 }

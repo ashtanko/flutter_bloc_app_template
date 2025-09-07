@@ -30,6 +30,8 @@ extension StringResourcesExtension on BuildContext {
 
   String get emailsTitle => l10n.emailsTitle;
 
+  String get rocketsTab => l10n.rocketsTab;
+
   String get settingsTitle => l10n.settingsTitle;
 
   String get emptyList => l10n.emptyList;
