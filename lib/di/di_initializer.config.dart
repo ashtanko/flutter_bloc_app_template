@@ -13,8 +13,8 @@ import 'package:dio/dio.dart' as _i361;
 import 'package:flutter/material.dart' as _i409;
 import 'package:flutter_bloc_app_template/data/network/data_source/launches_network_data_source.dart'
     as _i358;
-import 'package:flutter_bloc_app_template/data/network/service/launch_service.dart'
-    as _i859;
+import 'package:flutter_bloc_app_template/data/network/service/launch/launch_service.dart'
+    as _i511;
 import 'package:flutter_bloc_app_template/data/theme_storage.dart' as _i750;
 import 'package:flutter_bloc_app_template/di/di_app_module.dart' as _i367;
 import 'package:flutter_bloc_app_template/di/di_data_module.dart' as _i513;
@@ -49,12 +49,12 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i750.ThemeStorage>(() => dIDataModule.themeStorage);
     gh.lazySingleton<_i409.GlobalKey<_i409.NavigatorState>>(
         () => dIAppModule.key);
-    gh.factory<_i859.LaunchService>(
+    gh.factory<_i511.LaunchService>(
         () => networkModule.provideLaunchService(gh<_i361.Dio>()));
     gh.factory<_i626.ThemeRepository>(() =>
         repositoryModule.provideAccidentsRepository(gh<_i750.ThemeStorage>()));
     gh.factory<_i358.LaunchesDataSource>(() =>
-        networkModule.provideLaunchesDataSource(gh<_i859.LaunchService>()));
+        networkModule.provideLaunchesDataSource(gh<_i511.LaunchService>()));
     gh.factory<_i11.LaunchesRepository>(() => repositoryModule
         .provideLaunchesRepository(gh<_i358.LaunchesDataSource>()));
     return this;

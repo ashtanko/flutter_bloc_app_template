@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_bloc_app_template/data/network/data_source/launches_network_data_source.dart';
-import 'package:flutter_bloc_app_template/data/network/service/launch_service.dart';
+import 'package:flutter_bloc_app_template/data/network/service/launch/launch_service.dart';
 import 'package:injectable/injectable.dart';
 import 'package:talker_dio_logger/talker_dio_logger_interceptor.dart';
 import 'package:talker_dio_logger/talker_dio_logger_settings.dart';

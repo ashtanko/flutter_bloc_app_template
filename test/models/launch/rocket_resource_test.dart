@@ -1,8 +1,8 @@
 import 'package:flutter_bloc_app_template/models/core/core_resource.dart';
-import 'package:flutter_bloc_app_template/models/launch/first_stage_resource.dart';
-import 'package:flutter_bloc_app_template/models/launch/rocket_resource.dart';
-import 'package:flutter_bloc_app_template/models/launch/second_stage_resource.dart';
+import 'package:flutter_bloc_app_template/models/launch/launch_rocket_resource.dart';
 import 'package:flutter_bloc_app_template/models/payload/payload_resource.dart';
+import 'package:flutter_bloc_app_template/models/stage/first_stage_resource.dart';
+import 'package:flutter_bloc_app_template/models/stage/second_stage_resource.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -16,21 +16,21 @@ void main() {
     const secondStage =
         SecondStageResource(block: 1, payloads: [payload1, payload2]);
 
-    const resource1 = RocketResource(
+    const resource1 = LaunchRocketResource(
       rocketName: 'Falcon 9',
       rocketType: 'FT',
       firstStage: firstStage,
       secondStage: secondStage,
     );
 
-    const resource2 = RocketResource(
+    const resource2 = LaunchRocketResource(
       rocketName: 'Falcon 9',
       rocketType: 'FT',
       firstStage: firstStage,
       secondStage: secondStage,
     );
 
-    const resourceDifferent = RocketResource(
+    const resourceDifferent = LaunchRocketResource(
       rocketName: 'Falcon Heavy',
       rocketType: 'Heavy',
       firstStage: null,
@@ -67,7 +67,7 @@ void main() {
         PayloadResource(payloadId: 'FalconSAT-2'),
         PayloadResource(payloadId: 'FalconSAT-3'),
       ]);
-      const resource3 = RocketResource(
+      const resource3 = LaunchRocketResource(
         rocketName: 'Falcon 9',
         rocketType: 'FT',
         firstStage: firstStage2,
@@ -77,7 +77,7 @@ void main() {
     });
 
     test('handles null optional fields', () {
-      const nullResource = RocketResource();
+      const nullResource = LaunchRocketResource();
       expect(nullResource.props, equals([null, null, null, null]));
     });
   });

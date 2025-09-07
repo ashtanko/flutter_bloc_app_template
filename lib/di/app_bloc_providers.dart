@@ -20,17 +20,17 @@ abstract class AppBlocProviders {
       BlocProvider(
         create: (context) => EmailListBloc(
           messagesRepository:
-          RepositoryProvider.of<EmailListRepository>(context),
+              RepositoryProvider.of<EmailListRepository>(context),
         )..add(
-          EmailListFetched(),
-        ),
+            EmailListFetched(),
+          ),
       ),
       BlocProvider(
         create: (context) => LaunchesBloc(
           RepositoryProvider.of<LaunchesRepository>(context),
         )..add(
-          const LaunchesEvent.load(),
-        ),
+            const LaunchesEvent.load(),
+          ),
       ),
       BlocProvider<InitBloc>(
         create: (_) => InitBloc()

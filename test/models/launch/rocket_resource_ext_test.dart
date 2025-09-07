@@ -1,16 +1,18 @@
 import 'package:flutter_bloc_app_template/data/network/model/core/network_core_model.dart';
-import 'package:flutter_bloc_app_template/data/network/model/launch/network_first_stage_model.dart';
 import 'package:flutter_bloc_app_template/data/network/model/launch/network_launch_model.dart';
-import 'package:flutter_bloc_app_template/data/network/model/launch/network_second_stage_model.dart';
 import 'package:flutter_bloc_app_template/data/network/model/payload/network_payload_model.dart';
+import 'package:flutter_bloc_app_template/data/network/model/rocket/network_rocket_model.dart';
+import 'package:flutter_bloc_app_template/data/network/model/stage/network_first_stage_model.dart';
+import 'package:flutter_bloc_app_template/data/network/model/stage/network_second_stage_model.dart';
 import 'package:flutter_bloc_app_template/index.dart';
 import 'package:flutter_bloc_app_template/models/core/core_resource.dart';
 import 'package:flutter_bloc_app_template/models/payload/payload_resource.dart';
+import 'package:flutter_bloc_app_template/models/rocket/rocket_ext.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   group('RocketResourceExtension.toResource', () {
-    final networkRocket = const NetworkRocketModel(
+    final networkRocket = const NetworkLaunchRocketModel(
       name: 'Falcon 9',
       type: 'FT',
       firstStage: NetworkFirstStageModel(
@@ -53,7 +55,7 @@ void main() {
       final networkRocketNullStages = const NetworkRocketModel(
         name: 'Falcon Heavy',
         type: 'Heavy',
-        id: '1',
+        rocketId: '1',
       );
 
       final resource = networkRocketNullStages.toResource();

@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/features/launch/bloc/launch_bloc.dart';
 import 'package:flutter_bloc_app_template/features/launch/launch_screen.dart';
 import 'package:flutter_bloc_app_template/models/launch/launch_full_resource.dart';
+import 'package:flutter_bloc_app_template/models/launch/launch_rocket_resource.dart';
 import 'package:flutter_bloc_app_template/models/launch/links_resource.dart';
-import 'package:flutter_bloc_app_template/models/launch/rocket_resource.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
@@ -13,7 +13,8 @@ import '../../bloc/utils.dart';
 class MockLaunchBloc extends MockBloc<LaunchEvent, LaunchState>
     implements LaunchBloc {}
 
-const mockRocket = RocketResource(rocketName: 'Falcon 9', rocketType: 'FT');
+const mockRocket =
+    LaunchRocketResource(rocketName: 'Falcon 9', rocketType: 'FT');
 const mockLinks =
     LinksResource(wikipedia: 'https://en.wikipedia.org/wiki/Falcon_9');
 
@@ -38,10 +39,10 @@ void main() {
 
   setUp(() {
     launchBloc = MockLaunchBloc();
-   when(() => launchBloc.stream)
-       .thenAnswer((_) => const Stream<LaunchState>.empty());
-   when(() => launchBloc.close()).thenAnswer((_) async {});
-   addTearDown(() => launchBloc.close());
+    when(() => launchBloc.stream)
+        .thenAnswer((_) => const Stream<LaunchState>.empty());
+    when(() => launchBloc.close()).thenAnswer((_) async {});
+    addTearDown(() => launchBloc.close());
   });
 
   group('Launch Screen Tests', () {

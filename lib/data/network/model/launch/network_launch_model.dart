@@ -1,8 +1,7 @@
 import 'package:flutter_bloc_app_template/data/network/converter/timestamp_serializer.dart';
+import 'package:flutter_bloc_app_template/data/network/model/stage/network_first_stage_model.dart';
+import 'package:flutter_bloc_app_template/data/network/model/stage/network_second_stage_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-
-import 'network_first_stage_model.dart';
-import 'network_second_stage_model.dart';
 
 part 'network_launch_model.freezed.dart';
 part 'network_launch_model.g.dart';
@@ -16,7 +15,7 @@ abstract class NetworkLaunchModel with _$NetworkLaunchModel {
     @TimestampSerializer()
     @JsonKey(name: 'launch_date_utc')
     DateTime? launchDate,
-    @JsonKey(name: 'rocket') NetworkRocketModel? rocket,
+    @JsonKey(name: 'rocket') NetworkLaunchRocketModel? rocket,
     @JsonKey(name: 'launch_success') @Default(false) bool success,
     @JsonKey(name: 'links') NetworkLaunchLinksModel? links,
   }) = _NetworkLaunchModel;
@@ -25,22 +24,6 @@ abstract class NetworkLaunchModel with _$NetworkLaunchModel {
 
   factory NetworkLaunchModel.fromJson(Map<String, dynamic> json) =>
       _$NetworkLaunchModelFromJson(json);
-}
-
-@freezed
-abstract class NetworkRocketModel with _$NetworkRocketModel {
-  const factory NetworkRocketModel({
-    @JsonKey(name: 'rocket_id') required String id,
-    @JsonKey(name: 'rocket_type') String? type,
-    @JsonKey(name: 'rocket_name') String? name,
-    @JsonKey(name: 'first_stage') NetworkFirstStageModel? firstStage,
-    @JsonKey(name: 'second_stage') NetworkSecondStageModel? secondStage,
-  }) = _NetworkRocketModel;
-
-  const NetworkRocketModel._();
-
-  factory NetworkRocketModel.fromJson(Map<String, dynamic> json) =>
-      _$NetworkRocketModelFromJson(json);
 }
 
 @freezed
@@ -61,4 +44,20 @@ abstract class NetworkLaunchLinksModel with _$NetworkLaunchLinksModel {
 
   factory NetworkLaunchLinksModel.fromJson(Map<String, dynamic> json) =>
       _$NetworkLaunchLinksModelFromJson(json);
+}
+
+@freezed
+abstract class NetworkLaunchRocketModel with _$NetworkLaunchRocketModel {
+  const factory NetworkLaunchRocketModel({
+    @JsonKey(name: 'rocket_id') required String id,
+    @JsonKey(name: 'rocket_type') String? type,
+    @JsonKey(name: 'rocket_name') String? name,
+    @JsonKey(name: 'first_stage') NetworkFirstStageModel? firstStage,
+    @JsonKey(name: 'second_stage') NetworkSecondStageModel? secondStage,
+  }) = _NetworkLaunchRocketModel;
+
+  const NetworkLaunchRocketModel._();
+
+  factory NetworkLaunchRocketModel.fromJson(Map<String, dynamic> json) =>
+      _$NetworkLaunchRocketModelFromJson(json);
 }

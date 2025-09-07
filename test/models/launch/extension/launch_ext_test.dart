@@ -1,6 +1,8 @@
 import 'package:flutter_bloc_app_template/data/network/model/launch/full/network_launch_full_model.dart';
 import 'package:flutter_bloc_app_template/data/network/model/launch/network_launch_model.dart';
+import 'package:flutter_bloc_app_template/data/network/model/rocket/network_rocket_model.dart';
 import 'package:flutter_bloc_app_template/index.dart';
+import 'package:flutter_bloc_app_template/models/rocket/rocket_ext.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -63,8 +65,8 @@ void main() {
 
   group('RocketResourceExtension', () {
     test('toResource converts NetworkRocketModel to RocketResource', () {
-      final network =
-          const NetworkRocketModel(id: 'r1', name: 'Falcon 9', type: 'FT');
+      final network = const NetworkRocketModel(
+          rocketId: 'r1', name: 'Falcon 9', type: 'FT');
 
       final resource = network.toResource();
 
@@ -80,8 +82,8 @@ void main() {
         flightNumber: 42,
         missionName: 'Mission Test',
         launchDate: DateTime.utc(2025, 9, 6, 13, 0),
-        rocket:
-            const NetworkRocketModel(id: 'r1', name: 'Falcon 9', type: 'FT'),
+        rocket: const NetworkLaunchRocketModel(
+            id: 'r1', name: 'Falcon 9', type: 'FT'),
         success: true,
         links: const NetworkLaunchLinksModel(
           missionPatch: 'patch.png',
@@ -109,7 +111,7 @@ void main() {
         flightNumber: 1,
         missionName: 'Full Mission',
         launchDate: DateTime.utc(2025, 9, 6, 13, 0),
-        rocket: const NetworkRocketModel(
+        rocket: const NetworkLaunchRocketModel(
             id: 'r1', name: 'Falcon Heavy', type: 'FT'),
         success: true,
         links: const NetworkLaunchLinksModel(

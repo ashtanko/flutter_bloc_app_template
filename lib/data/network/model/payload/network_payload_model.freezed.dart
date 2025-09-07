@@ -16,18 +16,27 @@ T _$identity<T>(T value) => value;
 mixin _$NetworkPayloadModel {
   @JsonKey(name: 'payload_id')
   String? get payloadId;
+
   @JsonKey(name: 'norad_id')
   List<int>? get noradId;
+
   bool? get reused;
+
   List<String>? get customers;
+
   String? get nationality;
+
   String? get manufacturer;
+
   @JsonKey(name: 'payload_type')
   String? get payloadType;
+
   @JsonKey(name: 'payload_mass_kg')
   int? get payloadMassKg;
+
   @JsonKey(name: 'payload_mass_lbs')
   int? get payloadMassLbs;
+
   String? get orbit;
 
   /// Create a copy of NetworkPayloadModel
@@ -90,6 +99,7 @@ abstract mixin class $NetworkPayloadModelCopyWith<$Res> {
   factory $NetworkPayloadModelCopyWith(
           NetworkPayloadModel value, $Res Function(NetworkPayloadModel) _then) =
       _$NetworkPayloadModelCopyWithImpl;
+
   @useResult
   $Res call(
       {@JsonKey(name: 'payload_id') String? payloadId,
@@ -410,6 +420,7 @@ class _NetworkPayloadModel extends NetworkPayloadModel {
       : _noradId = noradId,
         _customers = customers,
         super._();
+
   factory _NetworkPayloadModel.fromJson(Map<String, dynamic> json) =>
       _$NetworkPayloadModelFromJson(json);
 
@@ -417,6 +428,7 @@ class _NetworkPayloadModel extends NetworkPayloadModel {
   @JsonKey(name: 'payload_id')
   final String? payloadId;
   final List<int>? _noradId;
+
   @override
   @JsonKey(name: 'norad_id')
   List<int>? get noradId {
@@ -430,6 +442,7 @@ class _NetworkPayloadModel extends NetworkPayloadModel {
   @override
   final bool? reused;
   final List<String>? _customers;
+
   @override
   List<String>? get customers {
     final value = _customers;
@@ -522,6 +535,7 @@ abstract mixin class _$NetworkPayloadModelCopyWith<$Res>
   factory _$NetworkPayloadModelCopyWith(_NetworkPayloadModel value,
           $Res Function(_NetworkPayloadModel) _then) =
       __$NetworkPayloadModelCopyWithImpl;
+
   @override
   @useResult
   $Res call(

@@ -1,6 +1,12 @@
+export '../rocket/rocket_resource.dart';
+export '../stage/first_stage_ext.dart';
+export '../stage/first_stage_resource.dart';
+export '../stage/second_stage_ext.dart';
+export '../stage/second_stage_resource.dart';
 export 'extension/launch_ext.dart';
 export 'launch_days.dart';
 export 'launch_full_resource.dart';
 export 'launch_resource.dart';
+export 'launch_site_ext.dart';
+export 'launch_site_resource.dart';
 export 'links_resource.dart';
-export 'rocket_resource.dart';

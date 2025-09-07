@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/features/launches/widget/launch_item.dart';
 import 'package:flutter_bloc_app_template/index.dart';
+import 'package:flutter_bloc_app_template/models/launch/launch_rocket_resource.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../bloc/utils.dart';
@@ -8,7 +9,7 @@ import '../../bloc/utils.dart';
 void main() {
   final launch = const LaunchResource(
     missionName: 'Starlink',
-    rocket: RocketResource(rocketName: 'Falcon 9', rocketType: 'FT'),
+    rocket: LaunchRocketResource(rocketName: 'Falcon 9', rocketType: 'FT'),
     launchTime: '12:00',
     launchSuccess: true,
     launchDays: Since('5'),

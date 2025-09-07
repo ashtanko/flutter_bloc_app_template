@@ -24,7 +24,8 @@ _NetworkLaunchFullModel _$NetworkLaunchFullModelFromJson(
       launchWindow: (json['launch_window'] as num?)?.toInt(),
       rocket: json['rocket'] == null
           ? null
-          : NetworkRocketModel.fromJson(json['rocket'] as Map<String, dynamic>),
+          : NetworkLaunchRocketModel.fromJson(
+              json['rocket'] as Map<String, dynamic>),
       ships:
           (json['ships'] as List<dynamic>?)?.map((e) => e as String).toList(),
       telemetry: json['telemetry'] == null

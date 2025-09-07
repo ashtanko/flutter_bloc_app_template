@@ -1,11 +1,12 @@
 import 'package:flutter_bloc_app_template/models/launch/launch_full_resource.dart';
+import 'package:flutter_bloc_app_template/models/launch/launch_rocket_resource.dart';
 import 'package:flutter_bloc_app_template/models/launch/links_resource.dart';
-import 'package:flutter_bloc_app_template/models/launch/rocket_resource.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   group('LaunchFullResource', () {
-    const rocket = RocketResource(rocketName: 'Falcon 9', rocketType: 'FT');
+    const rocket =
+        LaunchRocketResource(rocketName: 'Falcon 9', rocketType: 'FT');
     const links =
         LinksResource(wikipedia: 'https://en.wikipedia.org/wiki/Falcon_9');
 

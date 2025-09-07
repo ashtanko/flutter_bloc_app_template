@@ -1,4 +1,5 @@
 import 'package:flutter_bloc_app_template/index.dart';
+import 'package:flutter_bloc_app_template/models/launch/launch_rocket_resource.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
@@ -72,7 +73,7 @@ final mockLaunches = [
       '2021-10-01T00:00:00Z',
     ),
     launchTime: '00:00',
-    rocket: RocketResource(
+    rocket: LaunchRocketResource(
       rocketName: 'Rocket 1',
       rocketType: 'Type 1',
     ),
@@ -86,7 +87,7 @@ final mockLaunches = [
       '2021-10-01T00:00:00Z',
     ),
     launchTime: '00:00',
-    rocket: RocketResource(
+    rocket: LaunchRocketResource(
       rocketName: 'Rocket 1',
       rocketType: 'Type 1',
     ),
@@ -98,7 +99,7 @@ final mockFullLaunch = const LaunchFullResource(
   id: '1',
   flightNumber: 1,
   missionName: 'Mission 1',
-  rocket: RocketResource(
+  rocket: LaunchRocketResource(
     rocketName: 'Rocket 1',
     rocketType: 'Type 1',
   ),

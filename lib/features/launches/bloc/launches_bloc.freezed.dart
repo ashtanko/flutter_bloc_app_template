@@ -564,7 +564,7 @@ class LaunchesSuccessState implements LaunchesState {
   @JsonKey()
   List<LaunchResource> get launches {
     if (_launches is EqualUnmodifiableListView) return _launches;
-    // ignore: implicit_dynamic_type
+// ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_launches);
   }
 

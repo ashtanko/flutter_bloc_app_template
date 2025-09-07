@@ -1,12 +1,11 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_bloc_app_template/models/launch/second_stage_resource.dart';
-
-import 'first_stage_resource.dart';
+import 'package:flutter_bloc_app_template/models/stage/first_stage_resource.dart';
+import 'package:flutter_bloc_app_template/models/stage/second_stage_resource.dart';
 
 @immutable
-class RocketResource extends Equatable {
-  const RocketResource({
+class LaunchRocketResource extends Equatable {
+  const LaunchRocketResource({
     this.rocketName,
     this.rocketType,
     this.firstStage,

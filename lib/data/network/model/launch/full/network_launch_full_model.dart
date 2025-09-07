@@ -23,7 +23,7 @@ abstract class NetworkLaunchFullModel with _$NetworkLaunchFullModel {
     @JsonKey(name: 'tentative_max_precision') String? tentativeMaxPrecision,
     @JsonKey(name: 'tbd') bool? tbd,
     @JsonKey(name: 'launch_window') int? launchWindow,
-    @JsonKey(name: 'rocket') NetworkRocketModel? rocket,
+    @JsonKey(name: 'rocket') NetworkLaunchRocketModel? rocket,
     @JsonKey(name: 'ships') List<String>? ships,
     @JsonKey(name: 'telemetry') NetworkTelemetry? telemetry,
     @JsonKey(name: 'launch_site') NetworkLaunchSite? launchSite,

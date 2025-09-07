@@ -172,7 +172,6 @@
   "@objectivesCompleted": {
     "description": "Subtitle for mission success item"
   },
-
   "missionSuccessful": "Mission Successful",
   "@missionSuccessful": {
     "description": "Displayed when the mission has succeeded"
