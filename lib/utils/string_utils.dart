@@ -34,3 +34,9 @@ extension DateFormatExtension on String {
     return initials.toUpperCase();
   }
 }
+
+String formatRocketCost(int? costPerLaunch) {
+  if (costPerLaunch == null || costPerLaunch == 0) return '\$0';
+  final millions = costPerLaunch / 1000000;
+  return '\$${millions.toStringAsFixed(1)}M';
+}

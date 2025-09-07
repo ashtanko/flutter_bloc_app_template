@@ -653,6 +653,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Rockets'**
   String get rocketsTab;
+
+  /// Label for active rocket
+  ///
+  /// In en, this message translates to:
+  /// **'Active'**
+  String get activeStatus;
+
+  /// Label for retired rocket
+  ///
+  /// In en, this message translates to:
+  /// **'Retired'**
+  String get retiredStatus;
+
+  /// Label for rocket success rate with percentage
+  ///
+  /// In en, this message translates to:
+  /// **'{percentage}% success'**
+  String successRate(Object percentage);
+
+  /// The title of the Rockets screen
+  ///
+  /// In en, this message translates to:
+  /// **'Rockets'**
+  String get rocketsTitle;
 }
 
 class _AppLocalizationsDelegate

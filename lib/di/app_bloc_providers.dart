@@ -3,8 +3,10 @@ import 'package:flutter_bloc_app_template/bloc/email_list/email_list_bloc.dart';
 import 'package:flutter_bloc_app_template/bloc/init/init_bloc.dart';
 import 'package:flutter_bloc_app_template/bloc/theme/theme_cubit.dart';
 import 'package:flutter_bloc_app_template/features/launches/bloc/launches_bloc.dart';
+import 'package:flutter_bloc_app_template/features/rockets/bloc/rockets_bloc.dart';
 import 'package:flutter_bloc_app_template/repository/email_list_repository.dart';
 import 'package:flutter_bloc_app_template/repository/launches_repository.dart';
+import 'package:flutter_bloc_app_template/repository/rocket_repository.dart';
 import 'package:flutter_bloc_app_template/repository/theme_repository.dart';
 import 'package:provider/single_child_widget.dart' show SingleChildWidget;
 
@@ -30,6 +32,13 @@ abstract class AppBlocProviders {
           RepositoryProvider.of<LaunchesRepository>(context),
         )..add(
             const LaunchesEvent.load(),
+          ),
+      ),
+      BlocProvider(
+        create: (context) => RocketsBloc(
+          RepositoryProvider.of<RocketRepository>(context),
+        )..add(
+            const RocketsEvent.load(),
           ),
       ),
       BlocProvider<InitBloc>(

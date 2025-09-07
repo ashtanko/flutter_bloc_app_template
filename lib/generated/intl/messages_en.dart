@@ -35,12 +35,15 @@ class MessageLookup extends MessageLookupByLibrary {
   static String m6(rocketName, rocketType) =>
       "Rocket: ${rocketName} (${rocketType})";
 
+  static String m7(percentage) => "${percentage}% success";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "aboutSettingsItem": MessageLookupByLibrary.simpleMessage("About"),
     "aboutSettingsItemDescription": MessageLookupByLibrary.simpleMessage(
       "Version, links, feedback",
     ),
+    "activeStatus": MessageLookupByLibrary.simpleMessage("Active"),
     "allObjectivesCompleted": MessageLookupByLibrary.simpleMessage(
       "All objectives completed",
     ),
@@ -146,6 +149,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "pressKit": MessageLookupByLibrary.simpleMessage("Press Kit"),
     "recoveryShips": MessageLookupByLibrary.simpleMessage("Recovery Ships"),
     "reddit": MessageLookupByLibrary.simpleMessage("Reddit"),
+    "retiredStatus": MessageLookupByLibrary.simpleMessage("Retired"),
     "reused": MessageLookupByLibrary.simpleMessage("Reused"),
     "rocket": m6,
     "rocketBlock": MessageLookupByLibrary.simpleMessage("Block"),
@@ -154,9 +158,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "rocketTitle": MessageLookupByLibrary.simpleMessage("Rocket"),
     "rocketType": MessageLookupByLibrary.simpleMessage("Type"),
     "rocketsTab": MessageLookupByLibrary.simpleMessage("Rockets"),
+    "rocketsTitle": MessageLookupByLibrary.simpleMessage("Rockets"),
     "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
     "siteIdLabel": MessageLookupByLibrary.simpleMessage("Site ID:"),
     "staticFireTest": MessageLookupByLibrary.simpleMessage("Static Fire Test"),
+    "successRate": m7,
     "systemThemeTitle": MessageLookupByLibrary.simpleMessage("System Theme"),
     "tabHome": MessageLookupByLibrary.simpleMessage("Home"),
     "tabSettings": MessageLookupByLibrary.simpleMessage("Settings"),

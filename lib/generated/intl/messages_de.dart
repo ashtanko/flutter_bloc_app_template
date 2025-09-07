@@ -35,12 +35,15 @@ class MessageLookup extends MessageLookupByLibrary {
   static String m6(rocketName, rocketType) =>
       "Rakete: ${rocketName} (${rocketType})";
 
+  static String m7(percentage) => "${percentage}% Erfolg";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "aboutSettingsItem": MessageLookupByLibrary.simpleMessage("About"),
     "aboutSettingsItemDescription": MessageLookupByLibrary.simpleMessage(
       "Version, links, feedback",
     ),
+    "activeStatus": MessageLookupByLibrary.simpleMessage("Aktiv"),
     "allObjectivesCompleted": MessageLookupByLibrary.simpleMessage(
       "Alle Ziele erreicht",
     ),
@@ -163,6 +166,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "pressKit": MessageLookupByLibrary.simpleMessage("Pressemappe"),
     "recoveryShips": MessageLookupByLibrary.simpleMessage("Bergungsschiffe"),
     "reddit": MessageLookupByLibrary.simpleMessage("Reddit"),
+    "retiredStatus": MessageLookupByLibrary.simpleMessage("Außer Dienst"),
     "reused": MessageLookupByLibrary.simpleMessage("Wiederverwendet"),
     "rocket": m6,
     "rocketBlock": MessageLookupByLibrary.simpleMessage("Block"),
@@ -171,11 +175,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "rocketTitle": MessageLookupByLibrary.simpleMessage("Rakete"),
     "rocketType": MessageLookupByLibrary.simpleMessage("Typ"),
     "rocketsTab": MessageLookupByLibrary.simpleMessage("Raketen"),
+    "rocketsTitle": MessageLookupByLibrary.simpleMessage("Raketen"),
     "settingsTitle": MessageLookupByLibrary.simpleMessage("Einstellungen"),
     "siteIdLabel": MessageLookupByLibrary.simpleMessage("Standort-ID:"),
     "staticFireTest": MessageLookupByLibrary.simpleMessage(
       "Statischer Feuertest",
     ),
+    "successRate": m7,
     "systemThemeTitle": MessageLookupByLibrary.simpleMessage("Systemdesign"),
     "tabHome": MessageLookupByLibrary.simpleMessage("Startseite"),
     "tabSettings": MessageLookupByLibrary.simpleMessage("Einstellungen"),

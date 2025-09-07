@@ -943,6 +943,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Active`
+  String get activeStatus {
+    return Intl.message(
+      'Active',
+      name: 'activeStatus',
+      desc: 'Label for active rocket',
+      args: [],
+    );
+  }
+
+  /// `Retired`
+  String get retiredStatus {
+    return Intl.message(
+      'Retired',
+      name: 'retiredStatus',
+      desc: 'Label for retired rocket',
+      args: [],
+    );
+  }
+
+  /// `{percentage}% success`
+  String successRate(Object percentage) {
+    return Intl.message(
+      '$percentage% success',
+      name: 'successRate',
+      desc: 'Label for rocket success rate with percentage',
+      args: [percentage],
+    );
+  }
+
+  /// `Rockets`
+  String get rocketsTitle {
+    return Intl.message(
+      'Rockets',
+      name: 'rocketsTitle',
+      desc: 'The title of the Rockets screen',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

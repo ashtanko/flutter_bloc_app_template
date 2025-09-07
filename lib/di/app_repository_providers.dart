@@ -1,6 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_app_template/repository/email_list_repository.dart';
 import 'package:flutter_bloc_app_template/repository/launches_repository.dart';
+import 'package:flutter_bloc_app_template/repository/rocket_repository.dart';
 import 'package:flutter_bloc_app_template/routes/router.dart';
 import 'package:provider/single_child_widget.dart' show SingleChildWidget;
 
@@ -17,6 +18,9 @@ abstract class AppRepositoryProviders {
       ),
       RepositoryProvider<LaunchesRepository>(
         create: (context) => diContainer.get<LaunchesRepository>(),
+      ),
+      RepositoryProvider<RocketRepository>(
+        create: (context) => diContainer.get<RocketRepository>(),
       ),
     ];
   }

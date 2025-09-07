@@ -197,5 +197,21 @@
   "rocketsTab": "Raketen",
   "@rocketsTab": {
     "description": "Titel des Raketen-Tabs"
+  },
+  "activeStatus": "Aktiv",
+  "@activeStatus": {
+    "description": "Label für aktive Rakete"
+  },
+  "retiredStatus": "Außer Dienst",
+  "@retiredStatus": {
+    "description": "Label für außer Dienst gestellte Rakete"
+  },
+  "successRate": "{percentage}% Erfolg",
+  "@successRate": {
+    "description": "Label für Erfolgsrate der Rakete"
+  },
+  "rocketsTitle": "Raketen",
+  "@rocketsTitle": {
+    "description": "Titel des Raketen-Bildschirms"
   }
 }

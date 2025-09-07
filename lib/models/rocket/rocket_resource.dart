@@ -55,6 +55,58 @@ class RocketResource extends Equatable {
   final String? rocketName;
   final String? rocketType;
 
+  RocketResource copyWith({
+    int? id,
+    bool? active,
+    int? stages,
+    int? boosters,
+    int? costPerLaunch,
+    int? successRatePct,
+    String? firstFlight,
+    String? country,
+    String? company,
+    DimensionResource? height,
+    DimensionResource? diameter,
+    MassResource? mass,
+    List<PayloadWeightResource>? payloadWeights,
+    RocketFirstStageResource? firstStage,
+    RocketSecondStageResource? secondStage,
+    EnginesResource? engines,
+    LandingLegsResource? landingLegs,
+    List<String>? flickrImages,
+    String? wikipedia,
+    String? description,
+    String? rocketId,
+    String? rocketName,
+    String? rocketType,
+  }) {
+    return RocketResource(
+      id: id ?? this.id,
+      active: active ?? this.active,
+      stages: stages ?? this.stages,
+      boosters: boosters ?? this.boosters,
+      costPerLaunch: costPerLaunch ?? this.costPerLaunch,
+      successRatePct: successRatePct ?? this.successRatePct,
+      firstFlight: firstFlight ?? this.firstFlight,
+      country: country ?? this.country,
+      company: company ?? this.company,
+      height: height ?? this.height,
+      diameter: diameter ?? this.diameter,
+      mass: mass ?? this.mass,
+      payloadWeights: payloadWeights ?? this.payloadWeights,
+      firstStage: firstStage ?? this.firstStage,
+      secondStage: secondStage ?? this.secondStage,
+      engines: engines ?? this.engines,
+      landingLegs: landingLegs ?? this.landingLegs,
+      flickrImages: flickrImages ?? this.flickrImages,
+      wikipedia: wikipedia ?? this.wikipedia,
+      description: description ?? this.description,
+      rocketId: rocketId ?? this.rocketId,
+      rocketName: rocketName ?? this.rocketName,
+      rocketType: rocketType ?? this.rocketType,
+    );
+  }
+
   @override
   List<Object?> get props => [
         id,

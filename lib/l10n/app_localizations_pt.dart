@@ -299,4 +299,18 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get rocketsTab => 'Foguetes';
+
+  @override
+  String get activeStatus => 'Ativa';
+
+  @override
+  String get retiredStatus => 'Aposentada';
+
+  @override
+  String successRate(Object percentage) {
+    return '$percentage% de sucesso';
+  }
+
+  @override
+  String get rocketsTitle => 'Foguetes';
 }

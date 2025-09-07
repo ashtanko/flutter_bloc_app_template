@@ -35,12 +35,15 @@ class MessageLookup extends MessageLookupByLibrary {
   static String m6(rocketName, rocketType) =>
       "Foguete: ${rocketName} (${rocketType})";
 
+  static String m7(percentage) => "${percentage}% de sucesso";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "aboutSettingsItem": MessageLookupByLibrary.simpleMessage("About"),
     "aboutSettingsItemDescription": MessageLookupByLibrary.simpleMessage(
       "Version, links, feedback",
     ),
+    "activeStatus": MessageLookupByLibrary.simpleMessage("Ativa"),
     "allObjectivesCompleted": MessageLookupByLibrary.simpleMessage(
       "Todos os objetivos concluídos",
     ),
@@ -167,6 +170,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Navios de Recuperação",
     ),
     "reddit": MessageLookupByLibrary.simpleMessage("Reddit"),
+    "retiredStatus": MessageLookupByLibrary.simpleMessage("Aposentada"),
     "reused": MessageLookupByLibrary.simpleMessage("Reutilizado"),
     "rocket": m6,
     "rocketBlock": MessageLookupByLibrary.simpleMessage("Bloco"),
@@ -177,11 +181,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "rocketTitle": MessageLookupByLibrary.simpleMessage("Foguete"),
     "rocketType": MessageLookupByLibrary.simpleMessage("Tipo"),
     "rocketsTab": MessageLookupByLibrary.simpleMessage("Foguetes"),
+    "rocketsTitle": MessageLookupByLibrary.simpleMessage("Foguetes"),
     "settingsTitle": MessageLookupByLibrary.simpleMessage("Configurações"),
     "siteIdLabel": MessageLookupByLibrary.simpleMessage("ID do Local:"),
     "staticFireTest": MessageLookupByLibrary.simpleMessage(
       "Teste de Fogo Estático",
     ),
+    "successRate": m7,
     "systemThemeTitle": MessageLookupByLibrary.simpleMessage("Tema do Sistema"),
     "tabHome": MessageLookupByLibrary.simpleMessage("Início"),
     "tabSettings": MessageLookupByLibrary.simpleMessage("Configurações"),

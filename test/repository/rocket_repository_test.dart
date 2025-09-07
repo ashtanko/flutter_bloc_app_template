@@ -73,9 +73,9 @@ void main() {
   });
 }
 
-final mockRockets = [_getRocketResource()];
+final mockRockets = [getRocketResource()];
 
-RocketResource _getRocketResource() {
+RocketResource getRocketResource() {
   const height = DimensionResource(meters: 70, feet: 229.6);
   const diameter = DimensionResource(meters: 3.7, feet: 12);
   const mass = MassResource(kg: 549054, lb: 1207920);
@@ -139,4 +139,4 @@ RocketResource _getRocketResource() {
   );
 }
 
-final mockRocket = _getRocketResource();
+final mockRocket = getRocketResource();

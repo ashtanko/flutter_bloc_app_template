@@ -299,4 +299,18 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get rocketsTab => 'Raketen';
+
+  @override
+  String get activeStatus => 'Aktiv';
+
+  @override
+  String get retiredStatus => 'Außer Dienst';
+
+  @override
+  String successRate(Object percentage) {
+    return '$percentage% Erfolg';
+  }
+
+  @override
+  String get rocketsTitle => 'Raketen';
 }

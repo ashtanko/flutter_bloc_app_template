@@ -334,5 +334,17 @@
   "rocketsTab": "Ракети",
   "@rocketsTab": {
     "description": "Назва вкладки Ракети"
+  },
+  "activeStatus": "Активна",
+  "@activeStatus": {"description": "Позначка активної ракети"},
+
+  "retiredStatus": "Знято з експлуатації",
+  "@retiredStatus": {"description": "Позначка знятої ракети"},
+
+  "successRate": "{percentage}% успішних запусків",
+  "@successRate": {"description": "Позначка успішності ракети з відсотком"},
+  "rocketsTitle": "Ракети",
+  "@rocketsTitle": {
+    "description": "Назва екрану Ракети"
   }
 }

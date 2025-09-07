@@ -38,6 +38,8 @@ extension StringResourcesExtension on BuildContext {
 
   String get launchesTitle => l10n.launchesTitle;
 
+  String get rocketsTitle => l10n.rocketsTitle;
+
   String get tryAgainButton => l10n.tryAgainButton;
 
   String get aboutSettingsItem => l10n.aboutSettingsItem;
