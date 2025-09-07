@@ -46,7 +46,7 @@ void main() {
         id: '123',
         flightNumber: 1,
         missionName: 'Test Mission',
-        rocket: NetworkRocketModel(
+        rocket: NetworkLaunchRocketModel(
           id: 'rocket123',
           type: 'Falcon 9',
           name: 'Falcon',
@@ -62,7 +62,7 @@ void main() {
       );
 
       final json = model.toJson();
-      final rocketJson = json['rocket'] as NetworkRocketModel;
+      final rocketJson = json['rocket'] as NetworkLaunchRocketModel;
       final linksJson = json['links'] as NetworkLaunchLinksModel;
       expect(json['flight_number'], 1);
       expect(json['_id'], '123');

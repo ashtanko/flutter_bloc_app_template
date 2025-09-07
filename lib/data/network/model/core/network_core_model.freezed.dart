@@ -16,17 +16,26 @@ T _$identity<T>(T value) => value;
 mixin _$NetworkCoreModel {
   @JsonKey(name: 'core_serial')
   String? get coreSerial;
+
   int? get flight;
+
   int? get block;
+
   bool? get gridfins;
+
   bool? get legs;
+
   bool? get reused;
+
   @JsonKey(name: 'land_success')
   bool? get landSuccess;
+
   @JsonKey(name: 'landing_intent')
   bool? get landingIntent;
+
   @JsonKey(name: 'landing_type')
   String? get landingType;
+
   @JsonKey(name: 'landing_vehicle')
   String? get landingVehicle;
 
@@ -90,6 +99,7 @@ abstract mixin class $NetworkCoreModelCopyWith<$Res> {
   factory $NetworkCoreModelCopyWith(
           NetworkCoreModel value, $Res Function(NetworkCoreModel) _then) =
       _$NetworkCoreModelCopyWithImpl;
+
   @useResult
   $Res call(
       {@JsonKey(name: 'core_serial') String? coreSerial,
@@ -408,6 +418,7 @@ class _NetworkCoreModel extends NetworkCoreModel {
       @JsonKey(name: 'landing_type') this.landingType,
       @JsonKey(name: 'landing_vehicle') this.landingVehicle})
       : super._();
+
   factory _NetworkCoreModel.fromJson(Map<String, dynamic> json) =>
       _$NetworkCoreModelFromJson(json);
 
@@ -502,6 +513,7 @@ abstract mixin class _$NetworkCoreModelCopyWith<$Res>
   factory _$NetworkCoreModelCopyWith(
           _NetworkCoreModel value, $Res Function(_NetworkCoreModel) _then) =
       __$NetworkCoreModelCopyWithImpl;
+
   @override
   @useResult
   $Res call(

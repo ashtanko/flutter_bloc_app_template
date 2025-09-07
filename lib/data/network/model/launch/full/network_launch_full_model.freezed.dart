@@ -42,7 +42,7 @@ mixin _$NetworkLaunchFullModel {
   @JsonKey(name: 'launch_window')
   int? get launchWindow;
   @JsonKey(name: 'rocket')
-  NetworkRocketModel? get rocket;
+  NetworkLaunchRocketModel? get rocket;
   @JsonKey(name: 'ships')
   List<String>? get ships;
   @JsonKey(name: 'telemetry')
@@ -179,7 +179,7 @@ abstract mixin class $NetworkLaunchFullModelCopyWith<$Res> {
       @JsonKey(name: 'tentative_max_precision') String? tentativeMaxPrecision,
       @JsonKey(name: 'tbd') bool? tbd,
       @JsonKey(name: 'launch_window') int? launchWindow,
-      @JsonKey(name: 'rocket') NetworkRocketModel? rocket,
+      @JsonKey(name: 'rocket') NetworkLaunchRocketModel? rocket,
       @JsonKey(name: 'ships') List<String>? ships,
       @JsonKey(name: 'telemetry') NetworkTelemetry? telemetry,
       @JsonKey(name: 'launch_site') NetworkLaunchSite? launchSite,
@@ -194,7 +194,7 @@ abstract mixin class $NetworkLaunchFullModelCopyWith<$Res> {
       @JsonKey(name: 'static_fire_date_unix') int? staticFireDateUnix,
       NetworkTimeline? timeline});
 
-  $NetworkRocketModelCopyWith<$Res>? get rocket;
+  $NetworkLaunchRocketModelCopyWith<$Res>? get rocket;
   $NetworkTelemetryCopyWith<$Res>? get telemetry;
   $NetworkLaunchSiteCopyWith<$Res>? get launchSite;
   $NetworkLaunchFailureDetailsCopyWith<$Res>? get launchFailureDetails;
@@ -296,7 +296,7 @@ class _$NetworkLaunchFullModelCopyWithImpl<$Res>
       rocket: freezed == rocket
           ? _self.rocket
           : rocket // ignore: cast_nullable_to_non_nullable
-              as NetworkRocketModel?,
+              as NetworkLaunchRocketModel?,
       ships: freezed == ships
           ? _self.ships
           : ships // ignore: cast_nullable_to_non_nullable
@@ -344,12 +344,12 @@ class _$NetworkLaunchFullModelCopyWithImpl<$Res>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $NetworkRocketModelCopyWith<$Res>? get rocket {
+  $NetworkLaunchRocketModelCopyWith<$Res>? get rocket {
     if (_self.rocket == null) {
       return null;
     }
 
-    return $NetworkRocketModelCopyWith<$Res>(_self.rocket!, (value) {
+    return $NetworkLaunchRocketModelCopyWith<$Res>(_self.rocket!, (value) {
       return _then(_self.copyWith(rocket: value));
     });
   }
@@ -536,7 +536,7 @@ extension NetworkLaunchFullModelPatterns on NetworkLaunchFullModel {
             String? tentativeMaxPrecision,
             @JsonKey(name: 'tbd') bool? tbd,
             @JsonKey(name: 'launch_window') int? launchWindow,
-            @JsonKey(name: 'rocket') NetworkRocketModel? rocket,
+            @JsonKey(name: 'rocket') NetworkLaunchRocketModel? rocket,
             @JsonKey(name: 'ships') List<String>? ships,
             @JsonKey(name: 'telemetry') NetworkTelemetry? telemetry,
             @JsonKey(name: 'launch_site') NetworkLaunchSite? launchSite,
@@ -618,7 +618,7 @@ extension NetworkLaunchFullModelPatterns on NetworkLaunchFullModel {
             String? tentativeMaxPrecision,
             @JsonKey(name: 'tbd') bool? tbd,
             @JsonKey(name: 'launch_window') int? launchWindow,
-            @JsonKey(name: 'rocket') NetworkRocketModel? rocket,
+            @JsonKey(name: 'rocket') NetworkLaunchRocketModel? rocket,
             @JsonKey(name: 'ships') List<String>? ships,
             @JsonKey(name: 'telemetry') NetworkTelemetry? telemetry,
             @JsonKey(name: 'launch_site') NetworkLaunchSite? launchSite,
@@ -698,7 +698,7 @@ extension NetworkLaunchFullModelPatterns on NetworkLaunchFullModel {
             String? tentativeMaxPrecision,
             @JsonKey(name: 'tbd') bool? tbd,
             @JsonKey(name: 'launch_window') int? launchWindow,
-            @JsonKey(name: 'rocket') NetworkRocketModel? rocket,
+            @JsonKey(name: 'rocket') NetworkLaunchRocketModel? rocket,
             @JsonKey(name: 'ships') List<String>? ships,
             @JsonKey(name: 'telemetry') NetworkTelemetry? telemetry,
             @JsonKey(name: 'launch_site') NetworkLaunchSite? launchSite,
@@ -833,7 +833,7 @@ class _NetworkLaunchFullModel implements NetworkLaunchFullModel {
   final int? launchWindow;
   @override
   @JsonKey(name: 'rocket')
-  final NetworkRocketModel? rocket;
+  final NetworkLaunchRocketModel? rocket;
   final List<String>? _ships;
   @override
   @JsonKey(name: 'ships')
@@ -996,7 +996,7 @@ abstract mixin class _$NetworkLaunchFullModelCopyWith<$Res>
       @JsonKey(name: 'tentative_max_precision') String? tentativeMaxPrecision,
       @JsonKey(name: 'tbd') bool? tbd,
       @JsonKey(name: 'launch_window') int? launchWindow,
-      @JsonKey(name: 'rocket') NetworkRocketModel? rocket,
+      @JsonKey(name: 'rocket') NetworkLaunchRocketModel? rocket,
       @JsonKey(name: 'ships') List<String>? ships,
       @JsonKey(name: 'telemetry') NetworkTelemetry? telemetry,
       @JsonKey(name: 'launch_site') NetworkLaunchSite? launchSite,
@@ -1012,7 +1012,7 @@ abstract mixin class _$NetworkLaunchFullModelCopyWith<$Res>
       NetworkTimeline? timeline});
 
   @override
-  $NetworkRocketModelCopyWith<$Res>? get rocket;
+  $NetworkLaunchRocketModelCopyWith<$Res>? get rocket;
   @override
   $NetworkTelemetryCopyWith<$Res>? get telemetry;
   @override
@@ -1119,7 +1119,7 @@ class __$NetworkLaunchFullModelCopyWithImpl<$Res>
       rocket: freezed == rocket
           ? _self.rocket
           : rocket // ignore: cast_nullable_to_non_nullable
-              as NetworkRocketModel?,
+              as NetworkLaunchRocketModel?,
       ships: freezed == ships
           ? _self._ships
           : ships // ignore: cast_nullable_to_non_nullable
@@ -1167,12 +1167,12 @@ class __$NetworkLaunchFullModelCopyWithImpl<$Res>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $NetworkRocketModelCopyWith<$Res>? get rocket {
+  $NetworkLaunchRocketModelCopyWith<$Res>? get rocket {
     if (_self.rocket == null) {
       return null;
     }
 
-    return $NetworkRocketModelCopyWith<$Res>(_self.rocket!, (value) {
+    return $NetworkLaunchRocketModelCopyWith<$Res>(_self.rocket!, (value) {
       return _then(_self.copyWith(rocket: value));
     });
   }

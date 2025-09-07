@@ -193,5 +193,25 @@
   "pressKit": "Kit de Imprensa",
   "launchSite": "Local de Lançamento",
   "siteIdLabel": "ID do Local:",
-  "flightNumber": "Voo #{number}"
+  "flightNumber": "Voo #{number}",
+  "rocketsTab": "Foguetes",
+  "@rocketsTab": {
+    "description": "Título da aba Foguetes"
+  },
+  "activeStatus": "Ativa",
+  "@activeStatus": {
+    "description": "Rótulo para foguete ativo"
+  },
+  "retiredStatus": "Aposentada",
+  "@retiredStatus": {
+    "description": "Rótulo para foguete inativo"
+  },
+  "successRate": "{percentage}% de sucesso",
+  "@successRate": {
+    "description": "Rótulo de taxa de sucesso do foguete"
+  },
+  "rocketsTitle": "Foguetes",
+  "@rocketsTitle": {
+    "description": "Título da tela de Foguetes"
+  }
 }

@@ -19,8 +19,7 @@ void main() {
   for (final locale in locales) {
     testWidgets(
         'displays Try Again button in $locale and triggers callback '
-            'when tapped',
-        (WidgetTester tester) async {
+        'when tapped', (WidgetTester tester) async {
       var callbackTriggered = false;
 
       await tester.pumpWidget(

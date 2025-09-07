@@ -1,11 +1,10 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_bloc_app_template/data/network/model/launch/full/network_launch_full_model.dart';
 import 'package:flutter_bloc_app_template/data/network/model/launch/network_launch_model.dart';
+import 'package:flutter_bloc_app_template/data/network/service/constants.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'launch_service.g.dart';
-
-const String baseUrl = 'https://api.spacexdata.com/v3/';
 
 @RestApi(baseUrl: baseUrl)
 abstract class LaunchService {

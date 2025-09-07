@@ -4,6 +4,7 @@ import 'package:flutter_bloc_app_template/features/launches/bloc/launches_bloc.d
 import 'package:flutter_bloc_app_template/features/launches/launches_screen.dart';
 import 'package:flutter_bloc_app_template/features/launches/widget/launch_item.dart';
 import 'package:flutter_bloc_app_template/index.dart';
+import 'package:flutter_bloc_app_template/models/launch/launch_rocket_resource.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
@@ -62,7 +63,7 @@ void main() {
                 '2021-10-01T00:00:00Z',
               ),
               launchTime: '00:00',
-              rocket: RocketResource(
+              rocket: LaunchRocketResource(
                 rocketName: 'Rocket 1',
                 rocketType: 'Type 1',
               ),
@@ -93,7 +94,7 @@ void main() {
                 '2021-10-01T00:00:00Z',
               ),
               launchTime: '00:00',
-              rocket: RocketResource(
+              rocket: LaunchRocketResource(
                 rocketName: 'Rocket 1',
                 rocketType: 'Type 1',
               ),
@@ -107,7 +108,7 @@ void main() {
                 '2021-10-01T00:00:00Z',
               ),
               launchTime: '00:00',
-              rocket: RocketResource(
+              rocket: LaunchRocketResource(
                 rocketName: 'Rocket 1',
                 rocketType: 'Type 1',
               ),

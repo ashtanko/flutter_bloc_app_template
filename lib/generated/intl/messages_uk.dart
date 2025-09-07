@@ -35,12 +35,15 @@ class MessageLookup extends MessageLookupByLibrary {
   static String m6(rocketName, rocketType) =>
       "Ракета: ${rocketName} (${rocketType})";
 
+  static String m7(percentage) => "${percentage}% успішних запусків";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "aboutSettingsItem": MessageLookupByLibrary.simpleMessage("Про додаток"),
     "aboutSettingsItemDescription": MessageLookupByLibrary.simpleMessage(
       "Версія, посилання, відгуки",
     ),
+    "activeStatus": MessageLookupByLibrary.simpleMessage("Активна"),
     "allObjectivesCompleted": MessageLookupByLibrary.simpleMessage(
       "Всі цілі досягнуті",
     ),
@@ -152,6 +155,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "pressKit": MessageLookupByLibrary.simpleMessage("Прес-кит"),
     "recoveryShips": MessageLookupByLibrary.simpleMessage("Судна порятунку"),
     "reddit": MessageLookupByLibrary.simpleMessage("Reddit"),
+    "retiredStatus": MessageLookupByLibrary.simpleMessage(
+      "Знято з експлуатації",
+    ),
     "reused": MessageLookupByLibrary.simpleMessage("Повторне використання"),
     "rocket": m6,
     "rocketBlock": MessageLookupByLibrary.simpleMessage("Блок"),
@@ -159,11 +165,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "rocketName": MessageLookupByLibrary.simpleMessage("Назва ракети"),
     "rocketTitle": MessageLookupByLibrary.simpleMessage("Ракета"),
     "rocketType": MessageLookupByLibrary.simpleMessage("Тип"),
+    "rocketsTab": MessageLookupByLibrary.simpleMessage("Ракети"),
+    "rocketsTitle": MessageLookupByLibrary.simpleMessage("Ракети"),
     "settingsTitle": MessageLookupByLibrary.simpleMessage("Налаштування"),
     "siteIdLabel": MessageLookupByLibrary.simpleMessage("ID сайту:"),
     "staticFireTest": MessageLookupByLibrary.simpleMessage(
       "Статичний вогневий тест",
     ),
+    "successRate": m7,
     "systemThemeTitle": MessageLookupByLibrary.simpleMessage("Системна тема"),
     "tabHome": MessageLookupByLibrary.simpleMessage("Головна"),
     "tabSettings": MessageLookupByLibrary.simpleMessage("Налаштування"),

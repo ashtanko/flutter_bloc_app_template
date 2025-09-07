@@ -14,7 +14,8 @@ _NetworkLaunchModel _$NetworkLaunchModelFromJson(Map<String, dynamic> json) =>
       launchDate: const TimestampSerializer().fromJson(json['launch_date_utc']),
       rocket: json['rocket'] == null
           ? null
-          : NetworkRocketModel.fromJson(json['rocket'] as Map<String, dynamic>),
+          : NetworkLaunchRocketModel.fromJson(
+              json['rocket'] as Map<String, dynamic>),
       success: json['launch_success'] as bool? ?? false,
       links: json['links'] == null
           ? null
@@ -32,30 +33,6 @@ Map<String, dynamic> _$NetworkLaunchModelToJson(_NetworkLaunchModel instance) =>
       'rocket': instance.rocket,
       'launch_success': instance.success,
       'links': instance.links,
-    };
-
-_NetworkRocketModel _$NetworkRocketModelFromJson(Map<String, dynamic> json) =>
-    _NetworkRocketModel(
-      id: json['rocket_id'] as String,
-      type: json['rocket_type'] as String?,
-      name: json['rocket_name'] as String?,
-      firstStage: json['first_stage'] == null
-          ? null
-          : NetworkFirstStageModel.fromJson(
-              json['first_stage'] as Map<String, dynamic>),
-      secondStage: json['second_stage'] == null
-          ? null
-          : NetworkSecondStageModel.fromJson(
-              json['second_stage'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$NetworkRocketModelToJson(_NetworkRocketModel instance) =>
-    <String, dynamic>{
-      'rocket_id': instance.id,
-      'rocket_type': instance.type,
-      'rocket_name': instance.name,
-      'first_stage': instance.firstStage,
-      'second_stage': instance.secondStage,
     };
 
 _NetworkLaunchLinksModel _$NetworkLaunchLinksModelFromJson(
@@ -86,4 +63,30 @@ Map<String, dynamic> _$NetworkLaunchLinksModelToJson(
       'video_link': instance.videoLink,
       'presskit': instance.presskit,
       'flickr_images': instance.flickrImages,
+    };
+
+_NetworkLaunchRocketModel _$NetworkLaunchRocketModelFromJson(
+        Map<String, dynamic> json) =>
+    _NetworkLaunchRocketModel(
+      id: json['rocket_id'] as String,
+      type: json['rocket_type'] as String?,
+      name: json['rocket_name'] as String?,
+      firstStage: json['first_stage'] == null
+          ? null
+          : NetworkFirstStageModel.fromJson(
+              json['first_stage'] as Map<String, dynamic>),
+      secondStage: json['second_stage'] == null
+          ? null
+          : NetworkSecondStageModel.fromJson(
+              json['second_stage'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$NetworkLaunchRocketModelToJson(
+        _NetworkLaunchRocketModel instance) =>
+    <String, dynamic>{
+      'rocket_id': instance.id,
+      'rocket_type': instance.type,
+      'rocket_name': instance.name,
+      'first_stage': instance.firstStage,
+      'second_stage': instance.secondStage,
     };

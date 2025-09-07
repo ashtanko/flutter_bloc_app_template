@@ -43,14 +43,16 @@ void main() {
         listenerCallCount++;
       }
 
-      environment..addListener(listenerCallback)
-      ..config = 'Updated Config';
+      environment
+        ..addListener(listenerCallback)
+        ..config = 'Updated Config';
 
       // Ensure that the listener has been notified
       expect(listenerCallCount, 1);
 
-      environment..removeListener(listenerCallback)
-      ..config = 'Another Update';
+      environment
+        ..removeListener(listenerCallback)
+        ..config = 'Another Update';
 
       // Listener should not be called after removal
       expect(listenerCallCount, 1);

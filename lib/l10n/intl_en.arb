@@ -172,7 +172,6 @@
   "@objectivesCompleted": {
     "description": "Subtitle for mission success item"
   },
-
   "missionSuccessful": "Mission Successful",
   "@missionSuccessful": {
     "description": "Displayed when the mission has succeeded"
@@ -331,5 +330,25 @@
     "placeholders": {
       "number": {}
     }
+  },
+  "rocketsTab": "Rockets",
+  "@rocketsTab": {
+    "description": "The title of the Rockets tab"
+  },
+  "activeStatus": "Active",
+  "@activeStatus": {
+    "description": "Label for active rocket"
+  },
+  "retiredStatus": "Retired",
+  "@retiredStatus": {
+    "description": "Label for retired rocket"
+  },
+  "successRate": "{percentage}% success",
+  "@successRate": {
+    "description": "Label for rocket success rate with percentage"
+  },
+  "rocketsTitle": "Rockets",
+  "@rocketsTitle": {
+    "description": "The title of the Rockets screen"
   }
 }

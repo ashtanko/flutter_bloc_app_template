@@ -1,7 +1,7 @@
 import 'package:flutter_bloc_app_template/data/network/api_result.dart';
 import 'package:flutter_bloc_app_template/data/network/model/launch/full/network_launch_full_model.dart';
 import 'package:flutter_bloc_app_template/data/network/model/launch/network_launch_model.dart';
-import 'package:flutter_bloc_app_template/data/network/service/launch_service.dart';
+import 'package:flutter_bloc_app_template/data/network/service/launch/launch_service.dart';
 
 abstract class LaunchesDataSource {
   Future<ApiResult<List<NetworkLaunchModel>>> getLaunches({

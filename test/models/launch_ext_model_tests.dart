@@ -1,7 +1,8 @@
 import 'package:flutter_bloc_app_template/data/network/model/launch/full/network_launch_full_model.dart';
 import 'package:flutter_bloc_app_template/data/network/model/launch/network_launch_model.dart';
+import 'package:flutter_bloc_app_template/data/network/model/rocket/network_rocket_model.dart';
 import 'package:flutter_bloc_app_template/index.dart';
-import 'package:flutter_bloc_app_template/models/launch/launch_site_resource.dart';
+import 'package:flutter_bloc_app_template/models/rocket/rocket_ext.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 

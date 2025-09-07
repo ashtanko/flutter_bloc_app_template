@@ -30,11 +30,15 @@ extension StringResourcesExtension on BuildContext {
 
   String get emailsTitle => l10n.emailsTitle;
 
+  String get rocketsTab => l10n.rocketsTab;
+
   String get settingsTitle => l10n.settingsTitle;
 
   String get emptyList => l10n.emptyList;
 
   String get launchesTitle => l10n.launchesTitle;
+
+  String get rocketsTitle => l10n.rocketsTitle;
 
   String get tryAgainButton => l10n.tryAgainButton;
 

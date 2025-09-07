@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/features/launches/launches_screen.dart';
+import 'package:flutter_bloc_app_template/features/rockets/rockets_screen.dart';
 import 'package:flutter_bloc_app_template/index.dart';
 
 List<NavDestination> getDestinations(BuildContext context) {
   return [
     NavDestination(
       label: context.launchesTitle,
-      icon: const Icon(Icons.rocket_outlined),
-      selectedIcon: const Icon(Icons.rocket),
+      icon: const Icon(Icons.rocket_launch_outlined),
+      selectedIcon: const Icon(Icons.rocket_launch),
       screen: const LaunchesScreen(),
       key: const Key('launches'),
     ),
     NavDestination(
-      label: context.emailsTitle,
-      icon: const Icon(Icons.mail_outline),
-      selectedIcon: const Icon(Icons.mail),
-      screen: const EmailListScreen(),
-      key: const Key('emails'),
+      label: context.rocketsTab,
+      icon: const Icon(Icons.rocket_outlined),
+      selectedIcon: const Icon(Icons.rocket),
+      screen: const RocketsScreen(),
+      key: const Key('rockets'),
     ),
     NavDestination(
       label: context.settingsTitle,

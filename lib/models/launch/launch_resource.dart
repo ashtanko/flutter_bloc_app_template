@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter_bloc_app_template/models/launch/launch_rocket_resource.dart';
 
 import 'launch.dart';
 
@@ -21,7 +22,7 @@ class LaunchResource extends Equatable {
   final String? missionName;
   final LaunchDays? launchDays;
   final String? launchTime;
-  final RocketResource? rocket;
+  final LaunchRocketResource? rocket;
   final bool? launchSuccess;
   final LinksResource? links;
 
@@ -31,7 +32,7 @@ class LaunchResource extends Equatable {
     String? missionName,
     LaunchDays? launchDays,
     String? launchTime,
-    RocketResource? rocket,
+    LaunchRocketResource? rocket,
     bool? launchSuccess,
     LinksResource? links,
   }) {

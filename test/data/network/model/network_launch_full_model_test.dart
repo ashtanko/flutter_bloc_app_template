@@ -134,7 +134,7 @@ void main() {
         tentativeMaxPrecision: 'hour',
         tbd: false,
         launchWindow: 0,
-        rocket: const NetworkRocketModel(
+        rocket: const NetworkLaunchRocketModel(
           id: 'falcon1',
           name: 'Falcon 1',
           type: 'Merlin B',
@@ -188,7 +188,7 @@ void main() {
         'https://farm9.staticflickr.com/8654/16511594820_451f194d53_o.jpg',
         'https://farm9.staticflickr.com/8603/16673054016_472fb42a20_o.jpg'
       ]);
-      expect((json['rocket'] as NetworkRocketModel).name, 'Falcon 1');
+      expect((json['rocket'] as NetworkLaunchRocketModel).name, 'Falcon 1');
     });
   });
 }

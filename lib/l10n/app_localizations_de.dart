@@ -296,4 +296,21 @@ class AppLocalizationsDe extends AppLocalizations {
   String flightNumber(Object number) {
     return 'Flug #$number';
   }
+
+  @override
+  String get rocketsTab => 'Raketen';
+
+  @override
+  String get activeStatus => 'Aktiv';
+
+  @override
+  String get retiredStatus => 'Außer Dienst';
+
+  @override
+  String successRate(Object percentage) {
+    return '$percentage% Erfolg';
+  }
+
+  @override
+  String get rocketsTitle => 'Raketen';
 }

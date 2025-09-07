@@ -2,11 +2,11 @@ import 'package:flutter_bloc_app_template/data/network/api_result.dart';
 import 'package:flutter_bloc_app_template/data/network/data_source/launches_network_data_source.dart';
 import 'package:flutter_bloc_app_template/data/network/model/launch/full/network_launch_full_model.dart';
 import 'package:flutter_bloc_app_template/data/network/model/launch/network_launch_model.dart';
-import 'package:flutter_bloc_app_template/data/network/service/launch_service.dart';
+import 'package:flutter_bloc_app_template/data/network/service/launch/launch_service.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
-import '../fixtures_reader.dart';
+import '../../fixtures_reader.dart';
 
 class MockLaunchService extends Mock implements LaunchService {}
 

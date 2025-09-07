@@ -1,13 +1,13 @@
 import 'package:flutter_bloc_app_template/data/network/model/launch/full/network_launch_full_model.dart';
 import 'package:flutter_bloc_app_template/data/network/model/launch/network_launch_model.dart';
-import 'package:flutter_bloc_app_template/models/launch/first_stage_ext.dart';
 import 'package:flutter_bloc_app_template/models/launch/launch_days.dart';
 import 'package:flutter_bloc_app_template/models/launch/launch_full_resource.dart';
 import 'package:flutter_bloc_app_template/models/launch/launch_resource.dart';
+import 'package:flutter_bloc_app_template/models/launch/launch_rocket_resource.dart';
 import 'package:flutter_bloc_app_template/models/launch/launch_site_ext.dart';
 import 'package:flutter_bloc_app_template/models/launch/links_resource.dart';
-import 'package:flutter_bloc_app_template/models/launch/rocket_resource.dart';
-import 'package:flutter_bloc_app_template/models/launch/second_stage_ext.dart';
+import 'package:flutter_bloc_app_template/models/stage/first_stage_ext.dart';
+import 'package:flutter_bloc_app_template/models/stage/second_stage_ext.dart';
 import 'package:intl/intl.dart';
 
 extension LaunchResourceX on DateTime? {
@@ -46,9 +46,9 @@ extension LinksResourceExtension on NetworkLaunchLinksModel {
   }
 }
 
-extension RocketResourceExtension on NetworkRocketModel {
-  RocketResource toResource() {
-    return RocketResource(
+extension RocketResourceExtension on NetworkLaunchRocketModel {
+  LaunchRocketResource toResource() {
+    return LaunchRocketResource(
       rocketName: name,
       rocketType: type,
       firstStage: firstStage?.toResource(),

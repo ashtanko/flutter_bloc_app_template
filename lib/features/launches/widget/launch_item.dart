@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/index.dart';
+import 'package:flutter_bloc_app_template/models/launch/launch_rocket_resource.dart';
 
 class LaunchItem extends StatelessWidget {
   const LaunchItem({
@@ -112,7 +113,7 @@ class LaunchTopRow extends StatelessWidget {
 class RocketLabelWidget extends StatelessWidget {
   const RocketLabelWidget({super.key, required this.rocket});
 
-  final RocketResource? rocket;
+  final LaunchRocketResource? rocket;
 
   @override
   Widget build(BuildContext context) {

@@ -298,4 +298,21 @@ class AppLocalizationsUk extends AppLocalizations {
   String flightNumber(Object number) {
     return 'Політ #$number';
   }
+
+  @override
+  String get rocketsTab => 'Ракети';
+
+  @override
+  String get activeStatus => 'Активна';
+
+  @override
+  String get retiredStatus => 'Знято з експлуатації';
+
+  @override
+  String successRate(Object percentage) {
+    return '$percentage% успішних запусків';
+  }
+
+  @override
+  String get rocketsTitle => 'Ракети';
 }
