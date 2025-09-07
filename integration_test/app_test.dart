@@ -15,7 +15,7 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('Launches'), findsAtLeast(1));
-    expect(find.text('Emails'), findsOneWidget);
+    expect(find.text('Rockets'), findsOneWidget);
     expect(find.text('Settings'), findsOneWidget);
 
     expect(find.textContaining('Mission'), findsAtLeast(1));
