@@ -16,23 +16,17 @@ T _$identity<T>(T value) => value;
 mixin _$NetworkLaunchModel {
   @JsonKey(name: '_id')
   String? get id;
-
   @JsonKey(name: 'flight_number')
   int? get flightNumber;
-
   @JsonKey(name: 'mission_name')
   String? get missionName;
-
   @TimestampSerializer()
   @JsonKey(name: 'launch_date_utc')
   DateTime? get launchDate;
-
   @JsonKey(name: 'rocket')
   NetworkLaunchRocketModel? get rocket;
-
   @JsonKey(name: 'launch_success')
   bool get success;
-
   @JsonKey(name: 'links')
   NetworkLaunchLinksModel? get links;
 
@@ -80,7 +74,6 @@ abstract mixin class $NetworkLaunchModelCopyWith<$Res> {
   factory $NetworkLaunchModelCopyWith(
           NetworkLaunchModel value, $Res Function(NetworkLaunchModel) _then) =
       _$NetworkLaunchModelCopyWithImpl;
-
   @useResult
   $Res call(
       {@JsonKey(name: '_id') String? id,
@@ -94,7 +87,6 @@ abstract mixin class $NetworkLaunchModelCopyWith<$Res> {
       @JsonKey(name: 'links') NetworkLaunchLinksModel? links});
 
   $NetworkLaunchRocketModelCopyWith<$Res>? get rocket;
-
   $NetworkLaunchLinksModelCopyWith<$Res>? get links;
 }
 
@@ -382,7 +374,6 @@ class _NetworkLaunchModel extends NetworkLaunchModel {
       @JsonKey(name: 'launch_success') this.success = false,
       @JsonKey(name: 'links') this.links})
       : super._();
-
   factory _NetworkLaunchModel.fromJson(Map<String, dynamic> json) =>
       _$NetworkLaunchModelFromJson(json);
 
@@ -458,7 +449,6 @@ abstract mixin class _$NetworkLaunchModelCopyWith<$Res>
   factory _$NetworkLaunchModelCopyWith(
           _NetworkLaunchModel value, $Res Function(_NetworkLaunchModel) _then) =
       __$NetworkLaunchModelCopyWithImpl;
-
   @override
   @useResult
   $Res call(
@@ -474,7 +464,6 @@ abstract mixin class _$NetworkLaunchModelCopyWith<$Res>
 
   @override
   $NetworkLaunchRocketModelCopyWith<$Res>? get rocket;
-
   @override
   $NetworkLaunchLinksModelCopyWith<$Res>? get links;
 }
@@ -565,28 +554,20 @@ class __$NetworkLaunchModelCopyWithImpl<$Res>
 mixin _$NetworkLaunchLinksModel {
   @JsonKey(name: 'mission_patch')
   String? get missionPatch;
-
   @JsonKey(name: 'mission_patch_small')
   String? get missionPatchSmall;
-
   @JsonKey(name: 'article_link')
   String? get articleLink;
-
   @JsonKey(name: 'wikipedia')
   String? get wikipedia;
-
   @JsonKey(name: 'youtube_id')
   String? get youtubeId;
-
   @JsonKey(name: 'reddit_launch')
   String? get redditLaunch;
-
   @JsonKey(name: 'video_link')
   String? get videoLink;
-
   @JsonKey(name: 'presskit')
   String? get presskit;
-
   @JsonKey(name: 'flickr_images')
   List<String>? get flickrImages;
 
@@ -651,7 +632,6 @@ abstract mixin class $NetworkLaunchLinksModelCopyWith<$Res> {
   factory $NetworkLaunchLinksModelCopyWith(NetworkLaunchLinksModel value,
           $Res Function(NetworkLaunchLinksModel) _then) =
       _$NetworkLaunchLinksModelCopyWithImpl;
-
   @useResult
   $Res call(
       {@JsonKey(name: 'mission_patch') String? missionPatch,
@@ -958,7 +938,6 @@ class _NetworkLaunchLinksModel extends NetworkLaunchLinksModel {
       @JsonKey(name: 'flickr_images') final List<String>? flickrImages})
       : _flickrImages = flickrImages,
         super._();
-
   factory _NetworkLaunchLinksModel.fromJson(Map<String, dynamic> json) =>
       _$NetworkLaunchLinksModelFromJson(json);
 
@@ -987,7 +966,6 @@ class _NetworkLaunchLinksModel extends NetworkLaunchLinksModel {
   @JsonKey(name: 'presskit')
   final String? presskit;
   final List<String>? _flickrImages;
-
   @override
   @JsonKey(name: 'flickr_images')
   List<String>? get flickrImages {
@@ -1065,7 +1043,6 @@ abstract mixin class _$NetworkLaunchLinksModelCopyWith<$Res>
   factory _$NetworkLaunchLinksModelCopyWith(_NetworkLaunchLinksModel value,
           $Res Function(_NetworkLaunchLinksModel) _then) =
       __$NetworkLaunchLinksModelCopyWithImpl;
-
   @override
   @useResult
   $Res call(
@@ -1148,16 +1125,12 @@ class __$NetworkLaunchLinksModelCopyWithImpl<$Res>
 mixin _$NetworkLaunchRocketModel {
   @JsonKey(name: 'rocket_id')
   String get id;
-
   @JsonKey(name: 'rocket_type')
   String? get type;
-
   @JsonKey(name: 'rocket_name')
   String? get name;
-
   @JsonKey(name: 'first_stage')
   NetworkFirstStageModel? get firstStage;
-
   @JsonKey(name: 'second_stage')
   NetworkSecondStageModel? get secondStage;
 
@@ -1202,7 +1175,6 @@ abstract mixin class $NetworkLaunchRocketModelCopyWith<$Res> {
   factory $NetworkLaunchRocketModelCopyWith(NetworkLaunchRocketModel value,
           $Res Function(NetworkLaunchRocketModel) _then) =
       _$NetworkLaunchRocketModelCopyWithImpl;
-
   @useResult
   $Res call(
       {@JsonKey(name: 'rocket_id') String id,
@@ -1212,7 +1184,6 @@ abstract mixin class $NetworkLaunchRocketModelCopyWith<$Res> {
       @JsonKey(name: 'second_stage') NetworkSecondStageModel? secondStage});
 
   $NetworkFirstStageModelCopyWith<$Res>? get firstStage;
-
   $NetworkSecondStageModelCopyWith<$Res>? get secondStage;
 }
 
@@ -1478,7 +1449,6 @@ class _NetworkLaunchRocketModel extends NetworkLaunchRocketModel {
       @JsonKey(name: 'first_stage') this.firstStage,
       @JsonKey(name: 'second_stage') this.secondStage})
       : super._();
-
   factory _NetworkLaunchRocketModel.fromJson(Map<String, dynamic> json) =>
       _$NetworkLaunchRocketModelFromJson(json);
 
@@ -1545,7 +1515,6 @@ abstract mixin class _$NetworkLaunchRocketModelCopyWith<$Res>
   factory _$NetworkLaunchRocketModelCopyWith(_NetworkLaunchRocketModel value,
           $Res Function(_NetworkLaunchRocketModel) _then) =
       __$NetworkLaunchRocketModelCopyWithImpl;
-
   @override
   @useResult
   $Res call(
@@ -1557,7 +1526,6 @@ abstract mixin class _$NetworkLaunchRocketModelCopyWith<$Res>
 
   @override
   $NetworkFirstStageModelCopyWith<$Res>? get firstStage;
-
   @override
   $NetworkSecondStageModelCopyWith<$Res>? get secondStage;
 }

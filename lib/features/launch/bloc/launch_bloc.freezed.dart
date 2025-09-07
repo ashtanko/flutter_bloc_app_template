@@ -46,7 +46,6 @@ abstract mixin class $LaunchEventCopyWith<$Res> {
   factory $LaunchEventCopyWith(
           LaunchEvent value, $Res Function(LaunchEvent) _then) =
       _$LaunchEventCopyWithImpl;
-
   @useResult
   $Res call({int flightNumber});
 }

@@ -16,58 +16,36 @@ T _$identity<T>(T value) => value;
 mixin _$NetworkRocketModel {
   @JsonKey(name: 'rocket_id')
   String get rocketId;
-
   int? get id;
-
   bool? get active;
-
   int? get stages;
-
   int? get boosters;
-
   @JsonKey(name: 'cost_per_launch')
   int? get costPerLaunch;
-
   @JsonKey(name: 'success_rate_pct')
   int? get successRatePct;
-
   @JsonKey(name: 'first_flight')
   String? get firstFlight;
-
   String? get country;
-
   String? get company;
-
   NetworkDimension? get height;
-
   NetworkDimension? get diameter;
-
   NetworkMass? get mass;
-
   @JsonKey(name: 'payload_weights')
   List<NetworkPayloadWeight>? get payloadWeights;
-
   NetworkEngines? get engines;
-
   String? get wikipedia;
-
   String? get description;
-
   @JsonKey(name: 'landing_legs')
   NetworkLandingLegs? get landingLegs;
-
   @JsonKey(name: 'flickr_images')
   List<String>? get flickrImages;
-
   @JsonKey(name: 'rocket_type')
   String? get type;
-
   @JsonKey(name: 'rocket_name')
   String? get name;
-
   @JsonKey(name: 'first_stage')
   NetworkRocketFirstStageModel? get firstStage;
-
   @JsonKey(name: 'second_stage')
   NetworkRocketSecondStageModel? get secondStage;
 
@@ -165,7 +143,6 @@ abstract mixin class $NetworkRocketModelCopyWith<$Res> {
   factory $NetworkRocketModelCopyWith(
           NetworkRocketModel value, $Res Function(NetworkRocketModel) _then) =
       _$NetworkRocketModelCopyWithImpl;
-
   @useResult
   $Res call(
       {@JsonKey(name: 'rocket_id') String rocketId,
@@ -195,17 +172,11 @@ abstract mixin class $NetworkRocketModelCopyWith<$Res> {
       NetworkRocketSecondStageModel? secondStage});
 
   $NetworkDimensionCopyWith<$Res>? get height;
-
   $NetworkDimensionCopyWith<$Res>? get diameter;
-
   $NetworkMassCopyWith<$Res>? get mass;
-
   $NetworkEnginesCopyWith<$Res>? get engines;
-
   $NetworkLandingLegsCopyWith<$Res>? get landingLegs;
-
   $NetworkRocketFirstStageModelCopyWith<$Res>? get firstStage;
-
   $NetworkRocketSecondStageModelCopyWith<$Res>? get secondStage;
 }
 
@@ -781,7 +752,6 @@ class _NetworkRocketModel extends NetworkRocketModel {
       : _payloadWeights = payloadWeights,
         _flickrImages = flickrImages,
         super._();
-
   factory _NetworkRocketModel.fromJson(Map<String, dynamic> json) =>
       _$NetworkRocketModelFromJson(json);
 
@@ -816,7 +786,6 @@ class _NetworkRocketModel extends NetworkRocketModel {
   @override
   final NetworkMass? mass;
   final List<NetworkPayloadWeight>? _payloadWeights;
-
   @override
   @JsonKey(name: 'payload_weights')
   List<NetworkPayloadWeight>? get payloadWeights {
@@ -837,7 +806,6 @@ class _NetworkRocketModel extends NetworkRocketModel {
   @JsonKey(name: 'landing_legs')
   final NetworkLandingLegs? landingLegs;
   final List<String>? _flickrImages;
-
   @override
   @JsonKey(name: 'flickr_images')
   List<String>? get flickrImages {
@@ -960,7 +928,6 @@ abstract mixin class _$NetworkRocketModelCopyWith<$Res>
   factory _$NetworkRocketModelCopyWith(
           _NetworkRocketModel value, $Res Function(_NetworkRocketModel) _then) =
       __$NetworkRocketModelCopyWithImpl;
-
   @override
   @useResult
   $Res call(
@@ -992,22 +959,16 @@ abstract mixin class _$NetworkRocketModelCopyWith<$Res>
 
   @override
   $NetworkDimensionCopyWith<$Res>? get height;
-
   @override
   $NetworkDimensionCopyWith<$Res>? get diameter;
-
   @override
   $NetworkMassCopyWith<$Res>? get mass;
-
   @override
   $NetworkEnginesCopyWith<$Res>? get engines;
-
   @override
   $NetworkLandingLegsCopyWith<$Res>? get landingLegs;
-
   @override
   $NetworkRocketFirstStageModelCopyWith<$Res>? get firstStage;
-
   @override
   $NetworkRocketSecondStageModelCopyWith<$Res>? get secondStage;
 }
@@ -1249,18 +1210,13 @@ class __$NetworkRocketModelCopyWithImpl<$Res>
 /// @nodoc
 mixin _$NetworkRocketFirstStageModel {
   bool? get reusable;
-
   int? get engines;
-
   @JsonKey(name: 'fuel_amount_tons')
   double? get fuelAmountTons;
-
   @JsonKey(name: 'burn_time_sec')
   int? get burnTimeSec;
-
   @JsonKey(name: 'thrust_sea_level')
   NetworkThrust? get thrustSeaLevel;
-
   @JsonKey(name: 'thrust_vacuum')
   NetworkThrust? get thrustVacuum;
 
@@ -1311,7 +1267,6 @@ abstract mixin class $NetworkRocketFirstStageModelCopyWith<$Res> {
           NetworkRocketFirstStageModel value,
           $Res Function(NetworkRocketFirstStageModel) _then) =
       _$NetworkRocketFirstStageModelCopyWithImpl;
-
   @useResult
   $Res call(
       {bool? reusable,
@@ -1322,7 +1277,6 @@ abstract mixin class $NetworkRocketFirstStageModelCopyWith<$Res> {
       @JsonKey(name: 'thrust_vacuum') NetworkThrust? thrustVacuum});
 
   $NetworkThrustCopyWith<$Res>? get thrustSeaLevel;
-
   $NetworkThrustCopyWith<$Res>? get thrustVacuum;
 }
 
@@ -1594,7 +1548,6 @@ class _NetworkRocketFirstStageModel implements NetworkRocketFirstStageModel {
       @JsonKey(name: 'burn_time_sec') this.burnTimeSec,
       @JsonKey(name: 'thrust_sea_level') this.thrustSeaLevel,
       @JsonKey(name: 'thrust_vacuum') this.thrustVacuum});
-
   factory _NetworkRocketFirstStageModel.fromJson(Map<String, dynamic> json) =>
       _$NetworkRocketFirstStageModelFromJson(json);
 
@@ -1667,7 +1620,6 @@ abstract mixin class _$NetworkRocketFirstStageModelCopyWith<$Res>
           _NetworkRocketFirstStageModel value,
           $Res Function(_NetworkRocketFirstStageModel) _then) =
       __$NetworkRocketFirstStageModelCopyWithImpl;
-
   @override
   @useResult
   $Res call(
@@ -1680,7 +1632,6 @@ abstract mixin class _$NetworkRocketFirstStageModelCopyWith<$Res>
 
   @override
   $NetworkThrustCopyWith<$Res>? get thrustSeaLevel;
-
   @override
   $NetworkThrustCopyWith<$Res>? get thrustVacuum;
 }
@@ -1765,17 +1716,12 @@ class __$NetworkRocketFirstStageModelCopyWithImpl<$Res>
 /// @nodoc
 mixin _$NetworkRocketSecondStageModel {
   bool? get reusable;
-
   int? get engines;
-
   @JsonKey(name: 'fuel_amount_tons')
   double? get fuelAmountTons;
-
   @JsonKey(name: 'burn_time_sec')
   int? get burnTimeSec;
-
   NetworkThrust? get thrust;
-
   NetworkRocketPayloadsModel? get payloads;
 
   /// Create a copy of NetworkRocketSecondStageModel
@@ -1824,7 +1770,6 @@ abstract mixin class $NetworkRocketSecondStageModelCopyWith<$Res> {
           NetworkRocketSecondStageModel value,
           $Res Function(NetworkRocketSecondStageModel) _then) =
       _$NetworkRocketSecondStageModelCopyWithImpl;
-
   @useResult
   $Res call(
       {bool? reusable,
@@ -1835,7 +1780,6 @@ abstract mixin class $NetworkRocketSecondStageModelCopyWith<$Res> {
       NetworkRocketPayloadsModel? payloads});
 
   $NetworkThrustCopyWith<$Res>? get thrust;
-
   $NetworkRocketPayloadsModelCopyWith<$Res>? get payloads;
 }
 
@@ -2108,7 +2052,6 @@ class _NetworkRocketSecondStageModel implements NetworkRocketSecondStageModel {
       @JsonKey(name: 'burn_time_sec') this.burnTimeSec,
       this.thrust,
       this.payloads});
-
   factory _NetworkRocketSecondStageModel.fromJson(Map<String, dynamic> json) =>
       _$NetworkRocketSecondStageModelFromJson(json);
 
@@ -2178,7 +2121,6 @@ abstract mixin class _$NetworkRocketSecondStageModelCopyWith<$Res>
           _NetworkRocketSecondStageModel value,
           $Res Function(_NetworkRocketSecondStageModel) _then) =
       __$NetworkRocketSecondStageModelCopyWithImpl;
-
   @override
   @useResult
   $Res call(
@@ -2191,7 +2133,6 @@ abstract mixin class _$NetworkRocketSecondStageModelCopyWith<$Res>
 
   @override
   $NetworkThrustCopyWith<$Res>? get thrust;
-
   @override
   $NetworkRocketPayloadsModelCopyWith<$Res>? get payloads;
 }
@@ -2276,7 +2217,6 @@ class __$NetworkRocketSecondStageModelCopyWithImpl<$Res>
 /// @nodoc
 mixin _$NetworkRocketPayloadsModel {
   String? get option_1;
-
   @JsonKey(name: 'composite_fairing')
   NetworkCompositeFairing? get compositeFairing;
 
@@ -2318,7 +2258,6 @@ abstract mixin class $NetworkRocketPayloadsModelCopyWith<$Res> {
   factory $NetworkRocketPayloadsModelCopyWith(NetworkRocketPayloadsModel value,
           $Res Function(NetworkRocketPayloadsModel) _then) =
       _$NetworkRocketPayloadsModelCopyWithImpl;
-
   @useResult
   $Res call(
       {String? option_1,
@@ -2547,7 +2486,6 @@ class _NetworkRocketPayloadsModel implements NetworkRocketPayloadsModel {
   const _NetworkRocketPayloadsModel(
       {this.option_1,
       @JsonKey(name: 'composite_fairing') this.compositeFairing});
-
   factory _NetworkRocketPayloadsModel.fromJson(Map<String, dynamic> json) =>
       _$NetworkRocketPayloadsModelFromJson(json);
 
@@ -2601,7 +2539,6 @@ abstract mixin class _$NetworkRocketPayloadsModelCopyWith<$Res>
           _NetworkRocketPayloadsModel value,
           $Res Function(_NetworkRocketPayloadsModel) _then) =
       __$NetworkRocketPayloadsModelCopyWithImpl;
-
   @override
   @useResult
   $Res call(
@@ -2660,7 +2597,6 @@ class __$NetworkRocketPayloadsModelCopyWithImpl<$Res>
 /// @nodoc
 mixin _$NetworkCompositeFairing {
   NetworkDimension? get height;
-
   NetworkDimension? get diameter;
 
   /// Create a copy of NetworkCompositeFairing
@@ -2699,12 +2635,10 @@ abstract mixin class $NetworkCompositeFairingCopyWith<$Res> {
   factory $NetworkCompositeFairingCopyWith(NetworkCompositeFairing value,
           $Res Function(NetworkCompositeFairing) _then) =
       _$NetworkCompositeFairingCopyWithImpl;
-
   @useResult
   $Res call({NetworkDimension? height, NetworkDimension? diameter});
 
   $NetworkDimensionCopyWith<$Res>? get height;
-
   $NetworkDimensionCopyWith<$Res>? get diameter;
 }
 
@@ -2929,7 +2863,6 @@ extension NetworkCompositeFairingPatterns on NetworkCompositeFairing {
 @JsonSerializable()
 class _NetworkCompositeFairing implements NetworkCompositeFairing {
   const _NetworkCompositeFairing({this.height, this.diameter});
-
   factory _NetworkCompositeFairing.fromJson(Map<String, dynamic> json) =>
       _$NetworkCompositeFairingFromJson(json);
 
@@ -2980,14 +2913,12 @@ abstract mixin class _$NetworkCompositeFairingCopyWith<$Res>
   factory _$NetworkCompositeFairingCopyWith(_NetworkCompositeFairing value,
           $Res Function(_NetworkCompositeFairing) _then) =
       __$NetworkCompositeFairingCopyWithImpl;
-
   @override
   @useResult
   $Res call({NetworkDimension? height, NetworkDimension? diameter});
 
   @override
   $NetworkDimensionCopyWith<$Res>? get height;
-
   @override
   $NetworkDimensionCopyWith<$Res>? get diameter;
 }
@@ -3052,7 +2983,6 @@ class __$NetworkCompositeFairingCopyWithImpl<$Res>
 /// @nodoc
 mixin _$NetworkDimension {
   double? get meters;
-
   double? get feet;
 
   /// Create a copy of NetworkDimension
@@ -3090,7 +3020,6 @@ abstract mixin class $NetworkDimensionCopyWith<$Res> {
   factory $NetworkDimensionCopyWith(
           NetworkDimension value, $Res Function(NetworkDimension) _then) =
       _$NetworkDimensionCopyWithImpl;
-
   @useResult
   $Res call({double? meters, double? feet});
 }
@@ -3285,7 +3214,6 @@ extension NetworkDimensionPatterns on NetworkDimension {
 @JsonSerializable()
 class _NetworkDimension implements NetworkDimension {
   const _NetworkDimension({this.meters, this.feet});
-
   factory _NetworkDimension.fromJson(Map<String, dynamic> json) =>
       _$NetworkDimensionFromJson(json);
 
@@ -3334,7 +3262,6 @@ abstract mixin class _$NetworkDimensionCopyWith<$Res>
   factory _$NetworkDimensionCopyWith(
           _NetworkDimension value, $Res Function(_NetworkDimension) _then) =
       __$NetworkDimensionCopyWithImpl;
-
   @override
   @useResult
   $Res call({double? meters, double? feet});
@@ -3372,7 +3299,6 @@ class __$NetworkDimensionCopyWithImpl<$Res>
 /// @nodoc
 mixin _$NetworkMass {
   int? get kg;
-
   int? get lb;
 
   /// Create a copy of NetworkMass
@@ -3409,7 +3335,6 @@ abstract mixin class $NetworkMassCopyWith<$Res> {
   factory $NetworkMassCopyWith(
           NetworkMass value, $Res Function(NetworkMass) _then) =
       _$NetworkMassCopyWithImpl;
-
   @useResult
   $Res call({int? kg, int? lb});
 }
@@ -3603,7 +3528,6 @@ extension NetworkMassPatterns on NetworkMass {
 @JsonSerializable()
 class _NetworkMass implements NetworkMass {
   const _NetworkMass({this.kg, this.lb});
-
   factory _NetworkMass.fromJson(Map<String, dynamic> json) =>
       _$NetworkMassFromJson(json);
 
@@ -3652,7 +3576,6 @@ abstract mixin class _$NetworkMassCopyWith<$Res>
   factory _$NetworkMassCopyWith(
           _NetworkMass value, $Res Function(_NetworkMass) _then) =
       __$NetworkMassCopyWithImpl;
-
   @override
   @useResult
   $Res call({int? kg, int? lb});
@@ -3689,11 +3612,8 @@ class __$NetworkMassCopyWithImpl<$Res> implements _$NetworkMassCopyWith<$Res> {
 /// @nodoc
 mixin _$NetworkPayloadWeight {
   String? get id;
-
   String? get name;
-
   int? get kg;
-
   int? get lb;
 
   /// Create a copy of NetworkPayloadWeight
@@ -3733,7 +3653,6 @@ abstract mixin class $NetworkPayloadWeightCopyWith<$Res> {
   factory $NetworkPayloadWeightCopyWith(NetworkPayloadWeight value,
           $Res Function(NetworkPayloadWeight) _then) =
       _$NetworkPayloadWeightCopyWithImpl;
-
   @useResult
   $Res call({String? id, String? name, int? kg, int? lb});
 }
@@ -3938,7 +3857,6 @@ extension NetworkPayloadWeightPatterns on NetworkPayloadWeight {
 @JsonSerializable()
 class _NetworkPayloadWeight implements NetworkPayloadWeight {
   const _NetworkPayloadWeight({this.id, this.name, this.kg, this.lb});
-
   factory _NetworkPayloadWeight.fromJson(Map<String, dynamic> json) =>
       _$NetworkPayloadWeightFromJson(json);
 
@@ -3994,7 +3912,6 @@ abstract mixin class _$NetworkPayloadWeightCopyWith<$Res>
   factory _$NetworkPayloadWeightCopyWith(_NetworkPayloadWeight value,
           $Res Function(_NetworkPayloadWeight) _then) =
       __$NetworkPayloadWeightCopyWithImpl;
-
   @override
   @useResult
   $Res call({String? id, String? name, int? kg, int? lb});
@@ -4042,30 +3959,20 @@ class __$NetworkPayloadWeightCopyWithImpl<$Res>
 /// @nodoc
 mixin _$NetworkEngines {
   int? get number;
-
   String? get type;
-
   String? get version;
-
   String? get layout;
-
   NetworkIsp? get isp;
-
   @JsonKey(name: 'engine_loss_max')
   int? get engineLossMax;
-
   @JsonKey(name: 'propellant_1')
   String? get propellant1;
-
   @JsonKey(name: 'propellant_2')
   String? get propellant2;
-
   @JsonKey(name: 'thrust_sea_level')
   NetworkThrust? get thrustSeaLevel;
-
   @JsonKey(name: 'thrust_vacuum')
   NetworkThrust? get thrustVacuum;
-
   @JsonKey(name: 'thrust_to_weight')
   int? get thrustToWeight;
 
@@ -4131,7 +4038,6 @@ abstract mixin class $NetworkEnginesCopyWith<$Res> {
   factory $NetworkEnginesCopyWith(
           NetworkEngines value, $Res Function(NetworkEngines) _then) =
       _$NetworkEnginesCopyWithImpl;
-
   @useResult
   $Res call(
       {int? number,
@@ -4147,9 +4053,7 @@ abstract mixin class $NetworkEnginesCopyWith<$Res> {
       @JsonKey(name: 'thrust_to_weight') int? thrustToWeight});
 
   $NetworkIspCopyWith<$Res>? get isp;
-
   $NetworkThrustCopyWith<$Res>? get thrustSeaLevel;
-
   $NetworkThrustCopyWith<$Res>? get thrustVacuum;
 }
 
@@ -4510,7 +4414,6 @@ class _NetworkEngines implements NetworkEngines {
       @JsonKey(name: 'thrust_sea_level') this.thrustSeaLevel,
       @JsonKey(name: 'thrust_vacuum') this.thrustVacuum,
       @JsonKey(name: 'thrust_to_weight') this.thrustToWeight});
-
   factory _NetworkEngines.fromJson(Map<String, dynamic> json) =>
       _$NetworkEnginesFromJson(json);
 
@@ -4610,7 +4513,6 @@ abstract mixin class _$NetworkEnginesCopyWith<$Res>
   factory _$NetworkEnginesCopyWith(
           _NetworkEngines value, $Res Function(_NetworkEngines) _then) =
       __$NetworkEnginesCopyWithImpl;
-
   @override
   @useResult
   $Res call(
@@ -4628,10 +4530,8 @@ abstract mixin class _$NetworkEnginesCopyWith<$Res>
 
   @override
   $NetworkIspCopyWith<$Res>? get isp;
-
   @override
   $NetworkThrustCopyWith<$Res>? get thrustSeaLevel;
-
   @override
   $NetworkThrustCopyWith<$Res>? get thrustVacuum;
 }
@@ -4756,7 +4656,6 @@ class __$NetworkEnginesCopyWithImpl<$Res>
 mixin _$NetworkIsp {
   @JsonKey(name: 'sea_level')
   int? get seaLevel;
-
   int? get vacuum;
 
   /// Create a copy of NetworkIsp
@@ -4794,7 +4693,6 @@ abstract mixin class $NetworkIspCopyWith<$Res> {
   factory $NetworkIspCopyWith(
           NetworkIsp value, $Res Function(NetworkIsp) _then) =
       _$NetworkIspCopyWithImpl;
-
   @useResult
   $Res call({@JsonKey(name: 'sea_level') int? seaLevel, int? vacuum});
 }
@@ -4991,7 +4889,6 @@ extension NetworkIspPatterns on NetworkIsp {
 @JsonSerializable()
 class _NetworkIsp implements NetworkIsp {
   const _NetworkIsp({@JsonKey(name: 'sea_level') this.seaLevel, this.vacuum});
-
   factory _NetworkIsp.fromJson(Map<String, dynamic> json) =>
       _$NetworkIspFromJson(json);
 
@@ -5042,7 +4939,6 @@ abstract mixin class _$NetworkIspCopyWith<$Res>
   factory _$NetworkIspCopyWith(
           _NetworkIsp value, $Res Function(_NetworkIsp) _then) =
       __$NetworkIspCopyWithImpl;
-
   @override
   @useResult
   $Res call({@JsonKey(name: 'sea_level') int? seaLevel, int? vacuum});
@@ -5079,7 +4975,6 @@ class __$NetworkIspCopyWithImpl<$Res> implements _$NetworkIspCopyWith<$Res> {
 /// @nodoc
 mixin _$NetworkThrust {
   double? get kN;
-
   int? get lbf;
 
   /// Create a copy of NetworkThrust
@@ -5117,7 +5012,6 @@ abstract mixin class $NetworkThrustCopyWith<$Res> {
   factory $NetworkThrustCopyWith(
           NetworkThrust value, $Res Function(NetworkThrust) _then) =
       _$NetworkThrustCopyWithImpl;
-
   @useResult
   $Res call({double? kN, int? lbf});
 }
@@ -5312,7 +5206,6 @@ extension NetworkThrustPatterns on NetworkThrust {
 @JsonSerializable()
 class _NetworkThrust implements NetworkThrust {
   const _NetworkThrust({this.kN, this.lbf});
-
   factory _NetworkThrust.fromJson(Map<String, dynamic> json) =>
       _$NetworkThrustFromJson(json);
 
@@ -5361,7 +5254,6 @@ abstract mixin class _$NetworkThrustCopyWith<$Res>
   factory _$NetworkThrustCopyWith(
           _NetworkThrust value, $Res Function(_NetworkThrust) _then) =
       __$NetworkThrustCopyWithImpl;
-
   @override
   @useResult
   $Res call({double? kN, int? lbf});
@@ -5399,7 +5291,6 @@ class __$NetworkThrustCopyWithImpl<$Res>
 /// @nodoc
 mixin _$NetworkLandingLegs {
   int? get number;
-
   String? get material;
 
   /// Create a copy of NetworkLandingLegs
@@ -5438,7 +5329,6 @@ abstract mixin class $NetworkLandingLegsCopyWith<$Res> {
   factory $NetworkLandingLegsCopyWith(
           NetworkLandingLegs value, $Res Function(NetworkLandingLegs) _then) =
       _$NetworkLandingLegsCopyWithImpl;
-
   @useResult
   $Res call({int? number, String? material});
 }
@@ -5633,7 +5523,6 @@ extension NetworkLandingLegsPatterns on NetworkLandingLegs {
 @JsonSerializable()
 class _NetworkLandingLegs implements NetworkLandingLegs {
   const _NetworkLandingLegs({this.number, this.material});
-
   factory _NetworkLandingLegs.fromJson(Map<String, dynamic> json) =>
       _$NetworkLandingLegsFromJson(json);
 
@@ -5683,7 +5572,6 @@ abstract mixin class _$NetworkLandingLegsCopyWith<$Res>
   factory _$NetworkLandingLegsCopyWith(
           _NetworkLandingLegs value, $Res Function(_NetworkLandingLegs) _then) =
       __$NetworkLandingLegsCopyWithImpl;
-
   @override
   @useResult
   $Res call({int? number, String? material});
