@@ -677,6 +677,96 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Rockets'**
   String get rocketsTitle;
+
+  /// No description provided for @overview.
+  ///
+  /// In en, this message translates to:
+  /// **'Overview'**
+  String get overview;
+
+  /// No description provided for @specifications.
+  ///
+  /// In en, this message translates to:
+  /// **'Specifications'**
+  String get specifications;
+
+  /// No description provided for @payloadCapacity.
+  ///
+  /// In en, this message translates to:
+  /// **'Payload Capacity'**
+  String get payloadCapacity;
+
+  /// No description provided for @engineDetails.
+  ///
+  /// In en, this message translates to:
+  /// **'Engine Details'**
+  String get engineDetails;
+
+  /// No description provided for @heightLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Height'**
+  String get heightLabel;
+
+  /// No description provided for @diameterLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Diameter'**
+  String get diameterLabel;
+
+  /// No description provided for @massLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Mass'**
+  String get massLabel;
+
+  /// No description provided for @stagesLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Stages'**
+  String get stagesLabel;
+
+  /// No description provided for @typeLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Type'**
+  String get typeLabel;
+
+  /// No description provided for @versionLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Version'**
+  String get versionLabel;
+
+  /// No description provided for @numberLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Number'**
+  String get numberLabel;
+
+  /// No description provided for @propellant1Label.
+  ///
+  /// In en, this message translates to:
+  /// **'Propellant 1'**
+  String get propellant1Label;
+
+  /// No description provided for @propellant2Label.
+  ///
+  /// In en, this message translates to:
+  /// **'Propellant 2'**
+  String get propellant2Label;
+
+  /// No description provided for @thrustSeaLevelLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Thrust (Sea Level)'**
+  String get thrustSeaLevelLabel;
+
+  /// No description provided for @tons.
+  ///
+  /// In en, this message translates to:
+  /// **'tons'**
+  String get tons;
 }
 
 class _AppLocalizationsDelegate

@@ -313,4 +313,49 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get rocketsTitle => 'Rockets';
+
+  @override
+  String get overview => 'Overview';
+
+  @override
+  String get specifications => 'Specifications';
+
+  @override
+  String get payloadCapacity => 'Payload Capacity';
+
+  @override
+  String get engineDetails => 'Engine Details';
+
+  @override
+  String get heightLabel => 'Height';
+
+  @override
+  String get diameterLabel => 'Diameter';
+
+  @override
+  String get massLabel => 'Mass';
+
+  @override
+  String get stagesLabel => 'Stages';
+
+  @override
+  String get typeLabel => 'Type';
+
+  @override
+  String get versionLabel => 'Version';
+
+  @override
+  String get numberLabel => 'Number';
+
+  @override
+  String get propellant1Label => 'Propellant 1';
+
+  @override
+  String get propellant2Label => 'Propellant 2';
+
+  @override
+  String get thrustSeaLevelLabel => 'Thrust (Sea Level)';
+
+  @override
+  String get tons => 'tons';
 }

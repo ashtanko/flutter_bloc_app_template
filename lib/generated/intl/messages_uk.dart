@@ -80,6 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "darkThemeTitle": MessageLookupByLibrary.simpleMessage("Темна тема"),
     "daysFromTodayTitle": m0,
     "daysSinceTodayTitle": m1,
+    "diameterLabel": MessageLookupByLibrary.simpleMessage("Діаметр"),
     "disabledButtonTitle": MessageLookupByLibrary.simpleMessage("Вимкнено"),
     "disabledRoundedButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Вимкнено (кругла)",
@@ -96,6 +97,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "emailsTitle": MessageLookupByLibrary.simpleMessage("Електронні листи"),
     "emptyList": MessageLookupByLibrary.simpleMessage("Список порожній"),
     "enabledButtonTitle": MessageLookupByLibrary.simpleMessage("Увімкнено"),
+    "engineDetails": MessageLookupByLibrary.simpleMessage("Деталі двигуна"),
     "error": MessageLookupByLibrary.simpleMessage("Помилка"),
     "experimentalThemeTitle": MessageLookupByLibrary.simpleMessage(
       "Експериментальна тема",
@@ -104,6 +106,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "flight": MessageLookupByLibrary.simpleMessage("Політ"),
     "flightNumber": m2,
     "gridFins": MessageLookupByLibrary.simpleMessage("Сітчасті кермові"),
+    "heightLabel": MessageLookupByLibrary.simpleMessage("Висота"),
     "iconAndPaddingButtonTitle": MessageLookupByLibrary.simpleMessage(
       "З іконкою та відступом",
     ),
@@ -131,6 +134,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "manufacturer": MessageLookupByLibrary.simpleMessage("Виробник"),
     "mass": MessageLookupByLibrary.simpleMessage("Маса"),
+    "massLabel": MessageLookupByLibrary.simpleMessage("Маса"),
     "missionFailed": MessageLookupByLibrary.simpleMessage("Місія не вдалася"),
     "missionOverview": MessageLookupByLibrary.simpleMessage("Огляд місії"),
     "missionSuccess": MessageLookupByLibrary.simpleMessage("Місія успішна"),
@@ -141,6 +145,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "newsScreen": MessageLookupByLibrary.simpleMessage("Новини"),
     "noDetails": MessageLookupByLibrary.simpleMessage("Деталі відсутні"),
     "notAvailable": MessageLookupByLibrary.simpleMessage("Н/Д"),
+    "numberLabel": MessageLookupByLibrary.simpleMessage("Кількість"),
     "objectivesCompleted": MessageLookupByLibrary.simpleMessage(
       "Цілі досягнуті",
     ),
@@ -148,11 +153,17 @@ class MessageLookup extends MessageLookupByLibrary {
       "Цілі місії не досягнуті",
     ),
     "orbit": MessageLookupByLibrary.simpleMessage("Орбіта"),
+    "overview": MessageLookupByLibrary.simpleMessage("Огляд"),
     "payload": MessageLookupByLibrary.simpleMessage("Корисне навантаження"),
+    "payloadCapacity": MessageLookupByLibrary.simpleMessage(
+      "Корисне навантаження",
+    ),
     "payloadTitle": MessageLookupByLibrary.simpleMessage(
       "Корисне навантаження",
     ),
     "pressKit": MessageLookupByLibrary.simpleMessage("Прес-кит"),
+    "propellant1Label": MessageLookupByLibrary.simpleMessage("Паливо 1"),
+    "propellant2Label": MessageLookupByLibrary.simpleMessage("Паливо 2"),
     "recoveryShips": MessageLookupByLibrary.simpleMessage("Судна порятунку"),
     "reddit": MessageLookupByLibrary.simpleMessage("Reddit"),
     "retiredStatus": MessageLookupByLibrary.simpleMessage(
@@ -169,6 +180,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "rocketsTitle": MessageLookupByLibrary.simpleMessage("Ракети"),
     "settingsTitle": MessageLookupByLibrary.simpleMessage("Налаштування"),
     "siteIdLabel": MessageLookupByLibrary.simpleMessage("ID сайту:"),
+    "specifications": MessageLookupByLibrary.simpleMessage(
+      "Технічні характеристики",
+    ),
+    "stagesLabel": MessageLookupByLibrary.simpleMessage("Стадії"),
     "staticFireTest": MessageLookupByLibrary.simpleMessage(
       "Статичний вогневий тест",
     ),
@@ -177,9 +192,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "tabHome": MessageLookupByLibrary.simpleMessage("Головна"),
     "tabSettings": MessageLookupByLibrary.simpleMessage("Налаштування"),
     "themeTitle": MessageLookupByLibrary.simpleMessage("Тема"),
+    "thrustSeaLevelLabel": MessageLookupByLibrary.simpleMessage(
+      "Тяга (на рівні моря)",
+    ),
+    "tons": MessageLookupByLibrary.simpleMessage("тонн"),
     "transparentButtonTitle": MessageLookupByLibrary.simpleMessage("Прозора"),
     "tryAgainButton": MessageLookupByLibrary.simpleMessage("Спробувати ще раз"),
     "type": MessageLookupByLibrary.simpleMessage("Тип"),
+    "typeLabel": MessageLookupByLibrary.simpleMessage("Тип"),
+    "versionLabel": MessageLookupByLibrary.simpleMessage("Версія"),
     "watchVideo": MessageLookupByLibrary.simpleMessage("Дивитися відео"),
     "wikipedia": MessageLookupByLibrary.simpleMessage("Вікіпедія"),
   };

@@ -63,5 +63,8 @@ force_upgrade:
 integration_test:
 	flutter test integration_test --flavor dev
 
+screenshot_test:
+	flutter drive --driver=test_driver/integration_test.dart --target=integration_test/settings_screenshot_test.dart --flavor dev
+
 # upgrade_deps:
 #     flutter pub upgrade --major-versions

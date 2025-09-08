@@ -313,4 +313,49 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get rocketsTitle => 'Raketen';
+
+  @override
+  String get overview => 'Übersicht';
+
+  @override
+  String get specifications => 'Spezifikationen';
+
+  @override
+  String get payloadCapacity => 'Nutzlastkapazität';
+
+  @override
+  String get engineDetails => 'Motordetails';
+
+  @override
+  String get heightLabel => 'Höhe';
+
+  @override
+  String get diameterLabel => 'Durchmesser';
+
+  @override
+  String get massLabel => 'Masse';
+
+  @override
+  String get stagesLabel => 'Stufen';
+
+  @override
+  String get typeLabel => 'Typ';
+
+  @override
+  String get versionLabel => 'Version';
+
+  @override
+  String get numberLabel => 'Anzahl';
+
+  @override
+  String get propellant1Label => 'Treibstoff 1';
+
+  @override
+  String get propellant2Label => 'Treibstoff 2';
+
+  @override
+  String get thrustSeaLevelLabel => 'Schub (Bodenniveau)';
+
+  @override
+  String get tons => 'Tonnen';
 }

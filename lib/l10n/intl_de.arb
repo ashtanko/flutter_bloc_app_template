@@ -213,5 +213,20 @@
   "rocketsTitle": "Raketen",
   "@rocketsTitle": {
     "description": "Titel des Raketen-Bildschirms"
-  }
+  },
+  "overview": "Übersicht",
+  "specifications": "Spezifikationen",
+  "payloadCapacity": "Nutzlastkapazität",
+  "engineDetails": "Motordetails",
+  "heightLabel": "Höhe",
+  "diameterLabel": "Durchmesser",
+  "massLabel": "Masse",
+  "stagesLabel": "Stufen",
+  "typeLabel": "Typ",
+  "versionLabel": "Version",
+  "numberLabel": "Anzahl",
+  "propellant1Label": "Treibstoff 1",
+  "propellant2Label": "Treibstoff 2",
+  "thrustSeaLevelLabel": "Schub (Bodenniveau)",
+  "tons": "Tonnen"
 }

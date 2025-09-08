@@ -983,6 +983,111 @@ class S {
       args: [],
     );
   }
+
+  /// `Overview`
+  String get overview {
+    return Intl.message('Overview', name: 'overview', desc: '', args: []);
+  }
+
+  /// `Specifications`
+  String get specifications {
+    return Intl.message(
+      'Specifications',
+      name: 'specifications',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payload Capacity`
+  String get payloadCapacity {
+    return Intl.message(
+      'Payload Capacity',
+      name: 'payloadCapacity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Engine Details`
+  String get engineDetails {
+    return Intl.message(
+      'Engine Details',
+      name: 'engineDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Height`
+  String get heightLabel {
+    return Intl.message('Height', name: 'heightLabel', desc: '', args: []);
+  }
+
+  /// `Diameter`
+  String get diameterLabel {
+    return Intl.message('Diameter', name: 'diameterLabel', desc: '', args: []);
+  }
+
+  /// `Mass`
+  String get massLabel {
+    return Intl.message('Mass', name: 'massLabel', desc: '', args: []);
+  }
+
+  /// `Stages`
+  String get stagesLabel {
+    return Intl.message('Stages', name: 'stagesLabel', desc: '', args: []);
+  }
+
+  /// `Type`
+  String get typeLabel {
+    return Intl.message('Type', name: 'typeLabel', desc: '', args: []);
+  }
+
+  /// `Version`
+  String get versionLabel {
+    return Intl.message('Version', name: 'versionLabel', desc: '', args: []);
+  }
+
+  /// `Number`
+  String get numberLabel {
+    return Intl.message('Number', name: 'numberLabel', desc: '', args: []);
+  }
+
+  /// `Propellant 1`
+  String get propellant1Label {
+    return Intl.message(
+      'Propellant 1',
+      name: 'propellant1Label',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Propellant 2`
+  String get propellant2Label {
+    return Intl.message(
+      'Propellant 2',
+      name: 'propellant2Label',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Thrust (Sea Level)`
+  String get thrustSeaLevelLabel {
+    return Intl.message(
+      'Thrust (Sea Level)',
+      name: 'thrustSeaLevelLabel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `tons`
+  String get tons {
+    return Intl.message('tons', name: 'tons', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

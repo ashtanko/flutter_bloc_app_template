@@ -8,7 +8,7 @@ import '../../../mocks.mocks.dart';
 import '../../../repository/launches_repository_test.dart';
 
 void main() {
-  group('LaunchesBloc', () {
+  group('LaunchBloc', () {
     final flightNumber = 1;
     late LaunchesRepository repository;
     late LaunchBloc bloc;

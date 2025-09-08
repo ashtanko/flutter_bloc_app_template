@@ -86,6 +86,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "darkThemeTitle": MessageLookupByLibrary.simpleMessage("Dunkles Design"),
     "daysFromTodayTitle": m0,
     "daysSinceTodayTitle": m1,
+    "diameterLabel": MessageLookupByLibrary.simpleMessage("Durchmesser"),
     "disabledButtonTitle": MessageLookupByLibrary.simpleMessage("Deaktiviert"),
     "disabledRoundedButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Deaktiviert (abgerundet)",
@@ -102,11 +103,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "emailsTitle": MessageLookupByLibrary.simpleMessage("E-Mails"),
     "emptyList": MessageLookupByLibrary.simpleMessage("Leere Liste"),
     "enabledButtonTitle": MessageLookupByLibrary.simpleMessage("Aktiviert"),
+    "engineDetails": MessageLookupByLibrary.simpleMessage("Motordetails"),
     "error": MessageLookupByLibrary.simpleMessage("Fehler"),
     "firstStage": MessageLookupByLibrary.simpleMessage("🚀 Erste Stufe"),
     "flight": MessageLookupByLibrary.simpleMessage("Flug"),
     "flightNumber": m2,
     "gridFins": MessageLookupByLibrary.simpleMessage("Steuergitter"),
+    "heightLabel": MessageLookupByLibrary.simpleMessage("Höhe"),
     "iconAndPaddingButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Mit Icon & Abstand",
     ),
@@ -136,6 +139,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "manufacturer": MessageLookupByLibrary.simpleMessage("Hersteller"),
     "mass": MessageLookupByLibrary.simpleMessage("Masse"),
+    "massLabel": MessageLookupByLibrary.simpleMessage("Masse"),
     "missionFailed": MessageLookupByLibrary.simpleMessage(
       "Mission fehlgeschlagen",
     ),
@@ -154,6 +158,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Keine Details verfügbar",
     ),
     "notAvailable": MessageLookupByLibrary.simpleMessage("Nicht verfügbar"),
+    "numberLabel": MessageLookupByLibrary.simpleMessage("Anzahl"),
     "objectivesCompleted": MessageLookupByLibrary.simpleMessage(
       "Ziele erreicht",
     ),
@@ -161,9 +166,15 @@ class MessageLookup extends MessageLookupByLibrary {
       "Missionsziele nicht erreicht",
     ),
     "orbit": MessageLookupByLibrary.simpleMessage("Umlaufbahn"),
+    "overview": MessageLookupByLibrary.simpleMessage("Übersicht"),
     "payload": MessageLookupByLibrary.simpleMessage("Nutzlast"),
+    "payloadCapacity": MessageLookupByLibrary.simpleMessage(
+      "Nutzlastkapazität",
+    ),
     "payloadTitle": MessageLookupByLibrary.simpleMessage("Nutzlast"),
     "pressKit": MessageLookupByLibrary.simpleMessage("Pressemappe"),
+    "propellant1Label": MessageLookupByLibrary.simpleMessage("Treibstoff 1"),
+    "propellant2Label": MessageLookupByLibrary.simpleMessage("Treibstoff 2"),
     "recoveryShips": MessageLookupByLibrary.simpleMessage("Bergungsschiffe"),
     "reddit": MessageLookupByLibrary.simpleMessage("Reddit"),
     "retiredStatus": MessageLookupByLibrary.simpleMessage("Außer Dienst"),
@@ -178,6 +189,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "rocketsTitle": MessageLookupByLibrary.simpleMessage("Raketen"),
     "settingsTitle": MessageLookupByLibrary.simpleMessage("Einstellungen"),
     "siteIdLabel": MessageLookupByLibrary.simpleMessage("Standort-ID:"),
+    "specifications": MessageLookupByLibrary.simpleMessage("Spezifikationen"),
+    "stagesLabel": MessageLookupByLibrary.simpleMessage("Stufen"),
     "staticFireTest": MessageLookupByLibrary.simpleMessage(
       "Statischer Feuertest",
     ),
@@ -186,11 +199,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "tabHome": MessageLookupByLibrary.simpleMessage("Startseite"),
     "tabSettings": MessageLookupByLibrary.simpleMessage("Einstellungen"),
     "themeTitle": MessageLookupByLibrary.simpleMessage("Design"),
+    "thrustSeaLevelLabel": MessageLookupByLibrary.simpleMessage(
+      "Schub (Bodenniveau)",
+    ),
+    "tons": MessageLookupByLibrary.simpleMessage("Tonnen"),
     "transparentButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Transparent",
     ),
     "tryAgainButton": MessageLookupByLibrary.simpleMessage("Erneut versuchen"),
     "type": MessageLookupByLibrary.simpleMessage("Typ"),
+    "typeLabel": MessageLookupByLibrary.simpleMessage("Typ"),
+    "versionLabel": MessageLookupByLibrary.simpleMessage("Version"),
     "watchVideo": MessageLookupByLibrary.simpleMessage("Video ansehen"),
     "wikipedia": MessageLookupByLibrary.simpleMessage("Wikipedia"),
   };

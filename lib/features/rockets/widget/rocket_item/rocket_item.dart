@@ -11,7 +11,7 @@ class RocketItemWidget extends StatelessWidget {
   });
 
   final RocketResource rocket;
-  final void Function(LaunchResource) onClick;
+  final void Function() onClick;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class RocketItemWidget extends StatelessWidget {
       ),
       child: InkWell(
         borderRadius: BorderRadius.circular(24),
-        onTap: () {},
+        onTap: onClick,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

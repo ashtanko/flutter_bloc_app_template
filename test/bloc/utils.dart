@@ -9,10 +9,12 @@ extension PumpLocalizedWidget on WidgetTester {
     required Widget child,
     Locale locale = const Locale('en'),
     ThemeData? theme,
+    void Function(BuildContext context)? contextCallback,
   }) {
     return _pumpLocalized(
       locale: locale,
       theme: theme,
+      contextCallback: contextCallback,
       child: BlocProvider<B>.value(
         value: bloc,
         child: child,
@@ -24,11 +26,13 @@ extension PumpLocalizedWidget on WidgetTester {
     required Widget child,
     Locale locale = const Locale('en'),
     ThemeData? theme,
+    void Function(BuildContext context)? contextCallback,
   }) {
     return _pumpLocalized(
       locale: locale,
       theme: theme,
       child: child,
+      contextCallback: contextCallback,
     );
   }
 
@@ -36,6 +40,7 @@ extension PumpLocalizedWidget on WidgetTester {
     required Widget child,
     required Locale locale,
     ThemeData? theme,
+    void Function(BuildContext context)? contextCallback,
   }) {
     return pumpWidget(
       MaterialApp(
@@ -43,7 +48,10 @@ extension PumpLocalizedWidget on WidgetTester {
         theme: theme,
         localizationsDelegates: appLocalizationsDelegates,
         supportedLocales: appSupportedLocales,
-        home: child,
+        home: Builder(builder: (context) {
+          contextCallback?.call(context);
+          return child;
+        }),
       ),
     );
   }
