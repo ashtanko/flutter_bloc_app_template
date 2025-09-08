@@ -2,71 +2,90 @@ import 'package:flutter_bloc_app_template/models/core/core_resource.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
+  group('MissionResource', () {
+    test('supports equality', () {
+      const m1 = MissionResource(name: 'RatSat', flight: 4);
+      const m2 = MissionResource(name: 'RatSat', flight: 4);
+      const m3 = MissionResource(name: 'TestSat', flight: 5);
+
+      expect(m1, equals(m2));
+      expect(m1.hashCode, equals(m2.hashCode));
+      expect(m1, isNot(equals(m3)));
+    });
+
+    test('props contains all fields', () {
+      const mission = MissionResource(name: 'RatSat', flight: 4);
+      expect(mission.props, ['RatSat', 4]);
+    });
+  });
+
   group('CoreResource', () {
     const core1 = CoreResource(
-      coreSerial: 'B1013',
-      flight: 1,
+      coreSerial: 'Merlin2C',
       block: 1,
-      gridfins: true,
-      legs: true,
-      reused: false,
-      landSuccess: true,
-      landingIntent: true,
-      landingType: 'Ocean',
-      landingVehicle: null,
+      status: 'lost',
+      originalLaunch: '2008-09-28T23:15:00.000Z',
+      originalLaunchUnix: 1222643700,
+      missions: [MissionResource(name: 'RatSat', flight: 4)],
+      reuseCount: 0,
+      rtlsAttempts: 0,
+      rtlsLandings: 0,
+      asdsAttempts: 0,
+      asdsLandings: 0,
+      waterLanding: false,
+      details: 'Some details',
     );
 
     const core2 = CoreResource(
-      coreSerial: 'B1013',
-      flight: 1,
+      coreSerial: 'Merlin2C',
       block: 1,
-      gridfins: true,
-      legs: true,
-      reused: false,
-      landSuccess: true,
-      landingIntent: true,
-      landingType: 'Ocean',
-      landingVehicle: null,
+      status: 'lost',
+      originalLaunch: '2008-09-28T23:15:00.000Z',
+      originalLaunchUnix: 1222643700,
+      missions: [MissionResource(name: 'RatSat', flight: 4)],
+      reuseCount: 0,
+      rtlsAttempts: 0,
+      rtlsLandings: 0,
+      asdsAttempts: 0,
+      asdsLandings: 0,
+      waterLanding: false,
+      details: 'Some details',
     );
 
-    const coreDifferent = CoreResource(
-      coreSerial: 'B1014',
-      flight: 2,
-      block: 2,
-      gridfins: false,
-      legs: false,
-      reused: true,
-      landSuccess: false,
-      landingIntent: false,
-      landingType: 'ASDS',
-      landingVehicle: 'OCISLY',
+    const core3 = CoreResource(
+      coreSerial: 'OtherCore',
+      status: 'active',
     );
 
-    test('should support value equality', () {
+    test('supports equality', () {
       expect(core1, equals(core2));
       expect(core1.hashCode, equals(core2.hashCode));
+      expect(core1, isNot(equals(core3)));
     });
 
-    test('should detect inequality when fields differ', () {
-      expect(core1, isNot(equals(coreDifferent)));
+    test('props contains all fields', () {
+      expect(core1.props, [
+        'Merlin2C',
+        1,
+        'lost',
+        '2008-09-28T23:15:00.000Z',
+        1222643700,
+        [const MissionResource(name: 'RatSat', flight: 4)],
+        0,
+        0,
+        0,
+        0,
+        0,
+        false,
+        'Some details',
+      ]);
     });
 
-    test('props should include all fields', () {
-      expect(
-        core1.props,
-        equals([
-          'B1013',
-          1,
-          1,
-          true,
-          true,
-          false,
-          true,
-          true,
-          'Ocean',
-          null,
-        ]),
-      );
+    test('is immutable', () {
+      // trying to reassign a const field will cause compile-time error,
+      // so here we just verify object identity
+      const modified = CoreResource(coreSerial: 'Merlin2C');
+      expect(modified.coreSerial, 'Merlin2C');
     });
   });
 }

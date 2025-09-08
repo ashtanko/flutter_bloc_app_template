@@ -1,10 +1,10 @@
-import 'package:flutter_bloc_app_template/models/core/core_resource.dart';
 import 'package:flutter_bloc_app_template/models/stage/first_stage_resource.dart';
+import 'package:flutter_bloc_app_template/models/stage/stage_core_resource.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   group('FirstStageResource', () {
-    const core1 = CoreResource(
+    const core1 = StageCoreResource(
       coreSerial: 'B1013',
       flight: 1,
       block: 1,
@@ -17,7 +17,7 @@ void main() {
       landingVehicle: null,
     );
 
-    const core2 = CoreResource(
+    const core2 = StageCoreResource(
       coreSerial: 'B1014',
       flight: 2,
       block: 2,
