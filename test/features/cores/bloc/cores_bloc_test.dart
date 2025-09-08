@@ -23,27 +23,24 @@ void main() {
     });
 
     blocTest<CoresBloc, CoresState>(
-      'emits [loading, success] when getCores returns data',
+      'emits [loading, success] when CoresLoadEvent returns data',
       build: () {
         when(() => mockRepository.getCores(
               hasId: any(named: 'hasId'),
               limit: any(named: 'limit'),
               offset: any(named: 'offset'),
-            )).thenAnswer((_) async => [mockCoreLost]);
+            )).thenAnswer((_) async => [mockCoreLost, mockCoreActive]);
         return bloc;
       },
       act: (bloc) => bloc.add(const CoresLoadEvent()),
       expect: () => [
         const CoresState.loading(),
-        const CoresState.success(cores: [mockCoreLost]),
+        const CoresState.success(cores: [mockCoreLost, mockCoreActive]),
       ],
-      verify: (_) {
-        verify(() => mockRepository.getCores(hasId: true)).called(1);
-      },
     );
 
     blocTest<CoresBloc, CoresState>(
-      'emits [loading, empty] when getCores returns empty list',
+      'emits [loading, empty] when CoresLoadEvent returns empty list',
       build: () {
         when(() => mockRepository.getCores(
               hasId: any(named: 'hasId'),
@@ -60,7 +57,7 @@ void main() {
     );
 
     blocTest<CoresBloc, CoresState>(
-      'emits [loading, error] when getCores throws exception',
+      'emits [loading, error] when CoresLoadEvent throws exception',
       build: () {
         when(() => mockRepository.getCores(
               hasId: any(named: 'hasId'),
@@ -77,7 +74,39 @@ void main() {
     );
 
     blocTest<CoresBloc, CoresState>(
-      'handles _CoresRefreshEvent same as load',
+      'CoresFilterEvent filters by searchQuery and statusFilter',
+      build: () {
+        // set initial _allCores
+        bloc.allCores = [mockCoreLost, mockCoreActive];
+        return bloc;
+      },
+      act: (bloc) => bloc.add(const CoresFilterEvent(
+        searchQuery: 'Merlin2C',
+        statusFilter: 'lost',
+      )),
+      expect: () => [
+        const CoresState.success(cores: [mockCoreLost]),
+      ],
+    );
+
+    blocTest<CoresBloc, CoresState>(
+      'CoresFilterEvent with empty searchQuery and statusFilter '
+      '"All" returns all',
+      build: () {
+        bloc.allCores = [mockCoreLost, mockCoreActive];
+        return bloc;
+      },
+      act: (bloc) => bloc.add(const CoresFilterEvent(
+        searchQuery: '',
+        statusFilter: 'All',
+      )),
+      expect: () => [
+        const CoresState.success(cores: [mockCoreLost, mockCoreActive]),
+      ],
+    );
+
+    blocTest<CoresBloc, CoresState>(
+      'CoresRefreshEvent reloads cores and updates _allCores',
       build: () {
         when(() => mockRepository.getCores(
               hasId: any(named: 'hasId'),

@@ -17,6 +17,7 @@ class CoresBloc extends Bloc<CoresEvent, CoresState> {
           limit: null,
           offset: null,
         );
+        allCores = cores;
 
         if (cores.isEmpty) {
           emit(const CoresState.empty());
@@ -28,6 +29,31 @@ class CoresBloc extends Bloc<CoresEvent, CoresState> {
       }
     });
 
+    on<CoresFilterEvent>((event, emit) async {
+      if (allCores.isEmpty) return;
+
+      final filtered = allCores.where((core) {
+        if(core.coreSerial == null) return false;
+        if(core.missions == null) return false;
+
+        final matchesSearch = event.searchQuery.isEmpty ||
+            core.coreSerial!
+                .toLowerCase()
+                .contains(event.searchQuery.toLowerCase()) ||
+            core.missions!.any((m) => m.name!
+                .toLowerCase()
+                .contains(event.searchQuery.toLowerCase()));
+
+        final matchesStatus = event.statusFilter == null ||
+            event.statusFilter == 'All' ||
+            core.status == event.statusFilter;
+
+        return matchesSearch && matchesStatus;
+      }).toList();
+
+      emit(CoresState.success(cores: filtered));
+    });
+
     on<CoresRefreshEvent>((event, emit) async {
       emit(const CoresState.loading());
       try {
@@ -36,6 +62,7 @@ class CoresBloc extends Bloc<CoresEvent, CoresState> {
           limit: null,
           offset: null,
         );
+        allCores = cores;
 
         if (cores.isEmpty) {
           emit(const CoresState.empty());
@@ -49,4 +76,5 @@ class CoresBloc extends Bloc<CoresEvent, CoresState> {
   }
 
   final CoresRepository _repository;
+  List<CoreResource> allCores = [];
 }

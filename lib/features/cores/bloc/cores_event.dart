@@ -7,4 +7,9 @@ abstract class CoresEvent with _$CoresEvent {
   }) = CoresLoadEvent;
 
   const factory CoresEvent.refresh() = CoresRefreshEvent;
+
+  const factory CoresEvent.filter({
+    required String searchQuery,
+    final String? statusFilter,
+  }) = CoresFilterEvent;
 }

@@ -52,6 +52,7 @@ extension CoresEventPatterns on CoresEvent {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(CoresLoadEvent value)? load,
     TResult Function(CoresRefreshEvent value)? refresh,
+    TResult Function(CoresFilterEvent value)? filter,
     required TResult orElse(),
   }) {
     final _that = this;
@@ -60,6 +61,8 @@ extension CoresEventPatterns on CoresEvent {
         return load(_that);
       case CoresRefreshEvent() when refresh != null:
         return refresh(_that);
+      case CoresFilterEvent() when filter != null:
+        return filter(_that);
       case _:
         return orElse();
     }
@@ -82,6 +85,7 @@ extension CoresEventPatterns on CoresEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(CoresLoadEvent value) load,
     required TResult Function(CoresRefreshEvent value) refresh,
+    required TResult Function(CoresFilterEvent value) filter,
   }) {
     final _that = this;
     switch (_that) {
@@ -89,6 +93,8 @@ extension CoresEventPatterns on CoresEvent {
         return load(_that);
       case CoresRefreshEvent():
         return refresh(_that);
+      case CoresFilterEvent():
+        return filter(_that);
       case _:
         throw StateError('Unexpected subclass');
     }
@@ -110,6 +116,7 @@ extension CoresEventPatterns on CoresEvent {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(CoresLoadEvent value)? load,
     TResult? Function(CoresRefreshEvent value)? refresh,
+    TResult? Function(CoresFilterEvent value)? filter,
   }) {
     final _that = this;
     switch (_that) {
@@ -117,6 +124,8 @@ extension CoresEventPatterns on CoresEvent {
         return load(_that);
       case CoresRefreshEvent() when refresh != null:
         return refresh(_that);
+      case CoresFilterEvent() when filter != null:
+        return filter(_that);
       case _:
         return null;
     }
@@ -138,6 +147,7 @@ extension CoresEventPatterns on CoresEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(bool reload)? load,
     TResult Function()? refresh,
+    TResult Function(String searchQuery, String? statusFilter)? filter,
     required TResult orElse(),
   }) {
     final _that = this;
@@ -146,6 +156,8 @@ extension CoresEventPatterns on CoresEvent {
         return load(_that.reload);
       case CoresRefreshEvent() when refresh != null:
         return refresh();
+      case CoresFilterEvent() when filter != null:
+        return filter(_that.searchQuery, _that.statusFilter);
       case _:
         return orElse();
     }
@@ -168,6 +180,7 @@ extension CoresEventPatterns on CoresEvent {
   TResult when<TResult extends Object?>({
     required TResult Function(bool reload) load,
     required TResult Function() refresh,
+    required TResult Function(String searchQuery, String? statusFilter) filter,
   }) {
     final _that = this;
     switch (_that) {
@@ -175,6 +188,8 @@ extension CoresEventPatterns on CoresEvent {
         return load(_that.reload);
       case CoresRefreshEvent():
         return refresh();
+      case CoresFilterEvent():
+        return filter(_that.searchQuery, _that.statusFilter);
       case _:
         throw StateError('Unexpected subclass');
     }
@@ -196,6 +211,7 @@ extension CoresEventPatterns on CoresEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(bool reload)? load,
     TResult? Function()? refresh,
+    TResult? Function(String searchQuery, String? statusFilter)? filter,
   }) {
     final _that = this;
     switch (_that) {
@@ -203,6 +219,8 @@ extension CoresEventPatterns on CoresEvent {
         return load(_that.reload);
       case CoresRefreshEvent() when refresh != null:
         return refresh();
+      case CoresFilterEvent() when filter != null:
+        return filter(_that.searchQuery, _that.statusFilter);
       case _:
         return null;
     }
@@ -291,6 +309,79 @@ class CoresRefreshEvent implements CoresEvent {
   @override
   String toString() {
     return 'CoresEvent.refresh()';
+  }
+}
+
+/// @nodoc
+
+class CoresFilterEvent implements CoresEvent {
+  const CoresFilterEvent({required this.searchQuery, this.statusFilter});
+
+  final String searchQuery;
+  final String? statusFilter;
+
+  /// Create a copy of CoresEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $CoresFilterEventCopyWith<CoresFilterEvent> get copyWith =>
+      _$CoresFilterEventCopyWithImpl<CoresFilterEvent>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is CoresFilterEvent &&
+            (identical(other.searchQuery, searchQuery) ||
+                other.searchQuery == searchQuery) &&
+            (identical(other.statusFilter, statusFilter) ||
+                other.statusFilter == statusFilter));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, searchQuery, statusFilter);
+
+  @override
+  String toString() {
+    return 'CoresEvent.filter(searchQuery: $searchQuery, statusFilter: $statusFilter)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $CoresFilterEventCopyWith<$Res>
+    implements $CoresEventCopyWith<$Res> {
+  factory $CoresFilterEventCopyWith(
+          CoresFilterEvent value, $Res Function(CoresFilterEvent) _then) =
+      _$CoresFilterEventCopyWithImpl;
+  @useResult
+  $Res call({String searchQuery, String? statusFilter});
+}
+
+/// @nodoc
+class _$CoresFilterEventCopyWithImpl<$Res>
+    implements $CoresFilterEventCopyWith<$Res> {
+  _$CoresFilterEventCopyWithImpl(this._self, this._then);
+
+  final CoresFilterEvent _self;
+  final $Res Function(CoresFilterEvent) _then;
+
+  /// Create a copy of CoresEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? searchQuery = null,
+    Object? statusFilter = freezed,
+  }) {
+    return _then(CoresFilterEvent(
+      searchQuery: null == searchQuery
+          ? _self.searchQuery
+          : searchQuery // ignore: cast_nullable_to_non_nullable
+              as String,
+      statusFilter: freezed == statusFilter
+          ? _self.statusFilter
+          : statusFilter // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
   }
 }
 
@@ -437,7 +528,12 @@ extension CoresStatePatterns on CoresState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(List<CoreResource> cores)? success,
+    TResult Function(
+            List<CoreResource> cores,
+            List<CoreResource>? filteredCores,
+            String? searchQuery,
+            String? statusFilter)?
+        success,
     TResult Function()? error,
     TResult Function()? empty,
     required TResult orElse(),
@@ -447,7 +543,8 @@ extension CoresStatePatterns on CoresState {
       case CoresLoadingState() when loading != null:
         return loading();
       case CoresSuccessState() when success != null:
-        return success(_that.cores);
+        return success(_that.cores, _that.filteredCores, _that.searchQuery,
+            _that.statusFilter);
       case CoresErrorState() when error != null:
         return error();
       case CoresEmptyState() when empty != null:
@@ -473,7 +570,12 @@ extension CoresStatePatterns on CoresState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function(List<CoreResource> cores) success,
+    required TResult Function(
+            List<CoreResource> cores,
+            List<CoreResource>? filteredCores,
+            String? searchQuery,
+            String? statusFilter)
+        success,
     required TResult Function() error,
     required TResult Function() empty,
   }) {
@@ -482,7 +584,8 @@ extension CoresStatePatterns on CoresState {
       case CoresLoadingState():
         return loading();
       case CoresSuccessState():
-        return success(_that.cores);
+        return success(_that.cores, _that.filteredCores, _that.searchQuery,
+            _that.statusFilter);
       case CoresErrorState():
         return error();
       case CoresEmptyState():
@@ -507,7 +610,12 @@ extension CoresStatePatterns on CoresState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
-    TResult? Function(List<CoreResource> cores)? success,
+    TResult? Function(
+            List<CoreResource> cores,
+            List<CoreResource>? filteredCores,
+            String? searchQuery,
+            String? statusFilter)?
+        success,
     TResult? Function()? error,
     TResult? Function()? empty,
   }) {
@@ -516,7 +624,8 @@ extension CoresStatePatterns on CoresState {
       case CoresLoadingState() when loading != null:
         return loading();
       case CoresSuccessState() when success != null:
-        return success(_that.cores);
+        return success(_that.cores, _that.filteredCores, _that.searchQuery,
+            _that.statusFilter);
       case CoresErrorState() when error != null:
         return error();
       case CoresEmptyState() when empty != null:
@@ -550,8 +659,13 @@ class CoresLoadingState implements CoresState {
 /// @nodoc
 
 class CoresSuccessState implements CoresState {
-  const CoresSuccessState({final List<CoreResource> cores = const []})
-      : _cores = cores;
+  const CoresSuccessState(
+      {final List<CoreResource> cores = const [],
+      final List<CoreResource>? filteredCores,
+      this.searchQuery = '',
+      this.statusFilter})
+      : _cores = cores,
+        _filteredCores = filteredCores;
 
   final List<CoreResource> _cores;
   @JsonKey()
@@ -560,6 +674,19 @@ class CoresSuccessState implements CoresState {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_cores);
   }
+
+  final List<CoreResource>? _filteredCores;
+  List<CoreResource>? get filteredCores {
+    final value = _filteredCores;
+    if (value == null) return null;
+    if (_filteredCores is EqualUnmodifiableListView) return _filteredCores;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @JsonKey()
+  final String? searchQuery;
+  final String? statusFilter;
 
   /// Create a copy of CoresState
   /// with the given fields replaced by the non-null parameter values.
@@ -573,16 +700,26 @@ class CoresSuccessState implements CoresState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is CoresSuccessState &&
-            const DeepCollectionEquality().equals(other._cores, _cores));
+            const DeepCollectionEquality().equals(other._cores, _cores) &&
+            const DeepCollectionEquality()
+                .equals(other._filteredCores, _filteredCores) &&
+            (identical(other.searchQuery, searchQuery) ||
+                other.searchQuery == searchQuery) &&
+            (identical(other.statusFilter, statusFilter) ||
+                other.statusFilter == statusFilter));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_cores));
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_cores),
+      const DeepCollectionEquality().hash(_filteredCores),
+      searchQuery,
+      statusFilter);
 
   @override
   String toString() {
-    return 'CoresState.success(cores: $cores)';
+    return 'CoresState.success(cores: $cores, filteredCores: $filteredCores, searchQuery: $searchQuery, statusFilter: $statusFilter)';
   }
 }
 
@@ -593,7 +730,11 @@ abstract mixin class $CoresSuccessStateCopyWith<$Res>
           CoresSuccessState value, $Res Function(CoresSuccessState) _then) =
       _$CoresSuccessStateCopyWithImpl;
   @useResult
-  $Res call({List<CoreResource> cores});
+  $Res call(
+      {List<CoreResource> cores,
+      List<CoreResource>? filteredCores,
+      String? searchQuery,
+      String? statusFilter});
 }
 
 /// @nodoc
@@ -609,12 +750,27 @@ class _$CoresSuccessStateCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   $Res call({
     Object? cores = null,
+    Object? filteredCores = freezed,
+    Object? searchQuery = freezed,
+    Object? statusFilter = freezed,
   }) {
     return _then(CoresSuccessState(
       cores: null == cores
           ? _self._cores
           : cores // ignore: cast_nullable_to_non_nullable
               as List<CoreResource>,
+      filteredCores: freezed == filteredCores
+          ? _self._filteredCores
+          : filteredCores // ignore: cast_nullable_to_non_nullable
+              as List<CoreResource>?,
+      searchQuery: freezed == searchQuery
+          ? _self.searchQuery
+          : searchQuery // ignore: cast_nullable_to_non_nullable
+              as String?,
+      statusFilter: freezed == statusFilter
+          ? _self.statusFilter
+          : statusFilter // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }

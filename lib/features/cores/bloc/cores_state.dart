@@ -6,6 +6,9 @@ abstract class CoresState with _$CoresState {
 
   const factory CoresState.success({
     @Default([]) List<CoreResource> cores,
+    List<CoreResource>? filteredCores,
+    @Default('') String? searchQuery,
+    String? statusFilter,
   }) = CoresSuccessState;
 
   const factory CoresState.error() = CoresErrorState;
