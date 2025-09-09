@@ -75,6 +75,20 @@ void main() {
       expect(copied.status, isNull); // other fields stay the same
     });
 
+    test('copyWith with no arguments should return identical object', () {
+      final core = const CoreResource(
+        coreSerial: 'B1049',
+        block: 5,
+        status: 'active',
+      );
+
+      final copied = core.copyWith();
+
+      expect(copied, equals(core)); // Equatable should ensure equality
+      expect(
+          identical(copied, core), isFalse); // should not be the same reference
+    });
+
     test('should check equality', () {
       final core1 = const CoreResource(coreSerial: 'B1049', block: 5);
       final core2 = const CoreResource(coreSerial: 'B1049', block: 5);
@@ -100,6 +114,59 @@ void main() {
         false,
         'Some details',
       ]);
+    });
+
+    test('props contains all fields', () {
+      final missionList = [const MissionResource(name: 'Falcon 9', flight: 1)];
+
+      final core = CoreResource(
+        coreSerial: 'B1049',
+        block: 5,
+        status: 'active',
+        originalLaunch: '2020-06-30',
+        originalLaunchUnix: 1593504000,
+        missions: missionList,
+        reuseCount: 3,
+        rtlsAttempts: 3,
+        rtlsLandings: 3,
+        asdsAttempts: 1,
+        asdsLandings: 1,
+        waterLanding: false,
+        details: 'Recovered from drone ship',
+      );
+
+      expect(core.props, [
+        'B1049',
+        5,
+        'active',
+        '2020-06-30',
+        1593504000,
+        missionList,
+        3,
+        3,
+        3,
+        1,
+        1,
+        false,
+        'Recovered from drone ship',
+      ]);
+    });
+
+    test('equality and hashCode are based on props', () {
+      final core1 =
+          const CoreResource(coreSerial: 'B1049', block: 5, status: 'active');
+      final core2 =
+          const CoreResource(coreSerial: 'B1049', block: 5, status: 'active');
+      final core3 =
+          const CoreResource(coreSerial: 'B1051', block: 5, status: 'active');
+
+      // core1 and core2 have identical props
+      expect(core1, equals(core2));
+      expect(core1.hashCode, equals(core2.hashCode));
+
+      // core3 differs in coreSerial
+      expect(core1, isNot(equals(core3)));
+      expect(core1.hashCode, isNot(equals(core3.hashCode)));
     });
 
     test('is immutable', () {
