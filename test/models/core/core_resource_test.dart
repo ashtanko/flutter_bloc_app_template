@@ -63,6 +63,27 @@ void main() {
       expect(core1, isNot(equals(core3)));
     });
 
+    test('should copyWith correctly', () {
+      final core = const CoreResource(coreSerial: 'B1049', block: 5);
+      final copied = core.copyWith(
+        coreSerial: 'B1051',
+        block: 6,
+      );
+
+      expect(copied.coreSerial, 'B1051');
+      expect(copied.block, 6);
+      expect(copied.status, isNull); // other fields stay the same
+    });
+
+    test('should check equality', () {
+      final core1 = const CoreResource(coreSerial: 'B1049', block: 5);
+      final core2 = const CoreResource(coreSerial: 'B1049', block: 5);
+      final core3 = const CoreResource(coreSerial: 'B1051', block: 5);
+
+      expect(core1, core2);
+      expect(core1 == core3, isFalse);
+    });
+
     test('props contains all fields', () {
       expect(core1.props, [
         'Merlin2C',
