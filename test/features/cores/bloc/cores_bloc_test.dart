@@ -159,6 +159,43 @@ void main() {
           expect(bloc.allCores, equals(testCores));
         },
       );
+
+      blocTest<CoresBloc, CoresState>(
+        'emits [loading, empty]',
+        build: () {
+          when(() => repository.getCores(
+                hasId: true,
+                limit: null,
+                offset: null,
+              )).thenAnswer((_) async => []);
+          return bloc;
+        },
+        act: (bloc) => bloc.add(const CoresRefreshEvent()),
+        expect: () => [
+          const CoresState.loading(),
+          const CoresState.empty(),
+        ],
+        verify: (bloc) {
+          expect(bloc.allCores, equals([]));
+        },
+      );
+
+      blocTest<CoresBloc, CoresState>(
+        'emits [loading, error] when refreshCores throws exception',
+        build: () {
+          when(() => repository.getCores(
+                hasId: true,
+                limit: null,
+                offset: null,
+              )).thenThrow(Exception('Failed to load'));
+          return bloc;
+        },
+        act: (bloc) => bloc.add(const CoresRefreshEvent()),
+        expect: () => [
+          const CoresState.loading(),
+          const CoresState.error('Exception: Failed to load'),
+        ],
+      );
     });
 
     group('CoresFilterEvent', () {
