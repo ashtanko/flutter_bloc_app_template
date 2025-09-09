@@ -116,6 +116,9 @@ class _CoresSearchFilterWidgetState extends State<CoresSearchFilterWidget> {
                   return Padding(
                     padding: const EdgeInsets.only(right: 8.0),
                     child: FilterChip(
+                      key: Key(
+                        'core_status_filter_${status.name.toLowerCase()}',
+                      ),
                       label: Text(status.title(context)),
                       selected: isSelected,
                       onSelected: (selected) {
@@ -189,6 +192,7 @@ class CoresListWidget extends StatelessWidget {
           (context, index) {
             final core = filteredCores[index];
             return CoreItemWidget(
+              key: Key('${core.coreSerial}$index'),
               core: core,
             );
           },
