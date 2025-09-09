@@ -346,5 +346,26 @@
   "rocketsTitle": "Ракети",
   "@rocketsTitle": {
     "description": "Назва екрану Ракети"
-  }
+  },
+  "core_status_active": "активний",
+  "core_status_lost": "втрачений",
+  "core_status_inactive": "неактивний",
+  "core_status_unknown": "невідомий",
+  "errorLoadingCores": "Помилка завантаження ядер",
+  "retry": "Повторити",
+  "firstLaunch": "Перший запуск",
+  "missions": "{count} місій",
+  "reuses": "{count} повторів",
+  "unknown": "Невідомо",
+  "na": "Н/Д",
+  "core_filter_status_all": "Усі",
+  "core_filter_status_active": "Активний",
+  "core_filter_status_lost": "Втрачений",
+  "core_filter_status_inactive": "Неактивний",
+  "core_filter_status_unknown": "Невідомо",
+  "core_filter_search_hint": "Пошук ядер або місій...",
+  "noCoresFound": "Ядра за запитом \"{query}\" не знайдено",
+  "blockLabel": "Блок {blockNumber}",
+  "spaceXCoresTitle": "Супутникові ядра Falcon від SpaceX",
+  "coresLabel": "Ядра"
 }

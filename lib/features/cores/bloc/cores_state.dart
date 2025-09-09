@@ -8,10 +8,14 @@ abstract class CoresState with _$CoresState {
     @Default([]) List<CoreResource> cores,
     List<CoreResource>? filteredCores,
     @Default('') String? searchQuery,
-    String? statusFilter,
+    CoreFilterStatus? statusFilter,
   }) = CoresSuccessState;
 
-  const factory CoresState.error() = CoresErrorState;
+  const factory CoresState.error(String message) = CoresErrorState;
 
   const factory CoresState.empty() = CoresEmptyState;
+
+  const factory CoresState.notFound({
+    @Default('') String searchQuery,
+  }) = CoresNotFoundState;
 }

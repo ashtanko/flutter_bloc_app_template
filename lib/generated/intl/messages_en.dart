@@ -20,22 +20,30 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
-  static String m0(days) => "In ${days} days";
+  static String m0(blockNumber) => "Block ${blockNumber}";
 
-  static String m1(days) => "${days} days ago";
+  static String m1(days) => "In ${days} days";
 
-  static String m2(number) => "Flight #${number}";
+  static String m2(days) => "${days} days ago";
 
-  static String m3(id) => "Sample Item ${id}";
+  static String m3(number) => "Flight #${number}";
 
-  static String m4(launchedAt) => "Launched at: ${launchedAt}";
+  static String m4(id) => "Sample Item ${id}";
 
-  static String m5(mission) => "Mission: ${mission}";
+  static String m5(launchedAt) => "Launched at: ${launchedAt}";
 
-  static String m6(rocketName, rocketType) =>
+  static String m6(mission) => "Mission: ${mission}";
+
+  static String m7(count) => "${count} missions";
+
+  static String m8(query) => "No cores found for \"${query}\"";
+
+  static String m9(count) => "${count} reuses";
+
+  static String m10(rocketName, rocketType) =>
       "Rocket: ${rocketName} (${rocketType})";
 
-  static String m7(percentage) => "${percentage}% success";
+  static String m11(percentage) => "${percentage}% success";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -58,11 +66,29 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "appearanceTitle": MessageLookupByLibrary.simpleMessage("Appearance"),
     "article": MessageLookupByLibrary.simpleMessage("Article"),
+    "blockLabel": m0,
     "borderRadiusButtonTitle": MessageLookupByLibrary.simpleMessage(
       "BorderRadius",
     ),
     "borderSideButtonTitle": MessageLookupByLibrary.simpleMessage("BorderSide"),
     "coreSerial": MessageLookupByLibrary.simpleMessage("Core Serial"),
+    "core_filter_search_hint": MessageLookupByLibrary.simpleMessage(
+      "Search cores or missions...",
+    ),
+    "core_filter_status_active": MessageLookupByLibrary.simpleMessage("Active"),
+    "core_filter_status_all": MessageLookupByLibrary.simpleMessage("All"),
+    "core_filter_status_inactive": MessageLookupByLibrary.simpleMessage(
+      "Inactive",
+    ),
+    "core_filter_status_lost": MessageLookupByLibrary.simpleMessage("Lost"),
+    "core_filter_status_unknown": MessageLookupByLibrary.simpleMessage(
+      "Unknown",
+    ),
+    "core_status_active": MessageLookupByLibrary.simpleMessage("active"),
+    "core_status_inactive": MessageLookupByLibrary.simpleMessage("inactive"),
+    "core_status_lost": MessageLookupByLibrary.simpleMessage("lost"),
+    "core_status_unknown": MessageLookupByLibrary.simpleMessage("unknown"),
+    "coresLabel": MessageLookupByLibrary.simpleMessage("Cores"),
     "customers": MessageLookupByLibrary.simpleMessage("Customers"),
     "darkGoldThemeTitle": MessageLookupByLibrary.simpleMessage("Dark Gold"),
     "darkMintThemeTitle": MessageLookupByLibrary.simpleMessage("Dark Mint"),
@@ -78,8 +104,8 @@ class MessageLookup extends MessageLookupByLibrary {
       "Theme mode",
     ),
     "darkThemeTitle": MessageLookupByLibrary.simpleMessage("Dark Theme"),
-    "daysFromTodayTitle": m0,
-    "daysSinceTodayTitle": m1,
+    "daysFromTodayTitle": m1,
+    "daysSinceTodayTitle": m2,
     "disabledButtonTitle": MessageLookupByLibrary.simpleMessage("Disabled"),
     "disabledRoundedButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Disabled Rounded",
@@ -97,12 +123,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "emptyList": MessageLookupByLibrary.simpleMessage("Empty list"),
     "enabledButtonTitle": MessageLookupByLibrary.simpleMessage("Enabled"),
     "error": MessageLookupByLibrary.simpleMessage("Error"),
+    "errorLoadingCores": MessageLookupByLibrary.simpleMessage(
+      "Error loading cores",
+    ),
     "experimentalThemeTitle": MessageLookupByLibrary.simpleMessage(
       "Experimental Theme",
     ),
+    "firstLaunch": MessageLookupByLibrary.simpleMessage("First Launch"),
     "firstStage": MessageLookupByLibrary.simpleMessage("🚀 First Stage"),
     "flight": MessageLookupByLibrary.simpleMessage("Flight"),
-    "flightNumber": m2,
+    "flightNumber": m3,
     "gridFins": MessageLookupByLibrary.simpleMessage("Grid Fins"),
     "iconAndPaddingButtonTitle": MessageLookupByLibrary.simpleMessage(
       "With Icon Padding",
@@ -110,14 +140,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "iconButtonTitle": MessageLookupByLibrary.simpleMessage("With Icon"),
     "id": MessageLookupByLibrary.simpleMessage("ID"),
     "itemDetailsTitle": MessageLookupByLibrary.simpleMessage("Item Details"),
-    "itemTitle": m3,
+    "itemTitle": m4,
     "itemsTitle": MessageLookupByLibrary.simpleMessage("Sample Items"),
     "landing": MessageLookupByLibrary.simpleMessage("Landing"),
     "landingLegs": MessageLookupByLibrary.simpleMessage("Landing Legs"),
     "landingSuccess": MessageLookupByLibrary.simpleMessage("Landing Success"),
     "launch": MessageLookupByLibrary.simpleMessage("Launch"),
     "launchSite": MessageLookupByLibrary.simpleMessage("Launch Site"),
-    "launchedAt": m4,
+    "launchedAt": m5,
     "launchesTitle": MessageLookupByLibrary.simpleMessage("Launches"),
     "lightGoldThemeTitle": MessageLookupByLibrary.simpleMessage("Light Gold"),
     "lightMintThemeTitle": MessageLookupByLibrary.simpleMessage("Light Mint"),
@@ -132,9 +162,12 @@ class MessageLookup extends MessageLookupByLibrary {
       "Mission Successful",
     ),
     "missionTimeline": MessageLookupByLibrary.simpleMessage("Mission Timeline"),
-    "missionTitle": m5,
+    "missionTitle": m6,
+    "missions": m7,
+    "na": MessageLookupByLibrary.simpleMessage("N/A"),
     "nationality": MessageLookupByLibrary.simpleMessage("Nationality"),
     "newsScreen": MessageLookupByLibrary.simpleMessage("News"),
+    "noCoresFound": m8,
     "noDetails": MessageLookupByLibrary.simpleMessage("No details available"),
     "notAvailable": MessageLookupByLibrary.simpleMessage("N/A"),
     "objectivesCompleted": MessageLookupByLibrary.simpleMessage(
@@ -150,8 +183,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "recoveryShips": MessageLookupByLibrary.simpleMessage("Recovery Ships"),
     "reddit": MessageLookupByLibrary.simpleMessage("Reddit"),
     "retiredStatus": MessageLookupByLibrary.simpleMessage("Retired"),
+    "retry": MessageLookupByLibrary.simpleMessage("Retry"),
     "reused": MessageLookupByLibrary.simpleMessage("Reused"),
-    "rocket": m6,
+    "reuses": m9,
+    "rocket": m10,
     "rocketBlock": MessageLookupByLibrary.simpleMessage("Block"),
     "rocketDetails": MessageLookupByLibrary.simpleMessage("Rocket Details"),
     "rocketName": MessageLookupByLibrary.simpleMessage("Rocket Name"),
@@ -161,8 +196,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "rocketsTitle": MessageLookupByLibrary.simpleMessage("Rockets"),
     "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
     "siteIdLabel": MessageLookupByLibrary.simpleMessage("Site ID:"),
+    "spaceXCoresTitle": MessageLookupByLibrary.simpleMessage(
+      "SpaceX Falcon Cores",
+    ),
     "staticFireTest": MessageLookupByLibrary.simpleMessage("Static Fire Test"),
-    "successRate": m7,
+    "successRate": m11,
     "systemThemeTitle": MessageLookupByLibrary.simpleMessage("System Theme"),
     "tabHome": MessageLookupByLibrary.simpleMessage("Home"),
     "tabSettings": MessageLookupByLibrary.simpleMessage("Settings"),
@@ -172,6 +210,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "tryAgainButton": MessageLookupByLibrary.simpleMessage("Try Again"),
     "type": MessageLookupByLibrary.simpleMessage("Type"),
+    "unknown": MessageLookupByLibrary.simpleMessage("Unknown"),
     "watchVideo": MessageLookupByLibrary.simpleMessage("Watch Video"),
     "wikipedia": MessageLookupByLibrary.simpleMessage("Wikipedia"),
   };

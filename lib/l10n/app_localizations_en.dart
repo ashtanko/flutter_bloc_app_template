@@ -313,4 +313,75 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get rocketsTitle => 'Rockets';
+
+  @override
+  String get core_status_active => 'active';
+
+  @override
+  String get core_status_lost => 'lost';
+
+  @override
+  String get core_status_inactive => 'inactive';
+
+  @override
+  String get core_status_unknown => 'unknown';
+
+  @override
+  String get errorLoadingCores => 'Error loading cores';
+
+  @override
+  String get retry => 'Retry';
+
+  @override
+  String get firstLaunch => 'First Launch';
+
+  @override
+  String missions(Object count) {
+    return '$count missions';
+  }
+
+  @override
+  String reuses(Object count) {
+    return '$count reuses';
+  }
+
+  @override
+  String get unknown => 'Unknown';
+
+  @override
+  String get na => 'N/A';
+
+  @override
+  String get core_filter_status_all => 'All';
+
+  @override
+  String get core_filter_status_active => 'Active';
+
+  @override
+  String get core_filter_status_lost => 'Lost';
+
+  @override
+  String get core_filter_status_inactive => 'Inactive';
+
+  @override
+  String get core_filter_status_unknown => 'Unknown';
+
+  @override
+  String get core_filter_search_hint => 'Search cores or missions...';
+
+  @override
+  String noCoresFound(Object query) {
+    return 'No cores found for \"$query\"';
+  }
+
+  @override
+  String blockLabel(Object blockNumber) {
+    return 'Block $blockNumber';
+  }
+
+  @override
+  String get spaceXCoresTitle => 'SpaceX Falcon Cores';
+
+  @override
+  String get coresLabel => 'Cores';
 }

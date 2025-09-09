@@ -350,5 +350,26 @@
   "rocketsTitle": "Rockets",
   "@rocketsTitle": {
     "description": "The title of the Rockets screen"
-  }
+  },
+  "core_status_active": "active",
+  "core_status_lost": "lost",
+  "core_status_inactive": "inactive",
+  "core_status_unknown": "unknown",
+  "errorLoadingCores": "Error loading cores",
+  "retry": "Retry",
+  "firstLaunch": "First Launch",
+  "missions": "{count} missions",
+  "reuses": "{count} reuses",
+  "unknown": "Unknown",
+  "na": "N/A",
+  "core_filter_status_all": "All",
+  "core_filter_status_active": "Active",
+  "core_filter_status_lost": "Lost",
+  "core_filter_status_inactive": "Inactive",
+  "core_filter_status_unknown": "Unknown",
+  "core_filter_search_hint": "Search cores or missions...",
+  "noCoresFound": "No cores found for \"{query}\"",
+  "blockLabel": "Block {blockNumber}",
+  "spaceXCoresTitle": "SpaceX Falcon Cores",
+  "coresLabel": "Cores"
 }

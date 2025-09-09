@@ -10,6 +10,6 @@ abstract class CoresEvent with _$CoresEvent {
 
   const factory CoresEvent.filter({
     required String searchQuery,
-    final String? statusFilter,
+    final CoreFilterStatus? statusFilter,
   }) = CoresFilterEvent;
 }

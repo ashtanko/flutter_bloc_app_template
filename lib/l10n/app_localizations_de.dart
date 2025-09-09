@@ -313,4 +313,75 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get rocketsTitle => 'Raketen';
+
+  @override
+  String get core_status_active => 'aktiv';
+
+  @override
+  String get core_status_lost => 'verloren';
+
+  @override
+  String get core_status_inactive => 'inaktiv';
+
+  @override
+  String get core_status_unknown => 'unbekannt';
+
+  @override
+  String get errorLoadingCores => 'Fehler beim Laden der Kerne';
+
+  @override
+  String get retry => 'Erneut versuchen';
+
+  @override
+  String get firstLaunch => 'Erststart';
+
+  @override
+  String missions(Object count) {
+    return '$count Missionen';
+  }
+
+  @override
+  String reuses(Object count) {
+    return '$count Wiederverwendungen';
+  }
+
+  @override
+  String get unknown => 'Unbekannt';
+
+  @override
+  String get na => 'N/V';
+
+  @override
+  String get core_filter_status_all => 'Alle';
+
+  @override
+  String get core_filter_status_active => 'Aktiv';
+
+  @override
+  String get core_filter_status_lost => 'Verloren';
+
+  @override
+  String get core_filter_status_inactive => 'Inaktiv';
+
+  @override
+  String get core_filter_status_unknown => 'Unbekannt';
+
+  @override
+  String get core_filter_search_hint => 'Suche nach Kernen oder Missionen...';
+
+  @override
+  String noCoresFound(Object query) {
+    return 'Keine Kerne für \"$query\" gefunden';
+  }
+
+  @override
+  String blockLabel(Object blockNumber) {
+    return 'Block $blockNumber';
+  }
+
+  @override
+  String get spaceXCoresTitle => 'SpaceX Falcon-Kerne';
+
+  @override
+  String get coresLabel => 'Kerne';
 }

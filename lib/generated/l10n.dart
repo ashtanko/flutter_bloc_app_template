@@ -983,6 +983,191 @@ class S {
       args: [],
     );
   }
+
+  /// `active`
+  String get core_status_active {
+    return Intl.message(
+      'active',
+      name: 'core_status_active',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `lost`
+  String get core_status_lost {
+    return Intl.message('lost', name: 'core_status_lost', desc: '', args: []);
+  }
+
+  /// `inactive`
+  String get core_status_inactive {
+    return Intl.message(
+      'inactive',
+      name: 'core_status_inactive',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `unknown`
+  String get core_status_unknown {
+    return Intl.message(
+      'unknown',
+      name: 'core_status_unknown',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error loading cores`
+  String get errorLoadingCores {
+    return Intl.message(
+      'Error loading cores',
+      name: 'errorLoadingCores',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Retry`
+  String get retry {
+    return Intl.message('Retry', name: 'retry', desc: '', args: []);
+  }
+
+  /// `First Launch`
+  String get firstLaunch {
+    return Intl.message(
+      'First Launch',
+      name: 'firstLaunch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{count} missions`
+  String missions(Object count) {
+    return Intl.message(
+      '$count missions',
+      name: 'missions',
+      desc: '',
+      args: [count],
+    );
+  }
+
+  /// `{count} reuses`
+  String reuses(Object count) {
+    return Intl.message(
+      '$count reuses',
+      name: 'reuses',
+      desc: '',
+      args: [count],
+    );
+  }
+
+  /// `Unknown`
+  String get unknown {
+    return Intl.message('Unknown', name: 'unknown', desc: '', args: []);
+  }
+
+  /// `N/A`
+  String get na {
+    return Intl.message('N/A', name: 'na', desc: '', args: []);
+  }
+
+  /// `All`
+  String get core_filter_status_all {
+    return Intl.message(
+      'All',
+      name: 'core_filter_status_all',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Active`
+  String get core_filter_status_active {
+    return Intl.message(
+      'Active',
+      name: 'core_filter_status_active',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lost`
+  String get core_filter_status_lost {
+    return Intl.message(
+      'Lost',
+      name: 'core_filter_status_lost',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Inactive`
+  String get core_filter_status_inactive {
+    return Intl.message(
+      'Inactive',
+      name: 'core_filter_status_inactive',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unknown`
+  String get core_filter_status_unknown {
+    return Intl.message(
+      'Unknown',
+      name: 'core_filter_status_unknown',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search cores or missions...`
+  String get core_filter_search_hint {
+    return Intl.message(
+      'Search cores or missions...',
+      name: 'core_filter_search_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No cores found for "{query}"`
+  String noCoresFound(Object query) {
+    return Intl.message(
+      'No cores found for "$query"',
+      name: 'noCoresFound',
+      desc: '',
+      args: [query],
+    );
+  }
+
+  /// `Block {blockNumber}`
+  String blockLabel(Object blockNumber) {
+    return Intl.message(
+      'Block $blockNumber',
+      name: 'blockLabel',
+      desc: '',
+      args: [blockNumber],
+    );
+  }
+
+  /// `SpaceX Falcon Cores`
+  String get spaceXCoresTitle {
+    return Intl.message(
+      'SpaceX Falcon Cores',
+      name: 'spaceXCoresTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cores`
+  String get coresLabel {
+    return Intl.message('Cores', name: 'coresLabel', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

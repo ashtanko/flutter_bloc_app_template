@@ -33,22 +33,54 @@ class CoreResource extends Equatable {
   final bool? waterLanding;
   final String? details;
 
+  CoreResource copyWith({
+    String? coreSerial,
+    int? block,
+    String? status,
+    String? originalLaunch,
+    int? originalLaunchUnix,
+    List<MissionResource>? missions,
+    int? reuseCount,
+    int? rtlsAttempts,
+    int? rtlsLandings,
+    int? asdsAttempts,
+    int? asdsLandings,
+    bool? waterLanding,
+    String? details,
+  }) {
+    return CoreResource(
+      coreSerial: coreSerial ?? this.coreSerial,
+      block: block ?? this.block,
+      status: status ?? this.status,
+      originalLaunch: originalLaunch ?? this.originalLaunch,
+      originalLaunchUnix: originalLaunchUnix ?? this.originalLaunchUnix,
+      missions: missions ?? this.missions,
+      reuseCount: reuseCount ?? this.reuseCount,
+      rtlsAttempts: rtlsAttempts ?? this.rtlsAttempts,
+      rtlsLandings: rtlsLandings ?? this.rtlsLandings,
+      asdsAttempts: asdsAttempts ?? this.asdsAttempts,
+      asdsLandings: asdsLandings ?? this.asdsLandings,
+      waterLanding: waterLanding ?? this.waterLanding,
+      details: details ?? this.details,
+    );
+  }
+
   @override
   List<Object?> get props => [
-        coreSerial,
-        block,
-        status,
-        originalLaunch,
-        originalLaunchUnix,
-        missions,
-        reuseCount,
-        rtlsAttempts,
-        rtlsLandings,
-        asdsAttempts,
-        asdsLandings,
-        waterLanding,
-        details,
-      ];
+    coreSerial,
+    block,
+    status,
+    originalLaunch,
+    originalLaunchUnix,
+    missions,
+    reuseCount,
+    rtlsAttempts,
+    rtlsLandings,
+    asdsAttempts,
+    asdsLandings,
+    waterLanding,
+    details,
+  ];
 }
 
 @immutable
