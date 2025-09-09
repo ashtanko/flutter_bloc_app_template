@@ -315,4 +315,49 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get rocketsTitle => 'Ракети';
+
+  @override
+  String get overview => 'Огляд';
+
+  @override
+  String get specifications => 'Технічні характеристики';
+
+  @override
+  String get payloadCapacity => 'Корисне навантаження';
+
+  @override
+  String get engineDetails => 'Деталі двигуна';
+
+  @override
+  String get heightLabel => 'Висота';
+
+  @override
+  String get diameterLabel => 'Діаметр';
+
+  @override
+  String get massLabel => 'Маса';
+
+  @override
+  String get stagesLabel => 'Стадії';
+
+  @override
+  String get typeLabel => 'Тип';
+
+  @override
+  String get versionLabel => 'Версія';
+
+  @override
+  String get numberLabel => 'Кількість';
+
+  @override
+  String get propellant1Label => 'Паливо 1';
+
+  @override
+  String get propellant2Label => 'Паливо 2';
+
+  @override
+  String get thrustSeaLevelLabel => 'Тяга (на рівні моря)';
+
+  @override
+  String get tons => 'тонн';
 }

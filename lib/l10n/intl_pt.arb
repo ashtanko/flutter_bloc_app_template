@@ -213,5 +213,20 @@
   "rocketsTitle": "Foguetes",
   "@rocketsTitle": {
     "description": "Título da tela de Foguetes"
-  }
+  },
+  "overview": "Visão Geral",
+  "specifications": "Especificações",
+  "payloadCapacity": "Capacidade de Carga",
+  "engineDetails": "Detalhes do Motor",
+  "heightLabel": "Altura",
+  "diameterLabel": "Diâmetro",
+  "massLabel": "Massa",
+  "stagesLabel": "Estágios",
+  "typeLabel": "Tipo",
+  "versionLabel": "Versão",
+  "numberLabel": "Número",
+  "propellant1Label": "Propelente 1",
+  "propellant2Label": "Propelente 2",
+  "thrustSeaLevelLabel": "Empuxo (nível do mar)",
+  "tons": "toneladas"
 }

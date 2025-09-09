@@ -350,5 +350,20 @@
   "rocketsTitle": "Rockets",
   "@rocketsTitle": {
     "description": "The title of the Rockets screen"
-  }
+  },
+  "overview": "Overview",
+  "specifications": "Specifications",
+  "payloadCapacity": "Payload Capacity",
+  "engineDetails": "Engine Details",
+  "heightLabel": "Height",
+  "diameterLabel": "Diameter",
+  "massLabel": "Mass",
+  "stagesLabel": "Stages",
+  "typeLabel": "Type",
+  "versionLabel": "Version",
+  "numberLabel": "Number",
+  "propellant1Label": "Propellant 1",
+  "propellant2Label": "Propellant 2",
+  "thrustSeaLevelLabel": "Thrust (Sea Level)",
+  "tons": "tons"
 }

@@ -88,6 +88,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "darkThemeTitle": MessageLookupByLibrary.simpleMessage("Tema Escuro"),
     "daysFromTodayTitle": m0,
     "daysSinceTodayTitle": m1,
+    "diameterLabel": MessageLookupByLibrary.simpleMessage("Diâmetro"),
     "disabledButtonTitle": MessageLookupByLibrary.simpleMessage("Desativado"),
     "disabledRoundedButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Desativado com Bordas Arredondadas",
@@ -104,11 +105,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "emailsTitle": MessageLookupByLibrary.simpleMessage("E-mails"),
     "emptyList": MessageLookupByLibrary.simpleMessage("Lista Vazia"),
     "enabledButtonTitle": MessageLookupByLibrary.simpleMessage("Ativado"),
+    "engineDetails": MessageLookupByLibrary.simpleMessage("Detalhes do Motor"),
     "error": MessageLookupByLibrary.simpleMessage("Erro"),
     "firstStage": MessageLookupByLibrary.simpleMessage("🚀 Primeiro Estágio"),
     "flight": MessageLookupByLibrary.simpleMessage("Voo"),
     "flightNumber": m2,
     "gridFins": MessageLookupByLibrary.simpleMessage("Aletas de grade"),
+    "heightLabel": MessageLookupByLibrary.simpleMessage("Altura"),
     "iconAndPaddingButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Com Ícone e Espaçamento",
     ),
@@ -138,6 +141,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "linksResources": MessageLookupByLibrary.simpleMessage("Links e Recursos"),
     "manufacturer": MessageLookupByLibrary.simpleMessage("Fabricante"),
     "mass": MessageLookupByLibrary.simpleMessage("Massa"),
+    "massLabel": MessageLookupByLibrary.simpleMessage("Massa"),
     "missionFailed": MessageLookupByLibrary.simpleMessage("Missão falhou"),
     "missionOverview": MessageLookupByLibrary.simpleMessage(
       "Visão geral da missão",
@@ -156,6 +160,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Nenhum detalhe disponível",
     ),
     "notAvailable": MessageLookupByLibrary.simpleMessage("N/D"),
+    "numberLabel": MessageLookupByLibrary.simpleMessage("Número"),
     "objectivesCompleted": MessageLookupByLibrary.simpleMessage(
       "Objetivos Concluídos",
     ),
@@ -163,9 +168,15 @@ class MessageLookup extends MessageLookupByLibrary {
       "Objetivos da missão não alcançados",
     ),
     "orbit": MessageLookupByLibrary.simpleMessage("Órbita"),
+    "overview": MessageLookupByLibrary.simpleMessage("Visão Geral"),
     "payload": MessageLookupByLibrary.simpleMessage("Carga útil"),
+    "payloadCapacity": MessageLookupByLibrary.simpleMessage(
+      "Capacidade de Carga",
+    ),
     "payloadTitle": MessageLookupByLibrary.simpleMessage("Carga útil"),
     "pressKit": MessageLookupByLibrary.simpleMessage("Kit de Imprensa"),
+    "propellant1Label": MessageLookupByLibrary.simpleMessage("Propelente 1"),
+    "propellant2Label": MessageLookupByLibrary.simpleMessage("Propelente 2"),
     "recoveryShips": MessageLookupByLibrary.simpleMessage(
       "Navios de Recuperação",
     ),
@@ -184,6 +195,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "rocketsTitle": MessageLookupByLibrary.simpleMessage("Foguetes"),
     "settingsTitle": MessageLookupByLibrary.simpleMessage("Configurações"),
     "siteIdLabel": MessageLookupByLibrary.simpleMessage("ID do Local:"),
+    "specifications": MessageLookupByLibrary.simpleMessage("Especificações"),
+    "stagesLabel": MessageLookupByLibrary.simpleMessage("Estágios"),
     "staticFireTest": MessageLookupByLibrary.simpleMessage(
       "Teste de Fogo Estático",
     ),
@@ -192,11 +205,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "tabHome": MessageLookupByLibrary.simpleMessage("Início"),
     "tabSettings": MessageLookupByLibrary.simpleMessage("Configurações"),
     "themeTitle": MessageLookupByLibrary.simpleMessage("Tema"),
+    "thrustSeaLevelLabel": MessageLookupByLibrary.simpleMessage(
+      "Empuxo (nível do mar)",
+    ),
+    "tons": MessageLookupByLibrary.simpleMessage("toneladas"),
     "transparentButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Transparente",
     ),
     "tryAgainButton": MessageLookupByLibrary.simpleMessage("Tentar novamente"),
     "type": MessageLookupByLibrary.simpleMessage("Tipo"),
+    "typeLabel": MessageLookupByLibrary.simpleMessage("Tipo"),
+    "versionLabel": MessageLookupByLibrary.simpleMessage("Versão"),
     "watchVideo": MessageLookupByLibrary.simpleMessage("Assistir Vídeo"),
     "wikipedia": MessageLookupByLibrary.simpleMessage("Wikipédia"),
   };

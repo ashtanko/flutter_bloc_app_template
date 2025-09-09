@@ -67,8 +67,11 @@ class RocketListContent extends StatelessWidget {
         itemBuilder: (context, index) => RocketItemWidget(
           key: Key('${rockets[index].rocketName}${rockets[index].rocketType}'),
           rocket: rockets[index],
-          onClick: (launch) {
-            //todo
+          onClick: () {
+            NavigationService.of(context).navigateTo(
+              Routes.rocket,
+              rockets[index],
+            );
           },
         ),
         itemCount: rockets.length,
