@@ -1,14 +1,14 @@
-import 'package:flutter_bloc_app_template/models/core/core_resource.dart';
 import 'package:flutter_bloc_app_template/models/launch/launch_rocket_resource.dart';
 import 'package:flutter_bloc_app_template/models/payload/payload_resource.dart';
 import 'package:flutter_bloc_app_template/models/stage/first_stage_resource.dart';
 import 'package:flutter_bloc_app_template/models/stage/second_stage_resource.dart';
+import 'package:flutter_bloc_app_template/models/stage/stage_core_resource.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   group('RocketResource', () {
-    const core1 = CoreResource(coreSerial: 'B1013');
-    const core2 = CoreResource(coreSerial: 'B1014');
+    const core1 = StageCoreResource(coreSerial: 'B1013');
+    const core2 = StageCoreResource(coreSerial: 'B1014');
     const firstStage = FirstStageResource(cores: [core1, core2]);
 
     const payload1 = PayloadResource(payloadId: 'FalconSAT-2');
@@ -60,8 +60,8 @@ void main() {
 
     test('supports deep equality on nested lists', () {
       const firstStage2 = FirstStageResource(cores: [
-        CoreResource(coreSerial: 'B1013'),
-        CoreResource(coreSerial: 'B1014'),
+        StageCoreResource(coreSerial: 'B1013'),
+        StageCoreResource(coreSerial: 'B1014'),
       ]);
       const secondStage2 = SecondStageResource(block: 1, payloads: [
         PayloadResource(payloadId: 'FalconSAT-2'),

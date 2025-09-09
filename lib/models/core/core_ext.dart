@@ -5,15 +5,27 @@ extension CoreExt on NetworkCoreModel {
   CoreResource toResource() {
     return CoreResource(
       coreSerial: coreSerial,
-      flight: flight,
       block: block,
-      gridfins: gridfins,
-      legs: legs,
-      reused: reused,
-      landSuccess: landSuccess,
-      landingIntent: landingIntent,
-      landingType: landingType,
-      landingVehicle: landingVehicle,
+      status: status,
+      originalLaunch: originalLaunch,
+      originalLaunchUnix: originalLaunchUnix,
+      missions: missions?.map((m) => m.toResource()).toList(),
+      reuseCount: reuseCount,
+      rtlsAttempts: rtlsAttempts,
+      rtlsLandings: rtlsLandings,
+      asdsAttempts: asdsAttempts,
+      asdsLandings: asdsLandings,
+      waterLanding: waterLanding,
+      details: details,
+    );
+  }
+}
+
+extension MissionExt on NetworkMission {
+  MissionResource toResource() {
+    return MissionResource(
+      name: name,
+      flight: flight,
     );
   }
 }

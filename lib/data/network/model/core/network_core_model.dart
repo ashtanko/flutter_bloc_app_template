@@ -7,19 +7,35 @@ part 'network_core_model.g.dart';
 abstract class NetworkCoreModel with _$NetworkCoreModel {
   const factory NetworkCoreModel({
     @JsonKey(name: 'core_serial') String? coreSerial,
-    int? flight,
     int? block,
-    bool? gridfins,
-    bool? legs,
-    bool? reused,
-    @JsonKey(name: 'land_success') bool? landSuccess,
-    @JsonKey(name: 'landing_intent') bool? landingIntent,
-    @JsonKey(name: 'landing_type') String? landingType,
-    @JsonKey(name: 'landing_vehicle') String? landingVehicle,
+    String? status,
+    @JsonKey(name: 'original_launch') String? originalLaunch,
+    @JsonKey(name: 'original_launch_unix') int? originalLaunchUnix,
+    List<NetworkMission>? missions,
+    @JsonKey(name: 'reuse_count') int? reuseCount,
+    @JsonKey(name: 'rtls_attempts') int? rtlsAttempts,
+    @JsonKey(name: 'rtls_landings') int? rtlsLandings,
+    @JsonKey(name: 'asds_attempts') int? asdsAttempts,
+    @JsonKey(name: 'asds_landings') int? asdsLandings,
+    @JsonKey(name: 'water_landing') bool? waterLanding,
+    String? details,
   }) = _NetworkCoreModel;
 
   const NetworkCoreModel._();
 
   factory NetworkCoreModel.fromJson(Map<String, dynamic> json) =>
       _$NetworkCoreModelFromJson(json);
+}
+
+@freezed
+abstract class NetworkMission with _$NetworkMission {
+  const factory NetworkMission({
+    String? name,
+    int? flight,
+  }) = _NetworkMission;
+
+  const NetworkMission._();
+
+  factory NetworkMission.fromJson(Map<String, dynamic> json) =>
+      _$NetworkMissionFromJson(json);
 }

@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'pt';
 
+  static String m8(blockNumber) => "Bloco ${blockNumber}";
+
   static String m0(days) => "Em ${days} dias";
 
   static String m1(days) => "Há ${days} dias";
@@ -31,6 +33,12 @@ class MessageLookup extends MessageLookupByLibrary {
   static String m4(launchedAt) => "Lançado em: ${launchedAt}";
 
   static String m5(mission) => "Missão: ${mission}";
+
+  static String m9(count) => "${count} missões";
+
+  static String m10(query) => "Nenhum núcleo encontrado para \"${query}\"";
+
+  static String m11(count) => "${count} reutilizações";
 
   static String m6(rocketName, rocketType) =>
       "Foguete: ${rocketName} (${rocketType})";
@@ -58,6 +66,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "appearanceTitle": MessageLookupByLibrary.simpleMessage("Aparência"),
     "article": MessageLookupByLibrary.simpleMessage("Artigo"),
+    "blockLabel": m8,
     "borderRadiusButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Raio da Borda",
     ),
@@ -67,6 +76,23 @@ class MessageLookup extends MessageLookupByLibrary {
     "coreSerial": MessageLookupByLibrary.simpleMessage(
       "Número de Série do Núcleo",
     ),
+    "core_filter_search_hint": MessageLookupByLibrary.simpleMessage(
+      "Pesquisar núcleos ou missões...",
+    ),
+    "core_filter_status_active": MessageLookupByLibrary.simpleMessage("Ativo"),
+    "core_filter_status_all": MessageLookupByLibrary.simpleMessage("Todos"),
+    "core_filter_status_inactive": MessageLookupByLibrary.simpleMessage(
+      "Inativo",
+    ),
+    "core_filter_status_lost": MessageLookupByLibrary.simpleMessage("Perdido"),
+    "core_filter_status_unknown": MessageLookupByLibrary.simpleMessage(
+      "Desconhecido",
+    ),
+    "core_status_active": MessageLookupByLibrary.simpleMessage("ativo"),
+    "core_status_inactive": MessageLookupByLibrary.simpleMessage("inativo"),
+    "core_status_lost": MessageLookupByLibrary.simpleMessage("perdido"),
+    "core_status_unknown": MessageLookupByLibrary.simpleMessage("desconhecido"),
+    "coresLabel": MessageLookupByLibrary.simpleMessage("Núcleos"),
     "customers": MessageLookupByLibrary.simpleMessage("Clientes"),
     "darkGoldThemeTitle": MessageLookupByLibrary.simpleMessage(
       "Tema Dourado Escuro",
@@ -107,6 +133,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "enabledButtonTitle": MessageLookupByLibrary.simpleMessage("Ativado"),
     "engineDetails": MessageLookupByLibrary.simpleMessage("Detalhes do Motor"),
     "error": MessageLookupByLibrary.simpleMessage("Erro"),
+    "errorLoadingCores": MessageLookupByLibrary.simpleMessage(
+      "Erro ao carregar núcleos",
+    ),
+    "firstLaunch": MessageLookupByLibrary.simpleMessage("Primeiro lançamento"),
     "firstStage": MessageLookupByLibrary.simpleMessage("🚀 Primeiro Estágio"),
     "flight": MessageLookupByLibrary.simpleMessage("Voo"),
     "flightNumber": m2,
@@ -154,8 +184,11 @@ class MessageLookup extends MessageLookupByLibrary {
       "Cronograma da Missão",
     ),
     "missionTitle": m5,
+    "missions": m9,
+    "na": MessageLookupByLibrary.simpleMessage("N/D"),
     "nationality": MessageLookupByLibrary.simpleMessage("Nacionalidade"),
     "newsScreen": MessageLookupByLibrary.simpleMessage("Notícias"),
+    "noCoresFound": m10,
     "noDetails": MessageLookupByLibrary.simpleMessage(
       "Nenhum detalhe disponível",
     ),
@@ -182,7 +215,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "reddit": MessageLookupByLibrary.simpleMessage("Reddit"),
     "retiredStatus": MessageLookupByLibrary.simpleMessage("Aposentada"),
+    "retry": MessageLookupByLibrary.simpleMessage("Tentar novamente"),
     "reused": MessageLookupByLibrary.simpleMessage("Reutilizado"),
+    "reuses": m11,
     "rocket": m6,
     "rocketBlock": MessageLookupByLibrary.simpleMessage("Bloco"),
     "rocketDetails": MessageLookupByLibrary.simpleMessage(
@@ -195,6 +230,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "rocketsTitle": MessageLookupByLibrary.simpleMessage("Foguetes"),
     "settingsTitle": MessageLookupByLibrary.simpleMessage("Configurações"),
     "siteIdLabel": MessageLookupByLibrary.simpleMessage("ID do Local:"),
+    "spaceXCoresTitle": MessageLookupByLibrary.simpleMessage(
+      "Núcleos Falcon da SpaceX",
+    ),
     "specifications": MessageLookupByLibrary.simpleMessage("Especificações"),
     "stagesLabel": MessageLookupByLibrary.simpleMessage("Estágios"),
     "staticFireTest": MessageLookupByLibrary.simpleMessage(
@@ -215,6 +253,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "tryAgainButton": MessageLookupByLibrary.simpleMessage("Tentar novamente"),
     "type": MessageLookupByLibrary.simpleMessage("Tipo"),
     "typeLabel": MessageLookupByLibrary.simpleMessage("Tipo"),
+    "unknown": MessageLookupByLibrary.simpleMessage("Desconhecido"),
     "versionLabel": MessageLookupByLibrary.simpleMessage("Versão"),
     "watchVideo": MessageLookupByLibrary.simpleMessage("Assistir Vídeo"),
     "wikipedia": MessageLookupByLibrary.simpleMessage("Wikipédia"),

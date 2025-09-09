@@ -1,13 +1,12 @@
-import 'package:flutter_bloc_app_template/data/network/model/core/network_core_model.dart';
 import 'package:flutter_bloc_app_template/data/network/model/launch/network_launch_model.dart';
 import 'package:flutter_bloc_app_template/data/network/model/payload/network_payload_model.dart';
 import 'package:flutter_bloc_app_template/data/network/model/rocket/network_rocket_model.dart';
 import 'package:flutter_bloc_app_template/data/network/model/stage/network_first_stage_model.dart';
 import 'package:flutter_bloc_app_template/data/network/model/stage/network_second_stage_model.dart';
 import 'package:flutter_bloc_app_template/index.dart';
-import 'package:flutter_bloc_app_template/models/core/core_resource.dart';
 import 'package:flutter_bloc_app_template/models/payload/payload_resource.dart';
 import 'package:flutter_bloc_app_template/models/rocket/rocket_ext.dart';
+import 'package:flutter_bloc_app_template/models/stage/stage_core_resource.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -17,8 +16,8 @@ void main() {
       type: 'FT',
       firstStage: NetworkFirstStageModel(
         cores: [
-          NetworkCoreModel(coreSerial: 'B1013'),
-          NetworkCoreModel(coreSerial: 'B1014'),
+          NetworkStageCoreModel(coreSerial: 'B1013'),
+          NetworkStageCoreModel(coreSerial: 'B1014'),
         ],
       ),
       secondStage: NetworkSecondStageModel(
@@ -39,8 +38,8 @@ void main() {
 
       // First stage
       expect(resource.firstStage?.cores, [
-        const CoreResource(coreSerial: 'B1013'),
-        const CoreResource(coreSerial: 'B1014'),
+        const StageCoreResource(coreSerial: 'B1013'),
+        const StageCoreResource(coreSerial: 'B1014'),
       ]);
 
       // Second stage

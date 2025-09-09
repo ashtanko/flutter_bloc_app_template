@@ -360,4 +360,75 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get tons => 'тонн';
+
+  @override
+  String get core_status_active => 'активний';
+
+  @override
+  String get core_status_lost => 'втрачений';
+
+  @override
+  String get core_status_inactive => 'неактивний';
+
+  @override
+  String get core_status_unknown => 'невідомий';
+
+  @override
+  String get errorLoadingCores => 'Помилка завантаження ядер';
+
+  @override
+  String get retry => 'Повторити';
+
+  @override
+  String get firstLaunch => 'Перший запуск';
+
+  @override
+  String missions(Object count) {
+    return '$count місій';
+  }
+
+  @override
+  String reuses(Object count) {
+    return '$count повторів';
+  }
+
+  @override
+  String get unknown => 'Невідомо';
+
+  @override
+  String get na => 'Н/Д';
+
+  @override
+  String get core_filter_status_all => 'Усі';
+
+  @override
+  String get core_filter_status_active => 'Активний';
+
+  @override
+  String get core_filter_status_lost => 'Втрачений';
+
+  @override
+  String get core_filter_status_inactive => 'Неактивний';
+
+  @override
+  String get core_filter_status_unknown => 'Невідомо';
+
+  @override
+  String get core_filter_search_hint => 'Пошук ядер або місій...';
+
+  @override
+  String noCoresFound(Object query) {
+    return 'Ядра за запитом \"$query\" не знайдено';
+  }
+
+  @override
+  String blockLabel(Object blockNumber) {
+    return 'Блок $blockNumber';
+  }
+
+  @override
+  String get spaceXCoresTitle => 'Супутникові ядра Falcon від SpaceX';
+
+  @override
+  String get coresLabel => 'Ядра';
 }

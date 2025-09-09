@@ -30,7 +30,8 @@ void main() {
               // Check labels
               expect(destinations[0].label, context.launchesTitle);
               expect(destinations[1].label, context.rocketsTab);
-              expect(destinations[2].label, context.settingsTitle);
+              expect(destinations[2].label, context.coresLabel);
+              expect(destinations[3].label, context.settingsTitle);
 
               return Container();
             },

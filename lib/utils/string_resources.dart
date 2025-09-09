@@ -32,6 +32,8 @@ extension StringResourcesExtension on BuildContext {
 
   String get rocketsTab => l10n.rocketsTab;
 
+  String get coresLabel => l10n.coresLabel;
+
   String get settingsTitle => l10n.settingsTitle;
 
   String get emptyList => l10n.emptyList;

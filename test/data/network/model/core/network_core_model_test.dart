@@ -1,57 +1,74 @@
+import 'dart:convert';
+
 import 'package:flutter_bloc_app_template/data/network/model/core/network_core_model.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   group('NetworkCoreModel', () {
-    final json = {
-      'core_serial': 'B1013',
-      'flight': 1,
-      'block': 1,
-      'gridfins': true,
-      'legs': true,
-      'reused': false,
-      'land_success': true,
-      'landing_intent': true,
-      'landing_type': 'Ocean',
-      'landing_vehicle': null
+    const mission = NetworkMission(
+      name: 'RatSat',
+      flight: 4,
+    );
+
+    const coreModel = NetworkCoreModel(
+      coreSerial: 'Merlin2C',
+      block: null,
+      status: 'lost',
+      originalLaunch: '2008-09-28T23:15:00.000Z',
+      originalLaunchUnix: 1222643700,
+      missions: [mission],
+      reuseCount: 0,
+      rtlsAttempts: 0,
+      rtlsLandings: 0,
+      asdsAttempts: 0,
+      asdsLandings: 0,
+      waterLanding: false,
+      details: 'Initially scheduled for 23–25 Sep, carried dummy payload – '
+          'mass simulator, 165 kg (originally intended to be RazakSAT.',
+    );
+
+    final jsonMap = {
+      'core_serial': 'Merlin2C',
+      'block': null,
+      'status': 'lost',
+      'original_launch': '2008-09-28T23:15:00.000Z',
+      'original_launch_unix': 1222643700,
+      'missions': [
+        {'name': 'RatSat', 'flight': 4}
+      ],
+      'reuse_count': 0,
+      'rtls_attempts': 0,
+      'rtls_landings': 0,
+      'asds_attempts': 0,
+      'asds_landings': 0,
+      'water_landing': false,
+      'details': 'Initially scheduled for 23–25 Sep, carried dummy payload – '
+          'mass simulator, 165 kg (originally intended to be RazakSAT.'
     };
 
-    test('fromJson should parse correctly', () {
-      final model = NetworkCoreModel.fromJson(json);
-
-      expect(model.coreSerial, 'B1013');
-      expect(model.flight, 1);
-      expect(model.block, 1);
-      expect(model.gridfins, true);
-      expect(model.legs, true);
-      expect(model.reused, false);
-      expect(model.landSuccess, true);
-      expect(model.landingIntent, true);
-      expect(model.landingType, 'Ocean');
-      expect(model.landingVehicle, isNull);
+    test('fromJson should parse JSON correctly', () {
+      final model = NetworkCoreModel.fromJson(jsonMap);
+      expect(model, coreModel);
     });
 
-    test('toJson should convert correctly', () {
-      final model = NetworkCoreModel.fromJson(json);
-      final result = model.toJson();
-
-      expect(result, json);
+    test('equality should work', () {
+      final model1 = NetworkCoreModel.fromJson(jsonMap);
+      final model2 = NetworkCoreModel.fromJson(jsonMap);
+      expect(model1, model2);
+      expect(model1.hashCode, model2.hashCode);
     });
 
-    test('equality should work correctly', () {
-      final model1 = NetworkCoreModel.fromJson(json);
-      final model2 = NetworkCoreModel.fromJson(json);
-
-      expect(model1, equals(model2));
+    test('missions should contain correct values', () {
+      final model = NetworkCoreModel.fromJson(jsonMap);
+      expect(model.missions, isNotNull);
+      expect(model.missions!.first.name, 'RatSat');
+      expect(model.missions!.first.flight, 4);
     });
 
-    test('copyWith should override values', () {
-      final model = NetworkCoreModel.fromJson(json);
-      final updated = model.copyWith(coreSerial: 'B1014', flight: 2);
-
-      expect(updated.coreSerial, 'B1014');
-      expect(updated.flight, 2);
-      expect(updated.block, model.block);
+    test('can encode to JSON string', () {
+      final jsonString = jsonEncode(coreModel.toJson());
+      final decoded = jsonDecode(jsonString);
+      expect(decoded, jsonMap);
     });
   });
 }

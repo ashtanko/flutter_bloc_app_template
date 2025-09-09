@@ -1,6 +1,8 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_bloc_app_template/data/network/data_source/cores_network_data_source.dart';
 import 'package:flutter_bloc_app_template/data/network/data_source/launches_network_data_source.dart';
 import 'package:flutter_bloc_app_template/data/network/data_source/rocket_network_data_source.dart';
+import 'package:flutter_bloc_app_template/data/network/service/cores/cores_service.dart';
 import 'package:flutter_bloc_app_template/data/network/service/launch/launch_service.dart';
 import 'package:flutter_bloc_app_template/data/network/service/rocket/rocket_service.dart';
 import 'package:injectable/injectable.dart';
@@ -35,6 +37,11 @@ abstract class NetworkModule {
   }
 
   @factoryMethod
+  CoresService provideCoresService(Dio dio) {
+    return CoresService(dio);
+  }
+
+  @factoryMethod
   LaunchesDataSource provideLaunchesDataSource(LaunchService service) {
     return LaunchesNetworkDataSource(service);
   }
@@ -42,5 +49,10 @@ abstract class NetworkModule {
   @factoryMethod
   RocketDataSource provideRocketDataSource(RocketService service) {
     return RocketNetworkDataSource(service);
+  }
+
+  @factoryMethod
+  CoresDataSource provideCoresDataSource(CoresService service) {
+    return CoresNetworkDataSource(service);
   }
 }

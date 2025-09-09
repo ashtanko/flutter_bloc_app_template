@@ -1,0 +1,20 @@
+{
+  "core_serial": "Merlin1A",
+  "block": null,
+  "status": "lost",
+  "original_launch": "2006-03-24T22:30:00.000Z",
+  "original_launch_unix": 1143239400,
+  "missions": [
+    {
+      "name": "FalconSat",
+      "flight": 1
+    }
+  ],
+  "reuse_count": 0,
+  "rtls_attempts": 0,
+  "rtls_landings": 0,
+  "asds_attempts": 0,
+  "asds_landings": 0,
+  "water_landing": false,
+  "details": "Engine failure at T+33 seconds resulted in loss of vehicle"
+}
