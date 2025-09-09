@@ -134,3 +134,5 @@ jobs:
             flutter test integration_test/launches_test.dart --flavor dev
             flutter test integration_test/settings_test.dart --flavor dev
             flutter test integration_test/rockets_screen_integration_test.dart --flavor dev
+            flutter test integration_test/rocket_screen_test.dart --flavor dev
+            flutter test integration_test/rockets_integration_live_test.dart --flavor dev

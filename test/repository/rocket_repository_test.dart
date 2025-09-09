@@ -130,7 +130,7 @@ RocketResource getRocketResource() {
     secondStage: secondStage,
     engines: engines,
     landingLegs: landingLegs,
-    flickrImages: ['https://imgur.com/azYafd8.jpg'],
+    flickrImages: ['https://farm9.staticflickr.com/8638/16855192031_962f7b1113_o.jpg'],
     wikipedia: 'https://en.wikipedia.org/wiki/Falcon_9',
     description: 'Falcon 9 is a two-stage rocket designed by SpaceX.',
     rocketId: 'falcon9',

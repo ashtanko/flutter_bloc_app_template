@@ -20,30 +20,22 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'uk';
 
-  static String m0(blockNumber) => "Блок ${blockNumber}";
+  static String m0(days) => "Через ${days} днів";
 
-  static String m1(days) => "Через ${days} днів";
+  static String m1(days) => "${days} днів тому";
 
-  static String m2(days) => "${days} днів тому";
+  static String m2(number) => "Політ #${number}";
 
-  static String m3(number) => "Політ #${number}";
+  static String m3(id) => "Приклад елементу ${id}";
 
-  static String m4(id) => "Приклад елементу ${id}";
+  static String m4(launchedAt) => "Запущено: ${launchedAt}";
 
-  static String m5(launchedAt) => "Запущено: ${launchedAt}";
+  static String m5(mission) => "Місія: ${mission}";
 
-  static String m6(mission) => "Місія: ${mission}";
-
-  static String m7(count) => "${count} місій";
-
-  static String m8(query) => "Ядра за запитом \"${query}\" не знайдено";
-
-  static String m9(count) => "${count} повторів";
-
-  static String m10(rocketName, rocketType) =>
+  static String m6(rocketName, rocketType) =>
       "Ракета: ${rocketName} (${rocketType})";
 
-  static String m11(percentage) => "${percentage}% успішних запусків";
+  static String m7(percentage) => "${percentage}% успішних запусків";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -64,7 +56,6 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "appearanceTitle": MessageLookupByLibrary.simpleMessage("Зовнішній вигляд"),
     "article": MessageLookupByLibrary.simpleMessage("Стаття"),
-    "blockLabel": m0,
     "borderRadiusButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Радіус кордону",
     ),
@@ -72,27 +63,6 @@ class MessageLookup extends MessageLookupByLibrary {
       "Кордона сторона",
     ),
     "coreSerial": MessageLookupByLibrary.simpleMessage("Серійний номер ядра"),
-    "core_filter_search_hint": MessageLookupByLibrary.simpleMessage(
-      "Пошук ядер або місій...",
-    ),
-    "core_filter_status_active": MessageLookupByLibrary.simpleMessage(
-      "Активний",
-    ),
-    "core_filter_status_all": MessageLookupByLibrary.simpleMessage("Усі"),
-    "core_filter_status_inactive": MessageLookupByLibrary.simpleMessage(
-      "Неактивний",
-    ),
-    "core_filter_status_lost": MessageLookupByLibrary.simpleMessage(
-      "Втрачений",
-    ),
-    "core_filter_status_unknown": MessageLookupByLibrary.simpleMessage(
-      "Невідомо",
-    ),
-    "core_status_active": MessageLookupByLibrary.simpleMessage("активний"),
-    "core_status_inactive": MessageLookupByLibrary.simpleMessage("неактивний"),
-    "core_status_lost": MessageLookupByLibrary.simpleMessage("втрачений"),
-    "core_status_unknown": MessageLookupByLibrary.simpleMessage("невідомий"),
-    "coresLabel": MessageLookupByLibrary.simpleMessage("Ядра"),
     "customers": MessageLookupByLibrary.simpleMessage("Клієнти"),
     "darkGoldThemeTitle": MessageLookupByLibrary.simpleMessage("Темне золото"),
     "darkMintThemeTitle": MessageLookupByLibrary.simpleMessage("Темна м’ята"),
@@ -108,8 +78,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Режим теми",
     ),
     "darkThemeTitle": MessageLookupByLibrary.simpleMessage("Темна тема"),
-    "daysFromTodayTitle": m1,
-    "daysSinceTodayTitle": m2,
+    "daysFromTodayTitle": m0,
+    "daysSinceTodayTitle": m1,
+    "diameterLabel": MessageLookupByLibrary.simpleMessage("Діаметр"),
     "disabledButtonTitle": MessageLookupByLibrary.simpleMessage("Вимкнено"),
     "disabledRoundedButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Вимкнено (кругла)",
@@ -126,25 +97,23 @@ class MessageLookup extends MessageLookupByLibrary {
     "emailsTitle": MessageLookupByLibrary.simpleMessage("Електронні листи"),
     "emptyList": MessageLookupByLibrary.simpleMessage("Список порожній"),
     "enabledButtonTitle": MessageLookupByLibrary.simpleMessage("Увімкнено"),
+    "engineDetails": MessageLookupByLibrary.simpleMessage("Деталі двигуна"),
     "error": MessageLookupByLibrary.simpleMessage("Помилка"),
-    "errorLoadingCores": MessageLookupByLibrary.simpleMessage(
-      "Помилка завантаження ядер",
-    ),
     "experimentalThemeTitle": MessageLookupByLibrary.simpleMessage(
       "Експериментальна тема",
     ),
-    "firstLaunch": MessageLookupByLibrary.simpleMessage("Перший запуск"),
     "firstStage": MessageLookupByLibrary.simpleMessage("🚀 Перша ступінь"),
     "flight": MessageLookupByLibrary.simpleMessage("Політ"),
-    "flightNumber": m3,
+    "flightNumber": m2,
     "gridFins": MessageLookupByLibrary.simpleMessage("Сітчасті кермові"),
+    "heightLabel": MessageLookupByLibrary.simpleMessage("Висота"),
     "iconAndPaddingButtonTitle": MessageLookupByLibrary.simpleMessage(
       "З іконкою та відступом",
     ),
     "iconButtonTitle": MessageLookupByLibrary.simpleMessage("З іконкою"),
     "id": MessageLookupByLibrary.simpleMessage("ID"),
     "itemDetailsTitle": MessageLookupByLibrary.simpleMessage("Деталі елементу"),
-    "itemTitle": m4,
+    "itemTitle": m3,
     "itemsTitle": MessageLookupByLibrary.simpleMessage("Приклади елементів"),
     "landing": MessageLookupByLibrary.simpleMessage("Приземлення"),
     "landingLegs": MessageLookupByLibrary.simpleMessage("Ноги приземлення"),
@@ -153,7 +122,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "launch": MessageLookupByLibrary.simpleMessage("Запуск"),
     "launchSite": MessageLookupByLibrary.simpleMessage("Місце запуску"),
-    "launchedAt": m5,
+    "launchedAt": m4,
     "launchesTitle": MessageLookupByLibrary.simpleMessage("Запуски"),
     "lightGoldThemeTitle": MessageLookupByLibrary.simpleMessage(
       "Світле золото",
@@ -165,19 +134,18 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "manufacturer": MessageLookupByLibrary.simpleMessage("Виробник"),
     "mass": MessageLookupByLibrary.simpleMessage("Маса"),
+    "massLabel": MessageLookupByLibrary.simpleMessage("Маса"),
     "missionFailed": MessageLookupByLibrary.simpleMessage("Місія не вдалася"),
     "missionOverview": MessageLookupByLibrary.simpleMessage("Огляд місії"),
     "missionSuccess": MessageLookupByLibrary.simpleMessage("Місія успішна"),
     "missionSuccessful": MessageLookupByLibrary.simpleMessage("Місія успішна"),
     "missionTimeline": MessageLookupByLibrary.simpleMessage("Хронологія місії"),
-    "missionTitle": m6,
-    "missions": m7,
-    "na": MessageLookupByLibrary.simpleMessage("Н/Д"),
+    "missionTitle": m5,
     "nationality": MessageLookupByLibrary.simpleMessage("Національність"),
     "newsScreen": MessageLookupByLibrary.simpleMessage("Новини"),
-    "noCoresFound": m8,
     "noDetails": MessageLookupByLibrary.simpleMessage("Деталі відсутні"),
     "notAvailable": MessageLookupByLibrary.simpleMessage("Н/Д"),
+    "numberLabel": MessageLookupByLibrary.simpleMessage("Кількість"),
     "objectivesCompleted": MessageLookupByLibrary.simpleMessage(
       "Цілі досягнуті",
     ),
@@ -185,20 +153,24 @@ class MessageLookup extends MessageLookupByLibrary {
       "Цілі місії не досягнуті",
     ),
     "orbit": MessageLookupByLibrary.simpleMessage("Орбіта"),
+    "overview": MessageLookupByLibrary.simpleMessage("Огляд"),
     "payload": MessageLookupByLibrary.simpleMessage("Корисне навантаження"),
+    "payloadCapacity": MessageLookupByLibrary.simpleMessage(
+      "Корисне навантаження",
+    ),
     "payloadTitle": MessageLookupByLibrary.simpleMessage(
       "Корисне навантаження",
     ),
     "pressKit": MessageLookupByLibrary.simpleMessage("Прес-кит"),
+    "propellant1Label": MessageLookupByLibrary.simpleMessage("Паливо 1"),
+    "propellant2Label": MessageLookupByLibrary.simpleMessage("Паливо 2"),
     "recoveryShips": MessageLookupByLibrary.simpleMessage("Судна порятунку"),
     "reddit": MessageLookupByLibrary.simpleMessage("Reddit"),
     "retiredStatus": MessageLookupByLibrary.simpleMessage(
       "Знято з експлуатації",
     ),
-    "retry": MessageLookupByLibrary.simpleMessage("Повторити"),
     "reused": MessageLookupByLibrary.simpleMessage("Повторне використання"),
-    "reuses": m9,
-    "rocket": m10,
+    "rocket": m6,
     "rocketBlock": MessageLookupByLibrary.simpleMessage("Блок"),
     "rocketDetails": MessageLookupByLibrary.simpleMessage("Деталі ракети"),
     "rocketName": MessageLookupByLibrary.simpleMessage("Назва ракети"),
@@ -208,21 +180,27 @@ class MessageLookup extends MessageLookupByLibrary {
     "rocketsTitle": MessageLookupByLibrary.simpleMessage("Ракети"),
     "settingsTitle": MessageLookupByLibrary.simpleMessage("Налаштування"),
     "siteIdLabel": MessageLookupByLibrary.simpleMessage("ID сайту:"),
-    "spaceXCoresTitle": MessageLookupByLibrary.simpleMessage(
-      "Супутникові ядра Falcon від SpaceX",
+    "specifications": MessageLookupByLibrary.simpleMessage(
+      "Технічні характеристики",
     ),
+    "stagesLabel": MessageLookupByLibrary.simpleMessage("Стадії"),
     "staticFireTest": MessageLookupByLibrary.simpleMessage(
       "Статичний вогневий тест",
     ),
-    "successRate": m11,
+    "successRate": m7,
     "systemThemeTitle": MessageLookupByLibrary.simpleMessage("Системна тема"),
     "tabHome": MessageLookupByLibrary.simpleMessage("Головна"),
     "tabSettings": MessageLookupByLibrary.simpleMessage("Налаштування"),
     "themeTitle": MessageLookupByLibrary.simpleMessage("Тема"),
+    "thrustSeaLevelLabel": MessageLookupByLibrary.simpleMessage(
+      "Тяга (на рівні моря)",
+    ),
+    "tons": MessageLookupByLibrary.simpleMessage("тонн"),
     "transparentButtonTitle": MessageLookupByLibrary.simpleMessage("Прозора"),
     "tryAgainButton": MessageLookupByLibrary.simpleMessage("Спробувати ще раз"),
     "type": MessageLookupByLibrary.simpleMessage("Тип"),
-    "unknown": MessageLookupByLibrary.simpleMessage("Невідомо"),
+    "typeLabel": MessageLookupByLibrary.simpleMessage("Тип"),
+    "versionLabel": MessageLookupByLibrary.simpleMessage("Версія"),
     "watchVideo": MessageLookupByLibrary.simpleMessage("Дивитися відео"),
     "wikipedia": MessageLookupByLibrary.simpleMessage("Вікіпедія"),
   };

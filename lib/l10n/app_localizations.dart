@@ -678,131 +678,95 @@ abstract class AppLocalizations {
   /// **'Rockets'**
   String get rocketsTitle;
 
-  /// No description provided for @core_status_active.
+  /// No description provided for @overview.
   ///
   /// In en, this message translates to:
-  /// **'active'**
-  String get core_status_active;
+  /// **'Overview'**
+  String get overview;
 
-  /// No description provided for @core_status_lost.
+  /// No description provided for @specifications.
   ///
   /// In en, this message translates to:
-  /// **'lost'**
-  String get core_status_lost;
+  /// **'Specifications'**
+  String get specifications;
 
-  /// No description provided for @core_status_inactive.
+  /// No description provided for @payloadCapacity.
   ///
   /// In en, this message translates to:
-  /// **'inactive'**
-  String get core_status_inactive;
+  /// **'Payload Capacity'**
+  String get payloadCapacity;
 
-  /// No description provided for @core_status_unknown.
+  /// No description provided for @engineDetails.
   ///
   /// In en, this message translates to:
-  /// **'unknown'**
-  String get core_status_unknown;
+  /// **'Engine Details'**
+  String get engineDetails;
 
-  /// No description provided for @errorLoadingCores.
+  /// No description provided for @heightLabel.
   ///
   /// In en, this message translates to:
-  /// **'Error loading cores'**
-  String get errorLoadingCores;
+  /// **'Height'**
+  String get heightLabel;
 
-  /// No description provided for @retry.
+  /// No description provided for @diameterLabel.
   ///
   /// In en, this message translates to:
-  /// **'Retry'**
-  String get retry;
+  /// **'Diameter'**
+  String get diameterLabel;
 
-  /// No description provided for @firstLaunch.
+  /// No description provided for @massLabel.
   ///
   /// In en, this message translates to:
-  /// **'First Launch'**
-  String get firstLaunch;
+  /// **'Mass'**
+  String get massLabel;
 
-  /// No description provided for @missions.
+  /// No description provided for @stagesLabel.
   ///
   /// In en, this message translates to:
-  /// **'{count} missions'**
-  String missions(Object count);
+  /// **'Stages'**
+  String get stagesLabel;
 
-  /// No description provided for @reuses.
+  /// No description provided for @typeLabel.
   ///
   /// In en, this message translates to:
-  /// **'{count} reuses'**
-  String reuses(Object count);
+  /// **'Type'**
+  String get typeLabel;
 
-  /// No description provided for @unknown.
+  /// No description provided for @versionLabel.
   ///
   /// In en, this message translates to:
-  /// **'Unknown'**
-  String get unknown;
+  /// **'Version'**
+  String get versionLabel;
 
-  /// No description provided for @na.
+  /// No description provided for @numberLabel.
   ///
   /// In en, this message translates to:
-  /// **'N/A'**
-  String get na;
+  /// **'Number'**
+  String get numberLabel;
 
-  /// No description provided for @core_filter_status_all.
+  /// No description provided for @propellant1Label.
   ///
   /// In en, this message translates to:
-  /// **'All'**
-  String get core_filter_status_all;
+  /// **'Propellant 1'**
+  String get propellant1Label;
 
-  /// No description provided for @core_filter_status_active.
+  /// No description provided for @propellant2Label.
   ///
   /// In en, this message translates to:
-  /// **'Active'**
-  String get core_filter_status_active;
+  /// **'Propellant 2'**
+  String get propellant2Label;
 
-  /// No description provided for @core_filter_status_lost.
+  /// No description provided for @thrustSeaLevelLabel.
   ///
   /// In en, this message translates to:
-  /// **'Lost'**
-  String get core_filter_status_lost;
+  /// **'Thrust (Sea Level)'**
+  String get thrustSeaLevelLabel;
 
-  /// No description provided for @core_filter_status_inactive.
+  /// No description provided for @tons.
   ///
   /// In en, this message translates to:
-  /// **'Inactive'**
-  String get core_filter_status_inactive;
-
-  /// No description provided for @core_filter_status_unknown.
-  ///
-  /// In en, this message translates to:
-  /// **'Unknown'**
-  String get core_filter_status_unknown;
-
-  /// No description provided for @core_filter_search_hint.
-  ///
-  /// In en, this message translates to:
-  /// **'Search cores or missions...'**
-  String get core_filter_search_hint;
-
-  /// No description provided for @noCoresFound.
-  ///
-  /// In en, this message translates to:
-  /// **'No cores found for \"{query}\"'**
-  String noCoresFound(Object query);
-
-  /// No description provided for @blockLabel.
-  ///
-  /// In en, this message translates to:
-  /// **'Block {blockNumber}'**
-  String blockLabel(Object blockNumber);
-
-  /// No description provided for @spaceXCoresTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'SpaceX Falcon Cores'**
-  String get spaceXCoresTitle;
-
-  /// No description provided for @coresLabel.
-  ///
-  /// In en, this message translates to:
-  /// **'Cores'**
-  String get coresLabel;
+  /// **'tons'**
+  String get tons;
 }
 
 class _AppLocalizationsDelegate

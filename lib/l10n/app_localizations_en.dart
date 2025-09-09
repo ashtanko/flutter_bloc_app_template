@@ -315,73 +315,47 @@ class AppLocalizationsEn extends AppLocalizations {
   String get rocketsTitle => 'Rockets';
 
   @override
-  String get core_status_active => 'active';
+  String get overview => 'Overview';
 
   @override
-  String get core_status_lost => 'lost';
+  String get specifications => 'Specifications';
 
   @override
-  String get core_status_inactive => 'inactive';
+  String get payloadCapacity => 'Payload Capacity';
 
   @override
-  String get core_status_unknown => 'unknown';
+  String get engineDetails => 'Engine Details';
 
   @override
-  String get errorLoadingCores => 'Error loading cores';
+  String get heightLabel => 'Height';
 
   @override
-  String get retry => 'Retry';
+  String get diameterLabel => 'Diameter';
 
   @override
-  String get firstLaunch => 'First Launch';
+  String get massLabel => 'Mass';
 
   @override
-  String missions(Object count) {
-    return '$count missions';
-  }
+  String get stagesLabel => 'Stages';
 
   @override
-  String reuses(Object count) {
-    return '$count reuses';
-  }
+  String get typeLabel => 'Type';
 
   @override
-  String get unknown => 'Unknown';
+  String get versionLabel => 'Version';
 
   @override
-  String get na => 'N/A';
+  String get numberLabel => 'Number';
 
   @override
-  String get core_filter_status_all => 'All';
+  String get propellant1Label => 'Propellant 1';
 
   @override
-  String get core_filter_status_active => 'Active';
+  String get propellant2Label => 'Propellant 2';
 
   @override
-  String get core_filter_status_lost => 'Lost';
+  String get thrustSeaLevelLabel => 'Thrust (Sea Level)';
 
   @override
-  String get core_filter_status_inactive => 'Inactive';
-
-  @override
-  String get core_filter_status_unknown => 'Unknown';
-
-  @override
-  String get core_filter_search_hint => 'Search cores or missions...';
-
-  @override
-  String noCoresFound(Object query) {
-    return 'No cores found for \"$query\"';
-  }
-
-  @override
-  String blockLabel(Object blockNumber) {
-    return 'Block $blockNumber';
-  }
-
-  @override
-  String get spaceXCoresTitle => 'SpaceX Falcon Cores';
-
-  @override
-  String get coresLabel => 'Cores';
+  String get tons => 'tons';
 }

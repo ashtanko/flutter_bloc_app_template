@@ -984,189 +984,109 @@ class S {
     );
   }
 
-  /// `active`
-  String get core_status_active {
+  /// `Overview`
+  String get overview {
+    return Intl.message('Overview', name: 'overview', desc: '', args: []);
+  }
+
+  /// `Specifications`
+  String get specifications {
     return Intl.message(
-      'active',
-      name: 'core_status_active',
+      'Specifications',
+      name: 'specifications',
       desc: '',
       args: [],
     );
   }
 
-  /// `lost`
-  String get core_status_lost {
-    return Intl.message('lost', name: 'core_status_lost', desc: '', args: []);
-  }
-
-  /// `inactive`
-  String get core_status_inactive {
+  /// `Payload Capacity`
+  String get payloadCapacity {
     return Intl.message(
-      'inactive',
-      name: 'core_status_inactive',
+      'Payload Capacity',
+      name: 'payloadCapacity',
       desc: '',
       args: [],
     );
   }
 
-  /// `unknown`
-  String get core_status_unknown {
+  /// `Engine Details`
+  String get engineDetails {
     return Intl.message(
-      'unknown',
-      name: 'core_status_unknown',
+      'Engine Details',
+      name: 'engineDetails',
       desc: '',
       args: [],
     );
   }
 
-  /// `Error loading cores`
-  String get errorLoadingCores {
+  /// `Height`
+  String get heightLabel {
+    return Intl.message('Height', name: 'heightLabel', desc: '', args: []);
+  }
+
+  /// `Diameter`
+  String get diameterLabel {
+    return Intl.message('Diameter', name: 'diameterLabel', desc: '', args: []);
+  }
+
+  /// `Mass`
+  String get massLabel {
+    return Intl.message('Mass', name: 'massLabel', desc: '', args: []);
+  }
+
+  /// `Stages`
+  String get stagesLabel {
+    return Intl.message('Stages', name: 'stagesLabel', desc: '', args: []);
+  }
+
+  /// `Type`
+  String get typeLabel {
+    return Intl.message('Type', name: 'typeLabel', desc: '', args: []);
+  }
+
+  /// `Version`
+  String get versionLabel {
+    return Intl.message('Version', name: 'versionLabel', desc: '', args: []);
+  }
+
+  /// `Number`
+  String get numberLabel {
+    return Intl.message('Number', name: 'numberLabel', desc: '', args: []);
+  }
+
+  /// `Propellant 1`
+  String get propellant1Label {
     return Intl.message(
-      'Error loading cores',
-      name: 'errorLoadingCores',
+      'Propellant 1',
+      name: 'propellant1Label',
       desc: '',
       args: [],
     );
   }
 
-  /// `Retry`
-  String get retry {
-    return Intl.message('Retry', name: 'retry', desc: '', args: []);
-  }
-
-  /// `First Launch`
-  String get firstLaunch {
+  /// `Propellant 2`
+  String get propellant2Label {
     return Intl.message(
-      'First Launch',
-      name: 'firstLaunch',
+      'Propellant 2',
+      name: 'propellant2Label',
       desc: '',
       args: [],
     );
   }
 
-  /// `{count} missions`
-  String missions(Object count) {
+  /// `Thrust (Sea Level)`
+  String get thrustSeaLevelLabel {
     return Intl.message(
-      '$count missions',
-      name: 'missions',
-      desc: '',
-      args: [count],
-    );
-  }
-
-  /// `{count} reuses`
-  String reuses(Object count) {
-    return Intl.message(
-      '$count reuses',
-      name: 'reuses',
-      desc: '',
-      args: [count],
-    );
-  }
-
-  /// `Unknown`
-  String get unknown {
-    return Intl.message('Unknown', name: 'unknown', desc: '', args: []);
-  }
-
-  /// `N/A`
-  String get na {
-    return Intl.message('N/A', name: 'na', desc: '', args: []);
-  }
-
-  /// `All`
-  String get core_filter_status_all {
-    return Intl.message(
-      'All',
-      name: 'core_filter_status_all',
+      'Thrust (Sea Level)',
+      name: 'thrustSeaLevelLabel',
       desc: '',
       args: [],
     );
   }
 
-  /// `Active`
-  String get core_filter_status_active {
-    return Intl.message(
-      'Active',
-      name: 'core_filter_status_active',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Lost`
-  String get core_filter_status_lost {
-    return Intl.message(
-      'Lost',
-      name: 'core_filter_status_lost',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Inactive`
-  String get core_filter_status_inactive {
-    return Intl.message(
-      'Inactive',
-      name: 'core_filter_status_inactive',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Unknown`
-  String get core_filter_status_unknown {
-    return Intl.message(
-      'Unknown',
-      name: 'core_filter_status_unknown',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Search cores or missions...`
-  String get core_filter_search_hint {
-    return Intl.message(
-      'Search cores or missions...',
-      name: 'core_filter_search_hint',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `No cores found for "{query}"`
-  String noCoresFound(Object query) {
-    return Intl.message(
-      'No cores found for "$query"',
-      name: 'noCoresFound',
-      desc: '',
-      args: [query],
-    );
-  }
-
-  /// `Block {blockNumber}`
-  String blockLabel(Object blockNumber) {
-    return Intl.message(
-      'Block $blockNumber',
-      name: 'blockLabel',
-      desc: '',
-      args: [blockNumber],
-    );
-  }
-
-  /// `SpaceX Falcon Cores`
-  String get spaceXCoresTitle {
-    return Intl.message(
-      'SpaceX Falcon Cores',
-      name: 'spaceXCoresTitle',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Cores`
-  String get coresLabel {
-    return Intl.message('Cores', name: 'coresLabel', desc: '', args: []);
+  /// `tons`
+  String get tons {
+    return Intl.message('tons', name: 'tons', desc: '', args: []);
   }
 }
 

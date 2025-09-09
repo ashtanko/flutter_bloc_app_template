@@ -18,7 +18,7 @@ List<NavDestination> getDestinations(BuildContext context) {
       icon: const Icon(Icons.rocket_outlined),
       selectedIcon: const Icon(Icons.rocket),
       screen: const RocketsScreen(),
-      key: const Key('rockets'),
+      key: const Key('rockets_screen'),
     ),
     NavDestination(
       label: context.coresLabel,

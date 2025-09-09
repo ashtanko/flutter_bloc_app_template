@@ -317,73 +317,47 @@ class AppLocalizationsUk extends AppLocalizations {
   String get rocketsTitle => 'Ракети';
 
   @override
-  String get core_status_active => 'активний';
+  String get overview => 'Огляд';
 
   @override
-  String get core_status_lost => 'втрачений';
+  String get specifications => 'Технічні характеристики';
 
   @override
-  String get core_status_inactive => 'неактивний';
+  String get payloadCapacity => 'Корисне навантаження';
 
   @override
-  String get core_status_unknown => 'невідомий';
+  String get engineDetails => 'Деталі двигуна';
 
   @override
-  String get errorLoadingCores => 'Помилка завантаження ядер';
+  String get heightLabel => 'Висота';
 
   @override
-  String get retry => 'Повторити';
+  String get diameterLabel => 'Діаметр';
 
   @override
-  String get firstLaunch => 'Перший запуск';
+  String get massLabel => 'Маса';
 
   @override
-  String missions(Object count) {
-    return '$count місій';
-  }
+  String get stagesLabel => 'Стадії';
 
   @override
-  String reuses(Object count) {
-    return '$count повторів';
-  }
+  String get typeLabel => 'Тип';
 
   @override
-  String get unknown => 'Невідомо';
+  String get versionLabel => 'Версія';
 
   @override
-  String get na => 'Н/Д';
+  String get numberLabel => 'Кількість';
 
   @override
-  String get core_filter_status_all => 'Усі';
+  String get propellant1Label => 'Паливо 1';
 
   @override
-  String get core_filter_status_active => 'Активний';
+  String get propellant2Label => 'Паливо 2';
 
   @override
-  String get core_filter_status_lost => 'Втрачений';
+  String get thrustSeaLevelLabel => 'Тяга (на рівні моря)';
 
   @override
-  String get core_filter_status_inactive => 'Неактивний';
-
-  @override
-  String get core_filter_status_unknown => 'Невідомо';
-
-  @override
-  String get core_filter_search_hint => 'Пошук ядер або місій...';
-
-  @override
-  String noCoresFound(Object query) {
-    return 'Ядра за запитом \"$query\" не знайдено';
-  }
-
-  @override
-  String blockLabel(Object blockNumber) {
-    return 'Блок $blockNumber';
-  }
-
-  @override
-  String get spaceXCoresTitle => 'Супутникові ядра Falcon від SpaceX';
-
-  @override
-  String get coresLabel => 'Ядра';
+  String get tons => 'тонн';
 }

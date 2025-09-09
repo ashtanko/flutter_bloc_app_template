@@ -41,7 +41,7 @@ void main() {
               locale,
               RocketItemWidget(
                 rocket: testRocket,
-                onClick: (_) {},
+                onClick: () {},
               ),
             ),
           );
@@ -73,7 +73,7 @@ void main() {
               locale,
               RocketItemWidget(
                 rocket: retiredRocket,
-                onClick: (_) {},
+                onClick: () {},
               ),
             ),
           );

@@ -315,73 +315,47 @@ class AppLocalizationsDe extends AppLocalizations {
   String get rocketsTitle => 'Raketen';
 
   @override
-  String get core_status_active => 'aktiv';
+  String get overview => 'Übersicht';
 
   @override
-  String get core_status_lost => 'verloren';
+  String get specifications => 'Spezifikationen';
 
   @override
-  String get core_status_inactive => 'inaktiv';
+  String get payloadCapacity => 'Nutzlastkapazität';
 
   @override
-  String get core_status_unknown => 'unbekannt';
+  String get engineDetails => 'Motordetails';
 
   @override
-  String get errorLoadingCores => 'Fehler beim Laden der Kerne';
+  String get heightLabel => 'Höhe';
 
   @override
-  String get retry => 'Erneut versuchen';
+  String get diameterLabel => 'Durchmesser';
 
   @override
-  String get firstLaunch => 'Erststart';
+  String get massLabel => 'Masse';
 
   @override
-  String missions(Object count) {
-    return '$count Missionen';
-  }
+  String get stagesLabel => 'Stufen';
 
   @override
-  String reuses(Object count) {
-    return '$count Wiederverwendungen';
-  }
+  String get typeLabel => 'Typ';
 
   @override
-  String get unknown => 'Unbekannt';
+  String get versionLabel => 'Version';
 
   @override
-  String get na => 'N/V';
+  String get numberLabel => 'Anzahl';
 
   @override
-  String get core_filter_status_all => 'Alle';
+  String get propellant1Label => 'Treibstoff 1';
 
   @override
-  String get core_filter_status_active => 'Aktiv';
+  String get propellant2Label => 'Treibstoff 2';
 
   @override
-  String get core_filter_status_lost => 'Verloren';
+  String get thrustSeaLevelLabel => 'Schub (Bodenniveau)';
 
   @override
-  String get core_filter_status_inactive => 'Inaktiv';
-
-  @override
-  String get core_filter_status_unknown => 'Unbekannt';
-
-  @override
-  String get core_filter_search_hint => 'Suche nach Kernen oder Missionen...';
-
-  @override
-  String noCoresFound(Object query) {
-    return 'Keine Kerne für \"$query\" gefunden';
-  }
-
-  @override
-  String blockLabel(Object blockNumber) {
-    return 'Block $blockNumber';
-  }
-
-  @override
-  String get spaceXCoresTitle => 'SpaceX Falcon-Kerne';
-
-  @override
-  String get coresLabel => 'Kerne';
+  String get tons => 'Tonnen';
 }

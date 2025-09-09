@@ -20,30 +20,22 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'de';
 
-  static String m0(blockNumber) => "Block ${blockNumber}";
+  static String m0(days) => "In ${days} Tagen";
 
-  static String m1(days) => "In ${days} Tagen";
+  static String m1(days) => "Vor ${days} Tagen";
 
-  static String m2(days) => "Vor ${days} Tagen";
+  static String m2(number) => "Flug #${number}";
 
-  static String m3(number) => "Flug #${number}";
+  static String m3(id) => "Beispielartikel ${id}";
 
-  static String m4(id) => "Beispielartikel ${id}";
+  static String m4(launchedAt) => "Gestartet am: ${launchedAt}";
 
-  static String m5(launchedAt) => "Gestartet am: ${launchedAt}";
+  static String m5(mission) => "Mission: ${mission}";
 
-  static String m6(mission) => "Mission: ${mission}";
-
-  static String m7(count) => "${count} Missionen";
-
-  static String m8(query) => "Keine Kerne für \"${query}\" gefunden";
-
-  static String m9(count) => "${count} Wiederverwendungen";
-
-  static String m10(rocketName, rocketType) =>
+  static String m6(rocketName, rocketType) =>
       "Rakete: ${rocketName} (${rocketType})";
 
-  static String m11(percentage) => "${percentage}% Erfolg";
+  static String m7(percentage) => "${percentage}% Erfolg";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -66,7 +58,6 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "appearanceTitle": MessageLookupByLibrary.simpleMessage("Darstellung"),
     "article": MessageLookupByLibrary.simpleMessage("Artikel"),
-    "blockLabel": m0,
     "borderRadiusButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Abgerundete Ecken",
     ),
@@ -74,23 +65,6 @@ class MessageLookup extends MessageLookupByLibrary {
       "Rahmenlinie",
     ),
     "coreSerial": MessageLookupByLibrary.simpleMessage("Kernseriennummer"),
-    "core_filter_search_hint": MessageLookupByLibrary.simpleMessage(
-      "Suche nach Kernen oder Missionen...",
-    ),
-    "core_filter_status_active": MessageLookupByLibrary.simpleMessage("Aktiv"),
-    "core_filter_status_all": MessageLookupByLibrary.simpleMessage("Alle"),
-    "core_filter_status_inactive": MessageLookupByLibrary.simpleMessage(
-      "Inaktiv",
-    ),
-    "core_filter_status_lost": MessageLookupByLibrary.simpleMessage("Verloren"),
-    "core_filter_status_unknown": MessageLookupByLibrary.simpleMessage(
-      "Unbekannt",
-    ),
-    "core_status_active": MessageLookupByLibrary.simpleMessage("aktiv"),
-    "core_status_inactive": MessageLookupByLibrary.simpleMessage("inaktiv"),
-    "core_status_lost": MessageLookupByLibrary.simpleMessage("verloren"),
-    "core_status_unknown": MessageLookupByLibrary.simpleMessage("unbekannt"),
-    "coresLabel": MessageLookupByLibrary.simpleMessage("Kerne"),
     "customers": MessageLookupByLibrary.simpleMessage("Kunden"),
     "darkGoldThemeTitle": MessageLookupByLibrary.simpleMessage(
       "Dunkles Gold-Design",
@@ -110,8 +84,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Designmodus",
     ),
     "darkThemeTitle": MessageLookupByLibrary.simpleMessage("Dunkles Design"),
-    "daysFromTodayTitle": m1,
-    "daysSinceTodayTitle": m2,
+    "daysFromTodayTitle": m0,
+    "daysSinceTodayTitle": m1,
+    "diameterLabel": MessageLookupByLibrary.simpleMessage("Durchmesser"),
     "disabledButtonTitle": MessageLookupByLibrary.simpleMessage("Deaktiviert"),
     "disabledRoundedButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Deaktiviert (abgerundet)",
@@ -128,22 +103,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "emailsTitle": MessageLookupByLibrary.simpleMessage("E-Mails"),
     "emptyList": MessageLookupByLibrary.simpleMessage("Leere Liste"),
     "enabledButtonTitle": MessageLookupByLibrary.simpleMessage("Aktiviert"),
+    "engineDetails": MessageLookupByLibrary.simpleMessage("Motordetails"),
     "error": MessageLookupByLibrary.simpleMessage("Fehler"),
-    "errorLoadingCores": MessageLookupByLibrary.simpleMessage(
-      "Fehler beim Laden der Kerne",
-    ),
-    "firstLaunch": MessageLookupByLibrary.simpleMessage("Erststart"),
     "firstStage": MessageLookupByLibrary.simpleMessage("🚀 Erste Stufe"),
     "flight": MessageLookupByLibrary.simpleMessage("Flug"),
-    "flightNumber": m3,
+    "flightNumber": m2,
     "gridFins": MessageLookupByLibrary.simpleMessage("Steuergitter"),
+    "heightLabel": MessageLookupByLibrary.simpleMessage("Höhe"),
     "iconAndPaddingButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Mit Icon & Abstand",
     ),
     "iconButtonTitle": MessageLookupByLibrary.simpleMessage("Mit Icon"),
     "id": MessageLookupByLibrary.simpleMessage("Kennung"),
     "itemDetailsTitle": MessageLookupByLibrary.simpleMessage("Artikeldetails"),
-    "itemTitle": m4,
+    "itemTitle": m3,
     "itemsTitle": MessageLookupByLibrary.simpleMessage("Beispielartikel"),
     "landing": MessageLookupByLibrary.simpleMessage("Landung"),
     "landingLegs": MessageLookupByLibrary.simpleMessage("Landebeine"),
@@ -152,7 +125,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "launch": MessageLookupByLibrary.simpleMessage("Start"),
     "launchSite": MessageLookupByLibrary.simpleMessage("Startplatz"),
-    "launchedAt": m5,
+    "launchedAt": m4,
     "launchesTitle": MessageLookupByLibrary.simpleMessage("Starts"),
     "lightGoldThemeTitle": MessageLookupByLibrary.simpleMessage(
       "Helles Gold-Design",
@@ -166,6 +139,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "manufacturer": MessageLookupByLibrary.simpleMessage("Hersteller"),
     "mass": MessageLookupByLibrary.simpleMessage("Masse"),
+    "massLabel": MessageLookupByLibrary.simpleMessage("Masse"),
     "missionFailed": MessageLookupByLibrary.simpleMessage(
       "Mission fehlgeschlagen",
     ),
@@ -177,16 +151,14 @@ class MessageLookup extends MessageLookupByLibrary {
       "Mission erfolgreich",
     ),
     "missionTimeline": MessageLookupByLibrary.simpleMessage("Missionszeitplan"),
-    "missionTitle": m6,
-    "missions": m7,
-    "na": MessageLookupByLibrary.simpleMessage("N/V"),
+    "missionTitle": m5,
     "nationality": MessageLookupByLibrary.simpleMessage("Nationalität"),
     "newsScreen": MessageLookupByLibrary.simpleMessage("Nachrichten"),
-    "noCoresFound": m8,
     "noDetails": MessageLookupByLibrary.simpleMessage(
       "Keine Details verfügbar",
     ),
     "notAvailable": MessageLookupByLibrary.simpleMessage("Nicht verfügbar"),
+    "numberLabel": MessageLookupByLibrary.simpleMessage("Anzahl"),
     "objectivesCompleted": MessageLookupByLibrary.simpleMessage(
       "Ziele erreicht",
     ),
@@ -194,16 +166,20 @@ class MessageLookup extends MessageLookupByLibrary {
       "Missionsziele nicht erreicht",
     ),
     "orbit": MessageLookupByLibrary.simpleMessage("Umlaufbahn"),
+    "overview": MessageLookupByLibrary.simpleMessage("Übersicht"),
     "payload": MessageLookupByLibrary.simpleMessage("Nutzlast"),
+    "payloadCapacity": MessageLookupByLibrary.simpleMessage(
+      "Nutzlastkapazität",
+    ),
     "payloadTitle": MessageLookupByLibrary.simpleMessage("Nutzlast"),
     "pressKit": MessageLookupByLibrary.simpleMessage("Pressemappe"),
+    "propellant1Label": MessageLookupByLibrary.simpleMessage("Treibstoff 1"),
+    "propellant2Label": MessageLookupByLibrary.simpleMessage("Treibstoff 2"),
     "recoveryShips": MessageLookupByLibrary.simpleMessage("Bergungsschiffe"),
     "reddit": MessageLookupByLibrary.simpleMessage("Reddit"),
     "retiredStatus": MessageLookupByLibrary.simpleMessage("Außer Dienst"),
-    "retry": MessageLookupByLibrary.simpleMessage("Erneut versuchen"),
     "reused": MessageLookupByLibrary.simpleMessage("Wiederverwendet"),
-    "reuses": m9,
-    "rocket": m10,
+    "rocket": m6,
     "rocketBlock": MessageLookupByLibrary.simpleMessage("Block"),
     "rocketDetails": MessageLookupByLibrary.simpleMessage("Raketendetails"),
     "rocketName": MessageLookupByLibrary.simpleMessage("Raketenname"),
@@ -213,23 +189,27 @@ class MessageLookup extends MessageLookupByLibrary {
     "rocketsTitle": MessageLookupByLibrary.simpleMessage("Raketen"),
     "settingsTitle": MessageLookupByLibrary.simpleMessage("Einstellungen"),
     "siteIdLabel": MessageLookupByLibrary.simpleMessage("Standort-ID:"),
-    "spaceXCoresTitle": MessageLookupByLibrary.simpleMessage(
-      "SpaceX Falcon-Kerne",
-    ),
+    "specifications": MessageLookupByLibrary.simpleMessage("Spezifikationen"),
+    "stagesLabel": MessageLookupByLibrary.simpleMessage("Stufen"),
     "staticFireTest": MessageLookupByLibrary.simpleMessage(
       "Statischer Feuertest",
     ),
-    "successRate": m11,
+    "successRate": m7,
     "systemThemeTitle": MessageLookupByLibrary.simpleMessage("Systemdesign"),
     "tabHome": MessageLookupByLibrary.simpleMessage("Startseite"),
     "tabSettings": MessageLookupByLibrary.simpleMessage("Einstellungen"),
     "themeTitle": MessageLookupByLibrary.simpleMessage("Design"),
+    "thrustSeaLevelLabel": MessageLookupByLibrary.simpleMessage(
+      "Schub (Bodenniveau)",
+    ),
+    "tons": MessageLookupByLibrary.simpleMessage("Tonnen"),
     "transparentButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Transparent",
     ),
     "tryAgainButton": MessageLookupByLibrary.simpleMessage("Erneut versuchen"),
     "type": MessageLookupByLibrary.simpleMessage("Typ"),
-    "unknown": MessageLookupByLibrary.simpleMessage("Unbekannt"),
+    "typeLabel": MessageLookupByLibrary.simpleMessage("Typ"),
+    "versionLabel": MessageLookupByLibrary.simpleMessage("Version"),
     "watchVideo": MessageLookupByLibrary.simpleMessage("Video ansehen"),
     "wikipedia": MessageLookupByLibrary.simpleMessage("Wikipedia"),
   };
