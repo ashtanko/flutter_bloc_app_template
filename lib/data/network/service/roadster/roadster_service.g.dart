@@ -29,7 +29,7 @@ class _RoadsterService implements RoadsterService {
       Options(method: 'GET', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'roadster}',
+            'roadster',
             queryParameters: queryParameters,
             data: _data,
           )

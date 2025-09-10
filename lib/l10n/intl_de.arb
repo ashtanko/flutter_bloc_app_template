@@ -228,5 +228,22 @@
   "propellant1Label": "Treibstoff 1",
   "propellant2Label": "Treibstoff 2",
   "thrustSeaLevelLabel": "Schub (Bodenniveau)",
-  "tons": "Tonnen"
+  "tons": "Tonnen",
+  "learnMore": "Mehr erfahren",
+  "launchInformation": "Startinformationen",
+  "launchMass": "Startmasse",
+  "launchVehicle": "Startfahrzeug",
+  "orbitalParameters": "Orbitale Parameter",
+  "millionKm": "Millionen km",
+  "missionDetails": "Missionsdetails",
+  "trackLive": "Live verfolgen",
+  "marsDistance": "Abstand zum Mars",
+  "earthDistance": "Abstand zur Erde",
+  "currentSpeed": "Aktuelle Geschwindigkeit",
+  "orbitalPeriod": "Orbitale Periode",
+  "unitDays": "Tage",
+  "unitKph": "km/h",
+  "launched": "Gestartet: {date}",
+  "roadsterTitle": "Roadster",
+  "roadsterDescription": "Elon Musks Tesla Roadster"
 }

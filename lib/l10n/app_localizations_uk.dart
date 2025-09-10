@@ -360,4 +360,57 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get tons => 'тонн';
+
+  @override
+  String get learnMore => 'Дізнатися більше';
+
+  @override
+  String get launchInformation => 'Інформація про запуск';
+
+  @override
+  String get launchMass => 'Маса запуску';
+
+  @override
+  String get launchVehicle => 'Ракета-носій';
+
+  @override
+  String get orbitalParameters => 'Орбітальні параметри';
+
+  @override
+  String get millionKm => 'мільйон км';
+
+  @override
+  String get missionDetails => 'Деталі місії';
+
+  @override
+  String get trackLive => 'Слідкувати онлайн';
+
+  @override
+  String get marsDistance => 'Відстань до Марса';
+
+  @override
+  String get earthDistance => 'Відстань до Землі';
+
+  @override
+  String get currentSpeed => 'Поточна швидкість';
+
+  @override
+  String get orbitalPeriod => 'Орбітальний період';
+
+  @override
+  String get unitDays => 'днів';
+
+  @override
+  String get unitKph => 'км/год';
+
+  @override
+  String launched(Object date) {
+    return 'Запуск: $date';
+  }
+
+  @override
+  String get roadsterTitle => 'Роадстер';
+
+  @override
+  String get roadsterDescription => 'Tesla Roadster Ілона Маска';
 }

@@ -358,4 +358,57 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get tons => 'tons';
+
+  @override
+  String get learnMore => 'Learn More';
+
+  @override
+  String get launchInformation => 'Launch Information';
+
+  @override
+  String get launchMass => 'Launch Mass';
+
+  @override
+  String get launchVehicle => 'Launch Vehicle';
+
+  @override
+  String get orbitalParameters => 'Orbital Parameters';
+
+  @override
+  String get millionKm => 'million km';
+
+  @override
+  String get missionDetails => 'Mission Details';
+
+  @override
+  String get trackLive => 'Track Live';
+
+  @override
+  String get marsDistance => 'Mars Distance';
+
+  @override
+  String get earthDistance => 'Earth Distance';
+
+  @override
+  String get currentSpeed => 'Current Speed';
+
+  @override
+  String get orbitalPeriod => 'Orbital Period';
+
+  @override
+  String get unitDays => 'days';
+
+  @override
+  String get unitKph => 'km/h';
+
+  @override
+  String launched(Object date) {
+    return 'Launched: $date';
+  }
+
+  @override
+  String get roadsterTitle => 'Roadster';
+
+  @override
+  String get roadsterDescription => 'Elon Musk\'s Tesla Roadster';
 }

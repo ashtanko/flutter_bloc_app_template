@@ -9,6 +9,6 @@ part 'roadster_service.g.dart';
 abstract class RoadsterService {
   factory RoadsterService(Dio dio) = _RoadsterService;
 
-  @GET('roadster}')
+  @GET('roadster')
   Future<NetworkRoadsterModel> fetchRoadster();
 }

@@ -116,6 +116,15 @@ class SettingsScreen extends StatelessWidget {
             },
           ),
           SettingItem(
+            key: const Key('roadster'),
+            title: S.of(context).roadsterTitle,
+            description: S.of(context).roadsterDescription,
+            icon: Icons.rocket_launch,
+            onClick: () {
+              NavigationService.of(context).navigateTo(Routes.roadster);
+            },
+          ),
+          SettingItem(
             key: const Key('about'),
             title: context.aboutSettingsItem,
             description: context.aboutSettingsItemDescription,
