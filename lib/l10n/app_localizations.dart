@@ -767,6 +767,144 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'tons'**
   String get tons;
+
+  /// No description provided for @learnMore.
+  ///
+  /// In en, this message translates to:
+  /// **'Learn More'**
+  String get learnMore;
+
+  /// No description provided for @launchInformation.
+  ///
+  /// In en, this message translates to:
+  /// **'Launch Information'**
+  String get launchInformation;
+
+  /// No description provided for @launchMass.
+  ///
+  /// In en, this message translates to:
+  /// **'Launch Mass'**
+  String get launchMass;
+
+  /// No description provided for @launchVehicle.
+  ///
+  /// In en, this message translates to:
+  /// **'Launch Vehicle'**
+  String get launchVehicle;
+
+  /// No description provided for @orbitalParameters.
+  ///
+  /// In en, this message translates to:
+  /// **'Orbital Parameters'**
+  String get orbitalParameters;
+
+  /// No description provided for @millionKm.
+  ///
+  /// In en, this message translates to:
+  /// **'million km'**
+  String get millionKm;
+
+  /// No description provided for @missionDetails.
+  ///
+  /// In en, this message translates to:
+  /// **'Mission Details'**
+  String get missionDetails;
+
+  /// No description provided for @trackLive.
+  ///
+  /// In en, this message translates to:
+  /// **'Track Live'**
+  String get trackLive;
+
+  /// No description provided for @marsDistance.
+  ///
+  /// In en, this message translates to:
+  /// **'Mars Distance'**
+  String get marsDistance;
+
+  /// No description provided for @earthDistance.
+  ///
+  /// In en, this message translates to:
+  /// **'Earth Distance'**
+  String get earthDistance;
+
+  /// No description provided for @currentSpeed.
+  ///
+  /// In en, this message translates to:
+  /// **'Current Speed'**
+  String get currentSpeed;
+
+  /// No description provided for @orbitalPeriod.
+  ///
+  /// In en, this message translates to:
+  /// **'Orbital Period'**
+  String get orbitalPeriod;
+
+  /// No description provided for @unitDays.
+  ///
+  /// In en, this message translates to:
+  /// **'days'**
+  String get unitDays;
+
+  /// No description provided for @unitKph.
+  ///
+  /// In en, this message translates to:
+  /// **'km/h'**
+  String get unitKph;
+
+  /// No description provided for @launched.
+  ///
+  /// In en, this message translates to:
+  /// **'Launched: {date}'**
+  String launched(Object date);
+
+  /// No description provided for @roadsterTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Roadster'**
+  String get roadsterTitle;
+
+  /// No description provided for @roadsterDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Elon Musk\'s Tesla Roadster'**
+  String get roadsterDescription;
+
+  /// No description provided for @apoapsis.
+  ///
+  /// In en, this message translates to:
+  /// **'Apoapsis'**
+  String get apoapsis;
+
+  /// No description provided for @periapsis.
+  ///
+  /// In en, this message translates to:
+  /// **'Periapsis'**
+  String get periapsis;
+
+  /// No description provided for @semiMajorAxis.
+  ///
+  /// In en, this message translates to:
+  /// **'Semi-major axis'**
+  String get semiMajorAxis;
+
+  /// No description provided for @eccentricity.
+  ///
+  /// In en, this message translates to:
+  /// **'Eccentricity'**
+  String get eccentricity;
+
+  /// No description provided for @inclination.
+  ///
+  /// In en, this message translates to:
+  /// **'Inclination'**
+  String get inclination;
+
+  /// No description provided for @longitude.
+  ///
+  /// In en, this message translates to:
+  /// **'Longitude'**
+  String get longitude;
 }
 
 class _AppLocalizationsDelegate

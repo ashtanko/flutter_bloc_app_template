@@ -336,13 +336,17 @@
     "description": "Назва вкладки Ракети"
   },
   "activeStatus": "Активна",
-  "@activeStatus": {"description": "Позначка активної ракети"},
-
+  "@activeStatus": {
+    "description": "Позначка активної ракети"
+  },
   "retiredStatus": "Знято з експлуатації",
-  "@retiredStatus": {"description": "Позначка знятої ракети"},
-
+  "@retiredStatus": {
+    "description": "Позначка знятої ракети"
+  },
   "successRate": "{percentage}% успішних запусків",
-  "@successRate": {"description": "Позначка успішності ракети з відсотком"},
+  "@successRate": {
+    "description": "Позначка успішності ракети з відсотком"
+  },
   "rocketsTitle": "Ракети",
   "@rocketsTitle": {
     "description": "Назва екрану Ракети"
@@ -361,5 +365,28 @@
   "propellant1Label": "Паливо 1",
   "propellant2Label": "Паливо 2",
   "thrustSeaLevelLabel": "Тяга (на рівні моря)",
-  "tons": "тонн"
+  "tons": "тонн",
+  "learnMore": "Дізнатися більше",
+  "launchInformation": "Інформація про запуск",
+  "launchMass": "Маса запуску",
+  "launchVehicle": "Ракета-носій",
+  "orbitalParameters": "Орбітальні параметри",
+  "millionKm": "мільйон км",
+  "missionDetails": "Деталі місії",
+  "trackLive": "Слідкувати онлайн",
+  "marsDistance": "Відстань до Марса",
+  "earthDistance": "Відстань до Землі",
+  "currentSpeed": "Поточна швидкість",
+  "orbitalPeriod": "Орбітальний період",
+  "unitDays": "днів",
+  "unitKph": "км/год",
+  "launched": "Запуск: {date}",
+  "roadsterTitle": "Роадстер",
+  "roadsterDescription": "Tesla Roadster Ілона Маска",
+  "apoapsis": "Апоцентр",
+  "periapsis": "Перицентр",
+  "semiMajorAxis": "Велика піввісь",
+  "eccentricity": "Ексцентриситет",
+  "inclination": "Нахил",
+  "longitude": "Довгота"
 }

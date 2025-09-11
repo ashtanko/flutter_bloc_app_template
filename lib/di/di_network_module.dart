@@ -1,7 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_bloc_app_template/data/network/data_source/launches_network_data_source.dart';
+import 'package:flutter_bloc_app_template/data/network/data_source/roadster_network_data_source.dart';
 import 'package:flutter_bloc_app_template/data/network/data_source/rocket_network_data_source.dart';
 import 'package:flutter_bloc_app_template/data/network/service/launch/launch_service.dart';
+import 'package:flutter_bloc_app_template/data/network/service/roadster/roadster_service.dart';
 import 'package:flutter_bloc_app_template/data/network/service/rocket/rocket_service.dart';
 import 'package:injectable/injectable.dart';
 import 'package:talker_dio_logger/talker_dio_logger_interceptor.dart';
@@ -35,6 +37,11 @@ abstract class NetworkModule {
   }
 
   @factoryMethod
+  RoadsterService provideRoadsterService(Dio dio) {
+    return RoadsterService(dio);
+  }
+
+  @factoryMethod
   LaunchesDataSource provideLaunchesDataSource(LaunchService service) {
     return LaunchesNetworkDataSource(service);
   }
@@ -42,5 +49,10 @@ abstract class NetworkModule {
   @factoryMethod
   RocketDataSource provideRocketDataSource(RocketService service) {
     return RocketNetworkDataSource(service);
+  }
+
+  @factoryMethod
+  RoadsterDataSource provideRoadsterDataSource(RoadsterService service) {
+    return RoadsterNetworkDataSource(service);
   }
 }

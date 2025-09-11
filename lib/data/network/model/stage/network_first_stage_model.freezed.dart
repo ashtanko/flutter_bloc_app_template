@@ -51,7 +51,6 @@ abstract mixin class $NetworkFirstStageModelCopyWith<$Res> {
   factory $NetworkFirstStageModelCopyWith(NetworkFirstStageModel value,
           $Res Function(NetworkFirstStageModel) _then) =
       _$NetworkFirstStageModelCopyWithImpl;
-
   @useResult
   $Res call({List<NetworkCoreModel>? cores});
 }
@@ -243,12 +242,10 @@ class _NetworkFirstStageModel extends NetworkFirstStageModel {
   const _NetworkFirstStageModel({final List<NetworkCoreModel>? cores})
       : _cores = cores,
         super._();
-
   factory _NetworkFirstStageModel.fromJson(Map<String, dynamic> json) =>
       _$NetworkFirstStageModelFromJson(json);
 
   final List<NetworkCoreModel>? _cores;
-
   @override
   List<NetworkCoreModel>? get cores {
     final value = _cores;
@@ -299,7 +296,6 @@ abstract mixin class _$NetworkFirstStageModelCopyWith<$Res>
   factory _$NetworkFirstStageModelCopyWith(_NetworkFirstStageModel value,
           $Res Function(_NetworkFirstStageModel) _then) =
       __$NetworkFirstStageModelCopyWithImpl;
-
   @override
   @useResult
   $Res call({List<NetworkCoreModel>? cores});

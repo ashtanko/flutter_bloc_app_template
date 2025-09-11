@@ -358,4 +358,75 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get tons => 'toneladas';
+
+  @override
+  String get learnMore => 'Saiba mais';
+
+  @override
+  String get launchInformation => 'Informações do lançamento';
+
+  @override
+  String get launchMass => 'Massa do lançamento';
+
+  @override
+  String get launchVehicle => 'Veículo de lançamento';
+
+  @override
+  String get orbitalParameters => 'Parâmetros orbitais';
+
+  @override
+  String get millionKm => 'milhões km';
+
+  @override
+  String get missionDetails => 'Detalhes da missão';
+
+  @override
+  String get trackLive => 'Acompanhar ao vivo';
+
+  @override
+  String get marsDistance => 'Distância a Marte';
+
+  @override
+  String get earthDistance => 'Distância à Terra';
+
+  @override
+  String get currentSpeed => 'Velocidade Atual';
+
+  @override
+  String get orbitalPeriod => 'Período Orbital';
+
+  @override
+  String get unitDays => 'dias';
+
+  @override
+  String get unitKph => 'km/h';
+
+  @override
+  String launched(Object date) {
+    return 'Lançado: $date';
+  }
+
+  @override
+  String get roadsterTitle => 'Roadster';
+
+  @override
+  String get roadsterDescription => 'Tesla Roadster de Elon Musk';
+
+  @override
+  String get apoapsis => 'Apoápse';
+
+  @override
+  String get periapsis => 'Periápse';
+
+  @override
+  String get semiMajorAxis => 'Eixo semi-maior';
+
+  @override
+  String get eccentricity => 'Excentricidade';
+
+  @override
+  String get inclination => 'Inclinação';
+
+  @override
+  String get longitude => 'Longitude';
 }

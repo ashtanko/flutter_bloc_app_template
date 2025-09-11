@@ -28,14 +28,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m3(id) => "Beispielartikel ${id}";
 
-  static String m4(launchedAt) => "Gestartet am: ${launchedAt}";
+  static String m4(date) => "Gestartet: ${date}";
 
-  static String m5(mission) => "Mission: ${mission}";
+  static String m5(launchedAt) => "Gestartet am: ${launchedAt}";
 
-  static String m6(rocketName, rocketType) =>
+  static String m6(mission) => "Mission: ${mission}";
+
+  static String m7(rocketName, rocketType) =>
       "Rakete: ${rocketName} (${rocketType})";
 
-  static String m7(percentage) => "${percentage}% Erfolg";
+  static String m8(percentage) => "${percentage}% Erfolg";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -47,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "allObjectivesCompleted": MessageLookupByLibrary.simpleMessage(
       "Alle Ziele erreicht",
     ),
+    "apoapsis": MessageLookupByLibrary.simpleMessage("Aphel"),
     "appTitle": MessageLookupByLibrary.simpleMessage(
       "flutter_bloc_app_template",
     ),
@@ -65,6 +68,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Rahmenlinie",
     ),
     "coreSerial": MessageLookupByLibrary.simpleMessage("Kernseriennummer"),
+    "currentSpeed": MessageLookupByLibrary.simpleMessage(
+      "Aktuelle Geschwindigkeit",
+    ),
     "customers": MessageLookupByLibrary.simpleMessage("Kunden"),
     "darkGoldThemeTitle": MessageLookupByLibrary.simpleMessage(
       "Dunkles Gold-Design",
@@ -100,6 +106,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "dynamicColorSettingsItemTitle": MessageLookupByLibrary.simpleMessage(
       "Dynamische Farben verwenden",
     ),
+    "earthDistance": MessageLookupByLibrary.simpleMessage("Abstand zur Erde"),
+    "eccentricity": MessageLookupByLibrary.simpleMessage("Exzentrizität"),
     "emailsTitle": MessageLookupByLibrary.simpleMessage("E-Mails"),
     "emptyList": MessageLookupByLibrary.simpleMessage("Leere Liste"),
     "enabledButtonTitle": MessageLookupByLibrary.simpleMessage("Aktiviert"),
@@ -115,6 +123,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "iconButtonTitle": MessageLookupByLibrary.simpleMessage("Mit Icon"),
     "id": MessageLookupByLibrary.simpleMessage("Kennung"),
+    "inclination": MessageLookupByLibrary.simpleMessage("Inklination"),
     "itemDetailsTitle": MessageLookupByLibrary.simpleMessage("Artikeldetails"),
     "itemTitle": m3,
     "itemsTitle": MessageLookupByLibrary.simpleMessage("Beispielartikel"),
@@ -124,9 +133,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "Landung erfolgreich",
     ),
     "launch": MessageLookupByLibrary.simpleMessage("Start"),
+    "launchInformation": MessageLookupByLibrary.simpleMessage(
+      "Startinformationen",
+    ),
+    "launchMass": MessageLookupByLibrary.simpleMessage("Startmasse"),
     "launchSite": MessageLookupByLibrary.simpleMessage("Startplatz"),
-    "launchedAt": m4,
+    "launchVehicle": MessageLookupByLibrary.simpleMessage("Startfahrzeug"),
+    "launched": m4,
+    "launchedAt": m5,
     "launchesTitle": MessageLookupByLibrary.simpleMessage("Starts"),
+    "learnMore": MessageLookupByLibrary.simpleMessage("Mehr erfahren"),
     "lightGoldThemeTitle": MessageLookupByLibrary.simpleMessage(
       "Helles Gold-Design",
     ),
@@ -137,9 +153,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "linksResources": MessageLookupByLibrary.simpleMessage(
       "Links & Ressourcen",
     ),
+    "longitude": MessageLookupByLibrary.simpleMessage("Längengrad"),
     "manufacturer": MessageLookupByLibrary.simpleMessage("Hersteller"),
+    "marsDistance": MessageLookupByLibrary.simpleMessage("Abstand zum Mars"),
     "mass": MessageLookupByLibrary.simpleMessage("Masse"),
     "massLabel": MessageLookupByLibrary.simpleMessage("Masse"),
+    "millionKm": MessageLookupByLibrary.simpleMessage("Millionen km"),
+    "missionDetails": MessageLookupByLibrary.simpleMessage("Missionsdetails"),
     "missionFailed": MessageLookupByLibrary.simpleMessage(
       "Mission fehlgeschlagen",
     ),
@@ -151,7 +171,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Mission erfolgreich",
     ),
     "missionTimeline": MessageLookupByLibrary.simpleMessage("Missionszeitplan"),
-    "missionTitle": m5,
+    "missionTitle": m6,
     "nationality": MessageLookupByLibrary.simpleMessage("Nationalität"),
     "newsScreen": MessageLookupByLibrary.simpleMessage("Nachrichten"),
     "noDetails": MessageLookupByLibrary.simpleMessage(
@@ -166,12 +186,17 @@ class MessageLookup extends MessageLookupByLibrary {
       "Missionsziele nicht erreicht",
     ),
     "orbit": MessageLookupByLibrary.simpleMessage("Umlaufbahn"),
+    "orbitalParameters": MessageLookupByLibrary.simpleMessage(
+      "Orbitale Parameter",
+    ),
+    "orbitalPeriod": MessageLookupByLibrary.simpleMessage("Orbitale Periode"),
     "overview": MessageLookupByLibrary.simpleMessage("Übersicht"),
     "payload": MessageLookupByLibrary.simpleMessage("Nutzlast"),
     "payloadCapacity": MessageLookupByLibrary.simpleMessage(
       "Nutzlastkapazität",
     ),
     "payloadTitle": MessageLookupByLibrary.simpleMessage("Nutzlast"),
+    "periapsis": MessageLookupByLibrary.simpleMessage("Perihel"),
     "pressKit": MessageLookupByLibrary.simpleMessage("Pressemappe"),
     "propellant1Label": MessageLookupByLibrary.simpleMessage("Treibstoff 1"),
     "propellant2Label": MessageLookupByLibrary.simpleMessage("Treibstoff 2"),
@@ -179,7 +204,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "reddit": MessageLookupByLibrary.simpleMessage("Reddit"),
     "retiredStatus": MessageLookupByLibrary.simpleMessage("Außer Dienst"),
     "reused": MessageLookupByLibrary.simpleMessage("Wiederverwendet"),
-    "rocket": m6,
+    "roadsterDescription": MessageLookupByLibrary.simpleMessage(
+      "Elon Musks Tesla Roadster",
+    ),
+    "roadsterTitle": MessageLookupByLibrary.simpleMessage("Roadster"),
+    "rocket": m7,
     "rocketBlock": MessageLookupByLibrary.simpleMessage("Block"),
     "rocketDetails": MessageLookupByLibrary.simpleMessage("Raketendetails"),
     "rocketName": MessageLookupByLibrary.simpleMessage("Raketenname"),
@@ -187,6 +216,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "rocketType": MessageLookupByLibrary.simpleMessage("Typ"),
     "rocketsTab": MessageLookupByLibrary.simpleMessage("Raketen"),
     "rocketsTitle": MessageLookupByLibrary.simpleMessage("Raketen"),
+    "semiMajorAxis": MessageLookupByLibrary.simpleMessage("Große Halbachse"),
     "settingsTitle": MessageLookupByLibrary.simpleMessage("Einstellungen"),
     "siteIdLabel": MessageLookupByLibrary.simpleMessage("Standort-ID:"),
     "specifications": MessageLookupByLibrary.simpleMessage("Spezifikationen"),
@@ -194,7 +224,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "staticFireTest": MessageLookupByLibrary.simpleMessage(
       "Statischer Feuertest",
     ),
-    "successRate": m7,
+    "successRate": m8,
     "systemThemeTitle": MessageLookupByLibrary.simpleMessage("Systemdesign"),
     "tabHome": MessageLookupByLibrary.simpleMessage("Startseite"),
     "tabSettings": MessageLookupByLibrary.simpleMessage("Einstellungen"),
@@ -203,12 +233,15 @@ class MessageLookup extends MessageLookupByLibrary {
       "Schub (Bodenniveau)",
     ),
     "tons": MessageLookupByLibrary.simpleMessage("Tonnen"),
+    "trackLive": MessageLookupByLibrary.simpleMessage("Live verfolgen"),
     "transparentButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Transparent",
     ),
     "tryAgainButton": MessageLookupByLibrary.simpleMessage("Erneut versuchen"),
     "type": MessageLookupByLibrary.simpleMessage("Typ"),
     "typeLabel": MessageLookupByLibrary.simpleMessage("Typ"),
+    "unitDays": MessageLookupByLibrary.simpleMessage("Tage"),
+    "unitKph": MessageLookupByLibrary.simpleMessage("km/h"),
     "versionLabel": MessageLookupByLibrary.simpleMessage("Version"),
     "watchVideo": MessageLookupByLibrary.simpleMessage("Video ansehen"),
     "wikipedia": MessageLookupByLibrary.simpleMessage("Wikipedia"),

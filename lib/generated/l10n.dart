@@ -1088,6 +1088,181 @@ class S {
   String get tons {
     return Intl.message('tons', name: 'tons', desc: '', args: []);
   }
+
+  /// `Learn More`
+  String get learnMore {
+    return Intl.message('Learn More', name: 'learnMore', desc: '', args: []);
+  }
+
+  /// `Launch Information`
+  String get launchInformation {
+    return Intl.message(
+      'Launch Information',
+      name: 'launchInformation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Launch Mass`
+  String get launchMass {
+    return Intl.message('Launch Mass', name: 'launchMass', desc: '', args: []);
+  }
+
+  /// `Launch Vehicle`
+  String get launchVehicle {
+    return Intl.message(
+      'Launch Vehicle',
+      name: 'launchVehicle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Orbital Parameters`
+  String get orbitalParameters {
+    return Intl.message(
+      'Orbital Parameters',
+      name: 'orbitalParameters',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `million km`
+  String get millionKm {
+    return Intl.message('million km', name: 'millionKm', desc: '', args: []);
+  }
+
+  /// `Mission Details`
+  String get missionDetails {
+    return Intl.message(
+      'Mission Details',
+      name: 'missionDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Track Live`
+  String get trackLive {
+    return Intl.message('Track Live', name: 'trackLive', desc: '', args: []);
+  }
+
+  /// `Mars Distance`
+  String get marsDistance {
+    return Intl.message(
+      'Mars Distance',
+      name: 'marsDistance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Earth Distance`
+  String get earthDistance {
+    return Intl.message(
+      'Earth Distance',
+      name: 'earthDistance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Current Speed`
+  String get currentSpeed {
+    return Intl.message(
+      'Current Speed',
+      name: 'currentSpeed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Orbital Period`
+  String get orbitalPeriod {
+    return Intl.message(
+      'Orbital Period',
+      name: 'orbitalPeriod',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `days`
+  String get unitDays {
+    return Intl.message('days', name: 'unitDays', desc: '', args: []);
+  }
+
+  /// `km/h`
+  String get unitKph {
+    return Intl.message('km/h', name: 'unitKph', desc: '', args: []);
+  }
+
+  /// `Launched: {date}`
+  String launched(Object date) {
+    return Intl.message(
+      'Launched: $date',
+      name: 'launched',
+      desc: '',
+      args: [date],
+    );
+  }
+
+  /// `Roadster`
+  String get roadsterTitle {
+    return Intl.message('Roadster', name: 'roadsterTitle', desc: '', args: []);
+  }
+
+  /// `Elon Musk's Tesla Roadster`
+  String get roadsterDescription {
+    return Intl.message(
+      'Elon Musk\'s Tesla Roadster',
+      name: 'roadsterDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Apoapsis`
+  String get apoapsis {
+    return Intl.message('Apoapsis', name: 'apoapsis', desc: '', args: []);
+  }
+
+  /// `Periapsis`
+  String get periapsis {
+    return Intl.message('Periapsis', name: 'periapsis', desc: '', args: []);
+  }
+
+  /// `Semi-major axis`
+  String get semiMajorAxis {
+    return Intl.message(
+      'Semi-major axis',
+      name: 'semiMajorAxis',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Eccentricity`
+  String get eccentricity {
+    return Intl.message(
+      'Eccentricity',
+      name: 'eccentricity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Inclination`
+  String get inclination {
+    return Intl.message('Inclination', name: 'inclination', desc: '', args: []);
+  }
+
+  /// `Longitude`
+  String get longitude {
+    return Intl.message('Longitude', name: 'longitude', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

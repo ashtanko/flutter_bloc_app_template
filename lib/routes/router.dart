@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_app_template/features/appearance/appearance_screen.dart';
 import 'package:flutter_bloc_app_template/features/appearance/dark_theme_screen.dart';
 import 'package:flutter_bloc_app_template/features/launch/launch_screen.dart';
+import 'package:flutter_bloc_app_template/features/roadster/roadster_screen.dart';
 import 'package:flutter_bloc_app_template/features/rocket/rocket_screen.dart';
 import 'package:flutter_bloc_app_template/index.dart';
 
@@ -13,6 +14,7 @@ class Routes {
   static const darkTheme = 'darkTheme';
   static const launch = 'launch';
   static const rocket = 'rocket';
+  static const roadster = 'roadster';
 }
 
 final GlobalKey<NavigatorState> appNavigatorKey = GlobalKey<NavigatorState>();
@@ -24,6 +26,7 @@ class NavigationService {
     Routes.darkTheme: (_) => const DarkThemeScreen(),
     Routes.launch: (_) => const LaunchScreen(),
     Routes.rocket: (_) => const RocketScreen(),
+    Routes.roadster: (_) => const RoadsterScreen(),
   };
 
   final Set<String> _animatedRoutes = {
@@ -31,6 +34,7 @@ class NavigationService {
     Routes.darkTheme,
     Routes.launch,
     Routes.rocket,
+    Routes.roadster,
   };
 
   // iOS: full screen routes pop up from the bottom and disappear vertically too
