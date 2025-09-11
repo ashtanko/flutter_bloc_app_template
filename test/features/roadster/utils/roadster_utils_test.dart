@@ -93,4 +93,85 @@ void main() {
       expect((widgets[1]).style?.color, Colors.green);
     });
   });
+
+  group('DoublRoadsterExtension:toAuString', () {
+    test('formats to 3 decimals by default', () {
+      const value = 1.664332332453025;
+      expect(value.toAuString(), '1.664 AU');
+    });
+
+    test('rounds correctly with 2 decimals', () {
+      const value = 1.664332332453025;
+      expect(value.toAuString(fractionDigits: 2), '1.66 AU');
+    });
+
+    test('rounds correctly with 5 decimals', () {
+      const value = 1.664332332453025;
+      expect(value.toAuString(fractionDigits: 5), '1.66433 AU');
+    });
+
+    test('preserves trailing zeros', () {
+      const value = 2.5;
+      expect(value.toAuString(), '2.500 AU');
+    });
+
+    test('works with negative numbers', () {
+      const value = -0.98765;
+      expect(value.toAuString(fractionDigits: 3), '-0.988 AU');
+    });
+  });
+
+  group('DoublRoadsterExtension:toFixedString', () {
+    test('toAuString default 3 decimals', () {
+      const value = 1.664332332453025;
+      expect(value.toAuString(), '1.664 AU');
+    });
+
+    test('toAuString custom decimals', () {
+      const value = 1.664332332453025;
+      expect(value.toAuString(fractionDigits: 2), '1.66 AU');
+    });
+
+    test('toFixedString default 3 decimals', () {
+      const value = 0.2559348215918733;
+      expect(value.toFixedString(), '0.256');
+    });
+
+    test('toFixedString custom decimals', () {
+      const value = 0.2559348215918733;
+      expect(value.toFixedString(fractionDigits: 5), '0.25593');
+    });
+
+    test('toFixedString preserves trailing zeros', () {
+      const value = 2.5;
+      expect(value.toFixedString(), '2.500');
+    });
+
+    test('toFixedString works with negative numbers', () {
+      const value = -0.98765;
+      expect(value.toFixedString(fractionDigits: 2), '-0.99');
+    });
+  });
+
+  group('DoublRoadsterExtension:toDegreeString', () {
+    test('toDegreeString default 2 decimals', () {
+      const value = 316.9112133411523;
+      expect(value.toDegreeString(), '316.91°');
+    });
+
+    test('toDegreeString with 3 decimals', () {
+      const value = 1.075052357364693;
+      expect(value.toDegreeString(fractionDigits: 3), '1.075°');
+    });
+
+    test('toDegreeString preserves trailing zeros', () {
+      const value = 45.5;
+      expect(value.toDegreeString(fractionDigits: 2), '45.50°');
+    });
+
+    test('toDegreeString works with negative values', () {
+      const value = -12.3456;
+      expect(value.toDegreeString(fractionDigits: 1), '-12.3°');
+    });
+  });
 }

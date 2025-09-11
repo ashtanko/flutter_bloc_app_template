@@ -49,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "allObjectivesCompleted": MessageLookupByLibrary.simpleMessage(
       "Alle Ziele erreicht",
     ),
+    "apoapsis": MessageLookupByLibrary.simpleMessage("Aphel"),
     "appTitle": MessageLookupByLibrary.simpleMessage(
       "flutter_bloc_app_template",
     ),
@@ -106,6 +107,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Dynamische Farben verwenden",
     ),
     "earthDistance": MessageLookupByLibrary.simpleMessage("Abstand zur Erde"),
+    "eccentricity": MessageLookupByLibrary.simpleMessage("Exzentrizität"),
     "emailsTitle": MessageLookupByLibrary.simpleMessage("E-Mails"),
     "emptyList": MessageLookupByLibrary.simpleMessage("Leere Liste"),
     "enabledButtonTitle": MessageLookupByLibrary.simpleMessage("Aktiviert"),
@@ -121,6 +123,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "iconButtonTitle": MessageLookupByLibrary.simpleMessage("Mit Icon"),
     "id": MessageLookupByLibrary.simpleMessage("Kennung"),
+    "inclination": MessageLookupByLibrary.simpleMessage("Inklination"),
     "itemDetailsTitle": MessageLookupByLibrary.simpleMessage("Artikeldetails"),
     "itemTitle": m3,
     "itemsTitle": MessageLookupByLibrary.simpleMessage("Beispielartikel"),
@@ -150,6 +153,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "linksResources": MessageLookupByLibrary.simpleMessage(
       "Links & Ressourcen",
     ),
+    "longitude": MessageLookupByLibrary.simpleMessage("Längengrad"),
     "manufacturer": MessageLookupByLibrary.simpleMessage("Hersteller"),
     "marsDistance": MessageLookupByLibrary.simpleMessage("Abstand zum Mars"),
     "mass": MessageLookupByLibrary.simpleMessage("Masse"),
@@ -192,6 +196,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Nutzlastkapazität",
     ),
     "payloadTitle": MessageLookupByLibrary.simpleMessage("Nutzlast"),
+    "periapsis": MessageLookupByLibrary.simpleMessage("Perihel"),
     "pressKit": MessageLookupByLibrary.simpleMessage("Pressemappe"),
     "propellant1Label": MessageLookupByLibrary.simpleMessage("Treibstoff 1"),
     "propellant2Label": MessageLookupByLibrary.simpleMessage("Treibstoff 2"),
@@ -211,6 +216,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "rocketType": MessageLookupByLibrary.simpleMessage("Typ"),
     "rocketsTab": MessageLookupByLibrary.simpleMessage("Raketen"),
     "rocketsTitle": MessageLookupByLibrary.simpleMessage("Raketen"),
+    "semiMajorAxis": MessageLookupByLibrary.simpleMessage("Große Halbachse"),
     "settingsTitle": MessageLookupByLibrary.simpleMessage("Einstellungen"),
     "siteIdLabel": MessageLookupByLibrary.simpleMessage("Standort-ID:"),
     "specifications": MessageLookupByLibrary.simpleMessage("Spezifikationen"),

@@ -6,7 +6,7 @@ void main() {
   testWidgets('AnimatedStarWidget renders correctly',
       (WidgetTester tester) async {
     final controller = AnimationController(
-      vsync: tester,
+      vsync: const TestVSync(),
       duration: const Duration(seconds: 1),
     );
 
@@ -31,7 +31,9 @@ void main() {
     // Verify width and height (size between 1 and 4)
     final container = tester.widget<Container>(containerFinder);
     expect(container.constraints?.maxWidth ?? 0, inInclusiveRange(1, 4));
-
+    final size = tester.getSize(containerFinder);
+    expect(size.width, inInclusiveRange(1, 4));
+    expect(size.height, inInclusiveRange(1, 4));
     // Start the animation
     controller.value = 0.5;
     await tester.pump();

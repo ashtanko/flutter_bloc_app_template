@@ -413,4 +413,22 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get roadsterDescription => 'Tesla Roadster Ілона Маска';
+
+  @override
+  String get apoapsis => 'Апоцентр';
+
+  @override
+  String get periapsis => 'Перицентр';
+
+  @override
+  String get semiMajorAxis => 'Велика піввісь';
+
+  @override
+  String get eccentricity => 'Ексцентриситет';
+
+  @override
+  String get inclination => 'Нахил';
+
+  @override
+  String get longitude => 'Довгота';
 }

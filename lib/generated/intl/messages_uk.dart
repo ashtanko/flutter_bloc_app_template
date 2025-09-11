@@ -49,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "allObjectivesCompleted": MessageLookupByLibrary.simpleMessage(
       "Всі цілі досягнуті",
     ),
+    "apoapsis": MessageLookupByLibrary.simpleMessage("Апоцентр"),
     "appTitle": MessageLookupByLibrary.simpleMessage("шаблон_flutter_bloc_app"),
     "appearanceSettingsItem": MessageLookupByLibrary.simpleMessage(
       "Зовнішній вигляд",
@@ -98,6 +99,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Використовувати динамічні кольори",
     ),
     "earthDistance": MessageLookupByLibrary.simpleMessage("Відстань до Землі"),
+    "eccentricity": MessageLookupByLibrary.simpleMessage("Ексцентриситет"),
     "emailsTitle": MessageLookupByLibrary.simpleMessage("Електронні листи"),
     "emptyList": MessageLookupByLibrary.simpleMessage("Список порожній"),
     "enabledButtonTitle": MessageLookupByLibrary.simpleMessage("Увімкнено"),
@@ -116,6 +118,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "iconButtonTitle": MessageLookupByLibrary.simpleMessage("З іконкою"),
     "id": MessageLookupByLibrary.simpleMessage("ID"),
+    "inclination": MessageLookupByLibrary.simpleMessage("Нахил"),
     "itemDetailsTitle": MessageLookupByLibrary.simpleMessage("Деталі елементу"),
     "itemTitle": m3,
     "itemsTitle": MessageLookupByLibrary.simpleMessage("Приклади елементів"),
@@ -143,6 +146,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "linksResources": MessageLookupByLibrary.simpleMessage(
       "Посилання та ресурси",
     ),
+    "longitude": MessageLookupByLibrary.simpleMessage("Довгота"),
     "manufacturer": MessageLookupByLibrary.simpleMessage("Виробник"),
     "marsDistance": MessageLookupByLibrary.simpleMessage("Відстань до Марса"),
     "mass": MessageLookupByLibrary.simpleMessage("Маса"),
@@ -179,6 +183,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "payloadTitle": MessageLookupByLibrary.simpleMessage(
       "Корисне навантаження",
     ),
+    "periapsis": MessageLookupByLibrary.simpleMessage("Перицентр"),
     "pressKit": MessageLookupByLibrary.simpleMessage("Прес-кит"),
     "propellant1Label": MessageLookupByLibrary.simpleMessage("Паливо 1"),
     "propellant2Label": MessageLookupByLibrary.simpleMessage("Паливо 2"),
@@ -200,6 +205,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "rocketType": MessageLookupByLibrary.simpleMessage("Тип"),
     "rocketsTab": MessageLookupByLibrary.simpleMessage("Ракети"),
     "rocketsTitle": MessageLookupByLibrary.simpleMessage("Ракети"),
+    "semiMajorAxis": MessageLookupByLibrary.simpleMessage("Велика піввісь"),
     "settingsTitle": MessageLookupByLibrary.simpleMessage("Налаштування"),
     "siteIdLabel": MessageLookupByLibrary.simpleMessage("ID сайту:"),
     "specifications": MessageLookupByLibrary.simpleMessage(

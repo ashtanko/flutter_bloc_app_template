@@ -28,9 +28,10 @@ extension RoadsterStringExt on String {
     TextStyle? firstLineStyle,
     TextStyle? secondLineStyle,
     String delimiter = "'s ",
+    String? suffixForFirstLine, // defaults to delimiter trimmed
   }) {
-    final parts = split(delimiter);
-    if (parts.length < 2) {
+    final idx = indexOf(delimiter);
+    if (idx < 0) {
       return [
         Text(
           this,
@@ -38,9 +39,14 @@ extension RoadsterStringExt on String {
         ),
       ];
     }
+
+    final first = substring(0, idx);
+    final rest = substring(idx + delimiter.length);
+    final suffix = suffixForFirstLine ?? delimiter.trimRight();
+
     return [
       Text(
-        "${parts[0]}'s",
+        '$first$suffix',
         style: firstLineStyle ??
             const TextStyle(
               color: Colors.white70,
@@ -49,7 +55,7 @@ extension RoadsterStringExt on String {
             ),
       ),
       Text(
-        parts[1],
+        rest,
         style: secondLineStyle ??
             const TextStyle(
               color: Colors.white,
@@ -59,5 +65,26 @@ extension RoadsterStringExt on String {
             ),
       ),
     ];
+  }
+}
+
+extension DoublRoadsterExtension on double {
+  /// Converts a double to a formatted string in Astronomical Units (AU)
+  /// Example: 1.664332332453025 -> "1.664 AU"
+  String toAuString({int fractionDigits = 3}) {
+    return '${toStringAsFixed(fractionDigits)} AU';
+  }
+
+  /// Converts a double to a string with fixed decimal places
+  /// Example: 0.2559348215918733 -> "0.256"
+  String toFixedString({int fractionDigits = 3}) {
+    return toStringAsFixed(fractionDigits);
+  }
+
+  /// Converts a double to degrees with a ° suffix
+  /// Example: 1.075052357364693 -> "1.075°"
+  /// Example: 316.9112133411523 -> "316.91°"
+  String toDegreeString({int fractionDigits = 2}) {
+    return '${toStringAsFixed(fractionDigits)}°';
   }
 }

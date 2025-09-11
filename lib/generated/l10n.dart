@@ -1223,6 +1223,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Apoapsis`
+  String get apoapsis {
+    return Intl.message('Apoapsis', name: 'apoapsis', desc: '', args: []);
+  }
+
+  /// `Periapsis`
+  String get periapsis {
+    return Intl.message('Periapsis', name: 'periapsis', desc: '', args: []);
+  }
+
+  /// `Semi-major axis`
+  String get semiMajorAxis {
+    return Intl.message(
+      'Semi-major axis',
+      name: 'semiMajorAxis',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Eccentricity`
+  String get eccentricity {
+    return Intl.message(
+      'Eccentricity',
+      name: 'eccentricity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Inclination`
+  String get inclination {
+    return Intl.message('Inclination', name: 'inclination', desc: '', args: []);
+  }
+
+  /// `Longitude`
+  String get longitude {
+    return Intl.message('Longitude', name: 'longitude', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

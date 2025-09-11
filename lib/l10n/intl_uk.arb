@@ -382,5 +382,11 @@
   "unitKph": "км/год",
   "launched": "Запуск: {date}",
   "roadsterTitle": "Роадстер",
-  "roadsterDescription": "Tesla Roadster Ілона Маска"
+  "roadsterDescription": "Tesla Roadster Ілона Маска",
+  "apoapsis": "Апоцентр",
+  "periapsis": "Перицентр",
+  "semiMajorAxis": "Велика піввісь",
+  "eccentricity": "Ексцентриситет",
+  "inclination": "Нахил",
+  "longitude": "Довгота"
 }

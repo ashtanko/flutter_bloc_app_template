@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:flutter_bloc_app_template/data/network/api_result.dart';
 import 'package:flutter_bloc_app_template/data/network/data_source/roadster_network_data_source.dart';
 import 'package:flutter_bloc_app_template/data/network/model/roadster/network_roadster_model.dart';
@@ -45,6 +46,24 @@ void main() {
         () async {
       // arrange
       when(() => service.fetchRoadster()).thenThrow(Exception('Server error'));
+
+      // act
+      final call = await dataSource.getRoadster();
+
+      // assert
+      expect(call, isA<Error<NetworkRoadsterModel>>());
+      verify(() => service.fetchRoadster());
+      verifyNoMoreInteractions(service);
+    });
+
+    test('should perform a GET request on /roadster and return an dio error',
+        () async {
+      // arrange
+      when(() => service.fetchRoadster()).thenThrow(
+        DioException(
+          requestOptions: RequestOptions(),
+        ),
+      );
 
       // act
       final call = await dataSource.getRoadster();

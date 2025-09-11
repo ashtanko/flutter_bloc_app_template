@@ -77,8 +77,11 @@ class OrbitalSectionWidget extends StatelessWidget {
                             children: [
                               Text(
                                 data.label,
-                                style: const TextStyle(
-                                  color: Colors.white60,
+                                style: TextStyle(
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .onSurface
+                                      .withValues(alpha: 0.6),
                                   fontSize: 11,
                                 ),
                               ),

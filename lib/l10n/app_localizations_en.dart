@@ -411,4 +411,22 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get roadsterDescription => 'Elon Musk\'s Tesla Roadster';
+
+  @override
+  String get apoapsis => 'Apoapsis';
+
+  @override
+  String get periapsis => 'Periapsis';
+
+  @override
+  String get semiMajorAxis => 'Semi-major axis';
+
+  @override
+  String get eccentricity => 'Eccentricity';
+
+  @override
+  String get inclination => 'Inclination';
+
+  @override
+  String get longitude => 'Longitude';
 }

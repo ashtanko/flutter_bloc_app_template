@@ -49,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "allObjectivesCompleted": MessageLookupByLibrary.simpleMessage(
       "Todos os objetivos concluídos",
     ),
+    "apoapsis": MessageLookupByLibrary.simpleMessage("Apoápse"),
     "appTitle": MessageLookupByLibrary.simpleMessage(
       "flutter_bloc_app_template",
     ),
@@ -106,6 +107,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Usar cores dinâmicas",
     ),
     "earthDistance": MessageLookupByLibrary.simpleMessage("Distância à Terra"),
+    "eccentricity": MessageLookupByLibrary.simpleMessage("Excentricidade"),
     "emailsTitle": MessageLookupByLibrary.simpleMessage("E-mails"),
     "emptyList": MessageLookupByLibrary.simpleMessage("Lista Vazia"),
     "enabledButtonTitle": MessageLookupByLibrary.simpleMessage("Ativado"),
@@ -121,6 +123,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "iconButtonTitle": MessageLookupByLibrary.simpleMessage("Com Ícone"),
     "id": MessageLookupByLibrary.simpleMessage("ID"),
+    "inclination": MessageLookupByLibrary.simpleMessage("Inclinação"),
     "itemDetailsTitle": MessageLookupByLibrary.simpleMessage(
       "Detalhes do Artigo",
     ),
@@ -152,6 +155,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "lightThemeTitle": MessageLookupByLibrary.simpleMessage("Tema Claro"),
     "linksResources": MessageLookupByLibrary.simpleMessage("Links e Recursos"),
+    "longitude": MessageLookupByLibrary.simpleMessage("Longitude"),
     "manufacturer": MessageLookupByLibrary.simpleMessage("Fabricante"),
     "marsDistance": MessageLookupByLibrary.simpleMessage("Distância a Marte"),
     "mass": MessageLookupByLibrary.simpleMessage("Massa"),
@@ -196,6 +200,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Capacidade de Carga",
     ),
     "payloadTitle": MessageLookupByLibrary.simpleMessage("Carga útil"),
+    "periapsis": MessageLookupByLibrary.simpleMessage("Periápse"),
     "pressKit": MessageLookupByLibrary.simpleMessage("Kit de Imprensa"),
     "propellant1Label": MessageLookupByLibrary.simpleMessage("Propelente 1"),
     "propellant2Label": MessageLookupByLibrary.simpleMessage("Propelente 2"),
@@ -219,6 +224,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "rocketType": MessageLookupByLibrary.simpleMessage("Tipo"),
     "rocketsTab": MessageLookupByLibrary.simpleMessage("Foguetes"),
     "rocketsTitle": MessageLookupByLibrary.simpleMessage("Foguetes"),
+    "semiMajorAxis": MessageLookupByLibrary.simpleMessage("Eixo semi-maior"),
     "settingsTitle": MessageLookupByLibrary.simpleMessage("Configurações"),
     "siteIdLabel": MessageLookupByLibrary.simpleMessage("ID do Local:"),
     "specifications": MessageLookupByLibrary.simpleMessage("Especificações"),

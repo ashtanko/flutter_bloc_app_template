@@ -869,6 +869,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Elon Musk\'s Tesla Roadster'**
   String get roadsterDescription;
+
+  /// No description provided for @apoapsis.
+  ///
+  /// In en, this message translates to:
+  /// **'Apoapsis'**
+  String get apoapsis;
+
+  /// No description provided for @periapsis.
+  ///
+  /// In en, this message translates to:
+  /// **'Periapsis'**
+  String get periapsis;
+
+  /// No description provided for @semiMajorAxis.
+  ///
+  /// In en, this message translates to:
+  /// **'Semi-major axis'**
+  String get semiMajorAxis;
+
+  /// No description provided for @eccentricity.
+  ///
+  /// In en, this message translates to:
+  /// **'Eccentricity'**
+  String get eccentricity;
+
+  /// No description provided for @inclination.
+  ///
+  /// In en, this message translates to:
+  /// **'Inclination'**
+  String get inclination;
+
+  /// No description provided for @longitude.
+  ///
+  /// In en, this message translates to:
+  /// **'Longitude'**
+  String get longitude;
 }
 
 class _AppLocalizationsDelegate

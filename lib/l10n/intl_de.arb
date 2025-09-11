@@ -245,5 +245,11 @@
   "unitKph": "km/h",
   "launched": "Gestartet: {date}",
   "roadsterTitle": "Roadster",
-  "roadsterDescription": "Elon Musks Tesla Roadster"
+  "roadsterDescription": "Elon Musks Tesla Roadster",
+  "apoapsis": "Aphel",
+  "periapsis": "Perihel",
+  "semiMajorAxis": "Große Halbachse",
+  "eccentricity": "Exzentrizität",
+  "inclination": "Inklination",
+  "longitude": "Längengrad"
 }

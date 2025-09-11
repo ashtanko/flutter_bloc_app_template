@@ -28,9 +28,9 @@ class DistanceCardWidget extends StatelessWidget {
       curve: Curves.easeOutBack,
       builder: (context, animation, child) {
         return Transform.translate(
-          offset: Offset(0, 20 * (1 - animation)),
+          offset: Offset(0, 20 * (1 - animation.clamp(0.0, 1.0))),
           child: Opacity(
-            opacity: animation,
+            opacity: animation.clamp(0.0, 1.0),
             child: Card(
               elevation: 6,
               shape: RoundedRectangleBorder(
@@ -69,8 +69,11 @@ class DistanceCardWidget extends StatelessWidget {
                         children: [
                           Text(
                             title,
-                            style: const TextStyle(
-                              color: Colors.white70,
+                            style: TextStyle(
+                              color: Theme.of(context)
+                                  .colorScheme
+                                  .onSurface
+                                  .withValues(alpha: 0.7),
                               fontSize: 14,
                             ),
                           ),
