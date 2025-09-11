@@ -57,6 +57,7 @@ class ImageCarousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Transform.translate(
+      key: const Key('parallax_transform'),
       offset: Offset(0, scrollOffset * 0.5),
       child: SizedBox(
         height: 300,
