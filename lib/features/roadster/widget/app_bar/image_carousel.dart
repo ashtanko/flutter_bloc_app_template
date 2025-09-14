@@ -70,9 +70,11 @@ class ImageCarousel extends StatelessWidget {
               animation: pageController,
               builder: (context, child) {
                 var value = 1.0;
-                if (pageController.position.haveDimensions) {
-                  value = pageController.page! - index;
-                  value = (1 - (value.abs() * 0.3)).clamp(0.0, 1.0);
+                if (pageController.hasClients) {
+                  final currentPage = pageController.page ??
+                      pageController.initialPage.toDouble();
+                  value =
+                      (1 - ((currentPage - index).abs() * 0.3)).clamp(0.0, 1.0);
                 }
                 return Center(
                   child: _buildAnimatedImageCard(value, images[index]),

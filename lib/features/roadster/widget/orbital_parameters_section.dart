@@ -19,32 +19,32 @@ class OrbitalParametersSection extends StatelessWidget {
       orbitalData: [
         OrbitalData(
           label: S.of(context).apoapsis,
-          value: '${roadster.apoapsisAu?.toAuString()}',
+          value: roadster.apoapsisAu?.toAuString() ?? 'N/A',
           icon: Icons.arrow_upward,
         ),
         OrbitalData(
           label: S.of(context).periapsis,
-          value: '${roadster.periapsisAu?.toAuString()}',
+          value: roadster.periapsisAu?.toAuString() ?? 'N/A',
           icon: Icons.arrow_downward,
         ),
         OrbitalData(
           label: S.of(context).semiMajorAxis,
-          value: '${roadster.semiMajorAxisAu?.toAuString()}',
+          value: roadster.semiMajorAxisAu?.toAuString() ?? 'N/A',
           icon: Icons.circle_outlined,
         ),
         OrbitalData(
           label: S.of(context).eccentricity,
-          value: '${roadster.eccentricity?.toFixedString()}',
+          value: roadster.eccentricity?.toFixedString() ?? 'N/A',
           icon: Icons.blur_circular,
         ),
         OrbitalData(
           label: S.of(context).inclination,
-          value: '${roadster.inclination?.toDegreeString()}',
+          value: roadster.inclination?.toDegreeString() ?? 'N/A',
           icon: Icons.trending_up,
         ),
         OrbitalData(
           label: S.of(context).longitude,
-          value: '${roadster.longitude?.toDegreeString()}',
+          value: roadster.longitude?.toDegreeString() ?? 'N/A',
           icon: Icons.explore,
         ),
       ],

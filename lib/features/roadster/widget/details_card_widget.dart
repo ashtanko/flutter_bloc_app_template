@@ -91,7 +91,7 @@ class _DetailsCardWidgetState extends State<DetailsCardWidget>
             Text(
               widget.description1,
               style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                    color: Colors.white70,
+                    color: Theme.of(context).colorScheme.onSurface,
                     height: 1.5,
                   ),
             ),
@@ -99,7 +99,7 @@ class _DetailsCardWidgetState extends State<DetailsCardWidget>
             Text(
               widget.description2,
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: Colors.white60,
+                    color: Theme.of(context).colorScheme.onSurfaceVariant,
                     height: 1.4,
                   ),
             ),

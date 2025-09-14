@@ -69,7 +69,11 @@ void main() {
     testWidgets('should call onPageChanged when swiping',
         (WidgetTester tester) async {
       pageChangedCallCount = 0;
-      pageController = PageController(initialPage: 0);
+      pageController.dispose();
+      pageController = PageController(
+        viewportFraction: 0.85,
+        initialPage: 0,
+      );
 
       await mockNetworkImagesFor(() async {
         await tester.pumpWidget(

@@ -39,6 +39,27 @@ class _AnimatedCounterWidgetState extends State<AnimatedCounterWidget>
   }
 
   @override
+  void didUpdateWidget(covariant AnimatedCounterWidget oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.value != widget.value ||
+        oldWidget.duration != widget.duration) {
+      _controller.duration = widget.duration;
+      _animation = Tween<double>(
+        begin: _animation.value,
+        end: widget.value,
+      ).animate(
+        CurvedAnimation(
+          parent: _controller,
+          curve: Curves.easeOutCubic,
+        ),
+      );
+      _controller
+        ..reset()
+        ..forward();
+    }
+  }
+
+  @override
   void dispose() {
     _controller.dispose();
     super.dispose();
@@ -49,18 +70,19 @@ class _AnimatedCounterWidgetState extends State<AnimatedCounterWidget>
     return AnimatedBuilder(
       animation: _animation,
       builder: (context, child) {
+        final text = widget.decimals > 0
+            ? _animation.value.toStringAsFixed(widget.decimals)
+            : _animation.value.toInt().toString().replaceAllMapped(
+                  RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
+                  (Match m) => '${m[1]},',
+                );
+
         return Text(
-          widget.decimals > 0
-              ? _animation.value.toStringAsFixed(widget.decimals)
-              : _animation.value.toInt().toString().replaceAllMapped(
-                    RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
-                    (Match m) => '${m[1]},',
-                  ),
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
+          text,
+          style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                color: Theme.of(context).colorScheme.onSurface,
+                fontWeight: FontWeight.bold,
+              ),
         );
       },
     );

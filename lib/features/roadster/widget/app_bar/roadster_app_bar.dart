@@ -68,7 +68,6 @@ class _RoadsterAppBarState extends State<RoadsterAppBar> {
       expandedHeight: 380,
       floating: false,
       pinned: true,
-      backgroundColor: Colors.transparent,
       flexibleSpace: FlexibleSpaceBar(
         title: AnimatedOpacity(
           opacity: widget.scrollOffset > 200 ? 1.0 : 0.0,

@@ -136,6 +136,7 @@ class _RoadsterDetailScreenState extends State<RoadsterDetailScreen>
   }
 
   void _scrollToTop() {
+    if (!mounted || !_scrollController.hasClients) return;
     _scrollController.animateTo(
       0,
       duration: const Duration(milliseconds: 800),

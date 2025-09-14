@@ -15,6 +15,8 @@ class LaunchSectionWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = S.of(context);
 
+    final scheme = Theme.of(context).colorScheme;
+
     return Card(
       elevation: 6,
       shape: RoundedRectangleBorder(
@@ -26,8 +28,8 @@ class LaunchSectionWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
           gradient: LinearGradient(
             colors: [
-              Colors.orange.withValues(alpha: 0.2),
-              Colors.red.withValues(alpha: 0.1),
+              scheme.primary.withValues(alpha: 0.2),
+              scheme.secondary.withValues(alpha: 0.1),
             ],
           ),
         ),
@@ -38,7 +40,7 @@ class LaunchSectionWidget extends StatelessWidget {
               children: [
                 Icon(
                   Icons.rocket,
-                  color: Colors.orange[400],
+                  color: scheme.primary,
                 ),
                 const SizedBox(width: 8),
                 Text(
@@ -58,17 +60,17 @@ class LaunchSectionWidget extends StatelessWidget {
                   children: [
                     Text(
                       l10n.launchMass,
-                      style:
-                          const TextStyle(color: Colors.white60, fontSize: 12),
+                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                            color: scheme.onSurfaceVariant,
+                          ),
                     ),
                     const SizedBox(height: 4),
                     Text(
                       massKg,
-                      style: TextStyle(
-                        color: Colors.orange[400],
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                            color: scheme.primary,
+                            fontWeight: FontWeight.bold,
+                          ),
                     ),
                   ],
                 ),
@@ -77,17 +79,17 @@ class LaunchSectionWidget extends StatelessWidget {
                   children: [
                     Text(
                       l10n.launchVehicle,
-                      style:
-                          const TextStyle(color: Colors.white60, fontSize: 12),
+                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                            color: scheme.onSurfaceVariant,
+                          ),
                     ),
                     const SizedBox(height: 4),
                     Text(
                       vehicle,
-                      style: TextStyle(
-                        color: Colors.orange[400],
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                            color: scheme.primary,
+                            fontWeight: FontWeight.bold,
+                          ),
                     ),
                   ],
                 ),

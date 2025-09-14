@@ -46,7 +46,7 @@ void main() {
 
   testWidgets('pulse animation reacts to controller', (tester) async {
     controller = AnimationController(
-      vsync: tester,
+      vsync: const TestVSync(),
       duration: const Duration(seconds: 1),
     );
 

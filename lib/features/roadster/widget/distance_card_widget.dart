@@ -69,13 +69,14 @@ class DistanceCardWidget extends StatelessWidget {
                         children: [
                           Text(
                             title,
-                            style: TextStyle(
-                              color: Theme.of(context)
-                                  .colorScheme
-                                  .onSurface
-                                  .withValues(alpha: 0.7),
-                              fontSize: 14,
-                            ),
+                            style:
+                                Theme.of(context).textTheme.bodySmall?.copyWith(
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .onSurface
+                                          .withValues(alpha: 0.7),
+                                      fontSize: 14,
+                                    ),
                           ),
                           const SizedBox(height: 4),
                           Row(
@@ -88,11 +89,14 @@ class DistanceCardWidget extends StatelessWidget {
                               const SizedBox(width: 4),
                               Text(
                                 S.of(context).millionKm,
-                                style: TextStyle(
-                                  color: color,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                ),
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodyMedium
+                                    ?.copyWith(
+                                      color: color,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                               ),
                             ],
                           ),

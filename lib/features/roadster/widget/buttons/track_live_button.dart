@@ -26,6 +26,7 @@ class TrackLiveButton extends StatelessWidget {
           icon: const Icon(Icons.rocket_launch),
           label: Text(S.of(context).trackLive),
           backgroundColor: Theme.of(context).colorScheme.primary,
+          foregroundColor: Theme.of(context).colorScheme.onPrimary,
         ),
       ),
     );

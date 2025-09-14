@@ -53,8 +53,8 @@ class AnimatedStatCardWidget extends StatelessWidget {
                   const SizedBox(height: 8),
                   Text(
                     title,
-                    style: const TextStyle(
-                      color: Colors.white60,
+                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                      color: Theme.of(context).colorScheme.onSurfaceVariant,
                       fontSize: 12,
                     ),
                   ),

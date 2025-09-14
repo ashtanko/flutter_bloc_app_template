@@ -52,7 +52,8 @@ void main() {
 
       // 50 stars should render quickly
       expect(stopwatch.elapsedMilliseconds, lessThan(500));
-
+      await tester.pump(); // ensure first frame
+      expect(tester.takeException(), isNull);
       controller.dispose();
     });
   });

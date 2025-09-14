@@ -38,6 +38,21 @@ void main() {
     controller.value = 0.5;
     await tester.pump();
 
+    // Opacity before
+    final before =
+        ((tester.widget<Container>(containerFinder).decoration as BoxDecoration)
+                .color)!
+            .a;
+    // Advance the animation
+    controller.value = 0.55;
+    await tester.pump();
+    // Opacity after
+    final after =
+        ((tester.widget<Container>(containerFinder).decoration as BoxDecoration)
+                .color)!
+            .a;
+    expect(after, greaterThan(before));
+
     // Verify color alpha changed
     final boxDecoration = container.decoration as BoxDecoration;
     final alpha = boxDecoration.color?.a ?? 0;
