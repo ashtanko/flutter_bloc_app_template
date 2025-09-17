@@ -28,14 +28,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m3(id) => "Приклад елементу ${id}";
 
-  static String m4(launchedAt) => "Запущено: ${launchedAt}";
+  static String m4(date) => "Запуск: ${date}";
 
-  static String m5(mission) => "Місія: ${mission}";
+  static String m5(launchedAt) => "Запущено: ${launchedAt}";
 
-  static String m6(rocketName, rocketType) =>
+  static String m6(mission) => "Місія: ${mission}";
+
+  static String m7(rocketName, rocketType) =>
       "Ракета: ${rocketName} (${rocketType})";
 
-  static String m7(percentage) => "${percentage}% успішних запусків";
+  static String m8(percentage) => "${percentage}% успішних запусків";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -47,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "allObjectivesCompleted": MessageLookupByLibrary.simpleMessage(
       "Всі цілі досягнуті",
     ),
+    "apoapsis": MessageLookupByLibrary.simpleMessage("Апоцентр"),
     "appTitle": MessageLookupByLibrary.simpleMessage("шаблон_flutter_bloc_app"),
     "appearanceSettingsItem": MessageLookupByLibrary.simpleMessage(
       "Зовнішній вигляд",
@@ -63,6 +66,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Кордона сторона",
     ),
     "coreSerial": MessageLookupByLibrary.simpleMessage("Серійний номер ядра"),
+    "currentSpeed": MessageLookupByLibrary.simpleMessage("Поточна швидкість"),
     "customers": MessageLookupByLibrary.simpleMessage("Клієнти"),
     "darkGoldThemeTitle": MessageLookupByLibrary.simpleMessage("Темне золото"),
     "darkMintThemeTitle": MessageLookupByLibrary.simpleMessage("Темна м’ята"),
@@ -94,6 +98,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "dynamicColorSettingsItemTitle": MessageLookupByLibrary.simpleMessage(
       "Використовувати динамічні кольори",
     ),
+    "earthDistance": MessageLookupByLibrary.simpleMessage("Відстань до Землі"),
+    "eccentricity": MessageLookupByLibrary.simpleMessage("Ексцентриситет"),
     "emailsTitle": MessageLookupByLibrary.simpleMessage("Електронні листи"),
     "emptyList": MessageLookupByLibrary.simpleMessage("Список порожній"),
     "enabledButtonTitle": MessageLookupByLibrary.simpleMessage("Увімкнено"),
@@ -112,6 +118,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "iconButtonTitle": MessageLookupByLibrary.simpleMessage("З іконкою"),
     "id": MessageLookupByLibrary.simpleMessage("ID"),
+    "inclination": MessageLookupByLibrary.simpleMessage("Нахил"),
     "itemDetailsTitle": MessageLookupByLibrary.simpleMessage("Деталі елементу"),
     "itemTitle": m3,
     "itemsTitle": MessageLookupByLibrary.simpleMessage("Приклади елементів"),
@@ -121,9 +128,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "Приземлення успішне",
     ),
     "launch": MessageLookupByLibrary.simpleMessage("Запуск"),
+    "launchInformation": MessageLookupByLibrary.simpleMessage(
+      "Інформація про запуск",
+    ),
+    "launchMass": MessageLookupByLibrary.simpleMessage("Маса запуску"),
     "launchSite": MessageLookupByLibrary.simpleMessage("Місце запуску"),
-    "launchedAt": m4,
+    "launchVehicle": MessageLookupByLibrary.simpleMessage("Ракета-носій"),
+    "launched": m4,
+    "launchedAt": m5,
     "launchesTitle": MessageLookupByLibrary.simpleMessage("Запуски"),
+    "learnMore": MessageLookupByLibrary.simpleMessage("Дізнатися більше"),
     "lightGoldThemeTitle": MessageLookupByLibrary.simpleMessage(
       "Світле золото",
     ),
@@ -132,15 +146,19 @@ class MessageLookup extends MessageLookupByLibrary {
     "linksResources": MessageLookupByLibrary.simpleMessage(
       "Посилання та ресурси",
     ),
+    "longitude": MessageLookupByLibrary.simpleMessage("Довгота"),
     "manufacturer": MessageLookupByLibrary.simpleMessage("Виробник"),
+    "marsDistance": MessageLookupByLibrary.simpleMessage("Відстань до Марса"),
     "mass": MessageLookupByLibrary.simpleMessage("Маса"),
     "massLabel": MessageLookupByLibrary.simpleMessage("Маса"),
+    "millionKm": MessageLookupByLibrary.simpleMessage("мільйон км"),
+    "missionDetails": MessageLookupByLibrary.simpleMessage("Деталі місії"),
     "missionFailed": MessageLookupByLibrary.simpleMessage("Місія не вдалася"),
     "missionOverview": MessageLookupByLibrary.simpleMessage("Огляд місії"),
     "missionSuccess": MessageLookupByLibrary.simpleMessage("Місія успішна"),
     "missionSuccessful": MessageLookupByLibrary.simpleMessage("Місія успішна"),
     "missionTimeline": MessageLookupByLibrary.simpleMessage("Хронологія місії"),
-    "missionTitle": m5,
+    "missionTitle": m6,
     "nationality": MessageLookupByLibrary.simpleMessage("Національність"),
     "newsScreen": MessageLookupByLibrary.simpleMessage("Новини"),
     "noDetails": MessageLookupByLibrary.simpleMessage("Деталі відсутні"),
@@ -153,6 +171,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "Цілі місії не досягнуті",
     ),
     "orbit": MessageLookupByLibrary.simpleMessage("Орбіта"),
+    "orbitalParameters": MessageLookupByLibrary.simpleMessage(
+      "Орбітальні параметри",
+    ),
+    "orbitalPeriod": MessageLookupByLibrary.simpleMessage("Орбітальний період"),
     "overview": MessageLookupByLibrary.simpleMessage("Огляд"),
     "payload": MessageLookupByLibrary.simpleMessage("Корисне навантаження"),
     "payloadCapacity": MessageLookupByLibrary.simpleMessage(
@@ -161,6 +183,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "payloadTitle": MessageLookupByLibrary.simpleMessage(
       "Корисне навантаження",
     ),
+    "periapsis": MessageLookupByLibrary.simpleMessage("Перицентр"),
     "pressKit": MessageLookupByLibrary.simpleMessage("Прес-кит"),
     "propellant1Label": MessageLookupByLibrary.simpleMessage("Паливо 1"),
     "propellant2Label": MessageLookupByLibrary.simpleMessage("Паливо 2"),
@@ -170,7 +193,11 @@ class MessageLookup extends MessageLookupByLibrary {
       "Знято з експлуатації",
     ),
     "reused": MessageLookupByLibrary.simpleMessage("Повторне використання"),
-    "rocket": m6,
+    "roadsterDescription": MessageLookupByLibrary.simpleMessage(
+      "Tesla Roadster Ілона Маска",
+    ),
+    "roadsterTitle": MessageLookupByLibrary.simpleMessage("Роадстер"),
+    "rocket": m7,
     "rocketBlock": MessageLookupByLibrary.simpleMessage("Блок"),
     "rocketDetails": MessageLookupByLibrary.simpleMessage("Деталі ракети"),
     "rocketName": MessageLookupByLibrary.simpleMessage("Назва ракети"),
@@ -178,6 +205,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "rocketType": MessageLookupByLibrary.simpleMessage("Тип"),
     "rocketsTab": MessageLookupByLibrary.simpleMessage("Ракети"),
     "rocketsTitle": MessageLookupByLibrary.simpleMessage("Ракети"),
+    "semiMajorAxis": MessageLookupByLibrary.simpleMessage("Велика піввісь"),
     "settingsTitle": MessageLookupByLibrary.simpleMessage("Налаштування"),
     "siteIdLabel": MessageLookupByLibrary.simpleMessage("ID сайту:"),
     "specifications": MessageLookupByLibrary.simpleMessage(
@@ -187,7 +215,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "staticFireTest": MessageLookupByLibrary.simpleMessage(
       "Статичний вогневий тест",
     ),
-    "successRate": m7,
+    "successRate": m8,
     "systemThemeTitle": MessageLookupByLibrary.simpleMessage("Системна тема"),
     "tabHome": MessageLookupByLibrary.simpleMessage("Головна"),
     "tabSettings": MessageLookupByLibrary.simpleMessage("Налаштування"),
@@ -196,10 +224,13 @@ class MessageLookup extends MessageLookupByLibrary {
       "Тяга (на рівні моря)",
     ),
     "tons": MessageLookupByLibrary.simpleMessage("тонн"),
+    "trackLive": MessageLookupByLibrary.simpleMessage("Слідкувати онлайн"),
     "transparentButtonTitle": MessageLookupByLibrary.simpleMessage("Прозора"),
     "tryAgainButton": MessageLookupByLibrary.simpleMessage("Спробувати ще раз"),
     "type": MessageLookupByLibrary.simpleMessage("Тип"),
     "typeLabel": MessageLookupByLibrary.simpleMessage("Тип"),
+    "unitDays": MessageLookupByLibrary.simpleMessage("днів"),
+    "unitKph": MessageLookupByLibrary.simpleMessage("км/год"),
     "versionLabel": MessageLookupByLibrary.simpleMessage("Версія"),
     "watchVideo": MessageLookupByLibrary.simpleMessage("Дивитися відео"),
     "wikipedia": MessageLookupByLibrary.simpleMessage("Вікіпедія"),
