@@ -24,35 +24,71 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m1(days) => "Há ${days} dias";
 
-  static String m2(id) => "Artigo de Exemplo ${id}";
+  static String m2(number) => "Voo #${number}";
 
-  static String m3(launchedAt) => "Lançado em: ${launchedAt}";
+  static String m3(id) => "Artigo de Exemplo ${id}";
 
-  static String m4(mission) => "Missão: ${mission}";
+  static String m4(launchedAt) => "Lançado em: ${launchedAt}";
 
-  static String m5(rocketName, rocketType) =>
+  static String m5(mission) => "Missão: ${mission}";
+
+  static String m6(rocketName, rocketType) =>
       "Foguete: ${rocketName} (${rocketType})";
+
+  static String m7(percentage) => "${percentage}% de sucesso";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "aboutSettingsItem": MessageLookupByLibrary.simpleMessage("About"),
+    "aboutSettingsItemDescription": MessageLookupByLibrary.simpleMessage(
+      "Version, links, feedback",
+    ),
+    "activeStatus": MessageLookupByLibrary.simpleMessage("Ativa"),
+    "allObjectivesCompleted": MessageLookupByLibrary.simpleMessage(
+      "Todos os objetivos concluídos",
+    ),
     "appTitle": MessageLookupByLibrary.simpleMessage(
       "flutter_bloc_app_template",
     ),
+    "appearanceSettingsItem": MessageLookupByLibrary.simpleMessage(
+      "Appearance",
+    ),
+    "appearanceSettingsItemDescription": MessageLookupByLibrary.simpleMessage(
+      "Dark theme dynamic color, languages",
+    ),
+    "appearanceTitle": MessageLookupByLibrary.simpleMessage("Aparência"),
+    "article": MessageLookupByLibrary.simpleMessage("Artigo"),
     "borderRadiusButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Raio da Borda",
     ),
     "borderSideButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Lado da Borda",
     ),
+    "coreSerial": MessageLookupByLibrary.simpleMessage(
+      "Número de Série do Núcleo",
+    ),
+    "customers": MessageLookupByLibrary.simpleMessage("Clientes"),
     "darkGoldThemeTitle": MessageLookupByLibrary.simpleMessage(
       "Tema Dourado Escuro",
     ),
     "darkMintThemeTitle": MessageLookupByLibrary.simpleMessage(
       "Tema Menta Escuro",
     ),
+    "darkThemeFollowSystemSettingsItemTitle":
+        MessageLookupByLibrary.simpleMessage("Padrão do sistema"),
+    "darkThemeOffSettingsItemTitle": MessageLookupByLibrary.simpleMessage(
+      "Claro",
+    ),
+    "darkThemeOnSettingsItemTitle": MessageLookupByLibrary.simpleMessage(
+      "Escuro",
+    ),
+    "darkThemeSettingsItemTitle": MessageLookupByLibrary.simpleMessage(
+      "Modo de tema",
+    ),
     "darkThemeTitle": MessageLookupByLibrary.simpleMessage("Tema Escuro"),
     "daysFromTodayTitle": m0,
     "daysSinceTodayTitle": m1,
+    "diameterLabel": MessageLookupByLibrary.simpleMessage("Diâmetro"),
     "disabledButtonTitle": MessageLookupByLibrary.simpleMessage("Desativado"),
     "disabledRoundedButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Desativado com Bordas Arredondadas",
@@ -60,20 +96,40 @@ class MessageLookup extends MessageLookupByLibrary {
     "disabledWithIconButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Desativado com Ícone",
     ),
+    "dynamicColorSettingsItemDescription": MessageLookupByLibrary.simpleMessage(
+      "Adaptar as cores do app ao papel de parede",
+    ),
+    "dynamicColorSettingsItemTitle": MessageLookupByLibrary.simpleMessage(
+      "Usar cores dinâmicas",
+    ),
     "emailsTitle": MessageLookupByLibrary.simpleMessage("E-mails"),
     "emptyList": MessageLookupByLibrary.simpleMessage("Lista Vazia"),
     "enabledButtonTitle": MessageLookupByLibrary.simpleMessage("Ativado"),
+    "engineDetails": MessageLookupByLibrary.simpleMessage("Detalhes do Motor"),
     "error": MessageLookupByLibrary.simpleMessage("Erro"),
+    "firstStage": MessageLookupByLibrary.simpleMessage("🚀 Primeiro Estágio"),
+    "flight": MessageLookupByLibrary.simpleMessage("Voo"),
+    "flightNumber": m2,
+    "gridFins": MessageLookupByLibrary.simpleMessage("Aletas de grade"),
+    "heightLabel": MessageLookupByLibrary.simpleMessage("Altura"),
     "iconAndPaddingButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Com Ícone e Espaçamento",
     ),
     "iconButtonTitle": MessageLookupByLibrary.simpleMessage("Com Ícone"),
+    "id": MessageLookupByLibrary.simpleMessage("ID"),
     "itemDetailsTitle": MessageLookupByLibrary.simpleMessage(
       "Detalhes do Artigo",
     ),
-    "itemTitle": m2,
+    "itemTitle": m3,
     "itemsTitle": MessageLookupByLibrary.simpleMessage("Artigos de Exemplo"),
-    "launchedAt": m3,
+    "landing": MessageLookupByLibrary.simpleMessage("Pouso"),
+    "landingLegs": MessageLookupByLibrary.simpleMessage("Pernas de pouso"),
+    "landingSuccess": MessageLookupByLibrary.simpleMessage(
+      "Pouso bem-sucedido",
+    ),
+    "launch": MessageLookupByLibrary.simpleMessage("Lançamento"),
+    "launchSite": MessageLookupByLibrary.simpleMessage("Local de Lançamento"),
+    "launchedAt": m4,
     "launchesTitle": MessageLookupByLibrary.simpleMessage("Lançamentos"),
     "lightGoldThemeTitle": MessageLookupByLibrary.simpleMessage(
       "Tema Dourado Claro",
@@ -82,16 +138,85 @@ class MessageLookup extends MessageLookupByLibrary {
       "Tema Menta Claro",
     ),
     "lightThemeTitle": MessageLookupByLibrary.simpleMessage("Tema Claro"),
-    "missionTitle": m4,
+    "linksResources": MessageLookupByLibrary.simpleMessage("Links e Recursos"),
+    "manufacturer": MessageLookupByLibrary.simpleMessage("Fabricante"),
+    "mass": MessageLookupByLibrary.simpleMessage("Massa"),
+    "massLabel": MessageLookupByLibrary.simpleMessage("Massa"),
+    "missionFailed": MessageLookupByLibrary.simpleMessage("Missão falhou"),
+    "missionOverview": MessageLookupByLibrary.simpleMessage(
+      "Visão geral da missão",
+    ),
+    "missionSuccess": MessageLookupByLibrary.simpleMessage("Sucesso da Missão"),
+    "missionSuccessful": MessageLookupByLibrary.simpleMessage(
+      "Missão bem-sucedida",
+    ),
+    "missionTimeline": MessageLookupByLibrary.simpleMessage(
+      "Cronograma da Missão",
+    ),
+    "missionTitle": m5,
+    "nationality": MessageLookupByLibrary.simpleMessage("Nacionalidade"),
     "newsScreen": MessageLookupByLibrary.simpleMessage("Notícias"),
-    "rocket": m5,
+    "noDetails": MessageLookupByLibrary.simpleMessage(
+      "Nenhum detalhe disponível",
+    ),
+    "notAvailable": MessageLookupByLibrary.simpleMessage("N/D"),
+    "numberLabel": MessageLookupByLibrary.simpleMessage("Número"),
+    "objectivesCompleted": MessageLookupByLibrary.simpleMessage(
+      "Objetivos Concluídos",
+    ),
+    "objectivesNotMet": MessageLookupByLibrary.simpleMessage(
+      "Objetivos da missão não alcançados",
+    ),
+    "orbit": MessageLookupByLibrary.simpleMessage("Órbita"),
+    "overview": MessageLookupByLibrary.simpleMessage("Visão Geral"),
+    "payload": MessageLookupByLibrary.simpleMessage("Carga útil"),
+    "payloadCapacity": MessageLookupByLibrary.simpleMessage(
+      "Capacidade de Carga",
+    ),
+    "payloadTitle": MessageLookupByLibrary.simpleMessage("Carga útil"),
+    "pressKit": MessageLookupByLibrary.simpleMessage("Kit de Imprensa"),
+    "propellant1Label": MessageLookupByLibrary.simpleMessage("Propelente 1"),
+    "propellant2Label": MessageLookupByLibrary.simpleMessage("Propelente 2"),
+    "recoveryShips": MessageLookupByLibrary.simpleMessage(
+      "Navios de Recuperação",
+    ),
+    "reddit": MessageLookupByLibrary.simpleMessage("Reddit"),
+    "retiredStatus": MessageLookupByLibrary.simpleMessage("Aposentada"),
+    "reused": MessageLookupByLibrary.simpleMessage("Reutilizado"),
+    "rocket": m6,
+    "rocketBlock": MessageLookupByLibrary.simpleMessage("Bloco"),
+    "rocketDetails": MessageLookupByLibrary.simpleMessage(
+      "Detalhes do Foguete",
+    ),
+    "rocketName": MessageLookupByLibrary.simpleMessage("Nome do Foguete"),
+    "rocketTitle": MessageLookupByLibrary.simpleMessage("Foguete"),
+    "rocketType": MessageLookupByLibrary.simpleMessage("Tipo"),
+    "rocketsTab": MessageLookupByLibrary.simpleMessage("Foguetes"),
+    "rocketsTitle": MessageLookupByLibrary.simpleMessage("Foguetes"),
     "settingsTitle": MessageLookupByLibrary.simpleMessage("Configurações"),
+    "siteIdLabel": MessageLookupByLibrary.simpleMessage("ID do Local:"),
+    "specifications": MessageLookupByLibrary.simpleMessage("Especificações"),
+    "stagesLabel": MessageLookupByLibrary.simpleMessage("Estágios"),
+    "staticFireTest": MessageLookupByLibrary.simpleMessage(
+      "Teste de Fogo Estático",
+    ),
+    "successRate": m7,
     "systemThemeTitle": MessageLookupByLibrary.simpleMessage("Tema do Sistema"),
     "tabHome": MessageLookupByLibrary.simpleMessage("Início"),
     "tabSettings": MessageLookupByLibrary.simpleMessage("Configurações"),
     "themeTitle": MessageLookupByLibrary.simpleMessage("Tema"),
+    "thrustSeaLevelLabel": MessageLookupByLibrary.simpleMessage(
+      "Empuxo (nível do mar)",
+    ),
+    "tons": MessageLookupByLibrary.simpleMessage("toneladas"),
     "transparentButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Transparente",
     ),
+    "tryAgainButton": MessageLookupByLibrary.simpleMessage("Tentar novamente"),
+    "type": MessageLookupByLibrary.simpleMessage("Tipo"),
+    "typeLabel": MessageLookupByLibrary.simpleMessage("Tipo"),
+    "versionLabel": MessageLookupByLibrary.simpleMessage("Versão"),
+    "watchVideo": MessageLookupByLibrary.simpleMessage("Assistir Vídeo"),
+    "wikipedia": MessageLookupByLibrary.simpleMessage("Wikipédia"),
   };
 }

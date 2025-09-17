@@ -8,15 +8,23 @@ on:
   pull_request:
     branches: [ main ]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
 jobs:
   test-app:
     name: App
-
     runs-on: ubuntu-latest
+    timeout-minutes: 40
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
 
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
@@ -29,30 +37,15 @@ jobs:
       - name: Cache pub dependencies
         uses: actions/cache@v4
         with:
-          path: ${{ env.FLUTTER_HOME }}/.pub-cache
+          path: ${{ env.HOME }}/.pub-cache
           key: ${{ runner.os }}-pub-${{ hashFiles('**/pubspec.lock') }}
           restore-keys: ${{ runner.os }}-pub-
 
       - name: Download pub dependencies
         run: flutter pub get
 
-#      - name: Pub Global
-#        run: dart pub global activate flutter_gen
-
-#      - name: Build runner
-#        run: flutter packages pub run build_runner build --delete-conflicting-outputs
-
-#      - name: Generate intl
-#        run: flutter pub run intl_utils:generate
-
-#      - name: Run fluttergen
-#        run: fluttergen -c pubspec.yaml
-
       - name: Run analyzer
         run: flutter analyze
-
-#      - name: Run Dart code metrics
-#        run: flutter pub run dart_code_metrics:metrics analyze lib
 
       - name: Run tests
         run: flutter test --coverage
@@ -60,24 +53,86 @@ jobs:
       - name: Install lcov
         run: sudo apt-get install -y lcov
 
-      - name: Remove generated files from code coverage report
-        run: lcov --remove coverage/lcov.info 'lib/*/*.gen.dart' 'lib/generated/*.dart' 'lib/generated/*/*.dart' 'lib/di/*.dart' '**/lib/constants/' 'lib/constants/*.dart' -o coverage/lcov.info --ignore-errors unused
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: unit-test-results
+          path: build/
 
-      - name: Remove router from code coverage report
-        run: lcov --remove coverage/lcov.info 'lib/routers/router.dart' -o coverage/lcov.info --ignore-errors unused
+      - name: Clean coverage report
+        run: |
+          lcov --remove coverage/lcov.info \
+            'lib/**.gen.dart' \
+            'lib/generated/**' \
+            'lib/di/**' \
+            'lib/constants/**' \
+            'lib/routers/router.dart' \
+            -o coverage/lcov.info \
+            --ignore-errors unused
 
       - name: Check Code Coverage
-        uses: VeryGoodOpenSource/very_good_coverage@v1.2.1
+        uses: VeryGoodOpenSource/very_good_coverage@v3.0.0
         with:
           path: coverage/lcov.info
           min_coverage: 59
-          exclude: '**/*.g.dart **/*.gen.dart **/lib/di/ lib/generated/ **/lib/generated/ lib/di/*.dart **/lib/constants/ lib/constants/*.dart/ lib/routers/router.dart'
+          exclude: |
+            **/*.g.dart
+            **/*.gen.dart
+            lib/di/**
+            lib/generated/**
+            lib/constants/**
+            lib/routers/router.dart
 
-      - name: Upload coverage to codecov
-        uses: codecov/codecov-action@v3
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v5
 
-      - name: Run codacy-coverage-reporter
+      - name: Codacy Coverage Reporter
         uses: codacy/codacy-coverage-reporter-action@v1
         with:
-            project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
-            coverage-reports: ./coverage/lcov.info
+          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          coverage-reports: ./coverage/lcov.info
+
+  integration-tests:
+    name: Flutter Integration Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: true
+      matrix:
+        api-level: [ 31 ]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+      - name: Enable KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - name: Setup Android emulator and run integration tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: ${{ matrix.api-level }}
+          arch: x86_64
+          target: google_apis
+          profile: Nexus 6
+          script: |
+            flutter pub get
+            flutter test integration_test/app_test.dart --flavor dev
+            flutter test integration_test/appearance_test.dart --flavor dev
+            flutter test integration_test/launch_navigation_test.dart --flavor dev
+            flutter test integration_test/launch_test.dart --flavor dev
+            flutter test integration_test/launches_mock_test.dart --flavor dev
+            flutter test integration_test/launches_test.dart --flavor dev
+            flutter test integration_test/settings_test.dart --flavor dev
+            flutter test integration_test/rockets_screen_integration_test.dart --flavor dev
+            flutter test integration_test/rocket_screen_test.dart --flavor dev
+            flutter test integration_test/rockets_integration_live_test.dart --flavor dev

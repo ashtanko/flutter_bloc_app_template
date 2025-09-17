@@ -1,32 +1,33 @@
-.PHONY: gen genAll rebuild check get localize runDev runDevQa runDevStaging lines release apk
+.PHONY: gen genAll rebuild check get localize runDev runDevQa runDevStaging runProdRelease \
+        release apk lines force_upgrade integration_test
 
-# clean project, install dependencies & generate sources
+# Clean project, install dependencies & generate sources
 rebuild:
 	flutter clean
-	flutter packages pub get
-	flutter packages pub run build_runner build --delete-conflicting-outputs
+	flutter pub get
+	dart run build_runner build --delete-conflicting-outputs
 	fluttergen -c pubspec.yaml
 
-# generate localizations, dependencies, image assets, colors, fonts
+# Generate code with build_runner
 gen:
-	flutter packages pub run build_runner build --delete-conflicting-outputs
+	dart run build_runner build --delete-conflicting-outputs
 
-# generate localizations, dependencies, image assets, colors, fonts
+# Generate code and localizations
 genAll:
-	flutter packages pub run build_runner build --delete-conflicting-outputs
+	dart run build_runner build --delete-conflicting-outputs
 	flutter pub run intl_utils:generate
 	fluttergen -c pubspec.yaml
 
-# generate localizations
+# Generate localizations only
 localize:
 	flutter pub run intl_utils:generate
 
-# analyze the project
+# Analyze the project
 check:
-	dart analyze .
+	dart analyze . && flutter analyze
 	# flutter pub run dart_code_metrics:metrics analyze lib
 
-# flavors
+# Run with flavors
 runDev:
 	flutter run --flavor dev -t lib/main.dart
 
@@ -39,17 +40,31 @@ runDevStaging:
 release:
 	flutter run --release -t lib/main_prod.dart
 
-prodRelease:
+runProdRelease:
 	flutter run --flavor prod --release -t lib/main_prod.dart
 
+# Build release APK
 apk:
-	flutter build apk --release -t lib/main_prod.dart
+	flutter build apk --flavor dev --release -t lib/main_prod.dart
 
+# Build debug APK
+debug_apk:
+	flutter build apk --flavor dev --debug -t lib/main_dev.dart
+
+# Count lines of Dart code
 lines:
 	find . -name '*.dart' | xargs wc -l
 
+# Force upgrade packages
 force_upgrade:
 	flutter update-packages --force-upgrade
 
+# Run integration test
 integration_test:
-    flutter test integration_test/app_test.dart --flavor dev
+	flutter test integration_test --flavor dev
+
+screenshot_test:
+	flutter drive --driver=test_driver/integration_test.dart --target=integration_test/settings_screenshot_test.dart --flavor dev
+
+# upgrade_deps:
+#     flutter pub upgrade --major-versions

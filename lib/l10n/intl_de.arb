@@ -24,6 +24,54 @@
   "@settingsTitle": {
     "description": "Der Titel der Einstellungen"
   },
+  "appearanceTitle": "Darstellung",
+  "@appearanceTitle": {
+    "description": "Titel für den Darstellungsbildschirm"
+  },
+  "dynamicColorSettingsItemTitle": "Dynamische Farben verwenden",
+  "@dynamicColorSettingsItemTitle": {
+    "description": "Titel zur Aktivierung dynamischer Farben vom Hintergrundbild"
+  },
+  "dynamicColorSettingsItemDescription": "App-Farben an das Hintergrundbild anpassen",
+  "@dynamicColorSettingsItemDescription": {
+    "description": "Beschreibung für die Einstellung dynamischer Farben"
+  },
+  "darkThemeSettingsItemTitle": "Designmodus",
+  "@darkThemeSettingsItemTitle": {
+    "description": "Titel zur Auswahl von Hell/Dunkel/System"
+  },
+  "darkThemeOnSettingsItemTitle": "Dunkel",
+  "@darkThemeOnSettingsItemTitle": {
+    "description": "Option für dunkles Design"
+  },
+  "darkThemeOffSettingsItemTitle": "Hell",
+  "@darkThemeOffSettingsItemTitle": {
+    "description": "Option für helles Design"
+  },
+  "darkThemeFollowSystemSettingsItemTitle": "Systemstandard",
+  "@darkThemeFollowSystemSettingsItemTitle": {
+    "description": "Option zum Folgen des Systemdesigns"
+  },
+  "tryAgainButton": "Erneut versuchen",
+  "@tryAgainButton": {
+    "description": "Beschriftung für die Schaltfläche zum Wiederholen auf Fehlerbildschirmen"
+  },
+  "appearanceSettingsItem": "Appearance",
+  "@appearanceSettingsItem": {
+    "description": "Title for appearance settings item"
+  },
+  "appearanceSettingsItemDescription": "Dark theme dynamic color, languages",
+  "@appearanceSettingsItemDescription": {
+    "description": "Description for appearance settings item"
+  },
+  "aboutSettingsItem": "About",
+  "@aboutSettingsItem": {
+    "description": "Title for about settings item"
+  },
+  "aboutSettingsItemDescription": "Version, links, feedback",
+  "@aboutSettingsItemDescription": {
+    "description": "Description for about settings item"
+  },
   "missionTitle": "Mission: {mission}",
   "@missionTitle": {
     "description": "Der Missionsstart-Labeltext",
@@ -101,5 +149,84 @@
   "iconAndPaddingButtonTitle": "Mit Icon & Abstand",
   "@iconAndPaddingButtonTitle": {},
   "transparentButtonTitle": "Transparent",
-  "@transparentButtonTitle": {}
+  "@transparentButtonTitle": {},
+  "missionTimeline": "Missionszeitplan",
+  "staticFireTest": "Statischer Feuertest",
+  "launch": "Start",
+  "missionSuccess": "Missionserfolg",
+  "objectivesCompleted": "Ziele erreicht",
+  "missionSuccessful": "Mission erfolgreich",
+  "missionFailed": "Mission fehlgeschlagen",
+  "allObjectivesCompleted": "Alle Ziele erreicht",
+  "objectivesNotMet": "Missionsziele nicht erreicht",
+  "rocketTitle": "Rakete",
+  "payload": "Nutzlast",
+  "orbit": "Umlaufbahn",
+  "rocketDetails": "Raketendetails",
+  "rocketName": "Raketenname",
+  "rocketType": "Typ",
+  "rocketBlock": "Block",
+  "firstStage": "🚀 Erste Stufe",
+  "coreSerial": "Kernseriennummer",
+  "flight": "Flug",
+  "landing": "Landung",
+  "landingSuccess": "Landung erfolgreich",
+  "gridFins": "Steuergitter",
+  "landingLegs": "Landebeine",
+  "reused": "Wiederverwendet",
+  "notAvailable": "Nicht verfügbar",
+  "recoveryShips": "Bergungsschiffe",
+  "payloadTitle": "Nutzlast",
+  "id": "Kennung",
+  "type": "Typ",
+  "mass": "Masse",
+  "manufacturer": "Hersteller",
+  "nationality": "Nationalität",
+  "customers": "Kunden",
+  "missionOverview": "Missionsübersicht",
+  "noDetails": "Keine Details verfügbar",
+  "linksResources": "Links & Ressourcen",
+  "watchVideo": "Video ansehen",
+  "wikipedia": "Wikipedia",
+  "article": "Artikel",
+  "reddit": "Reddit",
+  "pressKit": "Pressemappe",
+  "launchSite": "Startplatz",
+  "siteIdLabel": "Standort-ID:",
+  "flightNumber": "Flug #{number}",
+  "rocketsTab": "Raketen",
+  "@rocketsTab": {
+    "description": "Titel des Raketen-Tabs"
+  },
+  "activeStatus": "Aktiv",
+  "@activeStatus": {
+    "description": "Label für aktive Rakete"
+  },
+  "retiredStatus": "Außer Dienst",
+  "@retiredStatus": {
+    "description": "Label für außer Dienst gestellte Rakete"
+  },
+  "successRate": "{percentage}% Erfolg",
+  "@successRate": {
+    "description": "Label für Erfolgsrate der Rakete"
+  },
+  "rocketsTitle": "Raketen",
+  "@rocketsTitle": {
+    "description": "Titel des Raketen-Bildschirms"
+  },
+  "overview": "Übersicht",
+  "specifications": "Spezifikationen",
+  "payloadCapacity": "Nutzlastkapazität",
+  "engineDetails": "Motordetails",
+  "heightLabel": "Höhe",
+  "diameterLabel": "Durchmesser",
+  "massLabel": "Masse",
+  "stagesLabel": "Stufen",
+  "typeLabel": "Typ",
+  "versionLabel": "Version",
+  "numberLabel": "Anzahl",
+  "propellant1Label": "Treibstoff 1",
+  "propellant2Label": "Treibstoff 2",
+  "thrustSeaLevelLabel": "Schub (Bodenniveau)",
+  "tons": "Tonnen"
 }

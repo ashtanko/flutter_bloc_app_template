@@ -28,4 +28,16 @@ void main() {
       expect(formattedName, 'MW');
     });
   });
+
+  group('formatRocketCost', () {
+    test('formats cost in millions', () {
+      expect(formatRocketCost(50000000), '\$50.0M');
+      expect(formatRocketCost(12345678), '\$12.3M');
+    });
+
+    test('returns \$0 for null or 0', () {
+      expect(formatRocketCost(null), '\$0');
+      expect(formatRocketCost(0), '\$0');
+    });
+  });
 }

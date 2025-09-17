@@ -28,10 +28,9 @@ class S {
   static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
 
   static Future<S> load(Locale locale) {
-    final name =
-        (locale.countryCode?.isEmpty ?? false)
-            ? locale.languageCode
-            : locale.toString();
+    final name = (locale.countryCode?.isEmpty ?? false)
+        ? locale.languageCode
+        : locale.toString();
     final localeName = Intl.canonicalizedLocale(name);
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
@@ -111,6 +110,126 @@ class S {
       'Settings',
       name: 'settingsTitle',
       desc: 'The title of the settings',
+      args: [],
+    );
+  }
+
+  /// `Appearance`
+  String get appearanceTitle {
+    return Intl.message(
+      'Appearance',
+      name: 'appearanceTitle',
+      desc: 'Title for appearance screen',
+      args: [],
+    );
+  }
+
+  /// `Use dynamic colors`
+  String get dynamicColorSettingsItemTitle {
+    return Intl.message(
+      'Use dynamic colors',
+      name: 'dynamicColorSettingsItemTitle',
+      desc: 'Title for enabling dynamic colors from wallpaper',
+      args: [],
+    );
+  }
+
+  /// `Adapt app colors to your wallpaper`
+  String get dynamicColorSettingsItemDescription {
+    return Intl.message(
+      'Adapt app colors to your wallpaper',
+      name: 'dynamicColorSettingsItemDescription',
+      desc: 'Description for dynamic color setting',
+      args: [],
+    );
+  }
+
+  /// `Theme mode`
+  String get darkThemeSettingsItemTitle {
+    return Intl.message(
+      'Theme mode',
+      name: 'darkThemeSettingsItemTitle',
+      desc: 'Title for selecting light/dark/system theme',
+      args: [],
+    );
+  }
+
+  /// `Dark`
+  String get darkThemeOnSettingsItemTitle {
+    return Intl.message(
+      'Dark',
+      name: 'darkThemeOnSettingsItemTitle',
+      desc: 'Dark theme option',
+      args: [],
+    );
+  }
+
+  /// `Light`
+  String get darkThemeOffSettingsItemTitle {
+    return Intl.message(
+      'Light',
+      name: 'darkThemeOffSettingsItemTitle',
+      desc: 'Light theme option',
+      args: [],
+    );
+  }
+
+  /// `System default`
+  String get darkThemeFollowSystemSettingsItemTitle {
+    return Intl.message(
+      'System default',
+      name: 'darkThemeFollowSystemSettingsItemTitle',
+      desc: 'Option to follow system theme',
+      args: [],
+    );
+  }
+
+  /// `Try Again`
+  String get tryAgainButton {
+    return Intl.message(
+      'Try Again',
+      name: 'tryAgainButton',
+      desc: 'Label for the retry button on error screens',
+      args: [],
+    );
+  }
+
+  /// `Appearance`
+  String get appearanceSettingsItem {
+    return Intl.message(
+      'Appearance',
+      name: 'appearanceSettingsItem',
+      desc: 'Title for appearance settings item',
+      args: [],
+    );
+  }
+
+  /// `Dark theme dynamic color, languages`
+  String get appearanceSettingsItemDescription {
+    return Intl.message(
+      'Dark theme dynamic color, languages',
+      name: 'appearanceSettingsItemDescription',
+      desc: 'Description for appearance settings item',
+      args: [],
+    );
+  }
+
+  /// `About`
+  String get aboutSettingsItem {
+    return Intl.message(
+      'About',
+      name: 'aboutSettingsItem',
+      desc: 'Title for about settings item',
+      args: [],
+    );
+  }
+
+  /// `Version, links, feedback`
+  String get aboutSettingsItemDescription {
+    return Intl.message(
+      'Version, links, feedback',
+      name: 'aboutSettingsItemDescription',
+      desc: 'Description for about settings item',
       args: [],
     );
   }
@@ -374,6 +493,601 @@ class S {
       args: [],
     );
   }
+
+  /// `Mission Timeline`
+  String get missionTimeline {
+    return Intl.message(
+      'Mission Timeline',
+      name: 'missionTimeline',
+      desc: 'The title for the mission timeline card',
+      args: [],
+    );
+  }
+
+  /// `Static Fire Test`
+  String get staticFireTest {
+    return Intl.message(
+      'Static Fire Test',
+      name: 'staticFireTest',
+      desc: 'Label for the static fire test item in the timeline',
+      args: [],
+    );
+  }
+
+  /// `Launch`
+  String get launch {
+    return Intl.message(
+      'Launch',
+      name: 'launch',
+      desc: 'Label for the launch item in the timeline',
+      args: [],
+    );
+  }
+
+  /// `Mission Success`
+  String get missionSuccess {
+    return Intl.message(
+      'Mission Success',
+      name: 'missionSuccess',
+      desc: 'Label for the mission success item in the timeline',
+      args: [],
+    );
+  }
+
+  /// `Objectives Completed`
+  String get objectivesCompleted {
+    return Intl.message(
+      'Objectives Completed',
+      name: 'objectivesCompleted',
+      desc: 'Subtitle for mission success item',
+      args: [],
+    );
+  }
+
+  /// `Mission Successful`
+  String get missionSuccessful {
+    return Intl.message(
+      'Mission Successful',
+      name: 'missionSuccessful',
+      desc: 'Displayed when the mission has succeeded',
+      args: [],
+    );
+  }
+
+  /// `Mission Failed`
+  String get missionFailed {
+    return Intl.message(
+      'Mission Failed',
+      name: 'missionFailed',
+      desc: 'Displayed when the mission has failed',
+      args: [],
+    );
+  }
+
+  /// `All objectives completed`
+  String get allObjectivesCompleted {
+    return Intl.message(
+      'All objectives completed',
+      name: 'allObjectivesCompleted',
+      desc: 'Subtitle when mission succeeded',
+      args: [],
+    );
+  }
+
+  /// `Mission objectives not met`
+  String get objectivesNotMet {
+    return Intl.message(
+      'Mission objectives not met',
+      name: 'objectivesNotMet',
+      desc: 'Subtitle when mission failed',
+      args: [],
+    );
+  }
+
+  /// `Rocket`
+  String get rocketTitle {
+    return Intl.message(
+      'Rocket',
+      name: 'rocketTitle',
+      desc: 'Label for the rocket stat card',
+      args: [],
+    );
+  }
+
+  /// `Payload`
+  String get payload {
+    return Intl.message(
+      'Payload',
+      name: 'payload',
+      desc: 'Label for the payload stat card',
+      args: [],
+    );
+  }
+
+  /// `Orbit`
+  String get orbit {
+    return Intl.message(
+      'Orbit',
+      name: 'orbit',
+      desc: 'Label for the orbit stat card',
+      args: [],
+    );
+  }
+
+  /// `Rocket Details`
+  String get rocketDetails {
+    return Intl.message(
+      'Rocket Details',
+      name: 'rocketDetails',
+      desc: 'Title for the rocket card section',
+      args: [],
+    );
+  }
+
+  /// `Rocket Name`
+  String get rocketName {
+    return Intl.message(
+      'Rocket Name',
+      name: 'rocketName',
+      desc: 'Label for rocket name in rocket details',
+      args: [],
+    );
+  }
+
+  /// `Type`
+  String get rocketType {
+    return Intl.message(
+      'Type',
+      name: 'rocketType',
+      desc: 'Label for rocket type in rocket details',
+      args: [],
+    );
+  }
+
+  /// `Block`
+  String get rocketBlock {
+    return Intl.message(
+      'Block',
+      name: 'rocketBlock',
+      desc: 'Label for rocket block number',
+      args: [],
+    );
+  }
+
+  /// `🚀 First Stage`
+  String get firstStage {
+    return Intl.message(
+      '🚀 First Stage',
+      name: 'firstStage',
+      desc: 'Title for the first stage details',
+      args: [],
+    );
+  }
+
+  /// `Core Serial`
+  String get coreSerial {
+    return Intl.message(
+      'Core Serial',
+      name: 'coreSerial',
+      desc: 'Label for the core serial number',
+      args: [],
+    );
+  }
+
+  /// `Flight`
+  String get flight {
+    return Intl.message(
+      'Flight',
+      name: 'flight',
+      desc: 'Label for flight number',
+      args: [],
+    );
+  }
+
+  /// `Landing`
+  String get landing {
+    return Intl.message(
+      'Landing',
+      name: 'landing',
+      desc: 'Label for landing type',
+      args: [],
+    );
+  }
+
+  /// `Landing Success`
+  String get landingSuccess {
+    return Intl.message(
+      'Landing Success',
+      name: 'landingSuccess',
+      desc: 'Label for landing success indicator',
+      args: [],
+    );
+  }
+
+  /// `Grid Fins`
+  String get gridFins {
+    return Intl.message(
+      'Grid Fins',
+      name: 'gridFins',
+      desc: 'Label for grid fins feature',
+      args: [],
+    );
+  }
+
+  /// `Landing Legs`
+  String get landingLegs {
+    return Intl.message(
+      'Landing Legs',
+      name: 'landingLegs',
+      desc: 'Label for landing legs feature',
+      args: [],
+    );
+  }
+
+  /// `Reused`
+  String get reused {
+    return Intl.message(
+      'Reused',
+      name: 'reused',
+      desc: 'Label for reused feature',
+      args: [],
+    );
+  }
+
+  /// `N/A`
+  String get notAvailable {
+    return Intl.message(
+      'N/A',
+      name: 'notAvailable',
+      desc: 'Displayed when data is not available',
+      args: [],
+    );
+  }
+
+  /// `Recovery Ships`
+  String get recoveryShips {
+    return Intl.message(
+      'Recovery Ships',
+      name: 'recoveryShips',
+      desc: 'Title for the recovery ships section',
+      args: [],
+    );
+  }
+
+  /// `Payload`
+  String get payloadTitle {
+    return Intl.message(
+      'Payload',
+      name: 'payloadTitle',
+      desc: 'Title of the payload section',
+      args: [],
+    );
+  }
+
+  /// `ID`
+  String get id {
+    return Intl.message(
+      'ID',
+      name: 'id',
+      desc: 'Label for payload ID',
+      args: [],
+    );
+  }
+
+  /// `Type`
+  String get type {
+    return Intl.message(
+      'Type',
+      name: 'type',
+      desc: 'Label for payload type',
+      args: [],
+    );
+  }
+
+  /// `Mass`
+  String get mass {
+    return Intl.message(
+      'Mass',
+      name: 'mass',
+      desc: 'Label for payload mass',
+      args: [],
+    );
+  }
+
+  /// `Manufacturer`
+  String get manufacturer {
+    return Intl.message(
+      'Manufacturer',
+      name: 'manufacturer',
+      desc: 'Label for payload manufacturer',
+      args: [],
+    );
+  }
+
+  /// `Nationality`
+  String get nationality {
+    return Intl.message(
+      'Nationality',
+      name: 'nationality',
+      desc: 'Label for payload nationality',
+      args: [],
+    );
+  }
+
+  /// `Customers`
+  String get customers {
+    return Intl.message(
+      'Customers',
+      name: 'customers',
+      desc: 'Label for payload customers',
+      args: [],
+    );
+  }
+
+  /// `Mission Overview`
+  String get missionOverview {
+    return Intl.message(
+      'Mission Overview',
+      name: 'missionOverview',
+      desc: 'Title for the mission overview section',
+      args: [],
+    );
+  }
+
+  /// `No details available`
+  String get noDetails {
+    return Intl.message(
+      'No details available',
+      name: 'noDetails',
+      desc: 'Displayed when no mission details are provided',
+      args: [],
+    );
+  }
+
+  /// `Links & Resources`
+  String get linksResources {
+    return Intl.message(
+      'Links & Resources',
+      name: 'linksResources',
+      desc: 'Title for links and resources section',
+      args: [],
+    );
+  }
+
+  /// `Watch Video`
+  String get watchVideo {
+    return Intl.message(
+      'Watch Video',
+      name: 'watchVideo',
+      desc: 'Button label to watch video',
+      args: [],
+    );
+  }
+
+  /// `Wikipedia`
+  String get wikipedia {
+    return Intl.message(
+      'Wikipedia',
+      name: 'wikipedia',
+      desc: 'Button label for Wikipedia link',
+      args: [],
+    );
+  }
+
+  /// `Article`
+  String get article {
+    return Intl.message(
+      'Article',
+      name: 'article',
+      desc: 'Button label for article link',
+      args: [],
+    );
+  }
+
+  /// `Reddit`
+  String get reddit {
+    return Intl.message(
+      'Reddit',
+      name: 'reddit',
+      desc: 'Button label for Reddit discussion',
+      args: [],
+    );
+  }
+
+  /// `Press Kit`
+  String get pressKit {
+    return Intl.message(
+      'Press Kit',
+      name: 'pressKit',
+      desc: 'Button label for press kit link',
+      args: [],
+    );
+  }
+
+  /// `Launch Site`
+  String get launchSite {
+    return Intl.message(
+      'Launch Site',
+      name: 'launchSite',
+      desc: 'Title for the launch site section',
+      args: [],
+    );
+  }
+
+  /// `Site ID:`
+  String get siteIdLabel {
+    return Intl.message(
+      'Site ID:',
+      name: 'siteIdLabel',
+      desc: 'Label for site ID',
+      args: [],
+    );
+  }
+
+  /// `Flight #{number}`
+  String flightNumber(Object number) {
+    return Intl.message(
+      'Flight #$number',
+      name: 'flightNumber',
+      desc: 'Label for the flight number',
+      args: [number],
+    );
+  }
+
+  /// `Rockets`
+  String get rocketsTab {
+    return Intl.message(
+      'Rockets',
+      name: 'rocketsTab',
+      desc: 'The title of the Rockets tab',
+      args: [],
+    );
+  }
+
+  /// `Active`
+  String get activeStatus {
+    return Intl.message(
+      'Active',
+      name: 'activeStatus',
+      desc: 'Label for active rocket',
+      args: [],
+    );
+  }
+
+  /// `Retired`
+  String get retiredStatus {
+    return Intl.message(
+      'Retired',
+      name: 'retiredStatus',
+      desc: 'Label for retired rocket',
+      args: [],
+    );
+  }
+
+  /// `{percentage}% success`
+  String successRate(Object percentage) {
+    return Intl.message(
+      '$percentage% success',
+      name: 'successRate',
+      desc: 'Label for rocket success rate with percentage',
+      args: [percentage],
+    );
+  }
+
+  /// `Rockets`
+  String get rocketsTitle {
+    return Intl.message(
+      'Rockets',
+      name: 'rocketsTitle',
+      desc: 'The title of the Rockets screen',
+      args: [],
+    );
+  }
+
+  /// `Overview`
+  String get overview {
+    return Intl.message('Overview', name: 'overview', desc: '', args: []);
+  }
+
+  /// `Specifications`
+  String get specifications {
+    return Intl.message(
+      'Specifications',
+      name: 'specifications',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payload Capacity`
+  String get payloadCapacity {
+    return Intl.message(
+      'Payload Capacity',
+      name: 'payloadCapacity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Engine Details`
+  String get engineDetails {
+    return Intl.message(
+      'Engine Details',
+      name: 'engineDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Height`
+  String get heightLabel {
+    return Intl.message('Height', name: 'heightLabel', desc: '', args: []);
+  }
+
+  /// `Diameter`
+  String get diameterLabel {
+    return Intl.message('Diameter', name: 'diameterLabel', desc: '', args: []);
+  }
+
+  /// `Mass`
+  String get massLabel {
+    return Intl.message('Mass', name: 'massLabel', desc: '', args: []);
+  }
+
+  /// `Stages`
+  String get stagesLabel {
+    return Intl.message('Stages', name: 'stagesLabel', desc: '', args: []);
+  }
+
+  /// `Type`
+  String get typeLabel {
+    return Intl.message('Type', name: 'typeLabel', desc: '', args: []);
+  }
+
+  /// `Version`
+  String get versionLabel {
+    return Intl.message('Version', name: 'versionLabel', desc: '', args: []);
+  }
+
+  /// `Number`
+  String get numberLabel {
+    return Intl.message('Number', name: 'numberLabel', desc: '', args: []);
+  }
+
+  /// `Propellant 1`
+  String get propellant1Label {
+    return Intl.message(
+      'Propellant 1',
+      name: 'propellant1Label',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Propellant 2`
+  String get propellant2Label {
+    return Intl.message(
+      'Propellant 2',
+      name: 'propellant2Label',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Thrust (Sea Level)`
+  String get thrustSeaLevelLabel {
+    return Intl.message(
+      'Thrust (Sea Level)',
+      name: 'thrustSeaLevelLabel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `tons`
+  String get tons {
+    return Intl.message('tons', name: 'tons', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
@@ -384,6 +1098,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
       Locale.fromSubtags(languageCode: 'en'),
       Locale.fromSubtags(languageCode: 'de'),
       Locale.fromSubtags(languageCode: 'pt'),
+      Locale.fromSubtags(languageCode: 'uk'),
     ];
   }
 

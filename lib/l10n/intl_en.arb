@@ -24,6 +24,54 @@
   "@settingsTitle": {
     "description": "The title of the settings"
   },
+  "appearanceTitle": "Appearance",
+  "@appearanceTitle": {
+    "description": "Title for appearance screen"
+  },
+  "dynamicColorSettingsItemTitle": "Use dynamic colors",
+  "@dynamicColorSettingsItemTitle": {
+    "description": "Title for enabling dynamic colors from wallpaper"
+  },
+  "dynamicColorSettingsItemDescription": "Adapt app colors to your wallpaper",
+  "@dynamicColorSettingsItemDescription": {
+    "description": "Description for dynamic color setting"
+  },
+  "darkThemeSettingsItemTitle": "Theme mode",
+  "@darkThemeSettingsItemTitle": {
+    "description": "Title for selecting light/dark/system theme"
+  },
+  "darkThemeOnSettingsItemTitle": "Dark",
+  "@darkThemeOnSettingsItemTitle": {
+    "description": "Dark theme option"
+  },
+  "darkThemeOffSettingsItemTitle": "Light",
+  "@darkThemeOffSettingsItemTitle": {
+    "description": "Light theme option"
+  },
+  "darkThemeFollowSystemSettingsItemTitle": "System default",
+  "@darkThemeFollowSystemSettingsItemTitle": {
+    "description": "Option to follow system theme"
+  },
+  "tryAgainButton": "Try Again",
+  "@tryAgainButton": {
+    "description": "Label for the retry button on error screens"
+  },
+  "appearanceSettingsItem": "Appearance",
+  "@appearanceSettingsItem": {
+    "description": "Title for appearance settings item"
+  },
+  "appearanceSettingsItemDescription": "Dark theme dynamic color, languages",
+  "@appearanceSettingsItemDescription": {
+    "description": "Description for appearance settings item"
+  },
+  "aboutSettingsItem": "About",
+  "@aboutSettingsItem": {
+    "description": "Title for about settings item"
+  },
+  "aboutSettingsItemDescription": "Version, links, feedback",
+  "@aboutSettingsItemDescription": {
+    "description": "Description for about settings item"
+  },
   "missionTitle": "Mission: {mission}",
   "@missionTitle": {
     "description": "The mission launch item label",
@@ -103,5 +151,219 @@
   "iconAndPaddingButtonTitle": "With Icon Padding",
   "@iconAndPaddingButtonTitle": {},
   "transparentButtonTitle": "Transparent",
-  "@transparentButtonTitle": {}
+  "@transparentButtonTitle": {},
+  "missionTimeline": "Mission Timeline",
+  "@missionTimeline": {
+    "description": "The title for the mission timeline card"
+  },
+  "staticFireTest": "Static Fire Test",
+  "@staticFireTest": {
+    "description": "Label for the static fire test item in the timeline"
+  },
+  "launch": "Launch",
+  "@launch": {
+    "description": "Label for the launch item in the timeline"
+  },
+  "missionSuccess": "Mission Success",
+  "@missionSuccess": {
+    "description": "Label for the mission success item in the timeline"
+  },
+  "objectivesCompleted": "Objectives Completed",
+  "@objectivesCompleted": {
+    "description": "Subtitle for mission success item"
+  },
+  "missionSuccessful": "Mission Successful",
+  "@missionSuccessful": {
+    "description": "Displayed when the mission has succeeded"
+  },
+  "missionFailed": "Mission Failed",
+  "@missionFailed": {
+    "description": "Displayed when the mission has failed"
+  },
+  "allObjectivesCompleted": "All objectives completed",
+  "@allObjectivesCompleted": {
+    "description": "Subtitle when mission succeeded"
+  },
+  "objectivesNotMet": "Mission objectives not met",
+  "@objectivesNotMet": {
+    "description": "Subtitle when mission failed"
+  },
+  "rocketTitle": "Rocket",
+  "@rocketTitle": {
+    "description": "Label for the rocket stat card"
+  },
+  "payload": "Payload",
+  "@payload": {
+    "description": "Label for the payload stat card"
+  },
+  "orbit": "Orbit",
+  "@orbit": {
+    "description": "Label for the orbit stat card"
+  },
+  "rocketDetails": "Rocket Details",
+  "@rocketDetails": {
+    "description": "Title for the rocket card section"
+  },
+  "rocketName": "Rocket Name",
+  "@rocketName": {
+    "description": "Label for rocket name in rocket details"
+  },
+  "rocketType": "Type",
+  "@rocketType": {
+    "description": "Label for rocket type in rocket details"
+  },
+  "rocketBlock": "Block",
+  "@rocketBlock": {
+    "description": "Label for rocket block number"
+  },
+  "firstStage": "🚀 First Stage",
+  "@firstStage": {
+    "description": "Title for the first stage details"
+  },
+  "coreSerial": "Core Serial",
+  "@coreSerial": {
+    "description": "Label for the core serial number"
+  },
+  "flight": "Flight",
+  "@flight": {
+    "description": "Label for flight number"
+  },
+  "landing": "Landing",
+  "@landing": {
+    "description": "Label for landing type"
+  },
+  "landingSuccess": "Landing Success",
+  "@landingSuccess": {
+    "description": "Label for landing success indicator"
+  },
+  "gridFins": "Grid Fins",
+  "@gridFins": {
+    "description": "Label for grid fins feature"
+  },
+  "landingLegs": "Landing Legs",
+  "@landingLegs": {
+    "description": "Label for landing legs feature"
+  },
+  "reused": "Reused",
+  "@reused": {
+    "description": "Label for reused feature"
+  },
+  "notAvailable": "N/A",
+  "@notAvailable": {
+    "description": "Displayed when data is not available"
+  },
+  "recoveryShips": "Recovery Ships",
+  "@recoveryShips": {
+    "description": "Title for the recovery ships section"
+  },
+  "payloadTitle": "Payload",
+  "@payloadTitle": {
+    "description": "Title of the payload section"
+  },
+  "id": "ID",
+  "@id": {
+    "description": "Label for payload ID"
+  },
+  "type": "Type",
+  "@type": {
+    "description": "Label for payload type"
+  },
+  "mass": "Mass",
+  "@mass": {
+    "description": "Label for payload mass"
+  },
+  "manufacturer": "Manufacturer",
+  "@manufacturer": {
+    "description": "Label for payload manufacturer"
+  },
+  "nationality": "Nationality",
+  "@nationality": {
+    "description": "Label for payload nationality"
+  },
+  "customers": "Customers",
+  "@customers": {
+    "description": "Label for payload customers"
+  },
+  "missionOverview": "Mission Overview",
+  "@missionOverview": {
+    "description": "Title for the mission overview section"
+  },
+  "noDetails": "No details available",
+  "@noDetails": {
+    "description": "Displayed when no mission details are provided"
+  },
+  "linksResources": "Links & Resources",
+  "@linksResources": {
+    "description": "Title for links and resources section"
+  },
+  "watchVideo": "Watch Video",
+  "@watchVideo": {
+    "description": "Button label to watch video"
+  },
+  "wikipedia": "Wikipedia",
+  "@wikipedia": {
+    "description": "Button label for Wikipedia link"
+  },
+  "article": "Article",
+  "@article": {
+    "description": "Button label for article link"
+  },
+  "reddit": "Reddit",
+  "@reddit": {
+    "description": "Button label for Reddit discussion"
+  },
+  "pressKit": "Press Kit",
+  "@pressKit": {
+    "description": "Button label for press kit link"
+  },
+  "launchSite": "Launch Site",
+  "@launchSite": {
+    "description": "Title for the launch site section"
+  },
+  "siteIdLabel": "Site ID:",
+  "@siteIdLabel": {
+    "description": "Label for site ID"
+  },
+  "flightNumber": "Flight #{number}",
+  "@flightNumber": {
+    "description": "Label for the flight number",
+    "placeholders": {
+      "number": {}
+    }
+  },
+  "rocketsTab": "Rockets",
+  "@rocketsTab": {
+    "description": "The title of the Rockets tab"
+  },
+  "activeStatus": "Active",
+  "@activeStatus": {
+    "description": "Label for active rocket"
+  },
+  "retiredStatus": "Retired",
+  "@retiredStatus": {
+    "description": "Label for retired rocket"
+  },
+  "successRate": "{percentage}% success",
+  "@successRate": {
+    "description": "Label for rocket success rate with percentage"
+  },
+  "rocketsTitle": "Rockets",
+  "@rocketsTitle": {
+    "description": "The title of the Rockets screen"
+  },
+  "overview": "Overview",
+  "specifications": "Specifications",
+  "payloadCapacity": "Payload Capacity",
+  "engineDetails": "Engine Details",
+  "heightLabel": "Height",
+  "diameterLabel": "Diameter",
+  "massLabel": "Mass",
+  "stagesLabel": "Stages",
+  "typeLabel": "Type",
+  "versionLabel": "Version",
+  "numberLabel": "Number",
+  "propellant1Label": "Propellant 1",
+  "propellant2Label": "Propellant 2",
+  "thrustSeaLevelLabel": "Thrust (Sea Level)",
+  "tons": "tons"
 }

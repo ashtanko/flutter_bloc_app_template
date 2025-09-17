@@ -16,7 +16,7 @@ dependencies:
   bloc: ^9.0.0
   logger: ^2.5.0
   equatable: ^2.0.7
-  http: ^1.3.0
+  http: ^1.4.0
   json_annotation: ^4.9.0
   shared_preferences: ^2.5.2
   dio: ^5.8.0+1
@@ -35,12 +35,18 @@ dependencies:
   injectable: ^2.5.0
   nullx: ^0.1.17
   retrofit: ^4.4.2
-  retrofit_generator: ^9.1.9
+  retrofit_generator: ^10.0.1
   dartz: ^0.10.1
-  talker: ^4.6.14
-  talker_logger: ^4.6.14
-  talker_dio_logger: ^4.6.14
-  talker_bloc_logger: ^4.6.14
+  talker: ^5.0.0
+  talker_logger: ^5.0.0
+  talker_dio_logger: ^5.0.0
+  talker_bloc_logger: ^5.0.0
+  animations: ^2.0.7
+  yaml: ^3.1.2
+  collection: ^1.18.0
+  package_info_plus: ^8.3.0
+  provider: ^6.1.5
+  url_launcher: ^6.3.2
 
   flutter_localizations:
     sdk: flutter
@@ -61,11 +67,12 @@ dev_dependencies:
   mockito: ^5.4.5
   #test: ^1.17.9
   bloc_test: ^10.0.0
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
   mocktail: ^1.0.4
   freezed: ^3.0.2
   #dart_code_metrics: ^5.7.5
   network_image_mock: ^2.1.1
+  flutter_oss_licenses: ^3.0.4
 
 flutter:
   uses-material-design: true

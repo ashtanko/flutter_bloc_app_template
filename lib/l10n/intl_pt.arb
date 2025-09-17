@@ -24,6 +24,54 @@
   "@settingsTitle": {
     "description": "O título das configurações"
   },
+  "appearanceTitle": "Aparência",
+  "@appearanceTitle": {
+    "description": "Título da tela de aparência"
+  },
+  "dynamicColorSettingsItemTitle": "Usar cores dinâmicas",
+  "@dynamicColorSettingsItemTitle": {
+    "description": "Título para ativar cores dinâmicas do papel de parede"
+  },
+  "dynamicColorSettingsItemDescription": "Adaptar as cores do app ao papel de parede",
+  "@dynamicColorSettingsItemDescription": {
+    "description": "Descrição da configuração de cores dinâmicas"
+  },
+  "darkThemeSettingsItemTitle": "Modo de tema",
+  "@darkThemeSettingsItemTitle": {
+    "description": "Título para selecionar tema claro/escuro/sistema"
+  },
+  "darkThemeOnSettingsItemTitle": "Escuro",
+  "@darkThemeOnSettingsItemTitle": {
+    "description": "Opção de tema escuro"
+  },
+  "darkThemeOffSettingsItemTitle": "Claro",
+  "@darkThemeOffSettingsItemTitle": {
+    "description": "Opção de tema claro"
+  },
+  "darkThemeFollowSystemSettingsItemTitle": "Padrão do sistema",
+  "@darkThemeFollowSystemSettingsItemTitle": {
+    "description": "Opção para seguir o tema do sistema"
+  },
+  "tryAgainButton": "Tentar novamente",
+  "@tryAgainButton": {
+    "description": "Rótulo do botão de tentativa novamente em telas de erro"
+  },
+  "appearanceSettingsItem": "Appearance",
+  "@appearanceSettingsItem": {
+    "description": "Title for appearance settings item"
+  },
+  "appearanceSettingsItemDescription": "Dark theme dynamic color, languages",
+  "@appearanceSettingsItemDescription": {
+    "description": "Description for appearance settings item"
+  },
+  "aboutSettingsItem": "About",
+  "@aboutSettingsItem": {
+    "description": "Title for about settings item"
+  },
+  "aboutSettingsItemDescription": "Version, links, feedback",
+  "@aboutSettingsItemDescription": {
+    "description": "Description for about settings item"
+  },
   "missionTitle": "Missão: {mission}",
   "@missionTitle": {
     "description": "O rótulo do item de lançamento da missão",
@@ -101,5 +149,84 @@
   "iconAndPaddingButtonTitle": "Com Ícone e Espaçamento",
   "@iconAndPaddingButtonTitle": {},
   "transparentButtonTitle": "Transparente",
-  "@transparentButtonTitle": {}
+  "@transparentButtonTitle": {},
+  "missionTimeline": "Cronograma da Missão",
+  "staticFireTest": "Teste de Fogo Estático",
+  "launch": "Lançamento",
+  "missionSuccess": "Sucesso da Missão",
+  "objectivesCompleted": "Objetivos Concluídos",
+  "missionSuccessful": "Missão bem-sucedida",
+  "missionFailed": "Missão falhou",
+  "allObjectivesCompleted": "Todos os objetivos concluídos",
+  "objectivesNotMet": "Objetivos da missão não alcançados",
+  "rocketTitle": "Foguete",
+  "payload": "Carga útil",
+  "orbit": "Órbita",
+  "rocketDetails": "Detalhes do Foguete",
+  "rocketName": "Nome do Foguete",
+  "rocketType": "Tipo",
+  "rocketBlock": "Bloco",
+  "firstStage": "🚀 Primeiro Estágio",
+  "coreSerial": "Número de Série do Núcleo",
+  "flight": "Voo",
+  "landing": "Pouso",
+  "landingSuccess": "Pouso bem-sucedido",
+  "gridFins": "Aletas de grade",
+  "landingLegs": "Pernas de pouso",
+  "reused": "Reutilizado",
+  "notAvailable": "N/D",
+  "recoveryShips": "Navios de Recuperação",
+  "payloadTitle": "Carga útil",
+  "id": "ID",
+  "type": "Tipo",
+  "mass": "Massa",
+  "manufacturer": "Fabricante",
+  "nationality": "Nacionalidade",
+  "customers": "Clientes",
+  "missionOverview": "Visão geral da missão",
+  "noDetails": "Nenhum detalhe disponível",
+  "linksResources": "Links e Recursos",
+  "watchVideo": "Assistir Vídeo",
+  "wikipedia": "Wikipédia",
+  "article": "Artigo",
+  "reddit": "Reddit",
+  "pressKit": "Kit de Imprensa",
+  "launchSite": "Local de Lançamento",
+  "siteIdLabel": "ID do Local:",
+  "flightNumber": "Voo #{number}",
+  "rocketsTab": "Foguetes",
+  "@rocketsTab": {
+    "description": "Título da aba Foguetes"
+  },
+  "activeStatus": "Ativa",
+  "@activeStatus": {
+    "description": "Rótulo para foguete ativo"
+  },
+  "retiredStatus": "Aposentada",
+  "@retiredStatus": {
+    "description": "Rótulo para foguete inativo"
+  },
+  "successRate": "{percentage}% de sucesso",
+  "@successRate": {
+    "description": "Rótulo de taxa de sucesso do foguete"
+  },
+  "rocketsTitle": "Foguetes",
+  "@rocketsTitle": {
+    "description": "Título da tela de Foguetes"
+  },
+  "overview": "Visão Geral",
+  "specifications": "Especificações",
+  "payloadCapacity": "Capacidade de Carga",
+  "engineDetails": "Detalhes do Motor",
+  "heightLabel": "Altura",
+  "diameterLabel": "Diâmetro",
+  "massLabel": "Massa",
+  "stagesLabel": "Estágios",
+  "typeLabel": "Tipo",
+  "versionLabel": "Versão",
+  "numberLabel": "Número",
+  "propellant1Label": "Propelente 1",
+  "propellant2Label": "Propelente 2",
+  "thrustSeaLevelLabel": "Empuxo (nível do mar)",
+  "tons": "toneladas"
 }

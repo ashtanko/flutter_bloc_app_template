@@ -1,6 +1,6 @@
 import 'package:flutter_bloc_app_template/data/network/api_result.dart';
 import 'package:flutter_bloc_app_template/data/network/data_source/launches_network_data_source.dart';
-import 'package:flutter_bloc_app_template/models/launch.dart';
+import 'package:flutter_bloc_app_template/index.dart';
 
 abstract class LaunchesRepository {
   Future<List<LaunchResource>> getLaunches({
@@ -11,6 +11,8 @@ abstract class LaunchesRepository {
     int? launchSuccess,
     String? order,
   });
+
+  Future<LaunchFullResource> getLaunch(int flightNumber);
 }
 
 class LaunchesRepositoryImpl implements LaunchesRepository {
@@ -36,8 +38,21 @@ class LaunchesRepositoryImpl implements LaunchesRepository {
       order: order,
     );
 
-    return list.when(
+    return ApiResultWhen(list).when(
       success: (data) => data.map((e) => e.toResource()).toList(),
+      error: (message) => throw Exception(message),
+      loading: () {
+        throw Exception('Loading');
+      },
+    );
+  }
+
+  @override
+  Future<LaunchFullResource> getLaunch(int flightNumber) async {
+    final networkFullLaunch = await _launchesDataSource.getLaunch(flightNumber);
+
+    return ApiResultWhen(networkFullLaunch).when(
+      success: (data) => data.toResource(),
       error: (message) => throw Exception(message),
       loading: () {
         throw Exception('Loading');

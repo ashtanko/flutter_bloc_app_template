@@ -29,6 +29,44 @@ class AppLocalizationsPt extends AppLocalizations {
   String get settingsTitle => 'Configurações';
 
   @override
+  String get appearanceTitle => 'Aparência';
+
+  @override
+  String get dynamicColorSettingsItemTitle => 'Usar cores dinâmicas';
+
+  @override
+  String get dynamicColorSettingsItemDescription =>
+      'Adaptar as cores do app ao papel de parede';
+
+  @override
+  String get darkThemeSettingsItemTitle => 'Modo de tema';
+
+  @override
+  String get darkThemeOnSettingsItemTitle => 'Escuro';
+
+  @override
+  String get darkThemeOffSettingsItemTitle => 'Claro';
+
+  @override
+  String get darkThemeFollowSystemSettingsItemTitle => 'Padrão do sistema';
+
+  @override
+  String get tryAgainButton => 'Tentar novamente';
+
+  @override
+  String get appearanceSettingsItem => 'Appearance';
+
+  @override
+  String get appearanceSettingsItemDescription =>
+      'Dark theme dynamic color, languages';
+
+  @override
+  String get aboutSettingsItem => 'About';
+
+  @override
+  String get aboutSettingsItemDescription => 'Version, links, feedback';
+
+  @override
   String missionTitle(Object mission) {
     return 'Missão: $mission';
   }
@@ -124,4 +162,200 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get transparentButtonTitle => 'Transparente';
+
+  @override
+  String get missionTimeline => 'Cronograma da Missão';
+
+  @override
+  String get staticFireTest => 'Teste de Fogo Estático';
+
+  @override
+  String get launch => 'Lançamento';
+
+  @override
+  String get missionSuccess => 'Sucesso da Missão';
+
+  @override
+  String get objectivesCompleted => 'Objetivos Concluídos';
+
+  @override
+  String get missionSuccessful => 'Missão bem-sucedida';
+
+  @override
+  String get missionFailed => 'Missão falhou';
+
+  @override
+  String get allObjectivesCompleted => 'Todos os objetivos concluídos';
+
+  @override
+  String get objectivesNotMet => 'Objetivos da missão não alcançados';
+
+  @override
+  String get rocketTitle => 'Foguete';
+
+  @override
+  String get payload => 'Carga útil';
+
+  @override
+  String get orbit => 'Órbita';
+
+  @override
+  String get rocketDetails => 'Detalhes do Foguete';
+
+  @override
+  String get rocketName => 'Nome do Foguete';
+
+  @override
+  String get rocketType => 'Tipo';
+
+  @override
+  String get rocketBlock => 'Bloco';
+
+  @override
+  String get firstStage => '🚀 Primeiro Estágio';
+
+  @override
+  String get coreSerial => 'Número de Série do Núcleo';
+
+  @override
+  String get flight => 'Voo';
+
+  @override
+  String get landing => 'Pouso';
+
+  @override
+  String get landingSuccess => 'Pouso bem-sucedido';
+
+  @override
+  String get gridFins => 'Aletas de grade';
+
+  @override
+  String get landingLegs => 'Pernas de pouso';
+
+  @override
+  String get reused => 'Reutilizado';
+
+  @override
+  String get notAvailable => 'N/D';
+
+  @override
+  String get recoveryShips => 'Navios de Recuperação';
+
+  @override
+  String get payloadTitle => 'Carga útil';
+
+  @override
+  String get id => 'ID';
+
+  @override
+  String get type => 'Tipo';
+
+  @override
+  String get mass => 'Massa';
+
+  @override
+  String get manufacturer => 'Fabricante';
+
+  @override
+  String get nationality => 'Nacionalidade';
+
+  @override
+  String get customers => 'Clientes';
+
+  @override
+  String get missionOverview => 'Visão geral da missão';
+
+  @override
+  String get noDetails => 'Nenhum detalhe disponível';
+
+  @override
+  String get linksResources => 'Links e Recursos';
+
+  @override
+  String get watchVideo => 'Assistir Vídeo';
+
+  @override
+  String get wikipedia => 'Wikipédia';
+
+  @override
+  String get article => 'Artigo';
+
+  @override
+  String get reddit => 'Reddit';
+
+  @override
+  String get pressKit => 'Kit de Imprensa';
+
+  @override
+  String get launchSite => 'Local de Lançamento';
+
+  @override
+  String get siteIdLabel => 'ID do Local:';
+
+  @override
+  String flightNumber(Object number) {
+    return 'Voo #$number';
+  }
+
+  @override
+  String get rocketsTab => 'Foguetes';
+
+  @override
+  String get activeStatus => 'Ativa';
+
+  @override
+  String get retiredStatus => 'Aposentada';
+
+  @override
+  String successRate(Object percentage) {
+    return '$percentage% de sucesso';
+  }
+
+  @override
+  String get rocketsTitle => 'Foguetes';
+
+  @override
+  String get overview => 'Visão Geral';
+
+  @override
+  String get specifications => 'Especificações';
+
+  @override
+  String get payloadCapacity => 'Capacidade de Carga';
+
+  @override
+  String get engineDetails => 'Detalhes do Motor';
+
+  @override
+  String get heightLabel => 'Altura';
+
+  @override
+  String get diameterLabel => 'Diâmetro';
+
+  @override
+  String get massLabel => 'Massa';
+
+  @override
+  String get stagesLabel => 'Estágios';
+
+  @override
+  String get typeLabel => 'Tipo';
+
+  @override
+  String get versionLabel => 'Versão';
+
+  @override
+  String get numberLabel => 'Número';
+
+  @override
+  String get propellant1Label => 'Propelente 1';
+
+  @override
+  String get propellant2Label => 'Propelente 2';
+
+  @override
+  String get thrustSeaLevelLabel => 'Empuxo (nível do mar)';
+
+  @override
+  String get tons => 'toneladas';
 }
