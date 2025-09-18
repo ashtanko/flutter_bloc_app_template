@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/index.dart';
 
 class EmailListScreen extends StatelessWidget {
@@ -12,7 +11,7 @@ class EmailListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          title: Text(S.of(context).messagesTitle),
+          title: Text(context.emailsTitle),
         ),
         body: RefreshIndicator(
           onRefresh: () async {

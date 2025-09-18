@@ -1,0 +1,392 @@
+{
+  "@@locale": "uk",
+  "appTitle": "шаблон_flutter_bloc_app",
+  "@appTitle": {
+    "description": "Назва додатку"
+  },
+  "itemsTitle": "Приклади елементів",
+  "@itemsTitle": {
+    "description": "Заголовок для прикладів елементів"
+  },
+  "emailsTitle": "Електронні листи",
+  "@emailsTitle": {
+    "description": "Заголовок екрану електронної пошти"
+  },
+  "launchesTitle": "Запуски",
+  "@launchesTitle": {
+    "description": "Заголовок екрану запусків"
+  },
+  "itemTitle": "Приклад елементу {id}",
+  "@itemTitle": {
+    "description": "Заголовок елементу"
+  },
+  "settingsTitle": "Налаштування",
+  "@settingsTitle": {
+    "description": "Заголовок екрану налаштувань"
+  },
+  "appearanceTitle": "Зовнішній вигляд",
+  "@appearanceTitle": {
+    "description": "Заголовок екрану зовнішнього вигляду"
+  },
+  "dynamicColorSettingsItemTitle": "Використовувати динамічні кольори",
+  "@dynamicColorSettingsItemTitle": {
+    "description": "Назва налаштування для динамічних кольорів з шпалер"
+  },
+  "dynamicColorSettingsItemDescription": "Адаптувати кольори додатку до шпалер",
+  "@dynamicColorSettingsItemDescription": {
+    "description": "Опис налаштування динамічних кольорів"
+  },
+  "darkThemeSettingsItemTitle": "Режим теми",
+  "@darkThemeSettingsItemTitle": {
+    "description": "Назва для вибору світлої/темної/системної теми"
+  },
+  "darkThemeOnSettingsItemTitle": "Темна",
+  "@darkThemeOnSettingsItemTitle": {
+    "description": "Опція темної теми"
+  },
+  "darkThemeOffSettingsItemTitle": "Світла",
+  "@darkThemeOffSettingsItemTitle": {
+    "description": "Опція світлої теми"
+  },
+  "darkThemeFollowSystemSettingsItemTitle": "Системна за замовчуванням",
+  "@darkThemeFollowSystemSettingsItemTitle": {
+    "description": "Опція слідувати системній темі"
+  },
+  "tryAgainButton": "Спробувати ще раз",
+  "@tryAgainButton": {
+    "description": "Мітка кнопки повторної спроби на екранах помилок"
+  },
+  "appearanceSettingsItem": "Зовнішній вигляд",
+  "@appearanceSettingsItem": {
+    "description": "Назва для елементу налаштувань зовнішнього вигляду"
+  },
+  "appearanceSettingsItemDescription": "Темна тема, динамічні кольори, мови",
+  "@appearanceSettingsItemDescription": {
+    "description": "Опис для елементу налаштувань зовнішнього вигляду"
+  },
+  "aboutSettingsItem": "Про додаток",
+  "@aboutSettingsItem": {
+    "description": "Назва для елементу налаштувань про додаток"
+  },
+  "aboutSettingsItemDescription": "Версія, посилання, відгуки",
+  "@aboutSettingsItemDescription": {
+    "description": "Опис для елементу налаштувань про додаток"
+  },
+  "missionTitle": "Місія: {mission}",
+  "@missionTitle": {
+    "description": "Мітка елементу запуску місії",
+    "placeholders": {
+      "mission": {}
+    }
+  },
+  "launchedAt": "Запущено: {launchedAt}",
+  "@launchedAt": {
+    "description": "Мітка часу запуску",
+    "placeholders": {
+      "launchedAt": {}
+    }
+  },
+  "rocket": "Ракета: {rocketName} ({rocketType})",
+  "@rocket": {
+    "description": "Мітка для ракети",
+    "placeholders": {
+      "rocketName": {},
+      "rocketType": {}
+    }
+  },
+  "daysSinceTodayTitle": "{days} днів тому",
+  "@daysSinceTodayTitle": {
+    "description": "Показує, скільки днів минуло від сьогоднішнього дня"
+  },
+  "daysFromTodayTitle": "Через {days} днів",
+  "@daysFromTodayTitle": {
+    "description": "Показує, скільки днів до сьогоднішнього дня"
+  },
+  "themeTitle": "Тема",
+  "@themeTitle": {},
+  "systemThemeTitle": "Системна тема",
+  "@systemThemeTitle": {},
+  "lightThemeTitle": "Світла тема",
+  "@lightThemeTitle": {},
+  "darkThemeTitle": "Темна тема",
+  "@darkThemeTitle": {},
+  "lightGoldThemeTitle": "Світле золото",
+  "@lightGoldThemeTitle": {},
+  "darkGoldThemeTitle": "Темне золото",
+  "@darkGoldThemeTitle": {},
+  "lightMintThemeTitle": "Світла м’ята",
+  "@lightMintThemeTitle": {},
+  "darkMintThemeTitle": "Темна м’ята",
+  "@darkMintThemeTitle": {},
+  "experimentalThemeTitle": "Експериментальна тема",
+  "@experimentalThemeTitle": {},
+  "itemDetailsTitle": "Деталі елементу",
+  "@itemDetailsTitle": {
+    "description": "Заголовок екрану деталі елементу"
+  },
+  "error": "Помилка",
+  "@error": {},
+  "emptyList": "Список порожній",
+  "@emptyList": {},
+  "tabHome": "Головна",
+  "@tabHome": {},
+  "tabSettings": "Налаштування",
+  "@tabSettings": {},
+  "newsScreen": "Новини",
+  "@newsScreen": {},
+  "disabledButtonTitle": "Вимкнено",
+  "@disabledButtonTitle": {},
+  "disabledRoundedButtonTitle": "Вимкнено (кругла)",
+  "@disabledRoundedButtonTitle": {},
+  "disabledWithIconButtonTitle": "Вимкнено з іконкою",
+  "@disabledWithIconButtonTitle": {},
+  "enabledButtonTitle": "Увімкнено",
+  "@enabledButtonTitle": {},
+  "borderRadiusButtonTitle": "Радіус кордону",
+  "@borderRadiusButtonTitle": {},
+  "borderSideButtonTitle": "Кордона сторона",
+  "@borderSideButtonTitle": {},
+  "iconButtonTitle": "З іконкою",
+  "@iconButtonTitle": {},
+  "iconAndPaddingButtonTitle": "З іконкою та відступом",
+  "@iconAndPaddingButtonTitle": {},
+  "transparentButtonTitle": "Прозора",
+  "@transparentButtonTitle": {},
+  "missionTimeline": "Хронологія місії",
+  "@missionTimeline": {
+    "description": "Заголовок для картки хронології місії"
+  },
+  "staticFireTest": "Статичний вогневий тест",
+  "@staticFireTest": {
+    "description": "Мітка для статичного тесту в хронології"
+  },
+  "launch": "Запуск",
+  "@launch": {
+    "description": "Мітка для запуску в хронології"
+  },
+  "missionSuccess": "Місія успішна",
+  "@missionSuccess": {
+    "description": "Мітка для успішної місії"
+  },
+  "objectivesCompleted": "Цілі досягнуті",
+  "@objectivesCompleted": {
+    "description": "Підзаголовок для успішної місії"
+  },
+  "missionSuccessful": "Місія успішна",
+  "@missionSuccessful": {
+    "description": "Показано, коли місія успішна"
+  },
+  "missionFailed": "Місія не вдалася",
+  "@missionFailed": {
+    "description": "Показано, коли місія не вдалася"
+  },
+  "allObjectivesCompleted": "Всі цілі досягнуті",
+  "@allObjectivesCompleted": {
+    "description": "Підзаголовок для успішної місії"
+  },
+  "objectivesNotMet": "Цілі місії не досягнуті",
+  "@objectivesNotMet": {
+    "description": "Підзаголовок для невдалої місії"
+  },
+  "rocketTitle": "Ракета",
+  "@rocketTitle": {
+    "description": "Мітка для картки ракети"
+  },
+  "payload": "Корисне навантаження",
+  "@payload": {
+    "description": "Мітка для картки корисного навантаження"
+  },
+  "orbit": "Орбіта",
+  "@orbit": {
+    "description": "Мітка для орбіти"
+  },
+  "rocketDetails": "Деталі ракети",
+  "@rocketDetails": {
+    "description": "Заголовок для секції ракети"
+  },
+  "rocketName": "Назва ракети",
+  "@rocketName": {
+    "description": "Мітка для назви ракети"
+  },
+  "rocketType": "Тип",
+  "@rocketType": {
+    "description": "Мітка для типу ракети"
+  },
+  "rocketBlock": "Блок",
+  "@rocketBlock": {
+    "description": "Мітка для номера блоку ракети"
+  },
+  "firstStage": "🚀 Перша ступінь",
+  "@firstStage": {
+    "description": "Заголовок для першої ступені"
+  },
+  "coreSerial": "Серійний номер ядра",
+  "@coreSerial": {
+    "description": "Мітка для серійного номера ядра"
+  },
+  "flight": "Політ",
+  "@flight": {
+    "description": "Мітка для номера польоту"
+  },
+  "landing": "Приземлення",
+  "@landing": {
+    "description": "Мітка для типу приземлення"
+  },
+  "landingSuccess": "Приземлення успішне",
+  "@landingSuccess": {
+    "description": "Мітка для успішного приземлення"
+  },
+  "gridFins": "Сітчасті кермові",
+  "@gridFins": {
+    "description": "Мітка для сітчастих кермових"
+  },
+  "landingLegs": "Ноги приземлення",
+  "@landingLegs": {
+    "description": "Мітка для ніг приземлення"
+  },
+  "reused": "Повторне використання",
+  "@reused": {
+    "description": "Мітка для повторного використання"
+  },
+  "notAvailable": "Н/Д",
+  "@notAvailable": {
+    "description": "Показано, коли дані недоступні"
+  },
+  "recoveryShips": "Судна порятунку",
+  "@recoveryShips": {
+    "description": "Заголовок для секції суден порятунку"
+  },
+  "payloadTitle": "Корисне навантаження",
+  "@payloadTitle": {
+    "description": "Заголовок для секції корисного навантаження"
+  },
+  "id": "ID",
+  "@id": {
+    "description": "Мітка для ID корисного навантаження"
+  },
+  "type": "Тип",
+  "@type": {
+    "description": "Мітка для типу корисного навантаження"
+  },
+  "mass": "Маса",
+  "@mass": {
+    "description": "Мітка для маси корисного навантаження"
+  },
+  "manufacturer": "Виробник",
+  "@manufacturer": {
+    "description": "Мітка для виробника"
+  },
+  "nationality": "Національність",
+  "@nationality": {
+    "description": "Мітка для національності"
+  },
+  "customers": "Клієнти",
+  "@customers": {
+    "description": "Мітка для клієнтів"
+  },
+  "missionOverview": "Огляд місії",
+  "@missionOverview": {
+    "description": "Заголовок секції огляду місії"
+  },
+  "noDetails": "Деталі відсутні",
+  "@noDetails": {
+    "description": "Показано, коли відсутні деталі місії"
+  },
+  "linksResources": "Посилання та ресурси",
+  "@linksResources": {
+    "description": "Заголовок секції посилань та ресурсів"
+  },
+  "watchVideo": "Дивитися відео",
+  "@watchVideo": {
+    "description": "Мітка кнопки для перегляду відео"
+  },
+  "wikipedia": "Вікіпедія",
+  "@wikipedia": {
+    "description": "Мітка кнопки для посилання на Вікіпедію"
+  },
+  "article": "Стаття",
+  "@article": {
+    "description": "Мітка кнопки для статті"
+  },
+  "reddit": "Reddit",
+  "@reddit": {
+    "description": "Мітка кнопки для обговорення на Reddit"
+  },
+  "pressKit": "Прес-кит",
+  "@pressKit": {
+    "description": "Мітка кнопки для прес-киту"
+  },
+  "launchSite": "Місце запуску",
+  "@launchSite": {
+    "description": "Заголовок секції місця запуску"
+  },
+  "siteIdLabel": "ID сайту:",
+  "@siteIdLabel": {
+    "description": "Мітка для ID сайту"
+  },
+  "flightNumber": "Політ #{number}",
+  "@flightNumber": {
+    "description": "Мітка для номера польоту",
+    "placeholders": {
+      "number": {}
+    }
+  },
+  "rocketsTab": "Ракети",
+  "@rocketsTab": {
+    "description": "Назва вкладки Ракети"
+  },
+  "activeStatus": "Активна",
+  "@activeStatus": {
+    "description": "Позначка активної ракети"
+  },
+  "retiredStatus": "Знято з експлуатації",
+  "@retiredStatus": {
+    "description": "Позначка знятої ракети"
+  },
+  "successRate": "{percentage}% успішних запусків",
+  "@successRate": {
+    "description": "Позначка успішності ракети з відсотком"
+  },
+  "rocketsTitle": "Ракети",
+  "@rocketsTitle": {
+    "description": "Назва екрану Ракети"
+  },
+  "overview": "Огляд",
+  "specifications": "Технічні характеристики",
+  "payloadCapacity": "Корисне навантаження",
+  "engineDetails": "Деталі двигуна",
+  "heightLabel": "Висота",
+  "diameterLabel": "Діаметр",
+  "massLabel": "Маса",
+  "stagesLabel": "Стадії",
+  "typeLabel": "Тип",
+  "versionLabel": "Версія",
+  "numberLabel": "Кількість",
+  "propellant1Label": "Паливо 1",
+  "propellant2Label": "Паливо 2",
+  "thrustSeaLevelLabel": "Тяга (на рівні моря)",
+  "tons": "тонн",
+  "learnMore": "Дізнатися більше",
+  "launchInformation": "Інформація про запуск",
+  "launchMass": "Маса запуску",
+  "launchVehicle": "Ракета-носій",
+  "orbitalParameters": "Орбітальні параметри",
+  "millionKm": "мільйон км",
+  "missionDetails": "Деталі місії",
+  "trackLive": "Слідкувати онлайн",
+  "marsDistance": "Відстань до Марса",
+  "earthDistance": "Відстань до Землі",
+  "currentSpeed": "Поточна швидкість",
+  "orbitalPeriod": "Орбітальний період",
+  "unitDays": "днів",
+  "unitKph": "км/год",
+  "launched": "Запуск: {date}",
+  "roadsterTitle": "Роадстер",
+  "roadsterDescription": "Tesla Roadster Ілона Маска",
+  "apoapsis": "Апоцентр",
+  "periapsis": "Перицентр",
+  "semiMajorAxis": "Велика піввісь",
+  "eccentricity": "Ексцентриситет",
+  "inclination": "Нахил",
+  "longitude": "Довгота"
+}

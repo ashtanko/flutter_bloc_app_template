@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-TextTheme createTextTheme(
-    BuildContext context, String bodyFontString, String displayFontString) {
+const _defaultFontName = 'Rubik';
+
+TextTheme createTextTheme({
+  required BuildContext context,
+  String bodyFontString = _defaultFontName,
+  String displayFontString = _defaultFontName,
+}) {
   final baseTextTheme = Theme.of(context).textTheme;
   final bodyTextTheme = GoogleFonts.getTextTheme(bodyFontString, baseTextTheme);
   final displayTextTheme =

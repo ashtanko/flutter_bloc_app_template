@@ -19,55 +19,57 @@ void main() {
 
     tearDown(() => bloc.close());
 
-    test('state returns correct state initially', () {
+    test('should return LaunchesLoadingState initially', () {
       expect(bloc.state, const LaunchesLoadingState());
     });
 
     group('fetchData', () {
       blocTest<LaunchesBloc, LaunchesState>(
-        'fetches data correctly',
+        'should emit [loading, success] when data is fetched successfully',
         build: () {
           when(repository.getLaunches()).thenAnswer(
-            (_) => Future.value(mockLaunches),
+            (_) async => mockLaunches,
           );
           return bloc;
         },
-        act: (bloc) => bloc.add(
-          const LaunchesEvent.load(),
-        ),
-        verify: (_) => verify(repository.getLaunches()).called(1),
-        expect: () => [LaunchesState.success(launches: mockLaunches)],
-      );
-
-      blocTest<LaunchesBloc, LaunchesState>(
-        'fetches data correctly but list is empty',
-        build: () {
-          when(repository.getLaunches()).thenAnswer(
-            (_) => Future.value([]),
-          );
-          return bloc;
-        },
-        act: (bloc) async => bloc.add(
-          const LaunchesEvent.load(),
-        ),
-        verify: (_) => verify(repository.getLaunches()).called(1),
-        expect: () => [const LaunchesState.empty()],
-      );
-
-      blocTest<LaunchesBloc, LaunchesState>(
-        'can throw an exception',
-        build: () {
-          when(repository.getLaunches())
-              .thenThrow(Exception('something went wrong'));
-          return bloc;
-        },
-        act: (bloc) async => bloc.add(
-          const LaunchesEvent.load(),
-        ),
-        verify: (_) => verify(repository.getLaunches()).called(1),
+        act: (bloc) => bloc.add(const LaunchesEvent.load()),
         expect: () => [
+          const LaunchesState.loading(),
+          LaunchesState.success(launches: mockLaunches),
+        ],
+        verify: (_) => verify(repository.getLaunches()).called(1),
+      );
+
+      blocTest<LaunchesBloc, LaunchesState>(
+        'should emit [loading, empty] when data is fetched but list is empty',
+        build: () {
+          when(repository.getLaunches()).thenAnswer(
+            (_) async => [],
+          );
+          return bloc;
+        },
+        act: (bloc) => bloc.add(const LaunchesEvent.load()),
+        expect: () => [
+          const LaunchesState.loading(),
+          const LaunchesState.empty(),
+        ],
+        verify: (_) => verify(repository.getLaunches()).called(1),
+      );
+
+      blocTest<LaunchesBloc, LaunchesState>(
+        'should emit [loading, error] when an exception is thrown',
+        build: () {
+          when(repository.getLaunches()).thenThrow(
+            Exception('something went wrong'),
+          );
+          return bloc;
+        },
+        act: (bloc) => bloc.add(const LaunchesEvent.load()),
+        expect: () => [
+          const LaunchesState.loading(),
           const LaunchesState.error(),
         ],
+        verify: (_) => verify(repository.getLaunches()).called(1),
       );
     });
   });

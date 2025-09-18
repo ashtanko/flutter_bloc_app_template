@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_app_template/routes/router.dart' as router;
+import 'package:flutter_bloc_app_template/features/main/navigation/bottom_navigation.dart';
+
+import 'navigation/destinations.dart' show getNavDestinations, getScreenByIndex;
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -9,40 +11,31 @@ class MainScreen extends StatefulWidget {
 }
 
 class MainScreenState extends State<MainScreen> {
-  int currentIndex = 0;
+  final _pageController = PageController();
+  var currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     void onSelected(int index) {
       setState(() {
         currentIndex = index;
+        _pageController.jumpToPage(index);
       });
     }
-
-    final destinations = router.destinations
-        .map((e) => NavigationDestination(
-              icon: e.icon,
-              selectedIcon: e.selectedIcon,
-              label: e.label,
-            ))
-        .toList();
 
     return LayoutBuilder(
       builder: (context, dimens) {
         return Scaffold(
-          body: Stack(
-            children: [
-              router.destinations[currentIndex].screen,
-            ],
+          body: PageView.builder(
+            pageSnapping: true,
+            physics: const NeverScrollableScrollPhysics(),
+            controller: _pageController,
+            itemBuilder: getScreenByIndex,
           ),
-          bottomNavigationBar: NavigationBar(
-            //backgroundColor: Color(0xFFF2F4F7),
-            //surfaceTintColor: Colors.white,
-            //indicatorColor: Color(0xFFD0E9FF),
-            destinations: destinations,
-            selectedIndex: currentIndex,
-            onDestinationSelected: onSelected,
-          ),
+          bottomNavigationBar: AppBottomNavigation(
+              navDestinations: getNavDestinations(context),
+              currentIndex: currentIndex,
+              onSelected: onSelected),
         );
       },
     );
