@@ -429,4 +429,75 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get longitude => 'Longitude';
+
+  @override
+  String get core_status_active => 'ativo';
+
+  @override
+  String get core_status_lost => 'perdido';
+
+  @override
+  String get core_status_inactive => 'inativo';
+
+  @override
+  String get core_status_unknown => 'desconhecido';
+
+  @override
+  String get errorLoadingCores => 'Erro ao carregar núcleos';
+
+  @override
+  String get retry => 'Tentar novamente';
+
+  @override
+  String get firstLaunch => 'Primeiro lançamento';
+
+  @override
+  String missions(Object count) {
+    return '$count missões';
+  }
+
+  @override
+  String reuses(Object count) {
+    return '$count reutilizações';
+  }
+
+  @override
+  String get unknown => 'Desconhecido';
+
+  @override
+  String get na => 'N/D';
+
+  @override
+  String get core_filter_status_all => 'Todos';
+
+  @override
+  String get core_filter_status_active => 'Ativo';
+
+  @override
+  String get core_filter_status_lost => 'Perdido';
+
+  @override
+  String get core_filter_status_inactive => 'Inativo';
+
+  @override
+  String get core_filter_status_unknown => 'Desconhecido';
+
+  @override
+  String get core_filter_search_hint => 'Pesquisar núcleos ou missões...';
+
+  @override
+  String noCoresFound(Object query) {
+    return 'Nenhum núcleo encontrado para \"$query\"';
+  }
+
+  @override
+  String blockLabel(Object blockNumber) {
+    return 'Bloco $blockNumber';
+  }
+
+  @override
+  String get spaceXCoresTitle => 'Núcleos Falcon da SpaceX';
+
+  @override
+  String get coresLabel => 'Núcleos';
 }
