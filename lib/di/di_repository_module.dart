@@ -2,6 +2,7 @@ import 'package:flutter_bloc_app_template/data/network/data_source/launches_netw
 import 'package:flutter_bloc_app_template/data/network/data_source/roadster_network_data_source.dart';
 import 'package:flutter_bloc_app_template/data/network/data_source/rocket_network_data_source.dart';
 import 'package:flutter_bloc_app_template/data/theme_storage.dart';
+import 'package:flutter_bloc_app_template/repository/email_list_repository.dart';
 import 'package:flutter_bloc_app_template/repository/launches_repository.dart';
 import 'package:flutter_bloc_app_template/repository/roadster_repository.dart';
 import 'package:flutter_bloc_app_template/repository/rocket_repository.dart';
@@ -13,6 +14,9 @@ abstract class RepositoryModule {
   @factoryMethod
   ThemeRepository provideAccidentsRepository(ThemeStorage themeStorage) =>
       ThemeRepositoryImpl(themeStorage);
+
+  @factoryMethod
+  EmailListRepository provideEmailListRepository() => EmailListRepositoryImpl();
 
   @factoryMethod
   LaunchesRepository provideLaunchesRepository(LaunchesDataSource dataSource) =>
