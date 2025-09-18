@@ -1089,189 +1089,179 @@ class S {
     return Intl.message('tons', name: 'tons', desc: '', args: []);
   }
 
-  /// `active`
-  String get core_status_active {
+  /// `Learn More`
+  String get learnMore {
+    return Intl.message('Learn More', name: 'learnMore', desc: '', args: []);
+  }
+
+  /// `Launch Information`
+  String get launchInformation {
     return Intl.message(
-      'active',
-      name: 'core_status_active',
+      'Launch Information',
+      name: 'launchInformation',
       desc: '',
       args: [],
     );
   }
 
-  /// `lost`
-  String get core_status_lost {
-    return Intl.message('lost', name: 'core_status_lost', desc: '', args: []);
+  /// `Launch Mass`
+  String get launchMass {
+    return Intl.message('Launch Mass', name: 'launchMass', desc: '', args: []);
   }
 
-  /// `inactive`
-  String get core_status_inactive {
+  /// `Launch Vehicle`
+  String get launchVehicle {
     return Intl.message(
-      'inactive',
-      name: 'core_status_inactive',
+      'Launch Vehicle',
+      name: 'launchVehicle',
       desc: '',
       args: [],
     );
   }
 
-  /// `unknown`
-  String get core_status_unknown {
+  /// `Orbital Parameters`
+  String get orbitalParameters {
     return Intl.message(
-      'unknown',
-      name: 'core_status_unknown',
+      'Orbital Parameters',
+      name: 'orbitalParameters',
       desc: '',
       args: [],
     );
   }
 
-  /// `Error loading cores`
-  String get errorLoadingCores {
+  /// `million km`
+  String get millionKm {
+    return Intl.message('million km', name: 'millionKm', desc: '', args: []);
+  }
+
+  /// `Mission Details`
+  String get missionDetails {
     return Intl.message(
-      'Error loading cores',
-      name: 'errorLoadingCores',
+      'Mission Details',
+      name: 'missionDetails',
       desc: '',
       args: [],
     );
   }
 
-  /// `Retry`
-  String get retry {
-    return Intl.message('Retry', name: 'retry', desc: '', args: []);
+  /// `Track Live`
+  String get trackLive {
+    return Intl.message('Track Live', name: 'trackLive', desc: '', args: []);
   }
 
-  /// `First Launch`
-  String get firstLaunch {
+  /// `Mars Distance`
+  String get marsDistance {
     return Intl.message(
-      'First Launch',
-      name: 'firstLaunch',
+      'Mars Distance',
+      name: 'marsDistance',
       desc: '',
       args: [],
     );
   }
 
-  /// `{count} missions`
-  String missions(Object count) {
+  /// `Earth Distance`
+  String get earthDistance {
     return Intl.message(
-      '$count missions',
-      name: 'missions',
-      desc: '',
-      args: [count],
-    );
-  }
-
-  /// `{count} reuses`
-  String reuses(Object count) {
-    return Intl.message(
-      '$count reuses',
-      name: 'reuses',
-      desc: '',
-      args: [count],
-    );
-  }
-
-  /// `Unknown`
-  String get unknown {
-    return Intl.message('Unknown', name: 'unknown', desc: '', args: []);
-  }
-
-  /// `N/A`
-  String get na {
-    return Intl.message('N/A', name: 'na', desc: '', args: []);
-  }
-
-  /// `All`
-  String get core_filter_status_all {
-    return Intl.message(
-      'All',
-      name: 'core_filter_status_all',
+      'Earth Distance',
+      name: 'earthDistance',
       desc: '',
       args: [],
     );
   }
 
-  /// `Active`
-  String get core_filter_status_active {
+  /// `Current Speed`
+  String get currentSpeed {
     return Intl.message(
-      'Active',
-      name: 'core_filter_status_active',
+      'Current Speed',
+      name: 'currentSpeed',
       desc: '',
       args: [],
     );
   }
 
-  /// `Lost`
-  String get core_filter_status_lost {
+  /// `Orbital Period`
+  String get orbitalPeriod {
     return Intl.message(
-      'Lost',
-      name: 'core_filter_status_lost',
+      'Orbital Period',
+      name: 'orbitalPeriod',
       desc: '',
       args: [],
     );
   }
 
-  /// `Inactive`
-  String get core_filter_status_inactive {
+  /// `days`
+  String get unitDays {
+    return Intl.message('days', name: 'unitDays', desc: '', args: []);
+  }
+
+  /// `km/h`
+  String get unitKph {
+    return Intl.message('km/h', name: 'unitKph', desc: '', args: []);
+  }
+
+  /// `Launched: {date}`
+  String launched(Object date) {
     return Intl.message(
-      'Inactive',
-      name: 'core_filter_status_inactive',
+      'Launched: $date',
+      name: 'launched',
+      desc: '',
+      args: [date],
+    );
+  }
+
+  /// `Roadster`
+  String get roadsterTitle {
+    return Intl.message('Roadster', name: 'roadsterTitle', desc: '', args: []);
+  }
+
+  /// `Elon Musk's Tesla Roadster`
+  String get roadsterDescription {
+    return Intl.message(
+      'Elon Musk\'s Tesla Roadster',
+      name: 'roadsterDescription',
       desc: '',
       args: [],
     );
   }
 
-  /// `Unknown`
-  String get core_filter_status_unknown {
+  /// `Apoapsis`
+  String get apoapsis {
+    return Intl.message('Apoapsis', name: 'apoapsis', desc: '', args: []);
+  }
+
+  /// `Periapsis`
+  String get periapsis {
+    return Intl.message('Periapsis', name: 'periapsis', desc: '', args: []);
+  }
+
+  /// `Semi-major axis`
+  String get semiMajorAxis {
     return Intl.message(
-      'Unknown',
-      name: 'core_filter_status_unknown',
+      'Semi-major axis',
+      name: 'semiMajorAxis',
       desc: '',
       args: [],
     );
   }
 
-  /// `Search cores or missions...`
-  String get core_filter_search_hint {
+  /// `Eccentricity`
+  String get eccentricity {
     return Intl.message(
-      'Search cores or missions...',
-      name: 'core_filter_search_hint',
+      'Eccentricity',
+      name: 'eccentricity',
       desc: '',
       args: [],
     );
   }
 
-  /// `No cores found for "{query}"`
-  String noCoresFound(Object query) {
-    return Intl.message(
-      'No cores found for "$query"',
-      name: 'noCoresFound',
-      desc: '',
-      args: [query],
-    );
+  /// `Inclination`
+  String get inclination {
+    return Intl.message('Inclination', name: 'inclination', desc: '', args: []);
   }
 
-  /// `Block {blockNumber}`
-  String blockLabel(Object blockNumber) {
-    return Intl.message(
-      'Block $blockNumber',
-      name: 'blockLabel',
-      desc: '',
-      args: [blockNumber],
-    );
-  }
-
-  /// `SpaceX Falcon Cores`
-  String get spaceXCoresTitle {
-    return Intl.message(
-      'SpaceX Falcon Cores',
-      name: 'spaceXCoresTitle',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Cores`
-  String get coresLabel {
-    return Intl.message('Cores', name: 'coresLabel', desc: '', args: []);
+  /// `Longitude`
+  String get longitude {
+    return Intl.message('Longitude', name: 'longitude', desc: '', args: []);
   }
 }
 

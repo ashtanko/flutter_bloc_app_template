@@ -360,73 +360,73 @@ class AppLocalizationsPt extends AppLocalizations {
   String get tons => 'toneladas';
 
   @override
-  String get core_status_active => 'ativo';
+  String get learnMore => 'Saiba mais';
 
   @override
-  String get core_status_lost => 'perdido';
+  String get launchInformation => 'Informações do lançamento';
 
   @override
-  String get core_status_inactive => 'inativo';
+  String get launchMass => 'Massa do lançamento';
 
   @override
-  String get core_status_unknown => 'desconhecido';
+  String get launchVehicle => 'Veículo de lançamento';
 
   @override
-  String get errorLoadingCores => 'Erro ao carregar núcleos';
+  String get orbitalParameters => 'Parâmetros orbitais';
 
   @override
-  String get retry => 'Tentar novamente';
+  String get millionKm => 'milhões km';
 
   @override
-  String get firstLaunch => 'Primeiro lançamento';
+  String get missionDetails => 'Detalhes da missão';
 
   @override
-  String missions(Object count) {
-    return '$count missões';
+  String get trackLive => 'Acompanhar ao vivo';
+
+  @override
+  String get marsDistance => 'Distância a Marte';
+
+  @override
+  String get earthDistance => 'Distância à Terra';
+
+  @override
+  String get currentSpeed => 'Velocidade Atual';
+
+  @override
+  String get orbitalPeriod => 'Período Orbital';
+
+  @override
+  String get unitDays => 'dias';
+
+  @override
+  String get unitKph => 'km/h';
+
+  @override
+  String launched(Object date) {
+    return 'Lançado: $date';
   }
 
   @override
-  String reuses(Object count) {
-    return '$count reutilizações';
-  }
+  String get roadsterTitle => 'Roadster';
 
   @override
-  String get unknown => 'Desconhecido';
+  String get roadsterDescription => 'Tesla Roadster de Elon Musk';
 
   @override
-  String get na => 'N/D';
+  String get apoapsis => 'Apoápse';
 
   @override
-  String get core_filter_status_all => 'Todos';
+  String get periapsis => 'Periápse';
 
   @override
-  String get core_filter_status_active => 'Ativo';
+  String get semiMajorAxis => 'Eixo semi-maior';
 
   @override
-  String get core_filter_status_lost => 'Perdido';
+  String get eccentricity => 'Excentricidade';
 
   @override
-  String get core_filter_status_inactive => 'Inativo';
+  String get inclination => 'Inclinação';
 
   @override
-  String get core_filter_status_unknown => 'Desconhecido';
-
-  @override
-  String get core_filter_search_hint => 'Pesquisar núcleos ou missões...';
-
-  @override
-  String noCoresFound(Object query) {
-    return 'Nenhum núcleo encontrado para \"$query\"';
-  }
-
-  @override
-  String blockLabel(Object blockNumber) {
-    return 'Bloco $blockNumber';
-  }
-
-  @override
-  String get spaceXCoresTitle => 'Núcleos Falcon da SpaceX';
-
-  @override
-  String get coresLabel => 'Núcleos';
+  String get longitude => 'Longitude';
 }

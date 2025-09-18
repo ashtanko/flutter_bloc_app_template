@@ -768,131 +768,143 @@ abstract class AppLocalizations {
   /// **'tons'**
   String get tons;
 
-  /// No description provided for @core_status_active.
+  /// No description provided for @learnMore.
   ///
   /// In en, this message translates to:
-  /// **'active'**
-  String get core_status_active;
+  /// **'Learn More'**
+  String get learnMore;
 
-  /// No description provided for @core_status_lost.
+  /// No description provided for @launchInformation.
   ///
   /// In en, this message translates to:
-  /// **'lost'**
-  String get core_status_lost;
+  /// **'Launch Information'**
+  String get launchInformation;
 
-  /// No description provided for @core_status_inactive.
+  /// No description provided for @launchMass.
   ///
   /// In en, this message translates to:
-  /// **'inactive'**
-  String get core_status_inactive;
+  /// **'Launch Mass'**
+  String get launchMass;
 
-  /// No description provided for @core_status_unknown.
+  /// No description provided for @launchVehicle.
   ///
   /// In en, this message translates to:
-  /// **'unknown'**
-  String get core_status_unknown;
+  /// **'Launch Vehicle'**
+  String get launchVehicle;
 
-  /// No description provided for @errorLoadingCores.
+  /// No description provided for @orbitalParameters.
   ///
   /// In en, this message translates to:
-  /// **'Error loading cores'**
-  String get errorLoadingCores;
+  /// **'Orbital Parameters'**
+  String get orbitalParameters;
 
-  /// No description provided for @retry.
+  /// No description provided for @millionKm.
   ///
   /// In en, this message translates to:
-  /// **'Retry'**
-  String get retry;
+  /// **'million km'**
+  String get millionKm;
 
-  /// No description provided for @firstLaunch.
+  /// No description provided for @missionDetails.
   ///
   /// In en, this message translates to:
-  /// **'First Launch'**
-  String get firstLaunch;
+  /// **'Mission Details'**
+  String get missionDetails;
 
-  /// No description provided for @missions.
+  /// No description provided for @trackLive.
   ///
   /// In en, this message translates to:
-  /// **'{count} missions'**
-  String missions(Object count);
+  /// **'Track Live'**
+  String get trackLive;
 
-  /// No description provided for @reuses.
+  /// No description provided for @marsDistance.
   ///
   /// In en, this message translates to:
-  /// **'{count} reuses'**
-  String reuses(Object count);
+  /// **'Mars Distance'**
+  String get marsDistance;
 
-  /// No description provided for @unknown.
+  /// No description provided for @earthDistance.
   ///
   /// In en, this message translates to:
-  /// **'Unknown'**
-  String get unknown;
+  /// **'Earth Distance'**
+  String get earthDistance;
 
-  /// No description provided for @na.
+  /// No description provided for @currentSpeed.
   ///
   /// In en, this message translates to:
-  /// **'N/A'**
-  String get na;
+  /// **'Current Speed'**
+  String get currentSpeed;
 
-  /// No description provided for @core_filter_status_all.
+  /// No description provided for @orbitalPeriod.
   ///
   /// In en, this message translates to:
-  /// **'All'**
-  String get core_filter_status_all;
+  /// **'Orbital Period'**
+  String get orbitalPeriod;
 
-  /// No description provided for @core_filter_status_active.
+  /// No description provided for @unitDays.
   ///
   /// In en, this message translates to:
-  /// **'Active'**
-  String get core_filter_status_active;
+  /// **'days'**
+  String get unitDays;
 
-  /// No description provided for @core_filter_status_lost.
+  /// No description provided for @unitKph.
   ///
   /// In en, this message translates to:
-  /// **'Lost'**
-  String get core_filter_status_lost;
+  /// **'km/h'**
+  String get unitKph;
 
-  /// No description provided for @core_filter_status_inactive.
+  /// No description provided for @launched.
   ///
   /// In en, this message translates to:
-  /// **'Inactive'**
-  String get core_filter_status_inactive;
+  /// **'Launched: {date}'**
+  String launched(Object date);
 
-  /// No description provided for @core_filter_status_unknown.
+  /// No description provided for @roadsterTitle.
   ///
   /// In en, this message translates to:
-  /// **'Unknown'**
-  String get core_filter_status_unknown;
+  /// **'Roadster'**
+  String get roadsterTitle;
 
-  /// No description provided for @core_filter_search_hint.
+  /// No description provided for @roadsterDescription.
   ///
   /// In en, this message translates to:
-  /// **'Search cores or missions...'**
-  String get core_filter_search_hint;
+  /// **'Elon Musk\'s Tesla Roadster'**
+  String get roadsterDescription;
 
-  /// No description provided for @noCoresFound.
+  /// No description provided for @apoapsis.
   ///
   /// In en, this message translates to:
-  /// **'No cores found for \"{query}\"'**
-  String noCoresFound(Object query);
+  /// **'Apoapsis'**
+  String get apoapsis;
 
-  /// No description provided for @blockLabel.
+  /// No description provided for @periapsis.
   ///
   /// In en, this message translates to:
-  /// **'Block {blockNumber}'**
-  String blockLabel(Object blockNumber);
+  /// **'Periapsis'**
+  String get periapsis;
 
-  /// No description provided for @spaceXCoresTitle.
+  /// No description provided for @semiMajorAxis.
   ///
   /// In en, this message translates to:
-  /// **'SpaceX Falcon Cores'**
-  String get spaceXCoresTitle;
+  /// **'Semi-major axis'**
+  String get semiMajorAxis;
 
-  /// No description provided for @coresLabel.
+  /// No description provided for @eccentricity.
   ///
   /// In en, this message translates to:
-  /// **'Cores'**
-  String get coresLabel;
+  /// **'Eccentricity'**
+  String get eccentricity;
+
+  /// No description provided for @inclination.
+  ///
+  /// In en, this message translates to:
+  /// **'Inclination'**
+  String get inclination;
+
+  /// No description provided for @longitude.
+  ///
+  /// In en, this message translates to:
+  /// **'Longitude'**
+  String get longitude;
 }
 
 class _AppLocalizationsDelegate

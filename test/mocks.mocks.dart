@@ -7,10 +7,10 @@ import 'dart:async' as _i4;
 
 import 'package:flutter/src/widgets/navigator.dart' as _i8;
 import 'package:flutter_bloc_app_template/index.dart' as _i2;
-import 'package:flutter_bloc_app_template/models/core/core_resource.dart'
-    as _i3;
 import 'package:flutter_bloc_app_template/models/email.dart' as _i5;
-import 'package:flutter_bloc_app_template/repository/cores_repository.dart'
+import 'package:flutter_bloc_app_template/models/roadster/roadster_resource.dart'
+    as _i3;
+import 'package:flutter_bloc_app_template/repository/roadster_repository.dart'
     as _i7;
 import 'package:flutter_bloc_app_template/repository/rocket_repository.dart'
     as _i6;
@@ -52,8 +52,9 @@ class _FakeRocketResource_1 extends _i1.SmartFake
         );
 }
 
-class _FakeCoreResource_2 extends _i1.SmartFake implements _i3.CoreResource {
-  _FakeCoreResource_2(
+class _FakeRoadsterResource_2 extends _i1.SmartFake
+    implements _i3.RoadsterResource {
+  _FakeRoadsterResource_2(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -179,49 +180,30 @@ class MockRocketRepository extends _i1.Mock implements _i6.RocketRepository {
       ) as _i4.Future<_i2.RocketResource>);
 }
 
-/// A class which mocks [CoresRepository].
+/// A class which mocks [RoadsterRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockCoresRepository extends _i1.Mock implements _i7.CoresRepository {
-  MockCoresRepository() {
+class MockRoadsterRepository extends _i1.Mock
+    implements _i7.RoadsterRepository {
+  MockRoadsterRepository() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i4.Future<List<_i3.CoreResource>> getCores({
-    bool? hasId = true,
-    int? limit,
-    int? offset,
-  }) =>
-      (super.noSuchMethod(
+  _i4.Future<_i3.RoadsterResource> getRoadster() => (super.noSuchMethod(
         Invocation.method(
-          #getCores,
+          #getRoadster,
           [],
-          {
-            #hasId: hasId,
-            #limit: limit,
-            #offset: offset,
-          },
         ),
         returnValue:
-            _i4.Future<List<_i3.CoreResource>>.value(<_i3.CoreResource>[]),
-      ) as _i4.Future<List<_i3.CoreResource>>);
-
-  @override
-  _i4.Future<_i3.CoreResource> getCore(String? coreSerial) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #getCore,
-          [coreSerial],
-        ),
-        returnValue: _i4.Future<_i3.CoreResource>.value(_FakeCoreResource_2(
+            _i4.Future<_i3.RoadsterResource>.value(_FakeRoadsterResource_2(
           this,
           Invocation.method(
-            #getCore,
-            [coreSerial],
+            #getRoadster,
+            [],
           ),
         )),
-      ) as _i4.Future<_i3.CoreResource>);
+      ) as _i4.Future<_i3.RoadsterResource>);
 }
 
 /// A class which mocks [NavigatorObserver].

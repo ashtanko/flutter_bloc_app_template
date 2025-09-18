@@ -20,8 +20,6 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
-  static String m8(blockNumber) => "Block ${blockNumber}";
-
   static String m0(days) => "In ${days} days";
 
   static String m1(days) => "${days} days ago";
@@ -30,20 +28,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m3(id) => "Sample Item ${id}";
 
-  static String m4(launchedAt) => "Launched at: ${launchedAt}";
+  static String m4(date) => "Launched: ${date}";
 
-  static String m5(mission) => "Mission: ${mission}";
+  static String m5(launchedAt) => "Launched at: ${launchedAt}";
 
-  static String m9(count) => "${count} missions";
+  static String m6(mission) => "Mission: ${mission}";
 
-  static String m10(query) => "No cores found for \"${query}\"";
-
-  static String m11(count) => "${count} reuses";
-
-  static String m6(rocketName, rocketType) =>
+  static String m7(rocketName, rocketType) =>
       "Rocket: ${rocketName} (${rocketType})";
 
-  static String m7(percentage) => "${percentage}% success";
+  static String m8(percentage) => "${percentage}% success";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -55,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "allObjectivesCompleted": MessageLookupByLibrary.simpleMessage(
       "All objectives completed",
     ),
+    "apoapsis": MessageLookupByLibrary.simpleMessage("Apoapsis"),
     "appTitle": MessageLookupByLibrary.simpleMessage(
       "flutter_bloc_app_template",
     ),
@@ -66,29 +61,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "appearanceTitle": MessageLookupByLibrary.simpleMessage("Appearance"),
     "article": MessageLookupByLibrary.simpleMessage("Article"),
-    "blockLabel": m8,
     "borderRadiusButtonTitle": MessageLookupByLibrary.simpleMessage(
       "BorderRadius",
     ),
     "borderSideButtonTitle": MessageLookupByLibrary.simpleMessage("BorderSide"),
     "coreSerial": MessageLookupByLibrary.simpleMessage("Core Serial"),
-    "core_filter_search_hint": MessageLookupByLibrary.simpleMessage(
-      "Search cores or missions...",
-    ),
-    "core_filter_status_active": MessageLookupByLibrary.simpleMessage("Active"),
-    "core_filter_status_all": MessageLookupByLibrary.simpleMessage("All"),
-    "core_filter_status_inactive": MessageLookupByLibrary.simpleMessage(
-      "Inactive",
-    ),
-    "core_filter_status_lost": MessageLookupByLibrary.simpleMessage("Lost"),
-    "core_filter_status_unknown": MessageLookupByLibrary.simpleMessage(
-      "Unknown",
-    ),
-    "core_status_active": MessageLookupByLibrary.simpleMessage("active"),
-    "core_status_inactive": MessageLookupByLibrary.simpleMessage("inactive"),
-    "core_status_lost": MessageLookupByLibrary.simpleMessage("lost"),
-    "core_status_unknown": MessageLookupByLibrary.simpleMessage("unknown"),
-    "coresLabel": MessageLookupByLibrary.simpleMessage("Cores"),
+    "currentSpeed": MessageLookupByLibrary.simpleMessage("Current Speed"),
     "customers": MessageLookupByLibrary.simpleMessage("Customers"),
     "darkGoldThemeTitle": MessageLookupByLibrary.simpleMessage("Dark Gold"),
     "darkMintThemeTitle": MessageLookupByLibrary.simpleMessage("Dark Mint"),
@@ -120,18 +98,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "dynamicColorSettingsItemTitle": MessageLookupByLibrary.simpleMessage(
       "Use dynamic colors",
     ),
+    "earthDistance": MessageLookupByLibrary.simpleMessage("Earth Distance"),
+    "eccentricity": MessageLookupByLibrary.simpleMessage("Eccentricity"),
     "emailsTitle": MessageLookupByLibrary.simpleMessage("Emails"),
     "emptyList": MessageLookupByLibrary.simpleMessage("Empty list"),
     "enabledButtonTitle": MessageLookupByLibrary.simpleMessage("Enabled"),
     "engineDetails": MessageLookupByLibrary.simpleMessage("Engine Details"),
     "error": MessageLookupByLibrary.simpleMessage("Error"),
-    "errorLoadingCores": MessageLookupByLibrary.simpleMessage(
-      "Error loading cores",
-    ),
     "experimentalThemeTitle": MessageLookupByLibrary.simpleMessage(
       "Experimental Theme",
     ),
-    "firstLaunch": MessageLookupByLibrary.simpleMessage("First Launch"),
     "firstStage": MessageLookupByLibrary.simpleMessage("🚀 First Stage"),
     "flight": MessageLookupByLibrary.simpleMessage("Flight"),
     "flightNumber": m2,
@@ -142,6 +118,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "iconButtonTitle": MessageLookupByLibrary.simpleMessage("With Icon"),
     "id": MessageLookupByLibrary.simpleMessage("ID"),
+    "inclination": MessageLookupByLibrary.simpleMessage("Inclination"),
     "itemDetailsTitle": MessageLookupByLibrary.simpleMessage("Item Details"),
     "itemTitle": m3,
     "itemsTitle": MessageLookupByLibrary.simpleMessage("Sample Items"),
@@ -149,16 +126,27 @@ class MessageLookup extends MessageLookupByLibrary {
     "landingLegs": MessageLookupByLibrary.simpleMessage("Landing Legs"),
     "landingSuccess": MessageLookupByLibrary.simpleMessage("Landing Success"),
     "launch": MessageLookupByLibrary.simpleMessage("Launch"),
+    "launchInformation": MessageLookupByLibrary.simpleMessage(
+      "Launch Information",
+    ),
+    "launchMass": MessageLookupByLibrary.simpleMessage("Launch Mass"),
     "launchSite": MessageLookupByLibrary.simpleMessage("Launch Site"),
-    "launchedAt": m4,
+    "launchVehicle": MessageLookupByLibrary.simpleMessage("Launch Vehicle"),
+    "launched": m4,
+    "launchedAt": m5,
     "launchesTitle": MessageLookupByLibrary.simpleMessage("Launches"),
+    "learnMore": MessageLookupByLibrary.simpleMessage("Learn More"),
     "lightGoldThemeTitle": MessageLookupByLibrary.simpleMessage("Light Gold"),
     "lightMintThemeTitle": MessageLookupByLibrary.simpleMessage("Light Mint"),
     "lightThemeTitle": MessageLookupByLibrary.simpleMessage("Light Theme"),
     "linksResources": MessageLookupByLibrary.simpleMessage("Links & Resources"),
+    "longitude": MessageLookupByLibrary.simpleMessage("Longitude"),
     "manufacturer": MessageLookupByLibrary.simpleMessage("Manufacturer"),
+    "marsDistance": MessageLookupByLibrary.simpleMessage("Mars Distance"),
     "mass": MessageLookupByLibrary.simpleMessage("Mass"),
     "massLabel": MessageLookupByLibrary.simpleMessage("Mass"),
+    "millionKm": MessageLookupByLibrary.simpleMessage("million km"),
+    "missionDetails": MessageLookupByLibrary.simpleMessage("Mission Details"),
     "missionFailed": MessageLookupByLibrary.simpleMessage("Mission Failed"),
     "missionOverview": MessageLookupByLibrary.simpleMessage("Mission Overview"),
     "missionSuccess": MessageLookupByLibrary.simpleMessage("Mission Success"),
@@ -166,12 +154,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Mission Successful",
     ),
     "missionTimeline": MessageLookupByLibrary.simpleMessage("Mission Timeline"),
-    "missionTitle": m5,
-    "missions": m9,
-    "na": MessageLookupByLibrary.simpleMessage("N/A"),
+    "missionTitle": m6,
     "nationality": MessageLookupByLibrary.simpleMessage("Nationality"),
     "newsScreen": MessageLookupByLibrary.simpleMessage("News"),
-    "noCoresFound": m10,
     "noDetails": MessageLookupByLibrary.simpleMessage("No details available"),
     "notAvailable": MessageLookupByLibrary.simpleMessage("N/A"),
     "numberLabel": MessageLookupByLibrary.simpleMessage("Number"),
@@ -182,20 +167,27 @@ class MessageLookup extends MessageLookupByLibrary {
       "Mission objectives not met",
     ),
     "orbit": MessageLookupByLibrary.simpleMessage("Orbit"),
+    "orbitalParameters": MessageLookupByLibrary.simpleMessage(
+      "Orbital Parameters",
+    ),
+    "orbitalPeriod": MessageLookupByLibrary.simpleMessage("Orbital Period"),
     "overview": MessageLookupByLibrary.simpleMessage("Overview"),
     "payload": MessageLookupByLibrary.simpleMessage("Payload"),
     "payloadCapacity": MessageLookupByLibrary.simpleMessage("Payload Capacity"),
     "payloadTitle": MessageLookupByLibrary.simpleMessage("Payload"),
+    "periapsis": MessageLookupByLibrary.simpleMessage("Periapsis"),
     "pressKit": MessageLookupByLibrary.simpleMessage("Press Kit"),
     "propellant1Label": MessageLookupByLibrary.simpleMessage("Propellant 1"),
     "propellant2Label": MessageLookupByLibrary.simpleMessage("Propellant 2"),
     "recoveryShips": MessageLookupByLibrary.simpleMessage("Recovery Ships"),
     "reddit": MessageLookupByLibrary.simpleMessage("Reddit"),
     "retiredStatus": MessageLookupByLibrary.simpleMessage("Retired"),
-    "retry": MessageLookupByLibrary.simpleMessage("Retry"),
     "reused": MessageLookupByLibrary.simpleMessage("Reused"),
-    "reuses": m11,
-    "rocket": m6,
+    "roadsterDescription": MessageLookupByLibrary.simpleMessage(
+      "Elon Musk\'s Tesla Roadster",
+    ),
+    "roadsterTitle": MessageLookupByLibrary.simpleMessage("Roadster"),
+    "rocket": m7,
     "rocketBlock": MessageLookupByLibrary.simpleMessage("Block"),
     "rocketDetails": MessageLookupByLibrary.simpleMessage("Rocket Details"),
     "rocketName": MessageLookupByLibrary.simpleMessage("Rocket Name"),
@@ -203,15 +195,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "rocketType": MessageLookupByLibrary.simpleMessage("Type"),
     "rocketsTab": MessageLookupByLibrary.simpleMessage("Rockets"),
     "rocketsTitle": MessageLookupByLibrary.simpleMessage("Rockets"),
+    "semiMajorAxis": MessageLookupByLibrary.simpleMessage("Semi-major axis"),
     "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
     "siteIdLabel": MessageLookupByLibrary.simpleMessage("Site ID:"),
-    "spaceXCoresTitle": MessageLookupByLibrary.simpleMessage(
-      "SpaceX Falcon Cores",
-    ),
     "specifications": MessageLookupByLibrary.simpleMessage("Specifications"),
     "stagesLabel": MessageLookupByLibrary.simpleMessage("Stages"),
     "staticFireTest": MessageLookupByLibrary.simpleMessage("Static Fire Test"),
-    "successRate": m7,
+    "successRate": m8,
     "systemThemeTitle": MessageLookupByLibrary.simpleMessage("System Theme"),
     "tabHome": MessageLookupByLibrary.simpleMessage("Home"),
     "tabSettings": MessageLookupByLibrary.simpleMessage("Settings"),
@@ -220,13 +210,15 @@ class MessageLookup extends MessageLookupByLibrary {
       "Thrust (Sea Level)",
     ),
     "tons": MessageLookupByLibrary.simpleMessage("tons"),
+    "trackLive": MessageLookupByLibrary.simpleMessage("Track Live"),
     "transparentButtonTitle": MessageLookupByLibrary.simpleMessage(
       "Transparent",
     ),
     "tryAgainButton": MessageLookupByLibrary.simpleMessage("Try Again"),
     "type": MessageLookupByLibrary.simpleMessage("Type"),
     "typeLabel": MessageLookupByLibrary.simpleMessage("Type"),
-    "unknown": MessageLookupByLibrary.simpleMessage("Unknown"),
+    "unitDays": MessageLookupByLibrary.simpleMessage("days"),
+    "unitKph": MessageLookupByLibrary.simpleMessage("km/h"),
     "versionLabel": MessageLookupByLibrary.simpleMessage("Version"),
     "watchVideo": MessageLookupByLibrary.simpleMessage("Watch Video"),
     "wikipedia": MessageLookupByLibrary.simpleMessage("Wikipedia"),

@@ -362,73 +362,73 @@ class AppLocalizationsUk extends AppLocalizations {
   String get tons => 'тонн';
 
   @override
-  String get core_status_active => 'активний';
+  String get learnMore => 'Дізнатися більше';
 
   @override
-  String get core_status_lost => 'втрачений';
+  String get launchInformation => 'Інформація про запуск';
 
   @override
-  String get core_status_inactive => 'неактивний';
+  String get launchMass => 'Маса запуску';
 
   @override
-  String get core_status_unknown => 'невідомий';
+  String get launchVehicle => 'Ракета-носій';
 
   @override
-  String get errorLoadingCores => 'Помилка завантаження ядер';
+  String get orbitalParameters => 'Орбітальні параметри';
 
   @override
-  String get retry => 'Повторити';
+  String get millionKm => 'мільйон км';
 
   @override
-  String get firstLaunch => 'Перший запуск';
+  String get missionDetails => 'Деталі місії';
 
   @override
-  String missions(Object count) {
-    return '$count місій';
+  String get trackLive => 'Слідкувати онлайн';
+
+  @override
+  String get marsDistance => 'Відстань до Марса';
+
+  @override
+  String get earthDistance => 'Відстань до Землі';
+
+  @override
+  String get currentSpeed => 'Поточна швидкість';
+
+  @override
+  String get orbitalPeriod => 'Орбітальний період';
+
+  @override
+  String get unitDays => 'днів';
+
+  @override
+  String get unitKph => 'км/год';
+
+  @override
+  String launched(Object date) {
+    return 'Запуск: $date';
   }
 
   @override
-  String reuses(Object count) {
-    return '$count повторів';
-  }
+  String get roadsterTitle => 'Роадстер';
 
   @override
-  String get unknown => 'Невідомо';
+  String get roadsterDescription => 'Tesla Roadster Ілона Маска';
 
   @override
-  String get na => 'Н/Д';
+  String get apoapsis => 'Апоцентр';
 
   @override
-  String get core_filter_status_all => 'Усі';
+  String get periapsis => 'Перицентр';
 
   @override
-  String get core_filter_status_active => 'Активний';
+  String get semiMajorAxis => 'Велика піввісь';
 
   @override
-  String get core_filter_status_lost => 'Втрачений';
+  String get eccentricity => 'Ексцентриситет';
 
   @override
-  String get core_filter_status_inactive => 'Неактивний';
+  String get inclination => 'Нахил';
 
   @override
-  String get core_filter_status_unknown => 'Невідомо';
-
-  @override
-  String get core_filter_search_hint => 'Пошук ядер або місій...';
-
-  @override
-  String noCoresFound(Object query) {
-    return 'Ядра за запитом \"$query\" не знайдено';
-  }
-
-  @override
-  String blockLabel(Object blockNumber) {
-    return 'Блок $blockNumber';
-  }
-
-  @override
-  String get spaceXCoresTitle => 'Супутникові ядра Falcon від SpaceX';
-
-  @override
-  String get coresLabel => 'Ядра';
+  String get longitude => 'Довгота';
 }

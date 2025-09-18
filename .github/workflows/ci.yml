@@ -126,15 +126,4 @@ jobs:
           profile: Nexus 6
           script: |
             flutter pub get
-            flutter test integration_test/app_test.dart --flavor dev
-            flutter test integration_test/appearance_test.dart --flavor dev
-            flutter test integration_test/launch_navigation_test.dart --flavor dev
-            flutter test integration_test/launch_test.dart --flavor dev
-            flutter test integration_test/launches_mock_test.dart --flavor dev
-            flutter test integration_test/launches_test.dart --flavor dev
-            flutter test integration_test/settings_test.dart --flavor dev
-            flutter test integration_test/rockets_screen_integration_test.dart --flavor dev
-            flutter test integration_test/rocket_screen_test.dart --flavor dev
-            flutter test integration_test/rockets_integration_live_test.dart --flavor dev
-            flutter test integration_test/cores_integration_live_test.dart --flavor dev
-            flutter test integration_test/cores_screen_integration_test.dart --flavor dev
+            flutter test integration_test --flavor dev
