@@ -1,4 +1,3 @@
-import 'package:flutter_bloc_app_template/data/network/model/core/network_core_model.dart';
 import 'package:flutter_bloc_app_template/data/network/model/stage/network_first_stage_model.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -65,7 +64,7 @@ void main() {
 
       final updated = model.copyWith(
         cores: [
-          const NetworkCoreModel(
+          const NetworkStageCoreModel(
             coreSerial: 'B9999',
             flight: 9,
             block: 9,

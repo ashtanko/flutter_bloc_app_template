@@ -1,4 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_bloc_app_template/repository/cores_repository.dart';
 import 'package:flutter_bloc_app_template/repository/email_list_repository.dart';
 import 'package:flutter_bloc_app_template/repository/launches_repository.dart';
 import 'package:flutter_bloc_app_template/repository/roadster_repository.dart';
@@ -25,6 +26,9 @@ abstract class AppRepositoryProviders {
       ),
       RepositoryProvider<RoadsterRepository>(
         create: (context) => diContainer.get<RoadsterRepository>(),
+      ),
+      RepositoryProvider<CoresRepository>(
+        create: (context) => diContainer.get<CoresRepository>(),
       ),
     ];
   }

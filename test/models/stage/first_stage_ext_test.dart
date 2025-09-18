@@ -1,6 +1,6 @@
 import 'package:flutter_bloc_app_template/data/network/model/stage/network_first_stage_model.dart';
-import 'package:flutter_bloc_app_template/models/core/core_resource.dart';
 import 'package:flutter_bloc_app_template/models/stage/first_stage_ext.dart';
+import 'package:flutter_bloc_app_template/models/stage/stage_core_resource.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -34,11 +34,11 @@ void main() {
       ]
     });
 
-    test('should map cores to CoreResource correctly', () {
+    test('should map cores to StageCoreResource correctly', () {
       final resource = model.toResource();
 
       expect(resource.cores, [
-        const CoreResource(
+        const StageCoreResource(
           coreSerial: 'B1013',
           flight: 1,
           block: 1,
@@ -50,7 +50,7 @@ void main() {
           landingType: 'Ocean',
           landingVehicle: null,
         ),
-        const CoreResource(
+        const StageCoreResource(
           coreSerial: 'B1014',
           flight: 2,
           block: 2,

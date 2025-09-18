@@ -905,6 +905,132 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Longitude'**
   String get longitude;
+
+  /// No description provided for @core_status_active.
+  ///
+  /// In en, this message translates to:
+  /// **'active'**
+  String get core_status_active;
+
+  /// No description provided for @core_status_lost.
+  ///
+  /// In en, this message translates to:
+  /// **'lost'**
+  String get core_status_lost;
+
+  /// No description provided for @core_status_inactive.
+  ///
+  /// In en, this message translates to:
+  /// **'inactive'**
+  String get core_status_inactive;
+
+  /// No description provided for @core_status_unknown.
+  ///
+  /// In en, this message translates to:
+  /// **'unknown'**
+  String get core_status_unknown;
+
+  /// No description provided for @errorLoadingCores.
+  ///
+  /// In en, this message translates to:
+  /// **'Error loading cores'**
+  String get errorLoadingCores;
+
+  /// No description provided for @retry.
+  ///
+  /// In en, this message translates to:
+  /// **'Retry'**
+  String get retry;
+
+  /// No description provided for @firstLaunch.
+  ///
+  /// In en, this message translates to:
+  /// **'First Launch'**
+  String get firstLaunch;
+
+  /// No description provided for @missions.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} missions'**
+  String missions(Object count);
+
+  /// No description provided for @reuses.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} reuses'**
+  String reuses(Object count);
+
+  /// No description provided for @unknown.
+  ///
+  /// In en, this message translates to:
+  /// **'Unknown'**
+  String get unknown;
+
+  /// No description provided for @na.
+  ///
+  /// In en, this message translates to:
+  /// **'N/A'**
+  String get na;
+
+  /// No description provided for @core_filter_status_all.
+  ///
+  /// In en, this message translates to:
+  /// **'All'**
+  String get core_filter_status_all;
+
+  /// No description provided for @core_filter_status_active.
+  ///
+  /// In en, this message translates to:
+  /// **'Active'**
+  String get core_filter_status_active;
+
+  /// No description provided for @core_filter_status_lost.
+  ///
+  /// In en, this message translates to:
+  /// **'Lost'**
+  String get core_filter_status_lost;
+
+  /// No description provided for @core_filter_status_inactive.
+  ///
+  /// In en, this message translates to:
+  /// **'Inactive'**
+  String get core_filter_status_inactive;
+
+  /// No description provided for @core_filter_status_unknown.
+  ///
+  /// In en, this message translates to:
+  /// **'Unknown'**
+  String get core_filter_status_unknown;
+
+  /// No description provided for @core_filter_search_hint.
+  ///
+  /// In en, this message translates to:
+  /// **'Search cores or missions...'**
+  String get core_filter_search_hint;
+
+  /// No description provided for @noCoresFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No cores found for \"{query}\"'**
+  String noCoresFound(Object query);
+
+  /// No description provided for @blockLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Block {blockNumber}'**
+  String blockLabel(Object blockNumber);
+
+  /// No description provided for @spaceXCoresTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'SpaceX Falcon Cores'**
+  String get spaceXCoresTitle;
+
+  /// No description provided for @coresLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cores'**
+  String get coresLabel;
 }
 
 class _AppLocalizationsDelegate

@@ -5,73 +5,108 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   group('CoreExt.toResource', () {
-    final json = {
-      'core_serial': 'B1013',
-      'flight': 1,
-      'block': 1,
-      'gridfins': true,
-      'legs': true,
-      'reused': false,
-      'land_success': true,
-      'landing_intent': true,
-      'landing_type': 'Ocean',
-      'landing_vehicle': null
-    };
+    test('maps full NetworkCoreModel to CoreResource', () {
+      final network = const NetworkCoreModel(
+        coreSerial: 'Merlin2C',
+        block: null,
+        status: 'lost',
+        originalLaunch: '2008-09-28T23:15:00.000Z',
+        originalLaunchUnix: 1222643700,
+        missions: [
+          NetworkMission(name: 'RatSat', flight: 4),
+        ],
+        reuseCount: 0,
+        rtlsAttempts: 0,
+        rtlsLandings: 0,
+        asdsAttempts: 0,
+        asdsLandings: 0,
+        waterLanding: false,
+        details:
+            'Initially scheduled for 23–25 Sep, carried dummy payload – mass '
+            'simulator, 165 kg (originally intended to be RazakSAT.',
+      );
 
-    test('should map all fields correctly from NetworkCoreModel', () {
-      final model = NetworkCoreModel.fromJson(json);
-      final resource = model.toResource();
+      final resource = network.toResource();
 
       expect(
         resource,
-        equals(
-          const CoreResource(
-            coreSerial: 'B1013',
-            flight: 1,
-            block: 1,
-            gridfins: true,
-            legs: true,
-            reused: false,
-            landSuccess: true,
-            landingIntent: true,
-            landingType: 'Ocean',
-            landingVehicle: null,
-          ),
+        const CoreResource(
+          coreSerial: 'Merlin2C',
+          block: null,
+          status: 'lost',
+          originalLaunch: '2008-09-28T23:15:00.000Z',
+          originalLaunchUnix: 1222643700,
+          missions: [
+            MissionResource(name: 'RatSat', flight: 4),
+          ],
+          reuseCount: 0,
+          rtlsAttempts: 0,
+          rtlsLandings: 0,
+          asdsAttempts: 0,
+          asdsLandings: 0,
+          waterLanding: false,
+          details:
+              'Initially scheduled for 23–25 Sep, carried dummy payload – mass '
+              'simulator, 165 kg (originally intended to be RazakSAT.',
         ),
       );
     });
 
-    test('should handle null fields correctly', () {
-      final model = const NetworkCoreModel(
+    test('handles null and empty fields gracefully', () {
+      final network = const NetworkCoreModel(
         coreSerial: null,
-        flight: null,
         block: null,
-        gridfins: null,
-        legs: null,
-        reused: null,
-        landSuccess: null,
-        landingIntent: null,
-        landingType: null,
-        landingVehicle: null,
+        status: null,
+        originalLaunch: null,
+        originalLaunchUnix: null,
+        missions: null,
+        reuseCount: null,
+        rtlsAttempts: null,
+        rtlsLandings: null,
+        asdsAttempts: null,
+        asdsLandings: null,
+        waterLanding: null,
+        details: null,
       );
-      final resource = model.toResource();
+
+      final resource = network.toResource();
 
       expect(
         resource,
-        equals(
-          const CoreResource(
-            coreSerial: null,
-            flight: null,
-            block: null,
-            gridfins: null,
-            legs: null,
-            reused: null,
-            landSuccess: null,
-            landingIntent: null,
-            landingType: null,
-            landingVehicle: null,
-          ),
+        const CoreResource(
+          coreSerial: null,
+          block: null,
+          status: null,
+          originalLaunch: null,
+          originalLaunchUnix: null,
+          missions: null,
+          reuseCount: null,
+          rtlsAttempts: null,
+          rtlsLandings: null,
+          asdsAttempts: null,
+          asdsLandings: null,
+          waterLanding: null,
+          details: null,
         ),
+      );
+    });
+
+    test('maps multiple missions correctly', () {
+      final network = const NetworkCoreModel(
+        missions: [
+          NetworkMission(name: 'RatSat', flight: 4),
+          NetworkMission(name: 'TestSat', flight: 5),
+        ],
+      );
+
+      final resource = network.toResource();
+
+      expect(
+        resource.missions,
+        const [
+          MissionResource(name: 'RatSat', flight: 4),
+          MissionResource(name: 'TestSat', flight: 5),
+        ],
       );
     });
   });

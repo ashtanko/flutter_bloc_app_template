@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc_app_template/features/cores/cores_screen.dart';
 import 'package:flutter_bloc_app_template/features/launches/launches_screen.dart';
 import 'package:flutter_bloc_app_template/features/rockets/rockets_screen.dart';
 import 'package:flutter_bloc_app_template/index.dart';
@@ -18,6 +19,13 @@ List<NavDestination> getDestinations(BuildContext context) {
       selectedIcon: const Icon(Icons.rocket),
       screen: const RocketsScreen(),
       key: const Key('rockets_screen'),
+    ),
+    NavDestination(
+      label: context.coresLabel,
+      icon: const Icon(Icons.memory_outlined),
+      selectedIcon: const Icon(Icons.memory),
+      screen: const CoresScreen(),
+      key: const Key('cores_screen'),
     ),
     NavDestination(
       label: context.settingsTitle,
