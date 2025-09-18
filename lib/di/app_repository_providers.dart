@@ -12,7 +12,7 @@ abstract class AppRepositoryProviders {
   static List<SingleChildWidget> providers() {
     return [
       RepositoryProvider<EmailListRepository>(
-        create: (context) => EmailListRepository(),
+        create: (context) => EmailListRepositoryImpl(),
       ),
       RepositoryProvider<NavigationService>(
         create: (context) => NavigationService(),

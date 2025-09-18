@@ -29,6 +29,8 @@ import 'package:flutter_bloc_app_template/di/di_data_module.dart' as _i513;
 import 'package:flutter_bloc_app_template/di/di_network_module.dart' as _i52;
 import 'package:flutter_bloc_app_template/di/di_repository_module.dart'
     as _i381;
+import 'package:flutter_bloc_app_template/repository/email_list_repository.dart'
+    as _i678;
 import 'package:flutter_bloc_app_template/repository/launches_repository.dart'
     as _i11;
 import 'package:flutter_bloc_app_template/repository/roadster_repository.dart'
@@ -52,10 +54,12 @@ extension GetItInjectableX on _i174.GetIt {
       environment,
       environmentFilter,
     );
+    final repositoryModule = _$RepositoryModule();
     final networkModule = _$NetworkModule();
     final dIAppModule = _$DIAppModule();
     final dIDataModule = _$DIDataModule();
-    final repositoryModule = _$RepositoryModule();
+    gh.factory<_i678.EmailListRepository>(
+        () => repositoryModule.provideEmailListRepository());
     gh.factory<_i361.Dio>(() => networkModule.provideDio());
     gh.factory<_i993.Talker>(() => dIAppModule.provideLogger());
     gh.lazySingleton<_i750.ThemeStorage>(() => dIDataModule.themeStorage);
@@ -85,10 +89,10 @@ extension GetItInjectableX on _i174.GetIt {
   }
 }
 
+class _$RepositoryModule extends _i381.RepositoryModule {}
+
 class _$NetworkModule extends _i52.NetworkModule {}
 
 class _$DIAppModule extends _i367.DIAppModule {}
 
 class _$DIDataModule extends _i513.DIDataModule {}
-
-class _$RepositoryModule extends _i381.RepositoryModule {}
