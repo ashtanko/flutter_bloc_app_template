@@ -15,7 +15,6 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$NetworkSecondStageModel {
   int? get block;
-
   List<NetworkPayloadModel>? get payloads;
 
   /// Create a copy of NetworkSecondStageModel
@@ -54,7 +53,6 @@ abstract mixin class $NetworkSecondStageModelCopyWith<$Res> {
   factory $NetworkSecondStageModelCopyWith(NetworkSecondStageModel value,
           $Res Function(NetworkSecondStageModel) _then) =
       _$NetworkSecondStageModelCopyWithImpl;
-
   @useResult
   $Res call({int? block, List<NetworkPayloadModel>? payloads});
 }
@@ -254,14 +252,12 @@ class _NetworkSecondStageModel extends NetworkSecondStageModel {
       {this.block, final List<NetworkPayloadModel>? payloads})
       : _payloads = payloads,
         super._();
-
   factory _NetworkSecondStageModel.fromJson(Map<String, dynamic> json) =>
       _$NetworkSecondStageModelFromJson(json);
 
   @override
   final int? block;
   final List<NetworkPayloadModel>? _payloads;
-
   @override
   List<NetworkPayloadModel>? get payloads {
     final value = _payloads;
@@ -313,7 +309,6 @@ abstract mixin class _$NetworkSecondStageModelCopyWith<$Res>
   factory _$NetworkSecondStageModelCopyWith(_NetworkSecondStageModel value,
           $Res Function(_NetworkSecondStageModel) _then) =
       __$NetworkSecondStageModelCopyWithImpl;
-
   @override
   @useResult
   $Res call({int? block, List<NetworkPayloadModel>? payloads});
