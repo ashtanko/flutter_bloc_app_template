@@ -37,45 +37,25 @@ import 'package:mockito/mockito.dart' as _i1;
 
 class _FakeLaunchFullResource_0 extends _i1.SmartFake
     implements _i2.LaunchFullResource {
-  _FakeLaunchFullResource_0(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeLaunchFullResource_0(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeRocketResource_1 extends _i1.SmartFake
     implements _i2.RocketResource {
-  _FakeRocketResource_1(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeRocketResource_1(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeRoadsterResource_2 extends _i1.SmartFake
     implements _i3.RoadsterResource {
-  _FakeRoadsterResource_2(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeRoadsterResource_2(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeCoreResource_3 extends _i1.SmartFake implements _i4.CoreResource {
-  _FakeCoreResource_3(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeCoreResource_3(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 /// A class which mocks [EmailListRepository].
@@ -88,13 +68,12 @@ class MockEmailListRepository extends _i1.Mock
   }
 
   @override
-  _i5.Future<List<_i6.Email>> loadData() => (super.noSuchMethod(
-        Invocation.method(
-          #loadData,
-          [],
-        ),
-        returnValue: _i5.Future<List<_i6.Email>>.value(<_i6.Email>[]),
-      ) as _i5.Future<List<_i6.Email>>);
+  _i5.Future<List<_i6.Email>> loadData() =>
+      (super.noSuchMethod(
+            Invocation.method(#loadData, []),
+            returnValue: _i5.Future<List<_i6.Email>>.value(<_i6.Email>[]),
+          )
+          as _i5.Future<List<_i6.Email>>);
 }
 
 /// A class which mocks [LaunchesRepository].
@@ -116,38 +95,32 @@ class MockLaunchesRepository extends _i1.Mock
     String? order,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #getLaunches,
-          [],
-          {
-            #hasId: hasId,
-            #limit: limit,
-            #offset: offset,
-            #launchYear: launchYear,
-            #launchSuccess: launchSuccess,
-            #order: order,
-          },
-        ),
-        returnValue:
-            _i5.Future<List<_i2.LaunchResource>>.value(<_i2.LaunchResource>[]),
-      ) as _i5.Future<List<_i2.LaunchResource>>);
+            Invocation.method(#getLaunches, [], {
+              #hasId: hasId,
+              #limit: limit,
+              #offset: offset,
+              #launchYear: launchYear,
+              #launchSuccess: launchSuccess,
+              #order: order,
+            }),
+            returnValue: _i5.Future<List<_i2.LaunchResource>>.value(
+              <_i2.LaunchResource>[],
+            ),
+          )
+          as _i5.Future<List<_i2.LaunchResource>>);
 
   @override
   _i5.Future<_i2.LaunchFullResource> getLaunch(int? flightNumber) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #getLaunch,
-          [flightNumber],
-        ),
-        returnValue:
-            _i5.Future<_i2.LaunchFullResource>.value(_FakeLaunchFullResource_0(
-          this,
-          Invocation.method(
-            #getLaunch,
-            [flightNumber],
-          ),
-        )),
-      ) as _i5.Future<_i2.LaunchFullResource>);
+            Invocation.method(#getLaunch, [flightNumber]),
+            returnValue: _i5.Future<_i2.LaunchFullResource>.value(
+              _FakeLaunchFullResource_0(
+                this,
+                Invocation.method(#getLaunch, [flightNumber]),
+              ),
+            ),
+          )
+          as _i5.Future<_i2.LaunchFullResource>);
 }
 
 /// A class which mocks [RocketRepository].
@@ -165,34 +138,29 @@ class MockRocketRepository extends _i1.Mock implements _i7.RocketRepository {
     int? offset,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #getRockets,
-          [],
-          {
-            #hasId: hasId,
-            #limit: limit,
-            #offset: offset,
-          },
-        ),
-        returnValue:
-            _i5.Future<List<_i2.RocketResource>>.value(<_i2.RocketResource>[]),
-      ) as _i5.Future<List<_i2.RocketResource>>);
+            Invocation.method(#getRockets, [], {
+              #hasId: hasId,
+              #limit: limit,
+              #offset: offset,
+            }),
+            returnValue: _i5.Future<List<_i2.RocketResource>>.value(
+              <_i2.RocketResource>[],
+            ),
+          )
+          as _i5.Future<List<_i2.RocketResource>>);
 
   @override
   _i5.Future<_i2.RocketResource> getRocket(String? rocketId) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #getRocket,
-          [rocketId],
-        ),
-        returnValue: _i5.Future<_i2.RocketResource>.value(_FakeRocketResource_1(
-          this,
-          Invocation.method(
-            #getRocket,
-            [rocketId],
-          ),
-        )),
-      ) as _i5.Future<_i2.RocketResource>);
+            Invocation.method(#getRocket, [rocketId]),
+            returnValue: _i5.Future<_i2.RocketResource>.value(
+              _FakeRocketResource_1(
+                this,
+                Invocation.method(#getRocket, [rocketId]),
+              ),
+            ),
+          )
+          as _i5.Future<_i2.RocketResource>);
 }
 
 /// A class which mocks [RoadsterRepository].
@@ -205,20 +173,17 @@ class MockRoadsterRepository extends _i1.Mock
   }
 
   @override
-  _i5.Future<_i3.RoadsterResource> getRoadster() => (super.noSuchMethod(
-        Invocation.method(
-          #getRoadster,
-          [],
-        ),
-        returnValue:
-            _i5.Future<_i3.RoadsterResource>.value(_FakeRoadsterResource_2(
-          this,
-          Invocation.method(
-            #getRoadster,
-            [],
-          ),
-        )),
-      ) as _i5.Future<_i3.RoadsterResource>);
+  _i5.Future<_i3.RoadsterResource> getRoadster() =>
+      (super.noSuchMethod(
+            Invocation.method(#getRoadster, []),
+            returnValue: _i5.Future<_i3.RoadsterResource>.value(
+              _FakeRoadsterResource_2(
+                this,
+                Invocation.method(#getRoadster, []),
+              ),
+            ),
+          )
+          as _i5.Future<_i3.RoadsterResource>);
 }
 
 /// A class which mocks [CoresRepository].
@@ -236,34 +201,29 @@ class MockCoresRepository extends _i1.Mock implements _i9.CoresRepository {
     int? offset,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #getCores,
-          [],
-          {
-            #hasId: hasId,
-            #limit: limit,
-            #offset: offset,
-          },
-        ),
-        returnValue:
-            _i5.Future<List<_i4.CoreResource>>.value(<_i4.CoreResource>[]),
-      ) as _i5.Future<List<_i4.CoreResource>>);
+            Invocation.method(#getCores, [], {
+              #hasId: hasId,
+              #limit: limit,
+              #offset: offset,
+            }),
+            returnValue: _i5.Future<List<_i4.CoreResource>>.value(
+              <_i4.CoreResource>[],
+            ),
+          )
+          as _i5.Future<List<_i4.CoreResource>>);
 
   @override
   _i5.Future<_i4.CoreResource> getCore(String? coreSerial) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #getCore,
-          [coreSerial],
-        ),
-        returnValue: _i5.Future<_i4.CoreResource>.value(_FakeCoreResource_3(
-          this,
-          Invocation.method(
-            #getCore,
-            [coreSerial],
-          ),
-        )),
-      ) as _i5.Future<_i4.CoreResource>);
+            Invocation.method(#getCore, [coreSerial]),
+            returnValue: _i5.Future<_i4.CoreResource>.value(
+              _FakeCoreResource_3(
+                this,
+                Invocation.method(#getCore, [coreSerial]),
+              ),
+            ),
+          )
+          as _i5.Future<_i4.CoreResource>);
 }
 
 /// A class which mocks [NavigatorObserver].
@@ -274,31 +234,15 @@ class MockNavigatorObserver extends _i1.Mock implements _i10.NavigatorObserver {
   void didPush(
     _i10.Route<dynamic>? route,
     _i10.Route<dynamic>? previousRoute,
-  ) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #didPush,
-          [
-            route,
-            previousRoute,
-          ],
-        ),
-        returnValueForMissingStub: null,
-      );
+  ) => super.noSuchMethod(
+    Invocation.method(#didPush, [route, previousRoute]),
+    returnValueForMissingStub: null,
+  );
 
   @override
-  void didPop(
-    _i10.Route<dynamic>? route,
-    _i10.Route<dynamic>? previousRoute,
-  ) =>
+  void didPop(_i10.Route<dynamic>? route, _i10.Route<dynamic>? previousRoute) =>
       super.noSuchMethod(
-        Invocation.method(
-          #didPop,
-          [
-            route,
-            previousRoute,
-          ],
-        ),
+        Invocation.method(#didPop, [route, previousRoute]),
         returnValueForMissingStub: null,
       );
 
@@ -306,73 +250,44 @@ class MockNavigatorObserver extends _i1.Mock implements _i10.NavigatorObserver {
   void didRemove(
     _i10.Route<dynamic>? route,
     _i10.Route<dynamic>? previousRoute,
-  ) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #didRemove,
-          [
-            route,
-            previousRoute,
-          ],
-        ),
-        returnValueForMissingStub: null,
-      );
+  ) => super.noSuchMethod(
+    Invocation.method(#didRemove, [route, previousRoute]),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void didReplace({
     _i10.Route<dynamic>? newRoute,
     _i10.Route<dynamic>? oldRoute,
-  }) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #didReplace,
-          [],
-          {
-            #newRoute: newRoute,
-            #oldRoute: oldRoute,
-          },
-        ),
-        returnValueForMissingStub: null,
-      );
+  }) => super.noSuchMethod(
+    Invocation.method(#didReplace, [], {
+      #newRoute: newRoute,
+      #oldRoute: oldRoute,
+    }),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void didChangeTop(
     _i10.Route<dynamic>? topRoute,
     _i10.Route<dynamic>? previousTopRoute,
-  ) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #didChangeTop,
-          [
-            topRoute,
-            previousTopRoute,
-          ],
-        ),
-        returnValueForMissingStub: null,
-      );
+  ) => super.noSuchMethod(
+    Invocation.method(#didChangeTop, [topRoute, previousTopRoute]),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void didStartUserGesture(
     _i10.Route<dynamic>? route,
     _i10.Route<dynamic>? previousRoute,
-  ) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #didStartUserGesture,
-          [
-            route,
-            previousRoute,
-          ],
-        ),
-        returnValueForMissingStub: null,
-      );
+  ) => super.noSuchMethod(
+    Invocation.method(#didStartUserGesture, [route, previousRoute]),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void didStopUserGesture() => super.noSuchMethod(
-        Invocation.method(
-          #didStopUserGesture,
-          [],
-        ),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#didStopUserGesture, []),
+    returnValueForMissingStub: null,
+  );
 }

@@ -49,7 +49,4 @@ _NetworkMission _$NetworkMissionFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$NetworkMissionToJson(_NetworkMission instance) =>
-    <String, dynamic>{
-      'name': instance.name,
-      'flight': instance.flight,
-    };
+    <String, dynamic>{'name': instance.name, 'flight': instance.flight};
