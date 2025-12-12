@@ -1,5 +1,5 @@
-// dart format width=80
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// dart format width=80
 
 // **************************************************************************
 // InjectableConfigGenerator
@@ -58,15 +58,15 @@ extension GetItInjectableX on _i174.GetIt {
       environment,
       environmentFilter,
     );
-    final networkModule = _$NetworkModule();
     final dIAppModule = _$DIAppModule();
+    final networkModule = _$NetworkModule();
     final dIDataModule = _$DIDataModule();
     final repositoryModule = _$RepositoryModule();
-    gh.factory<_i361.Dio>(() => networkModule.provideDio());
     gh.factory<_i993.Talker>(() => dIAppModule.provideLogger());
-    gh.lazySingleton<_i750.ThemeStorage>(() => dIDataModule.themeStorage);
+    gh.factory<_i361.Dio>(() => networkModule.provideDio());
     gh.lazySingleton<_i409.GlobalKey<_i409.NavigatorState>>(
         () => dIAppModule.key);
+    gh.lazySingleton<_i750.ThemeStorage>(() => dIDataModule.themeStorage);
     gh.factory<_i511.LaunchService>(
         () => networkModule.provideLaunchService(gh<_i361.Dio>()));
     gh.factory<_i1029.RocketService>(
@@ -97,9 +97,9 @@ extension GetItInjectableX on _i174.GetIt {
   }
 }
 
-class _$NetworkModule extends _i52.NetworkModule {}
-
 class _$DIAppModule extends _i367.DIAppModule {}
+
+class _$NetworkModule extends _i52.NetworkModule {}
 
 class _$DIDataModule extends _i513.DIDataModule {}
 
