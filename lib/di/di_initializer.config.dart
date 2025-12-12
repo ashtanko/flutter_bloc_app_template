@@ -48,16 +48,12 @@ import 'package:injectable/injectable.dart' as _i526;
 import 'package:talker/talker.dart' as _i993;
 
 extension GetItInjectableX on _i174.GetIt {
-// initializes the registration of main-scope dependencies inside of GetIt
+  // initializes the registration of main-scope dependencies inside of GetIt
   _i174.GetIt init({
     String? environment,
     _i526.EnvironmentFilter? environmentFilter,
   }) {
-    final gh = _i526.GetItHelper(
-      this,
-      environment,
-      environmentFilter,
-    );
+    final gh = _i526.GetItHelper(this, environment, environmentFilter);
     final dIAppModule = _$DIAppModule();
     final networkModule = _$NetworkModule();
     final dIDataModule = _$DIDataModule();
@@ -65,34 +61,57 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i993.Talker>(() => dIAppModule.provideLogger());
     gh.factory<_i361.Dio>(() => networkModule.provideDio());
     gh.lazySingleton<_i409.GlobalKey<_i409.NavigatorState>>(
-        () => dIAppModule.key);
+      () => dIAppModule.key,
+    );
     gh.lazySingleton<_i750.ThemeStorage>(() => dIDataModule.themeStorage);
     gh.factory<_i511.LaunchService>(
-        () => networkModule.provideLaunchService(gh<_i361.Dio>()));
+      () => networkModule.provideLaunchService(gh<_i361.Dio>()),
+    );
     gh.factory<_i1029.RocketService>(
-        () => networkModule.provideRocketService(gh<_i361.Dio>()));
+      () => networkModule.provideRocketService(gh<_i361.Dio>()),
+    );
     gh.factory<_i837.RoadsterService>(
-        () => networkModule.provideRoadsterService(gh<_i361.Dio>()));
+      () => networkModule.provideRoadsterService(gh<_i361.Dio>()),
+    );
     gh.factory<_i999.CoresService>(
-        () => networkModule.provideCoresService(gh<_i361.Dio>()));
-    gh.factory<_i626.ThemeRepository>(() =>
-        repositoryModule.provideAccidentsRepository(gh<_i750.ThemeStorage>()));
-    gh.factory<_i969.RoadsterDataSource>(() =>
-        networkModule.provideRoadsterDataSource(gh<_i837.RoadsterService>()));
-    gh.factory<_i358.LaunchesDataSource>(() =>
-        networkModule.provideLaunchesDataSource(gh<_i511.LaunchService>()));
+      () => networkModule.provideCoresService(gh<_i361.Dio>()),
+    );
+    gh.factory<_i626.ThemeRepository>(
+      () =>
+          repositoryModule.provideAccidentsRepository(gh<_i750.ThemeStorage>()),
+    );
+    gh.factory<_i969.RoadsterDataSource>(
+      () =>
+          networkModule.provideRoadsterDataSource(gh<_i837.RoadsterService>()),
+    );
+    gh.factory<_i358.LaunchesDataSource>(
+      () => networkModule.provideLaunchesDataSource(gh<_i511.LaunchService>()),
+    );
     gh.factory<_i915.CoresDataSource>(
-        () => networkModule.provideCoresDataSource(gh<_i999.CoresService>()));
-    gh.factory<_i11.LaunchesRepository>(() => repositoryModule
-        .provideLaunchesRepository(gh<_i358.LaunchesDataSource>()));
-    gh.factory<_i636.RocketDataSource>(() =>
-        networkModule.provideRocketDataSource(gh<_i1029.RocketService>()));
-    gh.factory<_i128.RoadsterRepository>(() => repositoryModule
-        .provideRoadsterRepository(gh<_i969.RoadsterDataSource>()));
-    gh.factory<_i1009.CoresRepository>(() =>
-        repositoryModule.provideCoresRepository(gh<_i915.CoresDataSource>()));
-    gh.factory<_i31.RocketRepository>(() =>
-        repositoryModule.provideRocketRepository(gh<_i636.RocketDataSource>()));
+      () => networkModule.provideCoresDataSource(gh<_i999.CoresService>()),
+    );
+    gh.factory<_i11.LaunchesRepository>(
+      () => repositoryModule.provideLaunchesRepository(
+        gh<_i358.LaunchesDataSource>(),
+      ),
+    );
+    gh.factory<_i636.RocketDataSource>(
+      () => networkModule.provideRocketDataSource(gh<_i1029.RocketService>()),
+    );
+    gh.factory<_i128.RoadsterRepository>(
+      () => repositoryModule.provideRoadsterRepository(
+        gh<_i969.RoadsterDataSource>(),
+      ),
+    );
+    gh.factory<_i1009.CoresRepository>(
+      () =>
+          repositoryModule.provideCoresRepository(gh<_i915.CoresDataSource>()),
+    );
+    gh.factory<_i31.RocketRepository>(
+      () => repositoryModule.provideRocketRepository(
+        gh<_i636.RocketDataSource>(),
+      ),
+    );
     return this;
   }
 }

@@ -25,16 +25,16 @@ _NetworkPayloadModel _$NetworkPayloadModelFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$NetworkPayloadModelToJson(
-        _NetworkPayloadModel instance) =>
-    <String, dynamic>{
-      'payload_id': instance.payloadId,
-      'norad_id': instance.noradId,
-      'reused': instance.reused,
-      'customers': instance.customers,
-      'nationality': instance.nationality,
-      'manufacturer': instance.manufacturer,
-      'payload_type': instance.payloadType,
-      'payload_mass_kg': instance.payloadMassKg,
-      'payload_mass_lbs': instance.payloadMassLbs,
-      'orbit': instance.orbit,
-    };
+  _NetworkPayloadModel instance,
+) => <String, dynamic>{
+  'payload_id': instance.payloadId,
+  'norad_id': instance.noradId,
+  'reused': instance.reused,
+  'customers': instance.customers,
+  'nationality': instance.nationality,
+  'manufacturer': instance.manufacturer,
+  'payload_type': instance.payloadType,
+  'payload_mass_kg': instance.payloadMassKg,
+  'payload_mass_lbs': instance.payloadMassLbs,
+  'orbit': instance.orbit,
+};
