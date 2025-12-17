@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-java@v5.1.0
         with:
           distribution: 'oracle'
-          java-version: '17'
+          java-version: '21'
 
         #3 Setup Flutter
       - name: Setup Flutter

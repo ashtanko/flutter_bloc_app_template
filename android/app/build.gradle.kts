@@ -25,6 +25,10 @@ android {
         targetCompatibility = JavaVersion.VERSION_21
     }
 
+    kotlin {
+        jvmToolchain(21)
+    }
+
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId = "dev.shtanko.flutter_bloc_app_template"
