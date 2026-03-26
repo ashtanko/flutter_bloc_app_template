@@ -85,7 +85,7 @@ jobs:
             lib/routers/router.dart
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v6
 
       - name: Codacy Coverage Reporter
         uses: codacy/codacy-coverage-reporter-action@v1
