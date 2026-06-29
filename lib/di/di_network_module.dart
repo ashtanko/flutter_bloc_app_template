@@ -3,6 +3,11 @@ import 'package:flutter_bloc_app_template/data/network/data_source/cores_network
 import 'package:flutter_bloc_app_template/data/network/data_source/launches_network_data_source.dart';
 import 'package:flutter_bloc_app_template/data/network/data_source/roadster_network_data_source.dart';
 import 'package:flutter_bloc_app_template/data/network/data_source/rocket_network_data_source.dart';
+import 'package:flutter_bloc_app_template/data/network/mock/cores_mock_data_source.dart';
+import 'package:flutter_bloc_app_template/data/network/mock/launches_mock_data_source.dart';
+import 'package:flutter_bloc_app_template/data/network/mock/mock_config.dart';
+import 'package:flutter_bloc_app_template/data/network/mock/roadster_mock_data_source.dart';
+import 'package:flutter_bloc_app_template/data/network/mock/rocket_mock_data_source.dart';
 import 'package:flutter_bloc_app_template/data/network/service/cores/cores_service.dart';
 import 'package:flutter_bloc_app_template/data/network/service/launch/launch_service.dart';
 import 'package:flutter_bloc_app_template/data/network/service/roadster/roadster_service.dart';
@@ -50,21 +55,29 @@ abstract class NetworkModule {
 
   @factoryMethod
   LaunchesDataSource provideLaunchesDataSource(LaunchService service) {
-    return LaunchesNetworkDataSource(service);
+    return useMockData
+        ? LaunchesMockDataSource()
+        : LaunchesNetworkDataSource(service);
   }
 
   @factoryMethod
   RocketDataSource provideRocketDataSource(RocketService service) {
-    return RocketNetworkDataSource(service);
+    return useMockData
+        ? RocketMockDataSource()
+        : RocketNetworkDataSource(service);
   }
 
   @factoryMethod
   RoadsterDataSource provideRoadsterDataSource(RoadsterService service) {
-    return RoadsterNetworkDataSource(service);
+    return useMockData
+        ? RoadsterMockDataSource()
+        : RoadsterNetworkDataSource(service);
   }
 
   @factoryMethod
   CoresDataSource provideCoresDataSource(CoresService service) {
-    return CoresNetworkDataSource(service);
+    return useMockData
+        ? CoresMockDataSource()
+        : CoresNetworkDataSource(service);
   }
 }
