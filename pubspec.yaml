@@ -41,7 +41,7 @@ dependencies:
   talker_logger: ^5.0.0
   talker_dio_logger: ^5.0.0
   talker_bloc_logger: ^5.0.0
-  animations: ^2.0.7
+  animations: ^3.0.0
   yaml: ^3.1.2
   collection: ^1.18.0
   package_info_plus: ^10.0.0
