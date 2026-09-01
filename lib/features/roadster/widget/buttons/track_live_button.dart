@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 
 class TrackLiveButton extends StatelessWidget {
   const TrackLiveButton({
@@ -24,7 +24,7 @@ class TrackLiveButton extends StatelessWidget {
         child: FloatingActionButton.extended(
           onPressed: onPressed,
           icon: const Icon(Icons.rocket_launch),
-          label: Text(S.of(context).trackLive),
+          label: Text(AppLocalizations.of(context).trackLive),
           backgroundColor: Theme.of(context).colorScheme.primary,
           foregroundColor: Theme.of(context).colorScheme.onPrimary,
         ),

@@ -2,7 +2,11 @@
 /// data or by the live SpaceX retrofit data sources.
 ///
 /// The public SpaceX API (`api.spacexdata.com`) has been disabled, so the app
-/// ships with [useMockData] set to `true` and reads everything from
-/// `MockData`. Flip this to `false` to restore the live `*NetworkDataSource`
-/// implementations if the API is ever brought back.
-const bool useMockData = true;
+/// defaults to mock data and reads everything from `MockData`. Override it per
+/// build without touching the source once the API is back:
+///
+/// ```
+/// flutter build appbundle --dart-define=USE_MOCK_DATA=false
+/// ```
+const bool useMockData =
+    bool.fromEnvironment('USE_MOCK_DATA', defaultValue: true);

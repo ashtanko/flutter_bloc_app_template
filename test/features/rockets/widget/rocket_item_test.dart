@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/app/localization.dart';
 import 'package:flutter_bloc_app_template/features/rockets/widget/rocket_item/rocket_item.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 import 'package:flutter_bloc_app_template/models/rocket/rocket_resource.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -28,59 +28,58 @@ void main() {
   );
 
   group('RocketItemWidget localization', () {
-    final _ = {
-      'en': const Locale('en'),
-      'uk': const Locale('uk'),
-      'pt': const Locale('pt'),
-      'de': const Locale('de'),
-    }..forEach((lang, locale) {
-        testWidgets('displays correct localized strings for $lang',
-            (tester) async {
-          await tester.pumpWidget(
-            wrapWithLocale(
-              locale,
-              RocketItemWidget(
-                rocket: testRocket,
-                onClick: () {},
+    final _ =
+        {
+          'en': const Locale('en'),
+          'uk': const Locale('uk'),
+          'pt': const Locale('pt'),
+          'de': const Locale('de'),
+        }..forEach((lang, locale) {
+          testWidgets('displays correct localized strings for $lang', (
+            tester,
+          ) async {
+            await tester.pumpWidget(
+              wrapWithLocale(
+                locale,
+                RocketItemWidget(rocket: testRocket, onClick: () {}),
               ),
-            ),
-          );
-          await tester.pumpAndSettle();
+            );
+            await tester.pumpAndSettle();
 
-          final l10n = S.of(tester.element(find.byType(RocketItemWidget)));
+            final l10n = AppLocalizations.of(
+              tester.element(find.byType(RocketItemWidget)),
+            );
 
-          // Check Active/Retired label
-          expect(find.text(l10n.activeStatus), findsOneWidget);
+            // Check Active/Retired label
+            expect(find.text(l10n.activeStatus), findsOneWidget);
 
-          // Check success rate
-          expect(
+            // Check success rate
+            expect(
               find.text(l10n.successRate(testRocket.successRatePct.toString())),
-              findsOneWidget);
+              findsOneWidget,
+            );
 
-          // Check cost label
-          expect(find.text('\$50.0M'), findsOneWidget);
+            // Check cost label
+            expect(find.text('\$50.0M'), findsOneWidget);
 
-          // Check rocket name
-          expect(find.text('Falcon 9'), findsOneWidget);
+            // Check rocket name
+            expect(find.text('Falcon 9'), findsOneWidget);
 
-          // Check description
-          expect(find.text('Reusable rocket by SpaceX'), findsOneWidget);
+            // Check description
+            expect(find.text('Reusable rocket by SpaceX'), findsOneWidget);
 
-          // Change rocket to retired
-          final retiredRocket = testRocket.copyWith(active: false);
-          await tester.pumpWidget(
-            wrapWithLocale(
-              locale,
-              RocketItemWidget(
-                rocket: retiredRocket,
-                onClick: () {},
+            // Change rocket to retired
+            final retiredRocket = testRocket.copyWith(active: false);
+            await tester.pumpWidget(
+              wrapWithLocale(
+                locale,
+                RocketItemWidget(rocket: retiredRocket, onClick: () {}),
               ),
-            ),
-          );
-          await tester.pumpAndSettle();
+            );
+            await tester.pumpAndSettle();
 
-          expect(find.text(l10n.retiredStatus), findsOneWidget);
+            expect(find.text(l10n.retiredStatus), findsOneWidget);
+          });
         });
-      });
   });
 }

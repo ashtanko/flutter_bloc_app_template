@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/features/roadster/widget/distance_card_widget.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 import 'package:flutter_bloc_app_template/models/roadster/roadster_resource.dart';
 
 class DistanceCards extends StatelessWidget {
@@ -18,7 +18,7 @@ class DistanceCards extends StatelessWidget {
     return Column(
       children: [
         DistanceCardWidget(
-          title: S.of(context).earthDistance,
+          title: AppLocalizations.of(context).earthDistance,
           distance: roadster.earthDistanceKm ?? 0,
           color: Colors.blue,
           icon: Icons.public,
@@ -27,7 +27,7 @@ class DistanceCards extends StatelessWidget {
         ),
         const SizedBox(height: 16),
         DistanceCardWidget(
-          title: S.of(context).marsDistance,
+          title: AppLocalizations.of(context).marsDistance,
           distance: roadster.marsDistanceKm ?? 0,
           color: Colors.orange,
           icon: Icons.circle,

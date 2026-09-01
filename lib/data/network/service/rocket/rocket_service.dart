@@ -7,7 +7,7 @@ part 'rocket_service.g.dart';
 
 @RestApi(baseUrl: baseUrl)
 abstract class RocketService {
-  factory RocketService(Dio dio) = _RocketService;
+  factory RocketService(Dio dio, {String? baseUrl}) = _RocketService;
 
   @GET('rockets')
   Future<List<NetworkRocketModel>> fetchRockets({

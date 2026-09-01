@@ -7,7 +7,7 @@ part 'cores_service.g.dart';
 
 @RestApi(baseUrl: baseUrl)
 abstract class CoresService {
-  factory CoresService(Dio dio) = _CoresService;
+  factory CoresService(Dio dio, {String? baseUrl}) = _CoresService;
 
   @GET('cores')
   Future<List<NetworkCoreModel>> fetchCores({

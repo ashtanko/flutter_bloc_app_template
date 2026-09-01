@@ -1,8 +1,8 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 
 extension LocalizationExtension on BuildContext {
-  S get l10n => S.of(this);
+  AppLocalizations get l10n => AppLocalizations.of(this);
 }
 
 extension StringResourcesExtension on BuildContext {

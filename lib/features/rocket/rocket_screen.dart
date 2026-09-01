@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_app_template/features/rocket/bloc/rocket_bloc.dart';
 import 'package:flutter_bloc_app_template/features/rocket/widget/detail_row_widget.dart';
 import 'package:flutter_bloc_app_template/features/rocket/widget/spec_card_widget.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 import 'package:flutter_bloc_app_template/models/rocket/rocket_resource.dart';
 import 'package:flutter_bloc_app_template/repository/rocket_repository.dart';
 import 'package:flutter_bloc_app_template/utils/rocket_utils.dart';
@@ -77,7 +77,7 @@ class RocketDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final l10n = S.of(context);
+    final l10n = AppLocalizations.of(context);
 
     return Scaffold(
       body: CustomScrollView(

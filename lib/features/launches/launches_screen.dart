@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_app_template/features/launches/bloc/launches_bloc.dart';
 import 'package:flutter_bloc_app_template/features/launches/widget/launch_item.dart'
     show LaunchItem;
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/index.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 
 class LaunchesScreen extends StatelessWidget {
   const LaunchesScreen({super.key});
@@ -46,7 +46,7 @@ class LaunchesList extends StatelessWidget {
               );
             case LaunchesEmptyState _:
               return EmptyContent(
-                content: S.of(context).emptyList,
+                content: AppLocalizations.of(context).emptyList,
               );
           }
 

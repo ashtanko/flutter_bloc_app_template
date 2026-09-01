@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/index.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 
 class EmailListView extends StatelessWidget {
   @override
@@ -45,7 +45,7 @@ class EmailListView extends StatelessWidget {
           }
 
           if (state is EmailListLoadFailure) {
-            return Text(S.of(context).error); // TODO
+            return Text(AppLocalizations.of(context).error); // TODO
           }
 
           return EmptyWidget();

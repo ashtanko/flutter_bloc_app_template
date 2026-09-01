@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter_bloc_app_template/features/launch/widget/launch_site_card_widget.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations_en.dart';
 import 'package:flutter_bloc_app_template/models/launch/launch_site_resource.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -25,7 +25,7 @@ void main() {
     );
     await tester.pump();
 
-    expect(find.text(S.current.launchSite), findsOneWidget);
+    expect(find.text(AppLocalizationsEn().launchSite), findsOneWidget);
   });
 
   testWidgets('renders site name, long name, and id', (tester) async {
@@ -38,7 +38,9 @@ void main() {
     expect(find.text(site.siteName!), findsOneWidget);
     expect(find.text(site.siteNameLong!), findsOneWidget);
     expect(
-        find.text('${S.current.siteIdLabel} ${site.siteId}'), findsOneWidget);
+      find.text('${AppLocalizationsEn().siteIdLabel} ${site.siteId}'),
+      findsOneWidget,
+    );
   });
 
   testWidgets('renders correctly with only siteId', (tester) async {
@@ -50,8 +52,10 @@ void main() {
     );
     await tester.pump();
 
-    expect(find.text('${S.current.siteIdLabel} ${minimalSite.siteId}'),
-        findsOneWidget);
+    expect(
+      find.text('${AppLocalizationsEn().siteIdLabel} ${minimalSite.siteId}'),
+      findsOneWidget,
+    );
     // Ensure the raw siteId isn't rendered without its label.
     expect(find.text(minimalSite.siteId!), findsNothing);
   });

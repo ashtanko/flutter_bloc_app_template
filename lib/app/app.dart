@@ -21,19 +21,19 @@ class App extends StatelessWidget {
           child: Builder(
             builder: (context) {
               final navigator = NavigationService.of(context);
-              var textTheme = createTextTheme(context: context);
-              var theme = MaterialTheme(textTheme);
+              final textTheme = createTextTheme(context: context);
+              final theme = MaterialTheme(textTheme);
+              final themeCubit = context.watch<ThemeCubit>();
 
               return MaterialApp(
                 debugShowCheckedModeBanner: kDebugMode,
                 restorationScopeId: 'app',
-                key: Key('${context.watch<ThemeCubit>().themeMode}'),
                 localizationsDelegates: appLocalizationsDelegates,
                 supportedLocales: appSupportedLocales,
                 onGenerateTitle: (BuildContext context) => context.appTitle,
-                theme: theme.yellowLight(),
-                darkTheme: theme.yellowDark(),
-                themeMode: context.watch<ThemeCubit>().themeMode,
+                theme: themeCubit.getDefaultTheme(theme),
+                darkTheme: themeCubit.getDefaultDarkTheme(theme),
+                themeMode: themeCubit.themeMode,
                 navigatorKey: appNavigatorKey,
                 onGenerateRoute: navigator.onGenerateRoute,
                 builder: (_, child) => BlocListener<InitBloc, InitState>(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/index.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 import 'package:flutter_bloc_app_template/models/launch/launch_rocket_resource.dart';
 
 class LaunchItem extends StatelessWidget {
@@ -34,26 +34,22 @@ class LaunchItem extends StatelessWidget {
               ? Colors.greenAccent[100]?.withAlpha(50)
               : Colors.redAccent[100]?.withAlpha(50),
           child: Padding(
-            padding:
-                const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 16.0,
+              vertical: 8.0,
+            ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                LaunchTopRow(
-                  launch: launch,
-                ),
+                LaunchTopRow(launch: launch),
                 const SizedBox(height: 4),
                 Padding(
                   padding: const EdgeInsets.only(left: 8.0),
-                  child: LaunchDateTimeWidget(
-                    launchDays: launch.launchDays,
-                  ),
+                  child: LaunchDateTimeWidget(launchDays: launch.launchDays),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 8.0),
-                  child: RocketLabelWidget(
-                    rocket: launch.rocket,
-                  ),
+                  child: RocketLabelWidget(rocket: launch.rocket),
                 ),
                 if (launch.launchDays != null)
                   Padding(
@@ -96,7 +92,9 @@ class LaunchTopRow extends StatelessWidget {
               const SizedBox(width: 8),
               Expanded(
                 child: Text(
-                  S.of(context).missionTitle(launch.missionName ?? ''),
+                  AppLocalizations.of(
+                    context,
+                  ).missionTitle(launch.missionName ?? ''),
                   style: Theme.of(context).textTheme.titleMedium,
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -118,7 +116,9 @@ class RocketLabelWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      S.of(context).rocket(rocket?.rocketName ?? '', rocket?.rocketType ?? ''),
+      AppLocalizations.of(
+        context,
+      ).rocket(rocket?.rocketName ?? '', rocket?.rocketType ?? ''),
       style: Theme.of(context).textTheme.labelLarge,
       overflow: TextOverflow.ellipsis,
     );
@@ -126,10 +126,7 @@ class RocketLabelWidget extends StatelessWidget {
 }
 
 class LaunchDateTimeWidget extends StatelessWidget {
-  const LaunchDateTimeWidget({
-    super.key,
-    required this.launchDays,
-  });
+  const LaunchDateTimeWidget({super.key, required this.launchDays});
 
   final LaunchDays? launchDays;
 
@@ -139,13 +136,17 @@ class LaunchDateTimeWidget extends StatelessWidget {
       case Unknown():
         return const Text('Unknown');
       case Since():
-        return Text(S
-            .of(context)
-            .daysSinceTodayTitle((launchDays as Since).formattedDate ?? ''));
+        return Text(
+          AppLocalizations.of(
+            context,
+          ).daysSinceTodayTitle((launchDays as Since).formattedDate ?? ''),
+        );
       case From():
-        return Text(S
-            .of(context)
-            .daysFromTodayTitle((launchDays as From).formattedDate ?? ''));
+        return Text(
+          AppLocalizations.of(
+            context,
+          ).daysFromTodayTitle((launchDays as From).formattedDate ?? ''),
+        );
     }
     return Container();
   }

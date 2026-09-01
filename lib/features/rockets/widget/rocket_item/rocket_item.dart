@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/index.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 import 'package:flutter_bloc_app_template/utils/string_utils.dart';
 
 class RocketItemWidget extends StatelessWidget {
@@ -17,7 +17,7 @@ class RocketItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final isActive = rocket.active ?? false;
-    final l10n = S.of(context);
+    final l10n = AppLocalizations.of(context);
 
     return Card(
       elevation: 0,

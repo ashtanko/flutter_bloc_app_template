@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/features/launch/widget/recovery_ships_card_widget.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations_en.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../../bloc/utils.dart';
@@ -27,7 +27,7 @@ void main() {
     await tester.pump();
 
     // Check the section title
-    expect(find.text(S.current.recoveryShips), findsOneWidget);
+    expect(find.text(AppLocalizationsEn().recoveryShips), findsOneWidget);
 
     // Check each ship name
     for (final ship in ships) {
@@ -48,7 +48,7 @@ void main() {
     );
     await tester.pump();
 
-    expect(find.text(S.current.recoveryShips), findsOneWidget);
+    expect(find.text(AppLocalizationsEn().recoveryShips), findsOneWidget);
     expect(find.text('GO Ms. Tree'), findsOneWidget);
     expect(find.byIcon(Icons.directions_boat), findsOneWidget);
     expect(find.byIcon(Icons.anchor), findsOneWidget);

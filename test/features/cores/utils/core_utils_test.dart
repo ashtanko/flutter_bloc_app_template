@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/app/localization.dart';
 import 'package:flutter_bloc_app_template/features/cores/utils/core_utils.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:intl/intl.dart';
 
@@ -17,7 +17,7 @@ void main() {
           supportedLocales: appSupportedLocales,
           home: Builder(
             builder: (context) {
-              final loc = S.of(context);
+              final loc = AppLocalizations.of(context);
 
               expect(getStatusColor(context, loc.core_status_active),
                   Colors.green);
@@ -61,7 +61,7 @@ void main() {
               final isoDate = '2021-09-09T12:00:00Z';
               final result = formatFirstLaunch(context, isoDate);
 
-              final expected = '${S.of(context).firstLaunch}:'
+              final expected = '${AppLocalizations.of(context).firstLaunch}:'
                   ' ${DateFormat.yMMMd().format(DateTime.parse(isoDate))}';
 
               expect(result, expected);

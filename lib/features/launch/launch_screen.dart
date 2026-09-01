@@ -13,8 +13,8 @@ import 'package:flutter_bloc_app_template/features/launch/widget/rocket_card_wid
 import 'package:flutter_bloc_app_template/features/launch/widget/stat_card_widget.dart';
 import 'package:flutter_bloc_app_template/features/launch/widget/status_section_widget.dart';
 import 'package:flutter_bloc_app_template/features/launch/widget/timeline_widgets.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/index.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 
 class LaunchScreen extends StatelessWidget {
   const LaunchScreen({super.key});
@@ -328,8 +328,7 @@ class _LaunchScreenContentState extends State<LaunchScreenContent>
                             ),
                             const SizedBox(width: 4),
                             Text(
-                              S
-                                  .of(context)
+                              AppLocalizations.of(context)
                                   .flightNumber(widget.resource.flightNumber),
                               style: TextStyle(
                                 color: colorScheme.onPrimaryContainer,

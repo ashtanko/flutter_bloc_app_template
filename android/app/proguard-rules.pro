@@ -1,13 +1,10 @@
--dontoptimize
+# Flutter's Gradle plugin already contributes the engine/embedding keep rules,
+# so this file only needs app- and plugin-specific entries.
 
-# Proguard rules that are applied to your test apk/code.
--ignorewarnings
-
+# Keep annotations that reflection-based libraries read at runtime.
 -keepattributes *Annotation*
 
--dontnote junit.framework.**
--dontnote junit.runner.**
-
--dontwarn androidx.test.**
--dontwarn org.junit.**
--dontwarn org.hamcrest.**
+# Keep line numbers so Play Console stack traces stay symbolicable
+# (upload the mapping.txt produced under build/app/outputs/mapping/).
+-keepattributes SourceFile,LineNumberTable
+-renamesourcefileattribute SourceFile

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/features/roadster/widget/animated_counter_widget.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 
 class DistanceCardWidget extends StatelessWidget {
   const DistanceCardWidget({
@@ -88,7 +88,7 @@ class DistanceCardWidget extends StatelessWidget {
                               ),
                               const SizedBox(width: 4),
                               Text(
-                                S.of(context).millionKm,
+                                AppLocalizations.of(context).millionKm,
                                 style: Theme.of(context)
                                     .textTheme
                                     .bodyMedium

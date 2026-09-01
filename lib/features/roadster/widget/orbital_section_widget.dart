@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/features/roadster/model/orbital_data.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 
 class OrbitalSectionWidget extends StatelessWidget {
   const OrbitalSectionWidget({super.key, required this.orbitalData});
@@ -20,7 +20,7 @@ class OrbitalSectionWidget extends StatelessWidget {
             ),
             const SizedBox(width: 8),
             Text(
-              S.of(context).orbitalParameters,
+              AppLocalizations.of(context).orbitalParameters,
               style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                     fontWeight: FontWeight.bold,
                   ),

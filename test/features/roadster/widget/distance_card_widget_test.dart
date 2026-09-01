@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/app/localization.dart';
 import 'package:flutter_bloc_app_template/features/roadster/widget/distance_card_widget.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations_en.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -40,7 +40,7 @@ void main() {
     );
 
     expect(find.text('Earth'), findsOneWidget);
-    expect(find.text(S.current.millionKm), findsOneWidget);
+    expect(find.text(AppLocalizationsEn().millionKm), findsOneWidget);
     expect(find.byIcon(Icons.public), findsOneWidget);
   });
 

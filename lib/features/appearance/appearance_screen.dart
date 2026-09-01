@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_app_template/bloc/theme/app_theme.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/index.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 
 class AppearanceScreen extends StatelessWidget {
   const AppearanceScreen({super.key});
@@ -29,10 +29,10 @@ class AppearanceScreen extends StatelessWidget {
             return PreferenceSwitch(
               key: const Key('theme_mode_preference_switch'),
               switchKey: const Key('theme_mode_switch'),
-              title: S.of(context).darkThemeSettingsItemTitle,
+              title: AppLocalizations.of(context).darkThemeSettingsItemTitle,
               description: state.darkTheme.isDarkTheme()
-                  ? S.of(context).darkThemeOnSettingsItemTitle
-                  : S.of(context).darkThemeOffSettingsItemTitle,
+                  ? AppLocalizations.of(context).darkThemeOnSettingsItemTitle
+                  : AppLocalizations.of(context).darkThemeOffSettingsItemTitle,
               isChecked: state.darkTheme.isDarkTheme() ? true : false,
               icon: AnimatedSwitcher(
                 duration: const Duration(milliseconds: 200),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/features/launch/info_item.dart';
 import 'package:flutter_bloc_app_template/features/launch/widget/feature_chip_widget.dart';
 import 'package:flutter_bloc_app_template/features/launch/widget/info_grid_widget.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 import 'package:flutter_bloc_app_template/models/launch/launch_rocket_resource.dart';
 
 class RocketCardWidget extends StatelessWidget {
@@ -14,7 +14,7 @@ class RocketCardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final core = rocket.firstStage?.cores?.firstOrNull;
-    final loc = S.of(context);
+    final loc = AppLocalizations.of(context);
 
     return Card(
       clipBehavior: Clip.antiAlias,

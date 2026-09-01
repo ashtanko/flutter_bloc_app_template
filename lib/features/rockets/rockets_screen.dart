@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_app_template/features/rockets/bloc/rockets_bloc.dart';
 import 'package:flutter_bloc_app_template/features/rockets/widget/rocket_item/rocket_item.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/index.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 
 class RocketsScreen extends StatelessWidget {
   const RocketsScreen({super.key});
@@ -44,7 +44,7 @@ class RocketsBlocContent extends StatelessWidget {
               );
             case RocketsEmptyState _:
               return EmptyContent(
-                content: S.of(context).emptyList,
+                content: AppLocalizations.of(context).emptyList,
               );
           }
 

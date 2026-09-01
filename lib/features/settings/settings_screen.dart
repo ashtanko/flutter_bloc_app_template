@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_app_template/bloc/theme/app_theme.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/index.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 
 import 'settings.dart';
 
@@ -15,96 +15,14 @@ class SettingsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(S.of(context).settingsTitle),
+        title: Text(AppLocalizations.of(context).settingsTitle),
       ),
       body: ListView(
         children: <Widget>[
-          BlocConsumer<ThemeCubit, AppThemeSettings>(
-            builder: (context, state) => SettingCell.icon(
-              icon: AppIcons.settingsTheme,
-              title: S.of(context).themeTitle,
-              onTap: () async => showBottomSheetDialog(
-                context: context,
-                padding: EdgeInsets.zero,
-                children: [
-                  ThemeDialogCell<AppThemeSettings>(
-                    title: S.of(context).darkThemeTitle,
-                    groupValue: state,
-                    value: AppThemeSettings(
-                      darkTheme: DarkThemePreference(),
-                      appTheme: AppTheme.dark,
-                    ),
-                    onChanged: (value) => updateTheme(context, value),
-                  ),
-                  ThemeDialogCell<AppThemeSettings>(
-                    title: S.of(context).lightThemeTitle,
-                    groupValue: state,
-                    value: AppThemeSettings(
-                      darkTheme: DarkThemePreference(),
-                      appTheme: AppTheme.light,
-                    ),
-                    onChanged: (value) => updateTheme(context, value),
-                  ),
-                  ThemeDialogCell<AppThemeSettings>(
-                    title: S.of(context).lightGoldThemeTitle,
-                    groupValue: state,
-                    value: AppThemeSettings(
-                      darkTheme: DarkThemePreference(),
-                      appTheme: AppTheme.lightGold,
-                    ),
-                    onChanged: (value) => updateTheme(context, value),
-                  ),
-                  ThemeDialogCell<AppThemeSettings>(
-                    title: S.of(context).lightMintThemeTitle,
-                    groupValue: state,
-                    value: AppThemeSettings(
-                      darkTheme: DarkThemePreference(),
-                      appTheme: AppTheme.lightMint,
-                    ),
-                    onChanged: (value) => updateTheme(context, value),
-                  ),
-                  ThemeDialogCell<AppThemeSettings>(
-                    title: S.of(context).darkGoldThemeTitle,
-                    groupValue: state,
-                    value: AppThemeSettings(
-                      darkTheme: DarkThemePreference(),
-                      appTheme: AppTheme.darkGold,
-                    ),
-                    onChanged: (value) => updateTheme(context, value),
-                  ),
-                  ThemeDialogCell<AppThemeSettings>(
-                    title: S.of(context).darkMintThemeTitle,
-                    groupValue: state,
-                    value: AppThemeSettings(
-                      darkTheme: DarkThemePreference(),
-                      appTheme: AppTheme.darkMint,
-                    ),
-                    onChanged: (value) => updateTheme(context, value),
-                  ),
-                  ThemeDialogCell<AppThemeSettings>(
-                    title: S.of(context).systemThemeTitle,
-                    groupValue: state,
-                    value: AppThemeSettings(
-                      darkTheme: DarkThemePreference(),
-                      appTheme: AppTheme.system,
-                    ),
-                    onChanged: (value) => updateTheme(context, value),
-                  ),
-                  ThemeDialogCell<AppThemeSettings>(
-                    title: S.of(context).experimentalThemeTitle,
-                    groupValue: state,
-                    value: AppThemeSettings(
-                      darkTheme: DarkThemePreference(),
-                      appTheme: AppTheme.experimental,
-                    ),
-                    onChanged: (value) => updateTheme(context, value),
-                  ),
-                ],
-              ),
-            ),
-            listener: (context, state) {
-              // Navigator.of(context).pop();
-            },
+          SettingCell.icon(
+            icon: AppIcons.settingsTheme,
+            title: AppLocalizations.of(context).themeTitle,
+            onTap: () async => _showThemeSheet(context),
           ),
           SettingItem(
             key: const Key('appearance'),
@@ -117,8 +35,8 @@ class SettingsScreen extends StatelessWidget {
           ),
           SettingItem(
             key: const Key('roadster'),
-            title: S.of(context).roadsterTitle,
-            description: S.of(context).roadsterDescription,
+            title: AppLocalizations.of(context).roadsterTitle,
+            description: AppLocalizations.of(context).roadsterDescription,
             icon: Icons.rocket_launch,
             onClick: () {
               NavigationService.of(context).navigateTo(Routes.roadster);
@@ -135,6 +53,74 @@ class SettingsScreen extends StatelessWidget {
       ),
     );
   }
+
+  /// Opens the palette sheet.
+  ///
+  /// The sheet is its own route, so it gets an explicit [BlocProvider.value]
+  /// rather than inheriting one: providers are route-scoped, and this screen
+  /// should not depend on the cubit happening to sit above the navigator.
+  /// The [BlocBuilder] is what keeps the tick following the selection instead
+  /// of going stale until the sheet is closed and reopened.
+  Future<void> _showThemeSheet(BuildContext context) {
+    final themeCubit = context.read<ThemeCubit>();
+
+    return showBottomSheetDialog(
+      context: context,
+      padding: EdgeInsets.zero,
+      children: [
+        BlocProvider<ThemeCubit>.value(
+          value: themeCubit,
+          child: BlocBuilder<ThemeCubit, AppThemeSettings>(
+            builder: (context, state) => Column(
+              mainAxisSize: MainAxisSize.min,
+              children: _themeCells(context, state),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  /// The palette rows of the theme sheet.
+  ///
+  /// Each cell compares on [AppTheme] alone — comparing whole
+  /// [AppThemeSettings] left every row unticked once the Appearance screen
+  /// had changed the theme-mode preference.
+  List<Widget> _themeCells(BuildContext context, AppThemeSettings state) {
+    final l10n = AppLocalizations.of(context);
+
+    return [
+      _themeCell(context, state, l10n.darkThemeTitle, AppTheme.dark),
+      _themeCell(context, state, l10n.lightThemeTitle, AppTheme.light),
+      _themeCell(context, state, l10n.lightGoldThemeTitle, AppTheme.lightGold),
+      _themeCell(context, state, l10n.lightMintThemeTitle, AppTheme.lightMint),
+      _themeCell(context, state, l10n.darkGoldThemeTitle, AppTheme.darkGold),
+      _themeCell(context, state, l10n.darkMintThemeTitle, AppTheme.darkMint),
+      _themeCell(context, state, l10n.systemThemeTitle, AppTheme.system),
+      _themeCell(
+        context,
+        state,
+        l10n.experimentalThemeTitle,
+        AppTheme.experimental,
+      ),
+    ];
+  }
+
+  Widget _themeCell(
+    BuildContext context,
+    AppThemeSettings state,
+    String title,
+    AppTheme theme,
+  ) =>
+      ThemeDialogCell<AppTheme>(
+        title: title,
+        groupValue: state.appTheme,
+        value: theme,
+        // copyWith keeps the theme-mode preference that the Appearance screen
+        // owns; rebuilding AppThemeSettings from scratch silently reset it.
+        onChanged: (value) =>
+            updateTheme(context, state.copyWith(appTheme: value)),
+      );
 
   void updateTheme(BuildContext context, AppThemeSettings value) =>
       context.read<ThemeCubit>().updateTheme(value);

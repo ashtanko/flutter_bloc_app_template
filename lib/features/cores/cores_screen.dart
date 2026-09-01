@@ -7,7 +7,7 @@ import 'package:flutter_bloc_app_template/features/cores/widget/cores_empty_widg
 import 'package:flutter_bloc_app_template/features/cores/widget/cores_error_widget.dart';
 import 'package:flutter_bloc_app_template/features/cores/widget/cores_not_found_widget.dart';
 import 'package:flutter_bloc_app_template/features/cores/widget/cores_search_filter_widget.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 import 'package:flutter_bloc_app_template/models/core/core_resource.dart';
 
 class CoresScreen extends StatelessWidget {
@@ -19,7 +19,7 @@ class CoresScreen extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           SliverAppBar.large(
-            title: Text(S.of(context).spaceXCoresTitle),
+            title: Text(AppLocalizations.of(context).spaceXCoresTitle),
             actions: [
               IconButton(
                 icon: const Icon(Icons.info_outline),

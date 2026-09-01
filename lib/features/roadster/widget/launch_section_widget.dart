@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 
 class LaunchSectionWidget extends StatelessWidget {
   const LaunchSectionWidget({
@@ -13,7 +13,7 @@ class LaunchSectionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = S.of(context);
+    final l10n = AppLocalizations.of(context);
 
     final scheme = Theme.of(context).colorScheme;
 

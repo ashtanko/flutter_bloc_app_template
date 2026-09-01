@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/features/cores/model/core_filter_status.dart';
 import 'package:flutter_bloc_app_template/features/cores/utils/cores_ext.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 
 class CoresSearchFilterWidget extends StatefulWidget {
   const CoresSearchFilterWidget({
@@ -34,7 +34,7 @@ class _CoresSearchFilterWidgetState extends State<CoresSearchFilterWidget> {
           children: [
             SearchBar(
               controller: _searchController,
-              hintText: S.of(context).core_filter_search_hint,
+              hintText: AppLocalizations.of(context).core_filter_search_hint,
               leading: const Icon(Icons.search),
               padding: const WidgetStatePropertyAll<EdgeInsets>(
                 EdgeInsets.symmetric(horizontal: 16.0),

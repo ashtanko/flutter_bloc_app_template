@@ -19,7 +19,7 @@ jobs:
       - name: Set Up Java
         uses: actions/setup-java@v5.7.0
         with:
-          distribution: 'oracle'
+          distribution: 'temurin'
           java-version: '21'
 
         #3 Setup Flutter
@@ -31,6 +31,13 @@ jobs:
         #4 Install Dependencies
       - name: Install Dependencies
         run: flutter pub get
+
+        #4b Gate the release on the same checks CI runs
+      - name: Analyze
+        run: flutter analyze
+
+      - name: Test
+        run: flutter test
 
         #5 Setup Keystore
       - name: Decode Keystore
@@ -46,11 +53,11 @@ jobs:
 
       #6 Building APK
       - name: Build APK
-        run: flutter build apk --flavor dev --release -t lib/main_prod.dart
+        run: flutter build apk --flavor prod --release -t lib/main_prod.dart
 
         #7 Building App Bundle (aab)
       - name: Build appBundle
-        run: flutter build appbundle --flavor dev --release -t lib/main_prod.dart
+        run: flutter build appbundle --flavor prod --release -t lib/main_prod.dart
 
         #9 Upload Artifacts
       - name: Upload Artifacts
@@ -58,8 +65,9 @@ jobs:
         with:
           name: Releases
           path: |
-            build/app/outputs/flutter-apk/app-dev-release.apk
-            build/app/outputs/bundle/devRelease/app-dev-release.aab
+            build/app/outputs/flutter-apk/app-prod-release.apk
+            build/app/outputs/bundle/prodRelease/app-prod-release.aab
+            build/app/outputs/mapping/prodRelease/mapping.txt
 
         #10 Extract Version
       - name: Extract version from pubspec.yaml
@@ -90,6 +98,6 @@ jobs:
       - name: Create Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "build/app/outputs/flutter-apk/app-dev-release.apk,build/app/outputs/bundle/devRelease/app-dev-release.aab"
+          artifacts: "build/app/outputs/flutter-apk/app-prod-release.apk,build/app/outputs/bundle/prodRelease/app-prod-release.aab"
           tag: v${{ env.VERSION }}
           token: ${{ secrets.TOKEN }}

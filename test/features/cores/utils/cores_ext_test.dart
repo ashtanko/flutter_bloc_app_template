@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/app/localization.dart';
 import 'package:flutter_bloc_app_template/features/cores/model/core_filter_status.dart';
 import 'package:flutter_bloc_app_template/features/cores/utils/cores_ext.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -17,15 +17,15 @@ void main() {
           home: Builder(
             builder: (context) {
               expect(CoreFilterStatus.all.title(context),
-                  S.of(context).core_filter_status_all);
+                  AppLocalizations.of(context).core_filter_status_all);
               expect(CoreFilterStatus.active.title(context),
-                  S.of(context).core_filter_status_active);
+                  AppLocalizations.of(context).core_filter_status_active);
               expect(CoreFilterStatus.lost.title(context),
-                  S.of(context).core_filter_status_lost);
+                  AppLocalizations.of(context).core_filter_status_lost);
               expect(CoreFilterStatus.inactive.title(context),
-                  S.of(context).core_filter_status_inactive);
+                  AppLocalizations.of(context).core_filter_status_inactive);
               expect(CoreFilterStatus.unknown.title(context),
-                  S.of(context).core_filter_status_unknown);
+                  AppLocalizations.of(context).core_filter_status_unknown);
 
               return Container();
             },

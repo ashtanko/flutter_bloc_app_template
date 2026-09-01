@@ -10,14 +10,30 @@ class Environment<T> implements Listenable {
       : _config = ValueNotifier<T>(config),
         _listeners = [];
 
-  /// Creates a new instance of [Environment].
-  factory Environment.instance() => _instance as Environment<T>;
+  /// Returns the singleton instance created by [init].
+  ///
+  /// Throws a [StateError] when [init] has not run yet, which is easier to
+  /// diagnose than the null cast error this used to produce.
+  factory Environment.instance() {
+    final instance = _instance;
+    if (instance == null) {
+      throw StateError(
+        'Environment.init() must be called before Environment.instance().',
+      );
+    }
+
+    return instance as Environment<T>;
+  }
 
   /// The singleton instance of the [Environment].
   static Environment<dynamic>? _instance;
 
   final BuildType _currentBuildType;
   final List<VoidCallback> _listeners;
+  final ValueNotifier<T> _config;
+
+  /// Whether [init] has already run.
+  static bool get isInitialized => _instance != null;
 
   T get config => _config.value;
 
@@ -34,8 +50,6 @@ class Environment<T> implements Listenable {
 
   /// Returns the current build type.
   BuildType get buildType => _currentBuildType;
-
-  ValueNotifier<T> _config;
 
   @override
   void addListener(VoidCallback listener) {
@@ -64,6 +78,10 @@ class Environment<T> implements Listenable {
     required T config,
   }) {
     _instance ??= Environment<T>._(buildType, config);
-    Bloc.observer = TalkerBlocObserver();
+    // Bloc transitions carry full state objects; only log them off release
+    // builds so production neither pays the cost nor leaks the contents.
+    if (!kReleaseMode) {
+      Bloc.observer = TalkerBlocObserver();
+    }
   }
 }

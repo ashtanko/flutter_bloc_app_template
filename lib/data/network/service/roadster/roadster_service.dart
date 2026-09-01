@@ -7,7 +7,7 @@ part 'roadster_service.g.dart';
 
 @RestApi(baseUrl: baseUrlVersion4)
 abstract class RoadsterService {
-  factory RoadsterService(Dio dio) = _RoadsterService;
+  factory RoadsterService(Dio dio, {String? baseUrl}) = _RoadsterService;
 
   @GET('roadster')
   Future<NetworkRoadsterModel> fetchRoadster();

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 
 class MissionOverviewCardWidget extends StatelessWidget {
   const MissionOverviewCardWidget({super.key, this.details});
@@ -9,7 +9,7 @@ class MissionOverviewCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final loc = S.of(context);
+    final loc = AppLocalizations.of(context);
 
     return Card(
       clipBehavior: Clip.antiAlias,

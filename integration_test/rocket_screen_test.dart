@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/app/localization.dart';
 import 'package:flutter_bloc_app_template/features/rocket/bloc/rocket_bloc.dart';
 import 'package:flutter_bloc_app_template/features/rocket/rocket_screen.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 import 'package:mocktail/mocktail.dart';
@@ -55,8 +55,8 @@ void main() {
       testWidgets('rocket screen $locale test', (tester) async {
         await pumpRocketScreen(tester, locale: locale, contextCallback: (ctx) {
           expectRocketScreenTexts(
-            S.of(ctx).specifications,
-            additionalTexts: [S.of(ctx).payloadCapacity],
+            AppLocalizations.of(ctx).specifications,
+            additionalTexts: [AppLocalizations.of(ctx).payloadCapacity],
           );
         });
       });

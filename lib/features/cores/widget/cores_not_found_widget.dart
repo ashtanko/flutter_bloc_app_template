@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 
 class CoresNotFoundWidget extends StatelessWidget {
   const CoresNotFoundWidget({super.key, required this.searchQuery});
@@ -20,7 +20,7 @@ class CoresNotFoundWidget extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             Text(
-              S.of(context).noCoresFound(searchQuery),
+              AppLocalizations.of(context).noCoresFound(searchQuery),
               style: const TextStyle(fontSize: 18),
             ),
           ],

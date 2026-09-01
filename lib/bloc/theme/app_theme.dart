@@ -77,7 +77,7 @@ class AppThemeSettings extends Equatable {
 extension AppThemeExtention on AppTheme {
   bool isDarkTheme() {
     return this == AppTheme.dark ||
-        this != AppTheme.darkGold ||
-        this != AppTheme.darkMint;
+        this == AppTheme.darkGold ||
+        this == AppTheme.darkMint;
   }
 }

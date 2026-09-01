@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 import 'package:flutter_bloc_app_template/models/payload/payload_resource.dart';
 
 class QuickStatsSectionWidget extends StatelessWidget {
@@ -14,7 +14,7 @@ class QuickStatsSectionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final loc = S.of(context);
+    final loc = AppLocalizations.of(context);
 
     return Row(
       children: [

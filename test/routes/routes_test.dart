@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/index.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -17,11 +17,12 @@ extension PumpApp on WidgetTester {
       builder(
         MaterialApp(
           localizationsDelegates: [
-            const AppLocalizationDelegate(),
+            AppLocalizations.delegate,
             GlobalMaterialLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate
           ],
-          onGenerateTitle: (BuildContext context) => S.of(context).appTitle,
+          onGenerateTitle: (BuildContext context) =>
+              AppLocalizations.of(context).appTitle,
           locale: const Locale('en'),
           navigatorKey: appNavigatorKey,
           navigatorObservers: [navigatorObserver],

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/features/launch/widget/payload_card_widget.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations_en.dart';
 import 'package:flutter_bloc_app_template/models/payload/payload_resource.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -30,7 +30,7 @@ void main() {
     );
 
     await tester.pump();
-    expect(find.text(S.current.payloadTitle), findsOneWidget);
+    expect(find.text(AppLocalizationsEn().payloadTitle), findsOneWidget);
     expect(find.text('${payload.payloadId} • ${payload.payloadType}'),
         findsOneWidget);
   });
@@ -45,7 +45,7 @@ void main() {
 
     await tester.pump();
     // Expand the tile
-    await tester.tap(find.text(S.current.payloadTitle));
+    await tester.tap(find.text(AppLocalizationsEn().payloadTitle));
     await tester.pumpAndSettle();
 
     expect(find.text(payload.payloadId!), findsOneWidget);
@@ -54,7 +54,7 @@ void main() {
     expect(find.text(payload.orbit!), findsOneWidget);
     expect(find.text(payload.manufacturer!), findsOneWidget);
     expect(find.text(payload.nationality!), findsOneWidget);
-    expect(find.text(S.current.payloadTitle), findsOneWidget);
+    expect(find.text(AppLocalizationsEn().payloadTitle), findsOneWidget);
   });
 
   testWidgets('renders customers correctly', (tester) async {
@@ -68,7 +68,7 @@ void main() {
     await tester.pump();
 
     // Expand the tile
-    await tester.tap(find.text(S.current.payloadTitle));
+    await tester.tap(find.text(AppLocalizationsEn().payloadTitle));
     await tester.pumpAndSettle();
 
     for (final customer in payload.customers!) {
@@ -89,7 +89,7 @@ void main() {
 
     await tester.pump();
 
-    await tester.tap(find.text(S.current.payloadTitle));
+    await tester.tap(find.text(AppLocalizationsEn().payloadTitle));
     await tester.pumpAndSettle();
 
     expect(find.text(emptyPayload.payloadId!), findsOneWidget);

@@ -40,17 +40,6 @@ android {
         versionName = flutter.versionName
     }
 
-//    buildTypes {
-//        release {
-//            signingConfig = signingConfigs.debug
-//            applicationVariants.all { variant ->
-//                variant.outputs.all {
-//                    outputFileName = "${variant.buildType.name}-${variant.versionName}.apk"
-//                }
-//            }
-//        }
-//    }
-
     flavorDimensions += "version"
     productFlavors {
         create("dev") {
@@ -69,14 +58,16 @@ android {
     }
 
     signingConfigs {
-        register("release") {
-            enableV1Signing = true
-            enableV2Signing = true
+        if (keystorePropertiesFile.exists()) {
+            register("release") {
+                enableV1Signing = true
+                enableV2Signing = true
 
-            storeFile = keystoreProperties["storeFile"]?.let { file(it) }
-            storePassword = keystoreProperties["storePassword"] as String?
-            keyAlias = keystoreProperties["keyAlias"] as String?
-            keyPassword = keystoreProperties["keyPassword"] as String?
+                storeFile = file(keystoreProperties.getProperty("storeFile"))
+                storePassword = keystoreProperties.getProperty("storePassword")
+                keyAlias = keystoreProperties.getProperty("keyAlias")
+                keyPassword = keystoreProperties.getProperty("keyPassword")
+            }
         }
     }
 
@@ -88,7 +79,11 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            signingConfig = signingConfigs.getByName("release")
+            // Null when android/key.properties is absent, which produces an
+            // unsigned artifact (rejected by Play) instead of silently
+            // shipping one signed with the debug key. CI relies on this to
+            // build the prod flavor without access to the release keystore.
+            signingConfig = signingConfigs.findByName("release")
         }
     }
 }

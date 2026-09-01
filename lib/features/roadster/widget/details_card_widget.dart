@@ -2,7 +2,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/features/roadster/model/mission.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 
 class DetailsCardWidget extends StatefulWidget {
   const DetailsCardWidget({
@@ -80,7 +80,7 @@ class _DetailsCardWidgetState extends State<DetailsCardWidget>
                 ),
                 const SizedBox(width: 12),
                 Text(
-                  S.of(context).missionDetails,
+                  AppLocalizations.of(context).missionDetails,
                   style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                         fontWeight: FontWeight.bold,
                       ),

@@ -8,7 +8,7 @@ part 'launch_service.g.dart';
 
 @RestApi(baseUrl: baseUrl)
 abstract class LaunchService {
-  factory LaunchService(Dio dio) = _LaunchService;
+  factory LaunchService(Dio dio, {String? baseUrl}) = _LaunchService;
 
   @GET('launches')
   Future<List<NetworkLaunchModel>> fetchLaunches({

@@ -46,7 +46,11 @@ app.*.map.json
 /android/app/release
 
 # Miscellaneous
+# NOTE: pubspec.lock and ios/Podfile.lock are deliberately tracked - an app
+# (unlike a package) needs them committed for reproducible builds.
 *.lock
+!pubspec.lock
+!ios/Podfile.lock
 
 # Visual Studio Code related
 .classpath

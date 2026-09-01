@@ -28,7 +28,7 @@ void main() {
     themeCubit = MockThemeCubit();
   });
 
-  void assertThemeDialogCell(
+  Future<void> assertThemeDialogCell(
     WidgetTester tester,
     String title,
     AppThemeSettings themeState,
@@ -45,18 +45,18 @@ void main() {
     expect(
       find.byWidgetPredicate(
         (widget) =>
-            widget is ThemeDialogCell<AppThemeSettings> &&
+            widget is ThemeDialogCell<AppTheme> &&
             widget.title == title &&
-            widget.value == themeState,
+            widget.value == themeState.appTheme,
       ),
       findsOneWidget,
     );
 
-    expect(find.widgetWithIcon(ThemeDialogCell<AppThemeSettings>, Icons.check),
+    expect(find.widgetWithIcon(ThemeDialogCell<AppTheme>, Icons.check),
         findsOneWidget);
   }
 
-  void verifyThemeChange({
+  Future<void> verifyThemeChange({
     required WidgetTester tester,
     required String widgetTitle,
     required AppThemeSettings prevThemeState,
@@ -71,7 +71,7 @@ void main() {
     await tester.tap(find.byIcon(Icons.palette));
     await tester.pumpAndSettle();
     await tester.tap(
-      find.widgetWithText(ThemeDialogCell<AppThemeSettings>, widgetTitle),
+      find.widgetWithText(ThemeDialogCell<AppTheme>, widgetTitle),
       warnIfMissed: true,
     );
 
@@ -153,12 +153,12 @@ void main() {
       await tester.tap(find.byIcon(Icons.palette));
       await tester.pumpAndSettle();
 
-      expect(find.byType(ThemeDialogCell<AppThemeSettings>), findsNWidgets(8));
+      expect(find.byType(ThemeDialogCell<AppTheme>), findsNWidgets(8));
     });
 
     testWidgets('render bottom sheet dialog item for system theme',
         (tester) async {
-      assertThemeDialogCell(
+      await assertThemeDialogCell(
         tester,
         'System Theme',
         AppThemeSettings(
@@ -171,7 +171,7 @@ void main() {
 
     testWidgets('render bottom sheet dialog item for light theme',
         (tester) async {
-      assertThemeDialogCell(
+      await assertThemeDialogCell(
         tester,
         'Light Theme',
         AppThemeSettings(
@@ -184,7 +184,7 @@ void main() {
 
     testWidgets('render bottom sheet dialog item for dark theme',
         (tester) async {
-      assertThemeDialogCell(
+      await assertThemeDialogCell(
         tester,
         'Dark Theme',
         AppThemeSettings(
@@ -197,7 +197,7 @@ void main() {
 
     testWidgets('render bottom sheet dialog item for yellow theme',
         (tester) async {
-      assertThemeDialogCell(
+      await assertThemeDialogCell(
         tester,
         'Light Gold',
         AppThemeSettings(
@@ -209,7 +209,7 @@ void main() {
     });
 
     testWidgets('change to light theme theme', (tester) async {
-      verifyThemeChange(
+      await verifyThemeChange(
         tester: tester,
         widgetTitle: 'Light Theme',
         prevThemeState: AppThemeSettings(
@@ -225,7 +225,7 @@ void main() {
     });
 
     testWidgets('change to dark theme theme', (tester) async {
-      verifyThemeChange(
+      await verifyThemeChange(
         tester: tester,
         widgetTitle: 'Dark Theme',
         prevThemeState: AppThemeSettings(
@@ -241,7 +241,7 @@ void main() {
     });
 
     testWidgets('change to Light Gold theme theme', (tester) async {
-      verifyThemeChange(
+      await verifyThemeChange(
         tester: tester,
         widgetTitle: 'Light Gold',
         prevThemeState: AppThemeSettings(
@@ -257,7 +257,7 @@ void main() {
     });
 
     testWidgets('change to Light Mint theme theme', (tester) async {
-      verifyThemeChange(
+      await verifyThemeChange(
         tester: tester,
         widgetTitle: 'Light Mint',
         prevThemeState: AppThemeSettings(

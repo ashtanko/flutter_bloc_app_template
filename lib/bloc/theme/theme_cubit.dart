@@ -18,6 +18,23 @@ Map<AppTheme, ThemeData> getThemeData(MaterialTheme theme) {
   return themeData;
 }
 
+/// Dark counterpart of [getThemeData]: the same palettes, resolved to their
+/// dark variant so [MaterialApp.darkTheme] tracks the selected [AppTheme].
+Map<AppTheme, ThemeData> getDarkThemeData(MaterialTheme theme) {
+  final themeData = <AppTheme, ThemeData>{
+    AppTheme.system: theme.yellowDark(),
+    AppTheme.light: theme.yellowDark(),
+    AppTheme.lightGold: theme.orangeDark(),
+    AppTheme.lightMint: theme.yellowDarkMediumContrast(),
+    AppTheme.dark: theme.yellowDark(),
+    AppTheme.darkGold: theme.orangeDark(),
+    AppTheme.darkMint: theme.yellowDarkMediumContrast(),
+    AppTheme.experimental: theme.yellowDarkMediumContrast(),
+  };
+
+  return themeData;
+}
+
 /// Saves and loads information regarding the theme setting.
 class ThemeCubit extends Cubit<AppThemeSettings> {
   ThemeCubit(this.themeRepository) : super(defaultTheme);
@@ -80,4 +97,8 @@ class ThemeCubit extends Cubit<AppThemeSettings> {
         return themeData[AppTheme.experimental] ?? theme.yellowLight();
     }
   }
+
+  /// Dark theme matching the selected [AppTheme].
+  ThemeData getDefaultDarkTheme(MaterialTheme theme) =>
+      getDarkThemeData(theme)[state.appTheme] ?? theme.yellowDark();
 }

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 
 Color getStatusColor(BuildContext context, String? status) {
   if (status == null) return Colors.blue;
 
-  final loc = S.of(context);
+  final loc = AppLocalizations.of(context);
 
   final statusMap = <String, Color>{
     loc.core_status_active.toLowerCase(): Colors.green,
@@ -20,7 +20,7 @@ Color getStatusColor(BuildContext context, String? status) {
 String formatFirstLaunch(BuildContext context, String? isoDate) {
   if (isoDate == null || isoDate.isEmpty) return '';
   final date = DateTime.parse(isoDate);
-  final loc = S.of(context);
+  final loc = AppLocalizations.of(context);
   final formatted = DateFormat.yMMMd().format(date);
   return '${loc.firstLaunch}: $formatted';
 }

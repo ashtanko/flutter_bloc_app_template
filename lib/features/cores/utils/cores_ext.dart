@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/features/cores/model/core_filter_status.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 
 extension CoreFilterStatusX on CoreFilterStatus {
   String title(BuildContext context) {
     switch (this) {
       case CoreFilterStatus.all:
-        return S.of(context).core_filter_status_all;
+        return AppLocalizations.of(context).core_filter_status_all;
       case CoreFilterStatus.active:
-        return S.of(context).core_filter_status_active;
+        return AppLocalizations.of(context).core_filter_status_active;
       case CoreFilterStatus.lost:
-        return S.of(context).core_filter_status_lost;
+        return AppLocalizations.of(context).core_filter_status_lost;
       case CoreFilterStatus.inactive:
-        return S.of(context).core_filter_status_inactive;
+        return AppLocalizations.of(context).core_filter_status_inactive;
       case CoreFilterStatus.unknown:
-        return S.of(context).core_filter_status_unknown;
+        return AppLocalizations.of(context).core_filter_status_unknown;
     }
   }
 }

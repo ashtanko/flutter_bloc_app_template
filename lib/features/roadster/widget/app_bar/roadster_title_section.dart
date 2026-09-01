@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/features/roadster/utils/roadster_utils.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 import 'package:flutter_bloc_app_template/models/roadster/roadster_resource.dart';
 
 class RoadsterTitleSection extends StatelessWidget {
@@ -36,7 +36,7 @@ class RoadsterTitleSection extends StatelessWidget {
                 ),
                 const SizedBox(width: 8),
                 Text(
-                  S.of(context).launched(
+                  AppLocalizations.of(context).launched(
                         roadster.launchDateUtc?.toFormattedDate() ?? '',
                       ),
                   style: TextStyle(

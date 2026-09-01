@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:flutter_bloc_app_template/l10n/app_localizations.dart';
 
 class CoresEmptyWidget extends StatelessWidget {
   const CoresEmptyWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final loc = S.of(context);
+    final loc = AppLocalizations.of(context);
     return SliverFillRemaining(
       child: Center(
         child: Column(
