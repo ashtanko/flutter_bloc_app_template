@@ -32,7 +32,7 @@ dependencies:
   path_provider: ^2.1.5
   file: ^7.0.0
   get_it: 9.2.1
-  injectable: ^2.5.0
+  injectable: ^3.0.0
   nullx: ^0.1.17
   retrofit: ^4.4.2
   retrofit_generator: ^10.0.1
