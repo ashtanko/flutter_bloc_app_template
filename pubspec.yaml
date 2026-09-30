@@ -15,7 +15,7 @@ dependencies:
   flutter_bloc: ^9.0.0
   bloc: ^9.0.0
   logger: ^2.5.0
-  equatable: ^2.0.7
+  equatable: ^3.0.0
   http: ^1.4.0
   json_annotation: ^4.9.0
   shared_preferences: ^2.5.2
