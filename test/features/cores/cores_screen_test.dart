@@ -1,5 +1,4 @@
 import 'package:bloc_test/bloc_test.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/features/cores/bloc/cores_bloc.dart';
 import 'package:flutter_bloc_app_template/features/cores/cores_screen.dart';
 import 'package:flutter_bloc_app_template/features/cores/widget/core_loading_content.dart';
@@ -8,6 +7,7 @@ import 'package:flutter_bloc_app_template/features/cores/widget/cores_error_widg
 import 'package:flutter_bloc_app_template/features/cores/widget/cores_not_found_widget.dart';
 import 'package:flutter_bloc_app_template/models/core/core_resource.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:mocktail/mocktail.dart';
 
 import '../../bloc/utils.dart';

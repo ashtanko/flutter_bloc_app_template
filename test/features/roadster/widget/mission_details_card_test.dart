@@ -1,11 +1,11 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/app/localization.dart';
 import 'package:flutter_bloc_app_template/features/roadster/widget/details_card_widget.dart';
 import 'package:flutter_bloc_app_template/features/roadster/widget/mission_details_card.dart';
 import 'package:flutter_bloc_app_template/models/roadster/roadster_resource.dart';
 import 'package:flutter_test/flutter_test.dart' hide TestVSync;
+import 'package:material_ui/material_ui.dart';
 
 import '../helpers/test_helpers.dart';
 

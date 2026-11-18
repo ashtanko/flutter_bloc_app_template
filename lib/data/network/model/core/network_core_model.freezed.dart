@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'network_core_model.dart';
@@ -9,6 +9,7 @@ part of 'network_core_model.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $NetworkCoreModelCopyWith<NetworkCoreModel> get copyWith => _$NetworkCoreModelCo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkCoreModel&&(identical(other.coreSerial, coreSerial) || other.coreSerial == coreSerial)&&(identical(other.block, block) || other.block == block)&&(identical(other.status, status) || other.status == status)&&(identical(other.originalLaunch, originalLaunch) || other.originalLaunch == originalLaunch)&&(identical(other.originalLaunchUnix, originalLaunchUnix) || other.originalLaunchUnix == originalLaunchUnix)&&const DeepCollectionEquality().equals(other.missions, missions)&&(identical(other.reuseCount, reuseCount) || other.reuseCount == reuseCount)&&(identical(other.rtlsAttempts, rtlsAttempts) || other.rtlsAttempts == rtlsAttempts)&&(identical(other.rtlsLandings, rtlsLandings) || other.rtlsLandings == rtlsLandings)&&(identical(other.asdsAttempts, asdsAttempts) || other.asdsAttempts == asdsAttempts)&&(identical(other.asdsLandings, asdsLandings) || other.asdsLandings == asdsLandings)&&(identical(other.waterLanding, waterLanding) || other.waterLanding == waterLanding)&&(identical(other.details, details) || other.details == details));
+  final _this = this as NetworkCoreModel;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkCoreModel&&(identical(other.coreSerial, _this.coreSerial) || other.coreSerial == _this.coreSerial)&&(identical(other.block, _this.block) || other.block == _this.block)&&(identical(other.status, _this.status) || other.status == _this.status)&&(identical(other.originalLaunch, _this.originalLaunch) || other.originalLaunch == _this.originalLaunch)&&(identical(other.originalLaunchUnix, _this.originalLaunchUnix) || other.originalLaunchUnix == _this.originalLaunchUnix)&&const DeepCollectionEquality().equals(other.missions, _this.missions)&&(identical(other.reuseCount, _this.reuseCount) || other.reuseCount == _this.reuseCount)&&(identical(other.rtlsAttempts, _this.rtlsAttempts) || other.rtlsAttempts == _this.rtlsAttempts)&&(identical(other.rtlsLandings, _this.rtlsLandings) || other.rtlsLandings == _this.rtlsLandings)&&(identical(other.asdsAttempts, _this.asdsAttempts) || other.asdsAttempts == _this.asdsAttempts)&&(identical(other.asdsLandings, _this.asdsLandings) || other.asdsLandings == _this.asdsLandings)&&(identical(other.waterLanding, _this.waterLanding) || other.waterLanding == _this.waterLanding)&&(identical(other.details, _this.details) || other.details == _this.details));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,coreSerial,block,status,originalLaunch,originalLaunchUnix,const DeepCollectionEquality().hash(missions),reuseCount,rtlsAttempts,rtlsLandings,asdsAttempts,asdsLandings,waterLanding,details);
+int get hashCode {
+  final _this = this as NetworkCoreModel;
+  return Object.hash(runtimeType,_this.coreSerial,_this.block,_this.status,_this.originalLaunch,_this.originalLaunchUnix,const DeepCollectionEquality().hash(_this.missions),_this.reuseCount,_this.rtlsAttempts,_this.rtlsLandings,_this.asdsAttempts,_this.asdsLandings,_this.waterLanding,_this.details);
+}
 
 @override
 String toString() {
-  return 'NetworkCoreModel(coreSerial: $coreSerial, block: $block, status: $status, originalLaunch: $originalLaunch, originalLaunchUnix: $originalLaunchUnix, missions: $missions, reuseCount: $reuseCount, rtlsAttempts: $rtlsAttempts, rtlsLandings: $rtlsLandings, asdsAttempts: $asdsAttempts, asdsLandings: $asdsLandings, waterLanding: $waterLanding, details: $details)';
+  final _this = this as NetworkCoreModel;
+  return 'NetworkCoreModel(coreSerial: ${_this.coreSerial}, block: ${_this.block}, status: ${_this.status}, originalLaunch: ${_this.originalLaunch}, originalLaunchUnix: ${_this.originalLaunchUnix}, missions: ${_this.missions}, reuseCount: ${_this.reuseCount}, rtlsAttempts: ${_this.rtlsAttempts}, rtlsLandings: ${_this.rtlsLandings}, asdsAttempts: ${_this.asdsAttempts}, asdsLandings: ${_this.asdsLandings}, waterLanding: ${_this.waterLanding}, details: ${_this.details})';
 }
 
 
@@ -66,7 +72,7 @@ class _$NetworkCoreModelCopyWithImpl<$Res>
 /// Create a copy of NetworkCoreModel
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? coreSerial = freezed,Object? block = freezed,Object? status = freezed,Object? originalLaunch = freezed,Object? originalLaunchUnix = freezed,Object? missions = freezed,Object? reuseCount = freezed,Object? rtlsAttempts = freezed,Object? rtlsLandings = freezed,Object? asdsAttempts = freezed,Object? asdsLandings = freezed,Object? waterLanding = freezed,Object? details = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkCoreModel(
 coreSerial: freezed == coreSerial ? _self.coreSerial : coreSerial // ignore: cast_nullable_to_non_nullable
 as String?,block: freezed == block ? _self.block : block // ignore: cast_nullable_to_non_nullable
 as int?,status: freezed == status ? _self.status : status // ignore: cast_nullable_to_non_nullable
@@ -221,7 +227,7 @@ return $default(_that.coreSerial,_that.block,_that.status,_that.originalLaunch,_
 @JsonSerializable()
 
 class _NetworkCoreModel extends NetworkCoreModel {
-  const _NetworkCoreModel({@JsonKey(name: 'core_serial') this.coreSerial, this.block, this.status, @JsonKey(name: 'original_launch') this.originalLaunch, @JsonKey(name: 'original_launch_unix') this.originalLaunchUnix, final  List<NetworkMission>? missions, @JsonKey(name: 'reuse_count') this.reuseCount, @JsonKey(name: 'rtls_attempts') this.rtlsAttempts, @JsonKey(name: 'rtls_landings') this.rtlsLandings, @JsonKey(name: 'asds_attempts') this.asdsAttempts, @JsonKey(name: 'asds_landings') this.asdsLandings, @JsonKey(name: 'water_landing') this.waterLanding, this.details}): _missions = missions,super._();
+  const _NetworkCoreModel({@JsonKey(name: 'core_serial') this.coreSerial, this.block, this.status, @JsonKey(name: 'original_launch') this.originalLaunch, @JsonKey(name: 'original_launch_unix') this.originalLaunchUnix,  List<NetworkMission>? missions, @JsonKey(name: 'reuse_count') this.reuseCount, @JsonKey(name: 'rtls_attempts') this.rtlsAttempts, @JsonKey(name: 'rtls_landings') this.rtlsLandings, @JsonKey(name: 'asds_attempts') this.asdsAttempts, @JsonKey(name: 'asds_landings') this.asdsLandings, @JsonKey(name: 'water_landing') this.waterLanding, this.details}): _missions = missions,super._();
   factory _NetworkCoreModel.fromJson(Map<String, dynamic> json) => _$NetworkCoreModelFromJson(json);
 
 @override@JsonKey(name: 'core_serial') final  String? coreSerial;
@@ -259,16 +265,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkCoreModel&&(identical(other.coreSerial, coreSerial) || other.coreSerial == coreSerial)&&(identical(other.block, block) || other.block == block)&&(identical(other.status, status) || other.status == status)&&(identical(other.originalLaunch, originalLaunch) || other.originalLaunch == originalLaunch)&&(identical(other.originalLaunchUnix, originalLaunchUnix) || other.originalLaunchUnix == originalLaunchUnix)&&const DeepCollectionEquality().equals(other._missions, _missions)&&(identical(other.reuseCount, reuseCount) || other.reuseCount == reuseCount)&&(identical(other.rtlsAttempts, rtlsAttempts) || other.rtlsAttempts == rtlsAttempts)&&(identical(other.rtlsLandings, rtlsLandings) || other.rtlsLandings == rtlsLandings)&&(identical(other.asdsAttempts, asdsAttempts) || other.asdsAttempts == asdsAttempts)&&(identical(other.asdsLandings, asdsLandings) || other.asdsLandings == asdsLandings)&&(identical(other.waterLanding, waterLanding) || other.waterLanding == waterLanding)&&(identical(other.details, details) || other.details == details));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkCoreModel&&(identical(other.coreSerial, coreSerial) || other.coreSerial == coreSerial)&&(identical(other.block, block) || other.block == block)&&(identical(other.status, status) || other.status == status)&&(identical(other.originalLaunch, originalLaunch) || other.originalLaunch == originalLaunch)&&(identical(other.originalLaunchUnix, originalLaunchUnix) || other.originalLaunchUnix == originalLaunchUnix)&&const DeepCollectionEquality().equals(other.missions, _missions)&&(identical(other.reuseCount, reuseCount) || other.reuseCount == reuseCount)&&(identical(other.rtlsAttempts, rtlsAttempts) || other.rtlsAttempts == rtlsAttempts)&&(identical(other.rtlsLandings, rtlsLandings) || other.rtlsLandings == rtlsLandings)&&(identical(other.asdsAttempts, asdsAttempts) || other.asdsAttempts == asdsAttempts)&&(identical(other.asdsLandings, asdsLandings) || other.asdsLandings == asdsLandings)&&(identical(other.waterLanding, waterLanding) || other.waterLanding == waterLanding)&&(identical(other.details, details) || other.details == details));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,coreSerial,block,status,originalLaunch,originalLaunchUnix,const DeepCollectionEquality().hash(_missions),reuseCount,rtlsAttempts,rtlsLandings,asdsAttempts,asdsLandings,waterLanding,details);
+int get hashCode {
+    return Object.hash(runtimeType,coreSerial,block,status,originalLaunch,originalLaunchUnix,const DeepCollectionEquality().hash(_missions),reuseCount,rtlsAttempts,rtlsLandings,asdsAttempts,asdsLandings,waterLanding,details);
+}
 
 @override
 String toString() {
-  return 'NetworkCoreModel(coreSerial: $coreSerial, block: $block, status: $status, originalLaunch: $originalLaunch, originalLaunchUnix: $originalLaunchUnix, missions: $missions, reuseCount: $reuseCount, rtlsAttempts: $rtlsAttempts, rtlsLandings: $rtlsLandings, asdsAttempts: $asdsAttempts, asdsLandings: $asdsLandings, waterLanding: $waterLanding, details: $details)';
+    return 'NetworkCoreModel(coreSerial: $coreSerial, block: $block, status: $status, originalLaunch: $originalLaunch, originalLaunchUnix: $originalLaunchUnix, missions: $missions, reuseCount: $reuseCount, rtlsAttempts: $rtlsAttempts, rtlsLandings: $rtlsLandings, asdsAttempts: $asdsAttempts, asdsLandings: $asdsLandings, waterLanding: $waterLanding, details: $details)';
 }
 
 
@@ -335,16 +343,21 @@ $NetworkMissionCopyWith<NetworkMission> get copyWith => _$NetworkMissionCopyWith
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkMission&&(identical(other.name, name) || other.name == name)&&(identical(other.flight, flight) || other.flight == flight));
+  final _this = this as NetworkMission;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkMission&&(identical(other.name, _this.name) || other.name == _this.name)&&(identical(other.flight, _this.flight) || other.flight == _this.flight));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,name,flight);
+int get hashCode {
+  final _this = this as NetworkMission;
+  return Object.hash(runtimeType,_this.name,_this.flight);
+}
 
 @override
 String toString() {
-  return 'NetworkMission(name: $name, flight: $flight)';
+  final _this = this as NetworkMission;
+  return 'NetworkMission(name: ${_this.name}, flight: ${_this.flight})';
 }
 
 
@@ -373,7 +386,7 @@ class _$NetworkMissionCopyWithImpl<$Res>
 /// Create a copy of NetworkMission
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? name = freezed,Object? flight = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkMission(
 name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
 as String?,flight: freezed == flight ? _self.flight : flight // ignore: cast_nullable_to_non_nullable
 as int?,
@@ -536,16 +549,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkMission&&(identical(other.name, name) || other.name == name)&&(identical(other.flight, flight) || other.flight == flight));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkMission&&(identical(other.name, name) || other.name == name)&&(identical(other.flight, flight) || other.flight == flight));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,name,flight);
+int get hashCode {
+    return Object.hash(runtimeType,name,flight);
+}
 
 @override
 String toString() {
-  return 'NetworkMission(name: $name, flight: $flight)';
+    return 'NetworkMission(name: $name, flight: $flight)';
 }
 
 

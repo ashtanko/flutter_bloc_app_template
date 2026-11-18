@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/features/roadster/model/orbital_data.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:material_ui/material_ui.dart';
 
 class OrbitalSectionWidget extends StatelessWidget {
   const OrbitalSectionWidget({super.key, required this.orbitalData});

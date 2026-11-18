@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'network_first_stage_model.dart';
@@ -9,6 +9,7 @@ part of 'network_first_stage_model.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $NetworkFirstStageModelCopyWith<NetworkFirstStageModel> get copyWith => _$Networ
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkFirstStageModel&&const DeepCollectionEquality().equals(other.cores, cores));
+  final _this = this as NetworkFirstStageModel;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkFirstStageModel&&const DeepCollectionEquality().equals(other.cores, _this.cores));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(cores));
+int get hashCode {
+  final _this = this as NetworkFirstStageModel;
+  return Object.hash(runtimeType,const DeepCollectionEquality().hash(_this.cores));
+}
 
 @override
 String toString() {
-  return 'NetworkFirstStageModel(cores: $cores)';
+  final _this = this as NetworkFirstStageModel;
+  return 'NetworkFirstStageModel(cores: ${_this.cores})';
 }
 
 
@@ -66,7 +72,7 @@ class _$NetworkFirstStageModelCopyWithImpl<$Res>
 /// Create a copy of NetworkFirstStageModel
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? cores = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkFirstStageModel(
 cores: freezed == cores ? _self.cores : cores // ignore: cast_nullable_to_non_nullable
 as List<NetworkStageCoreModel>?,
   ));
@@ -209,7 +215,7 @@ return $default(_that.cores);case _:
 @JsonSerializable()
 
 class _NetworkFirstStageModel extends NetworkFirstStageModel {
-  const _NetworkFirstStageModel({final  List<NetworkStageCoreModel>? cores}): _cores = cores,super._();
+  const _NetworkFirstStageModel({ List<NetworkStageCoreModel>? cores}): _cores = cores,super._();
   factory _NetworkFirstStageModel.fromJson(Map<String, dynamic> json) => _$NetworkFirstStageModelFromJson(json);
 
  final  List<NetworkStageCoreModel>? _cores;
@@ -235,16 +241,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkFirstStageModel&&const DeepCollectionEquality().equals(other._cores, _cores));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkFirstStageModel&&const DeepCollectionEquality().equals(other.cores, _cores));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_cores));
+int get hashCode {
+    return Object.hash(runtimeType,const DeepCollectionEquality().hash(_cores));
+}
 
 @override
 String toString() {
-  return 'NetworkFirstStageModel(cores: $cores)';
+    return 'NetworkFirstStageModel(cores: $cores)';
 }
 
 
@@ -299,16 +307,21 @@ $NetworkStageCoreModelCopyWith<NetworkStageCoreModel> get copyWith => _$NetworkS
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkStageCoreModel&&(identical(other.coreSerial, coreSerial) || other.coreSerial == coreSerial)&&(identical(other.flight, flight) || other.flight == flight)&&(identical(other.block, block) || other.block == block)&&(identical(other.gridfins, gridfins) || other.gridfins == gridfins)&&(identical(other.legs, legs) || other.legs == legs)&&(identical(other.reused, reused) || other.reused == reused)&&(identical(other.landSuccess, landSuccess) || other.landSuccess == landSuccess)&&(identical(other.landingIntent, landingIntent) || other.landingIntent == landingIntent)&&(identical(other.landingType, landingType) || other.landingType == landingType)&&(identical(other.landingVehicle, landingVehicle) || other.landingVehicle == landingVehicle));
+  final _this = this as NetworkStageCoreModel;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkStageCoreModel&&(identical(other.coreSerial, _this.coreSerial) || other.coreSerial == _this.coreSerial)&&(identical(other.flight, _this.flight) || other.flight == _this.flight)&&(identical(other.block, _this.block) || other.block == _this.block)&&(identical(other.gridfins, _this.gridfins) || other.gridfins == _this.gridfins)&&(identical(other.legs, _this.legs) || other.legs == _this.legs)&&(identical(other.reused, _this.reused) || other.reused == _this.reused)&&(identical(other.landSuccess, _this.landSuccess) || other.landSuccess == _this.landSuccess)&&(identical(other.landingIntent, _this.landingIntent) || other.landingIntent == _this.landingIntent)&&(identical(other.landingType, _this.landingType) || other.landingType == _this.landingType)&&(identical(other.landingVehicle, _this.landingVehicle) || other.landingVehicle == _this.landingVehicle));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,coreSerial,flight,block,gridfins,legs,reused,landSuccess,landingIntent,landingType,landingVehicle);
+int get hashCode {
+  final _this = this as NetworkStageCoreModel;
+  return Object.hash(runtimeType,_this.coreSerial,_this.flight,_this.block,_this.gridfins,_this.legs,_this.reused,_this.landSuccess,_this.landingIntent,_this.landingType,_this.landingVehicle);
+}
 
 @override
 String toString() {
-  return 'NetworkStageCoreModel(coreSerial: $coreSerial, flight: $flight, block: $block, gridfins: $gridfins, legs: $legs, reused: $reused, landSuccess: $landSuccess, landingIntent: $landingIntent, landingType: $landingType, landingVehicle: $landingVehicle)';
+  final _this = this as NetworkStageCoreModel;
+  return 'NetworkStageCoreModel(coreSerial: ${_this.coreSerial}, flight: ${_this.flight}, block: ${_this.block}, gridfins: ${_this.gridfins}, legs: ${_this.legs}, reused: ${_this.reused}, landSuccess: ${_this.landSuccess}, landingIntent: ${_this.landingIntent}, landingType: ${_this.landingType}, landingVehicle: ${_this.landingVehicle})';
 }
 
 
@@ -337,7 +350,7 @@ class _$NetworkStageCoreModelCopyWithImpl<$Res>
 /// Create a copy of NetworkStageCoreModel
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? coreSerial = freezed,Object? flight = freezed,Object? block = freezed,Object? gridfins = freezed,Object? legs = freezed,Object? reused = freezed,Object? landSuccess = freezed,Object? landingIntent = freezed,Object? landingType = freezed,Object? landingVehicle = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkStageCoreModel(
 coreSerial: freezed == coreSerial ? _self.coreSerial : coreSerial // ignore: cast_nullable_to_non_nullable
 as String?,flight: freezed == flight ? _self.flight : flight // ignore: cast_nullable_to_non_nullable
 as int?,block: freezed == block ? _self.block : block // ignore: cast_nullable_to_non_nullable
@@ -516,16 +529,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkStageCoreModel&&(identical(other.coreSerial, coreSerial) || other.coreSerial == coreSerial)&&(identical(other.flight, flight) || other.flight == flight)&&(identical(other.block, block) || other.block == block)&&(identical(other.gridfins, gridfins) || other.gridfins == gridfins)&&(identical(other.legs, legs) || other.legs == legs)&&(identical(other.reused, reused) || other.reused == reused)&&(identical(other.landSuccess, landSuccess) || other.landSuccess == landSuccess)&&(identical(other.landingIntent, landingIntent) || other.landingIntent == landingIntent)&&(identical(other.landingType, landingType) || other.landingType == landingType)&&(identical(other.landingVehicle, landingVehicle) || other.landingVehicle == landingVehicle));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkStageCoreModel&&(identical(other.coreSerial, coreSerial) || other.coreSerial == coreSerial)&&(identical(other.flight, flight) || other.flight == flight)&&(identical(other.block, block) || other.block == block)&&(identical(other.gridfins, gridfins) || other.gridfins == gridfins)&&(identical(other.legs, legs) || other.legs == legs)&&(identical(other.reused, reused) || other.reused == reused)&&(identical(other.landSuccess, landSuccess) || other.landSuccess == landSuccess)&&(identical(other.landingIntent, landingIntent) || other.landingIntent == landingIntent)&&(identical(other.landingType, landingType) || other.landingType == landingType)&&(identical(other.landingVehicle, landingVehicle) || other.landingVehicle == landingVehicle));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,coreSerial,flight,block,gridfins,legs,reused,landSuccess,landingIntent,landingType,landingVehicle);
+int get hashCode {
+    return Object.hash(runtimeType,coreSerial,flight,block,gridfins,legs,reused,landSuccess,landingIntent,landingType,landingVehicle);
+}
 
 @override
 String toString() {
-  return 'NetworkStageCoreModel(coreSerial: $coreSerial, flight: $flight, block: $block, gridfins: $gridfins, legs: $legs, reused: $reused, landSuccess: $landSuccess, landingIntent: $landingIntent, landingType: $landingType, landingVehicle: $landingVehicle)';
+    return 'NetworkStageCoreModel(coreSerial: $coreSerial, flight: $flight, block: $block, gridfins: $gridfins, legs: $legs, reused: $reused, landSuccess: $landSuccess, landingIntent: $landingIntent, landingType: $landingType, landingVehicle: $landingVehicle)';
 }
 
 

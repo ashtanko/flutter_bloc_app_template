@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/constants/index.dart';
 import 'package:flutter_bloc_app_template/generated/colors.gen.dart';
+import 'package:material_ui/material_ui.dart';
 
 class BottomSheetDialogIcon extends StatelessWidget {
   @override

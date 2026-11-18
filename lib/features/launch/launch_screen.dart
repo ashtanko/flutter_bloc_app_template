@@ -1,6 +1,5 @@
 import 'dart:ui';
 
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_app_template/features/launch/bloc/launch_bloc.dart';
@@ -15,6 +14,7 @@ import 'package:flutter_bloc_app_template/features/launch/widget/status_section_
 import 'package:flutter_bloc_app_template/features/launch/widget/timeline_widgets.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/index.dart';
+import 'package:material_ui/material_ui.dart';
 
 class LaunchScreen extends StatelessWidget {
   const LaunchScreen({super.key});

@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'network_launch_model.dart';
@@ -9,6 +9,7 @@ part of 'network_launch_model.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $NetworkLaunchModelCopyWith<NetworkLaunchModel> get copyWith => _$NetworkLaunchM
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkLaunchModel&&(identical(other.id, id) || other.id == id)&&(identical(other.flightNumber, flightNumber) || other.flightNumber == flightNumber)&&(identical(other.missionName, missionName) || other.missionName == missionName)&&(identical(other.launchDate, launchDate) || other.launchDate == launchDate)&&(identical(other.rocket, rocket) || other.rocket == rocket)&&(identical(other.success, success) || other.success == success)&&(identical(other.links, links) || other.links == links));
+  final _this = this as NetworkLaunchModel;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkLaunchModel&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.flightNumber, _this.flightNumber) || other.flightNumber == _this.flightNumber)&&(identical(other.missionName, _this.missionName) || other.missionName == _this.missionName)&&(identical(other.launchDate, _this.launchDate) || other.launchDate == _this.launchDate)&&(identical(other.rocket, _this.rocket) || other.rocket == _this.rocket)&&(identical(other.success, _this.success) || other.success == _this.success)&&(identical(other.links, _this.links) || other.links == _this.links));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,flightNumber,missionName,launchDate,rocket,success,links);
+int get hashCode {
+  final _this = this as NetworkLaunchModel;
+  return Object.hash(runtimeType,_this.id,_this.flightNumber,_this.missionName,_this.launchDate,_this.rocket,_this.success,_this.links);
+}
 
 @override
 String toString() {
-  return 'NetworkLaunchModel(id: $id, flightNumber: $flightNumber, missionName: $missionName, launchDate: $launchDate, rocket: $rocket, success: $success, links: $links)';
+  final _this = this as NetworkLaunchModel;
+  return 'NetworkLaunchModel(id: ${_this.id}, flightNumber: ${_this.flightNumber}, missionName: ${_this.missionName}, launchDate: ${_this.launchDate}, rocket: ${_this.rocket}, success: ${_this.success}, links: ${_this.links})';
 }
 
 
@@ -66,7 +72,7 @@ class _$NetworkLaunchModelCopyWithImpl<$Res>
 /// Create a copy of NetworkLaunchModel
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = freezed,Object? flightNumber = freezed,Object? missionName = freezed,Object? launchDate = freezed,Object? rocket = freezed,Object? success = null,Object? links = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkLaunchModel(
 id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String?,flightNumber: freezed == flightNumber ? _self.flightNumber : flightNumber // ignore: cast_nullable_to_non_nullable
 as int?,missionName: freezed == missionName ? _self.missionName : missionName // ignore: cast_nullable_to_non_nullable
@@ -263,16 +269,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkLaunchModel&&(identical(other.id, id) || other.id == id)&&(identical(other.flightNumber, flightNumber) || other.flightNumber == flightNumber)&&(identical(other.missionName, missionName) || other.missionName == missionName)&&(identical(other.launchDate, launchDate) || other.launchDate == launchDate)&&(identical(other.rocket, rocket) || other.rocket == rocket)&&(identical(other.success, success) || other.success == success)&&(identical(other.links, links) || other.links == links));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkLaunchModel&&(identical(other.id, id) || other.id == id)&&(identical(other.flightNumber, flightNumber) || other.flightNumber == flightNumber)&&(identical(other.missionName, missionName) || other.missionName == missionName)&&(identical(other.launchDate, launchDate) || other.launchDate == launchDate)&&(identical(other.rocket, rocket) || other.rocket == rocket)&&(identical(other.success, success) || other.success == success)&&(identical(other.links, links) || other.links == links));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,flightNumber,missionName,launchDate,rocket,success,links);
+int get hashCode {
+    return Object.hash(runtimeType,id,flightNumber,missionName,launchDate,rocket,success,links);
+}
 
 @override
 String toString() {
-  return 'NetworkLaunchModel(id: $id, flightNumber: $flightNumber, missionName: $missionName, launchDate: $launchDate, rocket: $rocket, success: $success, links: $links)';
+    return 'NetworkLaunchModel(id: $id, flightNumber: $flightNumber, missionName: $missionName, launchDate: $launchDate, rocket: $rocket, success: $success, links: $links)';
 }
 
 
@@ -357,16 +365,21 @@ $NetworkLaunchLinksModelCopyWith<NetworkLaunchLinksModel> get copyWith => _$Netw
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkLaunchLinksModel&&(identical(other.missionPatch, missionPatch) || other.missionPatch == missionPatch)&&(identical(other.missionPatchSmall, missionPatchSmall) || other.missionPatchSmall == missionPatchSmall)&&(identical(other.articleLink, articleLink) || other.articleLink == articleLink)&&(identical(other.wikipedia, wikipedia) || other.wikipedia == wikipedia)&&(identical(other.youtubeId, youtubeId) || other.youtubeId == youtubeId)&&(identical(other.redditLaunch, redditLaunch) || other.redditLaunch == redditLaunch)&&(identical(other.videoLink, videoLink) || other.videoLink == videoLink)&&(identical(other.presskit, presskit) || other.presskit == presskit)&&const DeepCollectionEquality().equals(other.flickrImages, flickrImages));
+  final _this = this as NetworkLaunchLinksModel;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkLaunchLinksModel&&(identical(other.missionPatch, _this.missionPatch) || other.missionPatch == _this.missionPatch)&&(identical(other.missionPatchSmall, _this.missionPatchSmall) || other.missionPatchSmall == _this.missionPatchSmall)&&(identical(other.articleLink, _this.articleLink) || other.articleLink == _this.articleLink)&&(identical(other.wikipedia, _this.wikipedia) || other.wikipedia == _this.wikipedia)&&(identical(other.youtubeId, _this.youtubeId) || other.youtubeId == _this.youtubeId)&&(identical(other.redditLaunch, _this.redditLaunch) || other.redditLaunch == _this.redditLaunch)&&(identical(other.videoLink, _this.videoLink) || other.videoLink == _this.videoLink)&&(identical(other.presskit, _this.presskit) || other.presskit == _this.presskit)&&const DeepCollectionEquality().equals(other.flickrImages, _this.flickrImages));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,missionPatch,missionPatchSmall,articleLink,wikipedia,youtubeId,redditLaunch,videoLink,presskit,const DeepCollectionEquality().hash(flickrImages));
+int get hashCode {
+  final _this = this as NetworkLaunchLinksModel;
+  return Object.hash(runtimeType,_this.missionPatch,_this.missionPatchSmall,_this.articleLink,_this.wikipedia,_this.youtubeId,_this.redditLaunch,_this.videoLink,_this.presskit,const DeepCollectionEquality().hash(_this.flickrImages));
+}
 
 @override
 String toString() {
-  return 'NetworkLaunchLinksModel(missionPatch: $missionPatch, missionPatchSmall: $missionPatchSmall, articleLink: $articleLink, wikipedia: $wikipedia, youtubeId: $youtubeId, redditLaunch: $redditLaunch, videoLink: $videoLink, presskit: $presskit, flickrImages: $flickrImages)';
+  final _this = this as NetworkLaunchLinksModel;
+  return 'NetworkLaunchLinksModel(missionPatch: ${_this.missionPatch}, missionPatchSmall: ${_this.missionPatchSmall}, articleLink: ${_this.articleLink}, wikipedia: ${_this.wikipedia}, youtubeId: ${_this.youtubeId}, redditLaunch: ${_this.redditLaunch}, videoLink: ${_this.videoLink}, presskit: ${_this.presskit}, flickrImages: ${_this.flickrImages})';
 }
 
 
@@ -395,7 +408,7 @@ class _$NetworkLaunchLinksModelCopyWithImpl<$Res>
 /// Create a copy of NetworkLaunchLinksModel
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? missionPatch = freezed,Object? missionPatchSmall = freezed,Object? articleLink = freezed,Object? wikipedia = freezed,Object? youtubeId = freezed,Object? redditLaunch = freezed,Object? videoLink = freezed,Object? presskit = freezed,Object? flickrImages = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkLaunchLinksModel(
 missionPatch: freezed == missionPatch ? _self.missionPatch : missionPatch // ignore: cast_nullable_to_non_nullable
 as String?,missionPatchSmall: freezed == missionPatchSmall ? _self.missionPatchSmall : missionPatchSmall // ignore: cast_nullable_to_non_nullable
 as String?,articleLink: freezed == articleLink ? _self.articleLink : articleLink // ignore: cast_nullable_to_non_nullable
@@ -546,7 +559,7 @@ return $default(_that.missionPatch,_that.missionPatchSmall,_that.articleLink,_th
 @JsonSerializable()
 
 class _NetworkLaunchLinksModel extends NetworkLaunchLinksModel {
-  const _NetworkLaunchLinksModel({@JsonKey(name: 'mission_patch') this.missionPatch, @JsonKey(name: 'mission_patch_small') this.missionPatchSmall, @JsonKey(name: 'article_link') this.articleLink, @JsonKey(name: 'wikipedia') this.wikipedia, @JsonKey(name: 'youtube_id') this.youtubeId, @JsonKey(name: 'reddit_launch') this.redditLaunch, @JsonKey(name: 'video_link') this.videoLink, @JsonKey(name: 'presskit') this.presskit, @JsonKey(name: 'flickr_images') final  List<String>? flickrImages}): _flickrImages = flickrImages,super._();
+  const _NetworkLaunchLinksModel({@JsonKey(name: 'mission_patch') this.missionPatch, @JsonKey(name: 'mission_patch_small') this.missionPatchSmall, @JsonKey(name: 'article_link') this.articleLink, @JsonKey(name: 'wikipedia') this.wikipedia, @JsonKey(name: 'youtube_id') this.youtubeId, @JsonKey(name: 'reddit_launch') this.redditLaunch, @JsonKey(name: 'video_link') this.videoLink, @JsonKey(name: 'presskit') this.presskit, @JsonKey(name: 'flickr_images')  List<String>? flickrImages}): _flickrImages = flickrImages,super._();
   factory _NetworkLaunchLinksModel.fromJson(Map<String, dynamic> json) => _$NetworkLaunchLinksModelFromJson(json);
 
 @override@JsonKey(name: 'mission_patch') final  String? missionPatch;
@@ -580,16 +593,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkLaunchLinksModel&&(identical(other.missionPatch, missionPatch) || other.missionPatch == missionPatch)&&(identical(other.missionPatchSmall, missionPatchSmall) || other.missionPatchSmall == missionPatchSmall)&&(identical(other.articleLink, articleLink) || other.articleLink == articleLink)&&(identical(other.wikipedia, wikipedia) || other.wikipedia == wikipedia)&&(identical(other.youtubeId, youtubeId) || other.youtubeId == youtubeId)&&(identical(other.redditLaunch, redditLaunch) || other.redditLaunch == redditLaunch)&&(identical(other.videoLink, videoLink) || other.videoLink == videoLink)&&(identical(other.presskit, presskit) || other.presskit == presskit)&&const DeepCollectionEquality().equals(other._flickrImages, _flickrImages));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkLaunchLinksModel&&(identical(other.missionPatch, missionPatch) || other.missionPatch == missionPatch)&&(identical(other.missionPatchSmall, missionPatchSmall) || other.missionPatchSmall == missionPatchSmall)&&(identical(other.articleLink, articleLink) || other.articleLink == articleLink)&&(identical(other.wikipedia, wikipedia) || other.wikipedia == wikipedia)&&(identical(other.youtubeId, youtubeId) || other.youtubeId == youtubeId)&&(identical(other.redditLaunch, redditLaunch) || other.redditLaunch == redditLaunch)&&(identical(other.videoLink, videoLink) || other.videoLink == videoLink)&&(identical(other.presskit, presskit) || other.presskit == presskit)&&const DeepCollectionEquality().equals(other.flickrImages, _flickrImages));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,missionPatch,missionPatchSmall,articleLink,wikipedia,youtubeId,redditLaunch,videoLink,presskit,const DeepCollectionEquality().hash(_flickrImages));
+int get hashCode {
+    return Object.hash(runtimeType,missionPatch,missionPatchSmall,articleLink,wikipedia,youtubeId,redditLaunch,videoLink,presskit,const DeepCollectionEquality().hash(_flickrImages));
+}
 
 @override
 String toString() {
-  return 'NetworkLaunchLinksModel(missionPatch: $missionPatch, missionPatchSmall: $missionPatchSmall, articleLink: $articleLink, wikipedia: $wikipedia, youtubeId: $youtubeId, redditLaunch: $redditLaunch, videoLink: $videoLink, presskit: $presskit, flickrImages: $flickrImages)';
+    return 'NetworkLaunchLinksModel(missionPatch: $missionPatch, missionPatchSmall: $missionPatchSmall, articleLink: $articleLink, wikipedia: $wikipedia, youtubeId: $youtubeId, redditLaunch: $redditLaunch, videoLink: $videoLink, presskit: $presskit, flickrImages: $flickrImages)';
 }
 
 
@@ -652,16 +667,21 @@ $NetworkLaunchRocketModelCopyWith<NetworkLaunchRocketModel> get copyWith => _$Ne
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkLaunchRocketModel&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&(identical(other.name, name) || other.name == name)&&(identical(other.firstStage, firstStage) || other.firstStage == firstStage)&&(identical(other.secondStage, secondStage) || other.secondStage == secondStage));
+  final _this = this as NetworkLaunchRocketModel;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkLaunchRocketModel&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.type, _this.type) || other.type == _this.type)&&(identical(other.name, _this.name) || other.name == _this.name)&&(identical(other.firstStage, _this.firstStage) || other.firstStage == _this.firstStage)&&(identical(other.secondStage, _this.secondStage) || other.secondStage == _this.secondStage));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,type,name,firstStage,secondStage);
+int get hashCode {
+  final _this = this as NetworkLaunchRocketModel;
+  return Object.hash(runtimeType,_this.id,_this.type,_this.name,_this.firstStage,_this.secondStage);
+}
 
 @override
 String toString() {
-  return 'NetworkLaunchRocketModel(id: $id, type: $type, name: $name, firstStage: $firstStage, secondStage: $secondStage)';
+  final _this = this as NetworkLaunchRocketModel;
+  return 'NetworkLaunchRocketModel(id: ${_this.id}, type: ${_this.type}, name: ${_this.name}, firstStage: ${_this.firstStage}, secondStage: ${_this.secondStage})';
 }
 
 
@@ -690,7 +710,7 @@ class _$NetworkLaunchRocketModelCopyWithImpl<$Res>
 /// Create a copy of NetworkLaunchRocketModel
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? type = freezed,Object? name = freezed,Object? firstStage = freezed,Object? secondStage = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkLaunchRocketModel(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
 as String?,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
@@ -883,16 +903,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkLaunchRocketModel&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&(identical(other.name, name) || other.name == name)&&(identical(other.firstStage, firstStage) || other.firstStage == firstStage)&&(identical(other.secondStage, secondStage) || other.secondStage == secondStage));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkLaunchRocketModel&&(identical(other.id, id) || other.id == id)&&(identical(other.type, type) || other.type == type)&&(identical(other.name, name) || other.name == name)&&(identical(other.firstStage, firstStage) || other.firstStage == firstStage)&&(identical(other.secondStage, secondStage) || other.secondStage == secondStage));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,type,name,firstStage,secondStage);
+int get hashCode {
+    return Object.hash(runtimeType,id,type,name,firstStage,secondStage);
+}
 
 @override
 String toString() {
-  return 'NetworkLaunchRocketModel(id: $id, type: $type, name: $name, firstStage: $firstStage, secondStage: $secondStage)';
+    return 'NetworkLaunchRocketModel(id: $id, type: $type, name: $name, firstStage: $firstStage, secondStage: $secondStage)';
 }
 
 

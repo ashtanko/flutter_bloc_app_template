@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/features/launch/widget/animated_link_button_widget.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/models/launch/links_resource.dart';
+import 'package:material_ui/material_ui.dart';
 
 class LinksCardWidget extends StatelessWidget {
   const LinksCardWidget({super.key, required this.links});

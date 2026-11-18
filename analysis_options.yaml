@@ -24,8 +24,11 @@ analyzer:
     - build/**
     - lib/**.g.dart
     - lib/generated/**
+    - lib/l10n/app_localizations*.dart
     - lib/di/*.config.dart
     - test/*.mocks.dart
+    - android/**
+    - ios/**
   language:
     strict-casts: true
     strict-inference: true

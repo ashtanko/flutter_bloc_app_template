@@ -4,6 +4,8 @@ import 'package:flutter_bloc_app_template/main.dart' as app;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 
+import 'pump_until.dart';
+
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
@@ -14,6 +16,7 @@ void main() {
   ) async {
     app.main([]);
     await tester.pumpAndSettle();
+    await pumpUntilFound(tester, find.byKey(const Key('rockets_screen')));
 
     expect(find.byKey(const Key('rockets_screen')), findsOneWidget);
 

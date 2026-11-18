@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/features/main/navigation/bottom_navigation.dart';
+import 'package:material_ui/material_ui.dart';
 
 import 'navigation/destinations.dart' show getNavDestinations, getScreenByIndex;
 

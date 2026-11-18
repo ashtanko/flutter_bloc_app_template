@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/features/roadster/utils/roadster_utils.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/models/roadster/roadster_resource.dart';
+import 'package:material_ui/material_ui.dart';
 
 class RoadsterTitleSection extends StatelessWidget {
   const RoadsterTitleSection({

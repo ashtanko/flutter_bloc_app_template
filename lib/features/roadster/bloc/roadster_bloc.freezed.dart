@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'roadster_bloc.dart';
@@ -9,6 +9,7 @@ part of 'roadster_bloc.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 /// @nodoc
@@ -20,7 +21,7 @@ mixin _$RoadsterEvent {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RoadsterEvent);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RoadsterEvent);
 }
 
 
@@ -29,7 +30,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'RoadsterEvent()';
+    return 'RoadsterEvent()';
 }
 
 
@@ -185,7 +186,7 @@ class RoadsterLoadEvent implements RoadsterEvent {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RoadsterLoadEvent);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RoadsterLoadEvent);
 }
 
 
@@ -194,7 +195,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'RoadsterEvent.load()';
+    return 'RoadsterEvent.load()';
 }
 
 
@@ -212,7 +213,7 @@ mixin _$RoadsterState {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RoadsterState);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RoadsterState);
 }
 
 
@@ -221,7 +222,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'RoadsterState()';
+    return 'RoadsterState()';
 }
 
 
@@ -389,7 +390,7 @@ class RoadsterLoadingState implements RoadsterState {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RoadsterLoadingState);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RoadsterLoadingState);
 }
 
 
@@ -398,7 +399,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'RoadsterState.loading()';
+    return 'RoadsterState.loading()';
 }
 
 
@@ -426,16 +427,18 @@ $RoadsterSuccessStateCopyWith<RoadsterSuccessState> get copyWith => _$RoadsterSu
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RoadsterSuccessState&&(identical(other.roadster, roadster) || other.roadster == roadster));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RoadsterSuccessState&&(identical(other.roadster, roadster) || other.roadster == roadster));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,roadster);
+int get hashCode {
+    return Object.hash(runtimeType,roadster);
+}
 
 @override
 String toString() {
-  return 'RoadsterState.success(roadster: $roadster)';
+    return 'RoadsterState.success(roadster: $roadster)';
 }
 
 
@@ -487,7 +490,7 @@ class RoadsterErrorState implements RoadsterState {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RoadsterErrorState);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RoadsterErrorState);
 }
 
 
@@ -496,7 +499,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'RoadsterState.error()';
+    return 'RoadsterState.error()';
 }
 
 

@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/app/localization.dart';
 import 'package:flutter_bloc_app_template/features/roadster/widget/app_bar/image_carousel.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:network_image_mock/network_image_mock.dart';
 
 void main() {

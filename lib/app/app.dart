@@ -1,5 +1,4 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_app_template/app/localization.dart';
 import 'package:flutter_bloc_app_template/bloc/init/init_bloc.dart';
@@ -7,6 +6,7 @@ import 'package:flutter_bloc_app_template/di/app_bloc_providers.dart';
 import 'package:flutter_bloc_app_template/di/app_repository_providers.dart';
 import 'package:flutter_bloc_app_template/index.dart';
 import 'package:flutter_bloc_app_template/theme/util.dart';
+import 'package:material_ui/material_ui.dart';
 
 class App extends StatelessWidget {
   const App({

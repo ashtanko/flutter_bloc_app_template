@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'network_second_stage_model.dart';
@@ -9,6 +9,7 @@ part of 'network_second_stage_model.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $NetworkSecondStageModelCopyWith<NetworkSecondStageModel> get copyWith => _$Netw
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkSecondStageModel&&(identical(other.block, block) || other.block == block)&&const DeepCollectionEquality().equals(other.payloads, payloads));
+  final _this = this as NetworkSecondStageModel;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkSecondStageModel&&(identical(other.block, _this.block) || other.block == _this.block)&&const DeepCollectionEquality().equals(other.payloads, _this.payloads));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,block,const DeepCollectionEquality().hash(payloads));
+int get hashCode {
+  final _this = this as NetworkSecondStageModel;
+  return Object.hash(runtimeType,_this.block,const DeepCollectionEquality().hash(_this.payloads));
+}
 
 @override
 String toString() {
-  return 'NetworkSecondStageModel(block: $block, payloads: $payloads)';
+  final _this = this as NetworkSecondStageModel;
+  return 'NetworkSecondStageModel(block: ${_this.block}, payloads: ${_this.payloads})';
 }
 
 
@@ -66,7 +72,7 @@ class _$NetworkSecondStageModelCopyWithImpl<$Res>
 /// Create a copy of NetworkSecondStageModel
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? block = freezed,Object? payloads = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkSecondStageModel(
 block: freezed == block ? _self.block : block // ignore: cast_nullable_to_non_nullable
 as int?,payloads: freezed == payloads ? _self.payloads : payloads // ignore: cast_nullable_to_non_nullable
 as List<NetworkPayloadModel>?,
@@ -210,7 +216,7 @@ return $default(_that.block,_that.payloads);case _:
 @JsonSerializable()
 
 class _NetworkSecondStageModel extends NetworkSecondStageModel {
-  const _NetworkSecondStageModel({this.block, final  List<NetworkPayloadModel>? payloads}): _payloads = payloads,super._();
+  const _NetworkSecondStageModel({this.block,  List<NetworkPayloadModel>? payloads}): _payloads = payloads,super._();
   factory _NetworkSecondStageModel.fromJson(Map<String, dynamic> json) => _$NetworkSecondStageModelFromJson(json);
 
 @override final  int? block;
@@ -237,16 +243,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkSecondStageModel&&(identical(other.block, block) || other.block == block)&&const DeepCollectionEquality().equals(other._payloads, _payloads));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkSecondStageModel&&(identical(other.block, block) || other.block == block)&&const DeepCollectionEquality().equals(other.payloads, _payloads));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,block,const DeepCollectionEquality().hash(_payloads));
+int get hashCode {
+    return Object.hash(runtimeType,block,const DeepCollectionEquality().hash(_payloads));
+}
 
 @override
 String toString() {
-  return 'NetworkSecondStageModel(block: $block, payloads: $payloads)';
+    return 'NetworkSecondStageModel(block: $block, payloads: $payloads)';
 }
 
 

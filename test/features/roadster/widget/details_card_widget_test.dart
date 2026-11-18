@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/app/localization.dart';
 import 'package:flutter_bloc_app_template/features/roadster/model/mission.dart';
 import 'package:flutter_bloc_app_template/features/roadster/widget/details_card_widget.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart';
 
 void main() {
   testWidgets('DetailsCardWidget renders correctly',

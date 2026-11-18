@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_app_template/features/cores/bloc/cores_bloc.dart';
 import 'package:flutter_bloc_app_template/features/cores/widget/core_item_widget.dart';
@@ -9,6 +8,7 @@ import 'package:flutter_bloc_app_template/features/cores/widget/cores_not_found_
 import 'package:flutter_bloc_app_template/features/cores/widget/cores_search_filter_widget.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/models/core/core_resource.dart';
+import 'package:material_ui/material_ui.dart';
 
 class CoresScreen extends StatelessWidget {
   const CoresScreen({super.key});
