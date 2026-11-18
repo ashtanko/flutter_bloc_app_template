@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'launches_bloc.dart';
@@ -9,6 +9,7 @@ part of 'launches_bloc.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 /// @nodoc
@@ -20,7 +21,7 @@ mixin _$LaunchesEvent {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is LaunchesEvent);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is LaunchesEvent);
 }
 
 
@@ -29,7 +30,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'LaunchesEvent()';
+    return 'LaunchesEvent()';
 }
 
 
@@ -197,16 +198,18 @@ $LaunchesLoadEventCopyWith<LaunchesLoadEvent> get copyWith => _$LaunchesLoadEven
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is LaunchesLoadEvent&&(identical(other.reload, reload) || other.reload == reload)&&(identical(other.filter, filter) || other.filter == filter));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is LaunchesLoadEvent&&(identical(other.reload, reload) || other.reload == reload)&&(identical(other.filter, filter) || other.filter == filter));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,reload,filter);
+int get hashCode {
+    return Object.hash(runtimeType,reload,filter);
+}
 
 @override
 String toString() {
-  return 'LaunchesEvent.load(reload: $reload, filter: $filter)';
+    return 'LaunchesEvent.load(reload: $reload, filter: $filter)';
 }
 
 
@@ -259,7 +262,7 @@ class _LaunchesRefreshEvent implements LaunchesEvent {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _LaunchesRefreshEvent);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _LaunchesRefreshEvent);
 }
 
 
@@ -268,7 +271,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'LaunchesEvent.refresh()';
+    return 'LaunchesEvent.refresh()';
 }
 
 
@@ -286,7 +289,7 @@ mixin _$LaunchesState {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is LaunchesState);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is LaunchesState);
 }
 
 
@@ -295,7 +298,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'LaunchesState()';
+    return 'LaunchesState()';
 }
 
 
@@ -469,7 +472,7 @@ class LaunchesLoadingState implements LaunchesState {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is LaunchesLoadingState);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is LaunchesLoadingState);
 }
 
 
@@ -478,7 +481,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'LaunchesState.loading()';
+    return 'LaunchesState.loading()';
 }
 
 
@@ -491,7 +494,7 @@ String toString() {
 
 
 class LaunchesSuccessState implements LaunchesState {
-  const LaunchesSuccessState({final  List<LaunchResource> launches = const []}): _launches = launches;
+  const LaunchesSuccessState({ List<LaunchResource> launches = const []}): _launches = launches;
   
 
  final  List<LaunchResource> _launches;
@@ -512,16 +515,18 @@ $LaunchesSuccessStateCopyWith<LaunchesSuccessState> get copyWith => _$LaunchesSu
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is LaunchesSuccessState&&const DeepCollectionEquality().equals(other._launches, _launches));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is LaunchesSuccessState&&const DeepCollectionEquality().equals(other.launches, _launches));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_launches));
+int get hashCode {
+    return Object.hash(runtimeType,const DeepCollectionEquality().hash(_launches));
+}
 
 @override
 String toString() {
-  return 'LaunchesState.success(launches: $launches)';
+    return 'LaunchesState.success(launches: $launches)';
 }
 
 
@@ -573,7 +578,7 @@ class LaunchesErrorState implements LaunchesState {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is LaunchesErrorState);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is LaunchesErrorState);
 }
 
 
@@ -582,7 +587,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'LaunchesState.error()';
+    return 'LaunchesState.error()';
 }
 
 
@@ -605,7 +610,7 @@ class LaunchesEmptyState implements LaunchesState {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is LaunchesEmptyState);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is LaunchesEmptyState);
 }
 
 
@@ -614,7 +619,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'LaunchesState.empty()';
+    return 'LaunchesState.empty()';
 }
 
 

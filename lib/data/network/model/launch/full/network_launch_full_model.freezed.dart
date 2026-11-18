@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'network_launch_full_model.dart';
@@ -9,6 +9,7 @@ part of 'network_launch_full_model.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $NetworkLaunchFullModelCopyWith<NetworkLaunchFullModel> get copyWith => _$Networ
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkLaunchFullModel&&(identical(other.id, id) || other.id == id)&&(identical(other.flightNumber, flightNumber) || other.flightNumber == flightNumber)&&(identical(other.missionName, missionName) || other.missionName == missionName)&&const DeepCollectionEquality().equals(other.missionId, missionId)&&(identical(other.upcoming, upcoming) || other.upcoming == upcoming)&&(identical(other.launchYear, launchYear) || other.launchYear == launchYear)&&(identical(other.launchDateUnix, launchDateUnix) || other.launchDateUnix == launchDateUnix)&&(identical(other.launchDate, launchDate) || other.launchDate == launchDate)&&(identical(other.launchDateLocal, launchDateLocal) || other.launchDateLocal == launchDateLocal)&&(identical(other.isTentative, isTentative) || other.isTentative == isTentative)&&(identical(other.tentativeMaxPrecision, tentativeMaxPrecision) || other.tentativeMaxPrecision == tentativeMaxPrecision)&&(identical(other.tbd, tbd) || other.tbd == tbd)&&(identical(other.launchWindow, launchWindow) || other.launchWindow == launchWindow)&&(identical(other.rocket, rocket) || other.rocket == rocket)&&const DeepCollectionEquality().equals(other.ships, ships)&&(identical(other.telemetry, telemetry) || other.telemetry == telemetry)&&(identical(other.launchSite, launchSite) || other.launchSite == launchSite)&&(identical(other.success, success) || other.success == success)&&(identical(other.launchFailureDetails, launchFailureDetails) || other.launchFailureDetails == launchFailureDetails)&&(identical(other.links, links) || other.links == links)&&(identical(other.details, details) || other.details == details)&&(identical(other.staticFireDate, staticFireDate) || other.staticFireDate == staticFireDate)&&(identical(other.staticFireDateUnix, staticFireDateUnix) || other.staticFireDateUnix == staticFireDateUnix)&&(identical(other.timeline, timeline) || other.timeline == timeline));
+  final _this = this as NetworkLaunchFullModel;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkLaunchFullModel&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.flightNumber, _this.flightNumber) || other.flightNumber == _this.flightNumber)&&(identical(other.missionName, _this.missionName) || other.missionName == _this.missionName)&&const DeepCollectionEquality().equals(other.missionId, _this.missionId)&&(identical(other.upcoming, _this.upcoming) || other.upcoming == _this.upcoming)&&(identical(other.launchYear, _this.launchYear) || other.launchYear == _this.launchYear)&&(identical(other.launchDateUnix, _this.launchDateUnix) || other.launchDateUnix == _this.launchDateUnix)&&(identical(other.launchDate, _this.launchDate) || other.launchDate == _this.launchDate)&&(identical(other.launchDateLocal, _this.launchDateLocal) || other.launchDateLocal == _this.launchDateLocal)&&(identical(other.isTentative, _this.isTentative) || other.isTentative == _this.isTentative)&&(identical(other.tentativeMaxPrecision, _this.tentativeMaxPrecision) || other.tentativeMaxPrecision == _this.tentativeMaxPrecision)&&(identical(other.tbd, _this.tbd) || other.tbd == _this.tbd)&&(identical(other.launchWindow, _this.launchWindow) || other.launchWindow == _this.launchWindow)&&(identical(other.rocket, _this.rocket) || other.rocket == _this.rocket)&&const DeepCollectionEquality().equals(other.ships, _this.ships)&&(identical(other.telemetry, _this.telemetry) || other.telemetry == _this.telemetry)&&(identical(other.launchSite, _this.launchSite) || other.launchSite == _this.launchSite)&&(identical(other.success, _this.success) || other.success == _this.success)&&(identical(other.launchFailureDetails, _this.launchFailureDetails) || other.launchFailureDetails == _this.launchFailureDetails)&&(identical(other.links, _this.links) || other.links == _this.links)&&(identical(other.details, _this.details) || other.details == _this.details)&&(identical(other.staticFireDate, _this.staticFireDate) || other.staticFireDate == _this.staticFireDate)&&(identical(other.staticFireDateUnix, _this.staticFireDateUnix) || other.staticFireDateUnix == _this.staticFireDateUnix)&&(identical(other.timeline, _this.timeline) || other.timeline == _this.timeline));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,id,flightNumber,missionName,const DeepCollectionEquality().hash(missionId),upcoming,launchYear,launchDateUnix,launchDate,launchDateLocal,isTentative,tentativeMaxPrecision,tbd,launchWindow,rocket,const DeepCollectionEquality().hash(ships),telemetry,launchSite,success,launchFailureDetails,links,details,staticFireDate,staticFireDateUnix,timeline]);
+int get hashCode {
+  final _this = this as NetworkLaunchFullModel;
+  return Object.hashAll([runtimeType,_this.id,_this.flightNumber,_this.missionName,const DeepCollectionEquality().hash(_this.missionId),_this.upcoming,_this.launchYear,_this.launchDateUnix,_this.launchDate,_this.launchDateLocal,_this.isTentative,_this.tentativeMaxPrecision,_this.tbd,_this.launchWindow,_this.rocket,const DeepCollectionEquality().hash(_this.ships),_this.telemetry,_this.launchSite,_this.success,_this.launchFailureDetails,_this.links,_this.details,_this.staticFireDate,_this.staticFireDateUnix,_this.timeline]);
+}
 
 @override
 String toString() {
-  return 'NetworkLaunchFullModel(id: $id, flightNumber: $flightNumber, missionName: $missionName, missionId: $missionId, upcoming: $upcoming, launchYear: $launchYear, launchDateUnix: $launchDateUnix, launchDate: $launchDate, launchDateLocal: $launchDateLocal, isTentative: $isTentative, tentativeMaxPrecision: $tentativeMaxPrecision, tbd: $tbd, launchWindow: $launchWindow, rocket: $rocket, ships: $ships, telemetry: $telemetry, launchSite: $launchSite, success: $success, launchFailureDetails: $launchFailureDetails, links: $links, details: $details, staticFireDate: $staticFireDate, staticFireDateUnix: $staticFireDateUnix, timeline: $timeline)';
+  final _this = this as NetworkLaunchFullModel;
+  return 'NetworkLaunchFullModel(id: ${_this.id}, flightNumber: ${_this.flightNumber}, missionName: ${_this.missionName}, missionId: ${_this.missionId}, upcoming: ${_this.upcoming}, launchYear: ${_this.launchYear}, launchDateUnix: ${_this.launchDateUnix}, launchDate: ${_this.launchDate}, launchDateLocal: ${_this.launchDateLocal}, isTentative: ${_this.isTentative}, tentativeMaxPrecision: ${_this.tentativeMaxPrecision}, tbd: ${_this.tbd}, launchWindow: ${_this.launchWindow}, rocket: ${_this.rocket}, ships: ${_this.ships}, telemetry: ${_this.telemetry}, launchSite: ${_this.launchSite}, success: ${_this.success}, launchFailureDetails: ${_this.launchFailureDetails}, links: ${_this.links}, details: ${_this.details}, staticFireDate: ${_this.staticFireDate}, staticFireDateUnix: ${_this.staticFireDateUnix}, timeline: ${_this.timeline})';
 }
 
 
@@ -66,7 +72,7 @@ class _$NetworkLaunchFullModelCopyWithImpl<$Res>
 /// Create a copy of NetworkLaunchFullModel
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = freezed,Object? flightNumber = freezed,Object? missionName = freezed,Object? missionId = freezed,Object? upcoming = freezed,Object? launchYear = freezed,Object? launchDateUnix = freezed,Object? launchDate = freezed,Object? launchDateLocal = freezed,Object? isTentative = freezed,Object? tentativeMaxPrecision = freezed,Object? tbd = freezed,Object? launchWindow = freezed,Object? rocket = freezed,Object? ships = freezed,Object? telemetry = freezed,Object? launchSite = freezed,Object? success = freezed,Object? launchFailureDetails = freezed,Object? links = freezed,Object? details = freezed,Object? staticFireDate = freezed,Object? staticFireDateUnix = freezed,Object? timeline = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkLaunchFullModel(
 id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String?,flightNumber: freezed == flightNumber ? _self.flightNumber : flightNumber // ignore: cast_nullable_to_non_nullable
 as int?,missionName: freezed == missionName ? _self.missionName : missionName // ignore: cast_nullable_to_non_nullable
@@ -304,7 +310,7 @@ return $default(_that.id,_that.flightNumber,_that.missionName,_that.missionId,_t
 @JsonSerializable()
 
 class _NetworkLaunchFullModel implements NetworkLaunchFullModel {
-  const _NetworkLaunchFullModel({@JsonKey(name: '_id') this.id, @JsonKey(name: 'flight_number') this.flightNumber, @JsonKey(name: 'mission_name') this.missionName, @JsonKey(name: 'mission_id') final  List<dynamic>? missionId, @JsonKey(name: 'upcoming') this.upcoming, @JsonKey(name: 'launch_year') this.launchYear, @JsonKey(name: 'launch_date_unix') this.launchDateUnix, @TimestampSerializer()@JsonKey(name: 'launch_date_utc') this.launchDate, @JsonKey(name: 'launch_date_local') this.launchDateLocal, @JsonKey(name: 'is_tentative') this.isTentative, @JsonKey(name: 'tentative_max_precision') this.tentativeMaxPrecision, @JsonKey(name: 'tbd') this.tbd, @JsonKey(name: 'launch_window') this.launchWindow, @JsonKey(name: 'rocket') this.rocket, @JsonKey(name: 'ships') final  List<String>? ships, @JsonKey(name: 'telemetry') this.telemetry, @JsonKey(name: 'launch_site') this.launchSite, @JsonKey(name: 'launch_success') this.success, @JsonKey(name: 'launch_failure_details') this.launchFailureDetails, @JsonKey(name: 'links') this.links, this.details, @TimestampSerializer()@JsonKey(name: 'static_fire_date_utc') this.staticFireDate, @JsonKey(name: 'static_fire_date_unix') this.staticFireDateUnix, this.timeline}): _missionId = missionId,_ships = ships;
+  const _NetworkLaunchFullModel({@JsonKey(name: '_id') this.id, @JsonKey(name: 'flight_number') this.flightNumber, @JsonKey(name: 'mission_name') this.missionName, @JsonKey(name: 'mission_id')  List<dynamic>? missionId, @JsonKey(name: 'upcoming') this.upcoming, @JsonKey(name: 'launch_year') this.launchYear, @JsonKey(name: 'launch_date_unix') this.launchDateUnix, @TimestampSerializer()@JsonKey(name: 'launch_date_utc') this.launchDate, @JsonKey(name: 'launch_date_local') this.launchDateLocal, @JsonKey(name: 'is_tentative') this.isTentative, @JsonKey(name: 'tentative_max_precision') this.tentativeMaxPrecision, @JsonKey(name: 'tbd') this.tbd, @JsonKey(name: 'launch_window') this.launchWindow, @JsonKey(name: 'rocket') this.rocket, @JsonKey(name: 'ships')  List<String>? ships, @JsonKey(name: 'telemetry') this.telemetry, @JsonKey(name: 'launch_site') this.launchSite, @JsonKey(name: 'launch_success') this.success, @JsonKey(name: 'launch_failure_details') this.launchFailureDetails, @JsonKey(name: 'links') this.links, this.details, @TimestampSerializer()@JsonKey(name: 'static_fire_date_utc') this.staticFireDate, @JsonKey(name: 'static_fire_date_unix') this.staticFireDateUnix, this.timeline}): _missionId = missionId,_ships = ships;
   factory _NetworkLaunchFullModel.fromJson(Map<String, dynamic> json) => _$NetworkLaunchFullModelFromJson(json);
 
 @override@JsonKey(name: '_id') final  String? id;
@@ -361,16 +367,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkLaunchFullModel&&(identical(other.id, id) || other.id == id)&&(identical(other.flightNumber, flightNumber) || other.flightNumber == flightNumber)&&(identical(other.missionName, missionName) || other.missionName == missionName)&&const DeepCollectionEquality().equals(other._missionId, _missionId)&&(identical(other.upcoming, upcoming) || other.upcoming == upcoming)&&(identical(other.launchYear, launchYear) || other.launchYear == launchYear)&&(identical(other.launchDateUnix, launchDateUnix) || other.launchDateUnix == launchDateUnix)&&(identical(other.launchDate, launchDate) || other.launchDate == launchDate)&&(identical(other.launchDateLocal, launchDateLocal) || other.launchDateLocal == launchDateLocal)&&(identical(other.isTentative, isTentative) || other.isTentative == isTentative)&&(identical(other.tentativeMaxPrecision, tentativeMaxPrecision) || other.tentativeMaxPrecision == tentativeMaxPrecision)&&(identical(other.tbd, tbd) || other.tbd == tbd)&&(identical(other.launchWindow, launchWindow) || other.launchWindow == launchWindow)&&(identical(other.rocket, rocket) || other.rocket == rocket)&&const DeepCollectionEquality().equals(other._ships, _ships)&&(identical(other.telemetry, telemetry) || other.telemetry == telemetry)&&(identical(other.launchSite, launchSite) || other.launchSite == launchSite)&&(identical(other.success, success) || other.success == success)&&(identical(other.launchFailureDetails, launchFailureDetails) || other.launchFailureDetails == launchFailureDetails)&&(identical(other.links, links) || other.links == links)&&(identical(other.details, details) || other.details == details)&&(identical(other.staticFireDate, staticFireDate) || other.staticFireDate == staticFireDate)&&(identical(other.staticFireDateUnix, staticFireDateUnix) || other.staticFireDateUnix == staticFireDateUnix)&&(identical(other.timeline, timeline) || other.timeline == timeline));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkLaunchFullModel&&(identical(other.id, id) || other.id == id)&&(identical(other.flightNumber, flightNumber) || other.flightNumber == flightNumber)&&(identical(other.missionName, missionName) || other.missionName == missionName)&&const DeepCollectionEquality().equals(other.missionId, _missionId)&&(identical(other.upcoming, upcoming) || other.upcoming == upcoming)&&(identical(other.launchYear, launchYear) || other.launchYear == launchYear)&&(identical(other.launchDateUnix, launchDateUnix) || other.launchDateUnix == launchDateUnix)&&(identical(other.launchDate, launchDate) || other.launchDate == launchDate)&&(identical(other.launchDateLocal, launchDateLocal) || other.launchDateLocal == launchDateLocal)&&(identical(other.isTentative, isTentative) || other.isTentative == isTentative)&&(identical(other.tentativeMaxPrecision, tentativeMaxPrecision) || other.tentativeMaxPrecision == tentativeMaxPrecision)&&(identical(other.tbd, tbd) || other.tbd == tbd)&&(identical(other.launchWindow, launchWindow) || other.launchWindow == launchWindow)&&(identical(other.rocket, rocket) || other.rocket == rocket)&&const DeepCollectionEquality().equals(other.ships, _ships)&&(identical(other.telemetry, telemetry) || other.telemetry == telemetry)&&(identical(other.launchSite, launchSite) || other.launchSite == launchSite)&&(identical(other.success, success) || other.success == success)&&(identical(other.launchFailureDetails, launchFailureDetails) || other.launchFailureDetails == launchFailureDetails)&&(identical(other.links, links) || other.links == links)&&(identical(other.details, details) || other.details == details)&&(identical(other.staticFireDate, staticFireDate) || other.staticFireDate == staticFireDate)&&(identical(other.staticFireDateUnix, staticFireDateUnix) || other.staticFireDateUnix == staticFireDateUnix)&&(identical(other.timeline, timeline) || other.timeline == timeline));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,id,flightNumber,missionName,const DeepCollectionEquality().hash(_missionId),upcoming,launchYear,launchDateUnix,launchDate,launchDateLocal,isTentative,tentativeMaxPrecision,tbd,launchWindow,rocket,const DeepCollectionEquality().hash(_ships),telemetry,launchSite,success,launchFailureDetails,links,details,staticFireDate,staticFireDateUnix,timeline]);
+int get hashCode {
+    return Object.hashAll([runtimeType,id,flightNumber,missionName,const DeepCollectionEquality().hash(_missionId),upcoming,launchYear,launchDateUnix,launchDate,launchDateLocal,isTentative,tentativeMaxPrecision,tbd,launchWindow,rocket,const DeepCollectionEquality().hash(_ships),telemetry,launchSite,success,launchFailureDetails,links,details,staticFireDate,staticFireDateUnix,timeline]);
+}
 
 @override
 String toString() {
-  return 'NetworkLaunchFullModel(id: $id, flightNumber: $flightNumber, missionName: $missionName, missionId: $missionId, upcoming: $upcoming, launchYear: $launchYear, launchDateUnix: $launchDateUnix, launchDate: $launchDate, launchDateLocal: $launchDateLocal, isTentative: $isTentative, tentativeMaxPrecision: $tentativeMaxPrecision, tbd: $tbd, launchWindow: $launchWindow, rocket: $rocket, ships: $ships, telemetry: $telemetry, launchSite: $launchSite, success: $success, launchFailureDetails: $launchFailureDetails, links: $links, details: $details, staticFireDate: $staticFireDate, staticFireDateUnix: $staticFireDateUnix, timeline: $timeline)';
+    return 'NetworkLaunchFullModel(id: $id, flightNumber: $flightNumber, missionName: $missionName, missionId: $missionId, upcoming: $upcoming, launchYear: $launchYear, launchDateUnix: $launchDateUnix, launchDate: $launchDate, launchDateLocal: $launchDateLocal, isTentative: $isTentative, tentativeMaxPrecision: $tentativeMaxPrecision, tbd: $tbd, launchWindow: $launchWindow, rocket: $rocket, ships: $ships, telemetry: $telemetry, launchSite: $launchSite, success: $success, launchFailureDetails: $launchFailureDetails, links: $links, details: $details, staticFireDate: $staticFireDate, staticFireDateUnix: $staticFireDateUnix, timeline: $timeline)';
 }
 
 
@@ -520,16 +528,21 @@ $NetworkFirstStageCopyWith<NetworkFirstStage> get copyWith => _$NetworkFirstStag
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkFirstStage&&const DeepCollectionEquality().equals(other.cores, cores));
+  final _this = this as NetworkFirstStage;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkFirstStage&&const DeepCollectionEquality().equals(other.cores, _this.cores));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(cores));
+int get hashCode {
+  final _this = this as NetworkFirstStage;
+  return Object.hash(runtimeType,const DeepCollectionEquality().hash(_this.cores));
+}
 
 @override
 String toString() {
-  return 'NetworkFirstStage(cores: $cores)';
+  final _this = this as NetworkFirstStage;
+  return 'NetworkFirstStage(cores: ${_this.cores})';
 }
 
 
@@ -558,7 +571,7 @@ class _$NetworkFirstStageCopyWithImpl<$Res>
 /// Create a copy of NetworkFirstStage
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? cores = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkFirstStage(
 cores: freezed == cores ? _self.cores : cores // ignore: cast_nullable_to_non_nullable
 as List<NetworkCore>?,
   ));
@@ -701,7 +714,7 @@ return $default(_that.cores);case _:
 @JsonSerializable()
 
 class _NetworkFirstStage implements NetworkFirstStage {
-  const _NetworkFirstStage({required final  List<NetworkCore>? cores}): _cores = cores;
+  const _NetworkFirstStage({required  List<NetworkCore>? cores}): _cores = cores;
   factory _NetworkFirstStage.fromJson(Map<String, dynamic> json) => _$NetworkFirstStageFromJson(json);
 
  final  List<NetworkCore>? _cores;
@@ -727,16 +740,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkFirstStage&&const DeepCollectionEquality().equals(other._cores, _cores));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkFirstStage&&const DeepCollectionEquality().equals(other.cores, _cores));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_cores));
+int get hashCode {
+    return Object.hash(runtimeType,const DeepCollectionEquality().hash(_cores));
+}
 
 @override
 String toString() {
-  return 'NetworkFirstStage(cores: $cores)';
+    return 'NetworkFirstStage(cores: $cores)';
 }
 
 
@@ -791,16 +806,21 @@ $NetworkCoreCopyWith<NetworkCore> get copyWith => _$NetworkCoreCopyWithImpl<Netw
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkCore&&(identical(other.coreSerial, coreSerial) || other.coreSerial == coreSerial)&&(identical(other.flight, flight) || other.flight == flight)&&(identical(other.block, block) || other.block == block)&&(identical(other.gridfins, gridfins) || other.gridfins == gridfins)&&(identical(other.legs, legs) || other.legs == legs)&&(identical(other.reused, reused) || other.reused == reused)&&(identical(other.landSuccess, landSuccess) || other.landSuccess == landSuccess)&&(identical(other.landingIntent, landingIntent) || other.landingIntent == landingIntent)&&(identical(other.landingType, landingType) || other.landingType == landingType)&&(identical(other.landingVehicle, landingVehicle) || other.landingVehicle == landingVehicle));
+  final _this = this as NetworkCore;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkCore&&(identical(other.coreSerial, _this.coreSerial) || other.coreSerial == _this.coreSerial)&&(identical(other.flight, _this.flight) || other.flight == _this.flight)&&(identical(other.block, _this.block) || other.block == _this.block)&&(identical(other.gridfins, _this.gridfins) || other.gridfins == _this.gridfins)&&(identical(other.legs, _this.legs) || other.legs == _this.legs)&&(identical(other.reused, _this.reused) || other.reused == _this.reused)&&(identical(other.landSuccess, _this.landSuccess) || other.landSuccess == _this.landSuccess)&&(identical(other.landingIntent, _this.landingIntent) || other.landingIntent == _this.landingIntent)&&(identical(other.landingType, _this.landingType) || other.landingType == _this.landingType)&&(identical(other.landingVehicle, _this.landingVehicle) || other.landingVehicle == _this.landingVehicle));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,coreSerial,flight,block,gridfins,legs,reused,landSuccess,landingIntent,landingType,landingVehicle);
+int get hashCode {
+  final _this = this as NetworkCore;
+  return Object.hash(runtimeType,_this.coreSerial,_this.flight,_this.block,_this.gridfins,_this.legs,_this.reused,_this.landSuccess,_this.landingIntent,_this.landingType,_this.landingVehicle);
+}
 
 @override
 String toString() {
-  return 'NetworkCore(coreSerial: $coreSerial, flight: $flight, block: $block, gridfins: $gridfins, legs: $legs, reused: $reused, landSuccess: $landSuccess, landingIntent: $landingIntent, landingType: $landingType, landingVehicle: $landingVehicle)';
+  final _this = this as NetworkCore;
+  return 'NetworkCore(coreSerial: ${_this.coreSerial}, flight: ${_this.flight}, block: ${_this.block}, gridfins: ${_this.gridfins}, legs: ${_this.legs}, reused: ${_this.reused}, landSuccess: ${_this.landSuccess}, landingIntent: ${_this.landingIntent}, landingType: ${_this.landingType}, landingVehicle: ${_this.landingVehicle})';
 }
 
 
@@ -829,7 +849,7 @@ class _$NetworkCoreCopyWithImpl<$Res>
 /// Create a copy of NetworkCore
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? coreSerial = freezed,Object? flight = freezed,Object? block = freezed,Object? gridfins = freezed,Object? legs = freezed,Object? reused = freezed,Object? landSuccess = freezed,Object? landingIntent = freezed,Object? landingType = freezed,Object? landingVehicle = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkCore(
 coreSerial: freezed == coreSerial ? _self.coreSerial : coreSerial // ignore: cast_nullable_to_non_nullable
 as String?,flight: freezed == flight ? _self.flight : flight // ignore: cast_nullable_to_non_nullable
 as int?,block: freezed == block ? _self.block : block // ignore: cast_nullable_to_non_nullable
@@ -1008,16 +1028,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkCore&&(identical(other.coreSerial, coreSerial) || other.coreSerial == coreSerial)&&(identical(other.flight, flight) || other.flight == flight)&&(identical(other.block, block) || other.block == block)&&(identical(other.gridfins, gridfins) || other.gridfins == gridfins)&&(identical(other.legs, legs) || other.legs == legs)&&(identical(other.reused, reused) || other.reused == reused)&&(identical(other.landSuccess, landSuccess) || other.landSuccess == landSuccess)&&(identical(other.landingIntent, landingIntent) || other.landingIntent == landingIntent)&&(identical(other.landingType, landingType) || other.landingType == landingType)&&(identical(other.landingVehicle, landingVehicle) || other.landingVehicle == landingVehicle));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkCore&&(identical(other.coreSerial, coreSerial) || other.coreSerial == coreSerial)&&(identical(other.flight, flight) || other.flight == flight)&&(identical(other.block, block) || other.block == block)&&(identical(other.gridfins, gridfins) || other.gridfins == gridfins)&&(identical(other.legs, legs) || other.legs == legs)&&(identical(other.reused, reused) || other.reused == reused)&&(identical(other.landSuccess, landSuccess) || other.landSuccess == landSuccess)&&(identical(other.landingIntent, landingIntent) || other.landingIntent == landingIntent)&&(identical(other.landingType, landingType) || other.landingType == landingType)&&(identical(other.landingVehicle, landingVehicle) || other.landingVehicle == landingVehicle));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,coreSerial,flight,block,gridfins,legs,reused,landSuccess,landingIntent,landingType,landingVehicle);
+int get hashCode {
+    return Object.hash(runtimeType,coreSerial,flight,block,gridfins,legs,reused,landSuccess,landingIntent,landingType,landingVehicle);
+}
 
 @override
 String toString() {
-  return 'NetworkCore(coreSerial: $coreSerial, flight: $flight, block: $block, gridfins: $gridfins, legs: $legs, reused: $reused, landSuccess: $landSuccess, landingIntent: $landingIntent, landingType: $landingType, landingVehicle: $landingVehicle)';
+    return 'NetworkCore(coreSerial: $coreSerial, flight: $flight, block: $block, gridfins: $gridfins, legs: $legs, reused: $reused, landSuccess: $landSuccess, landingIntent: $landingIntent, landingType: $landingType, landingVehicle: $landingVehicle)';
 }
 
 
@@ -1081,16 +1103,21 @@ $NetworkSecondStageCopyWith<NetworkSecondStage> get copyWith => _$NetworkSecondS
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkSecondStage&&(identical(other.block, block) || other.block == block)&&const DeepCollectionEquality().equals(other.payloads, payloads));
+  final _this = this as NetworkSecondStage;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkSecondStage&&(identical(other.block, _this.block) || other.block == _this.block)&&const DeepCollectionEquality().equals(other.payloads, _this.payloads));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,block,const DeepCollectionEquality().hash(payloads));
+int get hashCode {
+  final _this = this as NetworkSecondStage;
+  return Object.hash(runtimeType,_this.block,const DeepCollectionEquality().hash(_this.payloads));
+}
 
 @override
 String toString() {
-  return 'NetworkSecondStage(block: $block, payloads: $payloads)';
+  final _this = this as NetworkSecondStage;
+  return 'NetworkSecondStage(block: ${_this.block}, payloads: ${_this.payloads})';
 }
 
 
@@ -1119,7 +1146,7 @@ class _$NetworkSecondStageCopyWithImpl<$Res>
 /// Create a copy of NetworkSecondStage
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? block = freezed,Object? payloads = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkSecondStage(
 block: freezed == block ? _self.block : block // ignore: cast_nullable_to_non_nullable
 as int?,payloads: freezed == payloads ? _self.payloads : payloads // ignore: cast_nullable_to_non_nullable
 as List<NetworkPayload>?,
@@ -1263,7 +1290,7 @@ return $default(_that.block,_that.payloads);case _:
 @JsonSerializable()
 
 class _NetworkSecondStage implements NetworkSecondStage {
-  const _NetworkSecondStage({this.block, final  List<NetworkPayload>? payloads}): _payloads = payloads;
+  const _NetworkSecondStage({this.block,  List<NetworkPayload>? payloads}): _payloads = payloads;
   factory _NetworkSecondStage.fromJson(Map<String, dynamic> json) => _$NetworkSecondStageFromJson(json);
 
 @override final  int? block;
@@ -1290,16 +1317,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkSecondStage&&(identical(other.block, block) || other.block == block)&&const DeepCollectionEquality().equals(other._payloads, _payloads));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkSecondStage&&(identical(other.block, block) || other.block == block)&&const DeepCollectionEquality().equals(other.payloads, _payloads));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,block,const DeepCollectionEquality().hash(_payloads));
+int get hashCode {
+    return Object.hash(runtimeType,block,const DeepCollectionEquality().hash(_payloads));
+}
 
 @override
 String toString() {
-  return 'NetworkSecondStage(block: $block, payloads: $payloads)';
+    return 'NetworkSecondStage(block: $block, payloads: $payloads)';
 }
 
 
@@ -1355,16 +1384,21 @@ $NetworkPayloadCopyWith<NetworkPayload> get copyWith => _$NetworkPayloadCopyWith
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkPayload&&(identical(other.payloadId, payloadId) || other.payloadId == payloadId)&&const DeepCollectionEquality().equals(other.noradId, noradId)&&(identical(other.reused, reused) || other.reused == reused)&&const DeepCollectionEquality().equals(other.customers, customers)&&(identical(other.nationality, nationality) || other.nationality == nationality)&&(identical(other.manufacturer, manufacturer) || other.manufacturer == manufacturer)&&(identical(other.payloadType, payloadType) || other.payloadType == payloadType)&&(identical(other.payloadMassKg, payloadMassKg) || other.payloadMassKg == payloadMassKg)&&(identical(other.payloadMassLbs, payloadMassLbs) || other.payloadMassLbs == payloadMassLbs)&&(identical(other.orbit, orbit) || other.orbit == orbit)&&(identical(other.orbitParams, orbitParams) || other.orbitParams == orbitParams));
+  final _this = this as NetworkPayload;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkPayload&&(identical(other.payloadId, _this.payloadId) || other.payloadId == _this.payloadId)&&const DeepCollectionEquality().equals(other.noradId, _this.noradId)&&(identical(other.reused, _this.reused) || other.reused == _this.reused)&&const DeepCollectionEquality().equals(other.customers, _this.customers)&&(identical(other.nationality, _this.nationality) || other.nationality == _this.nationality)&&(identical(other.manufacturer, _this.manufacturer) || other.manufacturer == _this.manufacturer)&&(identical(other.payloadType, _this.payloadType) || other.payloadType == _this.payloadType)&&(identical(other.payloadMassKg, _this.payloadMassKg) || other.payloadMassKg == _this.payloadMassKg)&&(identical(other.payloadMassLbs, _this.payloadMassLbs) || other.payloadMassLbs == _this.payloadMassLbs)&&(identical(other.orbit, _this.orbit) || other.orbit == _this.orbit)&&(identical(other.orbitParams, _this.orbitParams) || other.orbitParams == _this.orbitParams));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,payloadId,const DeepCollectionEquality().hash(noradId),reused,const DeepCollectionEquality().hash(customers),nationality,manufacturer,payloadType,payloadMassKg,payloadMassLbs,orbit,orbitParams);
+int get hashCode {
+  final _this = this as NetworkPayload;
+  return Object.hash(runtimeType,_this.payloadId,const DeepCollectionEquality().hash(_this.noradId),_this.reused,const DeepCollectionEquality().hash(_this.customers),_this.nationality,_this.manufacturer,_this.payloadType,_this.payloadMassKg,_this.payloadMassLbs,_this.orbit,_this.orbitParams);
+}
 
 @override
 String toString() {
-  return 'NetworkPayload(payloadId: $payloadId, noradId: $noradId, reused: $reused, customers: $customers, nationality: $nationality, manufacturer: $manufacturer, payloadType: $payloadType, payloadMassKg: $payloadMassKg, payloadMassLbs: $payloadMassLbs, orbit: $orbit, orbitParams: $orbitParams)';
+  final _this = this as NetworkPayload;
+  return 'NetworkPayload(payloadId: ${_this.payloadId}, noradId: ${_this.noradId}, reused: ${_this.reused}, customers: ${_this.customers}, nationality: ${_this.nationality}, manufacturer: ${_this.manufacturer}, payloadType: ${_this.payloadType}, payloadMassKg: ${_this.payloadMassKg}, payloadMassLbs: ${_this.payloadMassLbs}, orbit: ${_this.orbit}, orbitParams: ${_this.orbitParams})';
 }
 
 
@@ -1393,7 +1427,7 @@ class _$NetworkPayloadCopyWithImpl<$Res>
 /// Create a copy of NetworkPayload
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? payloadId = freezed,Object? noradId = freezed,Object? reused = freezed,Object? customers = freezed,Object? nationality = freezed,Object? manufacturer = freezed,Object? payloadType = freezed,Object? payloadMassKg = freezed,Object? payloadMassLbs = freezed,Object? orbit = freezed,Object? orbitParams = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkPayload(
 payloadId: freezed == payloadId ? _self.payloadId : payloadId // ignore: cast_nullable_to_non_nullable
 as String?,noradId: freezed == noradId ? _self.noradId : noradId // ignore: cast_nullable_to_non_nullable
 as List<dynamic>?,reused: freezed == reused ? _self.reused : reused // ignore: cast_nullable_to_non_nullable
@@ -1558,7 +1592,7 @@ return $default(_that.payloadId,_that.noradId,_that.reused,_that.customers,_that
 @JsonSerializable()
 
 class _NetworkPayload implements NetworkPayload {
-  const _NetworkPayload({@JsonKey(name: 'payload_id') this.payloadId, @JsonKey(name: 'norad_id') final  List<dynamic>? noradId, @JsonKey(name: 'reused') this.reused, @JsonKey(name: 'customers') final  List<String>? customers, @JsonKey(name: 'nationality') this.nationality, @JsonKey(name: 'manufacturer') this.manufacturer, @JsonKey(name: 'payload_type') this.payloadType, @JsonKey(name: 'payload_mass_kg') this.payloadMassKg, @JsonKey(name: 'payload_mass_lbs') this.payloadMassLbs, @JsonKey(name: 'orbit') this.orbit, @JsonKey(name: 'orbit_params') this.orbitParams}): _noradId = noradId,_customers = customers;
+  const _NetworkPayload({@JsonKey(name: 'payload_id') this.payloadId, @JsonKey(name: 'norad_id')  List<dynamic>? noradId, @JsonKey(name: 'reused') this.reused, @JsonKey(name: 'customers')  List<String>? customers, @JsonKey(name: 'nationality') this.nationality, @JsonKey(name: 'manufacturer') this.manufacturer, @JsonKey(name: 'payload_type') this.payloadType, @JsonKey(name: 'payload_mass_kg') this.payloadMassKg, @JsonKey(name: 'payload_mass_lbs') this.payloadMassLbs, @JsonKey(name: 'orbit') this.orbit, @JsonKey(name: 'orbit_params') this.orbitParams}): _noradId = noradId,_customers = customers;
   factory _NetworkPayload.fromJson(Map<String, dynamic> json) => _$NetworkPayloadFromJson(json);
 
 @override@JsonKey(name: 'payload_id') final  String? payloadId;
@@ -1602,16 +1636,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkPayload&&(identical(other.payloadId, payloadId) || other.payloadId == payloadId)&&const DeepCollectionEquality().equals(other._noradId, _noradId)&&(identical(other.reused, reused) || other.reused == reused)&&const DeepCollectionEquality().equals(other._customers, _customers)&&(identical(other.nationality, nationality) || other.nationality == nationality)&&(identical(other.manufacturer, manufacturer) || other.manufacturer == manufacturer)&&(identical(other.payloadType, payloadType) || other.payloadType == payloadType)&&(identical(other.payloadMassKg, payloadMassKg) || other.payloadMassKg == payloadMassKg)&&(identical(other.payloadMassLbs, payloadMassLbs) || other.payloadMassLbs == payloadMassLbs)&&(identical(other.orbit, orbit) || other.orbit == orbit)&&(identical(other.orbitParams, orbitParams) || other.orbitParams == orbitParams));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkPayload&&(identical(other.payloadId, payloadId) || other.payloadId == payloadId)&&const DeepCollectionEquality().equals(other.noradId, _noradId)&&(identical(other.reused, reused) || other.reused == reused)&&const DeepCollectionEquality().equals(other.customers, _customers)&&(identical(other.nationality, nationality) || other.nationality == nationality)&&(identical(other.manufacturer, manufacturer) || other.manufacturer == manufacturer)&&(identical(other.payloadType, payloadType) || other.payloadType == payloadType)&&(identical(other.payloadMassKg, payloadMassKg) || other.payloadMassKg == payloadMassKg)&&(identical(other.payloadMassLbs, payloadMassLbs) || other.payloadMassLbs == payloadMassLbs)&&(identical(other.orbit, orbit) || other.orbit == orbit)&&(identical(other.orbitParams, orbitParams) || other.orbitParams == orbitParams));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,payloadId,const DeepCollectionEquality().hash(_noradId),reused,const DeepCollectionEquality().hash(_customers),nationality,manufacturer,payloadType,payloadMassKg,payloadMassLbs,orbit,orbitParams);
+int get hashCode {
+    return Object.hash(runtimeType,payloadId,const DeepCollectionEquality().hash(_noradId),reused,const DeepCollectionEquality().hash(_customers),nationality,manufacturer,payloadType,payloadMassKg,payloadMassLbs,orbit,orbitParams);
+}
 
 @override
 String toString() {
-  return 'NetworkPayload(payloadId: $payloadId, noradId: $noradId, reused: $reused, customers: $customers, nationality: $nationality, manufacturer: $manufacturer, payloadType: $payloadType, payloadMassKg: $payloadMassKg, payloadMassLbs: $payloadMassLbs, orbit: $orbit, orbitParams: $orbitParams)';
+    return 'NetworkPayload(payloadId: $payloadId, noradId: $noradId, reused: $reused, customers: $customers, nationality: $nationality, manufacturer: $manufacturer, payloadType: $payloadType, payloadMassKg: $payloadMassKg, payloadMassLbs: $payloadMassLbs, orbit: $orbit, orbitParams: $orbitParams)';
 }
 
 
@@ -1688,16 +1724,21 @@ $NetworkOrbitParamsCopyWith<NetworkOrbitParams> get copyWith => _$NetworkOrbitPa
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkOrbitParams&&(identical(other.referenceSystem, referenceSystem) || other.referenceSystem == referenceSystem)&&(identical(other.regime, regime) || other.regime == regime)&&(identical(other.longitude, longitude) || other.longitude == longitude)&&(identical(other.semiMajorAxisKm, semiMajorAxisKm) || other.semiMajorAxisKm == semiMajorAxisKm)&&(identical(other.eccentricity, eccentricity) || other.eccentricity == eccentricity)&&(identical(other.periapsisKm, periapsisKm) || other.periapsisKm == periapsisKm)&&(identical(other.apoapsisKm, apoapsisKm) || other.apoapsisKm == apoapsisKm)&&(identical(other.inclinationDeg, inclinationDeg) || other.inclinationDeg == inclinationDeg));
+  final _this = this as NetworkOrbitParams;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkOrbitParams&&(identical(other.referenceSystem, _this.referenceSystem) || other.referenceSystem == _this.referenceSystem)&&(identical(other.regime, _this.regime) || other.regime == _this.regime)&&(identical(other.longitude, _this.longitude) || other.longitude == _this.longitude)&&(identical(other.semiMajorAxisKm, _this.semiMajorAxisKm) || other.semiMajorAxisKm == _this.semiMajorAxisKm)&&(identical(other.eccentricity, _this.eccentricity) || other.eccentricity == _this.eccentricity)&&(identical(other.periapsisKm, _this.periapsisKm) || other.periapsisKm == _this.periapsisKm)&&(identical(other.apoapsisKm, _this.apoapsisKm) || other.apoapsisKm == _this.apoapsisKm)&&(identical(other.inclinationDeg, _this.inclinationDeg) || other.inclinationDeg == _this.inclinationDeg));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,referenceSystem,regime,longitude,semiMajorAxisKm,eccentricity,periapsisKm,apoapsisKm,inclinationDeg);
+int get hashCode {
+  final _this = this as NetworkOrbitParams;
+  return Object.hash(runtimeType,_this.referenceSystem,_this.regime,_this.longitude,_this.semiMajorAxisKm,_this.eccentricity,_this.periapsisKm,_this.apoapsisKm,_this.inclinationDeg);
+}
 
 @override
 String toString() {
-  return 'NetworkOrbitParams(referenceSystem: $referenceSystem, regime: $regime, longitude: $longitude, semiMajorAxisKm: $semiMajorAxisKm, eccentricity: $eccentricity, periapsisKm: $periapsisKm, apoapsisKm: $apoapsisKm, inclinationDeg: $inclinationDeg)';
+  final _this = this as NetworkOrbitParams;
+  return 'NetworkOrbitParams(referenceSystem: ${_this.referenceSystem}, regime: ${_this.regime}, longitude: ${_this.longitude}, semiMajorAxisKm: ${_this.semiMajorAxisKm}, eccentricity: ${_this.eccentricity}, periapsisKm: ${_this.periapsisKm}, apoapsisKm: ${_this.apoapsisKm}, inclinationDeg: ${_this.inclinationDeg})';
 }
 
 
@@ -1726,7 +1767,7 @@ class _$NetworkOrbitParamsCopyWithImpl<$Res>
 /// Create a copy of NetworkOrbitParams
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? referenceSystem = freezed,Object? regime = freezed,Object? longitude = freezed,Object? semiMajorAxisKm = freezed,Object? eccentricity = freezed,Object? periapsisKm = freezed,Object? apoapsisKm = freezed,Object? inclinationDeg = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkOrbitParams(
 referenceSystem: freezed == referenceSystem ? _self.referenceSystem : referenceSystem // ignore: cast_nullable_to_non_nullable
 as String?,regime: freezed == regime ? _self.regime : regime // ignore: cast_nullable_to_non_nullable
 as String?,longitude: freezed == longitude ? _self.longitude : longitude // ignore: cast_nullable_to_non_nullable
@@ -1901,16 +1942,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkOrbitParams&&(identical(other.referenceSystem, referenceSystem) || other.referenceSystem == referenceSystem)&&(identical(other.regime, regime) || other.regime == regime)&&(identical(other.longitude, longitude) || other.longitude == longitude)&&(identical(other.semiMajorAxisKm, semiMajorAxisKm) || other.semiMajorAxisKm == semiMajorAxisKm)&&(identical(other.eccentricity, eccentricity) || other.eccentricity == eccentricity)&&(identical(other.periapsisKm, periapsisKm) || other.periapsisKm == periapsisKm)&&(identical(other.apoapsisKm, apoapsisKm) || other.apoapsisKm == apoapsisKm)&&(identical(other.inclinationDeg, inclinationDeg) || other.inclinationDeg == inclinationDeg));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkOrbitParams&&(identical(other.referenceSystem, referenceSystem) || other.referenceSystem == referenceSystem)&&(identical(other.regime, regime) || other.regime == regime)&&(identical(other.longitude, longitude) || other.longitude == longitude)&&(identical(other.semiMajorAxisKm, semiMajorAxisKm) || other.semiMajorAxisKm == semiMajorAxisKm)&&(identical(other.eccentricity, eccentricity) || other.eccentricity == eccentricity)&&(identical(other.periapsisKm, periapsisKm) || other.periapsisKm == periapsisKm)&&(identical(other.apoapsisKm, apoapsisKm) || other.apoapsisKm == apoapsisKm)&&(identical(other.inclinationDeg, inclinationDeg) || other.inclinationDeg == inclinationDeg));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,referenceSystem,regime,longitude,semiMajorAxisKm,eccentricity,periapsisKm,apoapsisKm,inclinationDeg);
+int get hashCode {
+    return Object.hash(runtimeType,referenceSystem,regime,longitude,semiMajorAxisKm,eccentricity,periapsisKm,apoapsisKm,inclinationDeg);
+}
 
 @override
 String toString() {
-  return 'NetworkOrbitParams(referenceSystem: $referenceSystem, regime: $regime, longitude: $longitude, semiMajorAxisKm: $semiMajorAxisKm, eccentricity: $eccentricity, periapsisKm: $periapsisKm, apoapsisKm: $apoapsisKm, inclinationDeg: $inclinationDeg)';
+    return 'NetworkOrbitParams(referenceSystem: $referenceSystem, regime: $regime, longitude: $longitude, semiMajorAxisKm: $semiMajorAxisKm, eccentricity: $eccentricity, periapsisKm: $periapsisKm, apoapsisKm: $apoapsisKm, inclinationDeg: $inclinationDeg)';
 }
 
 
@@ -1972,16 +2015,21 @@ $NetworkFairingsCopyWith<NetworkFairings> get copyWith => _$NetworkFairingsCopyW
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkFairings&&(identical(other.reused, reused) || other.reused == reused)&&(identical(other.recoveryAttempt, recoveryAttempt) || other.recoveryAttempt == recoveryAttempt)&&(identical(other.recovered, recovered) || other.recovered == recovered)&&(identical(other.ship, ship) || other.ship == ship));
+  final _this = this as NetworkFairings;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkFairings&&(identical(other.reused, _this.reused) || other.reused == _this.reused)&&(identical(other.recoveryAttempt, _this.recoveryAttempt) || other.recoveryAttempt == _this.recoveryAttempt)&&(identical(other.recovered, _this.recovered) || other.recovered == _this.recovered)&&(identical(other.ship, _this.ship) || other.ship == _this.ship));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,reused,recoveryAttempt,recovered,ship);
+int get hashCode {
+  final _this = this as NetworkFairings;
+  return Object.hash(runtimeType,_this.reused,_this.recoveryAttempt,_this.recovered,_this.ship);
+}
 
 @override
 String toString() {
-  return 'NetworkFairings(reused: $reused, recoveryAttempt: $recoveryAttempt, recovered: $recovered, ship: $ship)';
+  final _this = this as NetworkFairings;
+  return 'NetworkFairings(reused: ${_this.reused}, recoveryAttempt: ${_this.recoveryAttempt}, recovered: ${_this.recovered}, ship: ${_this.ship})';
 }
 
 
@@ -2010,7 +2058,7 @@ class _$NetworkFairingsCopyWithImpl<$Res>
 /// Create a copy of NetworkFairings
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? reused = freezed,Object? recoveryAttempt = freezed,Object? recovered = freezed,Object? ship = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkFairings(
 reused: freezed == reused ? _self.reused : reused // ignore: cast_nullable_to_non_nullable
 as bool?,recoveryAttempt: freezed == recoveryAttempt ? _self.recoveryAttempt : recoveryAttempt // ignore: cast_nullable_to_non_nullable
 as bool?,recovered: freezed == recovered ? _self.recovered : recovered // ignore: cast_nullable_to_non_nullable
@@ -2177,16 +2225,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkFairings&&(identical(other.reused, reused) || other.reused == reused)&&(identical(other.recoveryAttempt, recoveryAttempt) || other.recoveryAttempt == recoveryAttempt)&&(identical(other.recovered, recovered) || other.recovered == recovered)&&(identical(other.ship, ship) || other.ship == ship));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkFairings&&(identical(other.reused, reused) || other.reused == reused)&&(identical(other.recoveryAttempt, recoveryAttempt) || other.recoveryAttempt == recoveryAttempt)&&(identical(other.recovered, recovered) || other.recovered == recovered)&&(identical(other.ship, ship) || other.ship == ship));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,reused,recoveryAttempt,recovered,ship);
+int get hashCode {
+    return Object.hash(runtimeType,reused,recoveryAttempt,recovered,ship);
+}
 
 @override
 String toString() {
-  return 'NetworkFairings(reused: $reused, recoveryAttempt: $recoveryAttempt, recovered: $recovered, ship: $ship)';
+    return 'NetworkFairings(reused: $reused, recoveryAttempt: $recoveryAttempt, recovered: $recovered, ship: $ship)';
 }
 
 
@@ -2244,16 +2294,21 @@ $NetworkTelemetryCopyWith<NetworkTelemetry> get copyWith => _$NetworkTelemetryCo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkTelemetry&&(identical(other.flightClub, flightClub) || other.flightClub == flightClub));
+  final _this = this as NetworkTelemetry;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkTelemetry&&(identical(other.flightClub, _this.flightClub) || other.flightClub == _this.flightClub));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,flightClub);
+int get hashCode {
+  final _this = this as NetworkTelemetry;
+  return Object.hash(runtimeType,_this.flightClub);
+}
 
 @override
 String toString() {
-  return 'NetworkTelemetry(flightClub: $flightClub)';
+  final _this = this as NetworkTelemetry;
+  return 'NetworkTelemetry(flightClub: ${_this.flightClub})';
 }
 
 
@@ -2282,7 +2337,7 @@ class _$NetworkTelemetryCopyWithImpl<$Res>
 /// Create a copy of NetworkTelemetry
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? flightClub = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkTelemetry(
 flightClub: freezed == flightClub ? _self.flightClub : flightClub // ignore: cast_nullable_to_non_nullable
 as String?,
   ));
@@ -2443,16 +2498,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkTelemetry&&(identical(other.flightClub, flightClub) || other.flightClub == flightClub));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkTelemetry&&(identical(other.flightClub, flightClub) || other.flightClub == flightClub));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,flightClub);
+int get hashCode {
+    return Object.hash(runtimeType,flightClub);
+}
 
 @override
 String toString() {
-  return 'NetworkTelemetry(flightClub: $flightClub)';
+    return 'NetworkTelemetry(flightClub: $flightClub)';
 }
 
 
@@ -2507,16 +2564,21 @@ $NetworkLaunchSiteCopyWith<NetworkLaunchSite> get copyWith => _$NetworkLaunchSit
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkLaunchSite&&(identical(other.siteId, siteId) || other.siteId == siteId)&&(identical(other.siteName, siteName) || other.siteName == siteName)&&(identical(other.siteNameLong, siteNameLong) || other.siteNameLong == siteNameLong));
+  final _this = this as NetworkLaunchSite;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkLaunchSite&&(identical(other.siteId, _this.siteId) || other.siteId == _this.siteId)&&(identical(other.siteName, _this.siteName) || other.siteName == _this.siteName)&&(identical(other.siteNameLong, _this.siteNameLong) || other.siteNameLong == _this.siteNameLong));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,siteId,siteName,siteNameLong);
+int get hashCode {
+  final _this = this as NetworkLaunchSite;
+  return Object.hash(runtimeType,_this.siteId,_this.siteName,_this.siteNameLong);
+}
 
 @override
 String toString() {
-  return 'NetworkLaunchSite(siteId: $siteId, siteName: $siteName, siteNameLong: $siteNameLong)';
+  final _this = this as NetworkLaunchSite;
+  return 'NetworkLaunchSite(siteId: ${_this.siteId}, siteName: ${_this.siteName}, siteNameLong: ${_this.siteNameLong})';
 }
 
 
@@ -2545,7 +2607,7 @@ class _$NetworkLaunchSiteCopyWithImpl<$Res>
 /// Create a copy of NetworkLaunchSite
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? siteId = freezed,Object? siteName = freezed,Object? siteNameLong = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkLaunchSite(
 siteId: freezed == siteId ? _self.siteId : siteId // ignore: cast_nullable_to_non_nullable
 as String?,siteName: freezed == siteName ? _self.siteName : siteName // ignore: cast_nullable_to_non_nullable
 as String?,siteNameLong: freezed == siteNameLong ? _self.siteNameLong : siteNameLong // ignore: cast_nullable_to_non_nullable
@@ -2710,16 +2772,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkLaunchSite&&(identical(other.siteId, siteId) || other.siteId == siteId)&&(identical(other.siteName, siteName) || other.siteName == siteName)&&(identical(other.siteNameLong, siteNameLong) || other.siteNameLong == siteNameLong));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkLaunchSite&&(identical(other.siteId, siteId) || other.siteId == siteId)&&(identical(other.siteName, siteName) || other.siteName == siteName)&&(identical(other.siteNameLong, siteNameLong) || other.siteNameLong == siteNameLong));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,siteId,siteName,siteNameLong);
+int get hashCode {
+    return Object.hash(runtimeType,siteId,siteName,siteNameLong);
+}
 
 @override
 String toString() {
-  return 'NetworkLaunchSite(siteId: $siteId, siteName: $siteName, siteNameLong: $siteNameLong)';
+    return 'NetworkLaunchSite(siteId: $siteId, siteName: $siteName, siteNameLong: $siteNameLong)';
 }
 
 
@@ -2776,16 +2840,21 @@ $NetworkLaunchFailureDetailsCopyWith<NetworkLaunchFailureDetails> get copyWith =
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkLaunchFailureDetails&&(identical(other.time, time) || other.time == time)&&(identical(other.altitude, altitude) || other.altitude == altitude)&&(identical(other.reason, reason) || other.reason == reason));
+  final _this = this as NetworkLaunchFailureDetails;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkLaunchFailureDetails&&(identical(other.time, _this.time) || other.time == _this.time)&&(identical(other.altitude, _this.altitude) || other.altitude == _this.altitude)&&(identical(other.reason, _this.reason) || other.reason == _this.reason));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,time,altitude,reason);
+int get hashCode {
+  final _this = this as NetworkLaunchFailureDetails;
+  return Object.hash(runtimeType,_this.time,_this.altitude,_this.reason);
+}
 
 @override
 String toString() {
-  return 'NetworkLaunchFailureDetails(time: $time, altitude: $altitude, reason: $reason)';
+  final _this = this as NetworkLaunchFailureDetails;
+  return 'NetworkLaunchFailureDetails(time: ${_this.time}, altitude: ${_this.altitude}, reason: ${_this.reason})';
 }
 
 
@@ -2814,7 +2883,7 @@ class _$NetworkLaunchFailureDetailsCopyWithImpl<$Res>
 /// Create a copy of NetworkLaunchFailureDetails
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? time = freezed,Object? altitude = freezed,Object? reason = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkLaunchFailureDetails(
 time: freezed == time ? _self.time : time // ignore: cast_nullable_to_non_nullable
 as int?,altitude: freezed == altitude ? _self.altitude : altitude // ignore: cast_nullable_to_non_nullable
 as int?,reason: freezed == reason ? _self.reason : reason // ignore: cast_nullable_to_non_nullable
@@ -2979,16 +3048,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkLaunchFailureDetails&&(identical(other.time, time) || other.time == time)&&(identical(other.altitude, altitude) || other.altitude == altitude)&&(identical(other.reason, reason) || other.reason == reason));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkLaunchFailureDetails&&(identical(other.time, time) || other.time == time)&&(identical(other.altitude, altitude) || other.altitude == altitude)&&(identical(other.reason, reason) || other.reason == reason));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,time,altitude,reason);
+int get hashCode {
+    return Object.hash(runtimeType,time,altitude,reason);
+}
 
 @override
 String toString() {
-  return 'NetworkLaunchFailureDetails(time: $time, altitude: $altitude, reason: $reason)';
+    return 'NetworkLaunchFailureDetails(time: $time, altitude: $altitude, reason: $reason)';
 }
 
 
@@ -3045,16 +3116,21 @@ $NetworkTimelineCopyWith<NetworkTimeline> get copyWith => _$NetworkTimelineCopyW
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkTimeline&&(identical(other.webcastLiftoff, webcastLiftoff) || other.webcastLiftoff == webcastLiftoff));
+  final _this = this as NetworkTimeline;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkTimeline&&(identical(other.webcastLiftoff, _this.webcastLiftoff) || other.webcastLiftoff == _this.webcastLiftoff));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,webcastLiftoff);
+int get hashCode {
+  final _this = this as NetworkTimeline;
+  return Object.hash(runtimeType,_this.webcastLiftoff);
+}
 
 @override
 String toString() {
-  return 'NetworkTimeline(webcastLiftoff: $webcastLiftoff)';
+  final _this = this as NetworkTimeline;
+  return 'NetworkTimeline(webcastLiftoff: ${_this.webcastLiftoff})';
 }
 
 
@@ -3083,7 +3159,7 @@ class _$NetworkTimelineCopyWithImpl<$Res>
 /// Create a copy of NetworkTimeline
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? webcastLiftoff = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkTimeline(
 webcastLiftoff: freezed == webcastLiftoff ? _self.webcastLiftoff : webcastLiftoff // ignore: cast_nullable_to_non_nullable
 as int?,
   ));
@@ -3244,16 +3320,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkTimeline&&(identical(other.webcastLiftoff, webcastLiftoff) || other.webcastLiftoff == webcastLiftoff));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkTimeline&&(identical(other.webcastLiftoff, webcastLiftoff) || other.webcastLiftoff == webcastLiftoff));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,webcastLiftoff);
+int get hashCode {
+    return Object.hash(runtimeType,webcastLiftoff);
+}
 
 @override
 String toString() {
-  return 'NetworkTimeline(webcastLiftoff: $webcastLiftoff)';
+    return 'NetworkTimeline(webcastLiftoff: $webcastLiftoff)';
 }
 
 

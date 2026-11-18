@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'network_payload_model.dart';
@@ -9,6 +9,7 @@ part of 'network_payload_model.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $NetworkPayloadModelCopyWith<NetworkPayloadModel> get copyWith => _$NetworkPaylo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkPayloadModel&&(identical(other.payloadId, payloadId) || other.payloadId == payloadId)&&const DeepCollectionEquality().equals(other.noradId, noradId)&&(identical(other.reused, reused) || other.reused == reused)&&const DeepCollectionEquality().equals(other.customers, customers)&&(identical(other.nationality, nationality) || other.nationality == nationality)&&(identical(other.manufacturer, manufacturer) || other.manufacturer == manufacturer)&&(identical(other.payloadType, payloadType) || other.payloadType == payloadType)&&(identical(other.payloadMassKg, payloadMassKg) || other.payloadMassKg == payloadMassKg)&&(identical(other.payloadMassLbs, payloadMassLbs) || other.payloadMassLbs == payloadMassLbs)&&(identical(other.orbit, orbit) || other.orbit == orbit));
+  final _this = this as NetworkPayloadModel;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkPayloadModel&&(identical(other.payloadId, _this.payloadId) || other.payloadId == _this.payloadId)&&const DeepCollectionEquality().equals(other.noradId, _this.noradId)&&(identical(other.reused, _this.reused) || other.reused == _this.reused)&&const DeepCollectionEquality().equals(other.customers, _this.customers)&&(identical(other.nationality, _this.nationality) || other.nationality == _this.nationality)&&(identical(other.manufacturer, _this.manufacturer) || other.manufacturer == _this.manufacturer)&&(identical(other.payloadType, _this.payloadType) || other.payloadType == _this.payloadType)&&(identical(other.payloadMassKg, _this.payloadMassKg) || other.payloadMassKg == _this.payloadMassKg)&&(identical(other.payloadMassLbs, _this.payloadMassLbs) || other.payloadMassLbs == _this.payloadMassLbs)&&(identical(other.orbit, _this.orbit) || other.orbit == _this.orbit));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,payloadId,const DeepCollectionEquality().hash(noradId),reused,const DeepCollectionEquality().hash(customers),nationality,manufacturer,payloadType,payloadMassKg,payloadMassLbs,orbit);
+int get hashCode {
+  final _this = this as NetworkPayloadModel;
+  return Object.hash(runtimeType,_this.payloadId,const DeepCollectionEquality().hash(_this.noradId),_this.reused,const DeepCollectionEquality().hash(_this.customers),_this.nationality,_this.manufacturer,_this.payloadType,_this.payloadMassKg,_this.payloadMassLbs,_this.orbit);
+}
 
 @override
 String toString() {
-  return 'NetworkPayloadModel(payloadId: $payloadId, noradId: $noradId, reused: $reused, customers: $customers, nationality: $nationality, manufacturer: $manufacturer, payloadType: $payloadType, payloadMassKg: $payloadMassKg, payloadMassLbs: $payloadMassLbs, orbit: $orbit)';
+  final _this = this as NetworkPayloadModel;
+  return 'NetworkPayloadModel(payloadId: ${_this.payloadId}, noradId: ${_this.noradId}, reused: ${_this.reused}, customers: ${_this.customers}, nationality: ${_this.nationality}, manufacturer: ${_this.manufacturer}, payloadType: ${_this.payloadType}, payloadMassKg: ${_this.payloadMassKg}, payloadMassLbs: ${_this.payloadMassLbs}, orbit: ${_this.orbit})';
 }
 
 
@@ -66,7 +72,7 @@ class _$NetworkPayloadModelCopyWithImpl<$Res>
 /// Create a copy of NetworkPayloadModel
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? payloadId = freezed,Object? noradId = freezed,Object? reused = freezed,Object? customers = freezed,Object? nationality = freezed,Object? manufacturer = freezed,Object? payloadType = freezed,Object? payloadMassKg = freezed,Object? payloadMassLbs = freezed,Object? orbit = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkPayloadModel(
 payloadId: freezed == payloadId ? _self.payloadId : payloadId // ignore: cast_nullable_to_non_nullable
 as String?,noradId: freezed == noradId ? _self.noradId : noradId // ignore: cast_nullable_to_non_nullable
 as List<int>?,reused: freezed == reused ? _self.reused : reused // ignore: cast_nullable_to_non_nullable
@@ -218,7 +224,7 @@ return $default(_that.payloadId,_that.noradId,_that.reused,_that.customers,_that
 @JsonSerializable()
 
 class _NetworkPayloadModel extends NetworkPayloadModel {
-  const _NetworkPayloadModel({@JsonKey(name: 'payload_id') this.payloadId, @JsonKey(name: 'norad_id') final  List<int>? noradId, this.reused, final  List<String>? customers, this.nationality, this.manufacturer, @JsonKey(name: 'payload_type') this.payloadType, @JsonKey(name: 'payload_mass_kg') this.payloadMassKg, @JsonKey(name: 'payload_mass_lbs') this.payloadMassLbs, this.orbit}): _noradId = noradId,_customers = customers,super._();
+  const _NetworkPayloadModel({@JsonKey(name: 'payload_id') this.payloadId, @JsonKey(name: 'norad_id')  List<int>? noradId, this.reused,  List<String>? customers, this.nationality, this.manufacturer, @JsonKey(name: 'payload_type') this.payloadType, @JsonKey(name: 'payload_mass_kg') this.payloadMassKg, @JsonKey(name: 'payload_mass_lbs') this.payloadMassLbs, this.orbit}): _noradId = noradId,_customers = customers,super._();
   factory _NetworkPayloadModel.fromJson(Map<String, dynamic> json) => _$NetworkPayloadModelFromJson(json);
 
 @override@JsonKey(name: 'payload_id') final  String? payloadId;
@@ -261,16 +267,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkPayloadModel&&(identical(other.payloadId, payloadId) || other.payloadId == payloadId)&&const DeepCollectionEquality().equals(other._noradId, _noradId)&&(identical(other.reused, reused) || other.reused == reused)&&const DeepCollectionEquality().equals(other._customers, _customers)&&(identical(other.nationality, nationality) || other.nationality == nationality)&&(identical(other.manufacturer, manufacturer) || other.manufacturer == manufacturer)&&(identical(other.payloadType, payloadType) || other.payloadType == payloadType)&&(identical(other.payloadMassKg, payloadMassKg) || other.payloadMassKg == payloadMassKg)&&(identical(other.payloadMassLbs, payloadMassLbs) || other.payloadMassLbs == payloadMassLbs)&&(identical(other.orbit, orbit) || other.orbit == orbit));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkPayloadModel&&(identical(other.payloadId, payloadId) || other.payloadId == payloadId)&&const DeepCollectionEquality().equals(other.noradId, _noradId)&&(identical(other.reused, reused) || other.reused == reused)&&const DeepCollectionEquality().equals(other.customers, _customers)&&(identical(other.nationality, nationality) || other.nationality == nationality)&&(identical(other.manufacturer, manufacturer) || other.manufacturer == manufacturer)&&(identical(other.payloadType, payloadType) || other.payloadType == payloadType)&&(identical(other.payloadMassKg, payloadMassKg) || other.payloadMassKg == payloadMassKg)&&(identical(other.payloadMassLbs, payloadMassLbs) || other.payloadMassLbs == payloadMassLbs)&&(identical(other.orbit, orbit) || other.orbit == orbit));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,payloadId,const DeepCollectionEquality().hash(_noradId),reused,const DeepCollectionEquality().hash(_customers),nationality,manufacturer,payloadType,payloadMassKg,payloadMassLbs,orbit);
+int get hashCode {
+    return Object.hash(runtimeType,payloadId,const DeepCollectionEquality().hash(_noradId),reused,const DeepCollectionEquality().hash(_customers),nationality,manufacturer,payloadType,payloadMassKg,payloadMassLbs,orbit);
+}
 
 @override
 String toString() {
-  return 'NetworkPayloadModel(payloadId: $payloadId, noradId: $noradId, reused: $reused, customers: $customers, nationality: $nationality, manufacturer: $manufacturer, payloadType: $payloadType, payloadMassKg: $payloadMassKg, payloadMassLbs: $payloadMassLbs, orbit: $orbit)';
+    return 'NetworkPayloadModel(payloadId: $payloadId, noradId: $noradId, reused: $reused, customers: $customers, nationality: $nationality, manufacturer: $manufacturer, payloadType: $payloadType, payloadMassKg: $payloadMassKg, payloadMassLbs: $payloadMassLbs, orbit: $orbit)';
 }
 
 

@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'rockets_bloc.dart';
@@ -9,6 +9,7 @@ part of 'rockets_bloc.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 /// @nodoc
@@ -20,7 +21,7 @@ mixin _$RocketsEvent {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RocketsEvent);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RocketsEvent);
 }
 
 
@@ -29,7 +30,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'RocketsEvent()';
+    return 'RocketsEvent()';
 }
 
 
@@ -196,16 +197,18 @@ $RocketsLoadEventCopyWith<RocketsLoadEvent> get copyWith => _$RocketsLoadEventCo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RocketsLoadEvent&&(identical(other.reload, reload) || other.reload == reload));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RocketsLoadEvent&&(identical(other.reload, reload) || other.reload == reload));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,reload);
+int get hashCode {
+    return Object.hash(runtimeType,reload);
+}
 
 @override
 String toString() {
-  return 'RocketsEvent.load(reload: $reload)';
+    return 'RocketsEvent.load(reload: $reload)';
 }
 
 
@@ -257,7 +260,7 @@ class _RocketsRefreshEvent implements RocketsEvent {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RocketsRefreshEvent);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _RocketsRefreshEvent);
 }
 
 
@@ -266,7 +269,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'RocketsEvent.refresh()';
+    return 'RocketsEvent.refresh()';
 }
 
 
@@ -284,7 +287,7 @@ mixin _$RocketsState {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RocketsState);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RocketsState);
 }
 
 
@@ -293,7 +296,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'RocketsState()';
+    return 'RocketsState()';
 }
 
 
@@ -467,7 +470,7 @@ class RocketsLoadingState implements RocketsState {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RocketsLoadingState);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RocketsLoadingState);
 }
 
 
@@ -476,7 +479,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'RocketsState.loading()';
+    return 'RocketsState.loading()';
 }
 
 
@@ -489,7 +492,7 @@ String toString() {
 
 
 class RocketsSuccessState implements RocketsState {
-  const RocketsSuccessState({final  List<RocketResource> rockets = const []}): _rockets = rockets;
+  const RocketsSuccessState({ List<RocketResource> rockets = const []}): _rockets = rockets;
   
 
  final  List<RocketResource> _rockets;
@@ -510,16 +513,18 @@ $RocketsSuccessStateCopyWith<RocketsSuccessState> get copyWith => _$RocketsSucce
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RocketsSuccessState&&const DeepCollectionEquality().equals(other._rockets, _rockets));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RocketsSuccessState&&const DeepCollectionEquality().equals(other.rockets, _rockets));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_rockets));
+int get hashCode {
+    return Object.hash(runtimeType,const DeepCollectionEquality().hash(_rockets));
+}
 
 @override
 String toString() {
-  return 'RocketsState.success(rockets: $rockets)';
+    return 'RocketsState.success(rockets: $rockets)';
 }
 
 
@@ -571,7 +576,7 @@ class RocketsErrorState implements RocketsState {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RocketsErrorState);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RocketsErrorState);
 }
 
 
@@ -580,7 +585,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'RocketsState.error()';
+    return 'RocketsState.error()';
 }
 
 
@@ -603,7 +608,7 @@ class RocketsEmptyState implements RocketsState {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RocketsEmptyState);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RocketsEmptyState);
 }
 
 
@@ -612,7 +617,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'RocketsState.empty()';
+    return 'RocketsState.empty()';
 }
 
 

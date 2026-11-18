@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'cores_bloc.dart';
@@ -9,6 +9,7 @@ part of 'cores_bloc.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 /// @nodoc
@@ -20,7 +21,7 @@ mixin _$CoresEvent {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is CoresEvent);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is CoresEvent);
 }
 
 
@@ -29,7 +30,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'CoresEvent()';
+    return 'CoresEvent()';
 }
 
 
@@ -202,16 +203,18 @@ $CoresLoadEventCopyWith<CoresLoadEvent> get copyWith => _$CoresLoadEventCopyWith
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is CoresLoadEvent&&(identical(other.reload, reload) || other.reload == reload));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is CoresLoadEvent&&(identical(other.reload, reload) || other.reload == reload));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,reload);
+int get hashCode {
+    return Object.hash(runtimeType,reload);
+}
 
 @override
 String toString() {
-  return 'CoresEvent.load(reload: $reload)';
+    return 'CoresEvent.load(reload: $reload)';
 }
 
 
@@ -263,7 +266,7 @@ class CoresRefreshEvent implements CoresEvent {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is CoresRefreshEvent);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is CoresRefreshEvent);
 }
 
 
@@ -272,7 +275,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'CoresEvent.refresh()';
+    return 'CoresEvent.refresh()';
 }
 
 
@@ -301,16 +304,18 @@ $CoresFilterEventCopyWith<CoresFilterEvent> get copyWith => _$CoresFilterEventCo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is CoresFilterEvent&&(identical(other.searchQuery, searchQuery) || other.searchQuery == searchQuery)&&(identical(other.statusFilter, statusFilter) || other.statusFilter == statusFilter));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is CoresFilterEvent&&(identical(other.searchQuery, searchQuery) || other.searchQuery == searchQuery)&&(identical(other.statusFilter, statusFilter) || other.statusFilter == statusFilter));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,searchQuery,statusFilter);
+int get hashCode {
+    return Object.hash(runtimeType,searchQuery,statusFilter);
+}
 
 @override
 String toString() {
-  return 'CoresEvent.filter(searchQuery: $searchQuery, statusFilter: $statusFilter)';
+    return 'CoresEvent.filter(searchQuery: $searchQuery, statusFilter: $statusFilter)';
 }
 
 
@@ -358,7 +363,7 @@ mixin _$CoresState {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is CoresState);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is CoresState);
 }
 
 
@@ -367,7 +372,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'CoresState()';
+    return 'CoresState()';
 }
 
 
@@ -547,7 +552,7 @@ class CoresLoadingState implements CoresState {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is CoresLoadingState);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is CoresLoadingState);
 }
 
 
@@ -556,7 +561,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'CoresState.loading()';
+    return 'CoresState.loading()';
 }
 
 
@@ -569,7 +574,7 @@ String toString() {
 
 
 class CoresSuccessState implements CoresState {
-  const CoresSuccessState({final  List<CoreResource> cores = const [], final  List<CoreResource>? filteredCores, this.searchQuery = '', this.statusFilter}): _cores = cores,_filteredCores = filteredCores;
+  const CoresSuccessState({ List<CoreResource> cores = const [],  List<CoreResource>? filteredCores, this.searchQuery = '', this.statusFilter}): _cores = cores,_filteredCores = filteredCores;
   
 
  final  List<CoreResource> _cores;
@@ -601,16 +606,18 @@ $CoresSuccessStateCopyWith<CoresSuccessState> get copyWith => _$CoresSuccessStat
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is CoresSuccessState&&const DeepCollectionEquality().equals(other._cores, _cores)&&const DeepCollectionEquality().equals(other._filteredCores, _filteredCores)&&(identical(other.searchQuery, searchQuery) || other.searchQuery == searchQuery)&&(identical(other.statusFilter, statusFilter) || other.statusFilter == statusFilter));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is CoresSuccessState&&const DeepCollectionEquality().equals(other.cores, _cores)&&const DeepCollectionEquality().equals(other.filteredCores, _filteredCores)&&(identical(other.searchQuery, searchQuery) || other.searchQuery == searchQuery)&&(identical(other.statusFilter, statusFilter) || other.statusFilter == statusFilter));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_cores),const DeepCollectionEquality().hash(_filteredCores),searchQuery,statusFilter);
+int get hashCode {
+    return Object.hash(runtimeType,const DeepCollectionEquality().hash(_cores),const DeepCollectionEquality().hash(_filteredCores),searchQuery,statusFilter);
+}
 
 @override
 String toString() {
-  return 'CoresState.success(cores: $cores, filteredCores: $filteredCores, searchQuery: $searchQuery, statusFilter: $statusFilter)';
+    return 'CoresState.success(cores: $cores, filteredCores: $filteredCores, searchQuery: $searchQuery, statusFilter: $statusFilter)';
 }
 
 
@@ -670,16 +677,18 @@ $CoresErrorStateCopyWith<CoresErrorState> get copyWith => _$CoresErrorStateCopyW
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is CoresErrorState&&(identical(other.message, message) || other.message == message));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is CoresErrorState&&(identical(other.message, message) || other.message == message));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,message);
+int get hashCode {
+    return Object.hash(runtimeType,message);
+}
 
 @override
 String toString() {
-  return 'CoresState.error(message: $message)';
+    return 'CoresState.error(message: $message)';
 }
 
 
@@ -731,7 +740,7 @@ class CoresEmptyState implements CoresState {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is CoresEmptyState);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is CoresEmptyState);
 }
 
 
@@ -740,7 +749,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'CoresState.empty()';
+    return 'CoresState.empty()';
 }
 
 
@@ -768,16 +777,18 @@ $CoresNotFoundStateCopyWith<CoresNotFoundState> get copyWith => _$CoresNotFoundS
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is CoresNotFoundState&&(identical(other.searchQuery, searchQuery) || other.searchQuery == searchQuery));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is CoresNotFoundState&&(identical(other.searchQuery, searchQuery) || other.searchQuery == searchQuery));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,searchQuery);
+int get hashCode {
+    return Object.hash(runtimeType,searchQuery);
+}
 
 @override
 String toString() {
-  return 'CoresState.notFound(searchQuery: $searchQuery)';
+    return 'CoresState.notFound(searchQuery: $searchQuery)';
 }
 
 

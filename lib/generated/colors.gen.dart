@@ -11,9 +11,7 @@
 import 'package:flutter/painting.dart';
 import 'package:flutter/material.dart';
 
-class ColorName {
-  ColorName._();
-
+abstract final class ColorName {
   /// Color: #6a4f4b
   static const Color accentDark = Color(0xFF6A4F4B);
 

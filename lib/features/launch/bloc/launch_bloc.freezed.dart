@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'launch_bloc.dart';
@@ -9,6 +9,7 @@ part of 'launch_bloc.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 /// @nodoc
@@ -25,16 +26,21 @@ $LaunchEventCopyWith<LaunchEvent> get copyWith => _$LaunchEventCopyWithImpl<Laun
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is LaunchEvent&&(identical(other.flightNumber, flightNumber) || other.flightNumber == flightNumber));
+  final _this = this as LaunchEvent;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is LaunchEvent&&(identical(other.flightNumber, _this.flightNumber) || other.flightNumber == _this.flightNumber));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,flightNumber);
+int get hashCode {
+  final _this = this as LaunchEvent;
+  return Object.hash(runtimeType,_this.flightNumber);
+}
 
 @override
 String toString() {
-  return 'LaunchEvent(flightNumber: $flightNumber)';
+  final _this = this as LaunchEvent;
+  return 'LaunchEvent(flightNumber: ${_this.flightNumber})';
 }
 
 
@@ -63,7 +69,7 @@ class _$LaunchEventCopyWithImpl<$Res>
 /// Create a copy of LaunchEvent
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? flightNumber = null,}) {
-  return _then(_self.copyWith(
+  return _then(LaunchEvent.load(
 flightNumber: null == flightNumber ? _self.flightNumber : flightNumber // ignore: cast_nullable_to_non_nullable
 as int,
   ));
@@ -221,16 +227,18 @@ $LaunchLoadEventCopyWith<LaunchLoadEvent> get copyWith => _$LaunchLoadEventCopyW
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is LaunchLoadEvent&&(identical(other.flightNumber, flightNumber) || other.flightNumber == flightNumber));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is LaunchLoadEvent&&(identical(other.flightNumber, flightNumber) || other.flightNumber == flightNumber));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,flightNumber);
+int get hashCode {
+    return Object.hash(runtimeType,flightNumber);
+}
 
 @override
 String toString() {
-  return 'LaunchEvent.load(flightNumber: $flightNumber)';
+    return 'LaunchEvent.load(flightNumber: $flightNumber)';
 }
 
 
@@ -277,7 +285,7 @@ mixin _$LaunchState {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is LaunchState);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is LaunchState);
 }
 
 
@@ -286,7 +294,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'LaunchState()';
+    return 'LaunchState()';
 }
 
 
@@ -454,7 +462,7 @@ class LaunchLoadingState implements LaunchState {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is LaunchLoadingState);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is LaunchLoadingState);
 }
 
 
@@ -463,7 +471,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'LaunchState.loading()';
+    return 'LaunchState.loading()';
 }
 
 
@@ -491,16 +499,18 @@ $LaunchSuccessStateCopyWith<LaunchSuccessState> get copyWith => _$LaunchSuccessS
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is LaunchSuccessState&&(identical(other.launch, launch) || other.launch == launch));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is LaunchSuccessState&&(identical(other.launch, launch) || other.launch == launch));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,launch);
+int get hashCode {
+    return Object.hash(runtimeType,launch);
+}
 
 @override
 String toString() {
-  return 'LaunchState.success(launch: $launch)';
+    return 'LaunchState.success(launch: $launch)';
 }
 
 
@@ -552,7 +562,7 @@ class LaunchErrorState implements LaunchState {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is LaunchErrorState);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is LaunchErrorState);
 }
 
 
@@ -561,7 +571,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'LaunchState.error()';
+    return 'LaunchState.error()';
 }
 
 

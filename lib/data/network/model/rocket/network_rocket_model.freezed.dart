@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'network_rocket_model.dart';
@@ -9,6 +9,7 @@ part of 'network_rocket_model.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $NetworkRocketModelCopyWith<NetworkRocketModel> get copyWith => _$NetworkRocketM
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkRocketModel&&(identical(other.rocketId, rocketId) || other.rocketId == rocketId)&&(identical(other.id, id) || other.id == id)&&(identical(other.active, active) || other.active == active)&&(identical(other.stages, stages) || other.stages == stages)&&(identical(other.boosters, boosters) || other.boosters == boosters)&&(identical(other.costPerLaunch, costPerLaunch) || other.costPerLaunch == costPerLaunch)&&(identical(other.successRatePct, successRatePct) || other.successRatePct == successRatePct)&&(identical(other.firstFlight, firstFlight) || other.firstFlight == firstFlight)&&(identical(other.country, country) || other.country == country)&&(identical(other.company, company) || other.company == company)&&(identical(other.height, height) || other.height == height)&&(identical(other.diameter, diameter) || other.diameter == diameter)&&(identical(other.mass, mass) || other.mass == mass)&&const DeepCollectionEquality().equals(other.payloadWeights, payloadWeights)&&(identical(other.engines, engines) || other.engines == engines)&&(identical(other.wikipedia, wikipedia) || other.wikipedia == wikipedia)&&(identical(other.description, description) || other.description == description)&&(identical(other.landingLegs, landingLegs) || other.landingLegs == landingLegs)&&const DeepCollectionEquality().equals(other.flickrImages, flickrImages)&&(identical(other.type, type) || other.type == type)&&(identical(other.name, name) || other.name == name)&&(identical(other.firstStage, firstStage) || other.firstStage == firstStage)&&(identical(other.secondStage, secondStage) || other.secondStage == secondStage));
+  final _this = this as NetworkRocketModel;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkRocketModel&&(identical(other.rocketId, _this.rocketId) || other.rocketId == _this.rocketId)&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.active, _this.active) || other.active == _this.active)&&(identical(other.stages, _this.stages) || other.stages == _this.stages)&&(identical(other.boosters, _this.boosters) || other.boosters == _this.boosters)&&(identical(other.costPerLaunch, _this.costPerLaunch) || other.costPerLaunch == _this.costPerLaunch)&&(identical(other.successRatePct, _this.successRatePct) || other.successRatePct == _this.successRatePct)&&(identical(other.firstFlight, _this.firstFlight) || other.firstFlight == _this.firstFlight)&&(identical(other.country, _this.country) || other.country == _this.country)&&(identical(other.company, _this.company) || other.company == _this.company)&&(identical(other.height, _this.height) || other.height == _this.height)&&(identical(other.diameter, _this.diameter) || other.diameter == _this.diameter)&&(identical(other.mass, _this.mass) || other.mass == _this.mass)&&const DeepCollectionEquality().equals(other.payloadWeights, _this.payloadWeights)&&(identical(other.engines, _this.engines) || other.engines == _this.engines)&&(identical(other.wikipedia, _this.wikipedia) || other.wikipedia == _this.wikipedia)&&(identical(other.description, _this.description) || other.description == _this.description)&&(identical(other.landingLegs, _this.landingLegs) || other.landingLegs == _this.landingLegs)&&const DeepCollectionEquality().equals(other.flickrImages, _this.flickrImages)&&(identical(other.type, _this.type) || other.type == _this.type)&&(identical(other.name, _this.name) || other.name == _this.name)&&(identical(other.firstStage, _this.firstStage) || other.firstStage == _this.firstStage)&&(identical(other.secondStage, _this.secondStage) || other.secondStage == _this.secondStage));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,rocketId,id,active,stages,boosters,costPerLaunch,successRatePct,firstFlight,country,company,height,diameter,mass,const DeepCollectionEquality().hash(payloadWeights),engines,wikipedia,description,landingLegs,const DeepCollectionEquality().hash(flickrImages),type,name,firstStage,secondStage]);
+int get hashCode {
+  final _this = this as NetworkRocketModel;
+  return Object.hashAll([runtimeType,_this.rocketId,_this.id,_this.active,_this.stages,_this.boosters,_this.costPerLaunch,_this.successRatePct,_this.firstFlight,_this.country,_this.company,_this.height,_this.diameter,_this.mass,const DeepCollectionEquality().hash(_this.payloadWeights),_this.engines,_this.wikipedia,_this.description,_this.landingLegs,const DeepCollectionEquality().hash(_this.flickrImages),_this.type,_this.name,_this.firstStage,_this.secondStage]);
+}
 
 @override
 String toString() {
-  return 'NetworkRocketModel(rocketId: $rocketId, id: $id, active: $active, stages: $stages, boosters: $boosters, costPerLaunch: $costPerLaunch, successRatePct: $successRatePct, firstFlight: $firstFlight, country: $country, company: $company, height: $height, diameter: $diameter, mass: $mass, payloadWeights: $payloadWeights, engines: $engines, wikipedia: $wikipedia, description: $description, landingLegs: $landingLegs, flickrImages: $flickrImages, type: $type, name: $name, firstStage: $firstStage, secondStage: $secondStage)';
+  final _this = this as NetworkRocketModel;
+  return 'NetworkRocketModel(rocketId: ${_this.rocketId}, id: ${_this.id}, active: ${_this.active}, stages: ${_this.stages}, boosters: ${_this.boosters}, costPerLaunch: ${_this.costPerLaunch}, successRatePct: ${_this.successRatePct}, firstFlight: ${_this.firstFlight}, country: ${_this.country}, company: ${_this.company}, height: ${_this.height}, diameter: ${_this.diameter}, mass: ${_this.mass}, payloadWeights: ${_this.payloadWeights}, engines: ${_this.engines}, wikipedia: ${_this.wikipedia}, description: ${_this.description}, landingLegs: ${_this.landingLegs}, flickrImages: ${_this.flickrImages}, type: ${_this.type}, name: ${_this.name}, firstStage: ${_this.firstStage}, secondStage: ${_this.secondStage})';
 }
 
 
@@ -66,7 +72,7 @@ class _$NetworkRocketModelCopyWithImpl<$Res>
 /// Create a copy of NetworkRocketModel
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? rocketId = null,Object? id = freezed,Object? active = freezed,Object? stages = freezed,Object? boosters = freezed,Object? costPerLaunch = freezed,Object? successRatePct = freezed,Object? firstFlight = freezed,Object? country = freezed,Object? company = freezed,Object? height = freezed,Object? diameter = freezed,Object? mass = freezed,Object? payloadWeights = freezed,Object? engines = freezed,Object? wikipedia = freezed,Object? description = freezed,Object? landingLegs = freezed,Object? flickrImages = freezed,Object? type = freezed,Object? name = freezed,Object? firstStage = freezed,Object? secondStage = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkRocketModel(
 rocketId: null == rocketId ? _self.rocketId : rocketId // ignore: cast_nullable_to_non_nullable
 as String,id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as int?,active: freezed == active ? _self.active : active // ignore: cast_nullable_to_non_nullable
@@ -315,7 +321,7 @@ return $default(_that.rocketId,_that.id,_that.active,_that.stages,_that.boosters
 @JsonSerializable()
 
 class _NetworkRocketModel extends NetworkRocketModel {
-  const _NetworkRocketModel({@JsonKey(name: 'rocket_id') required this.rocketId, this.id, this.active, this.stages, this.boosters, @JsonKey(name: 'cost_per_launch') this.costPerLaunch, @JsonKey(name: 'success_rate_pct') this.successRatePct, @JsonKey(name: 'first_flight') this.firstFlight, this.country, this.company, this.height, this.diameter, this.mass, @JsonKey(name: 'payload_weights') final  List<NetworkPayloadWeight>? payloadWeights, this.engines, this.wikipedia, this.description, @JsonKey(name: 'landing_legs') this.landingLegs, @JsonKey(name: 'flickr_images') final  List<String>? flickrImages, @JsonKey(name: 'rocket_type') this.type, @JsonKey(name: 'rocket_name') this.name, @JsonKey(name: 'first_stage') this.firstStage, @JsonKey(name: 'second_stage') this.secondStage}): _payloadWeights = payloadWeights,_flickrImages = flickrImages,super._();
+  const _NetworkRocketModel({@JsonKey(name: 'rocket_id') required this.rocketId, this.id, this.active, this.stages, this.boosters, @JsonKey(name: 'cost_per_launch') this.costPerLaunch, @JsonKey(name: 'success_rate_pct') this.successRatePct, @JsonKey(name: 'first_flight') this.firstFlight, this.country, this.company, this.height, this.diameter, this.mass, @JsonKey(name: 'payload_weights')  List<NetworkPayloadWeight>? payloadWeights, this.engines, this.wikipedia, this.description, @JsonKey(name: 'landing_legs') this.landingLegs, @JsonKey(name: 'flickr_images')  List<String>? flickrImages, @JsonKey(name: 'rocket_type') this.type, @JsonKey(name: 'rocket_name') this.name, @JsonKey(name: 'first_stage') this.firstStage, @JsonKey(name: 'second_stage') this.secondStage}): _payloadWeights = payloadWeights,_flickrImages = flickrImages,super._();
   factory _NetworkRocketModel.fromJson(Map<String, dynamic> json) => _$NetworkRocketModelFromJson(json);
 
 @override@JsonKey(name: 'rocket_id') final  String rocketId;
@@ -371,16 +377,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkRocketModel&&(identical(other.rocketId, rocketId) || other.rocketId == rocketId)&&(identical(other.id, id) || other.id == id)&&(identical(other.active, active) || other.active == active)&&(identical(other.stages, stages) || other.stages == stages)&&(identical(other.boosters, boosters) || other.boosters == boosters)&&(identical(other.costPerLaunch, costPerLaunch) || other.costPerLaunch == costPerLaunch)&&(identical(other.successRatePct, successRatePct) || other.successRatePct == successRatePct)&&(identical(other.firstFlight, firstFlight) || other.firstFlight == firstFlight)&&(identical(other.country, country) || other.country == country)&&(identical(other.company, company) || other.company == company)&&(identical(other.height, height) || other.height == height)&&(identical(other.diameter, diameter) || other.diameter == diameter)&&(identical(other.mass, mass) || other.mass == mass)&&const DeepCollectionEquality().equals(other._payloadWeights, _payloadWeights)&&(identical(other.engines, engines) || other.engines == engines)&&(identical(other.wikipedia, wikipedia) || other.wikipedia == wikipedia)&&(identical(other.description, description) || other.description == description)&&(identical(other.landingLegs, landingLegs) || other.landingLegs == landingLegs)&&const DeepCollectionEquality().equals(other._flickrImages, _flickrImages)&&(identical(other.type, type) || other.type == type)&&(identical(other.name, name) || other.name == name)&&(identical(other.firstStage, firstStage) || other.firstStage == firstStage)&&(identical(other.secondStage, secondStage) || other.secondStage == secondStage));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkRocketModel&&(identical(other.rocketId, rocketId) || other.rocketId == rocketId)&&(identical(other.id, id) || other.id == id)&&(identical(other.active, active) || other.active == active)&&(identical(other.stages, stages) || other.stages == stages)&&(identical(other.boosters, boosters) || other.boosters == boosters)&&(identical(other.costPerLaunch, costPerLaunch) || other.costPerLaunch == costPerLaunch)&&(identical(other.successRatePct, successRatePct) || other.successRatePct == successRatePct)&&(identical(other.firstFlight, firstFlight) || other.firstFlight == firstFlight)&&(identical(other.country, country) || other.country == country)&&(identical(other.company, company) || other.company == company)&&(identical(other.height, height) || other.height == height)&&(identical(other.diameter, diameter) || other.diameter == diameter)&&(identical(other.mass, mass) || other.mass == mass)&&const DeepCollectionEquality().equals(other.payloadWeights, _payloadWeights)&&(identical(other.engines, engines) || other.engines == engines)&&(identical(other.wikipedia, wikipedia) || other.wikipedia == wikipedia)&&(identical(other.description, description) || other.description == description)&&(identical(other.landingLegs, landingLegs) || other.landingLegs == landingLegs)&&const DeepCollectionEquality().equals(other.flickrImages, _flickrImages)&&(identical(other.type, type) || other.type == type)&&(identical(other.name, name) || other.name == name)&&(identical(other.firstStage, firstStage) || other.firstStage == firstStage)&&(identical(other.secondStage, secondStage) || other.secondStage == secondStage));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,rocketId,id,active,stages,boosters,costPerLaunch,successRatePct,firstFlight,country,company,height,diameter,mass,const DeepCollectionEquality().hash(_payloadWeights),engines,wikipedia,description,landingLegs,const DeepCollectionEquality().hash(_flickrImages),type,name,firstStage,secondStage]);
+int get hashCode {
+    return Object.hashAll([runtimeType,rocketId,id,active,stages,boosters,costPerLaunch,successRatePct,firstFlight,country,company,height,diameter,mass,const DeepCollectionEquality().hash(_payloadWeights),engines,wikipedia,description,landingLegs,const DeepCollectionEquality().hash(_flickrImages),type,name,firstStage,secondStage]);
+}
 
 @override
 String toString() {
-  return 'NetworkRocketModel(rocketId: $rocketId, id: $id, active: $active, stages: $stages, boosters: $boosters, costPerLaunch: $costPerLaunch, successRatePct: $successRatePct, firstFlight: $firstFlight, country: $country, company: $company, height: $height, diameter: $diameter, mass: $mass, payloadWeights: $payloadWeights, engines: $engines, wikipedia: $wikipedia, description: $description, landingLegs: $landingLegs, flickrImages: $flickrImages, type: $type, name: $name, firstStage: $firstStage, secondStage: $secondStage)';
+    return 'NetworkRocketModel(rocketId: $rocketId, id: $id, active: $active, stages: $stages, boosters: $boosters, costPerLaunch: $costPerLaunch, successRatePct: $successRatePct, firstFlight: $firstFlight, country: $country, company: $company, height: $height, diameter: $diameter, mass: $mass, payloadWeights: $payloadWeights, engines: $engines, wikipedia: $wikipedia, description: $description, landingLegs: $landingLegs, flickrImages: $flickrImages, type: $type, name: $name, firstStage: $firstStage, secondStage: $secondStage)';
 }
 
 
@@ -541,16 +549,21 @@ $NetworkRocketFirstStageModelCopyWith<NetworkRocketFirstStageModel> get copyWith
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkRocketFirstStageModel&&(identical(other.reusable, reusable) || other.reusable == reusable)&&(identical(other.engines, engines) || other.engines == engines)&&(identical(other.fuelAmountTons, fuelAmountTons) || other.fuelAmountTons == fuelAmountTons)&&(identical(other.burnTimeSec, burnTimeSec) || other.burnTimeSec == burnTimeSec)&&(identical(other.thrustSeaLevel, thrustSeaLevel) || other.thrustSeaLevel == thrustSeaLevel)&&(identical(other.thrustVacuum, thrustVacuum) || other.thrustVacuum == thrustVacuum));
+  final _this = this as NetworkRocketFirstStageModel;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkRocketFirstStageModel&&(identical(other.reusable, _this.reusable) || other.reusable == _this.reusable)&&(identical(other.engines, _this.engines) || other.engines == _this.engines)&&(identical(other.fuelAmountTons, _this.fuelAmountTons) || other.fuelAmountTons == _this.fuelAmountTons)&&(identical(other.burnTimeSec, _this.burnTimeSec) || other.burnTimeSec == _this.burnTimeSec)&&(identical(other.thrustSeaLevel, _this.thrustSeaLevel) || other.thrustSeaLevel == _this.thrustSeaLevel)&&(identical(other.thrustVacuum, _this.thrustVacuum) || other.thrustVacuum == _this.thrustVacuum));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,reusable,engines,fuelAmountTons,burnTimeSec,thrustSeaLevel,thrustVacuum);
+int get hashCode {
+  final _this = this as NetworkRocketFirstStageModel;
+  return Object.hash(runtimeType,_this.reusable,_this.engines,_this.fuelAmountTons,_this.burnTimeSec,_this.thrustSeaLevel,_this.thrustVacuum);
+}
 
 @override
 String toString() {
-  return 'NetworkRocketFirstStageModel(reusable: $reusable, engines: $engines, fuelAmountTons: $fuelAmountTons, burnTimeSec: $burnTimeSec, thrustSeaLevel: $thrustSeaLevel, thrustVacuum: $thrustVacuum)';
+  final _this = this as NetworkRocketFirstStageModel;
+  return 'NetworkRocketFirstStageModel(reusable: ${_this.reusable}, engines: ${_this.engines}, fuelAmountTons: ${_this.fuelAmountTons}, burnTimeSec: ${_this.burnTimeSec}, thrustSeaLevel: ${_this.thrustSeaLevel}, thrustVacuum: ${_this.thrustVacuum})';
 }
 
 
@@ -579,7 +592,7 @@ class _$NetworkRocketFirstStageModelCopyWithImpl<$Res>
 /// Create a copy of NetworkRocketFirstStageModel
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? reusable = freezed,Object? engines = freezed,Object? fuelAmountTons = freezed,Object? burnTimeSec = freezed,Object? thrustSeaLevel = freezed,Object? thrustVacuum = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkRocketFirstStageModel(
 reusable: freezed == reusable ? _self.reusable : reusable // ignore: cast_nullable_to_non_nullable
 as bool?,engines: freezed == engines ? _self.engines : engines // ignore: cast_nullable_to_non_nullable
 as int?,fuelAmountTons: freezed == fuelAmountTons ? _self.fuelAmountTons : fuelAmountTons // ignore: cast_nullable_to_non_nullable
@@ -774,16 +787,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkRocketFirstStageModel&&(identical(other.reusable, reusable) || other.reusable == reusable)&&(identical(other.engines, engines) || other.engines == engines)&&(identical(other.fuelAmountTons, fuelAmountTons) || other.fuelAmountTons == fuelAmountTons)&&(identical(other.burnTimeSec, burnTimeSec) || other.burnTimeSec == burnTimeSec)&&(identical(other.thrustSeaLevel, thrustSeaLevel) || other.thrustSeaLevel == thrustSeaLevel)&&(identical(other.thrustVacuum, thrustVacuum) || other.thrustVacuum == thrustVacuum));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkRocketFirstStageModel&&(identical(other.reusable, reusable) || other.reusable == reusable)&&(identical(other.engines, engines) || other.engines == engines)&&(identical(other.fuelAmountTons, fuelAmountTons) || other.fuelAmountTons == fuelAmountTons)&&(identical(other.burnTimeSec, burnTimeSec) || other.burnTimeSec == burnTimeSec)&&(identical(other.thrustSeaLevel, thrustSeaLevel) || other.thrustSeaLevel == thrustSeaLevel)&&(identical(other.thrustVacuum, thrustVacuum) || other.thrustVacuum == thrustVacuum));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,reusable,engines,fuelAmountTons,burnTimeSec,thrustSeaLevel,thrustVacuum);
+int get hashCode {
+    return Object.hash(runtimeType,reusable,engines,fuelAmountTons,burnTimeSec,thrustSeaLevel,thrustVacuum);
+}
 
 @override
 String toString() {
-  return 'NetworkRocketFirstStageModel(reusable: $reusable, engines: $engines, fuelAmountTons: $fuelAmountTons, burnTimeSec: $burnTimeSec, thrustSeaLevel: $thrustSeaLevel, thrustVacuum: $thrustVacuum)';
+    return 'NetworkRocketFirstStageModel(reusable: $reusable, engines: $engines, fuelAmountTons: $fuelAmountTons, burnTimeSec: $burnTimeSec, thrustSeaLevel: $thrustSeaLevel, thrustVacuum: $thrustVacuum)';
 }
 
 
@@ -867,16 +882,21 @@ $NetworkRocketSecondStageModelCopyWith<NetworkRocketSecondStageModel> get copyWi
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkRocketSecondStageModel&&(identical(other.reusable, reusable) || other.reusable == reusable)&&(identical(other.engines, engines) || other.engines == engines)&&(identical(other.fuelAmountTons, fuelAmountTons) || other.fuelAmountTons == fuelAmountTons)&&(identical(other.burnTimeSec, burnTimeSec) || other.burnTimeSec == burnTimeSec)&&(identical(other.thrust, thrust) || other.thrust == thrust)&&(identical(other.payloads, payloads) || other.payloads == payloads));
+  final _this = this as NetworkRocketSecondStageModel;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkRocketSecondStageModel&&(identical(other.reusable, _this.reusable) || other.reusable == _this.reusable)&&(identical(other.engines, _this.engines) || other.engines == _this.engines)&&(identical(other.fuelAmountTons, _this.fuelAmountTons) || other.fuelAmountTons == _this.fuelAmountTons)&&(identical(other.burnTimeSec, _this.burnTimeSec) || other.burnTimeSec == _this.burnTimeSec)&&(identical(other.thrust, _this.thrust) || other.thrust == _this.thrust)&&(identical(other.payloads, _this.payloads) || other.payloads == _this.payloads));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,reusable,engines,fuelAmountTons,burnTimeSec,thrust,payloads);
+int get hashCode {
+  final _this = this as NetworkRocketSecondStageModel;
+  return Object.hash(runtimeType,_this.reusable,_this.engines,_this.fuelAmountTons,_this.burnTimeSec,_this.thrust,_this.payloads);
+}
 
 @override
 String toString() {
-  return 'NetworkRocketSecondStageModel(reusable: $reusable, engines: $engines, fuelAmountTons: $fuelAmountTons, burnTimeSec: $burnTimeSec, thrust: $thrust, payloads: $payloads)';
+  final _this = this as NetworkRocketSecondStageModel;
+  return 'NetworkRocketSecondStageModel(reusable: ${_this.reusable}, engines: ${_this.engines}, fuelAmountTons: ${_this.fuelAmountTons}, burnTimeSec: ${_this.burnTimeSec}, thrust: ${_this.thrust}, payloads: ${_this.payloads})';
 }
 
 
@@ -905,7 +925,7 @@ class _$NetworkRocketSecondStageModelCopyWithImpl<$Res>
 /// Create a copy of NetworkRocketSecondStageModel
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? reusable = freezed,Object? engines = freezed,Object? fuelAmountTons = freezed,Object? burnTimeSec = freezed,Object? thrust = freezed,Object? payloads = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkRocketSecondStageModel(
 reusable: freezed == reusable ? _self.reusable : reusable // ignore: cast_nullable_to_non_nullable
 as bool?,engines: freezed == engines ? _self.engines : engines // ignore: cast_nullable_to_non_nullable
 as int?,fuelAmountTons: freezed == fuelAmountTons ? _self.fuelAmountTons : fuelAmountTons // ignore: cast_nullable_to_non_nullable
@@ -1100,16 +1120,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkRocketSecondStageModel&&(identical(other.reusable, reusable) || other.reusable == reusable)&&(identical(other.engines, engines) || other.engines == engines)&&(identical(other.fuelAmountTons, fuelAmountTons) || other.fuelAmountTons == fuelAmountTons)&&(identical(other.burnTimeSec, burnTimeSec) || other.burnTimeSec == burnTimeSec)&&(identical(other.thrust, thrust) || other.thrust == thrust)&&(identical(other.payloads, payloads) || other.payloads == payloads));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkRocketSecondStageModel&&(identical(other.reusable, reusable) || other.reusable == reusable)&&(identical(other.engines, engines) || other.engines == engines)&&(identical(other.fuelAmountTons, fuelAmountTons) || other.fuelAmountTons == fuelAmountTons)&&(identical(other.burnTimeSec, burnTimeSec) || other.burnTimeSec == burnTimeSec)&&(identical(other.thrust, thrust) || other.thrust == thrust)&&(identical(other.payloads, payloads) || other.payloads == payloads));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,reusable,engines,fuelAmountTons,burnTimeSec,thrust,payloads);
+int get hashCode {
+    return Object.hash(runtimeType,reusable,engines,fuelAmountTons,burnTimeSec,thrust,payloads);
+}
 
 @override
 String toString() {
-  return 'NetworkRocketSecondStageModel(reusable: $reusable, engines: $engines, fuelAmountTons: $fuelAmountTons, burnTimeSec: $burnTimeSec, thrust: $thrust, payloads: $payloads)';
+    return 'NetworkRocketSecondStageModel(reusable: $reusable, engines: $engines, fuelAmountTons: $fuelAmountTons, burnTimeSec: $burnTimeSec, thrust: $thrust, payloads: $payloads)';
 }
 
 
@@ -1193,16 +1215,21 @@ $NetworkRocketPayloadsModelCopyWith<NetworkRocketPayloadsModel> get copyWith => 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkRocketPayloadsModel&&(identical(other.option_1, option_1) || other.option_1 == option_1)&&(identical(other.compositeFairing, compositeFairing) || other.compositeFairing == compositeFairing));
+  final _this = this as NetworkRocketPayloadsModel;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkRocketPayloadsModel&&(identical(other.option_1, _this.option_1) || other.option_1 == _this.option_1)&&(identical(other.compositeFairing, _this.compositeFairing) || other.compositeFairing == _this.compositeFairing));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,option_1,compositeFairing);
+int get hashCode {
+  final _this = this as NetworkRocketPayloadsModel;
+  return Object.hash(runtimeType,_this.option_1,_this.compositeFairing);
+}
 
 @override
 String toString() {
-  return 'NetworkRocketPayloadsModel(option_1: $option_1, compositeFairing: $compositeFairing)';
+  final _this = this as NetworkRocketPayloadsModel;
+  return 'NetworkRocketPayloadsModel(option_1: ${_this.option_1}, compositeFairing: ${_this.compositeFairing})';
 }
 
 
@@ -1231,7 +1258,7 @@ class _$NetworkRocketPayloadsModelCopyWithImpl<$Res>
 /// Create a copy of NetworkRocketPayloadsModel
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? option_1 = freezed,Object? compositeFairing = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkRocketPayloadsModel(
 option_1: freezed == option_1 ? _self.option_1 : option_1 // ignore: cast_nullable_to_non_nullable
 as String?,compositeFairing: freezed == compositeFairing ? _self.compositeFairing : compositeFairing // ignore: cast_nullable_to_non_nullable
 as NetworkCompositeFairing?,
@@ -1406,16 +1433,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkRocketPayloadsModel&&(identical(other.option_1, option_1) || other.option_1 == option_1)&&(identical(other.compositeFairing, compositeFairing) || other.compositeFairing == compositeFairing));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkRocketPayloadsModel&&(identical(other.option_1, option_1) || other.option_1 == option_1)&&(identical(other.compositeFairing, compositeFairing) || other.compositeFairing == compositeFairing));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,option_1,compositeFairing);
+int get hashCode {
+    return Object.hash(runtimeType,option_1,compositeFairing);
+}
 
 @override
 String toString() {
-  return 'NetworkRocketPayloadsModel(option_1: $option_1, compositeFairing: $compositeFairing)';
+    return 'NetworkRocketPayloadsModel(option_1: $option_1, compositeFairing: $compositeFairing)';
 }
 
 
@@ -1483,16 +1512,21 @@ $NetworkCompositeFairingCopyWith<NetworkCompositeFairing> get copyWith => _$Netw
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkCompositeFairing&&(identical(other.height, height) || other.height == height)&&(identical(other.diameter, diameter) || other.diameter == diameter));
+  final _this = this as NetworkCompositeFairing;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkCompositeFairing&&(identical(other.height, _this.height) || other.height == _this.height)&&(identical(other.diameter, _this.diameter) || other.diameter == _this.diameter));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,height,diameter);
+int get hashCode {
+  final _this = this as NetworkCompositeFairing;
+  return Object.hash(runtimeType,_this.height,_this.diameter);
+}
 
 @override
 String toString() {
-  return 'NetworkCompositeFairing(height: $height, diameter: $diameter)';
+  final _this = this as NetworkCompositeFairing;
+  return 'NetworkCompositeFairing(height: ${_this.height}, diameter: ${_this.diameter})';
 }
 
 
@@ -1521,7 +1555,7 @@ class _$NetworkCompositeFairingCopyWithImpl<$Res>
 /// Create a copy of NetworkCompositeFairing
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? height = freezed,Object? diameter = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkCompositeFairing(
 height: freezed == height ? _self.height : height // ignore: cast_nullable_to_non_nullable
 as NetworkDimension?,diameter: freezed == diameter ? _self.diameter : diameter // ignore: cast_nullable_to_non_nullable
 as NetworkDimension?,
@@ -1708,16 +1742,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkCompositeFairing&&(identical(other.height, height) || other.height == height)&&(identical(other.diameter, diameter) || other.diameter == diameter));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkCompositeFairing&&(identical(other.height, height) || other.height == height)&&(identical(other.diameter, diameter) || other.diameter == diameter));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,height,diameter);
+int get hashCode {
+    return Object.hash(runtimeType,height,diameter);
+}
 
 @override
 String toString() {
-  return 'NetworkCompositeFairing(height: $height, diameter: $diameter)';
+    return 'NetworkCompositeFairing(height: $height, diameter: $diameter)';
 }
 
 
@@ -1797,16 +1833,21 @@ $NetworkDimensionCopyWith<NetworkDimension> get copyWith => _$NetworkDimensionCo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkDimension&&(identical(other.meters, meters) || other.meters == meters)&&(identical(other.feet, feet) || other.feet == feet));
+  final _this = this as NetworkDimension;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkDimension&&(identical(other.meters, _this.meters) || other.meters == _this.meters)&&(identical(other.feet, _this.feet) || other.feet == _this.feet));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,meters,feet);
+int get hashCode {
+  final _this = this as NetworkDimension;
+  return Object.hash(runtimeType,_this.meters,_this.feet);
+}
 
 @override
 String toString() {
-  return 'NetworkDimension(meters: $meters, feet: $feet)';
+  final _this = this as NetworkDimension;
+  return 'NetworkDimension(meters: ${_this.meters}, feet: ${_this.feet})';
 }
 
 
@@ -1835,7 +1876,7 @@ class _$NetworkDimensionCopyWithImpl<$Res>
 /// Create a copy of NetworkDimension
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? meters = freezed,Object? feet = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkDimension(
 meters: freezed == meters ? _self.meters : meters // ignore: cast_nullable_to_non_nullable
 as double?,feet: freezed == feet ? _self.feet : feet // ignore: cast_nullable_to_non_nullable
 as double?,
@@ -1998,16 +2039,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkDimension&&(identical(other.meters, meters) || other.meters == meters)&&(identical(other.feet, feet) || other.feet == feet));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkDimension&&(identical(other.meters, meters) || other.meters == meters)&&(identical(other.feet, feet) || other.feet == feet));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,meters,feet);
+int get hashCode {
+    return Object.hash(runtimeType,meters,feet);
+}
 
 @override
 String toString() {
-  return 'NetworkDimension(meters: $meters, feet: $feet)';
+    return 'NetworkDimension(meters: $meters, feet: $feet)';
 }
 
 
@@ -2063,16 +2106,21 @@ $NetworkMassCopyWith<NetworkMass> get copyWith => _$NetworkMassCopyWithImpl<Netw
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkMass&&(identical(other.kg, kg) || other.kg == kg)&&(identical(other.lb, lb) || other.lb == lb));
+  final _this = this as NetworkMass;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkMass&&(identical(other.kg, _this.kg) || other.kg == _this.kg)&&(identical(other.lb, _this.lb) || other.lb == _this.lb));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,kg,lb);
+int get hashCode {
+  final _this = this as NetworkMass;
+  return Object.hash(runtimeType,_this.kg,_this.lb);
+}
 
 @override
 String toString() {
-  return 'NetworkMass(kg: $kg, lb: $lb)';
+  final _this = this as NetworkMass;
+  return 'NetworkMass(kg: ${_this.kg}, lb: ${_this.lb})';
 }
 
 
@@ -2101,7 +2149,7 @@ class _$NetworkMassCopyWithImpl<$Res>
 /// Create a copy of NetworkMass
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? kg = freezed,Object? lb = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkMass(
 kg: freezed == kg ? _self.kg : kg // ignore: cast_nullable_to_non_nullable
 as int?,lb: freezed == lb ? _self.lb : lb // ignore: cast_nullable_to_non_nullable
 as int?,
@@ -2264,16 +2312,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkMass&&(identical(other.kg, kg) || other.kg == kg)&&(identical(other.lb, lb) || other.lb == lb));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkMass&&(identical(other.kg, kg) || other.kg == kg)&&(identical(other.lb, lb) || other.lb == lb));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,kg,lb);
+int get hashCode {
+    return Object.hash(runtimeType,kg,lb);
+}
 
 @override
 String toString() {
-  return 'NetworkMass(kg: $kg, lb: $lb)';
+    return 'NetworkMass(kg: $kg, lb: $lb)';
 }
 
 
@@ -2329,16 +2379,21 @@ $NetworkPayloadWeightCopyWith<NetworkPayloadWeight> get copyWith => _$NetworkPay
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkPayloadWeight&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&(identical(other.kg, kg) || other.kg == kg)&&(identical(other.lb, lb) || other.lb == lb));
+  final _this = this as NetworkPayloadWeight;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkPayloadWeight&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.name, _this.name) || other.name == _this.name)&&(identical(other.kg, _this.kg) || other.kg == _this.kg)&&(identical(other.lb, _this.lb) || other.lb == _this.lb));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,name,kg,lb);
+int get hashCode {
+  final _this = this as NetworkPayloadWeight;
+  return Object.hash(runtimeType,_this.id,_this.name,_this.kg,_this.lb);
+}
 
 @override
 String toString() {
-  return 'NetworkPayloadWeight(id: $id, name: $name, kg: $kg, lb: $lb)';
+  final _this = this as NetworkPayloadWeight;
+  return 'NetworkPayloadWeight(id: ${_this.id}, name: ${_this.name}, kg: ${_this.kg}, lb: ${_this.lb})';
 }
 
 
@@ -2367,7 +2422,7 @@ class _$NetworkPayloadWeightCopyWithImpl<$Res>
 /// Create a copy of NetworkPayloadWeight
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = freezed,Object? name = freezed,Object? kg = freezed,Object? lb = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkPayloadWeight(
 id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String?,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
 as String?,kg: freezed == kg ? _self.kg : kg // ignore: cast_nullable_to_non_nullable
@@ -2534,16 +2589,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkPayloadWeight&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&(identical(other.kg, kg) || other.kg == kg)&&(identical(other.lb, lb) || other.lb == lb));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkPayloadWeight&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&(identical(other.kg, kg) || other.kg == kg)&&(identical(other.lb, lb) || other.lb == lb));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,name,kg,lb);
+int get hashCode {
+    return Object.hash(runtimeType,id,name,kg,lb);
+}
 
 @override
 String toString() {
-  return 'NetworkPayloadWeight(id: $id, name: $name, kg: $kg, lb: $lb)';
+    return 'NetworkPayloadWeight(id: $id, name: $name, kg: $kg, lb: $lb)';
 }
 
 
@@ -2601,16 +2658,21 @@ $NetworkEnginesCopyWith<NetworkEngines> get copyWith => _$NetworkEnginesCopyWith
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkEngines&&(identical(other.number, number) || other.number == number)&&(identical(other.type, type) || other.type == type)&&(identical(other.version, version) || other.version == version)&&(identical(other.layout, layout) || other.layout == layout)&&(identical(other.isp, isp) || other.isp == isp)&&(identical(other.engineLossMax, engineLossMax) || other.engineLossMax == engineLossMax)&&(identical(other.propellant1, propellant1) || other.propellant1 == propellant1)&&(identical(other.propellant2, propellant2) || other.propellant2 == propellant2)&&(identical(other.thrustSeaLevel, thrustSeaLevel) || other.thrustSeaLevel == thrustSeaLevel)&&(identical(other.thrustVacuum, thrustVacuum) || other.thrustVacuum == thrustVacuum)&&(identical(other.thrustToWeight, thrustToWeight) || other.thrustToWeight == thrustToWeight));
+  final _this = this as NetworkEngines;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkEngines&&(identical(other.number, _this.number) || other.number == _this.number)&&(identical(other.type, _this.type) || other.type == _this.type)&&(identical(other.version, _this.version) || other.version == _this.version)&&(identical(other.layout, _this.layout) || other.layout == _this.layout)&&(identical(other.isp, _this.isp) || other.isp == _this.isp)&&(identical(other.engineLossMax, _this.engineLossMax) || other.engineLossMax == _this.engineLossMax)&&(identical(other.propellant1, _this.propellant1) || other.propellant1 == _this.propellant1)&&(identical(other.propellant2, _this.propellant2) || other.propellant2 == _this.propellant2)&&(identical(other.thrustSeaLevel, _this.thrustSeaLevel) || other.thrustSeaLevel == _this.thrustSeaLevel)&&(identical(other.thrustVacuum, _this.thrustVacuum) || other.thrustVacuum == _this.thrustVacuum)&&(identical(other.thrustToWeight, _this.thrustToWeight) || other.thrustToWeight == _this.thrustToWeight));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,number,type,version,layout,isp,engineLossMax,propellant1,propellant2,thrustSeaLevel,thrustVacuum,thrustToWeight);
+int get hashCode {
+  final _this = this as NetworkEngines;
+  return Object.hash(runtimeType,_this.number,_this.type,_this.version,_this.layout,_this.isp,_this.engineLossMax,_this.propellant1,_this.propellant2,_this.thrustSeaLevel,_this.thrustVacuum,_this.thrustToWeight);
+}
 
 @override
 String toString() {
-  return 'NetworkEngines(number: $number, type: $type, version: $version, layout: $layout, isp: $isp, engineLossMax: $engineLossMax, propellant1: $propellant1, propellant2: $propellant2, thrustSeaLevel: $thrustSeaLevel, thrustVacuum: $thrustVacuum, thrustToWeight: $thrustToWeight)';
+  final _this = this as NetworkEngines;
+  return 'NetworkEngines(number: ${_this.number}, type: ${_this.type}, version: ${_this.version}, layout: ${_this.layout}, isp: ${_this.isp}, engineLossMax: ${_this.engineLossMax}, propellant1: ${_this.propellant1}, propellant2: ${_this.propellant2}, thrustSeaLevel: ${_this.thrustSeaLevel}, thrustVacuum: ${_this.thrustVacuum}, thrustToWeight: ${_this.thrustToWeight})';
 }
 
 
@@ -2639,7 +2701,7 @@ class _$NetworkEnginesCopyWithImpl<$Res>
 /// Create a copy of NetworkEngines
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? number = freezed,Object? type = freezed,Object? version = freezed,Object? layout = freezed,Object? isp = freezed,Object? engineLossMax = freezed,Object? propellant1 = freezed,Object? propellant2 = freezed,Object? thrustSeaLevel = freezed,Object? thrustVacuum = freezed,Object? thrustToWeight = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkEngines(
 number: freezed == number ? _self.number : number // ignore: cast_nullable_to_non_nullable
 as int?,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
 as String?,version: freezed == version ? _self.version : version // ignore: cast_nullable_to_non_nullable
@@ -2856,16 +2918,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkEngines&&(identical(other.number, number) || other.number == number)&&(identical(other.type, type) || other.type == type)&&(identical(other.version, version) || other.version == version)&&(identical(other.layout, layout) || other.layout == layout)&&(identical(other.isp, isp) || other.isp == isp)&&(identical(other.engineLossMax, engineLossMax) || other.engineLossMax == engineLossMax)&&(identical(other.propellant1, propellant1) || other.propellant1 == propellant1)&&(identical(other.propellant2, propellant2) || other.propellant2 == propellant2)&&(identical(other.thrustSeaLevel, thrustSeaLevel) || other.thrustSeaLevel == thrustSeaLevel)&&(identical(other.thrustVacuum, thrustVacuum) || other.thrustVacuum == thrustVacuum)&&(identical(other.thrustToWeight, thrustToWeight) || other.thrustToWeight == thrustToWeight));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkEngines&&(identical(other.number, number) || other.number == number)&&(identical(other.type, type) || other.type == type)&&(identical(other.version, version) || other.version == version)&&(identical(other.layout, layout) || other.layout == layout)&&(identical(other.isp, isp) || other.isp == isp)&&(identical(other.engineLossMax, engineLossMax) || other.engineLossMax == engineLossMax)&&(identical(other.propellant1, propellant1) || other.propellant1 == propellant1)&&(identical(other.propellant2, propellant2) || other.propellant2 == propellant2)&&(identical(other.thrustSeaLevel, thrustSeaLevel) || other.thrustSeaLevel == thrustSeaLevel)&&(identical(other.thrustVacuum, thrustVacuum) || other.thrustVacuum == thrustVacuum)&&(identical(other.thrustToWeight, thrustToWeight) || other.thrustToWeight == thrustToWeight));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,number,type,version,layout,isp,engineLossMax,propellant1,propellant2,thrustSeaLevel,thrustVacuum,thrustToWeight);
+int get hashCode {
+    return Object.hash(runtimeType,number,type,version,layout,isp,engineLossMax,propellant1,propellant2,thrustSeaLevel,thrustVacuum,thrustToWeight);
+}
 
 @override
 String toString() {
-  return 'NetworkEngines(number: $number, type: $type, version: $version, layout: $layout, isp: $isp, engineLossMax: $engineLossMax, propellant1: $propellant1, propellant2: $propellant2, thrustSeaLevel: $thrustSeaLevel, thrustVacuum: $thrustVacuum, thrustToWeight: $thrustToWeight)';
+    return 'NetworkEngines(number: $number, type: $type, version: $version, layout: $layout, isp: $isp, engineLossMax: $engineLossMax, propellant1: $propellant1, propellant2: $propellant2, thrustSeaLevel: $thrustSeaLevel, thrustVacuum: $thrustVacuum, thrustToWeight: $thrustToWeight)';
 }
 
 
@@ -2966,16 +3030,21 @@ $NetworkIspCopyWith<NetworkIsp> get copyWith => _$NetworkIspCopyWithImpl<Network
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkIsp&&(identical(other.seaLevel, seaLevel) || other.seaLevel == seaLevel)&&(identical(other.vacuum, vacuum) || other.vacuum == vacuum));
+  final _this = this as NetworkIsp;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkIsp&&(identical(other.seaLevel, _this.seaLevel) || other.seaLevel == _this.seaLevel)&&(identical(other.vacuum, _this.vacuum) || other.vacuum == _this.vacuum));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,seaLevel,vacuum);
+int get hashCode {
+  final _this = this as NetworkIsp;
+  return Object.hash(runtimeType,_this.seaLevel,_this.vacuum);
+}
 
 @override
 String toString() {
-  return 'NetworkIsp(seaLevel: $seaLevel, vacuum: $vacuum)';
+  final _this = this as NetworkIsp;
+  return 'NetworkIsp(seaLevel: ${_this.seaLevel}, vacuum: ${_this.vacuum})';
 }
 
 
@@ -3004,7 +3073,7 @@ class _$NetworkIspCopyWithImpl<$Res>
 /// Create a copy of NetworkIsp
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? seaLevel = freezed,Object? vacuum = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkIsp(
 seaLevel: freezed == seaLevel ? _self.seaLevel : seaLevel // ignore: cast_nullable_to_non_nullable
 as int?,vacuum: freezed == vacuum ? _self.vacuum : vacuum // ignore: cast_nullable_to_non_nullable
 as int?,
@@ -3167,16 +3236,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkIsp&&(identical(other.seaLevel, seaLevel) || other.seaLevel == seaLevel)&&(identical(other.vacuum, vacuum) || other.vacuum == vacuum));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkIsp&&(identical(other.seaLevel, seaLevel) || other.seaLevel == seaLevel)&&(identical(other.vacuum, vacuum) || other.vacuum == vacuum));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,seaLevel,vacuum);
+int get hashCode {
+    return Object.hash(runtimeType,seaLevel,vacuum);
+}
 
 @override
 String toString() {
-  return 'NetworkIsp(seaLevel: $seaLevel, vacuum: $vacuum)';
+    return 'NetworkIsp(seaLevel: $seaLevel, vacuum: $vacuum)';
 }
 
 
@@ -3232,16 +3303,21 @@ $NetworkThrustCopyWith<NetworkThrust> get copyWith => _$NetworkThrustCopyWithImp
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkThrust&&(identical(other.kN, kN) || other.kN == kN)&&(identical(other.lbf, lbf) || other.lbf == lbf));
+  final _this = this as NetworkThrust;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkThrust&&(identical(other.kN, _this.kN) || other.kN == _this.kN)&&(identical(other.lbf, _this.lbf) || other.lbf == _this.lbf));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,kN,lbf);
+int get hashCode {
+  final _this = this as NetworkThrust;
+  return Object.hash(runtimeType,_this.kN,_this.lbf);
+}
 
 @override
 String toString() {
-  return 'NetworkThrust(kN: $kN, lbf: $lbf)';
+  final _this = this as NetworkThrust;
+  return 'NetworkThrust(kN: ${_this.kN}, lbf: ${_this.lbf})';
 }
 
 
@@ -3270,7 +3346,7 @@ class _$NetworkThrustCopyWithImpl<$Res>
 /// Create a copy of NetworkThrust
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? kN = freezed,Object? lbf = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkThrust(
 kN: freezed == kN ? _self.kN : kN // ignore: cast_nullable_to_non_nullable
 as double?,lbf: freezed == lbf ? _self.lbf : lbf // ignore: cast_nullable_to_non_nullable
 as int?,
@@ -3433,16 +3509,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkThrust&&(identical(other.kN, kN) || other.kN == kN)&&(identical(other.lbf, lbf) || other.lbf == lbf));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkThrust&&(identical(other.kN, kN) || other.kN == kN)&&(identical(other.lbf, lbf) || other.lbf == lbf));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,kN,lbf);
+int get hashCode {
+    return Object.hash(runtimeType,kN,lbf);
+}
 
 @override
 String toString() {
-  return 'NetworkThrust(kN: $kN, lbf: $lbf)';
+    return 'NetworkThrust(kN: $kN, lbf: $lbf)';
 }
 
 
@@ -3498,16 +3576,21 @@ $NetworkLandingLegsCopyWith<NetworkLandingLegs> get copyWith => _$NetworkLanding
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkLandingLegs&&(identical(other.number, number) || other.number == number)&&(identical(other.material, material) || other.material == material));
+  final _this = this as NetworkLandingLegs;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NetworkLandingLegs&&(identical(other.number, _this.number) || other.number == _this.number)&&(identical(other.material, _this.material) || other.material == _this.material));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,number,material);
+int get hashCode {
+  final _this = this as NetworkLandingLegs;
+  return Object.hash(runtimeType,_this.number,_this.material);
+}
 
 @override
 String toString() {
-  return 'NetworkLandingLegs(number: $number, material: $material)';
+  final _this = this as NetworkLandingLegs;
+  return 'NetworkLandingLegs(number: ${_this.number}, material: ${_this.material})';
 }
 
 
@@ -3536,7 +3619,7 @@ class _$NetworkLandingLegsCopyWithImpl<$Res>
 /// Create a copy of NetworkLandingLegs
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? number = freezed,Object? material = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(NetworkLandingLegs(
 number: freezed == number ? _self.number : number // ignore: cast_nullable_to_non_nullable
 as int?,material: freezed == material ? _self.material : material // ignore: cast_nullable_to_non_nullable
 as String?,
@@ -3699,16 +3782,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkLandingLegs&&(identical(other.number, number) || other.number == number)&&(identical(other.material, material) || other.material == material));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _NetworkLandingLegs&&(identical(other.number, number) || other.number == number)&&(identical(other.material, material) || other.material == material));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,number,material);
+int get hashCode {
+    return Object.hash(runtimeType,number,material);
+}
 
 @override
 String toString() {
-  return 'NetworkLandingLegs(number: $number, material: $material)';
+    return 'NetworkLandingLegs(number: $number, material: $material)';
 }
 
 
