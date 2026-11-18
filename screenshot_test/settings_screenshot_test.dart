@@ -18,7 +18,7 @@ void main() async {
 
     expect(find.byKey(const Key('settings')), findsOneWidget);
 
-    await tester.tap(find.byTooltip('Settings'));
+    await tester.tap(find.byKey(const Key('settings')));
 
     await tester.pumpAndSettle();
 

@@ -16,7 +16,7 @@ void main() {
 
     expect(find.byKey(const Key('settings')), findsOneWidget);
 
-    await tester.tap(find.byTooltip('Settings'));
+    await tester.tap(find.byKey(const Key('settings')));
 
     await tester.pumpAndSettle();
 
@@ -64,7 +64,7 @@ void main() {
     );
     expect(defaultBackgroundFinder, findsWidgets);
 
-    await tester.tap(find.byTooltip('Back'));
+    await tester.tap(find.byType(BackButton));
     await tester.pumpAndSettle();
 
     final switchFinder = find.byKey(const Key('theme_mode_switch'));
