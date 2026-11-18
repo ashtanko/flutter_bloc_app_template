@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/index.dart';
 import 'package:flutter_bloc_app_template/utils/string_utils.dart';
+import 'package:material_ui/material_ui.dart';
 
 class RocketItemWidget extends StatelessWidget {
   const RocketItemWidget({

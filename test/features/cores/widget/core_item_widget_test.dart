@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/app/localization.dart';
 import 'package:flutter_bloc_app_template/features/cores/utils/core_utils.dart';
 import 'package:flutter_bloc_app_template/features/cores/widget/core_item_widget.dart';
 import 'package:flutter_bloc_app_template/models/core/core_resource.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

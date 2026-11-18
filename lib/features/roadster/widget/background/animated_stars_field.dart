@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/features/roadster/widget/animated_star_widget.dart';
+import 'package:material_ui/material_ui.dart';
 
 class AnimatedStarsField extends StatelessWidget {
   const AnimatedStarsField({

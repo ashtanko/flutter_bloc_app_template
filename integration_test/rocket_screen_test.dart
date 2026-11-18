@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/app/localization.dart';
 import 'package:flutter_bloc_app_template/features/rocket/bloc/rocket_bloc.dart';
 import 'package:flutter_bloc_app_template/features/rocket/rocket_screen.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:mocktail/mocktail.dart';
 
 import '../test/bloc/utils.dart';

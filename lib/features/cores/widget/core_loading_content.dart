@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/widgets/loading_content.dart';
+import 'package:material_ui/material_ui.dart';
 
 class CoreLoadingContent extends StatelessWidget {
   const CoreLoadingContent({super.key});

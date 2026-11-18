@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:intl/intl.dart';
+import 'package:material_ui/material_ui.dart';
 
 Color getStatusColor(BuildContext context, String? status) {
   if (status == null) return Colors.blue;

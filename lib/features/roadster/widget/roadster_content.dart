@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/features/roadster/widget/distance_cards.dart';
 import 'package:flutter_bloc_app_template/features/roadster/widget/launch_details_section.dart';
 import 'package:flutter_bloc_app_template/features/roadster/widget/links_section_widget.dart';
@@ -6,6 +5,7 @@ import 'package:flutter_bloc_app_template/features/roadster/widget/mission_detai
 import 'package:flutter_bloc_app_template/features/roadster/widget/orbital_parameters_section.dart';
 import 'package:flutter_bloc_app_template/features/roadster/widget/speed_distance_cards.dart';
 import 'package:flutter_bloc_app_template/models/roadster/roadster_resource.dart';
+import 'package:material_ui/material_ui.dart';
 
 class RoadsterContent extends StatelessWidget {
   const RoadsterContent({

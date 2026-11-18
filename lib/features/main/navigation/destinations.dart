@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/features/cores/cores_screen.dart';
 import 'package:flutter_bloc_app_template/features/launches/launches_screen.dart';
 import 'package:flutter_bloc_app_template/features/rockets/rockets_screen.dart';
 import 'package:flutter_bloc_app_template/index.dart';
+import 'package:material_ui/material_ui.dart';
 
 List<NavDestination> getDestinations(BuildContext context) {
   return [

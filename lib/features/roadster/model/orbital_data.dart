@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 class OrbitalData extends Equatable {
   OrbitalData({required this.label, required this.value, required this.icon});

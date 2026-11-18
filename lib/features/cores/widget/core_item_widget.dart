@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/features/cores/utils/core_utils.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/models/core/core_resource.dart';
+import 'package:material_ui/material_ui.dart';
 
 class CoreItemWidget extends StatelessWidget {
   const CoreItemWidget({super.key, required this.core});

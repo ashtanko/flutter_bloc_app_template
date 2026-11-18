@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/features/launch/info_item.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/models/payload/payload_resource.dart';
+import 'package:material_ui/material_ui.dart';
 
 import 'info_grid_widget.dart';
 

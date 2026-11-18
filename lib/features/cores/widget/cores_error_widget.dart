@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_app_template/features/cores/bloc/cores_bloc.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:material_ui/material_ui.dart';
 
 class CoresErrorWidget extends StatelessWidget {
   const CoresErrorWidget({super.key, required this.errorMessage});

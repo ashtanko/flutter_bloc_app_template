@@ -12,6 +12,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  material_ui: ^1.11.1
+  cupertino_ui: ^1.1.7
   flutter_bloc: ^9.0.0
   bloc: ^9.0.0
   logger: ^2.5.0

@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/features/roadster/widget/app_bar/gradient_overlay.dart';
 import 'package:flutter_bloc_app_template/features/roadster/widget/app_bar/image_carousel.dart';
 import 'package:flutter_bloc_app_template/features/roadster/widget/app_bar/roadster_title_section.dart';
 import 'package:flutter_bloc_app_template/models/roadster/roadster_resource.dart';
+import 'package:material_ui/material_ui.dart';
 
 import 'image_indicators.dart';
 

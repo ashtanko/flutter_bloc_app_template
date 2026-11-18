@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
 import 'package:flutter_bloc_app_template/models/payload/payload_resource.dart';
+import 'package:material_ui/material_ui.dart';
 
 class QuickStatsSectionWidget extends StatelessWidget {
   const QuickStatsSectionWidget({

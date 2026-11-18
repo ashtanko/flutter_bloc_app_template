@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/generated/l10n.dart';
+import 'package:material_ui/material_ui.dart';
 
 class CoresNotFoundWidget extends StatelessWidget {
   const CoresNotFoundWidget({super.key, required this.searchQuery});

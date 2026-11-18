@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_app_template/bloc/theme/app_theme.dart';
 import 'package:flutter_bloc_app_template/index.dart';
+import 'package:material_ui/material_ui.dart';
 
 class DarkThemeScreen extends StatelessWidget {
   const DarkThemeScreen({super.key});

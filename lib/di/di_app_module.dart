@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:talker/talker.dart';
 
 @module

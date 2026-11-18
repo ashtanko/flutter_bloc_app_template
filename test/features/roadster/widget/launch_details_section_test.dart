@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app_template/app/localization.dart';
 import 'package:flutter_bloc_app_template/features/roadster/widget/launch_details_section.dart';
 import 'package:flutter_bloc_app_template/features/roadster/widget/launch_section_widget.dart';
 import 'package:flutter_bloc_app_template/models/roadster/roadster_resource.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart';
 
 import '../helpers/test_helpers.dart';
 
